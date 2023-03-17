@@ -24,7 +24,7 @@
 <meta property="og:description" content="（一）引言: 在c++中，我们在类中创建成员函数，在创建类的对象后，在类的对象上使用类的成员函数可以访问类的此对象的数据。 那么这个成员函数是怎么知道要访问的是此对象的数据成员，而不是其他对象的呢？ 其原因就是每个对象拥有的this指针——每个对象使用成员函数时通过传入自己的this指针来使成员函数能够确定要访问的对象。 下面对this指针进行详细介绍。 （二）概念: 定义：关键字th">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-15T04:10:11.000Z">
-<meta property="article:modified_time" content="2023-03-16T09:12:55.834Z">
+<meta property="article:modified_time" content="2023-03-17T01:00:24.352Z">
 <meta property="article:author" content="07xiaohei">
 <meta property="article:tag" content="c++">
 <meta property="article:tag" content="类">
@@ -379,7 +379,7 @@
 <li><p>只有<strong>非静态成员函数</strong>才拥有this指针</p>
 <p>​ ——友元函数不是类的成员函数，没有this指针。</p>
 <p>​
-——静态函数不属于某个对象（详见下一篇c++类——静态成员函数），没有this指针。</p></li>
+——静态函数不属于某个对象（详见另一篇c++类——静态成员函数博客），没有this指针。</p></li>
 <li><p>this指针不可以显式声明，但可以显式使用。</p>
 <p>​
 ——显式使用是指可以在成员函数内调用this指针，比如使用this地址，(*this).x，this-&gt;x</p>
