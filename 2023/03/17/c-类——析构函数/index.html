@@ -16,15 +16,15 @@
   <meta name="author" content="07xiaohei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="6">
+    <meta name="description" content="（一）概念: 析构函数是一个特殊的成员函数。 析构函数的功能与构造函数是完全相反的。析构函数无需用户进行调用，而是在对象生命周期结束需要进行释放时自动调用，完成对对象的释放和对象使用的资源的清理工作，但析构函数不操作对象占用的内存，也不删除对象——析构后这部分内存可以被分配给新对象使用。 （二）特性：  析构函数的形式是：~类名(){ 析构函数体 } （~表示取反，意思是和构造函数性质">
 <meta property="og:type" content="article">
-<meta property="og:title" content="c++类——静态成员">
-<meta property="og:url" content="http://example.com/2023/03/17/c-%E7%B1%BB%E2%80%94%E2%80%94%E9%9D%99%E6%80%81%E6%88%90%E5%91%98/index.html">
+<meta property="og:title" content="c++类——析构函数">
+<meta property="og:url" content="http://example.com/2023/03/17/c-%E7%B1%BB%E2%80%94%E2%80%94%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="6">
+<meta property="og:description" content="（一）概念: 析构函数是一个特殊的成员函数。 析构函数的功能与构造函数是完全相反的。析构函数无需用户进行调用，而是在对象生命周期结束需要进行释放时自动调用，完成对对象的释放和对象使用的资源的清理工作，但析构函数不操作对象占用的内存，也不删除对象——析构后这部分内存可以被分配给新对象使用。 （二）特性：  析构函数的形式是：~类名(){ 析构函数体 } （~表示取反，意思是和构造函数性质">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-17T03:56:14.000Z">
-<meta property="article:modified_time" content="2023-03-17T03:56:46.831Z">
+<meta property="article:published_time" content="2023-03-17T05:46:25.000Z">
+<meta property="article:modified_time" content="2023-03-17T06:17:40.938Z">
 <meta property="article:author" content="07xiaohei">
 <meta property="article:tag" content="c++">
 <meta property="article:tag" content="类">
@@ -35,7 +35,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>c++类——静态成员 - ZZHの个人博客</title>
+  <title>c++类——析构函数 - ZZHの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -274,7 +274,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="c++类——静态成员"></span>
+            <span id="subtitle" data-typed-text="c++类——析构函数"></span>
           
         </div>
 
@@ -285,8 +285,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-03-17 11:56" pubdate>
-          2023年3月17日 中午
+        <time datetime="2023-03-17 13:46" pubdate>
+          2023年3月17日 下午
         </time>
       </span>
     
@@ -297,7 +297,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1 字
+          1.1k 字
         
       </span>
     
@@ -308,7 +308,7 @@
         
         
         
-          1 分钟
+          9 分钟
         
       </span>
     
@@ -354,12 +354,26 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">c++类——静态成员</h1>
+            <h1 style="display: none">c++类——析构函数</h1>
             
             
               <div class="markdown-body">
                 
-                <p>6</p>
+                <h3 id="一概念">（一）概念:</h3>
+<p>析构函数是一个特殊的成员函数。</p>
+<p>析构函数的功能与构造函数是完全相反的。析构函数无需用户进行调用，而是在对象生命周期结束需要进行释放时自动调用，完成对对象的释放和对象使用的资源的清理工作，但析构函数不操作对象占用的内存，也不删除对象——析构后这部分内存可以被分配给新对象使用。</p>
+<h3 id="二特性">（二）特性：</h3>
+<ul>
+<li>析构函数的形式是：<strong><em>~类名(){ 析构函数体 }</em></strong>
+（~表示取反，意思是和构造函数性质相反。）</li>
+<li>析构函数无参数，也无返回值。</li>
+<li>析构函数不允许重载，一个类的析构函数唯一。</li>
+<li>用户在类中未定义自己的析构函数时编译系统会自动生成默认的析构函数，但仅有形式，不会进行任何操作。</li>
+<li>对于静态局部对象，函数调用结束不会释放，不执行析构函数，只在程序结束时才调用其析构函数释放对象。</li>
+<li>如果用new动态建立对象，只在delete释放对象时才调用析构函数。</li>
+</ul>
+<h3 id="三代码实现">（三）代码实现：</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Time</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> hour;  <br>	<span class="hljs-type">int</span> minute;<br>	<span class="hljs-type">int</span> sec;<br>	<span class="hljs-type">int</span>* p;<span class="hljs-comment">//动态指针使用</span><br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">Time</span>() &#123; hour = minute = sec = <span class="hljs-number">0</span>; p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>); &#125;<br>	<span class="hljs-built_in">Time</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3) :<span class="hljs-built_in">hour</span>(i1), <span class="hljs-built_in">minute</span>(i2), <span class="hljs-built_in">sec</span>(i3) &#123; p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>); &#125;<br>	~<span class="hljs-built_in">Time</span>() <br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;执行析构函数&quot;</span> &lt;&lt; endl;<br>		<span class="hljs-keyword">if</span> (p != <span class="hljs-literal">NULL</span>) &#123;<br>			<span class="hljs-keyword">delete</span> p;<br>			p = <span class="hljs-literal">NULL</span>;<br>		&#125;<span class="hljs-comment">//如果没有这句话，系统不会对动态指针指向内存空间进行释放，可能会发生内存泄漏</span><br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">set_time</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		cin &gt;&gt; hour &gt;&gt; minute &gt;&gt; sec;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">show_time</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt; hour &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; minute &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; sec &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-function">Time <span class="hljs-title">t1</span><span class="hljs-params">(<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>)</span></span>;<br>	t1.<span class="hljs-built_in">show_time</span>();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<span class="hljs-comment">//执行析构函数</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -409,8 +423,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>c++类——静态成员</div>
-      <div>http://example.com/2023/03/17/c-类——静态成员/</div>
+      <div>c++类——析构函数</div>
+      <div>http://example.com/2023/03/17/c-类——析构函数/</div>
     </div>
     <div class="license-meta">
       
@@ -454,18 +468,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/03/17/c-%E7%B1%BB%E2%80%94%E2%80%94%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/" title="c++类——析构函数">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">c++类——析构函数</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/03/17/c-%E7%B1%BB%E2%80%94%E2%80%94%E5%A4%8D%E5%88%B6%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" title="c++类——复制构造函数(含深浅拷贝)">
-                        <span class="hidden-mobile">c++类——复制构造函数(含深浅拷贝)</span>
+                      <a href="/2023/03/17/c-%E7%B1%BB%E2%80%94%E2%80%94%E9%9D%99%E6%80%81%E6%88%90%E5%91%98/" title="c++类——静态成员">
+                        <span class="hidden-mobile">c++类——静态成员</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
