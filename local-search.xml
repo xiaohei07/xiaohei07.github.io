@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>v2rayN+vrayNg使用</title>
+    <link href="/2023/03/18/v2rayN-vrayNg%E4%BD%BF%E7%94%A8/"/>
+    <url>/2023/03/18/v2rayN-vrayNg%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<h3 id="一引言">（一）引言：</h3><p>本人认为最舒服的一种（）方法。所以在此记录(●ˇ∀ˇ●)。</p><p>v2rayN用于your computer，v2rayNG用于your phone。</p><p>因为本人目前尚未拥有自己的服务器，暂时没有搭建的打算，所以均使用现成的东西（可能需要一点小小的cost）(～￣▽￣)～。</p><p>本文是图文教程，向各位小白尽可能地详细讲解每一步的操作。</p><h3 id="二下载和安装">（二）下载和安装：</h3><p>登录你的github，搜索2dust这位大神，在他的热门存储库中，v2rayN和v2rayNG名列榜首，直接点击进入即可。</p><p><a href="https://imgse.com/i/ppJl8N4"><imgsrc="https://s1.ax1x.com/2023/03/18/ppJl8N4.jpg"alt="ppJl8N4.jpg" /></a></p><p>（如果你不知道什么是github，强烈建议百度一下，学计算机不知道github会被人看不起的~）</p><p>如果你懒得去找，直接点击这两个链接即可：<ahref="%5B2dust/v2rayN:%20A%20V2Ray%20client%20for%20Windows,%20support%20Xray%20core%20and%20v2fly%20core%20(github.com)%5D(https://github.com/2dust/v2rayN)">v2rayN下载</a><ahref="https://github.com/2dust/v2rayNG">v2rayNG下载</a>。(请放心，链接绝对无害，只是有可能不稳定~github只用国内链接访问懂得都懂)。</p><p>我们首先讲解v2rayN：</p><p>进入页面后，先不要直接找到链接就下载，先点击右侧releases下面的Lastest版本（如果你会使用github且对预发布版本感兴趣可以直接点releases下载最新预发布版本，看不懂的括号内内容当不存在就行）。</p><p><a href="https://imgse.com/i/ppJlNg1"><imgsrc="https://s1.ax1x.com/2023/03/18/ppJlNg1.jpg"alt="ppJlNg1.jpg" /></a></p><p>截止到我更新的日期，最新发布版本是5,.39。</p><p>进入5.39版本页面后，页面靠下方位置有一个Assets (4)，下面有四个文件，我们将从这四个中选择下载的程序。</p><p>后面两个不是我们的目标，我们选择前两个中的一个下载：</p><p>如果你是新手，下载那个带Core的zip文件，这个Core是指此压缩包自带内核，能够省去许多麻烦。（另一个则是无内核的，不用管）</p><p><a href="https://imgse.com/i/ppJlc8A"><imgsrc="https://s1.ax1x.com/2023/03/18/ppJlc8A.png"alt="ppJlc8A.png" /></a></p><p>点击后进行下载。如果出现如下提示：</p><p><a href="https://imgse.com/i/ppJlggI"><imgsrc="https://s1.ax1x.com/2023/03/18/ppJlggI.png"alt="ppJlggI.png" /></a></p><p>我们需要暂时关闭掉windows的系统防护功能（无需担心软件问题，这个很靠谱）。</p><p>点击你电脑左下角的win窗口，点击上面的设置，再点击windows安全中心（如果操作不对百度一下，每个电脑的进入方法可能不同）。再点击病毒和威胁防护，在其中关闭你的实时保护/安全保护等等（这个建议自行百度，每个电脑的界面都可能不同）。</p><p><a href="https://imgse.com/i/ppJl2vt"><imgsrc="https://s1.ax1x.com/2023/03/18/ppJl2vt.jpg"alt="ppJl2vt.jpg" /></a></p><p>再次下载，成功。</p><p>压缩包放到C盘以外你需要的文件夹中，在该文件夹进行解压</p><p><a href="https://imgse.com/i/ppJlWKP"><imgsrc="https://s1.ax1x.com/2023/03/18/ppJlWKP.png"alt="ppJlWKP.png" /></a></p><p>打开文件夹，点击v2rayN.exe即可运行（建议添加一个快捷方式到你的桌面）。</p><p><a href="https://imgse.com/i/ppJlfDf"><imgsrc="https://s1.ax1x.com/2023/03/18/ppJlfDf.png"alt="ppJlfDf.png" /></a></p><p>进入如下页面。</p><p><a href="https://imgse.com/i/ppJl5VS"><imgsrc="https://s1.ax1x.com/2023/03/18/ppJl5VS.png"alt="ppJl5VS.png" /></a></p><p>后面再继续讲，我先吃饭去了~</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>生活寄巧</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Ladder</tag>
+      
+      <tag>VPN</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>c++类——成员类</title>
     <link href="/2023/03/18/c-%E7%B1%BB%E2%80%94%E2%80%94%E6%88%90%E5%91%98%E7%B1%BB/"/>
     <url>/2023/03/18/c-%E7%B1%BB%E2%80%94%E2%80%94%E6%88%90%E5%91%98%E7%B1%BB/</url>

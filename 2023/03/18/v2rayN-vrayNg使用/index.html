@@ -16,26 +16,25 @@
   <meta name="author" content="07xiaohei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="（一）概念: 当一个类的数据成员含有一个前面已经声明的类的对象时，这个被包含的类被称作成员类，该数据成员为成员对象。（即类的成员是一个其他类的对象） 这被称作类的包含（has A），是程序设计中的一种软件重用技术。定义一个新的类时，通过编译器把另一个类“抄”进来。 （二）特性：  出现成员对象时，该类的构造函数也要初始化成员对象，且必须使用初始化语法形式（在构造函数体内将t初始化无效）">
+    <meta name="description" content="（一）引言： 本人认为最舒服的一种（）方法。所以在此记录(●ˇ∀ˇ●)。 v2rayN用于your computer，v2rayNG用于your phone。 因为本人目前尚未拥有自己的服务器，暂时没有搭建的打算，所以均使用现成的东西（可能需要一点小小的cost）(～￣▽￣)～。 本文是图文教程，向各位小白尽可能地详细讲解每一步的操作。 （二）下载和安装： 登录你的github，搜索2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="c++类——成员类">
-<meta property="og:url" content="http://example.com/2023/03/18/c-%E7%B1%BB%E2%80%94%E2%80%94%E6%88%90%E5%91%98%E7%B1%BB/index.html">
+<meta property="og:title" content="v2rayN+vrayNg使用">
+<meta property="og:url" content="http://example.com/2023/03/18/v2rayN-vrayNg%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（一）概念: 当一个类的数据成员含有一个前面已经声明的类的对象时，这个被包含的类被称作成员类，该数据成员为成员对象。（即类的成员是一个其他类的对象） 这被称作类的包含（has A），是程序设计中的一种软件重用技术。定义一个新的类时，通过编译器把另一个类“抄”进来。 （二）特性：  出现成员对象时，该类的构造函数也要初始化成员对象，且必须使用初始化语法形式（在构造函数体内将t初始化无效）">
+<meta property="og:description" content="（一）引言： 本人认为最舒服的一种（）方法。所以在此记录(●ˇ∀ˇ●)。 v2rayN用于your computer，v2rayNG用于your phone。 因为本人目前尚未拥有自己的服务器，暂时没有搭建的打算，所以均使用现成的东西（可能需要一点小小的cost）(～￣▽￣)～。 本文是图文教程，向各位小白尽可能地详细讲解每一步的操作。 （二）下载和安装： 登录你的github，搜索2">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-18T01:27:56.000Z">
-<meta property="article:modified_time" content="2023-03-18T02:00:00.713Z">
+<meta property="article:published_time" content="2023-03-18T03:12:28.000Z">
+<meta property="article:modified_time" content="2023-03-18T04:26:02.134Z">
 <meta property="article:author" content="07xiaohei">
-<meta property="article:tag" content="c++">
-<meta property="article:tag" content="类">
-<meta property="article:tag" content="知识点">
+<meta property="article:tag" content="Ladder">
+<meta property="article:tag" content="VPN">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>c++类——成员类 - ZZHの个人博客</title>
+  <title>v2rayN+vrayNg使用 - ZZHの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -274,7 +273,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="c++类——成员类"></span>
+            <span id="subtitle" data-typed-text="v2rayN+vrayNg使用"></span>
           
         </div>
 
@@ -285,7 +284,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-03-18 09:27" pubdate>
+        <time datetime="2023-03-18 11:12" pubdate>
           2023年3月18日 上午
         </time>
       </span>
@@ -297,7 +296,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2k 字
+          919 字
         
       </span>
     
@@ -308,7 +307,7 @@
         
         
         
-          17 分钟
+          8 分钟
         
       </span>
     
@@ -354,29 +353,63 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">c++类——成员类</h1>
+            <h1 style="display: none">v2rayN+vrayNg使用</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="一概念">（一）概念:</h3>
-<p>当一个类的数据成员含有一个前面已经声明的类的对象时，这个被包含的类被称作成员类，该数据成员为成员对象。（即类的成员是一个其他类的对象）</p>
-<p>这被称作类的包含（has
-A），是程序设计中的一种软件重用技术。定义一个新的类时，通过编译器把另一个类“抄”进来。</p>
-<h3 id="二特性">（二）特性：</h3>
-<ol type="1">
-<li>出现成员对象时，该类的构造函数也要初始化成员对象，且必须使用初始化语法形式（在构造函数体内将t初始化无效）。</li>
-<li>如果构造函数的成员初始化列表没有对成员对象初始化时，则使用成员对象的缺省构造函数。</li>
-<li>如果成员对象没有缺省构造函数（仅有参构造函数），那么必须在类的初始化列表对成员对象进行显式的初始化。</li>
-<li>一个含有成员对象的类实例化时要优先调用成员对象的构造函数，然后再调用该类的构造函数；析构时先调用含成员对象的类的析构函数，再调用成员对象对应类的析构函数。</li>
-<li>如果一个类有多个成员类对象，构造函数的调用顺序是对象在类中被声明的顺序，而不是在构造函数初始化列表中的顺序。</li>
-</ol>
-<h3 id="三代码实现">（三）代码实现：</h3>
-<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><code class="hljs processing">#include&lt;iostream&gt;<br>using namespace std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Time</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">hour</span>;<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">minute</span>;<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">second</span>;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-title function_">Time</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3) :<span class="hljs-built_in">hour</span>(i1), <span class="hljs-built_in">minute</span>(i2), <span class="hljs-built_in">second</span>(i3) <br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Time类有参构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-title function_">Time</span>() &#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Time类缺省构造函数&quot;</span> &lt;&lt; endl;<br>		<span class="hljs-built_in">hour</span> = <span class="hljs-built_in">minute</span> = <span class="hljs-built_in">second</span> = <span class="hljs-number">0</span>; <br>	&#125;<br>	<span class="hljs-type">int</span> <span class="hljs-title function_">Gethour</span>() &#123; <span class="hljs-keyword">return</span> <span class="hljs-built_in">hour</span>; &#125;<br>	<span class="hljs-type">int</span> <span class="hljs-title function_">Getminute</span>() &#123; <span class="hljs-keyword">return</span> <span class="hljs-built_in">minute</span>; &#125;<br>	<span class="hljs-type">int</span> <span class="hljs-title function_">Getsecond</span>() &#123; <span class="hljs-keyword">return</span> <span class="hljs-built_in">second</span>; &#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-title function_">settime</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3) &#123; <span class="hljs-built_in">hour</span> = i1; <span class="hljs-built_in">minute</span> = i2; <span class="hljs-built_in">second</span> = i3; &#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-title function_">display</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-built_in">hour</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; <span class="hljs-built_in">minute</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; <span class="hljs-built_in">second</span> &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>	~<span class="hljs-title function_">Time</span>() &#123; cout &lt;&lt; <span class="hljs-string">&quot;Time类析构函数&quot;</span> &lt;&lt; endl; &#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Date</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">year</span>;<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">month</span>;<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">day</span>;<br>	Time t;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-title function_">Date</span>() &#123;<br>		<span class="hljs-built_in">year</span> = <span class="hljs-built_in">month</span> = <span class="hljs-built_in">day</span> = <span class="hljs-number">0</span>;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Date类缺省构造函数&quot;</span> &lt;&lt; endl;<br><br>	&#125;<br>	<span class="hljs-title function_">Date</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3) :<span class="hljs-title function_">t</span>(&#123; <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span> &#125;), <span class="hljs-built_in">year</span>(i1), <span class="hljs-built_in">month</span>(i2), <span class="hljs-built_in">day</span>(i3)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Date类有参构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-title function_">display</span>();<br>	<span class="hljs-keyword">void</span> <span class="hljs-title function_">settime</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3); <br>	~<span class="hljs-title function_">Date</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Date类析构函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><br><span class="hljs-keyword">void</span> Date::<span class="hljs-title function_">display</span>()<br>&#123;<br>	cout &lt;&lt; <span class="hljs-built_in">year</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; <span class="hljs-built_in">month</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; <span class="hljs-built_in">day</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span>;<br>	t.<span class="hljs-property">display</span>();<br>	<span class="hljs-keyword">return</span>;<br>&#125;<br><span class="hljs-keyword">void</span> Date::<span class="hljs-title function_">settime</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3)<br>&#123;<br>	t.<span class="hljs-property">settime</span>(i1,i2,i3);<br>	<span class="hljs-keyword">return</span>;<br>&#125;<br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span>()<br>&#123;<br>	Date d;<br>	d.<span class="hljs-property">display</span>();<br>	d.<span class="hljs-property">settime</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>);<br>	d.<span class="hljs-property">display</span>();<br>	Date <span class="hljs-title function_">d1</span>(<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>);<br>	d1.<span class="hljs-property">display</span>();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJEii6"><img
-src="https://s1.ax1x.com/2023/03/18/ppJEii6.png" srcset="/img/loading.gif" lazyload
-alt="ppJEii6.png" /></a></p>
+                <h3 id="一引言">（一）引言：</h3>
+<p>本人认为最舒服的一种（）方法。所以在此记录(●ˇ∀ˇ●)。</p>
+<p>v2rayN用于your computer，v2rayNG用于your phone。</p>
+<p>因为本人目前尚未拥有自己的服务器，暂时没有搭建的打算，所以均使用现成的东西（可能需要一点小小的cost）(～￣▽￣)～。</p>
+<p>本文是图文教程，向各位小白尽可能地详细讲解每一步的操作。</p>
+<h3 id="二下载和安装">（二）下载和安装：</h3>
+<p>登录你的github，搜索2dust这位大神，在他的热门存储库中，v2rayN和v2rayNG名列榜首，直接点击进入即可。</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJl8N4"><img
+src="https://s1.ax1x.com/2023/03/18/ppJl8N4.jpg" srcset="/img/loading.gif" lazyload
+alt="ppJl8N4.jpg" /></a></p>
+<p>（如果你不知道什么是github，强烈建议百度一下，学计算机不知道github会被人看不起的~）</p>
+<p>如果你懒得去找，直接点击这两个链接即可：<a
+href="%5B2dust/v2rayN:%20A%20V2Ray%20client%20for%20Windows,%20support%20Xray%20core%20and%20v2fly%20core%20(github.com)%5D(https://github.com/2dust/v2rayN)">v2rayN下载</a>
+<a
+target="_blank" rel="noopener" href="https://github.com/2dust/v2rayNG">v2rayNG下载</a>。(请放心，链接绝对无害，只是有可能不稳定~
+github只用国内链接访问懂得都懂)。</p>
+<p>我们首先讲解v2rayN：</p>
+<p>进入页面后，先不要直接找到链接就下载，先点击右侧releases下面的Lastest版本（如果你会使用github且对预发布版本感兴趣可以直接点releases下载最新预发布版本，看不懂的括号内内容当不存在就行）。</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJlNg1"><img
+src="https://s1.ax1x.com/2023/03/18/ppJlNg1.jpg" srcset="/img/loading.gif" lazyload
+alt="ppJlNg1.jpg" /></a></p>
+<p>截止到我更新的日期，最新发布版本是5,.39。</p>
+<p>进入5.39版本页面后，页面靠下方位置有一个Assets (4)
+，下面有四个文件，我们将从这四个中选择下载的程序。</p>
+<p>后面两个不是我们的目标，我们选择前两个中的一个下载：</p>
+<p>如果你是新手，下载那个带Core的zip文件，这个Core是指此压缩包自带内核，能够省去许多麻烦。（另一个则是无内核的，不用管）</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJlc8A"><img
+src="https://s1.ax1x.com/2023/03/18/ppJlc8A.png" srcset="/img/loading.gif" lazyload
+alt="ppJlc8A.png" /></a></p>
+<p>点击后进行下载。如果出现如下提示：</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJlggI"><img
+src="https://s1.ax1x.com/2023/03/18/ppJlggI.png" srcset="/img/loading.gif" lazyload
+alt="ppJlggI.png" /></a></p>
+<p>我们需要暂时关闭掉windows的系统防护功能（无需担心软件问题，这个很靠谱）。</p>
+<p>点击你电脑左下角的win窗口，点击上面的设置，再点击windows安全中心（如果操作不对百度一下，每个电脑的进入方法可能不同）。再点击病毒和威胁防护，在其中关闭你的实时保护/安全保护等等（这个建议自行百度，每个电脑的界面都可能不同）。</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJl2vt"><img
+src="https://s1.ax1x.com/2023/03/18/ppJl2vt.jpg" srcset="/img/loading.gif" lazyload
+alt="ppJl2vt.jpg" /></a></p>
+<p>再次下载，成功。</p>
+<p>压缩包放到C盘以外你需要的文件夹中，在该文件夹进行解压</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJlWKP"><img
+src="https://s1.ax1x.com/2023/03/18/ppJlWKP.png" srcset="/img/loading.gif" lazyload
+alt="ppJlWKP.png" /></a></p>
+<p>打开文件夹，点击v2rayN.exe即可运行（建议添加一个快捷方式到你的桌面）。</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJlfDf"><img
+src="https://s1.ax1x.com/2023/03/18/ppJlfDf.png" srcset="/img/loading.gif" lazyload
+alt="ppJlfDf.png" /></a></p>
+<p>进入如下页面。</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJl5VS"><img
+src="https://s1.ax1x.com/2023/03/18/ppJl5VS.png" srcset="/img/loading.gif" lazyload
+alt="ppJl5VS.png" /></a></p>
+<p>后面再继续讲，我先吃饭去了~</p>
 
                 
               </div>
@@ -395,7 +428,7 @@ alt="ppJEii6.png" /></a></p>
     
       <span class="category-chain">
         
-  <a href="/categories/c-study/" class="category-chain-item">c++_study</a>
+  <a href="/categories/%E7%94%9F%E6%B4%BB%E5%AF%84%E5%B7%A7/" class="category-chain-item">生活寄巧</a>
   
   
 
@@ -410,11 +443,9 @@ alt="ppJEii6.png" /></a></p>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/c/">#c++</a>
+        <a href="/tags/Ladder/">#Ladder</a>
       
-        <a href="/tags/%E7%B1%BB/">#类</a>
-      
-        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+        <a href="/tags/VPN/">#VPN</a>
       
     </div>
   
@@ -426,8 +457,8 @@ alt="ppJEii6.png" /></a></p>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>c++类——成员类</div>
-      <div>http://example.com/2023/03/18/c-类——成员类/</div>
+      <div>v2rayN+vrayNg使用</div>
+      <div>http://example.com/2023/03/18/v2rayN-vrayNg使用/</div>
     </div>
     <div class="license-meta">
       
@@ -471,18 +502,12 @@ alt="ppJEii6.png" /></a></p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/03/18/v2rayN-vrayNg%E4%BD%BF%E7%94%A8/" title="v2rayN+vrayNg使用">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">v2rayN+vrayNg使用</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/03/17/%E2%80%9Cc-%E7%B1%BB%E2%80%94%E2%80%94%E5%8F%8B%E5%85%83%E2%80%9D/" title="“c++类——友元”">
-                        <span class="hidden-mobile">“c++类——友元”</span>
+                      <a href="/2023/03/18/c-%E7%B1%BB%E2%80%94%E2%80%94%E6%88%90%E5%91%98%E7%B1%BB/" title="c++类——成员类">
+                        <span class="hidden-mobile">c++类——成员类</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
