@@ -16,25 +16,26 @@
   <meta name="author" content="07xiaohei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="（一）引言： 本人认为最舒服的一种（）方法。所以在此记录(●ˇ∀ˇ●)。 v2rayN用于your computer，v2rayNG用于your phone。 因为本人目前尚未拥有自己的服务器，暂时没有搭建的打算，所以均使用现成的东西（可能需要一点小小的cost）(～￣▽￣)～。 本文是图文教程，向各位小白尽可能地详细讲解每一步的操作。 （二）下载和安装： 登录你的github，搜索2">
+    <meta name="description" content="（一）引言: 在c++中，我们在类中创建成员函数，在创建类的对象后，在类的对象上使用类的成员函数可以访问类的此对象的数据。 那么这个成员函数是怎么知道要访问的是此对象的数据成员，而不是其他对象的呢？ 其原因就是每个对象拥有的this指针——每个对象使用成员函数时通过传入自己的this指针来使成员函数能够确定要访问的对象。 下面对this指针进行详细介绍。 （二）概念: 定义：关键字th">
 <meta property="og:type" content="article">
-<meta property="og:title" content="v2rayN+vrayNg使用">
-<meta property="og:url" content="http://example.com/2023/03/18/v2rayN-vrayNg%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="c++类——this指针">
+<meta property="og:url" content="http://example.com/2023/03/15/c++%E7%B1%BB%E2%80%94%E2%80%94this%E6%8C%87%E9%92%88/index.html">
 <meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（一）引言： 本人认为最舒服的一种（）方法。所以在此记录(●ˇ∀ˇ●)。 v2rayN用于your computer，v2rayNG用于your phone。 因为本人目前尚未拥有自己的服务器，暂时没有搭建的打算，所以均使用现成的东西（可能需要一点小小的cost）(～￣▽￣)～。 本文是图文教程，向各位小白尽可能地详细讲解每一步的操作。 （二）下载和安装： 登录你的github，搜索2">
+<meta property="og:description" content="（一）引言: 在c++中，我们在类中创建成员函数，在创建类的对象后，在类的对象上使用类的成员函数可以访问类的此对象的数据。 那么这个成员函数是怎么知道要访问的是此对象的数据成员，而不是其他对象的呢？ 其原因就是每个对象拥有的this指针——每个对象使用成员函数时通过传入自己的this指针来使成员函数能够确定要访问的对象。 下面对this指针进行详细介绍。 （二）概念: 定义：关键字th">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-18T03:12:28.000Z">
-<meta property="article:modified_time" content="2023-03-18T04:26:02.134Z">
+<meta property="article:published_time" content="2023-03-15T04:10:11.000Z">
+<meta property="article:modified_time" content="2023-03-18T15:54:07.947Z">
 <meta property="article:author" content="07xiaohei">
-<meta property="article:tag" content="Ladder">
-<meta property="article:tag" content="VPN">
+<meta property="article:tag" content="c++">
+<meta property="article:tag" content="类">
+<meta property="article:tag" content="知识点">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>v2rayN+vrayNg使用 - ZZHの个人博客</title>
+  <title>c++类——this指针 - ZZHの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -273,7 +274,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="v2rayN+vrayNg使用"></span>
+            <span id="subtitle" data-typed-text="c++类——this指针"></span>
           
         </div>
 
@@ -284,8 +285,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-03-18 11:12" pubdate>
-          2023年3月18日 上午
+        <time datetime="2023-03-15 12:10" pubdate>
+          2023年3月15日 中午
         </time>
       </span>
     
@@ -296,7 +297,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          919 字
+          2k 字
         
       </span>
     
@@ -307,7 +308,7 @@
         
         
         
-          8 分钟
+          17 分钟
         
       </span>
     
@@ -353,63 +354,43 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">v2rayN+vrayNg使用</h1>
+            <h1 style="display: none">c++类——this指针</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="一引言">（一）引言：</h3>
-<p>本人认为最舒服的一种（）方法。所以在此记录(●ˇ∀ˇ●)。</p>
-<p>v2rayN用于your computer，v2rayNG用于your phone。</p>
-<p>因为本人目前尚未拥有自己的服务器，暂时没有搭建的打算，所以均使用现成的东西（可能需要一点小小的cost）(～￣▽￣)～。</p>
-<p>本文是图文教程，向各位小白尽可能地详细讲解每一步的操作。</p>
-<h3 id="二下载和安装">（二）下载和安装：</h3>
-<p>登录你的github，搜索2dust这位大神，在他的热门存储库中，v2rayN和v2rayNG名列榜首，直接点击进入即可。</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJl8N4"><img
-src="https://s1.ax1x.com/2023/03/18/ppJl8N4.jpg" srcset="/img/loading.gif" lazyload
-alt="ppJl8N4.jpg" /></a></p>
-<p>（如果你不知道什么是github，强烈建议百度一下，学计算机不知道github会被人看不起的~）</p>
-<p>如果你懒得去找，直接点击这两个链接即可：<a
-href="%5B2dust/v2rayN:%20A%20V2Ray%20client%20for%20Windows,%20support%20Xray%20core%20and%20v2fly%20core%20(github.com)%5D(https://github.com/2dust/v2rayN)">v2rayN下载</a>
-<a
-target="_blank" rel="noopener" href="https://github.com/2dust/v2rayNG">v2rayNG下载</a>。(请放心，链接绝对无害，只是有可能不稳定~
-github只用国内链接访问懂得都懂)。</p>
-<p>我们首先讲解v2rayN：</p>
-<p>进入页面后，先不要直接找到链接就下载，先点击右侧releases下面的Lastest版本（如果你会使用github且对预发布版本感兴趣可以直接点releases下载最新预发布版本，看不懂的括号内内容当不存在就行）。</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJlNg1"><img
-src="https://s1.ax1x.com/2023/03/18/ppJlNg1.jpg" srcset="/img/loading.gif" lazyload
-alt="ppJlNg1.jpg" /></a></p>
-<p>截止到我更新的日期，最新发布版本是5,.39。</p>
-<p>进入5.39版本页面后，页面靠下方位置有一个Assets (4)
-，下面有四个文件，我们将从这四个中选择下载的程序。</p>
-<p>后面两个不是我们的目标，我们选择前两个中的一个下载：</p>
-<p>如果你是新手，下载那个带Core的zip文件，这个Core是指此压缩包自带内核，能够省去许多麻烦。（另一个则是无内核的，不用管）</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJlc8A"><img
-src="https://s1.ax1x.com/2023/03/18/ppJlc8A.png" srcset="/img/loading.gif" lazyload
-alt="ppJlc8A.png" /></a></p>
-<p>点击后进行下载。如果出现如下提示：</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJlggI"><img
-src="https://s1.ax1x.com/2023/03/18/ppJlggI.png" srcset="/img/loading.gif" lazyload
-alt="ppJlggI.png" /></a></p>
-<p>我们需要暂时关闭掉windows的系统防护功能（无需担心软件问题，这个很靠谱）。</p>
-<p>点击你电脑左下角的win窗口，点击上面的设置，再点击windows安全中心（如果操作不对百度一下，每个电脑的进入方法可能不同）。再点击病毒和威胁防护，在其中关闭你的实时保护/安全保护等等（这个建议自行百度，每个电脑的界面都可能不同）。</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJl2vt"><img
-src="https://s1.ax1x.com/2023/03/18/ppJl2vt.jpg" srcset="/img/loading.gif" lazyload
-alt="ppJl2vt.jpg" /></a></p>
-<p>再次下载，成功。</p>
-<p>压缩包放到C盘以外你需要的文件夹中，在该文件夹进行解压</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJlWKP"><img
-src="https://s1.ax1x.com/2023/03/18/ppJlWKP.png" srcset="/img/loading.gif" lazyload
-alt="ppJlWKP.png" /></a></p>
-<p>打开文件夹，点击v2rayN.exe即可运行（建议添加一个快捷方式到你的桌面）。</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJlfDf"><img
-src="https://s1.ax1x.com/2023/03/18/ppJlfDf.png" srcset="/img/loading.gif" lazyload
-alt="ppJlfDf.png" /></a></p>
-<p>进入如下页面。</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppJl5VS"><img
-src="https://s1.ax1x.com/2023/03/18/ppJl5VS.png" srcset="/img/loading.gif" lazyload
-alt="ppJl5VS.png" /></a></p>
-<p>后面再继续讲，我先吃饭去了~</p>
+                <h3 id="一引言">（一）引言:</h3>
+<p>在c++中，我们在类中创建成员函数，在创建类的对象后，在类的对象上使用类的成员函数可以访问类的此对象的数据。</p>
+<p>那么这个成员函数是怎么知道要访问的是此对象的数据成员，而不是其他对象的呢？</p>
+<p>其原因就是每个对象拥有的this指针——每个对象使用成员函数时通过传入自己的this指针来使成员函数能够确定要访问的对象。</p>
+<p>下面对this指针进行详细介绍。</p>
+<h3 id="二概念">（二）概念:</h3>
+<p>定义：关键字this是指向对象自己的一个<strong>常量指针</strong>，，所以，this指针是不能够被赋值或者改变的。</p>
+<p>this指针是成员函数的隐含形参，换言之，类的对象在正常为成员函数传入参数时，实际上最后还有一个额外的参数位置，参数类型是该类的常量指针，并含有默认值，默认值即为此调用对象的地址，在调用成员函数时，this指针作为实参被传入成员函数。</p>
+<p>this指针本质上是成员函数的局部变量。</p>
+<p>例子如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Simple</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> x;<br>	<span class="hljs-type">int</span> y;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">Simple</span>() = <span class="hljs-keyword">default</span>;<br>	<span class="hljs-built_in">Simple</span> (<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b) : <span class="hljs-built_in">x</span>(a), <span class="hljs-built_in">y</span>(b)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Finish the constructed function&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">resetXY</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> </span><br><span class="hljs-function">	</span>&#123;<br>		x = a,y = b;<br>		<span class="hljs-keyword">return</span> ;<br>	&#125;<br>	~<span class="hljs-built_in">Simple</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Finish deconstructor&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-function">Simple <span class="hljs-title">s</span><span class="hljs-params">(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)</span></span>;<br>	s.<span class="hljs-built_in">resetXY</span>(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//在此处调用时，实际上是调用</span><br>					 <span class="hljs-comment">//resetXY(2,3,Simple *const this)</span><br>					 <span class="hljs-comment">//&#123; this-&gt;x=a,this-&gt;y=b;&#125;</span><br>					 <span class="hljs-comment">//使用了this指针</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="三this指针的注意要点">（三）this指针的注意要点:</h3>
+<ol type="1">
+<li><p>作为常量指针，不能给this指针<strong>赋值</strong>。</p></li>
+<li><p>this指针的作用域在类成员函数的内部，只能在<strong>成员函数内部</strong>，在类外无法获取。</p></li>
+<li><p>this指针的创建：</p>
+<p><strong>this指针在成员函数的开始执行前构造，并在成员函数的执行结束后清除。</strong></p></li>
+<li><p>只有<strong>非静态成员函数</strong>才拥有this指针</p>
+<p>​ ——友元函数不是类的成员函数，没有this指针。</p>
+<p>​ ——静态函数不属于某个对象（详见<a
+target="_blank" rel="noopener" href="https://07xiaohei.com/2023/03/17/c-%E7%B1%BB%E2%80%94%E2%80%94%E9%9D%99%E6%80%81%E6%88%90%E5%91%98/">c++类——静态成员</a>)博客），没有this指针。</p></li>
+<li><p>this指针不可以显式声明，但可以显式使用。</p>
+<p>​
+——显式使用是指可以在成员函数内调用this指针，比如使用this地址，(*this).x，this-&gt;x</p>
+<p>​ x为数据成员/某些成员函数。</p></li>
+<li><p>this指针不是对象的一部分，其所占的内存大小不会反应在sizeof操作符上。</p></li>
+</ol>
+<h3 id="四this指针的显式使用样例">（四）this指针的显式使用样例:</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Simple</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> x;<br>	<span class="hljs-type">int</span> y;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">Simple</span>() = <span class="hljs-keyword">default</span>;<br>	<span class="hljs-built_in">Simple</span> (<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b) : <span class="hljs-built_in">x</span>(a), <span class="hljs-built_in">y</span>(b)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Finish the constructed function&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">resetXY</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> </span><br><span class="hljs-function">	</span>&#123;<br>		x = a, y = b;<br>		<span class="hljs-keyword">return</span> ;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Simple_thisuse</span><span class="hljs-params">(<span class="hljs-type">int</span> a,<span class="hljs-type">int</span> b)</span></span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt; <span class="hljs-keyword">this</span>-&gt;x &lt;&lt; <span class="hljs-string">&quot; &quot;</span> &lt;&lt; <span class="hljs-keyword">this</span>-&gt;y &lt;&lt; endl;<br>		(*<span class="hljs-keyword">this</span>).x += a;<br>		(*<span class="hljs-keyword">this</span>).y += b;<br>		cout &lt;&lt; <span class="hljs-keyword">this</span>-&gt;x &lt;&lt; <span class="hljs-string">&quot; &quot;</span> &lt;&lt; <span class="hljs-keyword">this</span>-&gt;y &lt;&lt; endl;<br>		cout &lt;&lt; <span class="hljs-keyword">this</span> &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>	~<span class="hljs-built_in">Simple</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Finish deconstructor&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-function">Simple <span class="hljs-title">s</span><span class="hljs-params">(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)</span></span>;<br>	s.<span class="hljs-built_in">resetXY</span>(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>);<br>	s.<span class="hljs-built_in">Simple_thisuse</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>结果为：<a target="_blank" rel="noopener" href="https://imgse.com/i/pp8l0u8"><img
+src="https://s1.ax1x.com/2023/03/16/pp8l0u8.png" srcset="/img/loading.gif" lazyload
+alt="pp8l0u8.png" /></a></p>
 
                 
               </div>
@@ -428,7 +409,7 @@ alt="ppJl5VS.png" /></a></p>
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%94%9F%E6%B4%BB%E5%AF%84%E5%B7%A7/" class="category-chain-item">生活寄巧</a>
+  <a href="/categories/c-study/" class="category-chain-item">c++_study</a>
   
   
 
@@ -443,9 +424,11 @@ alt="ppJl5VS.png" /></a></p>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Ladder/">#Ladder</a>
+        <a href="/tags/c/">#c++</a>
       
-        <a href="/tags/VPN/">#VPN</a>
+        <a href="/tags/%E7%B1%BB/">#类</a>
+      
+        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
       
     </div>
   
@@ -457,8 +440,8 @@ alt="ppJl5VS.png" /></a></p>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>v2rayN+vrayNg使用</div>
-      <div>http://example.com/2023/03/18/v2rayN-vrayNg使用/</div>
+      <div>c++类——this指针</div>
+      <div>http://example.com/2023/03/15/c++类——this指针/</div>
     </div>
     <div class="license-meta">
       
@@ -470,7 +453,7 @@ alt="ppJl5VS.png" /></a></p>
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年3月18日</div>
+          <div>2023年3月15日</div>
         </div>
       
       
@@ -502,15 +485,15 @@ alt="ppJl5VS.png" /></a></p>
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2023/03/15/start/" title="“网站简介”">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">“网站简介”</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2023/03/18/c-%E7%B1%BB%E2%80%94%E2%80%94%E6%88%90%E5%91%98%E7%B1%BB/" title="c++类——成员类">
-                        <span class="hidden-mobile">c++类——成员类</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
