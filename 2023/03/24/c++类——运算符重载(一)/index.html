@@ -16,21 +16,26 @@
   <meta name="author" content="07xiaohei">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="V2rayNG入门使用介绍">
-<meta property="og:url" content="http://example.com/2023/03/24/V2rayNG%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E4%BB%8B%E7%BB%8D/index.html">
+    <meta name="description" content="（一）引言和概念: C++预定义中的运算符的操作对象只局限于基本的内置数据类型。 但实际上，对于许多用户自定义类型（如类、结构等）也需要类似的运算操作。这时就必须在C ++ 中重新定义这些运算符，赋予已有运算符新的功能，使它能够用于特定类型执行特定的操作。 运算符重载的实质是特殊的函数重载或函数多态。定义运算符重载函数，目的在于让c++编译器在遇到该运算符时能够用同名的运算符来完成不同的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="“c++类——运算符重载(一)”">
+<meta property="og:url" content="http://example.com/2023/03/24/c++%E7%B1%BB%E2%80%94%E2%80%94%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD(%E4%B8%80)/index.html">
 <meta property="og:site_name" content="ZZHの个人博客">
+<meta property="og:description" content="（一）引言和概念: C++预定义中的运算符的操作对象只局限于基本的内置数据类型。 但实际上，对于许多用户自定义类型（如类、结构等）也需要类似的运算操作。这时就必须在C ++ 中重新定义这些运算符，赋予已有运算符新的功能，使它能够用于特定类型执行特定的操作。 运算符重载的实质是特殊的函数重载或函数多态。定义运算符重载函数，目的在于让c++编译器在遇到该运算符时能够用同名的运算符来完成不同的">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-23T16:13:51.000Z">
-<meta property="article:modified_time" content="2023-03-23T16:13:51.646Z">
+<meta property="article:published_time" content="2023-03-24T06:25:54.000Z">
+<meta property="article:modified_time" content="2023-03-24T11:30:43.970Z">
 <meta property="article:author" content="07xiaohei">
+<meta property="article:tag" content="c++">
+<meta property="article:tag" content="类">
+<meta property="article:tag" content="知识点">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>V2rayNG入门使用介绍 - ZZHの个人博客</title>
+  <title>“c++类——运算符重载(一)” - ZZHの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -270,7 +275,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="V2rayNG入门使用介绍"></span>
+            <span id="subtitle" data-typed-text="“c++类——运算符重载(一)”"></span>
           
         </div>
 
@@ -281,8 +286,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-03-24 00:13" pubdate>
-          2023年3月24日 凌晨
+        <time datetime="2023-03-24 14:25" pubdate>
+          2023年3月24日 下午
         </time>
       </span>
     
@@ -293,7 +298,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          2.7k 字
         
       </span>
     
@@ -304,7 +309,7 @@
         
         
         
-          1 分钟
+          23 分钟
         
       </span>
     
@@ -350,12 +355,144 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">V2rayNG入门使用介绍</h1>
+            <h1 style="display: none">“c++类——运算符重载(一)”</h1>
             
             
               <div class="markdown-body">
                 
-                
+                <h3 id="一引言和概念">（一）引言和概念:</h3>
+<p>C++预定义中的运算符的操作对象只局限于基本的内置数据类型。</p>
+<p>但实际上，对于许多用户自定义类型（如类、结构等）也需要类似的运算操作。这时就必须在C
+++
+中重新定义这些运算符，赋予已有运算符新的功能，使它能够用于特定类型执行特定的操作。</p>
+<p>运算符重载的实质是特殊的函数重载或函数多态。定义运算符重载函数，目的在于让c++编译器在遇到该运算符时能够用同名的运算符来完成不同的基本操作。要重载运算符，需要使用运算符重载函数的特殊函数形式。</p>
+<p>运算符重载提供了C ++ 的可扩展性，也是C ++ 最吸引人的特性之一。</p>
+<p>本文主要是理论知识，详细代码会在下一节展示。</p>
+<h3 id="二运算符重载的规则">（二）运算符重载的规则：</h3>
+<ul>
+<li><p>运算符限制：</p>
+<p>可以重载绝大部分的运算符：</p>
+<table>
+
+<thead>
+<tr class="header">
+<th>可重载类型</th>
+<th>具体运算符</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>双目算数运算符</td>
+<td>+ (加)，-(减)，*(乘)，/(除)，% (取模)</td>
+</tr>
+<tr class="even">
+<td>关系运算符</td>
+<td>==(等于)，!= (不等于)，&lt; (小于)，&gt;
+(大于)，&lt;=(小于等于)，&gt;=(大于等于)</td>
+</tr>
+<tr class="odd">
+<td>逻辑运算符</td>
+<td>||(逻辑或)，&amp;&amp;(逻辑与)，!(逻辑非)</td>
+</tr>
+<tr class="even">
+<td>单目运算符</td>
+<td>+ (正)，-(负)，*(指针)，&amp;(取地址)</td>
+</tr>
+<tr class="odd">
+<td>自增自减运算符</td>
+<td>++(自增)，--(自减)</td>
+</tr>
+<tr class="even">
+<td>位运算符</td>
+<td>| (按位或)，&amp; (按位与)，~(按位取反)，^(按位异或),，&lt;&lt;
+(左移)，&gt;&gt;(右移)</td>
+</tr>
+<tr class="odd">
+<td>赋值运算符</td>
+<td>=, +=, -=, *=, /= , % = , &amp;=, |=, ^=, &lt;&lt;=, &gt;&gt;=</td>
+</tr>
+<tr class="even">
+<td>空间申请与释放</td>
+<td>new, delete, new[ ] , delete[]</td>
+</tr>
+<tr class="odd">
+<td>其他运算符</td>
+<td><strong>()</strong>(函数调用)，<strong>-&gt;</strong>(成员访问)，<strong>,</strong>(逗号)，<strong>[]</strong>(下标)</td>
+</tr>
+</tbody>
+</table>
+<p>但不能重载下面的运算符：</p>
+<p>. 类成员选择运算符</p>
+<p>.* 成员指针运算符</p>
+<p>（这两个运算符不能被重载是为了保证访问成员的功能不被改变）</p>
+<p>:: 作用域运算符</p>
+<p>sizeof 长度运算符</p>
+<p>（这两个运算符的运算对象就是类型，而不是变量或者一般式，不具备重载的特征）</p>
+<p>?: 条件表达式运算符</p>
+<p># 预处理符号</p>
+<p>另外，只有“=”的重载函数不能被继承。</p>
+<p>在c++11中，typeid、const_cast、dynamic_cast、reinterpret_cast、static_cast的强制类型转换运算符也不能进行重载。</p></li>
+<li><p>运算符重载要保持原有的基本语义不变，不能改变用于内部对象时该运算符的含义。</p></li>
+<li><p>重载运算符限制在c++语言中已有的运算符范围内的允许重载的运算符之中，不允许创建新的运算符。</p></li>
+<li><p>被重载的运算符的优先级、结合性、操作数的个数和语法结构均不变。因此，不允许在重载的运算符函数中使用默认参数。</p></li>
+<li><p>编译器对运算符重载的函数选择，遵循函数重载的选择规则（函数契合优先级保持不变，因为运算符重载本质上是函数重载）。</p></li>
+<li><p>运算符重载函数只能和用户自定义类型的对象一起使用或者和内部类型的对象混用。即其操作对象至少有一个应该是类对象或类对象的引用。</p></li>
+<li><p>另外，虽然没有强制规定，但是重载运算符的时候其功能应当和原有功能类似。</p></li>
+</ul>
+<h3 id="三运算符重载的定义">（三）运算符重载的定义：</h3>
+<p><strong><em>(friend) 返回类型 类名:: operator op(参数表) { 函数结构体
+}</em></strong></p>
+<p>重载为友元函数在开头加friend关键字，否则无需添加。</p>
+<p>返回类型可以是任何有效类型，但通常情况下是操作类的对象及其引用。</p>
+<p>类名是在类外定义时需要添加的，如果是类内定义可以不用添加。</p>
+<p>operator是关键字，指定其为运算符重载函数。</p>
+<p>op为运算符，也是实际的函数名。</p>
+<p>参数表为形参表，其参数的个数和重载的运算符操作数的个数有关。</p>
+<h3 id="四运算符重载的形式">（四）运算符重载的形式：</h3>
+<p>运算符函数重载一般有两种形式：重载为类的成员函数和重载为类的非成员函数。</p>
+<p>非成员函数通常是友元函数，因为大多数时候重载运算符需要访问类的私有数据。</p>
+<p>当然也可以把一个运算符作为一个非成员、非友元函数重载。但是，这样的运算符函数访问类的私有和保护成员时，必须使用类的公有接口中提供的设置数据和读取数据的函数，调用这些函数时会降低性能——所以一般都会设置为友元函数。</p>
+<ul>
+<li><p>重载为成员函数：</p>
+<p>当运算符重载为类的成员函数，其参数个数比原来的操作数少一个（后置单目运算符除外），原因在于成员函数会使用this指针隐式访问类的一个对象，可以充当运算符函数最左边的操作数。</p>
+<p>因此，成员函数的运算符重载函数的左操作数一定是运算符类的一个类对象或者类对象的引用。</p>
+<ol type="1">
+<li>双目运算符重载为类的成员函数时，函数参数表只显式说明一个参数，该参数作为运算符右操作数参与运算。</li>
+<li>前置单目运算符重载为类的成员函数时，没有形参，不需要显式说明。</li>
+<li>后置单目运算符重载为类的成员函数时，函数需要一个整型形参。（不一定要使用这个形参，但是需要这个整型形参来区别前置和后置运算符）</li>
+</ol></li>
+<li><p>重载为友元函数：</p>
+<p>没有隐含的this指针，因此操作数的个数没有发生变化，所有操作数都需要通过参数表来指定和传递，参数从左到右和操作数一一对应。</p></li>
+<li><p>两种重载形式的联系和区别：</p>
+<p>本质上，是因为成员函数能够有this指针，友元函数没有this指针。</p>
+<p>两者的使用方法相同。但是实现方式不同，传递参数不同，应用场景也不同。</p></li>
+<li><p>两种重载形式的不同特点：</p>
+<ul>
+<li><p>成员函数：</p>
+<p>核心：如果左操作数只能是类对象的话一般使用重载成员函数。</p>
+<ol type="1">
+<li><p>一般情况下，单目运算符重载为类的成员函数。（唯一操作数刚好可以是this所指向的类对象）</p></li>
+<li><p>双目运算符 "=" 、"()" 、"[]" 、"-&gt;"
+只能被重载为类的成员函数。（左操作数一定是类的对象，而且c++对这四个运算符有强制规定）</p></li>
+<li><p>类型转换函数只能被定义为一个类的成员函数而不能是友元函数。（因为转换的主体只能是本类的对象）</p></li>
+<li><p>如一个运算符需要修改对象的状态，则重载为成员函数最好。</p>
+<p>（原因解释：此时若重载为友元函数，参数只能是引用参数，值传递无法影响原对象，指针会导致二义性，不如使用成员函数重载）</p></li>
+</ol></li>
+<li><p>友元函数：</p>
+<p>核心：如果成员函数*this要作为右操作数,，只能将operator作为友元函数。</p>
+<ol type="1">
+<li>一般情况下，双目运算符最好重载为类的友元函数。（因为左操作数一般不一定是类对象，而且运算符常常需要可交换性）</li>
+<li>双目运算符&lt;<和>&gt;只能被重载为类的友元函数。（其左操作数通常不是该类对象）</li>
+<li>当需要重载运算符具备可交换性时，选择重载为友元函数。</li>
+<li>如果左右操作符数据类型不同，选择重载为友元函数。</li>
+<li>如果左边的操作数必须是一个不同类的对象，或者是一个内部类型的对象，即需要对左边的操作数进行隐式的类型转换，该运算符重载函数必须作为友元函数实现。</li>
+</ol></li>
+</ul></li>
+</ul>
+<h4 id="五运算符重载的特殊情况">（五）运算符重载的特殊情况：</h4>
+<p>关系运算符的重载是成对的，<和>、&lt;=和&gt;=、==和!=要成对进行重载。</p>
+<p>&amp;&amp; ||和 ,
+运算符在重载时对算子的操作顺序无法保留（原有的短路求值属性消失了），不推荐对这三个运算符进行重载。</p>
 
                 
               </div>
@@ -364,6 +501,38 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/c-study/" class="category-chain-item">c++_study</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/c/">#c++</a>
+      
+        <a href="/tags/%E7%B1%BB/">#类</a>
+      
+        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+      
+    </div>
   
 </div>
 
@@ -373,8 +542,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>V2rayNG入门使用介绍</div>
-      <div>http://example.com/2023/03/24/V2rayNG入门使用介绍/</div>
+      <div>“c++类——运算符重载(一)”</div>
+      <div>http://example.com/2023/03/24/c++类——运算符重载(一)/</div>
     </div>
     <div class="license-meta">
       
@@ -418,9 +587,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/03/24/c++%E7%B1%BB%E2%80%94%E2%80%94%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD(%E4%B8%80)/" title="“c++类——运算符重载(一)”">
+                      <a href="/2023/03/24/c++%E7%B1%BB%E2%80%94%E2%80%94%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD(%E4%BA%8C)/" title="c++类——运算符重载(二)">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">“c++类——运算符重载(一)”</span>
+                        <span class="hidden-mobile">c++类——运算符重载(二)</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -428,8 +597,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/03/24/%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95(2)/" title="算法——分治算法(2)">
-                        <span class="hidden-mobile">算法——分治算法(2)</span>
+                      <a href="/2023/03/24/V2rayNG%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E4%BB%8B%E7%BB%8D/" title="V2rayNG入门使用介绍">
+                        <span class="hidden-mobile">V2rayNG入门使用介绍</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
