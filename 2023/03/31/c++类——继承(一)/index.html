@@ -16,21 +16,24 @@
   <meta name="author" content="07xiaohei">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="python基础——字符串操作和字符编码">
-<meta property="og:url" content="http://example.com/2023/03/29/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C%E5%92%8C%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/index.html">
+    <meta name="description" content="（一）概念： 继承机制是面向对象程序设计中最重要的一个概念，也是使代码可以复用的最重要的手段。 继承机制允许我们依据一个类来定义另一个类，它允许程序员在保持原有类特性的基础上进行扩展，增加功能，能使对类的创建和维护更加容易——能够重用代码功能和提高执行效率。 被继承的类，也就是已有的类，被称为基类(父类)，而发生继承的类，也就是新建的类，被称为派生类(子类)。 如果要使用基类的成员，派生类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="“c++类——继承(一)”">
+<meta property="og:url" content="http://example.com/2023/03/31/c++%E7%B1%BB%E2%80%94%E2%80%94%E7%BB%A7%E6%89%BF(%E4%B8%80)/index.html">
 <meta property="og:site_name" content="ZZHの个人博客">
+<meta property="og:description" content="（一）概念： 继承机制是面向对象程序设计中最重要的一个概念，也是使代码可以复用的最重要的手段。 继承机制允许我们依据一个类来定义另一个类，它允许程序员在保持原有类特性的基础上进行扩展，增加功能，能使对类的创建和维护更加容易——能够重用代码功能和提高执行效率。 被继承的类，也就是已有的类，被称为基类(父类)，而发生继承的类，也就是新建的类，被称为派生类(子类)。 如果要使用基类的成员，派生类">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-29T08:28:55.000Z">
-<meta property="article:modified_time" content="2023-03-29T08:30:07.918Z">
+<meta property="article:published_time" content="2023-03-31T11:22:38.000Z">
+<meta property="article:modified_time" content="2023-03-31T11:25:53.319Z">
 <meta property="article:author" content="07xiaohei">
+<meta property="article:tag" content="c++">
+<meta property="article:tag" content="类">
 <meta property="article:tag" content="知识点">
-<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>python基础——字符串操作和字符编码 - ZZHの个人博客</title>
+  <title>“c++类——继承(一)” - ZZHの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -259,7 +262,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="python基础——字符串操作和字符编码"></span>
+            <span id="subtitle" data-typed-text="“c++类——继承(一)”"></span>
           
         </div>
 
@@ -270,8 +273,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-03-29 16:28" pubdate>
-          2023年3月29日 下午
+        <time datetime="2023-03-31 19:22" pubdate>
+          2023年3月31日 晚上
         </time>
       </span>
     
@@ -282,7 +285,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          227 字
         
       </span>
     
@@ -293,7 +296,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -339,12 +342,16 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">python基础——字符串操作和字符编码</h1>
+            <h1 style="display: none">“c++类——继承(一)”</h1>
             
             
               <div class="markdown-body">
                 
-                
+                <h3 id="一概念">（一）概念：</h3>
+<p>继承机制是面向对象程序设计中最重要的一个概念，也是使代码可以复用的最重要的手段。</p>
+<p>继承机制允许我们依据一个类来定义另一个类，它允许程序员在保持原有类特性的基础上进行扩展，增加功能，能使对类的创建和维护更加容易——能够重用代码功能和提高执行效率。</p>
+<p>被继承的类，也就是已有的类，被称为基类(父类)，而发生继承的类，也就是新建的类，被称为派生类(子类)。</p>
+<p>如果要使用基类的成员，派生类不需要重新编写新的数据成员和成员函数，只需要指定继承的已有的类的成员。</p>
 
                 
               </div>
@@ -363,7 +370,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/python-study/" class="category-chain-item">python_study</a>
+  <a href="/categories/c-study/" class="category-chain-item">c++_study</a>
   
   
 
@@ -378,9 +385,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+        <a href="/tags/c/">#c++</a>
       
-        <a href="/tags/python/">#python</a>
+        <a href="/tags/%E7%B1%BB/">#类</a>
+      
+        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
       
     </div>
   
@@ -392,8 +401,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>python基础——字符串操作和字符编码</div>
-      <div>http://example.com/2023/03/29/python基础——字符串操作和字符编码/</div>
+      <div>“c++类——继承(一)”</div>
+      <div>http://example.com/2023/03/31/c++类——继承(一)/</div>
     </div>
     <div class="license-meta">
       
@@ -405,7 +414,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年3月29日</div>
+          <div>2023年3月31日</div>
         </div>
       
       
@@ -437,18 +446,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/03/31/c++%E7%B1%BB%E2%80%94%E2%80%94%E7%B1%BB%E4%B8%8E%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/" title="“c++类——类与类之间的关系”">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">“c++类——类与类之间的关系”</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/03/28/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B(%E5%85%AB)%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="python基础——数据类型(八)类型转换">
-                        <span class="hidden-mobile">python基础——数据类型(八)类型转换</span>
+                      <a href="/2023/03/31/c++%E7%B1%BB%E2%80%94%E2%80%94%E7%B1%BB%E4%B8%8E%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/" title="“c++类——类与类之间的关系”">
+                        <span class="hidden-mobile">“c++类——类与类之间的关系”</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
