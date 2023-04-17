@@ -16,15 +16,15 @@
   <meta name="author" content="07xiaohei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="（一）概念： 1. 泛型编程：  泛型：在计算机程序设计领域，为了避免因数据类型的不同而重复编写大量逻辑的代码，不使用具体数据类型，而是使用一种通用类型来进行程序设计的方法，大规模减少程序代码的编写量，此为泛型。 实际上，泛型也是一种数据类型，只不过它是一种用来代替所有类型的“通用类型”。 泛型编程：是不依赖于某一具体类型而使代码具有很强适应性的编程范式。 泛型编写的代码不是真正的程序">
+    <meta name="description" content="全文仅介绍模版的基础内容，后文进行函数模版和类模版的相关实现，再介绍模版的各种特殊情况。 （一）概念： 1. 泛型编程：  泛型：在计算机程序设计领域，为了避免因数据类型的不同而重复编写大量逻辑的代码，不使用具体数据类型，而是使用一种通用类型来进行程序设计的方法，大规模减少程序代码的编写量，此为泛型。 实际上，泛型也是一种数据类型，只不过它是一种用来代替所有类型的“通用类型”。 泛型编">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c++类——模版(一)">
 <meta property="og:url" content="http://example.com/2023/04/14/c++%E7%B1%BB%E2%80%94%E2%80%94%E6%A8%A1%E7%89%88(%E4%B8%80)/index.html">
 <meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（一）概念： 1. 泛型编程：  泛型：在计算机程序设计领域，为了避免因数据类型的不同而重复编写大量逻辑的代码，不使用具体数据类型，而是使用一种通用类型来进行程序设计的方法，大规模减少程序代码的编写量，此为泛型。 实际上，泛型也是一种数据类型，只不过它是一种用来代替所有类型的“通用类型”。 泛型编程：是不依赖于某一具体类型而使代码具有很强适应性的编程范式。 泛型编写的代码不是真正的程序">
+<meta property="og:description" content="全文仅介绍模版的基础内容，后文进行函数模版和类模版的相关实现，再介绍模版的各种特殊情况。 （一）概念： 1. 泛型编程：  泛型：在计算机程序设计领域，为了避免因数据类型的不同而重复编写大量逻辑的代码，不使用具体数据类型，而是使用一种通用类型来进行程序设计的方法，大规模减少程序代码的编写量，此为泛型。 实际上，泛型也是一种数据类型，只不过它是一种用来代替所有类型的“通用类型”。 泛型编">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-14T08:20:03.000Z">
-<meta property="article:modified_time" content="2023-04-14T16:26:51.771Z">
+<meta property="article:modified_time" content="2023-04-15T04:09:37.300Z">
 <meta property="article:author" content="07xiaohei">
 <meta property="article:tag" content="c++">
 <meta property="article:tag" content="类">
@@ -285,7 +285,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          2.6k 字
         
       </span>
     
@@ -296,7 +296,7 @@
         
         
         
-          10 分钟
+          22 分钟
         
       </span>
     
@@ -347,7 +347,8 @@
             
               <div class="markdown-body">
                 
-                <h3 id="一概念">（一）概念：</h3>
+                <p>全文仅介绍模版的基础内容，后文进行函数模版和类模版的相关实现，再介绍模版的各种特殊情况。</p>
+<h3 id="一概念">（一）概念：</h3>
 <h4 id="泛型编程">1. 泛型编程：</h4>
 <ul>
 <li><p>泛型：在计算机程序设计领域，为了避免因数据类型的不同而重复编写大量逻辑的代码，不使用具体数据类型，而是使用一种通用类型来进行程序设计的方法，大规模减少程序代码的编写量，此为泛型。</p>
@@ -376,15 +377,38 @@ Stream等等。</p>
 <ul>
 <li><p>模板的声明和定义：只能放在全局，命名空间或者类范围内进行，即不能在局部范围或者函数内部进行，比如不能在main函数中声明和定义一个模板。</p></li>
 <li><p>工作原理：模板定义并不是真正的定义了一个函数或者类，而是编译器根据程序员缩写的模板和形参来自己写出一个对应版本的定义，这个过程叫做模板实例化。编译器成成的版本通常被称为模板的实例。编译器为程序员生成对应版本的具体过程。类似宏替换。</p>
-<p>模板类在没有调用之前是不会生成代码的。</p>
+<p>模板在没有调用之前是不会生成代码的。</p>
 <p>由于编译器并不会直接编译模板本身，所以模板的定义通常放在头文件中。</p></li>
-<li><p>模板参数作用域：和函数参数/变量类似，是普通的作用域规则。</p></li>
-<li><p>非类型模板参数：</p></li>
 <li><p>格式：</p>
 <p>template&lt;class 形参名1，class 形参名2，...&gt;</p>
 <p>返回类型 函数名（参数列表）{函数体} /class 类名 { 类的内部定义 }
-;</p></li>
+;</p>
+<p>template和class是关键字，形参前的class可以用typename关键字替代，一般情况下typename和class没有什么区别。</p>
+<p>&lt;&gt;里面的参数叫做模板形参，模板形参和函数形参很像，但是模板形参不能为空，一旦声明了模板就可以使用模板形参的形参名作为变量声明、作为返回类型或者作为传入参数，即可以使用内置类型的地方都可以使用模板形参名。</p>
+<p>模板形参在调用该模板相关内容时根据其提供的模板实参类型来初始化模板形参，也就是说一旦编译器确定了实际的模板实参类型就可以称它实例化了模板的一个实例。</p></li>
+<li><p>分类：分为函数模版和类模版。</p></li>
+<li><p>模板形参作用域：和函数形参/变量类似，是普通的作用域规则。</p></li>
+<li><p>模版实例化：</p>
+<p>隐式实例化：在运行期间生成实例，对于某个对象/函数调用，编译器会自动使用提供的模板实参生成具体的函数或类。一般来说，编译器也会从函数的实参中推导出模板实参。（也就是实例化的内容为&lt;T&gt;）</p>
+<p>显式实例化：在编译期间就会生成实例，对于某个对象/函数调用，明确指定T的实例化类型。（实例化的内容为&lt;int&gt;等具体类型）</p>
+<p>问题：</p>
+<p>在我们使用类模板时，只有当代码中使用了类模板的一个实例的名字，而且上下文环境要求必须存在类的定义时，这个类模板才被实例化。</p>
+<ol type="1">
+<li><p>声明一个类模板的指针和引用，不会引起类模板的实例化，因为没有必要知道该类的定义。</p></li>
+<li><p>定义一个类类型的对象时需要该类的定义，因此类模板会被实例化。</p></li>
+<li><p>在使用sizeof()时，它是计算对象的大小，编译器必须根据类型将其实例化出来，所以类模板被实例化.</p></li>
+<li><p>new表达式要求类模板被实例化。</p></li>
+<li><p>引用类模板的成员会导致类模板被编译器实例化。</p></li>
+<li><p>需要注意的是，类模板的成员函数本身也是一个模板。标准C++要求这样的成员函数只有在被调用或者取地址的时候，才被实例化。用来实例化成员函数的类型，就是其成员函数要调用的那个类对象的类型。</p></li>
+</ol></li>
+<li><p>实例化优化
+：当模板被调用时才会被编译，那么就会存在这样一种情况——相同的实例化可能出现在多个文件对象中。当两个或多个独立编译地源文件适用了相同的模板，并提供了相同的模板参数时，每个文件中就都会有该模板的一个实例。</p>
+<p>为了控制显式实例化，可以用关键字extern显式实例化声明，这表示承诺在程序的其他位置有该实例化的一个非extern声明（定义）。</p>
+<p>由于编译器在使用一个模板时自动对其实例化，因此extern声明必须出现在任何用此实例化版本的代码之前。</p></li>
 </ul>
+<h3
+id="三简单函数模版和类模版的实现">（三）简单函数模版和类模版的实现：</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> T&gt;  <br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(T t1, T t2)</span> <span class="hljs-comment">//简单的模版函数</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">if</span> (t1 &gt; t2)<br>		<span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">if</span> (t1 == t2)<br>		<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">if</span> (t1 &lt; t2)<br>		<span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br>&#125;<br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> T&gt; <br><span class="hljs-keyword">class</span> <span class="hljs-title class_">compare</span> <span class="hljs-comment">//简单的模版类</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	T _val;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">compare</span><span class="hljs-params">(T&amp; val)</span> : _val(val) &#123;</span> &#125;<br>	<span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">compare</span><span class="hljs-params">(T&amp;&amp; val)</span> : _val(val) &#123;</span> &#125;<br>	<span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>==(T&amp; t)<br>	&#123;<br>		<span class="hljs-keyword">return</span> _val == t;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -489,8 +513,8 @@ Stream等等。</p>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/04/14/c++%E7%B1%BB%E2%80%94%E2%80%94%E6%A8%A1%E7%89%88(%E4%B8%89)/" title="c++类——模版(三)">
-                        <span class="hidden-mobile">c++类——模版(三)</span>
+                      <a href="/2023/04/14/c++%E7%B1%BB%E2%80%94%E2%80%94%E6%A8%A1%E7%89%88(%E4%BA%8C)/" title="c++类——模版(二)">
+                        <span class="hidden-mobile">c++类——模版(二)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
