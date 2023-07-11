@@ -16,21 +16,23 @@
   <meta name="author" content="07xiaohei">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="算法——分治算法(3)">
-<meta property="og:url" content="http://example.com/2023/04/14/%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95(3)/index.html">
+    <meta name="description" content="（一）循环语句 程序在一般情况下是按顺序执行的，而循环语句允许我们执行一个代码块多次。 Python中的循环允许嵌套。 （二）循环结构类型 Python中提供了以下两种基础循环结构，注意，Python中没有do-while循环：  for...in... while  1. for循环： （1）语句格式： for iterating_var in sequence: stat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础——循环">
+<meta property="og:url" content="http://example.com/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%BE%AA%E7%8E%AF/index.html">
 <meta property="og:site_name" content="ZZHの个人博客">
+<meta property="og:description" content="（一）循环语句 程序在一般情况下是按顺序执行的，而循环语句允许我们执行一个代码块多次。 Python中的循环允许嵌套。 （二）循环结构类型 Python中提供了以下两种基础循环结构，注意，Python中没有do-while循环：  for...in... while  1. for循环： （1）语句格式： for iterating_var in sequence: stat">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-04-14T08:23:28.000Z">
-<meta property="article:modified_time" content="2023-04-14T08:24:08.574Z">
+<meta property="article:published_time" content="2023-07-11T09:14:31.000Z">
+<meta property="article:modified_time" content="2023-07-11T12:32:07.406Z">
 <meta property="article:author" content="07xiaohei">
-<meta property="article:tag" content="分治">
-<meta property="article:tag" content="算法">
+<meta property="article:tag" content="知识点">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>算法——分治算法(3) - ZZHの个人博客</title>
+  <title>python基础——循环 - ZZHの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -271,7 +273,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="算法——分治算法(3)"></span>
+            <span id="subtitle" data-typed-text="python基础——循环"></span>
           
         </div>
 
@@ -282,8 +284,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-04-14 16:23" pubdate>
-          2023年4月14日 下午
+        <time datetime="2023-07-11 17:14" pubdate>
+          2023年7月11日 下午
         </time>
       </span>
     
@@ -294,7 +296,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          2.7k 字
         
       </span>
     
@@ -305,7 +307,7 @@
         
         
         
-          1 分钟
+          23 分钟
         
       </span>
     
@@ -351,12 +353,78 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">算法——分治算法(3)</h1>
+            <h1 style="display: none">python基础——循环</h1>
             
             
               <div class="markdown-body">
                 
-                
+                <h3 id="一循环语句">（一）循环语句</h3>
+<p>程序在一般情况下是按顺序执行的，而循环语句允许我们执行一个代码块多次。</p>
+<p>Python中的循环允许嵌套。</p>
+<h3 id="二循环结构类型">（二）循环结构类型</h3>
+<p>Python中提供了以下两种基础循环结构，注意，Python中没有do-while循环：</p>
+<ul>
+<li>for...in...</li>
+<li>while</li>
+</ul>
+<h4 id="for循环">1. for循环：</h4>
+<h5 id="语句格式">（1）语句格式：</h5>
+<p>for iterating_var in sequence: statements(s)</p>
+<p>iterating_val就是迭代变量，可以是一个变量或者一个索引，sequence则是一个序列，也就是循环体，而statement(s)对应了一个循环语句块，对应了循环执行内容。</p>
+<p>其逻辑为：将一个序列对应的表达式列表的第一项分配给迭代变量，然后执行循环语句块，完成后将表达式列表的下一项再分配给迭代变量，再次执行循环语句块，直到序列被完成。
+注意，迭代变量可以是序列的索引，利用索引和偏移量遍历序列。</p>
+<p>简单的例子如下：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs routeros">str = <span class="hljs-string">&quot;love everyone&quot;</span><br><span class="hljs-keyword">for</span> char <span class="hljs-keyword">in</span> str:<br>    <span class="hljs-built_in">print</span>(char,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot;,&quot;</span>)<br><span class="hljs-built_in">print</span>()<br>list1 = [<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> list1:<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot;,&quot;</span>)<br></code></pre></td></tr></table></figure>
+<h5 id="range">（2）range()：</h5>
+<p>range是一个函数，它返回的是一个可迭代对象，在for
+in循环中使用于创建数字序列。</p>
+<p>函数格式：<strong><em>range(stop)</em></strong>和<strong><em>range(start,
+stop[, step])</em></strong></p>
+<p>start表示计数初值，不输入默认为0，stop表示计数终值，必须指定，且不包括stop计数终值本身（因为实际上结束值表示的是下标），[,step]是指从初值到终值的步长，可以省略，默认值就是1。</p>
+<p>参数对应：一个参数——stop；两个参数——start和stop；三个参数——start，stop和step。</p>
+<p>注意事项：</p>
+<ul>
+<li>range()函数仅适用于整数，且所有参数都必须是整数类型。</li>
+<li>range()函数的对应区间是左闭右开</li>
+<li>如果初值为0，步长为1，都可以省略，但不能只省略初值不省略步长。</li>
+<li>步长值可以为正数或负数，不得为零，初值必须能够通过步长值指向对方（不能越离越远）。</li>
+<li>用户可以按索引访问range()中的项目。</li>
+</ul>
+<p>简单的例子如下：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(6):<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&#x27; &#x27;</span>)<br><span class="hljs-built_in">print</span>()<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(3,8):<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&#x27; &#x27;</span>)<br><span class="hljs-built_in">print</span>()<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(4,10,2):<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&#x27; &#x27;</span>)<br><span class="hljs-built_in">print</span>()<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(8,4,-1):<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&#x27; &#x27;</span>)<br><span class="hljs-built_in">print</span>()<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(8,3,-2):<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&#x27; &#x27;</span>)<br><span class="hljs-built_in">print</span>()<br>list2 = [<span class="hljs-string">&quot;鸡&quot;</span>, <span class="hljs-string">&quot;你&quot;</span>, <span class="hljs-string">&quot;太&quot;</span>, <span class="hljs-string">&quot;美&quot;</span>]<br><span class="hljs-keyword">for</span> index <span class="hljs-keyword">in</span> range(len(list2)):<br>   <span class="hljs-built_in">print</span> (list2[index],<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br></code></pre></td></tr></table></figure>
+<h4 id="while循环">2. while循环：</h4>
+<h5 id="语句格式-1">（1）语句格式：</h5>
+<p><strong><em>while condition：</em></strong>
+<strong><em>statements(s)</em></strong></p>
+<p>condition是判断条件，使用一个条件表达式来完成判断是否结束循环。</p>
+<p>判断条件为假时结束循环。</p>
+<p>while循环和for...in循环的不同之处在于while循环要先将循环变量初始化或者直接使用while
+True死循环，不能直接在表达式中定义变量。</p>
+<p>简单的例子如下：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs routeros">i =0<br><span class="hljs-keyword">while</span> i&lt;=10:<br>    <span class="hljs-built_in">print</span>(i)<br>    <span class="hljs-attribute">i</span>=i+1<br><span class="hljs-keyword">while</span> i&gt;2:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;enter the while1&quot;</span>)<br><span class="hljs-keyword">while</span> i&lt;2:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;enter the while2&quot;</span>)<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># 0</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 4</span><br><span class="hljs-comment"># 5</span><br><span class="hljs-comment"># 6</span><br><span class="hljs-comment"># 7</span><br><span class="hljs-comment"># 8</span><br><span class="hljs-comment"># 9</span><br><span class="hljs-comment"># 10</span><br><span class="hljs-comment"># enter the while1</span><br><span class="hljs-comment"># enter the while1</span><br><span class="hljs-comment"># enter the while1</span><br><span class="hljs-comment"># ......</span><br><br>j = 1<br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    <span class="hljs-built_in">print</span>(j)<br>    <span class="hljs-attribute">j</span>=j+1<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 4</span><br><span class="hljs-comment"># 5</span><br><span class="hljs-comment"># ......</span><br></code></pre></td></tr></table></figure>
+<h4 id="循环和else配合使用">3. 循环和else配合使用：</h4>
+<p>for/while可以和else组合使用。</p>
+<p>格式：</p>
+<p><strong><em>循环语句</em></strong></p>
+<p><strong><em>else:</em></strong></p>
+<p>​ <strong><em>代码块</em></strong></p>
+<p>循环语句就是普通的for和while语句，而else中的语句会在循环正常执行完（即循环不是通过break跳出而中断的）的情况下执行.</p>
+<p>简单例子如下：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(1,3):<br>    <span class="hljs-built_in">print</span>(i)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;再多看一眼就会爆炸&quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 再多看一眼就会爆炸</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(1,3):<br>    <span class="hljs-built_in">print</span>(i)<br>    break<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;再多看一眼就会爆炸&quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 1</span><br></code></pre></td></tr></table></figure>
+<h3 id="三breakcontinue和pass">（三）break，continue和pass</h3>
+<h4 id="break">1. break：</h4>
+<p>break说明的是退出循环，执行下一命令。</p>
+<p>对于嵌套循环，break退出的是当前代码块的循环，不会全部退出。</p>
+<p>例子：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;哎呦你干嘛&quot;</span>:<br>    <span class="hljs-built_in">print</span>(i)<br>    <span class="hljs-keyword">if</span>(<span class="hljs-attribute">i</span>==&quot;干&quot;):<br>        break<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 哎</span><br><span class="hljs-comment"># 呦</span><br><span class="hljs-comment"># 你</span><br><span class="hljs-comment"># 干</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(1,8):<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(1,i):<br>        <span class="hljs-built_in">print</span>(j)<br>        <span class="hljs-keyword">if</span>(<span class="hljs-attribute">j</span>==3):<br>            break<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 3</span><br></code></pre></td></tr></table></figure>
+<h4 id="continue">2. continue：</h4>
+<p>立刻跳出本次循环，剩余语句也不执行，直接开始下一轮循环。</p>
+<p>嵌套循环逻辑同break。</p>
+<p>例子：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;哎呦你干嘛&quot;</span>:<br>    <span class="hljs-keyword">if</span>(<span class="hljs-attribute">i</span>==&quot;干&quot;):<br>        continue<br>    <span class="hljs-built_in">print</span>(i)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(1,5):<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(1,i):<br>        <span class="hljs-keyword">if</span> <span class="hljs-attribute">j</span>==3:<br>            continue<br>        <span class="hljs-built_in">print</span>(j)<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># 哎</span><br><span class="hljs-comment"># 呦</span><br><span class="hljs-comment"># 你</span><br><span class="hljs-comment"># 嘛</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 2</span><br></code></pre></td></tr></table></figure>
+<h4 id="pass">3. pass：</h4>
+<p>空语句，为了保持程序结构的完整性，不做任何事情，只用于占位。</p>
+<p>python3已经不需要必须使用空语句了，不举例子</p>
 
                 
               </div>
@@ -375,7 +443,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/algorithm-study/" class="category-chain-item">algorithm_study</a>
+  <a href="/categories/python-study/" class="category-chain-item">python_study</a>
   
   
 
@@ -390,9 +458,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%88%86%E6%B2%BB/">#分治</a>
+        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
       
-        <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
+        <a href="/tags/python/">#python</a>
       
     </div>
   
@@ -404,8 +472,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>算法——分治算法(3)</div>
-      <div>http://example.com/2023/04/14/算法——分治算法(3)/</div>
+      <div>python基础——循环</div>
+      <div>http://example.com/2023/07/11/python基础——循环/</div>
     </div>
     <div class="license-meta">
       
@@ -417,7 +485,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年4月14日</div>
+          <div>2023年7月11日</div>
         </div>
       
       
@@ -449,9 +517,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/" title="python基础——条件判断">
+                      <a href="/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%B8%80)/" title="python基础——函数(一)">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">python基础——条件判断</span>
+                        <span class="hidden-mobile">python基础——函数(一)</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -459,8 +527,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/04/14/c++%E7%B1%BB%E2%80%94%E2%80%94%E6%A8%A1%E7%89%88(%E4%B8%80)/" title="c++类——模版(一)">
-                        <span class="hidden-mobile">c++类——模版(一)</span>
+                      <a href="/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/" title="python基础——条件判断">
+                        <span class="hidden-mobile">python基础——条件判断</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
