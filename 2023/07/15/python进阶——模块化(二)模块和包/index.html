@@ -16,13 +16,15 @@
   <meta name="author" content="07xiaohei">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="（三）模块(Module) 1. 概念： Python中的模块，是一个Python的文件，以&quot;.py&quot;为后缀，其余部分作为模块名称，包括Python的对象定义和Python的一组可执行代码语句（函数和类）。 一个模块对应了一组特定的功能，一些定义的对象或者变量使用。 模块是按照逻辑组织Python代码的方法，文件是按照物理组织模块内Python代码的方法——因此，一个文件被看作是一个独立模">
+<meta property="og:type" content="article">
 <meta property="og:title" content="python进阶——模块化(二)模块和包">
 <meta property="og:url" content="http://example.com/2023/07/15/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E6%A8%A1%E5%9D%97%E5%8C%96(%E4%BA%8C)%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%85/index.html">
 <meta property="og:site_name" content="ZZHの个人博客">
+<meta property="og:description" content="（三）模块(Module) 1. 概念： Python中的模块，是一个Python的文件，以&quot;.py&quot;为后缀，其余部分作为模块名称，包括Python的对象定义和Python的一组可执行代码语句（函数和类）。 一个模块对应了一组特定的功能，一些定义的对象或者变量使用。 模块是按照逻辑组织Python代码的方法，文件是按照物理组织模块内Python代码的方法——因此，一个文件被看作是一个独立模">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-15T10:22:42.000Z">
-<meta property="article:modified_time" content="2023-07-15T10:23:11.791Z">
+<meta property="article:modified_time" content="2023-07-16T07:53:27.806Z">
 <meta property="article:author" content="07xiaohei">
 <meta property="article:tag" content="知识点">
 <meta property="article:tag" content="python">
@@ -294,7 +296,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          11k 字
         
       </span>
     
@@ -305,7 +307,7 @@
         
         
         
-          1 分钟
+          94 分钟
         
       </span>
     
@@ -356,7 +358,174 @@
             
               <div class="markdown-body">
                 
-                
+                <h3 id="三模块module">（三）模块(Module)</h3>
+<h4 id="概念">1. 概念：</h4>
+<p>Python中的模块，是一个Python的文件，以".py"为后缀，其余部分作为模块名称，包括Python的对象定义和Python的一组可执行代码语句（函数和类）。</p>
+<p>一个模块对应了一组特定的功能，一些定义的对象或者变量使用。</p>
+<p>模块是按照逻辑组织Python代码的方法，文件是按照物理组织模块内Python代码的方法——因此，一个文件被看作是一个独立模块，一个模块可以被看作是一个文件，模块文件名=模块名+.py。</p>
+<p>模块的名称实际上就存储在全局变量__name__中，以字符串表示。</p>
+<p>可以通过导入sys库调用其modules功能来获得__name__的对应模块名。</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs clean"><span class="hljs-keyword">import</span> sys<br>print(sys.modules[__name__])<br># 运行结果：<br># &lt;<span class="hljs-keyword">module</span> <span class="hljs-string">&#x27;__main__&#x27;</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;D:\\pycharmwork\\blog_use.py&#x27;</span>&gt;<br></code></pre></td></tr></table></figure>
+<h4 id="模块的创建">2. 模块的创建：</h4>
+<p>Python中一般使用三个方法创建模块：</p>
+<ul>
+<li>创建一个python文件，并用python语言编写其功能。</li>
+<li>用C语言实现功能，在运行时动态加载。</li>
+<li>直接引用内置模块。</li>
+</ul>
+<p>绝大多数时候我们只使用第一个方法，自己写一个.py为后缀的文件即可。</p>
+<p>编写一个模块主要是要注意不要直接编写可执行代码，而是把这些代码封装在函数中或者类中，再定义好需要对外使用的变量即可。</p>
+<p>另外要注意.py文件的对应模块名必须符合标识符的命名规则。</p>
+<h4 id="模块的导入和调用">3. 模块的导入和调用：</h4>
+<h5 id="import">(1)import：</h5>
+<p>import语句可以引入已经定义好的模块。</p>
+<ul>
+<li><p>导入整个模块：</p>
+<p>对于导入整个模块，import语句的语法格式为：<strong><em>import
+module1[, module2[,...
+moduleN]]</em></strong>，moduleN表示一个模块名。</p>
+<p>此时，可以调用模块的所有功能，调用的格式为：<strong><em>模块名.函数名</em></strong>，模块名是不能省略的。</p>
+<p>例如导入Python的math库并使用其sqrt函数：</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">import math<br><span class="hljs-built_in">result</span> = math.<span class="hljs-built_in">sqrt</span>(<span class="hljs-number">4</span>)<br>print(<span class="hljs-built_in">result</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 2.0</span><br></code></pre></td></tr></table></figure>
+<p>要注意，一个模块只会被导入一次，以此来防止导入模块被一遍遍执行。</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs haskell"><span class="hljs-meta">#如在pycharm中编写会发现只有第三个import是高亮的</span><br><span class="hljs-keyword">import</span> math<br><span class="hljs-keyword">import</span> math<br><span class="hljs-keyword">import</span> math<br><span class="hljs-title">result</span> = math.sqrt(<span class="hljs-number">4</span>)<br><span class="hljs-title">print</span>(result)<br><span class="hljs-meta"># 运行结果：</span><br><span class="hljs-meta"># 2.0</span><br></code></pre></td></tr></table></figure>
+<p>如果想要重复导入执行模块顶层部分的代码，使用reload()函数重新导入。</p>
+<p>语法格式：<strong><em>reload(module_name)</em></strong></p>
+<p>不过奇葩的是，reload函数的调用需要导入iimportlib包才能使用。</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">import</span> <span class="hljs-type">time</span><br><span class="hljs-keyword">import</span> importlib<br>print(<span class="hljs-type">time</span>.struct_time)<br>importlib.reload(<span class="hljs-type">time</span>)<br>print(<span class="hljs-type">time</span>.struct_time)<br># 运行结果：<br># &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;time.struct_time&#x27;</span>&gt;<br># &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;time.struct_time&#x27;</span>&gt;<br></code></pre></td></tr></table></figure>
+<p>可以使用dir()函数返回模块内定义的所有模块、变量和函数。</p>
+<p>语法格式：<strong><em>dir(module)</em></strong>，返回一个列表，列表即为上述的全部定义信息。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs routeros">import math<br>result = dir(math)<br><span class="hljs-attribute">j</span>=0<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> result:<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br>    j+=1<br>    <span class="hljs-keyword">if</span> <span class="hljs-attribute">j</span>== 10:<br>        <span class="hljs-built_in">print</span>()<br>        <span class="hljs-attribute">j</span>=0<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># __doc__ __loader__ __name__ __package__ __spec__ acos acosh asin asinh atan </span><br><span class="hljs-comment"># atan2 atanh cbrt ceil comb copysign cos cosh degrees dist </span><br><span class="hljs-comment"># e erf erfc exp exp2 expm1 fabs factorial floor fmod </span><br><span class="hljs-comment"># frexp fsum gamma gcd hypot inf isclose isfinite isinf isnan </span><br><span class="hljs-comment"># isqrt lcm ldexp lgamma log log10 log1p log2 modf nan </span><br><span class="hljs-comment"># nextafter perm pi pow prod radians remainder sin sinh sqrt </span><br><span class="hljs-comment"># tan tanh tau trunc ulp </span><br></code></pre></td></tr></table></figure>
+<p>这其中有三个固定方法：</p>
+<ul>
+<li>__doc__：指向指定对象的注释部分。</li>
+<li>__file__：指向该模块的导入文件名。</li>
+<li>__name__：指向模块的名字。</li>
+</ul></li>
+<li><p>导入模块中的特定函数和变量：</p>
+<p>当只需要一个模块的某些函数和变量时，可以只导入模块的指定函数和变量到当前的命名空间中。</p>
+<p>使用from ...import语句，语法格式：<strong><em>from modname import
+name1[, name2[, ... nameN]]</em></strong></p>
+<p>modname是模块名，nameN是函数名或者变量名。</p>
+<p>此语句在全局命名空间中只会引入指定的变量和函数名称。</p>
+<p>和import语句不同的是，import语句不会将这些符号保存到全局命名空间中，所以其调用必须显式指定模块名，而from....import语句是保存到全局命名空间中，所以不需要在调用时指定模块名，可以当做自己的函数使用。</p>
+<p>注意导入功能名字有重复时，调用的是最后定义或者导入的功能。</p>
+<p>例如导入math中的sin()、cos()和tan()函数以及pi变量：</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs lua">from <span class="hljs-built_in">math</span> import <span class="hljs-built_in">sin</span>,<span class="hljs-built_in">cos</span>,<span class="hljs-built_in">tan</span>,<span class="hljs-built_in">pi</span><br><span class="hljs-built_in">print</span>(globals().keys())<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">sin</span>(<span class="hljs-built_in">pi</span>/<span class="hljs-number">2</span>))<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">cos</span>(<span class="hljs-built_in">pi</span>))<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">tan</span>(<span class="hljs-built_in">pi</span>/<span class="hljs-number">4</span>))<br># 运行结果：<br># dict_keys([<span class="hljs-string">&#x27;__name__&#x27;</span>, <span class="hljs-string">&#x27;__doc__&#x27;</span>, <span class="hljs-string">&#x27;__package__&#x27;</span>, <span class="hljs-string">&#x27;__loader__&#x27;</span>, <span class="hljs-string">&#x27;__spec__&#x27;</span>, <span class="hljs-string">&#x27;__annotations__&#x27;</span>, <span class="hljs-string">&#x27;__builtins__&#x27;</span>, <span class="hljs-string">&#x27;__file__&#x27;</span>, <span class="hljs-string">&#x27;__cached__&#x27;</span>, <span class="hljs-string">&#x27;sys&#x27;</span>, <span class="hljs-string">&#x27;sin&#x27;</span>, <span class="hljs-string">&#x27;cos&#x27;</span>, <span class="hljs-string">&#x27;tan&#x27;</span>, <span class="hljs-string">&#x27;pi&#x27;</span>])<br># <span class="hljs-number">1.0</span><br># <span class="hljs-number">-1.0</span><br># <span class="hljs-number">0.9999999999999999</span><br></code></pre></td></tr></table></figure></li>
+<li><p>导入模块中的全部内容：</p>
+<p>除了指定内容，也可以全部的模块内容导入到当前的命名空间中。</p>
+<p>仍使用from...import语句，但import内容为*，代表导入模块的全部内容。</p>
+<p>语法格式为：<strong><em>from modname import
+*</em></strong>，modname为模块名。</p>
+<p>注意这样的操作可能会导致全局命名空间有大量的冗余变量和函数，可能使其内存占用大大增加，产生很多命名冲突，和我们使用模块化的初衷不符，所以不建议过多使用。</p>
+<p>另外，该方式不会导入下划线__开头的函数。</p>
+<p>例如将time模块全部导入，能够看到time中的全部函数、类和变量都被保存到了全局命名空间中。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">from</span> time import *<br><span class="hljs-attribute">j</span>=0<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> list(globals().keys()):<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br>    j+=1<br>    <span class="hljs-keyword">if</span> <span class="hljs-attribute">j</span>==10:<br>        <span class="hljs-built_in">print</span>()<br>        <span class="hljs-attribute">j</span>=0<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\n-----------------------------&quot;</span>)<br><span class="hljs-attribute">j</span>=0<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> list(dir(time)):<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br>    j+=1<br>    <span class="hljs-keyword">if</span> <span class="hljs-attribute">j</span>==10:<br>        <span class="hljs-built_in">print</span>()<br>        <span class="hljs-attribute">j</span>=0<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># __name__ __doc__ __package__ __loader__ __spec__ __annotations__ __builtins__ __file__ __cached__ sys</span><br><span class="hljs-comment"># time time_ns sleep gmtime localtime asctime ctime mktime strftime strptime</span><br><span class="hljs-comment"># monotonic monotonic_ns process_time process_time_ns thread_time thread_time_ns perf_counter perf_counter_ns get_clock_info timezone</span><br><span class="hljs-comment"># altzone daylight tzname struct_time j</span><br><span class="hljs-comment"># -----------------------------</span><br><span class="hljs-comment"># __call__ __class__ __delattr__ __dir__ __doc__ __eq__ __format__ __ge__ __getattribute__ __getstate__</span><br><span class="hljs-comment"># __gt__ __hash__ __init__ __init_subclass__ __le__ __lt__ __module__ __name__ __ne__ __new__</span><br><span class="hljs-comment"># __qualname__ __reduce__ __reduce_ex__ __repr__ __self__ __setattr__ __sizeof__ __str__ __subclasshook__ __text_signature__</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li><p>__all__变量：</p>
+<p>如果模块文件中定义了__all__变量，使用from modname import
+*语句时，只能导入这个列表的元素。</p>
+<p>另外，该变量允许导入以__为开头的变量，所以请谨慎使用。</p>
+<p>下面展示一下导入时的情况</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment">#test.py文件代码</span><br>__all__ = [<span class="hljs-string">&quot;fun2&quot;</span>,<span class="hljs-string">&quot;fun3&quot;</span>]<br>def fun():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;执行模块功能中...&quot;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;执行完成&quot;</span>)<br>def fun2():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;功能2&quot;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;2完成&quot;</span>)<br>def fun3():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;功能3&quot;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;3完成&quot;</span>)<br><br><span class="hljs-comment">#执行文件</span><br><span class="hljs-keyword">from</span> test import *<br><span class="hljs-keyword">if</span> <span class="hljs-string">&quot;fun&quot;</span> <span class="hljs-keyword">in</span> globals().keys():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;True fun&quot;</span>)<br><span class="hljs-keyword">if</span> <span class="hljs-string">&quot;fun2&quot;</span> <span class="hljs-keyword">in</span> globals().keys():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;True fun2&quot;</span>)<br><span class="hljs-keyword">if</span> <span class="hljs-string">&quot;fun3&quot;</span> <span class="hljs-keyword">in</span> globals().keys():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;True fun3&quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># True fun2</span><br><span class="hljs-comment"># True fun3</span><br></code></pre></td></tr></table></figure></li>
+</ul></li>
+<li><p>为导入模块定义别名：</p>
+<p>如果觉得原来的模块名比较繁琐，可以为模块名增加一个别名，简化代码的调用写法。</p>
+<p>格式：<strong><em>import modname as
+newname</em></strong>，modname是原模块名，newname是新的别名。</p>
+<p>在调用时使用两个中的任何一个均可。</p>
+<p>例如为math模块增加一个ma别名：</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><span class="hljs-keyword">import</span> math <span class="hljs-keyword">as</span> ma<br><span class="hljs-built_in">print</span>(ma.pi)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 3.141592653589793</span><br></code></pre></td></tr></table></figure></li>
+<li><p>模块的单独运行：</p>
+<p>有时我们希望运行或者测试单个python文件时运行代码执行某些操作或者输出结果，但是作为模块被其他文件引用时不运行这些代码，也就是让这个python文件既能够作为脚本单独运行，又能够作为模块被其他文件使用。</p>
+<p>此时需要为python文件中所有单独运行的代码上增加这样一句话：</p>
+<p>**if __name__ == "__main__":**</p>
+<p>此语句的意思是，只有当前文件单独执行时才会执行此语句下的代码块，作为模块被引用时不会被执行。</p>
+<p>例如我们在一个文件夹下创建.py文件并执行文件，命名为test.py，文件内容和运行结果如下：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs routeros">def fun():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;执行模块功能中...&quot;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;执行完成&quot;</span>)<br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;测试模块功能中&quot;</span>)<br>    fun()<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;无问题&quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 测试模块功能中</span><br><span class="hljs-comment"># 执行模块功能中...</span><br><span class="hljs-comment"># 执行完成</span><br><span class="hljs-comment"># 无问题</span><br></code></pre></td></tr></table></figure>
+<p>然后在另外一个py文件中导入此模块：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cmake">import <span class="hljs-keyword">test</span><br><span class="hljs-keyword">test</span>.fun()<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 执行模块功能中...</span><br><span class="hljs-comment"># 执行完成</span><br></code></pre></td></tr></table></figure>
+<p>可以发现此时的if __name__ ==
+"__main__":语句下的代码块未被执行。</p></li>
+</ul>
+<h4 id="模块的搜索路径">4. 模块的搜索路径：</h4>
+<p>当导入一个模块时，Python解释器需要对模块进行路径搜索，以找到最适配的模块文件。</p>
+<p>模块的基本搜索顺序如下：</p>
+<ul>
+<li><p>首先搜索内置模块，一旦查找到内置模块符合要求立刻导入内置模块——内置模块名与自定义的模块名同名时会导致自定义的模块名被覆盖，其功能无法使用，所以不能自定义和内置模块名相同的模块。</p></li>
+<li><p>内置模块不匹配，查找当前执行文件所在目录下的模块，如果匹配则导入，不匹配则继续下一步——如果是一些简单的自定义模块，建议放在同一个文件夹下（上面的例子就是如此）。</p></li>
+<li><p>如果不在当前目录，则搜索在shell变量PYTHONPATH（python环境变量）下的每个目录。</p>
+<p>PYTHONPATH是一个列表，内部的元素是许多目录，这些目录会存储一些python模块文件。</p>
+<p>PYTHONPATH允许我们修改和添加目录，具体步骤此处不再讲述，可自行查阅。</p></li>
+<li><p>如果PYTHONPATH仍未找到，则查找默认路径。默认路径对于不同的安装方式、安装版本和操作系统来说是不同的，不是统一的。</p>
+<p>对于UNIX，默认路径一般为/usr/local/lib/python</p></li>
+<li><p>如果上述查找均未能找到匹配的模块名，查找失败，模块不可用。</p></li>
+</ul>
+<p>模块的搜索路径存储在system模块的sys.path变量中，可以通过输出此列表来查看全部的上述搜索路径。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">from</span> sys import path<br><span class="hljs-attribute">i</span>=0<br><span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> path:<br>    <span class="hljs-built_in">print</span>(j,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; \t&quot;</span>)<br>    i+=1<br>    <span class="hljs-keyword">if</span> <span class="hljs-attribute">i</span>==5:<br>        <span class="hljs-built_in">print</span>()<br>        <span class="hljs-attribute">i</span>=0<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># D:\pycharmwork 	D:\pycharmwork 	D:\python\python311.zip 	D:\python\DLLs 	D:\python\Lib</span><br><span class="hljs-comment"># D:\python 	D:\pycharmwork\venv 	D:\pycharmwork\venv\Lib\site-packages 	D:\python\Lib\site-packages</span><br></code></pre></td></tr></table></figure>
+<h3 id="四包package">（四）包(Package)</h3>
+<h4 id="概念-1">1. 概念：</h4>
+<p><strong>包是模块的集合</strong>，可以理解为是<strong>模块的容器</strong>，通过包-模块的方式构建了命名的空间，避免了多模块之间的课件的命名冲突。</p>
+<p>以文件系统类比时，包实际上就是一个分层次的文件目录结构，它定义了一个由模块及子包，和子包下的模块和子包等组成的
+Python
+的应用环境——<strong>包是文件系统中的目录，模块是目录中的文件</strong>。</p>
+<h4 id="init__.py文件">2. __init__.py文件：</h4>
+<p>对于Python3.3之前，__init__.py文件是每个包和子包必须具备的文件，用于标识该目录是一个包。即使在Python3.3之后，为了版本的兼容以及包的结构的完整，一般情况下也会在每个包或者子包上包含和配置该文件。</p>
+<p>__init__.py文件允许是一个空文件，但一般会在此文件中执行包的初始化代码或者设置上面的__all__变量。</p>
+<p>一般情况下，新建包时通常会自动创建__init__.py文件__来控制包的导入，如果没有请记得手动创建。</p>
+<h4 id="包的导入">3. 包的导入：</h4>
+<h5 id="只导入包">（1）只导入包：</h5>
+<p><strong><em>import
+包名</em></strong>，注意只导入包名相当于只执行最外层包的__init__.py文件</p>
+<h5 id="导入包中的模块">（2）导入包中的模块：</h5>
+<p>语法格式和上面的模块import的格式类似，但是模块名需要转变为<strong><em>包名.[子包名].模块名</em></strong>。</p>
+<p>另外，对包内的模块使用from 包名.[子包名].模块名 import
+*时，一般要求对应的__init__.py文件设置__all__变量（此处不设置了，包内函数非常简单）。</p>
+<p>导入模块时，相当于执行路径上每一个包的__init__.py文件和模块文件本身。</p>
+<p>下面简单举例。</p>
+<p>假设有一个包名为test_2的包，包和执行文件在同一级的同一目录内，其有两个子模块mod1、mod2和一个子包test_2_inter，子包内有一个模块mod_inter，所有的__init__.py文件为空，模块的代码如下：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment">#test_2/mod1.py</span><br>def mod1_fun1():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;mod1_fun1&quot;</span>)<br>def mod1_fun2():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;mod1_fun2&quot;</span>)<br>mod1_val =10<br><br><span class="hljs-comment">#test_2/mod2.py</span><br>def mod2_fun1():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;mod2_fun1&quot;</span>)<br>def mod2_fun2():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;mod2_fun2&quot;</span>)<br>mod2_val =20<br><br><span class="hljs-comment">#test_2/test_2_inter/mod_inter.py</span><br>def mod_inter_fun1():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;mod_inter_fun1&quot;</span>)<br>def mod_inter_fun2():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;mod_inter_fun2&quot;</span>)<br><span class="hljs-attribute">mod_inter_val</span>=30<br></code></pre></td></tr></table></figure>
+<p>将每个模块分别导入，执行对应函数，有：</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs haskell"><span class="hljs-keyword">import</span> test_2.mod1<br><span class="hljs-title">from</span> test_2.mod2 <span class="hljs-keyword">import</span> *<br><span class="hljs-keyword">import</span> test_2.test_2_inter.mod_inter<br><span class="hljs-title">test_2</span>.mod1.mod1_fun1()<br><span class="hljs-title">mod2_fun2</span>()<br><span class="hljs-title">test_2</span>.test_2_inter.mod_inter.mod_inter_fun1()<br><span class="hljs-meta"># 运行结果：</span><br><span class="hljs-meta"># mod1_fun1</span><br><span class="hljs-meta"># mod2_fun2</span><br><span class="hljs-meta"># mod_inter_fun1</span><br></code></pre></td></tr></table></figure>
+<p>如果__init__内有内容，执行结果如下：</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><span class="hljs-comment">#test_2/__init__.py</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;导入test_2包 ing&quot;</span>)<br><br><span class="hljs-comment">#test_2/test2_2_inter/__init__.py</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;导入test_2包 ing&quot;</span>)<br><br><span class="hljs-comment">#执行文件</span><br><span class="hljs-keyword">import</span> test_2.mod1<br><span class="hljs-keyword">from</span> test_2.mod2 <span class="hljs-keyword">import</span> *<br><span class="hljs-keyword">import</span> test_2.test_2_inter.mod_inter<br>test_2.mod1.mod1_fun1()<br>mod2_fun2()<br>test_2.test_2_inter.mod_inter.mod_inter_fun1()<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 导入test_2包ing</span><br><span class="hljs-comment"># 导入完成</span><br><span class="hljs-comment"># 导入test_2包的test2_2_inter子包ing</span><br><span class="hljs-comment"># 导入完成</span><br><span class="hljs-comment"># mod1_fun1</span><br><span class="hljs-comment"># mod2_fun2</span><br><span class="hljs-comment"># mod_inter_fun1</span><br></code></pre></td></tr></table></figure>
+<p>注意，__init__文件只执行一次。</p>
+<p>如果想要一次性全部导入，需要使用__all__变量和from 包名 import *</p>
+<figure class="highlight capnproto"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs capnproto"><span class="hljs-keyword">from</span> test_2 <span class="hljs-keyword">import</span> *<br><span class="hljs-keyword">from</span> test_2.test_2_inter <span class="hljs-keyword">import</span> *<br>mod1.mod1_fun1()<br>mod2.mod2_fun2()<br>mod_inter.mod_inter_fun1()<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 导入test_2包ing</span><br><span class="hljs-comment"># 导入完成</span><br><span class="hljs-comment"># 导入test_2包的test2_2_inter子包ing</span><br><span class="hljs-comment"># 导入完成</span><br><span class="hljs-comment"># mod1_fun1</span><br><span class="hljs-comment"># mod2_fun2</span><br><span class="hljs-comment"># mod_inter_fun1</span><br></code></pre></td></tr></table></figure>
+<p>不增加__all__变量无法使用from 包名 import
+*格式，必须使用包名.模块名格式。</p>
+<h5
+id="导入包中的子模块的函数或变量">（2）导入包中的子模块的函数或变量：</h5>
+<p>和上面的逻辑类似，只是导入的方式改为函数或者变量。</p>
+<p>使用<strong><em>from 包名.[子包名].模块名 import
+函数/变量</em></strong> 格式来完成。</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><span class="hljs-keyword">from</span> test_2.mod1 <span class="hljs-keyword">import</span> mod1_fun1<br><span class="hljs-keyword">from</span>  test_2.mod2 <span class="hljs-keyword">import</span> mod2_val<br><span class="hljs-keyword">from</span> test_2.test_2_inter.mod_inter <span class="hljs-keyword">import</span> mod_inter_fun2<br>mod1_fun1()<br><span class="hljs-built_in">print</span>(mod2_val)<br>mod_inter_fun2()<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 导入test_2包ing</span><br><span class="hljs-comment"># 导入完成</span><br><span class="hljs-comment"># 导入test_2包的test2_2_inter子包ing</span><br><span class="hljs-comment"># 导入完成</span><br><span class="hljs-comment"># mod1_fun1</span><br><span class="hljs-comment"># 20</span><br><span class="hljs-comment"># mod_inter_fun2</span><br></code></pre></td></tr></table></figure>
+<h5 id="相对路径导入包和模块">（3）相对路径导入包和模块：</h5>
+<p>在查找使用包内的某个模块或者模块内的函数/类/变量时，需要使用绝对导入指定绝对路径或者使用相对导入指定相对路径，从而在包查找到匹配的模块。</p>
+<p>注意，这两种方式都是针对包内的模块而言的，而执行文件查找包名时，使用的是前面模块的查询顺序。也就是说，先通过内置模块-&gt;当前目录-&gt;环境变量目录-&gt;默认目录查找到包名，再通过相对或者绝对路径查找到指定的包内模块。这两者不要混为一谈。</p>
+<ul>
+<li><p>绝对导入：</p>
+<p>是默认的导入方式，因为它更常见，并且它有相对导入的所有功能。</p>
+<p>绝对导入的出发目录是项目的根目录，需要写明从根目录到要导入模块的完整路径——项目的根目录就是绝对路径。</p>
+<p>绝对路径要求必须从最顶层的目录开始为每个包或者模块提供完整详细的导入路径。</p>
+<p>绝对导入的缺点是：包名一旦改变，导入的语句也需要发生改变；导入的路径可能十分冗长复杂。</p>
+<p>绝对导入就是我们上面所使用的方式，这里不再介绍，这里只讲述相对导入和相对路径</p></li>
+<li><p>相对导入：</p>
+<p>首先要明确，相对导入只能是包内的模块使用的，用于导入包内的其他模块，且只能作为模块文件使用相对导入，外部的执行文件是不会使用相对导入的。</p>
+<p>相对导入的出发目录是当前目录，需要给出相对路径，从当前目录出发查找模块。</p>
+<p>相对路径是指待导入模块与当前执行文件的相对位置，用一个"."来代替当前文件的所在目录。</p>
+<p>from后有一个"."时，"."表示可以访问同级目录下的包或者模块；有两个"."时，可以访问上一级目录的包或者模块。</p>
+<p>相对导入的优势是代码中不会出现包的名称，不需要修改代码，同时多数情况下能够简化路径的长度。</p>
+<p>例如，在上面例子中的子模块test_2/test_2_inter中的mod_inter.py文件内，使用相对路径导入test_2/mod1模块并使用其函数，再由外部函数调用：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#mod_inter.py</span><br><span class="hljs-keyword">from</span> ..mod1 <span class="hljs-keyword">import</span> mod1_fun1<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">mod_inter_fun1</span>():<br>    mod1_fun1()<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;mod_inter_fun1&quot;</span>)<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">mod_inter_fun2</span>():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;mod_inter_fun2&quot;</span>)<br>mod_inter_val=<span class="hljs-number">30</span><br><br><span class="hljs-comment">#执行文件：</span><br><span class="hljs-keyword">from</span> test_2.test_2_inter.mod_inter <span class="hljs-keyword">import</span> mod_inter_fun1<br>mod_inter_fun1()<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 导入test_2包ing</span><br><span class="hljs-comment"># 导入完成</span><br><span class="hljs-comment"># 导入test_2包的test2_2_inter子包ing</span><br><span class="hljs-comment"># 导入完成</span><br><span class="hljs-comment"># mod1_fun1</span><br><span class="hljs-comment"># mod_inter_fun1</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="import的运行和查看导入模块">5. import的运行和查看导入模块：</h4>
+<p>执行import命令时，首先检查导入模块是否在已有模块中，有的话此import命令无效，直接跳过。</p>
+<p>这能够防止模块之间相互引用的无限循环。</p>
+<p>随后，在sys.modules中搜索名为os的模块，如果其缓存存在，将缓存映射内容返回；不存在，继续搜索内置模块，os是预先安装的，所以一般情况下此时就能查找到对应结果；如果依旧没有，就在sys.path列表定义的路径中继续搜索。</p>
+<p>搜索成功后，在本地作用域和命名空间内初始化相应的模块对象。</p>
+<p>可以使用sys内置模块查看已导入的模块，可以得到sys.modules对象，该对象是一个字典，键是模块名，值是文件路径。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">from</span> test_2.test_2_inter.mod_inter import mod_inter_fun1<br>import sys<br><span class="hljs-attribute">j</span>=0<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> sys.modules:<br>   <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot;\t&quot;</span>)<br>   j+=1<br>   <span class="hljs-keyword">if</span> <span class="hljs-attribute">j</span>==5:<br>       <span class="hljs-built_in">print</span>()<br>       <span class="hljs-attribute">j</span>=0<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># 导入test_2包ing</span><br><span class="hljs-comment"># 导入完成</span><br><span class="hljs-comment"># 导入test_2包的test2_2_inter子包ing</span><br><span class="hljs-comment"># 导入完成</span><br><span class="hljs-comment"># sys	builtins	_frozen_importlib	_imp	_thread	</span><br><span class="hljs-comment"># _warnings	_weakref	winreg	_io	marshal	</span><br><span class="hljs-comment"># nt	_frozen_importlib_external	time	zipimport	_codecs	</span><br><span class="hljs-comment"># codecs	encodings.aliases	encodings	encodings.utf_8	_signal	</span><br><span class="hljs-comment"># _abc	abc	io	__main__	_stat	</span><br><span class="hljs-comment"># stat	_collections_abc	genericpath	_winapi	ntpath	</span><br><span class="hljs-comment"># os.path	os	_sitebuiltins	_codecs_cn	_multibytecodec	</span><br><span class="hljs-comment"># encodings.gbk	itertools	keyword	_operator	operator	</span><br><span class="hljs-comment"># reprlib	_collections	collections	types	_functools	</span><br><span class="hljs-comment"># functools	importlib._bootstrap	importlib._bootstrap_external	warnings	importlib	</span><br><span class="hljs-comment"># importlib.machinery	importlib._abc	posixpath	enum	_sre	</span><br><span class="hljs-comment"># re._constants	re._parser	re._casefix	re._compiler	copyreg	</span><br><span class="hljs-comment"># re	fnmatch	errno	urllib	urllib.parse	</span><br><span class="hljs-comment"># pathlib	zlib	_compression	_bz2	bz2	</span><br><span class="hljs-comment"># _lzma	lzma	shutil	math	_bisect	</span><br><span class="hljs-comment"># bisect	_random	_sha512	random	_weakrefset	</span><br><span class="hljs-comment"># weakref	tempfile	contextlib	collections.abc	_typing	</span><br><span class="hljs-comment"># typing.io	typing.re	typing	importlib.resources.abc	importlib.resources._adapters	</span><br><span class="hljs-comment"># importlib.resources._common	importlib.resources._legacy	importlib.resources	importlib.abc	importlib.util	</span><br><span class="hljs-comment"># _virtualenv	_distutils_hack	mpl_toolkits	site	test_2	</span><br><span class="hljs-comment"># test_2.test_2_inter	test_2.mod1	test_2.test_2_inter.mod_inter	</span><br></code></pre></td></tr></table></figure>
 
                 
               </div>
