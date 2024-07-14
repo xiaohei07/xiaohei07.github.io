@@ -1,0 +1,915 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
+  <link rel="icon" href="/img/256.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="07xiaohei">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="（一）概述： 字典（dictionary）是python语言中唯一的标准映射类型，是python中除了列表以外最灵活的数据类型。 字典是一种无序的、可变的序列，元素以&quot;键值对&quot;的形式进行存储，是可变的容器，容量是无限的。 字典的键值是hashable值，即所有不可变类型的值（基于对象标识而非值进行比较的对象），可变类型不能用作键，且键值一定是唯一的，不能出现多次，否则只会保留最后出现的一个键">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础——数据类型(七)字典">
+<meta property="og:url" content="http://example.com/2023/03/25/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B(%E4%B8%83)%E5%AD%97%E5%85%B8/index.html">
+<meta property="og:site_name" content="ZZHの个人博客">
+<meta property="og:description" content="（一）概述： 字典（dictionary）是python语言中唯一的标准映射类型，是python中除了列表以外最灵活的数据类型。 字典是一种无序的、可变的序列，元素以&quot;键值对&quot;的形式进行存储，是可变的容器，容量是无限的。 字典的键值是hashable值，即所有不可变类型的值（基于对象标识而非值进行比较的对象），可变类型不能用作键，且键值一定是唯一的，不能出现多次，否则只会保留最后出现的一个键">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-25T11:55:14.000Z">
+<meta property="article:modified_time" content="2023-03-25T14:46:55.672Z">
+<meta property="article:author" content="07xiaohei">
+<meta property="article:tag" content="知识点">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>python基础——数据类型(七)字典 - ZZHの个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
+<link rel="stylesheet" href="/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>07xiaoheiの个人博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/HTML/index.html">
+                <i class="iconfont icon-bilibili-fill"></i>
+                <span>happy birthday</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-icon"></i>
+                <span>资源</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/download-office">
+                    
+                    <span>下载官网</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
+                    
+                    <span>baiduyun</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/visit-use">
+                    
+                    <span>有用的网站</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于我</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="python基础——数据类型(七)字典"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-03-25 19:55" pubdate>
+          2023年3月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          59 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">python基础——数据类型(七)字典</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3><span id="一概述">（一）概述：</span></h3>
+<p>字典（dictionary）是python语言中唯一的标准映射类型，是python中除了列表以外最灵活的数据类型。</p>
+<p>字典是一种无序的、可变的序列，元素以"键值对"的形式进行存储，是可变的容器，容量是无限的。</p>
+<p>字典的键值是hashable值，即所有不可变类型的值（基于对象标识而非值进行比较的对象），可变类型不能用作键，且键值一定是唯一的，不能出现多次，否则只会保留最后出现的一个键值对。</p>
+<p>注意：数字类型用作键时遵循数字比较的一般原则：即两个近似数值相等的值会被用来作为一个键值索引同一条字典条目。（因此不建议把浮点数作为字典的键）</p>
+<p>字典的值可以是任何数据类型，并无太多要求。（可以是标准的对象，也可以是用户定义的类型对象）</p>
+<p>同一字典的不同键值对的键和值的类型均可以不同。（不过一般都是放同类型的数据）</p>
+<h3><span id="二创建与形式">（二）创建与形式：</span></h3>
+<p>python中用{}来主要表示字典，但对元素格式有要求，否则会被认为是集合。（但空的{}表示的是空字典）</p>
+<p>形式为：<strong><em>字典名= {键1:值1 , 键2:值2 , 键三:值3 , ....... ,
+键n:值n }</em></strong></p>
+<p>键对应key，值对应value，keyk :
+valuek表示第k个键值对，作为一个元素item存在。</p>
+<p>" : "用于分割键对和值对，" , "用于分割元素，均放在{}中。</p>
+<p>除了通过赋值的形式用{}直接创建字典外，还可以dict.fromkeys方法创建字典。（dict是python内置的字典类型关键字）</p>
+<p>形式为：<strong><em>dictname =
+dict.fromkeys(list，value=None)</em></strong></p>
+<p>dictname是方法的返回值所付赋给的变量名。</p>
+<p>list参数是要创建的字典中所有的键组成的列表。</p>
+<p>value参数是要创建的字典的元素的值的默认值，所有元素的值均为此默认值，不写时默认为空值None。</p>
+<p>其他创建主要是通过关键字dict来进行创建：</p>
+<ol type="1">
+<li><strong><em>dictname=dict()</em></strong>：也是空字典</li>
+<li><strong><em>dictname=dict(key1=value1 , key2=value2 , ...... , keyn=
+valuen)</em></strong>，通过dict和其参数创建字典，会将=换为:，另外，key1作为字符串时在此处不能加""或者''。</li>
+<li><strong><em>dictname=dict(listname)</em></strong>，通过列表创建字典，但要求列表的元素是有两个元素的元组。</li>
+<li><strong><em>dictname=dict(zip(listname1,listname2))</em></strong>，通过关键字dict和zip创建字典，参数是两个列表，第一个列表内的元素是键，第二个列表内的元素是值，生成的字典元素个数为两个列表中较短的一个。</li>
+</ol>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs autoit">a1 = &#123;&#125;<br>a3 = &#123;<span class="hljs-string">&#x27;a&#x27;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;b&#x27;</span>:<span class="hljs-number">2</span>,<span class="hljs-string">&#x27;c&#x27;</span>:<span class="hljs-number">3</span>&#125;<br>a4 = dict.fromkeys([<span class="hljs-string">&#x27;aa&#x27;</span>,<span class="hljs-string">&#x27;bb&#x27;</span>,<span class="hljs-string">&#x27;cc&#x27;</span>,<span class="hljs-string">&#x27;dd&#x27;</span>])<br>a5 = dict.fromkeys([<span class="hljs-string">&#x27;aa&#x27;</span>,<span class="hljs-string">&#x27;bb&#x27;</span>,<span class="hljs-string">&#x27;cc&#x27;</span>,<span class="hljs-string">&#x27;dd&#x27;</span>],<span class="hljs-string">&quot;okok&quot;</span>)<br>a2 = dict()<br>a6 = dict(a=<span class="hljs-number">1</span>,b=<span class="hljs-number">2</span>,c=<span class="hljs-number">3</span>)<br>a7 = dict([(<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-number">1</span>),(<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-number">2</span>),(<span class="hljs-string">&quot;c&quot;</span>,<span class="hljs-number">3</span>),(<span class="hljs-string">&quot;d&quot;</span>,<span class="hljs-number">4</span>)])<br>a8 = dict(zip([<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>,<span class="hljs-string">&quot;d&quot;</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]))<br>print(a1,a2,a3,a4,a5,a6,a7,a8,sep=<span class="hljs-string">&#x27;\n&#x27;</span>)<br><span class="hljs-meta"># 运行结果：</span><br><span class="hljs-meta"># &#123;&#125;</span><br><span class="hljs-meta"># &#123;&#125;</span><br><span class="hljs-meta"># &#123;<span class="hljs-string">&#x27;a&#x27;</span>: 1, <span class="hljs-string">&#x27;b&#x27;</span>: 2, <span class="hljs-string">&#x27;c&#x27;</span>: 3&#125;</span><br><span class="hljs-meta"># &#123;<span class="hljs-string">&#x27;aa&#x27;</span>: None, <span class="hljs-string">&#x27;bb&#x27;</span>: None, <span class="hljs-string">&#x27;cc&#x27;</span>: None, <span class="hljs-string">&#x27;dd&#x27;</span>: None&#125;</span><br><span class="hljs-meta"># &#123;<span class="hljs-string">&#x27;aa&#x27;</span>: <span class="hljs-string">&#x27;okok&#x27;</span>, <span class="hljs-string">&#x27;bb&#x27;</span>: <span class="hljs-string">&#x27;okok&#x27;</span>, <span class="hljs-string">&#x27;cc&#x27;</span>: <span class="hljs-string">&#x27;okok&#x27;</span>, <span class="hljs-string">&#x27;dd&#x27;</span>: <span class="hljs-string">&#x27;okok&#x27;</span>&#125;</span><br><span class="hljs-meta"># &#123;<span class="hljs-string">&#x27;a&#x27;</span>: 1, <span class="hljs-string">&#x27;b&#x27;</span>: 2, <span class="hljs-string">&#x27;c&#x27;</span>: 3&#125;</span><br><span class="hljs-meta"># &#123;<span class="hljs-string">&#x27;a&#x27;</span>: 1, <span class="hljs-string">&#x27;b&#x27;</span>: 2, <span class="hljs-string">&#x27;c&#x27;</span>: 3, <span class="hljs-string">&#x27;d&#x27;</span>: 4&#125;</span><br><span class="hljs-meta"># &#123;<span class="hljs-string">&#x27;a&#x27;</span>: 1, <span class="hljs-string">&#x27;b&#x27;</span>: 2, <span class="hljs-string">&#x27;c&#x27;</span>: 3, <span class="hljs-string">&#x27;d&#x27;</span>: 4&#125;</span><br></code></pre></td></tr></table></figure>
+<h3><span id="三字典的特性">（三）字典的特性：</span></h3>
+<h4><span id="1-访问">1. 访问：</span></h4>
+<ul>
+<li><p>通过键(key)访问值(value)：</p>
+<p>形式：<strong><em>dictname[key]</em></strong></p>
+<p>键是必须存在的，否则会抛出异常。</p></li>
+<li><p>通过get方法访问指定键(key)对应的值：</p>
+<p>形式：<strong><em>dictname.get(key,default)</em></strong></p>
+<p>key参数是指定的键，不存在时不会抛出异常。</p>
+<p>default参数是指查询的键不存在时，返回的默认值，不手动指定会返回None。</p></li>
+<li><p>通过setdefault方法访问指定键(key)对应的值：</p>
+<p>形式：<strong><em>dictname.setdefault(key,default)</em></strong></p>
+<p>和get形式功能类似，但是唯一的区别是如果键不存在于字典中，会添加该键并将值设置为default。</p></li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs routeros">a = &#123;<span class="hljs-string">&#x27;a&#x27;</span>:1,<span class="hljs-string">&#x27;b&#x27;</span>:2,<span class="hljs-string">&#x27;c&#x27;</span>:3,<span class="hljs-string">&#x27;d&#x27;</span>:4,<span class="hljs-string">&#x27;e&#x27;</span>:5&#125;<br><span class="hljs-built_in">print</span>(a[<span class="hljs-string">&#x27;a&#x27;</span>])<br><span class="hljs-comment"># print(a[&#x27;f&#x27;]) 此句会执行失败</span><br><span class="hljs-built_in">print</span>(a.<span class="hljs-built_in">get</span>(<span class="hljs-string">&#x27;b&#x27;</span>,<span class="hljs-string">&quot;不存在&quot;</span>))<br><span class="hljs-built_in">print</span>(a.<span class="hljs-built_in">get</span>(<span class="hljs-string">&#x27;f&#x27;</span>,<span class="hljs-string">&quot;不存在&quot;</span>))<br><span class="hljs-built_in">print</span>(a.setdefault(<span class="hljs-string">&#x27;c&#x27;</span>,<span class="hljs-string">&quot;不存在&quot;</span>))<br><span class="hljs-built_in">print</span>(a)<br><span class="hljs-built_in">print</span>(a.setdefault(<span class="hljs-string">&#x27;f&#x27;</span>,<span class="hljs-string">&quot;不存在&quot;</span>))<br><span class="hljs-built_in">print</span>(a)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 不存在</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2, &#x27;c&#x27;: 3, &#x27;d&#x27;: 4, &#x27;e&#x27;: 5&#125;</span><br><span class="hljs-comment"># 不存在</span><br><span class="hljs-comment"># &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2, &#x27;c&#x27;: 3, &#x27;d&#x27;: 4, &#x27;e&#x27;: 5, &#x27;f&#x27;: &#x27;不存在&#x27;&#125;</span><br></code></pre></td></tr></table></figure>
+<h4><span id="2-删除">2. 删除：</span></h4>
+<p>python自带垃圾回收机制，已创建的字典如不再使用，将会被编译器自动回收，不会产生内存垃圾。</p>
+<p>如果需要可以手动删除，使用del 关键字手动删除字典。</p>
+<p>形式为： <strong><em>del dictname</em></strong></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-selector-tag">a</span> = &#123;<span class="hljs-string">&#x27;a&#x27;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;b&#x27;</span>:<span class="hljs-number">2</span>,<span class="hljs-string">&#x27;c&#x27;</span>:<span class="hljs-number">3</span>,<span class="hljs-string">&#x27;d&#x27;</span>:<span class="hljs-number">4</span>,<span class="hljs-string">&#x27;e&#x27;</span>:<span class="hljs-number">5</span>&#125;<br><span class="hljs-selector-tag">del</span> <span class="hljs-selector-tag">a</span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(a)</span></span> #此句无法输出，因为a已经被删除了，a变量处于未定义状态<br></code></pre></td></tr></table></figure>
+<h4><span id="3-多维字典">3. 多维字典：</span></h4>
+<p>python中允许创建多维字典，将其他字典当做字典的元素放在一个列表当中，也就是字典的嵌套。</p>
+<p>要注意的是，在手动创建时，如果直接使用类似
+dictionary['a']['b']['c']=1的格式时，必须保证已经在键值a中创建了键值b，这样才能进行键值对的赋予——也就是多维的键值对创建时必须保证前面的键已经存在。</p>
+<p>可以通过函数化简创建形式（此处略），否则只能一步步创建。</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs autoit">a = &#123;<span class="hljs-string">&#x27;a&#x27;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;b&#x27;</span>:<span class="hljs-number">2</span>,<span class="hljs-string">&#x27;c&#x27;</span>:<span class="hljs-number">3</span>,<span class="hljs-string">&#x27;d&#x27;</span>:<span class="hljs-number">4</span>,<span class="hljs-string">&#x27;e&#x27;</span>:<span class="hljs-number">5</span>&#125;<br>a[<span class="hljs-string">&#x27;f&#x27;</span>]=<span class="hljs-number">6</span>  <span class="hljs-meta">#正确</span><br><span class="hljs-meta"># a[<span class="hljs-string">&#x27;a&#x27;</span>][<span class="hljs-string">&#x27;b&#x27;</span>]=1 错误，不能直接创建</span><br>a[<span class="hljs-string">&#x27;a&#x27;</span>]=&#123;<span class="hljs-string">&#x27;bb&#x27;</span>:<span class="hljs-number">1</span>&#125;<br>a.update(&#123;<span class="hljs-string">&#x27;b&#x27;</span>:&#123;<span class="hljs-string">&#x27;cc&#x27;</span>:<span class="hljs-number">7</span>&#125;&#125;) <span class="hljs-meta">#需要这样创建</span><br>print(a)<br><span class="hljs-meta"># 运行结果：</span><br><span class="hljs-meta"># &#123;<span class="hljs-string">&#x27;a&#x27;</span>: &#123;<span class="hljs-string">&#x27;bb&#x27;</span>: 1&#125;, <span class="hljs-string">&#x27;b&#x27;</span>: &#123;<span class="hljs-string">&#x27;cc&#x27;</span>: 7&#125;, <span class="hljs-string">&#x27;c&#x27;</span>: 3, <span class="hljs-string">&#x27;d&#x27;</span>: 4, <span class="hljs-string">&#x27;e&#x27;</span>: 5, <span class="hljs-string">&#x27;f&#x27;</span>: 6&#125;</span><br></code></pre></td></tr></table></figure>
+<h4><span id="4-字典的主要操作">4. 字典的主要操作：</span></h4>
+<ul>
+<li><p>添加和查询键值对：</p>
+<p>python中是不能修改字典的键的名字的，只能够修改值。添加只能添加和之前的键均不同的键。</p>
+<ol type="1">
+<li><p>直接给key赋值即可，如果不存在键值python会自动生成新的键值对，如果有相同的键则将其值覆盖原有的值。</p>
+<p>形式：<strong><em>dictname[key] = value</em></strong></p></li>
+<li><p>使用update方法：</p>
+<p>形式：<strong><em>dictname1.update(dictname2)</em></strong></p>
+<p>可以将dictname2的键值对更新到dictname1，如果被更新的字典已经包含对应的键值对（实际上就是相同的键），那么原有的键值对会被覆盖，如果不包含则添加该键值对。</p></li>
+</ol>
+<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sas">a = &#123;<span class="hljs-string">&#x27;a&#x27;</span>:1,<span class="hljs-string">&#x27;b&#x27;</span>:2,<span class="hljs-string">&#x27;c&#x27;</span>:3,<span class="hljs-string">&#x27;d&#x27;</span>:4,<span class="hljs-string">&#x27;e&#x27;</span>:5&#125;<br>a[<span class="hljs-string">&#x27;c&#x27;</span>]=33<br>a[<span class="hljs-string">&#x27;f&#x27;</span>]=6<br>a.up<span class="hljs-meta">date</span>(&#123;<span class="hljs-string">&#x27;a&#x27;</span>:111&#125;)<br>a.up<span class="hljs-meta">date</span>(&#123;<span class="hljs-string">&#x27;g&#x27;</span>:7&#125;)<br>pr<span class="hljs-meta">int</span>(a)<br># 运行结果：<br># &#123;<span class="hljs-string">&#x27;a&#x27;</span>: 111, <span class="hljs-string">&#x27;b&#x27;</span>: 2, <span class="hljs-string">&#x27;c&#x27;</span>: 33, <span class="hljs-string">&#x27;d&#x27;</span>: 4, <span class="hljs-string">&#x27;e&#x27;</span>: 5, <span class="hljs-string">&#x27;f&#x27;</span>: 6, <span class="hljs-string">&#x27;g&#x27;</span>: 7&#125;<br></code></pre></td></tr></table></figure></li>
+<li><p>删除键值对：</p>
+<ol type="1">
+<li><p>用del语句删除：</p>
+<p>形式：<strong><em>del dictname[key]</em></strong></p>
+<p>将key对应的键值对删除，不能删除不存在的键，否则会报错。</p></li>
+<li><p>用popitem方法删除：</p>
+<p>形式：<strong><em>dictname.popitem()</em></strong></p>
+<p>返回并删除字典中最后一组的键值对（也就是你输出或者定义的最后一个），返回类型为元组。</p></li>
+<li><p>用pop方法删除：</p>
+<p>形式：<strong><em>dictname.pop(key)</em></strong></p>
+<p>删除指定键对应的键值对并返回值，返回类型根据值决定，不能删除不存在的键，否则会报错。</p></li>
+<li><p>用clear删除全部删除：</p>
+<p>形式：<strong><em>dictname.clear()</em></strong></p>
+<p>清除全部元素成为空字典。</p></li>
+</ol>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs routeros">a = &#123;<span class="hljs-string">&#x27;a&#x27;</span>:1,<span class="hljs-string">&#x27;b&#x27;</span>:2,<span class="hljs-string">&#x27;c&#x27;</span>:3,<span class="hljs-string">&#x27;d&#x27;</span>:4,<span class="hljs-string">&#x27;e&#x27;</span>:5&#125;<br>b = &#123;<span class="hljs-string">&#x27;a&#x27;</span>:1,<span class="hljs-string">&#x27;b&#x27;</span>:2,<span class="hljs-string">&#x27;c&#x27;</span>:3,<span class="hljs-string">&#x27;d&#x27;</span>:4,<span class="hljs-string">&#x27;e&#x27;</span>:5&#125;<br>c = &#123;<span class="hljs-string">&#x27;a&#x27;</span>:1,<span class="hljs-string">&#x27;b&#x27;</span>:2,<span class="hljs-string">&#x27;c&#x27;</span>:3,<span class="hljs-string">&#x27;d&#x27;</span>:4,<span class="hljs-string">&#x27;e&#x27;</span>:5&#125;<br>a.clear()<br>x = b.popitem()<br>del c[<span class="hljs-string">&#x27;b&#x27;</span>]<br>y = c.pop(<span class="hljs-string">&#x27;a&#x27;</span>)<br><span class="hljs-built_in">print</span>(a)<br><span class="hljs-built_in">print</span>(b)<br><span class="hljs-built_in">print</span>(c)<br><span class="hljs-built_in">print</span>(x)<br><span class="hljs-built_in">print</span>(y)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;&#125;</span><br><span class="hljs-comment"># &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2, &#x27;c&#x27;: 3, &#x27;d&#x27;: 4&#125;</span><br><span class="hljs-comment"># &#123;&#x27;c&#x27;: 3, &#x27;d&#x27;: 4, &#x27;e&#x27;: 5&#125;</span><br><span class="hljs-comment"># (&#x27;e&#x27;, 5)</span><br><span class="hljs-comment"># 1</span><br></code></pre></td></tr></table></figure></li>
+<li><p>查询键值对：</p>
+<ol type="1">
+<li><p>判断某个键值对是否存在：</p>
+<p>使用 in 和 not
+in来查询是否包括指定键对应的键值对（也就是基于key来判断）。</p>
+<p>形式略（见代码）。</p>
+<p>如果是python2.x版本也可以使用has_key方法：</p>
+<p>形式：<strong><em>dictname.has_key(key)</em></strong></p>
+<p>若有这个键返会True，否则返回False。（我是3.x，不做演示了）</p></li>
+<li><p>查询全部键值对：</p>
+<p>使用方法items()</p>
+<p>形式：<strong><em>dictname.items()</em></strong></p>
+<p>返回全部的键值对，以列表形式返回，每个元素均为元组的键,值对元组。</p></li>
+<li><p>查询全部键：</p>
+<p>使用方法keys()</p>
+<p>形式：<strong><em>dictname.keys()</em></strong></p>
+<p>返回全部的键，以列表形式。</p></li>
+<li><p>查询全部值：</p>
+<p>使用方法values()</p>
+<p>形式：<strong><em>dictname.values()</em></strong></p>
+<p>返回全部的值，以列表类型。</p></li>
+</ol>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs clean">a = &#123;<span class="hljs-string">&#x27;a&#x27;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;b&#x27;</span>:<span class="hljs-number">2</span>,<span class="hljs-string">&#x27;c&#x27;</span>:<span class="hljs-number">3</span>,<span class="hljs-string">&#x27;d&#x27;</span>:<span class="hljs-number">4</span>,<span class="hljs-string">&#x27;e&#x27;</span>:<span class="hljs-number">5</span>,<span class="hljs-number">6</span>:<span class="hljs-string">&#x27;f&#x27;</span>&#125;<br>print(<span class="hljs-string">&#x27;b&#x27;</span> <span class="hljs-keyword">in</span> a)<br>print(<span class="hljs-string">&#x27;c&#x27;</span> not <span class="hljs-keyword">in</span> a)<br>print(a.items())<br>print(a.keys())<br>print(a.values())<br># 运行结果:<br># <span class="hljs-literal">True</span><br># <span class="hljs-literal">False</span><br># dict_items([(<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-number">1</span>), (<span class="hljs-string">&#x27;b&#x27;</span>, <span class="hljs-number">2</span>), (<span class="hljs-string">&#x27;c&#x27;</span>, <span class="hljs-number">3</span>), (<span class="hljs-string">&#x27;d&#x27;</span>, <span class="hljs-number">4</span>), (<span class="hljs-string">&#x27;e&#x27;</span>, <span class="hljs-number">5</span>), (<span class="hljs-number">6</span>, <span class="hljs-string">&#x27;f&#x27;</span>)])<br># dict_keys([<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>, <span class="hljs-string">&#x27;c&#x27;</span>, <span class="hljs-string">&#x27;d&#x27;</span>, <span class="hljs-string">&#x27;e&#x27;</span>, <span class="hljs-number">6</span>])<br># dict_values([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-string">&#x27;f&#x27;</span>])<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4><span id="5-字典的其他操作">5. 字典的其他操作：</span></h4>
+<p>比较经典的内容，如len()求长度，max()求最大值，min()求最小值，sorted排序等等，前面已经讲解过，不再重复，但是要注意：所有的操作是对键的操作，比如排序排的是键，不考虑值。</p>
+<p>字典同样设计浅拷贝和深拷贝，区别和方法和列表类似，也不再重复。</p>
+<p>此处唯一要讲的是字典的生成式：</p>
+<p>格式：<strong><em>dictname1 = { x:y for x,y in dictname2.items()
+}</em></strong></p>
+<p>x对应键，y对应值，遍历时获得两者组合成一个元素。</p>
+<p>只对x遍历是键遍历，y是值遍历。</p>
+<p>也可以对keys和values分别遍历得到键和值。</p>
+<figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs gml">a = &#123;<span class="hljs-string">&#x27;a&#x27;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;b&#x27;</span>:<span class="hljs-number">2</span>,<span class="hljs-string">&#x27;c&#x27;</span>:<span class="hljs-number">3</span>,<span class="hljs-string">&#x27;d&#x27;</span>:<span class="hljs-number">4</span>,<span class="hljs-string">&#x27;e&#x27;</span>:<span class="hljs-number">5</span>&#125;<br>b = &#123;<span class="hljs-variable language_">x</span> <span class="hljs-keyword">for</span> <span class="hljs-variable language_">x</span>,<span class="hljs-variable language_">y</span> in a.items()&#125;<br>bb = &#123;<span class="hljs-variable language_">x</span> <span class="hljs-keyword">for</span> <span class="hljs-variable language_">x</span> in a.keys()&#125;<br>c = &#123;<span class="hljs-variable language_">x</span>:<span class="hljs-variable language_">y</span> <span class="hljs-keyword">for</span> <span class="hljs-variable language_">x</span>,<span class="hljs-variable language_">y</span> in a.items()&#125;<br>d = &#123;<span class="hljs-variable language_">y</span> <span class="hljs-keyword">for</span> <span class="hljs-variable language_">x</span>,<span class="hljs-variable language_">y</span> in a.items()&#125;<br>dd = &#123;<span class="hljs-variable language_">y</span> <span class="hljs-keyword">for</span> <span class="hljs-variable language_">y</span> in a.values()&#125;<br>print(b)<br>print(bb)<br>print(c)<br>print(d)<br>print(dd)<br># 运行结果：<br># &#123;<span class="hljs-string">&#x27;b&#x27;</span>, <span class="hljs-string">&#x27;e&#x27;</span>, <span class="hljs-string">&#x27;c&#x27;</span>, <span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;d&#x27;</span>&#125;<br># &#123;<span class="hljs-string">&#x27;b&#x27;</span>, <span class="hljs-string">&#x27;e&#x27;</span>, <span class="hljs-string">&#x27;c&#x27;</span>, <span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;d&#x27;</span>&#125;<br># &#123;<span class="hljs-string">&#x27;a&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;b&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;c&#x27;</span>: <span class="hljs-number">3</span>, <span class="hljs-string">&#x27;d&#x27;</span>: <span class="hljs-number">4</span>, <span class="hljs-string">&#x27;e&#x27;</span>: <span class="hljs-number">5</span>&#125;<br># &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>&#125;<br># &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>&#125;<br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/python-study/" class="category-chain-item">python_study</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+      
+        <a href="/tags/python/">#python</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>python基础——数据类型(七)字典</div>
+      <div>http://example.com/2023/03/25/python基础——数据类型(七)字典/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>07xiaohei</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年3月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/03/28/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B(%E5%85%AB)%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="python基础——数据类型(八)类型转换">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">python基础——数据类型(八)类型转换</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/03/24/c++%E7%B1%BB%E2%80%94%E2%80%94%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD(%E4%B8%89)/" title="c++类——运算符重载(三)">
+                        <span class="hidden-mobile">c++类——运算符重载(三)</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","appKey":"ooOKmecfVZV0i2v0cvsyZGdl","path":"window.location.pathname","placeholder":"“cancanneed comment”","avatar":"monsterid","meta":["nick","mail","link"],"requiredFields":[],"pageSize":15,"lang":"zh-CN","highlight":true,"recordIP":true,"serverURLs":"https://ubsvoh5t.api.lncldglobal.com","emojiCDN":"//i0.hdslb.com/bfs/emote/","emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/js/qipao.js"></script>
+<script src="/js/star.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,884 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
+  <link rel="icon" href="/img/256.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="07xiaohei">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="（五）列表生成式 1. 概述： 列表生成式是Python中内置的创建列表的方法。 列表生成式基于可迭代对象创建，相较于for循环和if循环，创建快捷（基于C语言实现），代码简介，更具可读性。 但要注意列表生成式对于简单的任务处理更具优势，如果情况复杂，生成难度可能会很高；而且列表生成式会一次性生成全部列表元素，对于大型列表，会导致内存被大量占用。 列表生成式是Python的高级特性体现之">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python进阶——高级特性(三)列表生成式、生成器">
+<meta property="og:url" content="http://example.com/2023/07/13/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7(%E4%B8%89)%E5%88%97%E8%A1%A8%E7%94%9F%E6%88%90%E5%BC%8F%E3%80%81%E7%94%9F%E6%88%90%E5%99%A8/index.html">
+<meta property="og:site_name" content="ZZHの个人博客">
+<meta property="og:description" content="（五）列表生成式 1. 概述： 列表生成式是Python中内置的创建列表的方法。 列表生成式基于可迭代对象创建，相较于for循环和if循环，创建快捷（基于C语言实现），代码简介，更具可读性。 但要注意列表生成式对于简单的任务处理更具优势，如果情况复杂，生成难度可能会很高；而且列表生成式会一次性生成全部列表元素，对于大型列表，会导致内存被大量占用。 列表生成式是Python的高级特性体现之">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-13T13:54:08.000Z">
+<meta property="article:modified_time" content="2023-07-15T06:53:08.553Z">
+<meta property="article:author" content="07xiaohei">
+<meta property="article:tag" content="知识点">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>python进阶——高级特性(三)列表生成式、生成器 - ZZHの个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
+<link rel="stylesheet" href="/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>07xiaoheiの个人博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/HTML/index.html">
+                <i class="iconfont icon-bilibili-fill"></i>
+                <span>happy birthday</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-icon"></i>
+                <span>资源</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/download-office">
+                    
+                    <span>下载官网</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
+                    
+                    <span>baiduyun</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/visit-use">
+                    
+                    <span>有用的网站</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于我</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="python进阶——高级特性(三)列表生成式、生成器"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-07-13 21:54" pubdate>
+          2023年7月13日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          66 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">python进阶——高级特性(三)列表生成式、生成器</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3><span id="五列表生成式">（五）列表生成式</span></h3>
+<h4><span id="1-概述">1. 概述：</span></h4>
+<p>列表生成式是Python中内置的创建列表的方法。</p>
+<p>列表生成式基于可迭代对象创建，相较于for循环和if循环，创建快捷（基于C语言实现），代码简介，更具可读性。</p>
+<p>但要注意列表生成式对于简单的任务处理更具优势，如果情况复杂，生成难度可能会很高；而且列表生成式会一次性生成全部列表元素，对于大型列表，会导致内存被大量占用。</p>
+<p>列表生成式是Python的高级特性体现之一。</p>
+<h4><span id="2-语法格式">2. 语法格式：</span></h4>
+<p><strong><em>[expression for item in iterable if
+conditional]</em></strong></p>
+<p>expression：expression对应生成式列表的元素，是生成后需要保存的内容，expression通常利用for循环内的变量来计算表示，expression除了使用range循环外，不可省略。</p>
+<p>注意：for循环前面的if...else语句是算入表达式之中的，因此for循环前面的if条件语句必须有else来保证能够取到元素。</p>
+<p>for循环：语法对应基本的for循环，项item对应了可迭代对象iterable的每一个元素。</p>
+<p>允许使用range循环直接表示，可以进行for循环的迭代嵌套创建新的对应关系作为生成式的元素，循环的item可以使用多个变量。</p>
+<p>if条件语句：用于判断循环的每个元素是否符合生成的要求标准，用于筛选循环的元素，因此不能在后面的if判断中使用else，否则失去了筛选的作用。</p>
+<h4><span id="3-例子">3. 例子：</span></h4>
+<ul>
+<li><p>首先是没有if语句时的列表生成式：</p>
+<ul>
+<li>直接使用range迭代快速构建1-10的列表，需要进行list类型转化：</li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros">list_use = list(range(1,11))<br><span class="hljs-built_in">print</span>(list_use,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br></code></pre></td></tr></table></figure>
+<p>生成一个n*n为元素的1-10的列表：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros">list_use = [x*x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(1,11)]<br><span class="hljs-built_in">print</span>(list_use,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># [1, 4, 9, 16, 25, 36, 49, 64, 81, 100] </span><br></code></pre></td></tr></table></figure>
+<p>根据给定列表字符串集生成每个字符串的长度：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs routeros">list_use = [<span class="hljs-string">&quot;ab&quot;</span>,<span class="hljs-string">&quot;cde&quot;</span>,<span class="hljs-string">&quot;fghi&quot;</span>,<span class="hljs-string">&quot;jklmn&quot;</span>]<br>list_use2=[len(x) <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> list_use]<br><span class="hljs-built_in">print</span>(list_use2,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># [2, 3, 4, 5]</span><br></code></pre></td></tr></table></figure></li>
+<li><p>带有if语句时的列表生成式：</p>
+<p>生成30以内的偶数列表：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros">list_use = [x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(1,31) <span class="hljs-keyword">if</span> x%<span class="hljs-attribute">2</span>==0]<br><span class="hljs-built_in">print</span>(list_use,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]</span><br></code></pre></td></tr></table></figure>
+<p>生成指定字符串中长度大于3的字符串并全部大写：</p>
+<figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs gml">list_use = [<span class="hljs-string">&quot;ab&quot;</span>,<span class="hljs-string">&quot;cde&quot;</span>,<span class="hljs-string">&quot;fghi&quot;</span>,<span class="hljs-string">&quot;jklmn&quot;</span>]<br>list_use2=[<span class="hljs-variable language_">x</span>.upper() <span class="hljs-keyword">for</span> <span class="hljs-variable language_">x</span> in list_use <span class="hljs-keyword">if</span> len(<span class="hljs-variable language_">x</span>)&gt;<span class="hljs-number">3</span>]<br>print(list_use2,<span class="hljs-keyword">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br># 运行结果：<br># [<span class="hljs-string">&#x27;FGHI&#x27;</span>, <span class="hljs-string">&#x27;JKLMN&#x27;</span>] <br></code></pre></td></tr></table></figure></li>
+<li><p>多个for循环嵌套的列表生成式：</p>
+<p>全排列的生成：</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs prolog">list_use1=[<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>]<br>list_use2=[<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>]<br>list_use=[i+j for i in list_use1 for j in list_use2]<br>print(list_use,end=<span class="hljs-string">&quot; &quot;</span>)<br># 运行结果：<br># [<span class="hljs-string">&#x27;a1&#x27;</span>, <span class="hljs-string">&#x27;a2&#x27;</span>, <span class="hljs-string">&#x27;a3&#x27;</span>, <span class="hljs-string">&#x27;b1&#x27;</span>, <span class="hljs-string">&#x27;b2&#x27;</span>, <span class="hljs-string">&#x27;b3&#x27;</span>, <span class="hljs-string">&#x27;c1&#x27;</span>, <span class="hljs-string">&#x27;c2&#x27;</span>, <span class="hljs-string">&#x27;c3&#x27;</span>] <br><br></code></pre></td></tr></table></figure></li>
+<li><p>for循环使用多个变量的列表生成式：</p>
+<p>经常使用的是把dict的键值对按某种逻辑组合成列表的一个元素：</p>
+<figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs gml">dict_use=&#123;<span class="hljs-string">&#x27;a&#x27;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;b&#x27;</span>:<span class="hljs-number">2</span>,<span class="hljs-string">&#x27;c&#x27;</span>:<span class="hljs-number">3</span>,<span class="hljs-string">&#x27;d&#x27;</span>:<span class="hljs-number">4</span>&#125;<br>list_use=[<span class="hljs-variable language_">x</span>+str(<span class="hljs-variable language_">y</span>) <span class="hljs-keyword">for</span> <span class="hljs-variable language_">x</span>,<span class="hljs-variable language_">y</span> in dict_use.items()]<br>print(list_use,<span class="hljs-keyword">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br># 运行结果：<br># [<span class="hljs-string">&#x27;a1&#x27;</span>, <span class="hljs-string">&#x27;b2&#x27;</span>, <span class="hljs-string">&#x27;c3&#x27;</span>, <span class="hljs-string">&#x27;d4&#x27;</span>] <br></code></pre></td></tr></table></figure>
+<p>也可以直接对list的内部元组进行组合：</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs prolog">list_use1=[(<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;1&quot;</span>),(<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>),(<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>)]<br>list_use=[i+j for i,j in list_use1]<br>print(list_use,end=<span class="hljs-string">&quot; &quot;</span>)<br># 运行结果：<br># [<span class="hljs-string">&#x27;a1&#x27;</span>, <span class="hljs-string">&#x27;b2&#x27;</span>, <span class="hljs-string">&#x27;3c&#x27;</span>]<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3><span id="六生成器">（六）生成器</span></h3>
+<p>对于列表生成式，虽然其运行效率高，代码简洁，但是其一次性生成整个列表，内存消耗代价大，因此，为了节约内存，我们可以使用生成器生成列表。</p>
+<p>当然，生成器也可以用于生成其他类型。</p>
+<h4><span id="1-概念">1. 概念：</span></h4>
+<p>生成器(generator)是一种返回一个值的迭代器，每次从该迭代器取下一个值。</p>
+<p>生成器实际上是一种高级迭代器，因此也是可迭代对象，可以使得需要返回一系列元素的函数所需的代码更加的简单和高效，当然也因此只能遍历一次。</p>
+<p>生成器通过某种算法，在循环中能够不断计算处下一次需要生成的元素，而不需要创建完整的生成列表，以此来节省空间。</p>
+<p>注意，生成器实际上保存的是算法，调用next方法时能够就能够计算出下一个元素的值。</p>
+<p>一旦计算到最后一个元素，再次调用next方法，就会抛出StopIteration错误。</p>
+<p>生成器有两种表示：生成器表达式和生成器函数。</p>
+<h4><span id="2-生成器表达式">2. 生成器表达式：</span></h4>
+<p>生成器表达式也被称为隐式生成器，语法与推导式基本相同，但要用圆括号来创建生成器，也就是将其[]换成()。</p>
+<p>生成器表达式会产生新的生成器对象并返回，不会构建出一个列表进行返回，所以直接输出生成器不会输出对应的结果。</p>
+<p>另外，生成器表达式禁止使用yield和yield from表达式（后文会讲）。</p>
+<p>例子如下：</p>
+<p>将上方例子的[]直接更换为()即可获得生成器，然后使用时直接用next函数或者遍历即可</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs routeros">generator_use =(x*x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(1,5))<br><span class="hljs-built_in">print</span>(generator_use)<br><span class="hljs-built_in">print</span>(generator_use.__next__(),<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-built_in">print</span>(generator_use.__next__(),<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-built_in">print</span>(generator_use.__next__(),<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-built_in">print</span>(generator_use.__next__(),<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-built_in">print</span>(generator_use.__next__(),<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># Traceback (most recent call last):</span><br><span class="hljs-comment">#   File &quot;D:\pycharmwork\blog_use.py&quot;, line 2330, in &lt;module&gt;</span><br><span class="hljs-comment">#     print(generator_use.__next__(),end=&quot; &quot;)</span><br><span class="hljs-comment">#           ^^^^^^^^^^^^^^^^^^^^^^^^</span><br><span class="hljs-comment"># StopIteration</span><br><span class="hljs-comment"># &lt;generator object &lt;genexpr&gt; at 0x0000016F5D849150&gt;</span><br><span class="hljs-comment"># 1 4 9 16</span><br><br>generator_use =(x*x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(1,5))<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> generator_use:<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># 1 4 9 16</span><br></code></pre></td></tr></table></figure>
+<p>判断其是否可迭代及其类型：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> collections.abc <span class="hljs-keyword">import</span> *<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">isinstance</span>((x*x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">5</span>)),Iterable))<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>((x*x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">5</span>))))<br><span class="hljs-comment">#运行结果如下：</span><br><span class="hljs-comment"># True</span><br><span class="hljs-comment"># &lt;class &#x27;generator&#x27;&gt;</span><br></code></pre></td></tr></table></figure>
+<p>嵌套for等语法同样可以用于生成器：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs routeros">list_use1=[<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>]<br>list_use2=[<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>]<br>generator_use=(i+j <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> list_use1 <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> list_use2)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> generator_use:<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># a1 a2 a3 b1 b2 b3 c1 c2 c3 </span><br><br>dict_use=&#123;<span class="hljs-string">&#x27;a&#x27;</span>:1,<span class="hljs-string">&#x27;b&#x27;</span>:2,<span class="hljs-string">&#x27;c&#x27;</span>:3,<span class="hljs-string">&#x27;d&#x27;</span>:4&#125;<br>generator_use=(x+str(y) <span class="hljs-keyword">for</span> x,y <span class="hljs-keyword">in</span> dict_use.items())<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> generator_use:<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># a1 b2 c3 d4 </span><br></code></pre></td></tr></table></figure>
+<h4><span id="3-生成器函数">3. 生成器函数：</span></h4>
+<p>生成器函数类似一般函数，但是额外增加了yield关键字，此时函数返回的是一个生成器对象。</p>
+<p>生成器函数和一般函数的区别在于，一般函数的执行流程是顺序执行，当遇到return语句或者执行到最后一行语句时才会返回，而对于生成器函数，遇到yield语句会暂停函数的执行并返回此时的中间结果；一般函数的调用是用函数名显式调用，而生成器函数的调用必须显式或者隐式的使用next语句调用，同时恢复到上一次的yield语句处再往下继续执行。</p>
+<p>也就是说，生成器函数能够利用yield语句暂停函数的执行并返回中间元素的对应生成器，并通过next方法恢复函数中断现场，并从暂停的语句处开始继续执行，直到没有yield语句可以运行，此时会引发StopIteration异常。</p>
+<p><strong>yield语句：</strong>语法格式同return语句，只替换关键字。</p>
+<p>yield语句负责产生一个返回值并返回，返回后生成器函数会在yield语句处保存函数的内部状态，并挂起函数，直到再次调用，从上一次yield的地方继续执行，沿用上一轮的函数内部变量的状态。</p>
+<p>注意，return语句对生成器函数返回值不会产生任何影响，函数返回值仍为生成器对象。如果没有return语句的话，注意函数结束时返回的是StopIteration异常，如果有return语句，函数会立刻停止运行并返回StopIteration异常，而return的返回值只作为异常的说明，而不是函数的返回值。</p>
+<p>可以直接显式调用close()来手动关闭生成器函数。</p>
+<p>可以用send()向生成器传入外部的值，但注意不能在启动生成器函数时传入。用一个变量接收send的值。</p>
+<p>接收语法为：<strong><em>receive变量名 = yield
+value</em></strong>，这里send的信息会被赋给receive变量名。</p>
+<p>send执行时会运行函数，所以如果需要send信息请注意增加yield语句或者修改外部循环。</p>
+<p>生成器函数常用于使用生成器的流数据缓冲区。</p>
+<p>例子如下：</p>
+<p>简单的生成器函数，用next方法显式返回12345序列：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs routeros">def get_1to5():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;启动生成器函数&quot;</span>)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(1,6):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;生成一个新的值中......&quot;</span>)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;生成成功&quot;</span>)<br>        yield i<br><span class="hljs-attribute">generator_use</span>=get_1to5()<br><span class="hljs-built_in">print</span>(generator_use.__next__())<br><span class="hljs-built_in">print</span>(generator_use.__next__())<br><span class="hljs-built_in">print</span>(generator_use.__next__())<br><span class="hljs-built_in">print</span>(generator_use.__next__())<br><span class="hljs-built_in">print</span>(generator_use.__next__())<br><span class="hljs-built_in">print</span>(generator_use.__next__())<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># Traceback (most recent call last):</span><br><span class="hljs-comment">#   File &quot;D:\pycharmwork\blog_use.py&quot;, line 2387, in &lt;module&gt;</span><br><span class="hljs-comment">#     print(generator_use.__next__())</span><br><span class="hljs-comment">#           ^^^^^^^^^^^^^^^^^^^^^^^^</span><br><span class="hljs-comment"># StopIteration</span><br><span class="hljs-comment"># 启动生成器函数</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 4</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 5</span><br></code></pre></td></tr></table></figure>
+<p>for循环返回：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs routeros">def get_1to5():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;启动生成器函数&quot;</span>)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(1,6):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;生成一个新的值中......&quot;</span>)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;生成成功&quot;</span>)<br>        yield i<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> get_1to5():<br>    <span class="hljs-built_in">print</span>(i)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 启动生成器函数</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 4</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 5</span><br></code></pre></td></tr></table></figure>
+<p>return对结果的影响：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs routeros">def get_1to5():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;启动生成器函数&quot;</span>)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(1,6):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;生成一个新的值中......&quot;</span>)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;生成成功&quot;</span>)<br>        yield i<br>        return <span class="hljs-string">&quot;错误源于完成了函数&quot;</span><br>t =get_1to5()<br><span class="hljs-built_in">print</span>(t.__next__())<br><span class="hljs-built_in">print</span>(t.__next__())<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 启动生成器函数</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># Traceback (most recent call last):</span><br><span class="hljs-comment">#   File &quot;D:\pycharmwork\blog_use.py&quot;, line 2446, in &lt;module&gt;</span><br><span class="hljs-comment">#     print(t.__next__())</span><br><span class="hljs-comment">#           ^^^^^^^^^^^^</span><br><span class="hljs-comment"># StopIteration: 错误源于完成了函数</span><br></code></pre></td></tr></table></figure>
+<p>close显式停止函数运行：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs routeros">def get_1to5():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;启动生成器函数&quot;</span>)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(1,6):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;生成一个新的值中......&quot;</span>)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;生成成功&quot;</span>)<br>        yield i<br>generator_use = get_1to5()<br><span class="hljs-built_in">print</span>(generator_use.__next__())<br><span class="hljs-built_in">print</span>(generator_use.__next__())<br>generator_use.close()<br><span class="hljs-built_in">print</span>(generator_use.__next__())<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 启动生成器函数</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># Traceback (most recent call last):</span><br><span class="hljs-comment">#   File &quot;D:\pycharmwork\blog_use.py&quot;, line 2468, in &lt;module&gt;</span><br><span class="hljs-comment">#     print(generator_use.__next__())</span><br><span class="hljs-comment">#           ^^^^^^^^^^^^^^^^^^^^^^^^</span><br><span class="hljs-comment"># StopIteration</span><br><br>def get_1to5():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;启动生成器函数&quot;</span>)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(1,6):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;生成一个新的值中......&quot;</span>)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;生成成功&quot;</span>)<br>        yield i<br>generator_use = get_1to5()<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> generator_use:<br>    <span class="hljs-built_in">print</span>(i)<br>    <span class="hljs-keyword">if</span> i == 3:<br>        generator_use.close()<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 启动生成器函数</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 生成一个新的值中......</span><br><span class="hljs-comment"># 生成成功</span><br><span class="hljs-comment"># 3</span><br><br></code></pre></td></tr></table></figure>
+<p>send发送信息和receive接收信息：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_1to5</span>():<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">6</span>):<br>        val =<span class="hljs-keyword">yield</span> i<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;接收信息&quot;</span>+<span class="hljs-built_in">str</span>(val))<br><br>generator_use = get_1to5()<br>i = generator_use.__next__()<br><span class="hljs-built_in">print</span>(i)<br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    i = generator_use.send(i*i)<br>    <span class="hljs-built_in">print</span>(i)<br>    <span class="hljs-keyword">if</span> i == <span class="hljs-number">5</span>:<br>        <span class="hljs-keyword">break</span><br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 接收信息1</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 接收信息4</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 接收信息9</span><br><span class="hljs-comment"># 4</span><br><span class="hljs-comment"># 接收信息16</span><br><span class="hljs-comment"># 5</span><br></code></pre></td></tr></table></figure>
+<p>最后用生成器函数设计一个杨辉三角：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">Triangle</span>():<br>    result=[<span class="hljs-number">1</span>]<br>    result_next = [<span class="hljs-number">1</span>,<span class="hljs-number">1</span>]<br>    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>        <span class="hljs-keyword">yield</span> result<br>        result = result_next<br>        result_next=[<span class="hljs-number">1</span>]+ [result_next[i]+result_next[i+<span class="hljs-number">1</span>] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(result_next)-<span class="hljs-number">1</span>)]+[<span class="hljs-number">1</span>]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> Triangle():<br>    <span class="hljs-built_in">print</span>(i)<br>    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">len</span>(i)==<span class="hljs-number">10</span>):<br>        <span class="hljs-keyword">break</span><br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/python-study/" class="category-chain-item">python_study</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+      
+        <a href="/tags/python/">#python</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>python进阶——高级特性(三)列表生成式、生成器</div>
+      <div>http://example.com/2023/07/13/python进阶——高级特性(三)列表生成式、生成器/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>07xiaohei</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年7月13日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/07/13/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7(%E4%BA%8C)%E8%BF%AD%E4%BB%A3%E3%80%81%E8%BF%AD%E4%BB%A3%E5%99%A8/" title="python进阶——高级特性(二)迭代、迭代器">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">python进阶——高级特性(二)迭代、迭代器</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/07/13/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%B8%80)%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E3%80%81%E7%B1%BB%E5%92%8C%E5%AE%9E%E4%BE%8B/" title="python进阶——类(一)面向对象、类和实例">
+                        <span class="hidden-mobile">python进阶——类(一)面向对象、类和实例</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","appKey":"ooOKmecfVZV0i2v0cvsyZGdl","path":"window.location.pathname","placeholder":"“cancanneed comment”","avatar":"monsterid","meta":["nick","mail","link"],"requiredFields":[],"pageSize":15,"lang":"zh-CN","highlight":true,"recordIP":true,"serverURLs":"https://ubsvoh5t.api.lncldglobal.com","emojiCDN":"//i0.hdslb.com/bfs/emote/","emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/js/qipao.js"></script>
+<script src="/js/star.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

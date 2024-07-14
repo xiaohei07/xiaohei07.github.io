@@ -1,0 +1,473 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
+  <link rel="icon" href="/img/256.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="07xiaohei">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="（一）概念: 析构函数是一个特殊的成员函数。 析构函数的功能与构造函数是完全相反的。析构函数无需用户进行调用，而是在对象生命周期结束需要进行释放时自动调用，完成对对象的释放和对象使用的资源的清理工作，但析构函数不操作对象占用的内存，也不删除对象——析构后这部分内存可以被分配给新对象使用。 （二）特性：  析构函数的形式是：~类名(){ 析构函数体 } （~表示取反，意思是和构造函数性质">
+<meta property="og:type" content="website">
+<meta property="og:title" content="c++类——析构函数">
+<meta property="og:url" content="http://example.com/backup/backup[2023-04-09-17-38]/c++%E7%B1%BB%E2%80%94%E2%80%94%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0.html">
+<meta property="og:site_name" content="ZZHの个人博客">
+<meta property="og:description" content="（一）概念: 析构函数是一个特殊的成员函数。 析构函数的功能与构造函数是完全相反的。析构函数无需用户进行调用，而是在对象生命周期结束需要进行释放时自动调用，完成对对象的释放和对象使用的资源的清理工作，但析构函数不操作对象占用的内存，也不删除对象——析构后这部分内存可以被分配给新对象使用。 （二）特性：  析构函数的形式是：~类名(){ 析构函数体 } （~表示取反，意思是和构造函数性质">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-17T05:46:25.000Z">
+<meta property="article:modified_time" content="2023-04-09T09:38:38.194Z">
+<meta property="article:author" content="07xiaohei">
+<meta property="article:tag" content="c++">
+<meta property="article:tag" content="类">
+<meta property="article:tag" content="知识点">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>c++类——析构函数 - ZZHの个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
+<link rel="stylesheet" href="/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>07xiaoheiの个人博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/HTML/index.html">
+                <i class="iconfont icon-bilibili-fill"></i>
+                <span>happy birthday</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-icon"></i>
+                <span>资源</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/download-office">
+                    
+                    <span>下载官网</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
+                    
+                    <span>baiduyun</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/visit-use">
+                    
+                    <span>有用的网站</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于我</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="c++类——析构函数"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<article class="page-content">
+  <h3><span id="一概念">（一）概念:</span></h3>
+<p>析构函数是一个特殊的成员函数。</p>
+<p>析构函数的功能与构造函数是完全相反的。析构函数无需用户进行调用，而是在对象生命周期结束需要进行释放时自动调用，完成对对象的释放和对象使用的资源的清理工作，但析构函数不操作对象占用的内存，也不删除对象——析构后这部分内存可以被分配给新对象使用。</p>
+<h3><span id="二特性">（二）特性：</span></h3>
+<ul>
+<li>析构函数的形式是：<strong><em>~类名(){ 析构函数体 }</em></strong>
+（~表示取反，意思是和构造函数性质相反。）</li>
+<li>析构函数无参数，也无返回值。</li>
+<li>析构函数不允许重载，一个类的析构函数唯一。</li>
+<li>用户在类中未定义自己的析构函数时编译系统会自动生成默认的析构函数，但仅有形式，不会进行任何操作。</li>
+<li>对于静态局部对象，函数调用结束不会释放，不执行析构函数，只在程序结束时才调用其析构函数释放对象。</li>
+<li>如果用new动态建立对象，只在delete释放对象时才调用析构函数。</li>
+</ul>
+<h3><span id="三代码实现">（三）代码实现：</span></h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Time</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> hour;  <br>	<span class="hljs-type">int</span> minute;<br>	<span class="hljs-type">int</span> sec;<br>	<span class="hljs-type">int</span>* p;<span class="hljs-comment">//动态指针使用</span><br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">Time</span>() &#123; hour = minute = sec = <span class="hljs-number">0</span>; p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>); &#125;<br>	<span class="hljs-built_in">Time</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3) :<span class="hljs-built_in">hour</span>(i1), <span class="hljs-built_in">minute</span>(i2), <span class="hljs-built_in">sec</span>(i3) &#123; p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>); &#125;<br>	~<span class="hljs-built_in">Time</span>() <br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;执行析构函数&quot;</span> &lt;&lt; endl;<br>		<span class="hljs-keyword">if</span> (p != <span class="hljs-literal">NULL</span>) &#123;<br>			<span class="hljs-keyword">delete</span> p;<br>			p = <span class="hljs-literal">NULL</span>;<br>		&#125;<span class="hljs-comment">//如果没有这句话，系统不会对动态指针指向内存空间进行释放，可能会发生内存泄漏</span><br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">set_time</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		cin &gt;&gt; hour &gt;&gt; minute &gt;&gt; sec;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">show_time</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt; hour &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; minute &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; sec &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-function">Time <span class="hljs-title">t1</span><span class="hljs-params">(<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>)</span></span>;<br>	t<span class="hljs-number">1.</span><span class="hljs-built_in">show_time</span>();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<span class="hljs-comment">//执行析构函数</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+  
+
+</article>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/js/qipao.js"></script>
+<script src="/js/star.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

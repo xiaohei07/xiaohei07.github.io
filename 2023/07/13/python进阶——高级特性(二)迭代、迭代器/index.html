@@ -1,0 +1,890 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
+  <link rel="icon" href="/img/256.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="07xiaohei">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="（三）迭代 1. 概述： 迭代是重复运行某个代码块的能力，在此处，特指使用for...in循环遍历某个可迭代对象的行为。 和其他使用下标完成迭代的语言不通，Python使用for...in循环完成迭代，这样做的好处是一些可以迭代的对象在没有下标的情况下也能够完成迭代——无论可迭代对象是否有序均可以完成迭代操作。 注意，迭代是取出元素本身而不是元素的索引。 2. 实例： 因为迭代本质上是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python进阶——高级特性(二)迭代、迭代器">
+<meta property="og:url" content="http://example.com/2023/07/13/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7(%E4%BA%8C)%E8%BF%AD%E4%BB%A3%E3%80%81%E8%BF%AD%E4%BB%A3%E5%99%A8/index.html">
+<meta property="og:site_name" content="ZZHの个人博客">
+<meta property="og:description" content="（三）迭代 1. 概述： 迭代是重复运行某个代码块的能力，在此处，特指使用for...in循环遍历某个可迭代对象的行为。 和其他使用下标完成迭代的语言不通，Python使用for...in循环完成迭代，这样做的好处是一些可以迭代的对象在没有下标的情况下也能够完成迭代——无论可迭代对象是否有序均可以完成迭代操作。 注意，迭代是取出元素本身而不是元素的索引。 2. 实例： 因为迭代本质上是">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-13T13:54:26.000Z">
+<meta property="article:modified_time" content="2023-07-14T08:48:07.308Z">
+<meta property="article:author" content="07xiaohei">
+<meta property="article:tag" content="知识点">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>python进阶——高级特性(二)迭代、迭代器 - ZZHの个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
+<link rel="stylesheet" href="/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>07xiaoheiの个人博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/HTML/index.html">
+                <i class="iconfont icon-bilibili-fill"></i>
+                <span>happy birthday</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-icon"></i>
+                <span>资源</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/download-office">
+                    
+                    <span>下载官网</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
+                    
+                    <span>baiduyun</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/visit-use">
+                    
+                    <span>有用的网站</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于我</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="python进阶——高级特性(二)迭代、迭代器"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-07-13 21:54" pubdate>
+          2023年7月13日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          62 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">python进阶——高级特性(二)迭代、迭代器</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3><span id="三迭代">（三）迭代</span></h3>
+<h4><span id="1-概述">1. 概述：</span></h4>
+<p>迭代是重复运行某个代码块的能力，在此处，特指使用for...in循环遍历某个可迭代对象的行为。</p>
+<p>和其他使用下标完成迭代的语言不通，Python使用for...in循环完成迭代，这样做的好处是一些可以迭代的对象在没有下标的情况下也能够完成迭代——无论可迭代对象是否有序均可以完成迭代操作。</p>
+<p>注意，迭代是取出元素本身而不是元素的索引。</p>
+<h4><span id="2-实例">2. 实例：</span></h4>
+<p>因为迭代本质上是用for循环的完成的，for循环的详细语法和内容请参考<a target="_blank" rel="noopener" href="https://07xiaohei.com/2023/07/11/python基础——循环/">python基础——循环</a>，这里只举例说明Python中可迭代对象的循环。</p>
+<h5><span id="1list迭代">（1）list迭代：</span></h5>
+<ul>
+<li><p>基本迭代：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs routeros">list_use = [0,1,2,3,4,5,6]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> list_use:<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 0 1 2 3 4 5 6 </span><br></code></pre></td></tr></table></figure></li>
+<li><p>enumerate()函数迭代：</p>
+<p>在迭代时，有时需要拿到索引，这时需要使用enumerate()函数。</p>
+<p>enumerate()函数用于将一个可迭代对象组合为一个索引序列，同时列出其元素和元素下标。</p>
+<p>语法格式：<strong><em>enumerate(sequence,
+[start=0])</em></strong></p>
+<p>sequence是迭代对象，start是下标起始位置的索引值，默认第一个元素开始，返回一个enumerate对象（本质上是列表+元组）。</p>
+<p>enumerate()函数可以用于其他类型，后面会举例。</p>
+<p>例子如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs python">list_use = [<span class="hljs-string">&#x27;a&#x27;</span>,<span class="hljs-string">&#x27;b&#x27;</span>,<span class="hljs-string">&#x27;c&#x27;</span>,<span class="hljs-string">&#x27;d&#x27;</span>,<span class="hljs-string">&#x27;e&#x27;</span>,<span class="hljs-string">&#x27;f&#x27;</span>]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(list_use):<br>    <span class="hljs-built_in">print</span>(i)<br><span class="hljs-keyword">for</span> i,j <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(list_use):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">str</span>(i)+<span class="hljs-string">&quot;,&quot;</span>+j)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(list_use):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">str</span>(i[<span class="hljs-number">0</span>])+<span class="hljs-string">&quot;,&quot;</span>+i[<span class="hljs-number">1</span>])<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># (0, &#x27;a&#x27;)</span><br><span class="hljs-comment"># (1, &#x27;b&#x27;)</span><br><span class="hljs-comment"># (2, &#x27;c&#x27;)</span><br><span class="hljs-comment"># (3, &#x27;d&#x27;)</span><br><span class="hljs-comment"># (4, &#x27;e&#x27;)</span><br><span class="hljs-comment"># (5, &#x27;f&#x27;)</span><br><span class="hljs-comment"># 0,a</span><br><span class="hljs-comment"># 1,b</span><br><span class="hljs-comment"># 2,c</span><br><span class="hljs-comment"># 3,d</span><br><span class="hljs-comment"># 4,e</span><br><span class="hljs-comment"># 5,f</span><br><span class="hljs-comment"># 0,a</span><br><span class="hljs-comment"># 1,b</span><br><span class="hljs-comment"># 2,c</span><br><span class="hljs-comment"># 3,d</span><br><span class="hljs-comment"># 4,e</span><br><span class="hljs-comment"># 5,f</span><br></code></pre></td></tr></table></figure></li>
+<li><p>多个可迭代对象合并迭代：</p>
+<p>此处需要使用zip()函数合并可迭代对象。</p>
+<p>zip()
+函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的列表对象。</p>
+<p>返回的列表需要增加list()进行强制类型转化，其长度以最短的一个可迭代对象为准。</p>
+<p>语法格式：<strong><em>zip([iterable,
+...])</em></strong>，iterable是可迭代对象。</p>
+<p>例子如下：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">list_score</span>=[<span class="hljs-number">100</span>,<span class="hljs-number">80</span>,<span class="hljs-number">90</span>,<span class="hljs-number">95</span>,<span class="hljs-number">85</span>]<br><span class="hljs-attribute">list_name</span>=[<span class="hljs-string">&quot;jacklove&quot;</span>,<span class="hljs-string">&quot;rookie&quot;</span>,<span class="hljs-string">&quot;xiaotian&quot;</span>,<span class="hljs-string">&quot;wayward&quot;</span>,<span class="hljs-string">&quot;Mark&quot;</span>]<br><span class="hljs-attribute">for</span> i in zip(list_score,list_name):<br>    <span class="hljs-attribute">print</span>(i)<br><span class="hljs-attribute">for</span> i,j in zip(list_score,list_name):<br>    <span class="hljs-attribute">print</span>(str(i)+<span class="hljs-string">&quot;,&quot;</span>+j)<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># (100, &#x27;jacklove&#x27;)</span><br><span class="hljs-comment"># (80, &#x27;rookie&#x27;)</span><br><span class="hljs-comment"># (90, &#x27;xiaotian&#x27;)</span><br><span class="hljs-comment"># (95, &#x27;wayward&#x27;)</span><br><span class="hljs-comment"># (85, &#x27;Mark&#x27;)</span><br><span class="hljs-comment"># 100,jacklove</span><br><span class="hljs-comment"># 80,rookie</span><br><span class="hljs-comment"># 90,xiaotian</span><br><span class="hljs-comment"># 95,wayward</span><br><span class="hljs-comment"># 85,Mark</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h5><span id="2tuple迭代">（2）tuple迭代：</span></h5>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs clean">tuple_use = (<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>)<br>for i <span class="hljs-keyword">in</span> tuple_use:<br>    print(i,end=<span class="hljs-string">&quot; &quot;</span>)<br># 运行结果：<br># <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span><br><br>tuple_use = (<span class="hljs-string">&#x27;a&#x27;</span>,<span class="hljs-string">&#x27;b&#x27;</span>,<span class="hljs-string">&#x27;c&#x27;</span>,<span class="hljs-string">&#x27;d&#x27;</span>,<span class="hljs-string">&#x27;e&#x27;</span>,<span class="hljs-string">&#x27;f&#x27;</span>)<br>for i <span class="hljs-keyword">in</span> enumerate(tuple_use):<br>    print(i)<br>for i,j <span class="hljs-keyword">in</span> enumerate(tuple_use):<br>    print(str(i)+<span class="hljs-string">&quot;,&quot;</span>+j)<br>for i <span class="hljs-keyword">in</span> enumerate(tuple_use):<br>    print(str(i[<span class="hljs-number">0</span>])+<span class="hljs-string">&quot;,&quot;</span>+i[<span class="hljs-number">1</span>])<br># # 运行结果：<br># # (<span class="hljs-number">0</span>, <span class="hljs-string">&#x27;a&#x27;</span>)<br># # (<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;b&#x27;</span>)<br># # (<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;c&#x27;</span>)<br># # (<span class="hljs-number">3</span>, <span class="hljs-string">&#x27;d&#x27;</span>)<br># # (<span class="hljs-number">4</span>, <span class="hljs-string">&#x27;e&#x27;</span>)<br># # (<span class="hljs-number">5</span>, <span class="hljs-string">&#x27;f&#x27;</span>)<br># # <span class="hljs-number">0</span>,a<br># # <span class="hljs-number">1</span>,b<br># # <span class="hljs-number">2</span>,c<br># # <span class="hljs-number">3</span>,d<br># # <span class="hljs-number">4</span>,e<br># # <span class="hljs-number">5</span>,f<br># # <span class="hljs-number">0</span>,a<br># # <span class="hljs-number">1</span>,b<br># # <span class="hljs-number">2</span>,c<br># # <span class="hljs-number">3</span>,d<br># # <span class="hljs-number">4</span>,e<br># # <span class="hljs-number">5</span>,f<br></code></pre></td></tr></table></figure>
+<h5><span id="3字符串迭代">（3）字符串迭代：</span></h5>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs routeros">str_use = <span class="hljs-string">&quot;0123456&quot;</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> str_use:<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 0 1 2 3 4 5 6</span><br><br>str_use = <span class="hljs-string">&quot;abcdef&quot;</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> enumerate(str_use):<br>    <span class="hljs-built_in">print</span>(i)<br><span class="hljs-keyword">for</span> i,j <span class="hljs-keyword">in</span> enumerate(str_use):<br>    <span class="hljs-built_in">print</span>(str(i)+<span class="hljs-string">&quot;,&quot;</span>+j)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> enumerate(str_use):<br>    <span class="hljs-built_in">print</span>(str(i[0])+<span class="hljs-string">&quot;,&quot;</span>+i[1])<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># (0, &#x27;a&#x27;)</span><br><span class="hljs-comment"># (1, &#x27;b&#x27;)</span><br><span class="hljs-comment"># (2, &#x27;c&#x27;)</span><br><span class="hljs-comment"># (3, &#x27;d&#x27;)</span><br><span class="hljs-comment"># (4, &#x27;e&#x27;)</span><br><span class="hljs-comment"># (5, &#x27;f&#x27;)</span><br><span class="hljs-comment"># 0,a</span><br><span class="hljs-comment"># 1,b</span><br><span class="hljs-comment"># 2,c</span><br><span class="hljs-comment"># 3,d</span><br><span class="hljs-comment"># 4,e</span><br><span class="hljs-comment"># 5,f</span><br><span class="hljs-comment"># 0,a</span><br><span class="hljs-comment"># 1,b</span><br><span class="hljs-comment"># 2,c</span><br><span class="hljs-comment"># 3,d</span><br><span class="hljs-comment"># 4,e</span><br><span class="hljs-comment"># 5,f</span><br></code></pre></td></tr></table></figure>
+<h5><span id="4dict迭代">（4）dict迭代：</span></h5>
+<p>dict的迭代可以是对key迭代，对value迭代，或者两者一起迭代，这些都被视为可迭代对象。</p>
+<p>迭代key是默认迭代，也可以指定迭代dict的keys：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs routeros">dirc_use = &#123;1:<span class="hljs-string">&#x27;a&#x27;</span>,2:<span class="hljs-string">&#x27;b&#x27;</span>,3:<span class="hljs-string">&#x27;c&#x27;</span>,4:<span class="hljs-string">&#x27;d&#x27;</span>,5:<span class="hljs-string">&#x27;e&#x27;</span>&#125;<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> dirc_use:<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-built_in">print</span>()<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> dirc_use.keys():<br>    <span class="hljs-built_in">print</span>(i, <span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 1 2 3 4 5</span><br><span class="hljs-comment"># 1 2 3 4 5</span><br></code></pre></td></tr></table></figure>
+<p>迭代values需要指定dirc的values：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs routeros">dirc_use = &#123;1:<span class="hljs-string">&#x27;a&#x27;</span>,2:<span class="hljs-string">&#x27;b&#x27;</span>,3:<span class="hljs-string">&#x27;c&#x27;</span>,4:<span class="hljs-string">&#x27;d&#x27;</span>,5:<span class="hljs-string">&#x27;e&#x27;</span>&#125;<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> dirc_use.values():<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># a b c d e </span><br></code></pre></td></tr></table></figure>
+<p>迭代两者需要指定dirc的items完成迭代：</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs autoit">dirc_use = &#123;<span class="hljs-number">1</span>:<span class="hljs-string">&#x27;a&#x27;</span>,<span class="hljs-number">2</span>:<span class="hljs-string">&#x27;b&#x27;</span>,<span class="hljs-number">3</span>:<span class="hljs-string">&#x27;c&#x27;</span>,<span class="hljs-number">4</span>:<span class="hljs-string">&#x27;d&#x27;</span>,<span class="hljs-number">5</span>:<span class="hljs-string">&#x27;e&#x27;</span>&#125;<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> dirc_use.items():<br>    print(i,end=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-meta"># 运行结果：</span><br><span class="hljs-meta"># (1, <span class="hljs-string">&#x27;a&#x27;</span>) (2, <span class="hljs-string">&#x27;b&#x27;</span>) (3, <span class="hljs-string">&#x27;c&#x27;</span>) (4, <span class="hljs-string">&#x27;d&#x27;</span>) (5, <span class="hljs-string">&#x27;e&#x27;</span>) </span><br></code></pre></td></tr></table></figure>
+<h3><span id="四迭代器">（四）迭代器</span></h3>
+<h4><span id="1-容器">1. 容器</span></h4>
+<h5><span id="1概述">（1）概述：</span></h5>
+<p>容器是一种把多个元素组织在一起的数据结构，容器中的元素可以逐个迭代获取。</p>
+<p>容器的最大特性是能够判断一个元素是否在这个容器内，一般使用in和not
+in来判断元素是否包含在容器中。</p>
+<p>常用的list、tuple、dict、set、string都属于容器对象。</p>
+<h5><span id="2底层逻辑">（2）底层逻辑：</span></h5>
+<p>容器能够使用in或not
+in判断是因为其实现了__contiains__方法，自定义容器时必须实现该方法（此处不详细阐述），所以，判断是否为容器，主要是判断其是否实现了__contiains__方法。</p>
+<h4><span id="2-可迭代对象iterable">2. 可迭代对象iterable：</span></h4>
+<p>可迭代对象的逻辑和容器类似，需要根据其是否实现了__iter__方法来判断是否是可迭代对象。</p>
+<p>即使__iter__方法没有具体实现，也符合对可迭代对象的定义，只是不能真的被迭代。</p>
+<p>在表现上，所有可以用for循环遍历的对象都是可迭代对象，这样的对象能够迭代出容器的所有数据。</p>
+<p>可迭代对象用__iter__方法能够返回一个迭代器，这个迭代器指向了可迭代对象的某个元素，更多的迭代器信息后文回继续介绍。</p>
+<p>可迭代对象赋予了容器获得其中每一个元素的能力，但要注意有些容器并不是可迭代的。</p>
+<h4><span id="3-迭代器iterator">3. 迭代器iterator：</span></h4>
+<p>当了解了容器和可迭代对象之后，就可以进一步了解迭代器了。</p>
+<h5><span id="1概念">（1）概念：</span></h5>
+<p>迭代器的定义：一个对象同时实现了__iter__和__next__方法，该对象为迭代器。实现的这两个方法也被称为迭代器协议。</p>
+<p>从中可以看出，<strong>迭代器一定是可迭代对象</strong>，因为其已经实现了__iter__方法。</p>
+<p>如果只实现了一个方法，不足以作为迭代器使用。</p>
+<h5><span id="2特征">（2）特征：</span></h5>
+<p>迭代器是一个带状态的对象，可以通过iter方法从可迭代对象处获得，通过next方法不断迭代，从而遍历所有元素，一旦没有可迭代元素，抛出StopIteration异常。</p>
+<p>迭代器是从可迭代对象的第一个元素开始访问的，因此每次iter方法返回的迭代器指向元素都是唯一确定的，由于迭代器的next方法是返回下一个元素，因此迭代器只能往前不会后退，也因此迭代器是不能重复使用的，如果需要从头开始遍历，需要利用iter方法获得一个新的迭代器。</p>
+<p>但是要注意，对于文件之类的可迭代对象，即使多次调用iter方法，实际上返回的每一个迭代器对应的文件指针所指向的<strong>内存地址是相同的</strong>，因为iter方法实际返回的正是可迭起对象本身，这是为了打开文件避免文件指针的跳转，同时保证每次打开只需要一次遍历获得文件内容，不需要多次遍历，除非多次打开。</p>
+<p>for循环迭代的核心逻辑就是用iter方式获得可迭代对象的迭代器，反复使用next方法，直到捕获到Stopiteration异常，退出循环。</p>
+<p>另外，通常使用的tuple、list、set等内置数据结构都是可迭代对象，而不是迭代器，迭代器是利用另外一个类实现的，也就是说，这些内置数据结构自身实现了iter方法，由另一个类实现了两个方法，从而将自身的<strong>迭代细节</strong>交给了另一个类实现。</p>
+<h5><span id="3为什么要用迭代器而不是直接通过可迭代对象遍历">（3）为什么要用迭代器而不是直接通过可迭代对象遍历：</span></h5>
+<p>迭代器能够延迟计算，节省内存空间，完成更广义的存储。</p>
+<p>构建迭代器时不是把所有元素一次性加载到内存，而是通过延迟计算的方式返回元素，也就是只会在需要的时候计算下一个元素并返回，不使用时不会存储，这样将会使得使用的存储空间差距巨大，甚至完成一些不可能的存储工作。比如利用迭代器可以完成逻辑上的全部自然数存储，在需要时迭代到需要的数据使用next方法获得，用有限的空间完成了无限的存储（当然无限只是理论上的）。</p>
+<h5><span id="4isinstance方法">（4）isinstance方法：</span></h5>
+<p>使用isinstance()可以快速判断一个对象是否为迭代器或者可迭代对象。</p>
+<p>语法格式：<strong><em>isinstance(object, classinfo)</em></strong></p>
+<p>object是对象，classinfo是基本类型/直接类名/间接类名或者它们组成的元素。</p>
+<p>如果对象类型和classinfo对应类型相同返回True，否则返回False。</p>
+<p>使用该方法需要导入模块collections.abc</p>
+<h5><span id="5实例">（5）实例：</span></h5>
+<p>首先判断一下各种基本类型是否是迭代器或者可迭代对象：</p>
+<p>迭代器和可迭代对象需要导入模块collections.abc</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">from</span> collections.abc import *<br><span class="hljs-built_in">print</span>(isinstance(1, Iterable))<br><span class="hljs-comment">#False</span><br><span class="hljs-built_in">print</span>(isinstance(2.3, Iterable))<br><span class="hljs-comment">#False</span><br>list_judge =[1,2,3,4,5]<br>tuple_judge =(1, 2, 3,4,5)<br>set_judge =&#123;1,2,3,4,5&#125;<br>str_judge =<span class="hljs-string">&quot;12345&quot;</span><br>dirc_judge=&#123;1:<span class="hljs-string">&#x27;a&#x27;</span>,2:<span class="hljs-string">&#x27;b&#x27;</span>&#125;<br><span class="hljs-built_in">print</span>(isinstance(list_judge, Iterable))<br><span class="hljs-comment">#True</span><br><span class="hljs-built_in">print</span>(isinstance(list_judge, Iterator))<br><span class="hljs-comment">#False</span><br><span class="hljs-built_in">print</span>(isinstance(tuple_judge, Iterable))<br><span class="hljs-comment">#True</span><br><span class="hljs-built_in">print</span>(isinstance(tuple_judge, Iterator))<br><span class="hljs-comment">#False</span><br><span class="hljs-built_in">print</span>(isinstance(set_judge, Iterable))<br><span class="hljs-comment">#True</span><br><span class="hljs-built_in">print</span>(isinstance(set_judge, Iterator))<br><span class="hljs-comment">#False</span><br><span class="hljs-built_in">print</span>(isinstance(str_judge, Iterable))<br><span class="hljs-comment">#True</span><br><span class="hljs-built_in">print</span>(isinstance(str_judge, Iterator))<br><span class="hljs-comment">#False</span><br><span class="hljs-built_in">print</span>(isinstance(dirc_judge, Iterable))<br><span class="hljs-comment">#True</span><br><span class="hljs-built_in">print</span>(isinstance(dirc_judge, Iterator))<br><span class="hljs-comment">#False</span><br></code></pre></td></tr></table></figure>
+<p>可以看到，字符串、元组、集合、字典和列表都是可迭代对象不是迭代器。</p>
+<p>下面开始简单使用迭代器：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs routeros">list_use = [1,2,3,4,5]<br>iter_use1 = list_use.__iter__()<br>iter_use2 = iter(list_use)<br><span class="hljs-built_in">print</span>(id(iter_use1))<br><span class="hljs-built_in">print</span>(id(iter_use2))<br><span class="hljs-built_in">print</span>(iter_use1)<br><span class="hljs-built_in">print</span>(iter_use2)<br><span class="hljs-built_in">print</span>(iter_use1.__next__())<br><span class="hljs-built_in">print</span>(iter_use1.__next__())<br><span class="hljs-built_in">print</span>(next(iter_use1))<br><span class="hljs-built_in">print</span>(next(iter_use1))<br><span class="hljs-built_in">print</span>(next(iter_use1))<br><span class="hljs-built_in">print</span>(next(iter_use1))<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># Traceback (most recent call last):</span><br><span class="hljs-comment">#   File &quot;D:\pycharmwork\blog_use.py&quot;, line 2224, in &lt;module&gt;</span><br><span class="hljs-comment">#     print(next(iter_use1))</span><br><span class="hljs-comment">#           ^^^^^^^^^^^^^^^</span><br><span class="hljs-comment"># StopIteration</span><br><span class="hljs-comment"># 2370164320256</span><br><span class="hljs-comment"># 2370164321504</span><br><span class="hljs-comment"># &lt;list_iterator object at 0x00000227D8CD6800&gt;</span><br><span class="hljs-comment"># &lt;list_iterator object at 0x00000227D8CD6CE0&gt;</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 4</span><br><span class="hljs-comment"># 5</span><br></code></pre></td></tr></table></figure>
+<p>下面开始使用迭代器配合for循环使用：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs routeros">dict_use = &#123;1:<span class="hljs-string">&#x27;a&#x27;</span>,2:<span class="hljs-string">&#x27;b&#x27;</span>,3:<span class="hljs-string">&#x27;c&#x27;</span>,4:<span class="hljs-string">&#x27;d&#x27;</span>,5:<span class="hljs-string">&#x27;e&#x27;</span>&#125;<br><span class="hljs-attribute">iter_use</span>=iter(dict_use)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> iter_use:<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-built_in">print</span>()<br><span class="hljs-attribute">iter_use</span>=iter(dict_use.values())<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> iter_use:<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-built_in">print</span>()<br><span class="hljs-attribute">iter_use</span>=iter(dict_use.items())<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> iter_use:<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># 1 2 3 4 5 </span><br><span class="hljs-comment"># a b c d e </span><br><span class="hljs-comment"># (1, &#x27;a&#x27;) (2, &#x27;b&#x27;) (3, &#x27;c&#x27;) (4, &#x27;d&#x27;) (5, &#x27;e&#x27;) </span><br></code></pre></td></tr></table></figure>
+<p>下面使用迭代器，next函数配合while循环使用：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs awk">str_use =<span class="hljs-string">&quot;abcdefg&quot;</span><br>iter_use =iter(str_use)<br><span class="hljs-keyword">while</span> True:<br>    try:<br>        print(<span class="hljs-keyword">next</span>(iter_use),end=<span class="hljs-string">&quot; &quot;</span>)<br>    except StopIteration:<br>        print()<br>        print(<span class="hljs-string">&quot;error,exit&quot;</span>)<br>        sys.<span class="hljs-keyword">exit</span>()<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># a b c d e f g</span><br><span class="hljs-comment"># error,exit</span><br></code></pre></td></tr></table></figure>
+<p>直接使用for循环遍历，实际上也是用迭代器完成的，只是被隐藏了：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros">list_use = [1,2,3,4,5]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> list_use:<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-comment"># 1 2 3 4 5</span><br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/python-study/" class="category-chain-item">python_study</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+      
+        <a href="/tags/python/">#python</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>python进阶——高级特性(二)迭代、迭代器</div>
+      <div>http://example.com/2023/07/13/python进阶——高级特性(二)迭代、迭代器/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>07xiaohei</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年7月13日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/07/15/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E6%A8%A1%E5%9D%97%E5%8C%96(%E4%B8%80)%E5%91%BD%E5%90%8D%E5%92%8C%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4/" title="“python进阶——模块化(一)命名空间和作用域”">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">“python进阶——模块化(一)命名空间和作用域”</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/07/13/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7(%E4%B8%89)%E5%88%97%E8%A1%A8%E7%94%9F%E6%88%90%E5%BC%8F%E3%80%81%E7%94%9F%E6%88%90%E5%99%A8/" title="python进阶——高级特性(三)列表生成式、生成器">
+                        <span class="hidden-mobile">python进阶——高级特性(三)列表生成式、生成器</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","appKey":"ooOKmecfVZV0i2v0cvsyZGdl","path":"window.location.pathname","placeholder":"“cancanneed comment”","avatar":"monsterid","meta":["nick","mail","link"],"requiredFields":[],"pageSize":15,"lang":"zh-CN","highlight":true,"recordIP":true,"serverURLs":"https://ubsvoh5t.api.lncldglobal.com","emojiCDN":"//i0.hdslb.com/bfs/emote/","emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/js/qipao.js"></script>
+<script src="/js/star.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

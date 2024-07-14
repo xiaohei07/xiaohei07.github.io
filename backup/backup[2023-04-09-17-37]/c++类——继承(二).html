@@ -1,0 +1,534 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
+  <link rel="icon" href="/img/256.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="07xiaohei">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="（一）基类和派生类的默认成员函数： 默认的成员函数共有六个：  构造函数 析构函数 拷贝构造函数 重载的赋值操作符 重载的取地址操作符 重载的const修饰的取地址操作符。  在继承关系内，在派生类中如果没有显示定义这六个默认构造函数，编译器系统会默认合成这六个成员函数。 后面的两个很少需要我们自己实现，此处略。 1. 构造函数： 建立一个类层次后，通常创建某个派生类的对">
+<meta property="og:type" content="website">
+<meta property="og:title" content="c++类——继承(二)">
+<meta property="og:url" content="http://example.com/backup/backup[2023-04-09-17-37]/c++%E7%B1%BB%E2%80%94%E2%80%94%E7%BB%A7%E6%89%BF(%E4%BA%8C).html">
+<meta property="og:site_name" content="ZZHの个人博客">
+<meta property="og:description" content="（一）基类和派生类的默认成员函数： 默认的成员函数共有六个：  构造函数 析构函数 拷贝构造函数 重载的赋值操作符 重载的取地址操作符 重载的const修饰的取地址操作符。  在继承关系内，在派生类中如果没有显示定义这六个默认构造函数，编译器系统会默认合成这六个成员函数。 后面的两个很少需要我们自己实现，此处略。 1. 构造函数： 建立一个类层次后，通常创建某个派生类的对">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2023/04/04/pp4VDQs.png">
+<meta property="article:published_time" content="2023-04-03T14:56:55.000Z">
+<meta property="article:modified_time" content="2023-04-09T09:37:20.778Z">
+<meta property="article:author" content="07xiaohei">
+<meta property="article:tag" content="c++">
+<meta property="article:tag" content="类">
+<meta property="article:tag" content="知识点">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://s1.ax1x.com/2023/04/04/pp4VDQs.png">
+  
+  
+  
+  <title>c++类——继承(二) - ZZHの个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
+<link rel="stylesheet" href="/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>07xiaoheiの个人博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/HTML/index.html">
+                <i class="iconfont icon-bilibili-fill"></i>
+                <span>happy birthday</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-icon"></i>
+                <span>资源</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/download-office">
+                    
+                    <span>下载官网</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
+                    
+                    <span>baiduyun</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/visit-use">
+                    
+                    <span>有用的网站</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于我</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="c++类——继承(二)"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<article class="page-content">
+  <h3><span id="一基类和派生类的默认成员函数">（一）基类和派生类的默认成员函数：</span></h3>
+<p>默认的成员函数共有六个：</p>
+<ul>
+<li>构造函数</li>
+<li>析构函数</li>
+<li>拷贝构造函数</li>
+<li>重载的赋值操作符</li>
+<li>重载的取地址操作符</li>
+<li>重载的const修饰的取地址操作符。</li>
+</ul>
+<p>在继承关系内，在派生类中如果没有显示定义这六个默认构造函数，编译器系统会默认合成这六个成员函数。</p>
+<p>后面的两个很少需要我们自己实现，此处略。</p>
+<h4><span id="1-构造函数">1. 构造函数：</span></h4>
+<p>建立一个类层次后，通常创建某个派生类的对象，该对象也包括使用基类的数据和函数。</p>
+<p>c++提供一种机制，在创建派生类对象时用指定参数调用基类的构造函数来初始化派生类继承基类的数据。</p>
+<p>此时，派生类的构造函数声明为：</p>
+<p><strong><em>派生类构造函数(变元表)：基类(变元表),对象成员1(变元表),
+……. , 对象成员n(变元表) { 函数体}</em></strong></p>
+<p>派生类的构造函数必须调用基类的构造函数初始化基类的那一部分成员，如果基类没有默认的构造函数，则必须在派生类构造函数的初始化列表阶段显式调用。</p>
+<p>构造函数的执行顺序为基类-&gt;派生类。</p>
+<h4><span id="2-析构函数">2. 析构函数：</span></h4>
+<p>因为在派生类的构造函数调用了基类的构造函数，因此其析构函数也需要对派生类对象和基类对象都进行清理。该任务的完成由各自的析构函数完成。</p>
+<p>析构函数的执行顺序为派生类-&gt;基类。</p>
+<p>注意：不要在派生类中主动调用基类的析构函数，因为派生类的析构函数在被调用完成后会自动调用基类的析构函数清理基类成员。以此来保证派生类对象先清理派生类成员再清理基类成员。</p>
+<h4><span id="3-拷贝构造函数">3. 拷贝构造函数：</span></h4>
+<p>派生类的拷贝构造函数必须调用基类的拷贝构造函数完成对基类的拷贝初始化。</p>
+<p>基类的拷贝构造函数会通过“切片”（见后面的内容）拿到基类需要的一部分值进行初始化。</p>
+<h4><span id="4-赋值操作符重载">4. 赋值操作符重载：</span></h4>
+<p>派生类的operator=必须要显式调用基类的operator=完成基类的复制。</p>
+<p>因为基类和派生类的运算符，编译器默认给的是同一个名字，构成了隐藏，每次调用=这个赋值运算符都会一直调用子类，造成无限循环，所以赋值运算符要直接修饰限定的基类。</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Father</span><br>&#123;<br><span class="hljs-keyword">protected</span>:<br>	string name;<br>	<span class="hljs-type">int</span> age;<br>	<span class="hljs-type">double</span> weight;<br>	<span class="hljs-type">double</span> height;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">Father</span>(string s=<span class="hljs-string">&quot;&quot;</span>, <span class="hljs-type">int</span> i=<span class="hljs-number">0</span>, <span class="hljs-type">double</span> w=<span class="hljs-number">0</span>, <span class="hljs-type">double</span> h=<span class="hljs-number">0</span>) :<span class="hljs-built_in">name</span>(s), <span class="hljs-built_in">age</span>(i), <span class="hljs-built_in">weight</span>(w), <span class="hljs-built_in">height</span>(h)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用基类的构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-built_in">Father</span>(<span class="hljs-type">const</span> Father&amp; f)<br>	&#123;<br>		name = f.name;<br>		age = f.age;<br>		weight = f.weight;<br>		height = f.height;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用基类的拷贝构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	Father&amp; <span class="hljs-keyword">operator</span>= (<span class="hljs-type">const</span> Father&amp; f)<br>	&#123;<br>		name = f.name;<br>		age = f.age;<br>		weight = f.weight;<br>		height = f.height;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用基类的赋值运算符&quot;</span> &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;<br>	&#125;<br>	~<span class="hljs-built_in">Father</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用基类的析构函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Son</span>:<span class="hljs-keyword">public</span> Father<br>&#123;<br><span class="hljs-keyword">protected</span>:<br>	<span class="hljs-type">int</span> sex;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">Son</span>(string s=<span class="hljs-string">&quot;&quot;</span>, <span class="hljs-type">int</span> i1=<span class="hljs-number">0</span>, <span class="hljs-type">double</span> w=<span class="hljs-number">0</span>, <span class="hljs-type">double</span> h=<span class="hljs-number">0</span>, <span class="hljs-type">int</span> i2=<span class="hljs-number">0</span>):<span class="hljs-built_in">Father</span>(s,i1,w,h),<span class="hljs-built_in">sex</span>(i2)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用派生类的构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-built_in">Son</span>(<span class="hljs-type">const</span> Son&amp; s):<span class="hljs-built_in">Father</span>(s)<br>	&#123;<br>		sex = s.sex;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用派生类的拷贝构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	Son&amp; <span class="hljs-keyword">operator</span>= (<span class="hljs-type">const</span> Son&amp; s)<br>	&#123;<br>		Father::<span class="hljs-keyword">operator</span>=(s);<br>		sex = s.sex;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用派生类的赋值运算符&quot;</span> &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;<br>	&#125;<br>	~<span class="hljs-built_in">Son</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用派生类的析构函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-function">Son <span class="hljs-title">me</span><span class="hljs-params">(<span class="hljs-string">&quot;S&quot;</span>, <span class="hljs-number">20</span>, <span class="hljs-number">188</span>, <span class="hljs-number">190</span>, <span class="hljs-number">0</span>)</span></span>;<br>	cout &lt;&lt; endl;<br>	<span class="hljs-function">Son <span class="hljs-title">you</span><span class="hljs-params">(<span class="hljs-string">&quot;SS&quot;</span>, <span class="hljs-number">30</span>, <span class="hljs-number">199</span>, <span class="hljs-number">200</span>, <span class="hljs-number">1</span>)</span></span>;<br>	cout &lt;&lt; endl;<br>	Son he;<br>	cout &lt;&lt; endl;<br>	he = me;<br>	cout &lt;&lt; endl;<br>	<span class="hljs-function">Son <span class="hljs-title">she</span><span class="hljs-params">(you)</span></span>;<br>	cout &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果</span><br><span class="hljs-comment">//调用基类的构造函数</span><br><span class="hljs-comment">//调用派生类的构造函数</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//调用基类的构造函数</span><br><span class="hljs-comment">//调用派生类的构造函数</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//调用基类的构造函数</span><br><span class="hljs-comment">//调用派生类的构造函数</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//调用基类的赋值运算符</span><br><span class="hljs-comment">//调用派生类的赋值运算符</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//调用基类的拷贝构造函数</span><br><span class="hljs-comment">//调用派生类的拷贝构造函数</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//调用派生类的析构函数</span><br><span class="hljs-comment">//调用基类的析构函数</span><br><span class="hljs-comment">//调用派生类的析构函数</span><br><span class="hljs-comment">//调用基类的析构函数</span><br><span class="hljs-comment">//调用派生类的析构函数</span><br><span class="hljs-comment">//调用基类的析构函数</span><br><span class="hljs-comment">//调用派生类的析构函数</span><br><span class="hljs-comment">//调用基类的析构函数</span><br></code></pre></td></tr></table></figure>
+<h3><span id="二基类和派生类的赋值转换">（二）基类和派生类的赋值转换：</span></h3>
+<p>派生类对象可以赋值给：</p>
+<ul>
+<li><p>基类的对象：</p>
+<p>因为派生类中包括基类的所有数据成员，赋值时将这部分赋值给基类即可完成赋值转换。</p></li>
+<li><p>基类的指针：</p>
+<p>基类指针指向派生类的首元素地址，不会发生越界，而且只能在基类的相对应的数据成员范围上操作，不能越界操作派生类数据成员。</p></li>
+<li><p>基类的引用：</p>
+<p>基类引用只可以操作派生类中对应的基类的数据成员，同样不能越界操作。</p></li>
+</ul>
+<p>这个过程也被称为切片/切割，意即把派生类中基类的部分切出赋值过去。</p>
+<p>基类对象一般情况下不能赋值给派生类对象。但可以把基类的指针强制类型转换赋值给派生类的指针，此指针还要求指向的是派生类对象，否则可能会越界访问。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> a;<br><span class="hljs-keyword">protected</span>:<br>	<span class="hljs-type">double</span> aa;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">A</span>(<span class="hljs-type">int</span> i,<span class="hljs-type">double</span> d):<span class="hljs-built_in">a</span>(i),<span class="hljs-built_in">aa</span>(d)&#123;&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">printA</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;a:&quot;</span> &lt;&lt; a &lt;&lt; endl;<br>		cout &lt;&lt; <span class="hljs-string">&quot;aa:&quot;</span> &lt;&lt; aa &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">changeaa</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		aa++;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">B</span>:<span class="hljs-keyword">public</span> A<br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> b;<br><span class="hljs-keyword">protected</span>:<br>	<span class="hljs-type">double</span> bb;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">B</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">double</span> d1, <span class="hljs-type">double</span> d2) :<span class="hljs-built_in">b</span>(i1), <span class="hljs-built_in">bb</span>(d1), <span class="hljs-built_in">A</span>(i2, d2) &#123;&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">printB</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		A::<span class="hljs-built_in">printA</span>();<br>		cout &lt;&lt; <span class="hljs-string">&quot;b:&quot;</span> &lt;&lt; b &lt;&lt; endl;<br>		cout &lt;&lt; <span class="hljs-string">&quot;bb:&quot;</span> &lt;&lt; bb &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">changebb</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		aa--;<br>		bb++;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-function">B <span class="hljs-title">b1</span><span class="hljs-params">(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1.5</span>, <span class="hljs-number">2.5</span>)</span></span>;<br>	<span class="hljs-function">B <span class="hljs-title">b2</span><span class="hljs-params">(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1.5</span>, <span class="hljs-number">2.5</span>)</span></span>;<br>	A a1 = b1;<br>	A* pa1 = &amp;b1;<br>	A&amp; a2 = b2;<br>	<br>	a<span class="hljs-number">1.</span><span class="hljs-built_in">printA</span>();<br>	pa1-&gt;<span class="hljs-built_in">printA</span>();<br>	a<span class="hljs-number">2.</span><span class="hljs-built_in">printA</span>();<br>	cout &lt;&lt; endl;<br>	b<span class="hljs-number">1.</span><span class="hljs-built_in">changeaa</span>();<br>	a<span class="hljs-number">1.</span><span class="hljs-built_in">printA</span>();<br>	pa1-&gt;<span class="hljs-built_in">printA</span>();<br>	cout &lt;&lt; endl;<br>	b<span class="hljs-number">2.</span><span class="hljs-built_in">changebb</span>();<br>	a<span class="hljs-number">2.</span><span class="hljs-built_in">printA</span>();<br>	cout &lt;&lt; endl;<br>	B *b3 = (B*)(pa1);<br>	b<span class="hljs-number">1.</span><span class="hljs-built_in">printB</span>();<br>	b3-&gt;<span class="hljs-built_in">printB</span>();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果：</span><br><span class="hljs-comment">//a:10</span><br><span class="hljs-comment">//aa : 2.5</span><br><span class="hljs-comment">//a : 10</span><br><span class="hljs-comment">//aa : 2.5</span><br><span class="hljs-comment">//a : 10</span><br><span class="hljs-comment">//aa : 2.5</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//a : 10</span><br><span class="hljs-comment">//aa : 2.5</span><br><span class="hljs-comment">//a : 10</span><br><span class="hljs-comment">//aa : 3.5</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//a : 10</span><br><span class="hljs-comment">//aa : 1.5</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//a : 10</span><br><span class="hljs-comment">//aa : 3.5</span><br><span class="hljs-comment">//b : 1</span><br><span class="hljs-comment">//bb : 1.5</span><br><span class="hljs-comment">//a : 10</span><br><span class="hljs-comment">//aa : 3.5</span><br><span class="hljs-comment">//b : 1</span><br><span class="hljs-comment">//bb : 1.5</span><br></code></pre></td></tr></table></figure>
+<h3><span id="三单继承和多继承">（三）单继承和多继承：</span></h3>
+<h4><span id="1-基本内容">1. 基本内容</span></h4>
+<p>单继承是指派生类只有一个直接基类，多继承是指一个派生类拥有两个或多个直接基类。</p>
+<p>继承的格式详见一。</p>
+<p>多继承完成了更多的代码复用，并使得复用的程度更深。</p>
+<p>多继承时，派生类构造函数调用多个基类的构造函数，析构函数同理，构造顺序按照声明继承的顺序进行，析构则相反顺序。</p>
+<p>若不同继承基类有同名成员，直接访问会造成命名冲突，此时需要在名字前加上类名和域解析符::，显式指定使用哪个类的成员，消除二义性。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span><br>&#123;<br><span class="hljs-keyword">protected</span>:<br>	<span class="hljs-type">int</span> x;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">A</span>(<span class="hljs-type">int</span> i):<span class="hljs-built_in">x</span>(i)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用A构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	~<span class="hljs-built_in">A</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用A析构函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">B</span><br>&#123;<br><span class="hljs-keyword">protected</span>:<br>	<span class="hljs-type">int</span> x;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">B</span>(<span class="hljs-type">int</span> i) :<span class="hljs-built_in">x</span>(i)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用B构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	~<span class="hljs-built_in">B</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用B析构函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">C</span>:<span class="hljs-keyword">public</span> A, <span class="hljs-keyword">public</span> B<br>&#123;<br><span class="hljs-keyword">protected</span>:<br>	<span class="hljs-type">int</span> x;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">C</span>(<span class="hljs-type">int</span> i1,<span class="hljs-type">int</span> i2,<span class="hljs-type">int</span> i3) :<span class="hljs-built_in">B</span>(i1),<span class="hljs-built_in">A</span>(i2),<span class="hljs-built_in">x</span>(i3)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用C构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">printx</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;A.x:&quot;</span> &lt;&lt; A::x &lt;&lt; endl;<br>		cout &lt;&lt; <span class="hljs-string">&quot;B.x:&quot;</span> &lt;&lt; B::x &lt;&lt; endl;<br>		cout &lt;&lt; <span class="hljs-string">&quot;x:&quot;</span> &lt;&lt; x &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>	~<span class="hljs-built_in">C</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用C析构函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-function">C <span class="hljs-title">c</span><span class="hljs-params">(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)</span></span>;<br>	c.<span class="hljs-built_in">printx</span>();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果：</span><br><span class="hljs-comment">//调用A构造函数</span><br><span class="hljs-comment">//调用B构造函数</span><br><span class="hljs-comment">//调用C构造函数</span><br><span class="hljs-comment">// A.x:2</span><br><span class="hljs-comment">//B.x:1</span><br><span class="hljs-comment">//x : 3</span><br><span class="hljs-comment">//调用C析构函数</span><br><span class="hljs-comment">//调用B析构函数</span><br><span class="hljs-comment">//调用A析构函数</span><br></code></pre></td></tr></table></figure>
+<h4><span id="2-菱形继承">2. 菱形继承</span></h4>
+<p>多继承内存在着许多问题，例如二义性和代码冗余，下面通过菱形继承说明。</p>
+<p>菱形继承是多继承的一种特殊情况。</p>
+<figure>
+<img src="https://s1.ax1x.com/2023/04/04/pp4VDQs.png" srcset="/img/loading.gif" lazyload alt="20_C++菱形继承">
+<figcaption aria-hidden="true">20_C++菱形继承</figcaption>
+</figure>
+<p>如图，类B和类C分别继承类A，类D对类BC进行多继承，此时，创建一个D对象，会导致基类A构造两次并析构两次——派生类中产生了重复的基类数据，并且重复的构造和析构同一个基类对象，造成了代码冗余，浪费了很大的空间。</p>
+<p>同时，因为BC都继承了A的成员，D在继承BC时会存在同名的数据成员，无法直接通过变量名读取相应的值，产生了二义性，此时需要通过域解析符::进行区分，非常麻烦。</p>
+<p>一般情况下，不建议设计多继承和菱形继承，因为情况比较复杂。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-meta">#include&lt;iostream&gt;</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-title">std</span>;<br><span class="hljs-keyword">class</span> <span class="hljs-title">A</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-built_in">int</span> a;<br><span class="hljs-keyword">protected</span>:<br>	<span class="hljs-built_in">int</span> number;<br><span class="hljs-keyword">public</span>:<br>	A(<span class="hljs-built_in">int</span> i1,<span class="hljs-built_in">int</span> i2):a(i1),number(i2)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用A构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	~A()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用A析构函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title">B</span>:<span class="hljs-title">public</span> <span class="hljs-title">A</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-built_in">int</span> b;<br><span class="hljs-keyword">public</span>:<br>	B(<span class="hljs-built_in">int</span> i1,<span class="hljs-built_in">int</span> i2,<span class="hljs-built_in">int</span> i3) :A(i1,i2),b(i3)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用B构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	~B()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用B析构函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title">C</span>:<span class="hljs-title">public</span> <span class="hljs-title">A</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-built_in">int</span> c;<br><span class="hljs-keyword">public</span>:<br>	C(<span class="hljs-built_in">int</span> i1, <span class="hljs-built_in">int</span> i2, <span class="hljs-built_in">int</span> i3) :A(i1, i2), c(i3)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用C构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	~C()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用C析构函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title">D</span>:<span class="hljs-title">public</span> <span class="hljs-title">B</span>,<span class="hljs-title">public</span> <span class="hljs-title">C</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-built_in">int</span> d;<br><span class="hljs-keyword">public</span>:<br>	D(<span class="hljs-built_in">int</span> i1, <span class="hljs-built_in">int</span> i2, <span class="hljs-built_in">int</span> i3,<span class="hljs-built_in">int</span> i4,<span class="hljs-built_in">int</span> i5) :B(i1,i2,i3),C(i1,i2,i4),d(i5)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用C构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printD</span>()</span> &#123; <br>	cout &lt;&lt; <span class="hljs-string">&quot;sizeof(A):&quot;</span> &lt;&lt; <span class="hljs-keyword">sizeof</span>(A) &lt;&lt; endl;<br>	cout &lt;&lt; <span class="hljs-string">&quot;sizeof(B):&quot;</span> &lt;&lt; <span class="hljs-keyword">sizeof</span>(B) &lt;&lt; endl;<br>	cout &lt;&lt; <span class="hljs-string">&quot;sizeof(C):&quot;</span> &lt;&lt; <span class="hljs-keyword">sizeof</span>(C) &lt;&lt; endl;<br>	cout &lt;&lt; <span class="hljs-string">&quot;sizeof(D):&quot;</span> &lt;&lt; <span class="hljs-keyword">sizeof</span>(D) &lt;&lt; endl; <br>	cout &lt;&lt; <span class="hljs-string">&quot;d:&quot;</span> &lt;&lt; d &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-function"><span class="hljs-built_in">int</span> <span class="hljs-title">main</span>()</span><br>&#123;<br>	<span class="hljs-function">D <span class="hljs-title">d</span>(<span class="hljs-params"><span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span></span>)</span>;<br>	d.printD();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果：</span><br><span class="hljs-comment">//调用A构造函数</span><br><span class="hljs-comment">//调用B构造函数</span><br><span class="hljs-comment">//调用A构造函数</span><br><span class="hljs-comment">//调用C构造函数</span><br><span class="hljs-comment">//调用C构造函数</span><br><span class="hljs-comment">//sizeof(A) : 8</span><br><span class="hljs-comment">//sizeof(B) : 12</span><br><span class="hljs-comment">//sizeof(C) : 12</span><br><span class="hljs-comment">//sizeof(D) : 28</span><br><span class="hljs-comment">//d : 5</span><br><span class="hljs-comment">//调用C析构函数</span><br><span class="hljs-comment">//调用A析构函数</span><br><span class="hljs-comment">//调用B析构函数</span><br><span class="hljs-comment">//调用A析构函数</span><br></code></pre></td></tr></table></figure>
+<h4><span id="3-菱形继承的解决虚继承">3. 菱形继承的解决：虚继承</span></h4>
+<p>为了避免以上的情况出现，我们需要通过虚继承的方式解决问题——需要虚基类。</p>
+<p>虚基类不是在声明基类时声明的，而是声明派生类时指定继承方式声明的。</p>
+<p>虚继承是指在继承的基类前添加关键字virtual，格式为：</p>
+<p><strong><em>class 派生类名: virtual 继承方式 基类名</em></strong></p>
+<p>此时的基类被称为虚基类，也就是被虚继承的基类（不是抽象类！！）</p>
+<p>在菱形继承中，当BC对A都进行虚继承后，D对BC进行多继承时，重复的变量将只会保留一份。这是因为，D不仅对直接基类进行初始化，也会对虚基类初始化，且只有一次——c++编译器只调用最后的派生类对基类的构造函数调用，忽略其他派生类对虚基类的构造函数调用，避免了对基类数据成员的重复初始化。</p>
+<p>虚继承后，访问同名变量不需要使用域成员运算符，因为只有一个基类对象。</p>
+<p>此处暂不介绍虚继承的内存模型，以后有需要单开一篇进行介绍。</p>
+<p>以下是虚继承之后的情况：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> a;<br><span class="hljs-keyword">protected</span>:<br>	<span class="hljs-type">int</span> number;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">A</span>(<span class="hljs-type">int</span> i1,<span class="hljs-type">int</span> i2):<span class="hljs-built_in">a</span>(i1),<span class="hljs-built_in">number</span>(i2)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用A构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	~<span class="hljs-built_in">A</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用A析构函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">B</span>:<span class="hljs-keyword">virtual</span> <span class="hljs-keyword">public</span> A<br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> b;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">B</span>(<span class="hljs-type">int</span> i1,<span class="hljs-type">int</span> i2,<span class="hljs-type">int</span> i3) :<span class="hljs-built_in">A</span>(i1,i2),<span class="hljs-built_in">b</span>(i3)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用B构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	~<span class="hljs-built_in">B</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用B析构函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">C</span>:<span class="hljs-keyword">virtual</span> <span class="hljs-keyword">public</span> A<br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> c;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">C</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3) :<span class="hljs-built_in">A</span>(i1, i2), <span class="hljs-built_in">c</span>(i3)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用C构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	~<span class="hljs-built_in">C</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用C析构函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">D</span>:<span class="hljs-keyword">public</span> B,<span class="hljs-keyword">public</span> C<br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> d;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">D</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3,<span class="hljs-type">int</span> i4,<span class="hljs-type">int</span> i5) :<span class="hljs-built_in">A</span>(i1,i2),<span class="hljs-built_in">B</span>(i1,i2,i3),<span class="hljs-built_in">C</span>(i1,i2,i4),<span class="hljs-built_in">d</span>(i5)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;调用C构造函数&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">printD</span><span class="hljs-params">()</span> </span>&#123; <br>	cout &lt;&lt; <span class="hljs-string">&quot;sizeof(A):&quot;</span> &lt;&lt; <span class="hljs-built_in">sizeof</span>(A) &lt;&lt; endl;<br>	cout &lt;&lt; <span class="hljs-string">&quot;sizeof(B):&quot;</span> &lt;&lt; <span class="hljs-built_in">sizeof</span>(B) &lt;&lt; endl;<br>	cout &lt;&lt; <span class="hljs-string">&quot;sizeof(C):&quot;</span> &lt;&lt; <span class="hljs-built_in">sizeof</span>(C) &lt;&lt; endl;<br>	cout &lt;&lt; <span class="hljs-string">&quot;sizeof(D):&quot;</span> &lt;&lt; <span class="hljs-built_in">sizeof</span>(D) &lt;&lt; endl; <br>	cout &lt;&lt; <span class="hljs-string">&quot;anumberaddress:&quot;</span> &lt;&lt; &amp;(A::number) &lt;&lt; endl;<br>	cout &lt;&lt; <span class="hljs-string">&quot;bnumberaddress:&quot;</span> &lt;&lt; &amp;(B::number) &lt;&lt; endl;<br>	cout &lt;&lt; <span class="hljs-string">&quot;cnumberaddress:&quot;</span> &lt;&lt; &amp;(C::number) &lt;&lt; endl;<br>	cout &lt;&lt; <span class="hljs-string">&quot;dnumberaddress:&quot;</span> &lt;&lt; &amp;number &lt;&lt; endl;<br>	cout &lt;&lt; <span class="hljs-string">&quot;d:&quot;</span> &lt;&lt; d &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-function">D <span class="hljs-title">d</span><span class="hljs-params">(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)</span></span>;<br>	d.<span class="hljs-built_in">printD</span>();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果：</span><br><span class="hljs-comment">//调用A构造函数</span><br><span class="hljs-comment">//调用B构造函数</span><br><span class="hljs-comment">//调用C构造函数</span><br><span class="hljs-comment">//调用C构造函数</span><br><span class="hljs-comment">//sizeof(A) : 8</span><br><span class="hljs-comment">//sizeof(B) : 24</span><br><span class="hljs-comment">//sizeof(C) : 24</span><br><span class="hljs-comment">//sizeof(D) : 48</span><br><span class="hljs-comment">//anumberaddress : 000000C76B8FF5C4</span><br><span class="hljs-comment">//bnumberaddress : 000000C76B8FF5C4</span><br><span class="hljs-comment">//cnumberaddress : 000000C76B8FF5C4</span><br><span class="hljs-comment">//dnumberaddress : 000000C76B8FF5C4</span><br><span class="hljs-comment">//d : 5</span><br><span class="hljs-comment">//调用C析构函数</span><br><span class="hljs-comment">//调用B析构函数</span><br><span class="hljs-comment">//调用A析构函数</span><br></code></pre></td></tr></table></figure>
+
+
+  
+
+</article>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/js/qipao.js"></script>
+<script src="/js/star.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

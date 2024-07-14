@@ -1,0 +1,885 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
+  <link rel="icon" href="/img/256.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="07xiaohei">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="（三）类的访问限制 1. 原因： Python中，当正常使用类实例时，外部代码可以通过直接调用实例变量的方法操作数据，从而隐藏内部的复杂逻辑——但有些时候，不希望外部代码自由修改某些属性时，需要为其设置访问权限，阻止外部代码的访问。 2. 概念： Python中，属性权限的控制是通过属性名来实现的。 当属性名是由双下划线（__）开头但不是以双下划线（__）结尾，该属性就无法被外部访问。（">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python进阶——类(二)访问限制、继承">
+<meta property="og:url" content="http://example.com/2023/07/13/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%BA%8C)%E8%AE%BF%E9%97%AE%E9%99%90%E5%88%B6%E3%80%81%E7%BB%A7%E6%89%BF/index.html">
+<meta property="og:site_name" content="ZZHの个人博客">
+<meta property="og:description" content="（三）类的访问限制 1. 原因： Python中，当正常使用类实例时，外部代码可以通过直接调用实例变量的方法操作数据，从而隐藏内部的复杂逻辑——但有些时候，不希望外部代码自由修改某些属性时，需要为其设置访问权限，阻止外部代码的访问。 2. 概念： Python中，属性权限的控制是通过属性名来实现的。 当属性名是由双下划线（__）开头但不是以双下划线（__）结尾，该属性就无法被外部访问。（">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-13T11:54:58.000Z">
+<meta property="article:modified_time" content="2023-07-23T02:09:17.229Z">
+<meta property="article:author" content="07xiaohei">
+<meta property="article:tag" content="知识点">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>python进阶——类(二)访问限制、继承 - ZZHの个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
+<link rel="stylesheet" href="/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>07xiaoheiの个人博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/HTML/index.html">
+                <i class="iconfont icon-bilibili-fill"></i>
+                <span>happy birthday</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-icon"></i>
+                <span>资源</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/download-office">
+                    
+                    <span>下载官网</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
+                    
+                    <span>baiduyun</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/visit-use">
+                    
+                    <span>有用的网站</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于我</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="python进阶——类(二)访问限制、继承"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-07-13 19:54" pubdate>
+          2023年7月13日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          8.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          74 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">python进阶——类(二)访问限制、继承</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3><span id="三类的访问限制">（三）类的访问限制</span></h3>
+<h4><span id="1-原因">1. 原因：</span></h4>
+<p>Python中，当正常使用类实例时，外部代码可以通过直接调用实例变量的方法操作数据，从而隐藏内部的复杂逻辑——但有些时候，不希望外部代码自由修改某些属性时，需要为其设置访问权限，阻止外部代码的访问。</p>
+<h4><span id="2-概念">2. 概念：</span></h4>
+<p>Python中，属性权限的控制是通过属性名来实现的。</p>
+<p>当属性名是由双下划线（__）开头但不是以双下划线（__）结尾，该属性就无法被外部访问。（如果是也以双下划线结尾的话就是特殊属性了，一般是内置类属性，不建议自己定义时使用）</p>
+<p>如果以单下划线（_）开头，实际上是不能阻止外部代码访问的，但是一般情况下约定外部代码不应该访问这样的变量。（继承中会详细讲解）</p>
+<ul>
+<li>如果已经学习c++，可以理解为，一般的属性是public的成员，双下划线开头的是private成员，单下划线开头的是protected成员，不过可以被外部访问，但通过约定变成了protected的形式。</li>
+</ul>
+<p>如果想要使用或者修改这些属性，请在类中定义相关的方法，用方法包装好，这样有利于通过方法检查属性的类型和值是否合理，避免传入无效参数。</p>
+<h4><span id="3-深入理解">3. 深入理解：</span></h4>
+<p>实际上，以双下划线开头的属性不是一定就不能从外部访问——本质上，Python解释器是把双下划线开头的属性从__属性名解释成为了_类名__属性名的格式（这不一定正确，因为不同版本的解释器可能解释的结果是不同的），如果直接指定这种格式，也可以绕过限制实现访问。</p>
+<p>但按一般要求，强烈不建议这样做，这样做破坏了访问限制本身的约束。</p>
+<p>如果直接在实例中采用__属性名格式赋值的话，实际上，是创建了一个新的变量和对象，和类内部的双下划线开头的属性是不同的。</p>
+<p>根本上，<strong>从语法层面，Python的私有成员和访问限制是不彻底的，Python没有提供完善的机制阻止访问私有成员和公共成员</strong>。</p>
+<p>另外，方法也可以通过加双下划线的方式定义为私有方法，此时方法只能在类内部使用，外部调用同样要用_类名__属性名的形式。</p>
+<h4><span id="4-例子">4. 例子：</span></h4>
+<p>首先定义一个私有成员，实现获得修改方法：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-keyword">class</span> <span class="hljs-symbol">test:</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params"><span class="hljs-variable language_">self</span></span>):<br>        <span class="hljs-variable language_">self</span>.__inter_test=<span class="hljs-number">10</span>      <span class="hljs-comment">#设置私有成员初始值为10</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_inter_test</span>(<span class="hljs-params"><span class="hljs-variable language_">self</span></span>):     <span class="hljs-comment">#负责返回私有成员值</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.__inter_test<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">set_inter_test</span>(<span class="hljs-params"><span class="hljs-variable language_">self</span>,val</span>): <span class="hljs-comment">#负责修改私有成员值</span><br>        <span class="hljs-variable language_">self</span>.__inter_test=val<br>        <span class="hljs-keyword">return</span> <span class="hljs-title class_">True</span><br>test_exmp= test()                 <span class="hljs-comment">#实例化，此时是不能直接访问私有成员的</span><br>print(test_exmp.get_inter_test()) <span class="hljs-comment">#通过方法获得私有成员，应为10</span><br>test_exmp.set_inter_test(<span class="hljs-number">20</span>)      <span class="hljs-comment">#通过方法修改私有成员为20</span><br>print(test_exmp.get_inter_test()) <span class="hljs-comment">#通过方法获得私有成员，应为20</span><br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 10</span><br><span class="hljs-comment"># 20</span><br></code></pre></td></tr></table></figure>
+<p>尝试直接用__属性名修改私有成员：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">test_exmp= <span class="hljs-built_in">test</span>()<br>test_exmp.__inter_test=30         <span class="hljs-comment">#实际上是创建了一个新的属性</span><br><span class="hljs-built_in">print</span>(test_exmp.get_inter_test()) <span class="hljs-comment">#输出的是私有成员</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">id</span>(test_exmp.get_inter_test())) <span class="hljs-comment">#对应10</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">id</span>(test_exmp.__inter_test))     <span class="hljs-comment">#对应30</span><br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 10</span><br><span class="hljs-comment"># 140734138938440</span><br><span class="hljs-comment"># 140734138939080</span><br></code></pre></td></tr></table></figure>
+<p>用上面的Python的解释器内部格式输出和修改私有成员：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs routeros">test_exmp= test()<br><span class="hljs-built_in">print</span>(test_exmp.get_inter_test())<br>test_exmp.<span class="hljs-attribute">_test__inter_test</span>=20<br><span class="hljs-built_in">print</span>(test_exmp.get_inter_test())<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 10</span><br><span class="hljs-comment"># 20</span><br></code></pre></td></tr></table></figure>
+<p>可以看到，私有成员被外部代码修改了，说明了访问权限不是绝对的。</p>
+<h3><span id="四继承">（四）继承</span></h3>
+<h4><span id="1-概念">1. 概念：</span></h4>
+<p>类的最重要一点就是需要支持继承。</p>
+<p>继承是类和类之间的一种关系，继承是代码重用的最重要的方式之一。</p>
+<p>在实现某个新类，可以通过继承完成——继承中有两类对象，基类和派生类，派生类可以从基类中继承其属性和方法，所以，创建的新类也就是派生类，方法、属性的原所有者也就是基类。</p>
+<p>基类和派生类也可以称为父类和子类。</p>
+<p>派生类除了继承的属性和方法外，还可以覆盖、添加功能——前者是公有的属性和功能，后者是自己特有的属性和功能。</p>
+<p>Python支持多级继承，派生类仍然可以作为另一个类的基类使用；也支持多继承，即一个派生类由多个基类派生。</p>
+<p>对于派生类的一个实例，其也是基类的一个实例；而对于基类的一个实例，其不是派生类的实例——所以，我们说派生类和基类是"is"的关系，可以用isintance判断。</p>
+<p>这里演示一下简单的例子：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">father:</span><br><span class="hljs-symbol">    <span class="hljs-symbol">pass</span></span><br><span class="hljs-symbol">class</span> <span class="hljs-symbol">son</span>(<span class="hljs-symbol">father</span>):<br>    <span class="hljs-symbol">pass</span><br><span class="hljs-symbol">f</span>=<span class="hljs-symbol">father</span>()<br><span class="hljs-symbol">s</span>=<span class="hljs-symbol">son</span>()<br><span class="hljs-symbol">print</span>(<span class="hljs-symbol">isinstance</span>(<span class="hljs-symbol">f,<span class="hljs-symbol">father</span></span>))<br><span class="hljs-symbol">print</span>(<span class="hljs-symbol">isinstance</span>(<span class="hljs-symbol">f,<span class="hljs-symbol">son</span></span>))<br><span class="hljs-symbol">print</span>(<span class="hljs-symbol">isinstance</span>(<span class="hljs-symbol">s,<span class="hljs-symbol">father</span></span>))<br><span class="hljs-symbol">print</span>(<span class="hljs-symbol">isinstance</span>(<span class="hljs-symbol">s,<span class="hljs-symbol">son</span></span>))<br># 运行结果：<br># <span class="hljs-symbol">True</span><br># <span class="hljs-symbol">False</span><br># <span class="hljs-symbol">True</span><br># <span class="hljs-symbol">True</span><br></code></pre></td></tr></table></figure>
+<h4><span id="2-语法格式">2. 语法格式：</span></h4>
+<p><strong><em>class DerivedClassName(BaseClassName1, BaseClassName1,
+...,BaseClassNameN):</em></strong>
+<strong><em>&lt;statement-1&gt;</em></strong> <strong>. . .</strong>
+<strong><em>&lt;statement-N&gt;</em></strong></p>
+<p>DerivedClassName是派生类类名，BaseClassNameN对应了每一个被继承的基类类名，内部类语句不变。</p>
+<p>BaseClassName一般情况下必须与派生类定义在一个命名空间内。</p>
+<p>基类类名可以用某些表达式代替，比如<strong><em>modname.BaseClassName</em></strong>，使用某个模块中的类作为基类，这时允许BaseClassNameN与派生类不在一个作用域内。</p>
+<p>例如可以定义如下派生类：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">class</span> <span class="hljs-title class_">father1</span>:<br>    <span class="hljs-type">pass</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">father2</span>:<br>    <span class="hljs-type">pass</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">father3</span>:<br>    <span class="hljs-type">pass</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">son</span>(father1,father2,father3):<br>    pass<br>s =son()<br>print(s.__class__.__bases__)<br># 运行结果：<br># (&lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.father1&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.father2&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.father3&#x27;</span>&gt;)<br></code></pre></td></tr></table></figure>
+<h4><span id="3-分类">3. 分类：</span></h4>
+<ul>
+<li><p>单继承：</p>
+<p>最普通的继承，单独继承一个父类，获得其全部的属性和方法。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">father</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;init father work&quot;</span>)<br>        <span class="hljs-variable language_">self</span>.init_f_val1=<span class="hljs-number">1</span><br>        <span class="hljs-variable language_">self</span>.init_f_val2=<span class="hljs-string">&quot;classfather&quot;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">print_father</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;print_father:&quot;</span>)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;init_f_val1:&quot;</span>,<span class="hljs-variable language_">self</span>.init_f_val1)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;init_f_val2:&quot;</span>,<span class="hljs-variable language_">self</span>.init_f_val2)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">son</span>(<span class="hljs-title class_ inherited__">father</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">super</span>().__init__()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;init son work&quot;</span>)<br>        <span class="hljs-variable language_">self</span>.init_s_val1=<span class="hljs-number">2</span><br>        <span class="hljs-variable language_">self</span>.init_s_val2=<span class="hljs-string">&quot;classson&quot;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">print_son</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-variable language_">self</span>.print_father()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;print son:&quot;</span>)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;init_s_val1:&quot;</span>, <span class="hljs-variable language_">self</span>.init_s_val1)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;init_s_val2:&quot;</span>, <span class="hljs-variable language_">self</span>.init_s_val2)<br>s =son()<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># s.print_son()</span><br><span class="hljs-comment"># init father work</span><br><span class="hljs-comment"># init son work</span><br><span class="hljs-comment"># print_father:</span><br><span class="hljs-comment"># init_f_val1: 1</span><br><span class="hljs-comment"># init_f_val2: classfather</span><br><span class="hljs-comment"># print son:</span><br><span class="hljs-comment"># init_s_val1: 2</span><br><span class="hljs-comment"># init_s_val2: classson</span><br></code></pre></td></tr></table></figure>
+<p>上面使用的super稍微解释。</p></li>
+<li><p>多重继承和多层继承：</p>
+<p>多重继承是对多个类的继承，也就是一个类同时拥有多个基类。</p>
+<p>多层继承是类的继承不只是两级的，派生类可以作为新的基类被继承，从而形成多个层次的继承，派生类本身的属性和方法以及通过继承得来的属性和方法都会继承给下一层派生类。</p>
+<p>多继承和多层继承可以统称为多继承。</p>
+<p>python支持的多继承是有限的，对于一个类继承多个父类时，优先继承第一个类的属性和方法——也就是按照优先顺位完成继承过程。</p>
+<p>不支持对已经有继承关系的多个类先继承其基类，再继承其派生类，这会导致继承顺序的混乱而报错。</p>
+<p>实际上，复杂的继承需要考虑选择同名方法的问题，python3.x版本使用的是<strong>MRO——方法搜索顺序</strong>，而python2.x版本使用的是深度优先继承方式。</p>
+<p>方法搜索顺序的具体原理较复杂，这里不详细讲述，但可以直接利用<strong>内置属性__mro__</strong>来查看类的继承顺序，</p>
+<p><strong>__mro__</strong>属性的查看需要通过类名来进行。</p>
+<p>代码如下：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"># <span class="hljs-function"><span class="hljs-keyword">fun</span>+类名每个类独有，fun1除了最终的派生类每个类都有，fun2ABC三个类有</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span>:<br>    <span class="hljs-type">def</span> <span class="hljs-title">funA</span>(self):<br>        print(<span class="hljs-string">&quot;funA&quot;</span>)<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        print(<span class="hljs-string">&quot;funa&quot;</span>)<br>    def fun2(self):<br>        print(<span class="hljs-string">&quot;funa&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">B</span>(A):<br>    def funB(self):<br>        print(<span class="hljs-string">&quot;funB&quot;</span>)<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        print(<span class="hljs-string">&quot;funb&quot;</span>)<br>    def fun2(self):<br>        print(<span class="hljs-string">&quot;funb&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">C</span>(A):<br>    def funC(self):<br>        print(<span class="hljs-string">&quot;funC&quot;</span>)<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        print(<span class="hljs-string">&quot;func&quot;</span>)<br>    def fun2(self):<br>        print(<span class="hljs-string">&quot;func&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">D</span>(B,C):<br>    def funD(self):<br>        print(<span class="hljs-string">&quot;funD&quot;</span>)<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        print(<span class="hljs-string">&quot;fund&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">E</span>(B,A):<br>    def funE(self):<br>        print(<span class="hljs-string">&quot;funE&quot;</span>)<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        print(<span class="hljs-string">&quot;fune&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">F</span>(D,E):<br>    def funF(self):<br>        print(<span class="hljs-string">&quot;funF&quot;</span>)<br>f=F()<br>print(F.__mro__)<br>f.funF()<br>f.funA()<br>f.funE()<br>f.<span class="hljs-keyword">fun</span>()<br>f.fun2()<br># 运行结果：<br># (&lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.F&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.D&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.E&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.B&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.C&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.A&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;object&#x27;</span>&gt;)<br># funF<br># funA<br># funE<br># fund<br># funb<br></code></pre></td></tr></table></figure>
+<p>可以看到，方法搜索搜索顺序为FDEBCA。</p>
+<p>对于funF，由于自己独有，直接选择自己的方法；对于funA，只有类A有，
+则选择A的方法；对于funE，同理要选择E的方法；而对于fun，由于除了最终的派生类每个类都有，按方法搜索顺序搜索到了D，使用D的方法；对于只有ABC有的fun2，由于搜索顺序中第一个是B，所以选择B的方法运行。</p>
+<p>另外，对于派生类没有__init__函数时，会从第一个查询到的有__init__函数的基类中继承，并发生默认调用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">father1</span>:<br>    i = <span class="hljs-number">1</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;father1 __init__&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">father2</span>:<br>    ii = <span class="hljs-number">2</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;father2 __init__&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">son</span>(father1,father2):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">printson</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;i:&quot;</span>,<span class="hljs-variable language_">self</span>.i)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;i:&quot;</span>,<span class="hljs-variable language_">self</span>.ii)<br>s = son()<br>s.printson()<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># father1 __init__</span><br><span class="hljs-comment"># i: 1</span><br><span class="hljs-comment"># i: 2</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4><span id="4-super函数">4. super函数：</span></h4>
+<h5><span id="1概念">（1）概念：</span></h5>
+<p>super()方法用于调用多继承中某基类的一个方法，super()方法的查找顺序遵循上面提到的方法搜索顺序，也就是按__mro__属性的顺序发生继承。</p>
+<p>和直接使用基类类名调用方法不同，super()方法调用方法能够保证每个基类最多只被调用一次，前者在多继承可能会发生一个基类的构造函数被调用多次的情况，这对__init__方法的执行效果很好。</p>
+<p>super()在多层继承的中间某个层次的类中使用，也会按最终派生类的__mro__属性的顺序进行继承，因此会发生一些看似"不合理"的现象。</p>
+<p>多个super()方法的反复调用会按照__mro__属性的顺序调用，直到遇到object类时停止。</p>
+<p>对于单继承，super()方法和单继承调用基类方法的效果是相同的。</p>
+<h5><span id="2语法">（2）语法：</span></h5>
+<p><strong><em>super(type[,
+object-or-type]).funcname()</em></strong>（python2.x唯一格式）和<strong><em>super().funcname()</em></strong>（python3.x独有格式）</p>
+<p>其中，type是类名，[]内是对象或者类名，一般指定self，funcname是被调用基类的方法名,_（）_内是形参列表。</p>
+<p>返回一个代理的super对象，对其的方法调用会导致方法搜索的发生，进而实际调用搜索到的第一个方法。</p>
+<h5><span id="3例子">（3）例子：</span></h5>
+<p>当对多层继承除了最开始的基类以外的所有派生类使用super().__init__方法时：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">class</span> <span class="hljs-title class_">father1</span>:<br>    <span class="hljs-type">f1</span> = 1<br>    def __init__(self):<br>        print(<span class="hljs-string">&quot;father1 __init__&quot;</span>)<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        print(<span class="hljs-string">&quot;father1 fun&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">father2</span>:<br>    <span class="hljs-type">f2</span> = 2<br>    def __init__(self):<br>        print(<span class="hljs-string">&quot;father2 __init__&quot;</span>)<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        print(<span class="hljs-string">&quot;father2 fun&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">son1</span>(father2):<br>    s1=<span class="hljs-number">3</span><br>    def __init__(self):<br>        print(<span class="hljs-string">&quot;son1 __init__&quot;</span>)<br>        <span class="hljs-keyword">super</span>().__init__()<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        print(<span class="hljs-string">&quot;son1 fun&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">son2</span>(father1,father2):<br>    s2=<span class="hljs-number">4</span><br>    def __init__(self):<br>        print(<span class="hljs-string">&quot;son2 __init__&quot;</span>)<br>        <span class="hljs-keyword">super</span>().__init__()<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        print(<span class="hljs-string">&quot;son2 fun&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">grandson</span>(son1,son2):<br>    gs=<span class="hljs-number">5</span><br>    def __init__(self):<br>        print(<span class="hljs-string">&quot;grandson __init__&quot;</span>)<br>        <span class="hljs-keyword">super</span>().__init__()<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        <span class="hljs-keyword">super</span>().<span class="hljs-keyword">fun</span>()<br>gson=grandson()<br>print(grandson.__mro__)<br>gson.<span class="hljs-keyword">fun</span>()<br>print()<br>s =son2()<br># 运行结果：<br># grandson __init__<br># son1 __init__<br># son2 __init__<br># father1 __init__<br># (&lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.grandson&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.son1&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.son2&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.father1&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.father2&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;object&#x27;</span>&gt;)<br># son1 <span class="hljs-function"><span class="hljs-keyword">fun</span></span><br><br># son2 __init__<br># father1 __init__<br></code></pre></td></tr></table></figure>
+<p>这里可以看到，两个对象创建时都没有执行father2的__init__方法，实际上很简单，因为从对象出发的__mro__属性决定了super()方法的搜索顺序，比如son1处执行了super().__init__，那么就会按__mro__属性内的顺序搜索下一个，也是就son2的__init__方法，son2进而搜索的是father1，而接下来没有了super()方法，所以停止搜索，执行完成全部遇到__init__方法。</p>
+<p>如果想要保证每个都被执行，只需要对father1和father2也使用super().__init__方法即可，这样就会继续搜索，保证了每个基类的__init__方法都被执行且只执行一次，此时的停止是因为遇到了object类。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">class</span> <span class="hljs-title class_">father1</span>:<br>    <span class="hljs-type">f1</span> = 1<br>    def __init__(self):<br>        print(<span class="hljs-string">&quot;father1 __init__&quot;</span>)<br>        <span class="hljs-keyword">super</span>().__init__()<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        print(<span class="hljs-string">&quot;father1 fun&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">father2</span>:<br>    <span class="hljs-type">f2</span> = 2<br>    def __init__(self):<br>        print(<span class="hljs-string">&quot;father2 __init__&quot;</span>)<br>        <span class="hljs-keyword">super</span>().__init__()<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        print(<span class="hljs-string">&quot;father2 fun&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">son1</span>(father2):<br>    s1=<span class="hljs-number">3</span><br>    def __init__(self):<br>        print(<span class="hljs-string">&quot;son1 __init__&quot;</span>)<br>        <span class="hljs-keyword">super</span>().__init__()<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        print(<span class="hljs-string">&quot;son1 fun&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">son2</span>(father1,father2):<br>    s2=<span class="hljs-number">4</span><br>    def __init__(self):<br>        print(<span class="hljs-string">&quot;son2 __init__&quot;</span>)<br>        <span class="hljs-keyword">super</span>().__init__()<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        print(<span class="hljs-string">&quot;son2 fun&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">grandson</span>(son1,son2):<br>    gs=<span class="hljs-number">5</span><br>    def __init__(self):<br>        print(<span class="hljs-string">&quot;grandson __init__&quot;</span>)<br>        <span class="hljs-keyword">super</span>().__init__()<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        <span class="hljs-keyword">super</span>().<span class="hljs-keyword">fun</span>()<br>gson=grandson()<br>print(grandson.__mro__)<br>gson.<span class="hljs-keyword">fun</span>()<br>print()<br>s =son2()<br># 运行结果：<br># grandson __init__<br># son1 __init__<br># son2 __init__<br># father1 __init__<br># father2 __init__<br># (&lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.grandson&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.son1&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.son2&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.father1&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.father2&#x27;</span>&gt;, &lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;object&#x27;</span>&gt;)<br># son1 <span class="hljs-function"><span class="hljs-keyword">fun</span></span><br># <br># son2 __init__<br># father1 __init__<br># father2 __init__<br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/python-study/" class="category-chain-item">python_study</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+      
+        <a href="/tags/python/">#python</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>python进阶——类(二)访问限制、继承</div>
+      <div>http://example.com/2023/07/13/python进阶——类(二)访问限制、继承/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>07xiaohei</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年7月13日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/07/13/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%B8%80)%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E3%80%81%E7%B1%BB%E5%92%8C%E5%AE%9E%E4%BE%8B/" title="python进阶——类(一)面向对象、类和实例">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">python进阶——类(一)面向对象、类和实例</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/07/13/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7(%E4%B8%80)%E5%88%87%E7%89%87/" title="python进阶——高级特性(一)切片">
+                        <span class="hidden-mobile">python进阶——高级特性(一)切片</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","appKey":"ooOKmecfVZV0i2v0cvsyZGdl","path":"window.location.pathname","placeholder":"“cancanneed comment”","avatar":"monsterid","meta":["nick","mail","link"],"requiredFields":[],"pageSize":15,"lang":"zh-CN","highlight":true,"recordIP":true,"serverURLs":"https://ubsvoh5t.api.lncldglobal.com","emojiCDN":"//i0.hdslb.com/bfs/emote/","emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/js/qipao.js"></script>
+<script src="/js/star.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

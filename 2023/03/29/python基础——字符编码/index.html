@@ -1,0 +1,987 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
+  <link rel="icon" href="/img/256.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="07xiaohei">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="前言： python 2.x默认的字符编码是ASCII，默认的文件编码也是ASCII。 python 3.x默认的字符编码是unicode，默认的文件编码是utf-8。 不同的编码之间不能互相识别，不能相互转化，会报错或出现乱码，所以一定要进行区别。 因此，本篇介绍这三种出现的编码以及额外的中文GB2312编码。 （一）ASCII编码： 1. 概念： ASCII编码是美国信息交换标准">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础——字符编码">
+<meta property="og:url" content="http://example.com/2023/03/29/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/index.html">
+<meta property="og:site_name" content="ZZHの个人博客">
+<meta property="og:description" content="前言： python 2.x默认的字符编码是ASCII，默认的文件编码也是ASCII。 python 3.x默认的字符编码是unicode，默认的文件编码是utf-8。 不同的编码之间不能互相识别，不能相互转化，会报错或出现乱码，所以一定要进行区别。 因此，本篇介绍这三种出现的编码以及额外的中文GB2312编码。 （一）ASCII编码： 1. 概念： ASCII编码是美国信息交换标准">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2023/04/07/ppThZfe.jpg">
+<meta property="article:published_time" content="2023-03-29T08:28:55.000Z">
+<meta property="article:modified_time" content="2023-07-11T03:56:04.754Z">
+<meta property="article:author" content="07xiaohei">
+<meta property="article:tag" content="知识点">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://s1.ax1x.com/2023/04/07/ppThZfe.jpg">
+  
+  
+  
+  <title>python基础——字符编码 - ZZHの个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
+<link rel="stylesheet" href="/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>07xiaoheiの个人博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/HTML/index.html">
+                <i class="iconfont icon-bilibili-fill"></i>
+                <span>happy birthday</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-icon"></i>
+                <span>资源</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/download-office">
+                    
+                    <span>下载官网</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
+                    
+                    <span>baiduyun</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/mysourse/visit-use">
+                    
+                    <span>有用的网站</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于我</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="python基础——字符编码"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-03-29 16:28" pubdate>
+          2023年3月29日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          6.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          58 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">python基础——字符编码</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3><span id="前言">前言：</span></h3>
+<p>python 2.x默认的字符编码是ASCII，默认的文件编码也是ASCII。</p>
+<p>python 3.x默认的字符编码是unicode，默认的文件编码是utf-8。</p>
+<p>不同的编码之间不能互相识别，不能相互转化，会报错或出现乱码，所以一定要进行区别。</p>
+<p>因此，本篇介绍这三种出现的编码以及额外的中文GB2312编码。</p>
+<h3><span id="一ascii编码">（一）ASCII编码：</span></h3>
+<h4><span id="1-概念">1. 概念：</span></h4>
+<p>ASCII编码是美国信息交换标准代码，是基于拉丁字母的一套电脑编码，主要用于显示现代英语和其他西欧语言，是最通用的信息交换标准。</p>
+<h4><span id="2-产生原因">2. 产生原因：</span></h4>
+<p>所有的数据在存储和运算时都要使用二进制表示，在字符和字符串中，对字母、数字以及一些常用符号的存储需要确定使用哪些确定的二进制数来表示对应的符号，因此，ASCII码产生了。</p>
+<h4><span id="3-ascii码内容">3. ASCII码内容：</span></h4>
+<p>ASCII编码使用1个字节表示常用字符，基础ASCII码字符从对应的二进制数范围从0到127（指定的7位二进制数），扩展则从128到255（指定的8位二进制数）。</p>
+<p>基础ASCII码对应内容如下：</p>
+<ul>
+<li><p>0～31及127
+(共33个)是控制字符或通信专用字符（其余为可显示字符）。</p>
+<p>如控制符：LF（换行）、CR（回车）、FF（换页）、DEL（删除）、BS（退格)、BEL（响铃）等；</p>
+<p>通信专用字符：SOH（文头）、EOT（文尾）、ACK（确认）等；</p>
+<p>ASCII值为8、9、10 和13
+分别转换为退格、制表、换行和回车字符。</p></li>
+<li><p>32 空格</p></li>
+<li><p>33-47 <strong>! " # $ % &amp; ' ( ) * + , - . /</strong></p></li>
+<li><p>48-57 数字<strong>0-9</strong></p></li>
+<li><p>58-64 **: ; &lt; = &gt; ? <span class="citation" data-cites="*">@*</span>*</p></li>
+<li><p>91-96 <strong>[  ] ^ _ `</strong></p></li>
+<li><p>65-90 大写字母<strong>A-Z</strong></p></li>
+<li><p>97-122 小写字母<strong>a-z</strong></p></li>
+<li><p>123-126 <strong>{ | } ~</strong></p></li>
+</ul>
+<h4><span id="4-python中ascii码的转换">4. python中ASCII码的转换：</span></h4>
+<p>事实上下面的两个函数可以传入和Unicode相对应的字符，但这些内容之后讨论。</p>
+<ul>
+<li><p>ASCII码转字符函数chr()：</p>
+<p>形式：<strong><em>chr(int)</em></strong></p>
+<p>int为整数，在此处范围为0~255，可以是十进制和十六进制的形式的数字。</p>
+<p>chr函数返回整数对应的字符。</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs perl"><span class="hljs-keyword">print</span>(<span class="hljs-keyword">chr</span>(<span class="hljs-number">112</span>))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># p</span><br></code></pre></td></tr></table></figure></li>
+<li><p>字符转ASCII码函数ord()：</p>
+<p>形式：ord(char)</p>
+<p>char为字符，在此处传入字符可以是那些ASCII码表内有对应的整数的字符，字符长度为1。</p>
+<p>返回值为ASCII码表内对应的整数。</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs perl"><span class="hljs-keyword">print</span>(<span class="hljs-keyword">ord</span>(<span class="hljs-string">&quot;a&quot;</span>))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 97</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3><span id="二gb2312编码">（二）GB2312编码：</span></h3>
+<h4><span id="1-概念">1. 概念：</span></h4>
+<p>为了能够在计算机中存储汉字，中国国家标准总局发布了一系列的汉字字符集国家标准编码，这些编码统称为GB码，GB全称GuoBiao，也就是国标，所以也称为国标码。</p>
+<p>GB2312是上述编码中最早颁布的和最有影响力的一种汉字编码格式，2312来自于1980年发布的《信息交换用汉字编码字符集
+基本集》的标准号GB 2312-1980。</p>
+<p>GB2312因其使用的普遍，也被称为国标码（狭义角度），通行于我国内地，几乎所有的中文系统和国际化软件都支持GB2312。</p>
+<p>GB2312兼容ASCII码，不过需要进行一些转换才能完成。</p>
+<h4><span id="2-产生原因">2. 产生原因：</span></h4>
+<p>为了满足国内在计算机中使用汉字的需要。</p>
+<h4><span id="3-gb2312内容">3. GB2312内容：</span></h4>
+<p>共收录了6763个常用汉字（一级汉字3755个，二级汉字3008个）和682个特殊符号，特殊符号包括数字和字母，但是这些数字和字母占据的是两个字节，和ASCII码的数字和字母的区别，相当于输入法中的"全角"和"半角"，编译器只能识别"半角"，不能识别"全角"，注意区别。</p>
+<p>GB2312编码对所收录字符进行了“分区”处理，共94个区，每区含有94个位，共8836个码位。这种表示方式也称为区位码。</p>
+<p>01-09区收录除汉字外的682个字符。</p>
+<p>10-15区为空白区，没有使用。</p>
+<p>16-55区收录3755个一级汉字，按拼音排序。</p>
+<p>56-87区收录3008个二级汉字，按部首/笔画排序。</p>
+<p>88-94区为空白区，没有使用。</p>
+<p>GB2312中每个字符占据2bytes，且最高位不为0（和ASCII码兼容），第一个字节为“高字节”，对应94个区，代表区号；第二个字节为“低字节”，对应94个位，代表位号。</p>
+<p>因此，区位码范围是：0101－9494。对区号和位号分别加上0xA0就是GB2312编码。、</p>
+<p>例如最后一个码位是9494，区号和位号分别转换成十六进制是5E5E，0x5E+0xA0＝0xFE，所以该码位的GB2312编码是FEFE。</p>
+<p>从上面可以看出，GB2312编码范围就是A1A1－FEFE，其中汉字的编码范围为B0A1-F7FE，第一字节0xB0-0xF7（对应区号：16－87），第二个字节0xA1-0xFE（对应位号：01－94）。</p>
+<h4><span id="4-python中gb2312码的转换">4. python中GB2312码的转换：</span></h4>
+<p>将python字符串编码为GB2312后，类型为bytes，一般以双字节形式保存，如果是可以以一个字节字符保存的按一个字节保存。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;中国&quot;</span>.encode(<span class="hljs-string">&#x27;gb2312&#x27;</span>))<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;a&quot;</span>.encode(<span class="hljs-string">&#x27;gb2312&#x27;</span>))<br><span class="hljs-built_in">print</span>(type(<span class="hljs-string">&quot;中国&quot;</span>.encode(<span class="hljs-string">&#x27;gb2312&#x27;</span>)))<br><span class="hljs-built_in">print</span>(len(<span class="hljs-string">&quot;中国&quot;</span>.encode(<span class="hljs-string">&#x27;gb2312&#x27;</span>)))<br><span class="hljs-built_in">print</span>(len(<span class="hljs-string">&quot;中国&quot;</span>))<br><span class="hljs-built_in">print</span>(len(<span class="hljs-string">&quot;a&quot;</span>.encode(<span class="hljs-string">&#x27;gb2312&#x27;</span>)))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># b&#x27;\xd6\xd0\xb9\xfa&#x27;</span><br><span class="hljs-comment"># b&#x27;a&#x27;</span><br><span class="hljs-comment"># &lt;class &#x27;bytes&#x27;&gt;</span><br><span class="hljs-comment"># 4</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 1</span><br></code></pre></td></tr></table></figure>
+<h3><span id="三unicode标准编码">（三）Unicode标准编码:</span></h3>
+<h4><span id="1-概念">1. 概念：</span></h4>
+<p>Unicode是国际标准字符集，是计算机科学领域里的一项业界标准。是为了解决传统的字符编码方案的局限而产生的，它为每种语言中的每个字符设定了统一并且唯一的二进制编码，以满足跨语言、跨平台进行文本转换、处理的要求，Unicode是国际组织制定的可以容纳世界上所有文字和符号的字符编码方案。</p>
+<p>注意：Unicode标准编码对应的是一个符号集，规定了每个符号的二进制值，但是没有规定符号如何存储。</p>
+<h4><span id="2-产生原因">2. 产生原因：</span></h4>
+<p>为了所有语言都统一到一套编码里，解决ASCII不能表示其他语言的问题。</p>
+<h4><span id="3-unicode标准编码内容">3. Unicode标准编码内容：</span></h4>
+<p>Unicode字符集的标准编码范围是 <strong>0x0000 -
+0x10FFFF</strong>，可以容纳一百多万个字符，
+每个字符都有一个独一无二的编码，也即每个字符都有一个二进制数值和它对应，这里的二进制数值也叫码点。</p>
+<p>比如：汉字"中"的码点是 0x4E2D, 大写字母A的码点是0x41。</p>
+<p>但在Unicode标准编码中，A的存储为0x00000041，必须补0对齐其字节数统一为4（最大存储的字节数为4），Unicode标准编码使用32位进行补0编码的方式占据了过大的空间，浪费了存储空间，因此其不能被用于硬盘存储（文件的存储）和数据传输（网络上的传输）中。</p>
+<p>这使得Unicode需要其他的特定编码格式，稍后我们详细介绍其中的一种编码方式：UTF-8编码。</p>
+<p>在python中，如果想要进行硬盘存储和数据传输，需要将字符串转化为bytes类型。</p>
+<h4><span id="4-字符串前加u-r-b">4. 字符串前加u、r、b：</span></h4>
+<ul>
+<li><p>字符串前加u表示以Unicode格式进行编码，一般用于中文字符串前面（一般字符串是不用加的，因为python默认用Unicode进行编码）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">u&quot;123&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">u&quot;中&quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 123</span><br><span class="hljs-comment"># 中</span><br></code></pre></td></tr></table></figure></li>
+<li><p>字符串前面加r表示后面的字符串是普通字符串，也就是没有转义字符等其他含义。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">r&quot;\n\n\n&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">r&quot;123&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">r&quot;中&quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># \n\n\n</span><br><span class="hljs-comment"># 123</span><br><span class="hljs-comment"># 中</span><br></code></pre></td></tr></table></figure></li>
+<li><p>字符串前面加b表示字符串是bytes类型，只能处理ASCII码内有的类型（其他类型需要编码解码等操作）。</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs clean">print(b<span class="hljs-string">&quot;123&quot;</span>)<br>print(b<span class="hljs-string">&quot;\n\n\n&quot;</span>)<br># print(b<span class="hljs-string">&quot;中&quot;</span>)  出错<br># # 运行结果：<br># b<span class="hljs-string">&#x27;123&#x27;</span><br># b<span class="hljs-string">&#x27;\n\n\n&#x27;</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4><span id="5python中unicode标准编码的转换">5.
+python中Unicode标准编码的转换：</span></h4>
+<ul>
+<li><p>Unicode编码转字符函数chr()：</p>
+<p>形式：<strong><em>chr(int)</em></strong></p>
+<p>int为整数，在此处范围为0~ 1114111，可以是十进制和十六进制
+(最大0x10FFFF) 的形式的数字。</p>
+<p>chr函数返回整数对应的字符。</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs perl"><span class="hljs-keyword">print</span>(<span class="hljs-keyword">chr</span>(<span class="hljs-number">114514</span>))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 𛽒 可能无法显示，但是确实是个字符</span><br></code></pre></td></tr></table></figure></li>
+<li><p>字符转Unicode标准编码函数ord()：</p>
+<p>形式：ord(char)</p>
+<p>char为字符，在此处传入字符可以是那些Unicode编码表内有对应的整数的字符，字符长度为1。</p>
+<p>返回值为Unicode码表内对应的整数。</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs perl"><span class="hljs-keyword">print</span>(<span class="hljs-keyword">ord</span>(<span class="hljs-string">&quot;汉&quot;</span>))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 27721</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3><span id="四utf-8编码">（四）UTF-8编码：</span></h3>
+<h4><span id="1-概念">1. 概念：</span></h4>
+<p>UTF(Unicode Transformation Format)，是指Unicode转换格式。</p>
+<p>UTF-8是Unicode特定编码的一种，是对Unicode字符串的编码具体实现和存储方法，也是在互联网上使用最广的一种
+Unicode 的实现方式。</p>
+<p>UTF-8的最大特点就是就是它是一种变长的编码方式，可以使用1~4个字节来表示一个符号，根据不同的符号变化字节长度。</p>
+<h4><span id="2-产生原因">2. 产生原因：</span></h4>
+<p>解决Unicode标准编码占用空间过大的问题，统一编码方式。</p>
+<h4><span id="3-utf-8编码内容">3. UTF-8编码内容：</span></h4>
+<p>UTF-8的编码规则很简单，只有二条：</p>
+<ul>
+<li><p>对于单字节的符号，字节的第一位设为0，后面7位为这个符号的unicode码。因此对于英语字母，UTF-8编码和ASCII码是相同的——UTF-8编码能够兼容ASCII编码，这也是互联网普遍采用UTF-8的原因之一。</p></li>
+<li><p>对于n字节的符号（n&gt;1），第一个字节的前n位都设为1，第n+1位设为0，后面字节的前两位一律设为10。剩下的没有提及的二进制位，全部为这个符号的unicode码。</p></li>
+</ul>
+<p>下表是Unicode编码码点对应UTF-8需要的字节数量以及编码格式：</p>
+<p><img src="https://s1.ax1x.com/2023/04/07/ppThZfe.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>第一列表示Unicode码点的位数；二三列表示码点的取值范围；第四列表示UTF-8需要的字节数；后面几列则是具体的表示，其中的1和0都是固定的前缀，而x表示可编码的二进制位，与前面的码点位数匹配。</p>
+<p>可以看出，前面有多少个连续的1，后面就有多少位可编码的字节数，随后的一个0表示停止计量字节数，是对可编码位置和不可编码位置的分割，每个字节的10则是固定前缀。</p>
+<p>比如下面的“汉”的Unicode和UTF-8编码对应如下：</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs maxima"><span class="hljs-built_in">print</span>(bin(ord(<span class="hljs-string">&quot;汉&quot;</span>)))<br><span class="hljs-built_in">print</span>(bin(int.from_bytes(<span class="hljs-string">&quot;汉&quot;</span>.encode())))<br># 运行结果：<br># <span class="hljs-number">0b110110001001001</span><br># <span class="hljs-number">0b111001101011000110001001</span> 注意，<span class="hljs-number">11100</span>的最后这个<span class="hljs-number">0</span>是因为上面是<span class="hljs-number">15</span>位，前面有一位空<span class="hljs-number">0</span>需要补齐<br></code></pre></td></tr></table></figure>
+<h4><span id="4-python中utf-8码的转换">4. python中UTF-8码的转换：</span></h4>
+<ul>
+<li><p>encode()函数</p>
+<p>描述：以指定的编码格式编码Unicode标准编码，也就是python的默认字符串，默认编码为
+'utf-8'。</p>
+<p>语法：<strong><em>str.encode(encoding='utf-8',
+errors='strict')</em></strong></p>
+<p>str未无编码的python默认字符串，Unicode标准编码格式，否则需要先解码再编码。</p>
+<p>encoding 参数可选，即要使用的编码，默认编码为
+'utf-8'，也可以指定gb2312等编码。</p>
+<p>errors 参数可选，设置不同错误的处理方案。默认为
+'strict'，意为编码错误引起一个UnicodeEncodeError。 其它可能值有
+'ignore', 'replace', 'xmlcharrefreplace'以及通过 codecs.register_error()
+注册其它的值。</p>
+<p>返回编码后的字符串，bytes类型。</p></li>
+<li><p>decode()函数：</p>
+<p>描述：以指定的编码格式解码字符串为Unicode标准编码格式，也就是默认字符串，默认为UTF-8编码进行解码。</p>
+<p>语法：<strong><em>str.decode(encoding='utf-8',
+errors='strict')</em></strong></p>
+<p>str为已编码的字符串，bytes类型，编码格式多种。</p>
+<p>encoding 参数可选，即要解码的对应编码，默认为
+'utf-8'，如：utf-8，gb2312等。</p>
+<p>errors参数可选，设置不同错误的处理方案。默认为
+'strict'，意为编码错误引起一个UnicodeDecodeError。其它可能得值有
+'ignore', 'replace'以及通过 codecs.register_error()
+注册其它的值。</p></li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs routeros">str1 = <span class="hljs-string">&quot;世界&quot;</span><br>str2 = b<span class="hljs-string">&#x27;\xe4\xb8\xad\xe5\x9b\xbd&#x27;</span><br>str3 =<span class="hljs-string">&#x27;\n&#x27;</span><br>str4 = r<span class="hljs-string">&#x27;\n&#x27;</span><br>str5 = <span class="hljs-string">&quot;\u5408&quot;</span><br><span class="hljs-built_in">print</span>(str1)<br><span class="hljs-built_in">print</span>(str1.encode(<span class="hljs-string">&quot;utf-8&quot;</span>))<br><span class="hljs-built_in">print</span>(type(str1.encode(<span class="hljs-string">&quot;utf-8&quot;</span>)))<br><span class="hljs-built_in">print</span>(str2)<br><span class="hljs-built_in">print</span>(str2.decode(<span class="hljs-string">&quot;utf-8&quot;</span>))<br><span class="hljs-built_in">print</span>(type(str2.decode(<span class="hljs-string">&quot;utf-8&quot;</span>)))<br><span class="hljs-built_in">print</span>(str3.encode(<span class="hljs-string">&quot;utf-8&quot;</span>))<br><span class="hljs-built_in">print</span>(str4.encode(<span class="hljs-string">&quot;utf-8&quot;</span>))<br><span class="hljs-built_in">print</span>(str5.encode(<span class="hljs-string">&quot;utf-8&quot;</span>))<br><span class="hljs-built_in">print</span>(str5.encode(<span class="hljs-string">&quot;utf-8&quot;</span>).decode(<span class="hljs-string">&quot;utf-8&quot;</span>))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 世界</span><br><span class="hljs-comment"># b&#x27;\xe4\xb8\x96\xe7\x95\x8c&#x27;</span><br><span class="hljs-comment"># &lt;class &#x27;bytes&#x27;&gt;</span><br><span class="hljs-comment"># b&#x27;\xe4\xb8\xad\xe5\x9b\xbd&#x27;</span><br><span class="hljs-comment"># 中国</span><br><span class="hljs-comment"># &lt;class &#x27;str&#x27;&gt;</span><br><span class="hljs-comment"># b&#x27;\n&#x27;</span><br><span class="hljs-comment"># b&#x27;\\n&#x27;</span><br><span class="hljs-comment"># b&#x27;\xe5\x90\x88&#x27;</span><br><span class="hljs-comment"># 合</span><br></code></pre></td></tr></table></figure>
+<h3><span id="五python字符串的unicode存储原因和优化">（五）python字符串的Unicode存储原因和优化：</span></h3>
+<h4><span id="1-原因">1. 原因：</span></h4>
+<p>为什么python中依旧要使用Unicode存储而不用UTF-8编码：</p>
+<p>UTF-8编码方案的每个字符的占用字节长度是变化的，导致了无法按索引随意访问单个字符，如果对某个字符串str[n]使用UFT-8编码去访问，需要统计前n个字符占用的字节长度，导致了运行时间从
+O(1) 变成了 O(n) ，时间开销太大。</p>
+<p>因此Python内部需要采用定长的方式存储字符串来加快各种操作的速度，所以依然使用Unicode存储。</p>
+<h4><span id="2-优化">2. 优化：</span></h4>
+<ul>
+<li><p>三种内部表示Unicode字符串：</p>
+<p>为了减少内存的消耗，三种内部表示Unicode字符串</p>
+<ul>
+<li><p>每个字符 1 个字节（Latin-1）</p>
+<p>如果字符串的所有字符都在ASCII码范围内，那么就可以用占用1个字符的Latin-1编码进行存储。</p></li>
+<li><p>每个字符 2 个字节（UCS-2）</p>
+<p>如果字符串中存在了需要占用两个字节的字符，整个字符串全部采用占用2个字节的UCS-2编码存储。</p>
+<p>大多数的自然语言只需要2字节编码。</p></li>
+<li><p>每个字符 4 个字节（UCS-4）</p>
+<p>如果加入一些极特殊的字符导致有占用4个字节的字符，就会全体采用UCS-4编码，基本和Unicode彼岸准编码一致。</p></li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs routeros">import sys<br><span class="hljs-built_in">print</span>(sys.getsizeof(<span class="hljs-string">&quot;a&quot;</span>))<br><span class="hljs-built_in">print</span>(sys.getsizeof(<span class="hljs-string">&quot;aa&quot;</span>))<br><span class="hljs-built_in">print</span>(sys.getsizeof(<span class="hljs-string">&quot;我&quot;</span>))<br><span class="hljs-built_in">print</span>(sys.getsizeof(<span class="hljs-string">&quot;a我&quot;</span>))<br><span class="hljs-built_in">print</span>(sys.getsizeof(<span class="hljs-string">&quot;我我&quot;</span>))<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># 50</span><br><span class="hljs-comment"># 51  aa-a=1，a占用一个字节</span><br><span class="hljs-comment"># 76 </span><br><span class="hljs-comment"># 78  a我-我=2，a占用两个字节</span><br><span class="hljs-comment"># 78  a和我的占用相同了</span><br></code></pre></td></tr></table></figure></li>
+<li><p>字符串驻留机制：</p>
+<p>将短小的字符串做成池，当程序创建字符串对象前先检查池中是否有能满足的字符串。</p>
+<p>池中驻留的字符串一般为下划线、字母和数字不超过20的字符串。</p>
+<p>驻留检查：</p>
+<ul>
+<li>空字符串 <code>''</code> 及所有；</li>
+<li>变量名；</li>
+<li>参数名；</li>
+<li>字符串常量（代码中定义的所有字符串）；</li>
+<li>字典键；</li>
+<li>属性名称；</li>
+</ul>
+<p>此机制节省了大量的重复字符串内存。</p></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/python-study/" class="category-chain-item">python_study</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+      
+        <a href="/tags/python/">#python</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>python基础——字符编码</div>
+      <div>http://example.com/2023/03/29/python基础——字符编码/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>07xiaohei</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年3月29日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/03/31/c++%E7%B1%BB%E2%80%94%E2%80%94%E7%B1%BB%E4%B8%8E%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/" title="c++类——类与类之间的关系">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">c++类——类与类之间的关系</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/03/28/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B(%E5%85%AB)%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="python基础——数据类型(八)类型转换">
+                        <span class="hidden-mobile">python基础——数据类型(八)类型转换</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","appKey":"ooOKmecfVZV0i2v0cvsyZGdl","path":"window.location.pathname","placeholder":"“cancanneed comment”","avatar":"monsterid","meta":["nick","mail","link"],"requiredFields":[],"pageSize":15,"lang":"zh-CN","highlight":true,"recordIP":true,"serverURLs":"https://ubsvoh5t.api.lncldglobal.com","emojiCDN":"//i0.hdslb.com/bfs/emote/","emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/js/qipao.js"></script>
+<script src="/js/star.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
