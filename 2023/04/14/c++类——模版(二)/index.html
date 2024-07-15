@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="（一）函数模版： 重载函数通常基于不同的数据类型实现类似的操作，对不同数据类型有完全相同的操作，用函数模版实现更为简介方便。 1. 格式与定义： 　template  　返回类型 函数名(参数列表) { 函数体 } 类型形式参数表&#x3D; class T1, class T2, ... , class Tn or typename T1, typename T2, ... , typena">
+    <meta name="description" content="¶（一）函数模版： 重载函数通常基于不同的数据类型实现类似的操作，对不同数据类型有完全相同的操作，用函数模版实现更为简介方便。 ¶1. 格式与定义： template &lt;类型形式参数表&gt; 　返回类型 函数名(参数列表) { 函数体 } 类型形式参数表&#x3D; class T1, class T2, ... , class Tn or  typename T1, typename T2, ..">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c++类——模版(二)">
-<meta property="og:url" content="http://example.com/2023/04/14/c++%E7%B1%BB%E2%80%94%E2%80%94%E6%A8%A1%E7%89%88(%E4%BA%8C)/index.html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（一）函数模版： 重载函数通常基于不同的数据类型实现类似的操作，对不同数据类型有完全相同的操作，用函数模版实现更为简介方便。 1. 格式与定义： 　template  　返回类型 函数名(参数列表) { 函数体 } 类型形式参数表&#x3D; class T1, class T2, ... , class Tn or typename T1, typename T2, ... , typena">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/2023/04/14/c++%E7%B1%BB%E2%80%94%E2%80%94%E6%A8%A1%E7%89%88(%E4%BA%8C)/index.html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="¶（一）函数模版： 重载函数通常基于不同的数据类型实现类似的操作，对不同数据类型有完全相同的操作，用函数模版实现更为简介方便。 ¶1. 格式与定义： template &lt;类型形式参数表&gt; 　返回类型 函数名(参数列表) { 函数体 } 类型形式参数表&#x3D; class T1, class T2, ... , class Tn or  typename T1, typename T2, ..">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-14T08:20:03.000Z">
 <meta property="article:modified_time" content="2023-04-17T12:43:54.484Z">
@@ -33,7 +33,7 @@
   
   
   
-  <title>c++类——模版(二) - ZZHの个人博客</title>
+  <title>c++类——模版(二) - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -57,35 +57,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -119,7 +119,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -138,7 +138,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -150,7 +150,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -162,21 +162,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -196,7 +184,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -204,15 +200,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -226,7 +214,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -238,7 +226,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -268,7 +256,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -281,6 +269,11 @@
         
           
   <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        07xiaohei
+      </span>
     
     
       <span class="post-meta">
@@ -308,7 +301,7 @@
         
         
         
-          123 分钟
+          38 分钟
         
       </span>
     
@@ -356,92 +349,115 @@
             <!-- SEO header -->
             <h1 style="display: none">c++类——模版(二)</h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：1 年前
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
-                <h3><span id="一函数模版">（一）函数模版：</span></h3>
+                <h3 id="一函数模版"><a href="#一函数模版" class="header-anchor">¶</a>（一）函数模版：</h3>
 <p>重载函数通常基于不同的数据类型实现类似的操作，对不同数据类型有完全相同的操作，用函数模版实现更为简介方便。</p>
-<h4><span id="1-格式与定义">1. 格式与定义：</span></h4>
-<p>　<strong><em>template <类型形式参数表></类型形式参数表></em></strong>
-　<strong><em>返回类型 函数名(参数列表) { 函数体 }</em></strong></p>
-<p>类型形式参数表= <strong><em>class T<sub>1</sub>, class T<sub>2</sub>,
-... , class T<sub>n</sub></em></strong> or <strong><em>typename
-T<sub>1</sub>, typename T<sub>2</sub>, ... , typename
-T<sub>n</sub></em></strong></p>
+<h4 id="1-格式与定义"><a href="#1-格式与定义" class="header-anchor">¶</a>1. 格式与定义：</h4>
+<p><em><strong>template &lt;类型形式参数表&gt;</strong></em>
+　<em><strong>返回类型 函数名(参数列表) { 函数体 }</strong></em></p>
+<p>类型形式参数表= <em><strong>class T<sub>1</sub>, class T<sub>2</sub>, ... , class T<sub>n</sub></strong></em> or  <em><strong>typename T<sub>1</sub>, typename T<sub>2</sub>, ... , typename T<sub>n</sub></strong></em></p>
 <p>函数模版定义由模版说明和函数定义构成。</p>
 <p>模版说明的类属参数必须在函数定义中至少出现一次。</p>
 <p>函数参数表中可以使用类属类型参数，也可以使用一般类型参数。</p>
 <p>函数模板不允许自动类型转化。</p>
 <p>其他要点前文已有讲述，此处不再重复。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> T&gt;  <br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">IsEqual</span><span class="hljs-params">(<span class="hljs-type">const</span> T&amp; left, <span class="hljs-type">const</span> T&amp; right)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">return</span> left == right;<br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> T1,<span class="hljs-keyword">typename</span> T2&gt;<br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">IsEqual2</span><span class="hljs-params">(<span class="hljs-type">const</span> T1&amp; left, <span class="hljs-type">const</span> T2&amp; right)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">return</span> left == right;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-built_in">IsEqual</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>) &lt;&lt; endl;           <span class="hljs-comment">// 隐式实例化</span><br>	<span class="hljs-comment">//cout&lt;&lt;IsEqual(1,1.2)&lt;&lt;endl;            // 模板参数不匹配,不知道是把int推断为double还是double推断为int</span><br>	cout &lt;&lt; <span class="hljs-built_in">IsEqual</span>&lt;<span class="hljs-type">int</span>&gt;(<span class="hljs-number">1</span>, <span class="hljs-number">1.2</span>) &lt;&lt; endl;    <span class="hljs-comment">// 显式实例化</span><br>	cout &lt;&lt; <span class="hljs-built_in">IsEqual</span>&lt;<span class="hljs-type">double</span>&gt;(<span class="hljs-number">1</span>, <span class="hljs-number">1.2</span>) &lt;&lt; endl; <span class="hljs-comment">// 显式实例化</span><br><br>	cout &lt;&lt; <span class="hljs-built_in">IsEqual2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>) &lt;&lt; endl;          <span class="hljs-comment">//隐式实例化,表示IsEqual2&lt;int,int&gt;</span><br>	cout &lt;&lt; <span class="hljs-built_in">IsEqual2</span>(<span class="hljs-number">1</span>,<span class="hljs-number">1.2</span>)&lt;&lt;endl;           <span class="hljs-comment">//隐式实例化,表示IsEqual2&lt;int,double&gt;</span><br>	cout &lt;&lt; <span class="hljs-built_in">IsEqual2</span>&lt;<span class="hljs-type">int</span>,<span class="hljs-type">double</span>&gt;(<span class="hljs-number">1</span>, <span class="hljs-number">1.2</span>) &lt;&lt; endl; <span class="hljs-comment">// 显式实例化</span><br>	cout &lt;&lt; <span class="hljs-built_in">IsEqual2</span>&lt;<span class="hljs-type">double</span>,<span class="hljs-type">int</span>&gt;(<span class="hljs-number">1</span>, <span class="hljs-number">1.2</span>) &lt;&lt; endl; <span class="hljs-comment">// 显式实例化,注意此处1.2转为int后为1,返回true</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果:</span><br><span class="hljs-comment">//1</span><br><span class="hljs-comment">//1</span><br><span class="hljs-comment">//0</span><br><span class="hljs-comment">//1</span><br><span class="hljs-comment">//0</span><br><span class="hljs-comment">//0</span><br><span class="hljs-comment">//1</span><br></code></pre></td></tr></table></figure>
-<h4><span id="2-重载函数模版">2. 重载函数模版：</span></h4>
+<h4 id="2-重载函数模版"><a href="#2-重载函数模版" class="header-anchor">¶</a>2.  重载函数模版：</h4>
 <p>当模版类型不能满足需要（不能提供类型的隐式转换）时，函数模版可以进行重载（效果和普通的函数重载一致），而且可以和普通重载函数并存。</p>
 <p>此时如果均存在匹配，涉及到了匹配的优先级关系，为此，c++的函数模版有匹配约定：</p>
-<ul>
-<li>寻找和使用最符合函数名和函数类型的普通函数，若找到则调用它。</li>
-<li>否则寻找一个函数模版，将其实例化产生一个匹配的函数参数，若找到则调用它。</li>
-<li>否则，寻找可以通过类型转换进行参数匹配的重载函数，若找到则调用它。</li>
-<li>如果前三次的寻找均为找到匹配函数，则调用错误；如果在三次的某次寻找中调用有多余一个的匹配选择，则调用匹配出现二义性。</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>寻找和使用最符合函数名和函数类型的普通函数，若找到则调用它。</p>
+</li>
+<li class="lvl-2">
+<p>否则寻找一个函数模版，将其实例化产生一个匹配的函数参数，若找到则调用它。</p>
+</li>
+<li class="lvl-2">
+<p>否则，寻找可以通过类型转换进行参数匹配的重载函数，若找到则调用它。</p>
+</li>
+<li class="lvl-2">
+<p>如果前三次的寻找均为找到匹配函数，则调用错误；如果在三次的某次寻找中调用有多余一个的匹配选择，则调用匹配出现二义性。</p>
+</li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">IsEqual</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">int</span>&amp; left,<span class="hljs-type">const</span> <span class="hljs-type">int</span>&amp; right)</span><span class="hljs-comment">//普通函数重载</span></span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-string">&quot;重载普通函数1&quot;</span> &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span> left == right;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">IsEqual</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">double</span>&amp; left, <span class="hljs-type">const</span> <span class="hljs-type">double</span>&amp; right)</span><span class="hljs-comment">//普通函数重载</span></span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-string">&quot;重载普通函数2&quot;</span> &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span> left == right;<br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> T&gt;  <br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">IsEqual</span><span class="hljs-params">(<span class="hljs-type">const</span> T&amp; left, <span class="hljs-type">const</span> T&amp; right)</span></span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-string">&quot;模版&quot;</span> &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span> left == right;<br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> T1,<span class="hljs-keyword">typename</span> T2&gt;<br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">IsEqual</span><span class="hljs-params">(<span class="hljs-type">const</span> T1&amp; left, <span class="hljs-type">const</span> T2&amp; right)</span><span class="hljs-comment">//重载,参数类型不同</span></span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-string">&quot;重载模版1,参数类型不同&quot;</span> &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span> left == right;<br>&#125;<br><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> T&gt;<br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">IsEqual</span><span class="hljs-params">(<span class="hljs-type">const</span> T&amp; right)</span> <span class="hljs-comment">//重载,参数个数不同</span></span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-string">&quot;重载模版2，参数个数不同&quot;</span> &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">1</span> == right;<br>&#125;<br><br><span class="hljs-comment">//当同时使用下面两个函数模版时,如果传入(double,int)类型的参数,将会导致二义性错误。</span><br><span class="hljs-comment">//template &lt;typename T1&gt;</span><br><span class="hljs-comment">//bool IsEqual(const T1&amp; left, const int&amp; right)//重载,参数类型不同</span><br><span class="hljs-comment">//&#123;</span><br><span class="hljs-comment">//	cout &lt;&lt; &quot;重载模版3,参数类型不同&quot; &lt;&lt; endl;</span><br><span class="hljs-comment">//	return left == right;</span><br><span class="hljs-comment">//&#125;</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//template &lt;typename T2&gt;</span><br><span class="hljs-comment">//bool IsEqual(const double&amp; left, const T2&amp; right)//重载,参数类型不同</span><br><span class="hljs-comment">//&#123;</span><br><span class="hljs-comment">//	cout &lt;&lt; &quot;重载模版3,参数类型不同&quot; &lt;&lt; endl;</span><br><span class="hljs-comment">//	return left == right;</span><br><span class="hljs-comment">//&#125;</span><br><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-built_in">IsEqual</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>) &lt;&lt; endl;<span class="hljs-comment">//因为有最佳匹配的普通函数1,调用该函数</span><br>	cout &lt;&lt; <span class="hljs-built_in">IsEqual</span>(<span class="hljs-number">1</span>,<span class="hljs-number">1.2</span>)&lt;&lt;endl; <span class="hljs-comment">//因为没有最佳匹配的普通函数,检查模版类,检查到有最佳的匹配重载模版1,调用该函数模版</span><br>	cout &lt;&lt; <span class="hljs-built_in">IsEqual</span>(<span class="hljs-number">1.2</span>, <span class="hljs-number">1.2</span>) &lt;&lt; endl; <span class="hljs-comment">//因为有最佳匹配的普通函数2,调用该函数</span><br>	cout &lt;&lt; <span class="hljs-built_in">IsEqual</span>(<span class="hljs-number">1.2</span>, <span class="hljs-number">1</span>) &lt;&lt; endl;   <span class="hljs-comment">//因为没有最佳匹配的普通函数,检查模版类,检查到有最佳的匹配重载模版1,调用该函数模版</span><br>	cout &lt;&lt; <span class="hljs-built_in">IsEqual</span>(<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;1&quot;</span>) &lt;&lt; endl; <span class="hljs-comment">//因为没有最佳匹配的普通函数,检查模版类,检查到有最佳的匹配重载模版,调用该函数模版</span><br>	cout &lt;&lt; <span class="hljs-built_in">IsEqual</span>&lt;<span class="hljs-type">int</span>,<span class="hljs-type">double</span>&gt;(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>) &lt;&lt; endl;   <span class="hljs-comment">//显式说明调用的是函数模版,寻找到最佳匹配调用</span><br>	cout &lt;&lt; <span class="hljs-built_in">IsEqual</span>&lt;<span class="hljs-type">double</span>,<span class="hljs-type">int</span>&gt;(<span class="hljs-number">1</span>, <span class="hljs-number">1.2</span>) &lt;&lt; endl; <span class="hljs-comment">//显式说明调用的是函数模版,寻找到最佳匹配调用</span><br>	cout &lt;&lt; <span class="hljs-built_in">IsEqual</span>&lt;<span class="hljs-type">char</span>&gt;(<span class="hljs-string">&#x27;1&#x27;</span>) &lt;&lt; endl;;         <span class="hljs-comment">//显式说明调用的是函数模版,寻找到最佳匹配调用</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果:</span><br><span class="hljs-comment">//重载普通函数1</span><br><span class="hljs-comment">//1</span><br><span class="hljs-comment">//重载模版1, 参数类型不同</span><br><span class="hljs-comment">//0</span><br><span class="hljs-comment">//重载普通函数2</span><br><span class="hljs-comment">//1</span><br><span class="hljs-comment">//重载模版1, 参数类型不同</span><br><span class="hljs-comment">//0</span><br><span class="hljs-comment">//模版</span><br><span class="hljs-comment">//1</span><br><span class="hljs-comment">//重载模版1, 参数类型不同</span><br><span class="hljs-comment">//1</span><br><span class="hljs-comment">//重载模版1, 参数类型不同</span><br><span class="hljs-comment">//1</span><br><span class="hljs-comment">//重载模版2，参数个数不同</span><br><span class="hljs-comment">//0</span><br></code></pre></td></tr></table></figure>
-<h3><span id="二类模版">（二）类模版：</span></h3>
+<h3 id="二类模版"><a href="#二类模版" class="header-anchor">¶</a>（二）类模版：</h3>
 <p>类模版用于实现类所需数据的类型参数化。</p>
 <p>类模版在表示如数组、表、图等数据结构上显得特别重要，这些数据结构的表示和算法不受所包含的元素类型的影响。</p>
-<h4><span id="1-格式">1. 格式：</span></h4>
-<p><strong><em>template<类型形式参数表></类型形式参数表></em></strong> <strong><em>class
-类名{ ... };</em></strong></p>
+<h4 id="1-格式"><a href="#1-格式" class="header-anchor">¶</a>1. 格式：</h4>
+<p><em><strong>template&lt;类型形式参数表&gt;</strong></em>
+<em><strong>class 类名{ ... };</strong></em></p>
 <p>类属参数可以用于声明类中的成员变量和成员函数，在类中使用内置雷类型的地方也都可以用类属参数来声明。</p>
 <p>另外，类模版中的成员函数放到类模版定义外面写时的语法有限制：</p>
-<p><strong><em>template<类型形式参数表></类型形式参数表></em></strong></p>
-<p><strong><em>返回值类型 类模板名<类型参数名列表>::成员函数名(参数表) {
-函数体 }</类型参数名列表></em></strong></p>
+<p><em><strong>template&lt;类型形式参数表&gt;</strong></em></p>
+<p><em><strong>返回值类型 类模板名&lt;类型参数名列表&gt;::成员函数名(参数表) { 函数体 }</strong></em></p>
 <p>创建对象的格式：</p>
-<p><strong><em>类模板名<真实类型参数表>
-对象名(构造函数实际参数表);</真实类型参数表></em></strong></p>
+<p><em><strong>类模板名&lt;真实类型参数表&gt; 对象名(构造函数实际参数表);</strong></em></p>
 <p>如果有无参构造函数，可以是：</p>
-<p><strong><em>类模板名<真实类型参数表> 对象名;</真实类型参数表></em></strong></p>
+<p><em><strong>类模板名&lt;真实类型参数表&gt; 对象名;</strong></em></p>
 <p>注意：类模版形参不存在实参推演的问题，不能给真实类型参数表传递实参，只能传递类型。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> &#123;<br><span class="hljs-keyword">private</span>:<br>	T mAge;<br>	T mID;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-comment">//类内定义类的成员函数</span><br>	<span class="hljs-built_in">Person</span>(<span class="hljs-type">const</span> Person&lt;T&gt;&amp; a) <br>	&#123; <br>		<span class="hljs-keyword">this</span>-&gt;mAge = a.mAge;<br>		<span class="hljs-keyword">this</span>-&gt;mID = a.mID;<br>	&#125;<br>	<span class="hljs-built_in">Person</span>() &#123;&#125;<br>	<span class="hljs-comment">//T在返回值中</span><br>	<span class="hljs-function">T <span class="hljs-title">getage</span><span class="hljs-params">()</span> </span><br><span class="hljs-function">	</span>&#123;<br>		<span class="hljs-keyword">return</span> mAge;<br>	&#125;<br>	<span class="hljs-function">T <span class="hljs-title">getmID</span><span class="hljs-params">()</span> </span><br><span class="hljs-function">	</span>&#123;<br>		<span class="hljs-keyword">return</span> mID;<br>	&#125;<br>	<span class="hljs-comment">//类外定义类的成员函数</span><br>	<span class="hljs-comment">//T在传入形参中</span><br>	<span class="hljs-built_in">Person</span>(T age, T id);<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Show</span><span class="hljs-params">()</span></span>;<br><br>&#125;;<br><span class="hljs-comment">//外部实现成员函数</span><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>&gt;<br>Person&lt;T&gt;::<span class="hljs-built_in">Person</span>(T age, T id) &#123;<br>	<span class="hljs-keyword">this</span>-&gt;mID = id;<br>	<span class="hljs-keyword">this</span>-&gt;mAge = age;<br>&#125;<br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>&gt;<br><span class="hljs-type">void</span> Person&lt;T&gt;::<span class="hljs-built_in">Show</span>() &#123;<br>	cout &lt;&lt; <span class="hljs-string">&quot;Age:&quot;</span> &lt;&lt; mAge &lt;&lt; <span class="hljs-string">&quot; ID:&quot;</span> &lt;&lt; mID &lt;&lt; endl;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-function">Person&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">p1</span><span class="hljs-params">(<span class="hljs-number">10</span>,<span class="hljs-number">20021111</span>)</span></span>; <span class="hljs-comment">//一般声明</span><br>	Person&lt;string&gt;<span class="hljs-built_in">p2</span>(<span class="hljs-string">&quot;15&quot;</span>, <span class="hljs-string">&quot;20031111&quot;</span>);<br>	Person&lt;string&gt;<span class="hljs-built_in">p3</span>(p2);<br>	Person&lt;<span class="hljs-type">char</span>&gt; p4; <span class="hljs-comment">//无参构造的说明</span><br>	<span class="hljs-comment">//Person&lt;2&gt; p5;  //错误,没有实参类型推导,不能这样操作,必须是类型说明符</span><br>	p<span class="hljs-number">1.</span><span class="hljs-built_in">Show</span>();<br>	p<span class="hljs-number">2.</span><span class="hljs-built_in">Show</span>();<br>	p<span class="hljs-number">3.</span><span class="hljs-built_in">Show</span>();<br>	cout &lt;&lt; p<span class="hljs-number">1.</span><span class="hljs-built_in">getage</span>() &lt;&lt; endl;<br>	cout &lt;&lt; p<span class="hljs-number">2.</span><span class="hljs-built_in">getmID</span>() &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果:</span><br><span class="hljs-comment">//Age:10 ID : 20021111</span><br><span class="hljs-comment">//Age : 15 ID : 20031111</span><br><span class="hljs-comment">//Age : 15 ID : 20031111</span><br><span class="hljs-comment">//10</span><br><span class="hljs-comment">//20031111</span><br></code></pre></td></tr></table></figure>
-<h4><span id="2-类模版作为函数参数">2. 类模版作为函数参数：</span></h4>
+<h4 id="2-类模版作为函数参数"><a href="#2-类模版作为函数参数" class="header-anchor">¶</a>2. 类模版作为函数参数：</h4>
 <p>函数的形式参数类型可以是类模版或类模版的引用，对应的实际参数是该类模版实例化的模版类对象。</p>
 <p>因此，只有函数模版能够拥有模版类参数。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Array</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	T n;<br>&#125;;<br><span class="hljs-comment">//声明函数模板</span><br><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> T&gt;</span><br><span class="hljs-function">T <span class="hljs-title">funtest</span><span class="hljs-params">(Array&lt;T&gt; a)</span> </span>&#123; cout &lt;&lt; a.n &lt;&lt; endl; <span class="hljs-keyword">return</span> a.n; &#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span><br><span class="hljs-function"></span>&#123;<br>	Array&lt;<span class="hljs-type">int</span>&gt; a;<br>	a.n = <span class="hljs-number">1</span>;<br>	<span class="hljs-comment">//函数模板调用类模板的实例化对象</span><br>	cout &lt;&lt; <span class="hljs-built_in">funtest</span>(a) &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h4><span id="3-模板类和类模板">3. 模板类和类模板：</span></h4>
+<h4 id="3-模板类和类模板"><a href="#3-模板类和类模板" class="header-anchor">¶</a>3. 模板类和类模板：</h4>
 <p>类模板是模板的一种，可以在使用确定类属参数。</p>
 <p>类模板不是一个类，不会生成对象，也不会占据空间。</p>
 <p>模板类是类模板的一个实例，是确定了类属参数的具体类，可以直接生成对象。</p>
 <figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs perl">//模板类:<br><span class="hljs-regexp">//</span>template&lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">T</span>&gt;</span><br><span class="hljs-class">//<span class="hljs-title">class</span> <span class="hljs-title">Array</span> </span>&#123;&#125;;<br><span class="hljs-regexp">//</span>类模板:<br>Array&lt;double&gt; array;<br></code></pre></td></tr></table></figure>
-<h4><span id="4-函数模板作为类模版成员">4. 函数模板作为类模版成员：</span></h4>
+<h4 id="4-函数模板作为类模版成员"><a href="#4-函数模板作为类模版成员" class="header-anchor">¶</a>4. 函数模板作为类模版成员：</h4>
 <p>类模板中的成员函数还可以是一个函数模板成员，函数模板只有在被调用时才会被实例化。</p>
 <p>无论是原则还是声明，模板语法的优先级是最高的，不同模板的优先级先根据其声明顺序来判断，其次是函数修饰，然后是返回值。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T2</span>&gt;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Func</span><span class="hljs-params">(T2 t)</span> </span>&#123; cout &lt;&lt; t &lt;&lt; endl; <span class="hljs-keyword">return</span>; &#125;  <span class="hljs-comment">//成员函数模板</span><br>	<span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T3</span>&gt;<br>	<span class="hljs-function">A&lt;T&gt; <span class="hljs-title">Func2</span><span class="hljs-params">(T3 t)</span></span>; <span class="hljs-comment">//类外定义：</span><br>&#125;;<br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T3</span>&gt; <span class="hljs-comment">//最外层类模板对应的类属参数</span><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>&gt;  <span class="hljs-comment">//内层函数模板对应的类属参数</span><br>A&lt;T3&gt;              <span class="hljs-comment">//返回值</span><br>A&lt;T3&gt;::<span class="hljs-built_in">Func2</span>(T t)  <span class="hljs-comment">//函数名和形参表 </span><br>&#123; <br>	cout &lt;&lt; t &lt;&lt; endl; <span class="hljs-comment">//函数体</span><br>	<span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	A&lt;<span class="hljs-type">int</span>&gt; a;<br>	a.<span class="hljs-built_in">Func</span>&lt;<span class="hljs-type">int</span>&gt;(<span class="hljs-string">&#x27;K&#x27;</span>);  <span class="hljs-comment">//成员函数模板Func被实例化</span><br>	a.<span class="hljs-built_in">Func</span>(<span class="hljs-string">&quot;hello&quot;</span>);<br>	a.<span class="hljs-built_in">Func2</span>(<span class="hljs-string">&quot;world&quot;</span>);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果:</span><br><span class="hljs-comment">//75</span><br><span class="hljs-comment">//hello</span><br><span class="hljs-comment">//world</span><br></code></pre></td></tr></table></figure>
-<h4><span id="5-类层次中的类模版">5. 类层次中的类模版：</span></h4>
+<h4 id="5-类层次中的类模版"><a href="#5-类层次中的类模版" class="header-anchor">¶</a>5. 类层次中的类模版：</h4>
 <p>在类层次中，类模板可以是基类，也可以是派生类。</p>
 <p>类模板可以从类模板或普通类派生：</p>
-<ul>
-<li>当一个类模板从普通类派生时，意味着派生类增加了类属参数。</li>
-<li>当一个类模板从类模板派生时，可以添加新的类属参数，也可以保持，同时其他性质和一般的类之间的派生性质相同。</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>当一个类模板从普通类派生时，意味着派生类增加了类属参数。</p>
+</li>
+<li class="lvl-2">
+<p>当一个类模板从类模板派生时，可以添加新的类属参数，也可以保持，同时其他性质和一般的类之间的派生性质相同。</p>
+</li>
 </ul>
 <p>普通类可以从模板类或普通类派生：</p>
-<ul>
-<li>当一个普通类从类模板派生时，意味着派生类继承基类时，需要提供实例化的类型参数使派生的普通类内没有类属参数，同时需要编译分配内存。</li>
-<li>普通类之间的派生不涉及模板。</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>当一个普通类从类模板派生时，意味着派生类继承基类时，需要提供实例化的类型参数使派生的普通类内没有类属参数，同时需要编译分配内存。</p>
+</li>
+<li class="lvl-2">
+<p>普通类之间的派生不涉及模板。</p>
+</li>
 </ul>
 <p>类模板之间允许有多继承关系（性质简单，此略）。</p>
 <figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><code class="hljs axapta"><span class="hljs-meta">#include &lt;iostream&gt;</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-comment">//类模板派生普通类</span><br>template&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	T age;<br>	Person() :age(<span class="hljs-number">5</span>) &#123;&#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-keyword">print</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;age:&quot;</span> &lt;&lt; age &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-comment">//由类模板派生普通类时,提供实例化的类型参数,编译分配内容</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">SubPerson</span> : <span class="hljs-keyword">public</span> Person&lt;<span class="hljs-built_in">int</span>&gt; <br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">double</span> age;<br>	<span class="hljs-comment">//构造函数调用不需要指定Person后面的类型</span><br>	SubPerson() :age(<span class="hljs-number">10</span>), Person() &#123;&#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-keyword">print</span>() <br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;age:&quot;</span> &lt;&lt; age &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><br><br><span class="hljs-comment">//类模板派生类模板</span><br>template&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Animal</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	T age;<br>	Animal() :age(<span class="hljs-number">5</span>) &#123;&#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-keyword">print</span>() <br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;age&quot;</span> &lt;&lt; age &lt;&lt; endl;<br>	&#125;<br>&#125;;<br>template&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>, <span class="hljs-keyword">class</span> <span class="hljs-title class_">T1</span>&gt;   <span class="hljs-comment">//增加新的类属参数</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Cat</span> : <span class="hljs-keyword">public</span> Animal&lt;T&gt; <br>&#123;<br><span class="hljs-keyword">public</span>:<br>	T1 age;<br>	<span class="hljs-comment">//构造函数调用需要指定Animal后面的类型</span><br>	Cat() :Animal&lt;T&gt;(), age(<span class="hljs-number">10</span>) &#123;&#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-keyword">print</span>() <br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;age&quot;</span> &lt;&lt; age &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><br><br><span class="hljs-comment">//普通类派生类模板,需要增加类属参数</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span> <br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">int</span> age;<br>	Student() :age(<span class="hljs-number">5</span>) &#123;&#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-keyword">print</span>() <br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;age&quot;</span> &lt;&lt; age &lt;&lt; endl;<br>	&#125;<br>&#125;;<br>template&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">GoodStudent</span>:<span class="hljs-keyword">public</span> Student<br>&#123;<br><span class="hljs-keyword">public</span>:<br>	T age;<br>	GoodStudent() :Student(), age(<span class="hljs-number">10</span>) &#123;&#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-keyword">print</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;age&quot;</span> &lt;&lt; age &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><br><br><span class="hljs-built_in">int</span> main(<span class="hljs-keyword">void</span>)<br>&#123;<br>	Person&lt;<span class="hljs-built_in">double</span>&gt; p;<br>	SubPerson pa;<br>	Animal&lt;<span class="hljs-built_in">double</span>&gt; a;<br>	Cat&lt;<span class="hljs-built_in">int</span>,<span class="hljs-built_in">double</span>&gt; cat;<br>	Student s;<br>	GoodStudent&lt;<span class="hljs-built_in">double</span>&gt; gs;<br>	p.<span class="hljs-keyword">print</span>();<br>	pa.<span class="hljs-keyword">print</span>();<br>	a.<span class="hljs-keyword">print</span>();<br>	cat.<span class="hljs-keyword">print</span>();<br>	s.<span class="hljs-keyword">print</span>();<br>	gs.<span class="hljs-keyword">print</span>();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果:</span><br><span class="hljs-comment">//age:5</span><br><span class="hljs-comment">//age:10</span><br><span class="hljs-comment">//age5</span><br><span class="hljs-comment">//age10</span><br><span class="hljs-comment">//age5</span><br><span class="hljs-comment">//age10</span><br></code></pre></td></tr></table></figure>
-<h4><span id="6-类模版和友元">6. 类模版和友元：</span></h4>
+<h4 id="6-类模版和友元"><a href="#6-类模版和友元" class="header-anchor">¶</a>6. 类模版和友元：</h4>
 <p>模板类的友元分三类：</p>
 <p>1，非模板友元。</p>
 <p>2，约束模板友元，即友元的类型取决于类被实例化时的类型。</p>
 <p>3，非约束模板友元，即友元的所有具体化都是类的每一个具体化的友元。</p>
-<ul>
-<li>一个函数或函数模板或函数模板的实例化（这个函数可以是某个类的成员函数）可以是类或类模板的友元——这会使其成为由该类模板实例化的每个类模板的友元函数。</li>
-<li>一个类或类模板或者一个类模板的实例化可以是类或类模板的友元类——逻辑同上。</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>一个函数或函数模板或函数模板的实例化（这个函数可以是某个类的成员函数）可以是类或类模板的友元——这会使其成为由该类模板实例化的每个类模板的友元函数。</p>
+</li>
+<li class="lvl-2">
+<p>一个类或类模板或者一个类模板的实例化可以是类或类模板的友元类——逻辑同上。</p>
+</li>
 </ul>
 <p>所有友元中的函数的参数或者返回值可以是该模板类的类属参数。</p>
 <p>友元的内容十分复杂，具体内容详见代码的讲解：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-comment">//前置声明</span><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">base</span>;<br><br><span class="hljs-comment">//类/类模板作友元均需要提前声明</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A1</span>;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">TA2</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A2</span>;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">TA3</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A3</span>;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">TA4</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A4</span>;<br><br><span class="hljs-comment">//函数模板作友元需要提前声明;</span><br><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> T&gt;</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">externprint2</span><span class="hljs-params">()</span></span>;<br><br><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> T&gt;</span><br><span class="hljs-function">T <span class="hljs-title">getvalue2</span><span class="hljs-params">(<span class="hljs-type">const</span> base&lt;T&gt;&amp; b)</span></span>;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">base</span><br>&#123;             <br><span class="hljs-keyword">private</span>:<br>	T val;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">base</span>(T value) :<span class="hljs-built_in">val</span>(value) &#123;&#125;<br>	<span class="hljs-comment">//非模板友元：</span><br>	<span class="hljs-function"><span class="hljs-keyword">friend</span> <span class="hljs-type">void</span> <span class="hljs-title">externprint</span><span class="hljs-params">()</span></span>;              <span class="hljs-comment">//普通函数友元,函数没有参数,只能对全局类变量操作</span><br>	<span class="hljs-function"><span class="hljs-keyword">friend</span> T <span class="hljs-title">getvalue</span><span class="hljs-params">(<span class="hljs-type">const</span> base&lt;T&gt;&amp; b)</span></span>;    <span class="hljs-comment">//普通函数友元(不是函数模板),函数有参数,可以操作对应类型</span><br>	<span class="hljs-keyword">friend</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">A1</span>;                        <span class="hljs-comment">//类友元</span><br>	<span class="hljs-keyword">friend</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">A2</span>&lt;<span class="hljs-type">int</span>&gt;;                   <span class="hljs-comment">//类模板实例化的友元,只有此一种是其所有实例化的友元</span><br>	<span class="hljs-comment">//约束模板友元</span><br>	<span class="hljs-keyword">friend</span> <span class="hljs-type">void</span> <span class="hljs-built_in">externprint2</span>&lt;T&gt;();          <span class="hljs-comment">//函数模板友元,且两者的实例化友元一一对相应</span><br>	<span class="hljs-keyword">friend</span> T getvalue2&lt;&gt;(<span class="hljs-type">const</span> base&lt;T&gt;&amp; b); <span class="hljs-comment">//函数模板友元,且两者的实例化友元一一对相应</span><br>	<span class="hljs-keyword">friend</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">A3</span>&lt;T&gt;;                     <span class="hljs-comment">//类模板友元，且两者的实例化友元一一对应</span><br><br>	<span class="hljs-comment">//非约束模板友元</span><br>	<span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> T1&gt;</span><br><span class="hljs-function">	<span class="hljs-keyword">friend</span> <span class="hljs-type">bool</span> <span class="hljs-title">externprint3</span><span class="hljs-params">(T1 t)</span></span>;         <span class="hljs-comment">//函数模板友元,两者的对应关系是自由的</span><br>	<span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">TA2</span>&gt;<br>	<span class="hljs-keyword">friend</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">A4</span>;                        <span class="hljs-comment">//类模板友元,两者的对应关系是自由的</span><br>&#125;;<br><span class="hljs-function">base&lt;<span class="hljs-type">double</span>&gt; <span class="hljs-title">bd</span><span class="hljs-params">(<span class="hljs-number">3.14</span>)</span></span>;<br><span class="hljs-function">base&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">bi</span><span class="hljs-params">(<span class="hljs-number">5</span>)</span></span>;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">externprint</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-built_in">sizeof</span>(bi.val) &lt;&lt; <span class="hljs-string">&quot;,&quot;</span>;<br>	cout &lt;&lt; <span class="hljs-built_in">sizeof</span>(bd.val) &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span>;<br>&#125;<br><br><span class="hljs-comment">//可以重载多个类型</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">getvalue</span><span class="hljs-params">(<span class="hljs-type">const</span> base&lt;<span class="hljs-type">int</span>&gt;&amp; b)</span> </span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-string">&quot;int base:&quot;</span> &lt;&lt; b.val &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span> b.val;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">getvalue</span><span class="hljs-params">(<span class="hljs-type">const</span> base&lt;<span class="hljs-type">double</span>&gt;&amp; b)</span></span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-string">&quot;double base:&quot;</span> &lt;&lt; b.val &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span> b.val;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> T&gt;</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">externprint2</span><span class="hljs-params">()</span> </span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">if</span>(bd.val)<span class="hljs-comment">//证明是友元函数</span><br>	cout &lt;&lt; <span class="hljs-built_in">sizeof</span>(base&lt;T&gt;) &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> T&gt;</span><br><span class="hljs-function">T <span class="hljs-title">getvalue2</span><span class="hljs-params">(<span class="hljs-type">const</span> base&lt;T&gt;&amp; b)</span> </span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-built_in">typeid</span>(base&lt;T&gt;).<span class="hljs-built_in">id</span>() &lt;&lt; <span class="hljs-string">&quot; base:&quot;</span> &lt;&lt; b.val &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span> b.val;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> T1&gt;</span><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">externprint3</span><span class="hljs-params">(T1 t)</span> </span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">if</span> (t == bd.val)<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>&#125;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A1</span><br>&#123;<br>	base&lt;<span class="hljs-type">int</span>&gt; b1;<br>	base&lt;<span class="hljs-type">double</span>&gt; b2;<br>	base&lt;<span class="hljs-type">char</span>&gt; b3;<br>	base&lt;string&gt; b4;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">A1</span>() :<span class="hljs-built_in">b1</span>(<span class="hljs-number">3</span>), <span class="hljs-built_in">b2</span>(<span class="hljs-number">3.14</span>), <span class="hljs-built_in">b3</span>(<span class="hljs-string">&#x27;a&#x27;</span>), <span class="hljs-built_in">b4</span>(<span class="hljs-string">&quot;bbb&quot;</span>) &#123;&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span><br><span class="hljs-function">	</span>&#123; <br>		cout &lt;&lt; b<span class="hljs-number">1.</span>val &lt;&lt; endl; <br>		cout &lt;&lt; b<span class="hljs-number">2.</span>val &lt;&lt; endl;<br>		cout &lt;&lt; b<span class="hljs-number">3.</span>val &lt;&lt; endl;<br>		cout &lt;&lt; b<span class="hljs-number">4.</span>val &lt;&lt; endl;<br>		cout &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">TA2</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A2</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	base&lt;<span class="hljs-type">int</span>&gt; b1;<br>	base&lt;<span class="hljs-type">double</span>&gt; b2;<br>	base&lt;<span class="hljs-type">char</span>&gt; b3;<br>	base&lt;string&gt; b4;<br><span class="hljs-keyword">public</span>:<br>	TA2 bb;<br>	<span class="hljs-built_in">A2</span>() :<span class="hljs-built_in">b1</span>(<span class="hljs-number">3</span>), <span class="hljs-built_in">b2</span>(<span class="hljs-number">3.14</span>), <span class="hljs-built_in">b3</span>(<span class="hljs-string">&#x27;a&#x27;</span>), <span class="hljs-built_in">b4</span>(<span class="hljs-string">&quot;bbb&quot;</span>) &#123;&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt; b<span class="hljs-number">1.</span>val &lt;&lt; endl;<br>		cout &lt;&lt; b<span class="hljs-number">2.</span>val &lt;&lt; endl;<br>		cout &lt;&lt; b<span class="hljs-number">3.</span>val &lt;&lt; endl;<br>		cout &lt;&lt; b<span class="hljs-number">4.</span>val &lt;&lt; endl;<br>		bb = b<span class="hljs-number">1.</span>val;<br>		cout &lt;&lt; bb &lt;&lt; endl;<br>		cout &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">TA3</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A3</span> <br>&#123;<br>	base&lt;<span class="hljs-type">int</span>&gt; b1;<br>	base&lt;<span class="hljs-type">double</span>&gt; b2;<br>	base&lt;<span class="hljs-type">char</span>&gt; b3;<br>	base&lt;string&gt; b4;<br><span class="hljs-keyword">public</span>:<br>	TA3 bb;<br>	<span class="hljs-built_in">A3</span>() :<span class="hljs-built_in">b1</span>(<span class="hljs-number">3</span>), <span class="hljs-built_in">b2</span>(<span class="hljs-number">3.14</span>), <span class="hljs-built_in">b3</span>(<span class="hljs-string">&#x27;a&#x27;</span>), <span class="hljs-built_in">b4</span>(<span class="hljs-string">&quot;bbb&quot;</span>) &#123;&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span><br><span class="hljs-function">	</span>&#123; <br>		cout &lt;&lt; b<span class="hljs-number">1.</span>val &lt;&lt; endl;<br>		cout &lt;&lt; b<span class="hljs-number">2.</span>val &lt;&lt; endl;<br>		cout &lt;&lt; b<span class="hljs-number">3.</span>val &lt;&lt; endl;<br>		cout &lt;&lt; b<span class="hljs-number">4.</span>val &lt;&lt; endl;<br>		bb = b<span class="hljs-number">3.</span>val;<br>		cout &lt;&lt; bb &lt;&lt; endl;<br>		cout &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">print2</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt; b<span class="hljs-number">1.</span>val &lt;&lt; endl;<br>		bb = b<span class="hljs-number">1.</span>val;<br>		cout &lt;&lt; bb &lt;&lt; endl;<br>		cout &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">print3</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt; b<span class="hljs-number">3.</span>val &lt;&lt; endl;<br>		bb = b<span class="hljs-number">3.</span>val;<br>		cout &lt;&lt; bb &lt;&lt; endl;<br>		cout &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">TA4</span>&gt;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A4</span> <br>&#123;<br>	base&lt;<span class="hljs-type">int</span>&gt; b1;<br>	base&lt;<span class="hljs-type">double</span>&gt; b2;<br>	base&lt;<span class="hljs-type">char</span>&gt; b3;<br>	base&lt;string&gt; b4;<br><span class="hljs-keyword">public</span>:<br>	TA4 bb;<br>	<span class="hljs-built_in">A4</span>() :<span class="hljs-built_in">b1</span>(<span class="hljs-number">3</span>), <span class="hljs-built_in">b2</span>(<span class="hljs-number">3.14</span>), <span class="hljs-built_in">b3</span>(<span class="hljs-string">&#x27;a&#x27;</span>), <span class="hljs-built_in">b4</span>(<span class="hljs-string">&quot;bbb&quot;</span>) &#123;&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt; b<span class="hljs-number">1.</span>val &lt;&lt; endl;<br>		cout &lt;&lt; b<span class="hljs-number">2.</span>val &lt;&lt; endl;<br>		cout &lt;&lt; b<span class="hljs-number">3.</span>val &lt;&lt; endl;<br>		cout &lt;&lt; b<span class="hljs-number">4.</span>val &lt;&lt; endl;<br>		bb = b<span class="hljs-number">4.</span>val;<br>		cout &lt;&lt; bb &lt;&lt; endl;<br>		cout &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span><br><span class="hljs-function"></span>&#123;<br>	<br>	A1 a1;<br>	A2&lt;<span class="hljs-type">int</span>&gt; a21;<br>	A2&lt;<span class="hljs-type">double</span>&gt; a22;<br>	A3&lt;<span class="hljs-type">int</span>&gt; a31;<br>	A3&lt;<span class="hljs-type">char</span>&gt; a32;<br>	A4&lt;string&gt; a41;<br>	A4&lt;<span class="hljs-type">char</span>&gt; a42;<br>	<span class="hljs-built_in">externprint</span>();              <span class="hljs-comment">//访问全局base对象的数据成员</span><br>	<span class="hljs-comment">//externprint2&lt;int&gt;();      //访问bd是base&lt;double&gt;,由一一对应关系,此处无法访问bd.val</span><br>	<span class="hljs-built_in">externprint2</span>&lt;<span class="hljs-type">double</span>&gt;();     <span class="hljs-comment">//bd与double均为T,是一一对应关系,可以访问</span><br> 	cout &lt;&lt; <span class="hljs-built_in">externprint3</span>(<span class="hljs-number">3</span>) &lt;&lt; endl;     <span class="hljs-comment">//由于是自由对应关系,两个externprint3均可访问b.d</span><br>	cout &lt;&lt; <span class="hljs-built_in">externprint3</span>(<span class="hljs-number">3.14</span>) &lt;&lt; endl; <br>	cout &lt;&lt; endl;<br>	a<span class="hljs-number">1.</span><span class="hljs-built_in">print</span>();<br>	a<span class="hljs-number">21.</span><span class="hljs-built_in">print</span>();<br>	<span class="hljs-comment">//a22.print();              //只有A2&lt;int&gt;这个实例化是友元类,A2&lt;double&gt;因此没有访问base私有数据的权限</span><br>	<span class="hljs-comment">//a31.print();              //print访问多种类型,由于A3和base是模板类型的一一对应关系,此处只能访问int</span><br>	a<span class="hljs-number">31.</span><span class="hljs-built_in">print2</span>();				<span class="hljs-comment">//A3&lt;int&gt;只能对base&lt;int&gt;访问</span><br>	a<span class="hljs-number">32.</span><span class="hljs-built_in">print3</span>();               <span class="hljs-comment">//A3&lt;char&gt;只能对base&lt;char&gt;访问</span><br>	a<span class="hljs-number">41.</span><span class="hljs-built_in">print</span>();                <span class="hljs-comment">//由自由对应关系,可以访问任意base实例化的val</span><br>	<span class="hljs-comment">//a42.print();              //无法转换string为char</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果:</span><br><span class="hljs-comment">//4, 8</span><br><span class="hljs-comment">//8</span><br><span class="hljs-comment">//0</span><br><span class="hljs-comment">//1</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//3</span><br><span class="hljs-comment">//3.14</span><br><span class="hljs-comment">//a</span><br><span class="hljs-comment">//bbb</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//3</span><br><span class="hljs-comment">//3.14</span><br><span class="hljs-comment">//a</span><br><span class="hljs-comment">//bbb</span><br><span class="hljs-comment">//3</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//3</span><br><span class="hljs-comment">//3</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//a</span><br><span class="hljs-comment">//a</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//3</span><br><span class="hljs-comment">//3.14</span><br><span class="hljs-comment">//a</span><br><span class="hljs-comment">//bbb</span><br><span class="hljs-comment">//bbb</span><br></code></pre></td></tr></table></figure>
-<h4><span id="7-类模版和static成员">7. 类模版和static成员：</span></h4>
+<h4 id="7-类模版和static成员"><a href="#7-类模版和static成员" class="header-anchor">¶</a>7. 类模版和static成员：</h4>
 <p>从类模版实例化的每个模版类有自己的类模版数据成员，该模版类的所有对象共享一个static数据成员。</p>
 <p>每个模版类有自己的类模板的static数据成员副本，这之间不是直接共享的。</p>
 <p>和非模版类的static数据成员一样，模版类的static数据成员也应该在文件范围定义和初始化。</p>
@@ -465,7 +481,7 @@ T<sub>n</sub></em></strong></p>
     
       <span class="category-chain">
         
-  <a href="/categories/c-study/" class="category-chain-item">c++_study</a>
+  <a href="/xiaohei07/xiaohei07.github.io/categories/c-study/" class="category-chain-item">c++_study</a>
   
   
 
@@ -480,11 +496,11 @@ T<sub>n</sub></em></strong></p>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/c/">#c++</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/c/">#c++</a>
       
-        <a href="/tags/%E7%B1%BB/">#类</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/%E7%B1%BB/">#类</a>
       
-        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
       
     </div>
   
@@ -497,7 +513,7 @@ T<sub>n</sub></em></strong></p>
   <div class="license-box my-3">
     <div class="license-title">
       <div>c++类——模版(二)</div>
-      <div>http://example.com/2023/04/14/c++类——模版(二)/</div>
+      <div>https://github.com/xiaohei07/xiaohei07.github.io/2023/04/14/c++类——模版(二)/</div>
     </div>
     <div class="license-meta">
       
@@ -541,7 +557,7 @@ T<sub>n</sub></em></strong></p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/04/14/c++%E7%B1%BB%E2%80%94%E2%80%94%E6%A8%A1%E7%89%88(%E4%B8%89)/" title="c++类——模版(三)">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/04/14/c++%E7%B1%BB%E2%80%94%E2%80%94%E6%A8%A1%E7%89%88(%E4%B8%89)/" title="c++类——模版(三)">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">c++类——模版(三)</span>
                         <span class="visible-mobile">上一篇</span>
@@ -551,7 +567,7 @@ T<sub>n</sub></em></strong></p>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/04/14/c++%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E7%AC%A6/" title="c++基础——强制类型转换符">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/04/14/c++%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E7%AC%A6/" title="c++基础——强制类型转换符">
                         <span class="hidden-mobile">c++基础——强制类型转换符</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -611,7 +627,6 @@ T<sub>n</sub></em></strong></p>
 </div>
 
 
-
   </aside>
 
 
@@ -631,15 +646,18 @@ T<sub>n</sub></em></strong></p>
 
 
 
-  
-
-
 
   
 
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -686,7 +704,7 @@ T<sub>n</sub></em></strong></p>
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -737,8 +755,8 @@ T<sub>n</sub></em></strong></p>
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -760,93 +778,56 @@ T<sub>n</sub></em></strong></p>
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
+   <script>
+  Fluid.utils.createScript('https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.28.2/tocbot.min.js', function() {
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !window.tocbot) { return; }
+  var boardCtn = jQuery('#board-ctn');
+  var boardTop = boardCtn.offset().top;
 
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
+  window.tocbot.init(Object.assign({
+  tocSelector : '#toc-body',
+  contentSelector : '.markdown-body',
+  headingSelector : 'h1, h2, h3, h4, h5, h6',
+  linkClass : 'tocbot-link',
+  activeLinkClass : 'tocbot-active-link',
+  listClass : 'tocbot-list',
+  isCollapsedClass: 'tocbot-is-collapsed',
+  collapsibleClass: 'tocbot-is-collapsible',
+  scrollSmooth : true,
+  includeTitleTags: true,
+  includeHtml: true,
+  headingsOffset : -boardTop,
+  }, CONFIG.toc));
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
 
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
+  Fluid.events.registerRefreshCallback(function() {
+  if ('tocbot' in window) {
+  tocbot.refresh();
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !tocbot) {
+  return;
+  }
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
+  }
   });
-</script>
-
+  });
+  </script>
+  
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
 
 
   
@@ -859,17 +840,58 @@ T<sub>n</sub></em></strong></p>
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script defer src="/js/leancloud.js" ></script>
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
 
-  <script  src="/js/local-search.js" ></script>
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
+
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -877,7 +899,7 @@ T<sub>n</sub></em></strong></p>
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="（五）方法重写 1. 概念 继承是对基类的完全继承，但是很多时候基类的方法并不能完全适用于派生类，此时需要对派生类继承的方法进行重写(override)。 方法重写是在派生类中定义一个和基类的同名方法，方法内部的代码块被重新实现，重写后的运行只会运行重写完成的方法，而不会调用基类的同名方法。 2. 分类： 方法重写包括覆盖和扩展两种方法。 （1）覆盖基类方法： 当基类的方法实现与派生">
+    <meta name="description" content="¶（五）方法重写 ¶1. 概念 继承是对基类的完全继承，但是很多时候基类的方法并不能完全适用于派生类，此时需要对派生类继承的方法进行重写(override)。 方法重写是在派生类中定义一个和基类的同名方法，方法内部的代码块被重新实现，重写后的运行只会运行重写完成的方法，而不会调用基类的同名方法。 ¶2. 分类： 方法重写包括覆盖和扩展两种方法。 ¶（1）覆盖基类方法： 当基类的方法实现与派生类的方">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python进阶——类(三)方法重写、多态">
-<meta property="og:url" content="http://example.com/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%B8%89)%E6%96%B9%E6%B3%95%E9%87%8D%E7%94%A8%E3%80%81%E5%A4%9A%E6%80%81/index.html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（五）方法重写 1. 概念 继承是对基类的完全继承，但是很多时候基类的方法并不能完全适用于派生类，此时需要对派生类继承的方法进行重写(override)。 方法重写是在派生类中定义一个和基类的同名方法，方法内部的代码块被重新实现，重写后的运行只会运行重写完成的方法，而不会调用基类的同名方法。 2. 分类： 方法重写包括覆盖和扩展两种方法。 （1）覆盖基类方法： 当基类的方法实现与派生">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%B8%89)%E6%96%B9%E6%B3%95%E9%87%8D%E7%94%A8%E3%80%81%E5%A4%9A%E6%80%81/index.html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="¶（五）方法重写 ¶1. 概念 继承是对基类的完全继承，但是很多时候基类的方法并不能完全适用于派生类，此时需要对派生类继承的方法进行重写(override)。 方法重写是在派生类中定义一个和基类的同名方法，方法内部的代码块被重新实现，重写后的运行只会运行重写完成的方法，而不会调用基类的同名方法。 ¶2. 分类： 方法重写包括覆盖和扩展两种方法。 ¶（1）覆盖基类方法： 当基类的方法实现与派生类的方">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-23T02:18:06.000Z">
 <meta property="article:modified_time" content="2023-07-23T06:16:55.146Z">
@@ -32,7 +32,7 @@
   
   
   
-  <title>python进阶——类(三)方法重写、多态 - ZZHの个人博客</title>
+  <title>python进阶——类(三)方法重写、多态 - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -56,35 +56,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -118,7 +118,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -137,7 +137,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -149,7 +149,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -161,21 +161,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -195,7 +183,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -203,15 +199,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -225,7 +213,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -237,7 +225,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -267,7 +255,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -280,6 +268,11 @@
         
           
   <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        07xiaohei
+      </span>
     
     
       <span class="post-meta">
@@ -307,7 +300,7 @@
         
         
         
-          22 分钟
+          7 分钟
         
       </span>
     
@@ -355,29 +348,37 @@
             <!-- SEO header -->
             <h1 style="display: none">python进阶——类(三)方法重写、多态</h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：1 年前
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
-                <h3><span id="五方法重写">（五）方法重写</span></h3>
-<h4><span id="1-概念">1. 概念</span></h4>
+                <h3 id="五方法重写"><a href="#五方法重写" class="header-anchor">¶</a>（五）方法重写</h3>
+<h4 id="1-概念"><a href="#1-概念" class="header-anchor">¶</a>1. 概念</h4>
 <p>继承是对基类的完全继承，但是很多时候基类的方法并不能完全适用于派生类，此时需要对派生类继承的方法进行重写(override)。</p>
 <p>方法重写是在派生类中定义一个和基类的同名方法，方法内部的代码块被重新实现，重写后的运行只会运行重写完成的方法，而不会调用基类的同名方法。</p>
-<h4><span id="2-分类">2. 分类：</span></h4>
+<h4 id="2-分类"><a href="#2-分类" class="header-anchor">¶</a>2. 分类：</h4>
 <p>方法重写包括覆盖和扩展两种方法。</p>
-<h5><span id="1覆盖基类方法">（1）覆盖基类方法：</span></h5>
+<h5 id="1覆盖基类方法"><a href="#1覆盖基类方法" class="header-anchor">¶</a>（1）覆盖基类方法：</h5>
 <p>当基类的方法实现与派生类的方法实现完全不同时，可以通过覆盖直接重新编写。</p>
 <p>重写实际上就相当于派生类正常实现方法，只是该方法会导致继承而来的方法不再能够被调用。</p>
 <p>简单的例子如下：</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">class</span> <span class="hljs-title class_">father</span>:<br>    <span class="hljs-type">def</span> <span class="hljs-title">fun</span>(self):<br>        print(<span class="hljs-string">&quot;father&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">son</span>(father):<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        print(<span class="hljs-string">&quot;son&quot;</span>)<br>s=son()<br>s.<span class="hljs-keyword">fun</span>()<br># 运行结果：<br># son<br><br></code></pre></td></tr></table></figure>
 <p>对于__init__方法，派生类在不重写的情况下自动继承（继承顺序按上一篇博客决定），重写后也会发生覆盖，所以要注意此时的调用会无法访问基类__init__方法定义的属性。</p>
-<h5><span id="2扩展">（2）扩展：</span></h5>
+<h5 id="2扩展"><a href="#2扩展" class="header-anchor">¶</a>（2）扩展：</h5>
 <p>当派生类除了自身功能外，还需要基类的方法提供的功能，也就是派生类的方法实现包含基类的方法实现，可以通过扩展完成重写。</p>
 <p>扩展实际上就是覆盖，但是扩展在重写时使用super().基类方法完成调用基类方法，以此方式使基类方法成为了派生类方法的一部分。</p>
 <p>也可以使用父类名.方法(self)完成调用基类方法，但不推荐使用。</p>
 <p>简单的例子如下：</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">class</span> <span class="hljs-title class_">father</span>:<br>    <span class="hljs-type">def</span> <span class="hljs-title">fun</span>(self):<br>        print(<span class="hljs-string">&quot;father&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">son</span>(father):<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        <span class="hljs-keyword">super</span>().<span class="hljs-keyword">fun</span>()<br>        print(<span class="hljs-string">&quot;son&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">son2</span>(father):<br>    def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(self)</span></span>:<br>        father.<span class="hljs-keyword">fun</span>(self)<br>        print(<span class="hljs-string">&quot;son2&quot;</span>)<br>s=son()<br>s2=son2()<br>s.<span class="hljs-keyword">fun</span>()<br>s2.<span class="hljs-keyword">fun</span>()<br># 运行结果：<br># father<br># son<br># father<br># son2<br></code></pre></td></tr></table></figure>
-<h3><span id="六多态">（六）多态</span></h3>
-<h4><span id="1-概念">1. 概念：</span></h4>
+<h3 id="六多态"><a href="#六多态" class="header-anchor">¶</a>（六）多态</h3>
+<h4 id="1-概念"><a href="#1-概念" class="header-anchor">¶</a>1. 概念：</h4>
 <p>多态包括多态和多态性。</p>
 <p>多态是指一类事物具有多种形态，可以用单个类型的实体来表示不同场景中的不同类型——其对应的表现为不同的对象调用同一个接口，表示出了不同的状态。</p>
 <p>多态性是指不同功能的函数可以使用相同的函数名，也就是用一个函数名调用不同功能的函数。</p>
@@ -385,30 +386,39 @@
 <p>多态是在继承的基础上讨论的，多态必须发生在基类和派生类之间；多态要求必须发生方法重写——当然，即使对象所属的类之间没有继承关系也可以使用多态（不过多数时候这样的行为没有意义）。</p>
 <p>多态只关心对象的实例方法是否同名，不关心对象所属类型。</p>
 <p>多态实质就是：<strong>一个接口，多种实现</strong>。</p>
-<h4><span id="2-优点">2. 优点：</span></h4>
-<ul>
-<li>增加了程序的灵活性，增加了代码外部调用的灵活度，使其的通用性比较强。</li>
-<li>增加了程序的可扩展性，可以为已有接口建立新的实现。</li>
-<li>多态是调用的技巧，不会影响类的内部设计。</li>
+<h4 id="2-优点"><a href="#2-优点" class="header-anchor">¶</a>2. 优点：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>增加了程序的灵活性，增加了代码外部调用的灵活度，使其的通用性比较强。</p>
+</li>
+<li class="lvl-2">
+<p>增加了程序的可扩展性，可以为已有接口建立新的实现。</p>
+</li>
+<li class="lvl-2">
+<p>多态是调用的技巧，不会影响类的内部设计。</p>
+</li>
 </ul>
-<h4><span id="3-应用">3. 应用：</span></h4>
-<ul>
-<li><p>对象所属的类之间没有继承关系，可以使用多态：</p>
+<h4 id="3-应用"><a href="#3-应用" class="header-anchor">¶</a>3. 应用：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>对象所属的类之间没有继承关系，可以使用多态：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">dog</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">who</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I am dog&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">cat</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">who</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I am cat&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">bird</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">who</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I am bird&quot;</span>)<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">funwho</span>(<span class="hljs-params"><span class="hljs-built_in">object</span></span>):<br>    <span class="hljs-built_in">object</span>.who()<br>d=dog()<br>c=cat()<br>b=bird()<br>funwho(d)<br>funwho(c)<br>funwho(b)<br><span class="hljs-comment"># 运行结果:</span><br><span class="hljs-comment"># I am dog</span><br><span class="hljs-comment"># I am cat</span><br><span class="hljs-comment"># I am bird</span><br></code></pre></td></tr></table></figure>
 <p>用funwho函数调用传入对象的who方法，通过不同对象表现出了不同结果。</p>
-<p>扩展时不需要修改已有的内容，只需要定义新类和新方法，然后直接调用即可，便于扩展。</p></li>
-<li><p>有继承关系，可以使用，应用更广泛：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">animal</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">who</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I am an animal&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">dog</span>(<span class="hljs-title class_ inherited__">animal</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">who</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">super</span>().who()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I am dog&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">cat</span>(<span class="hljs-title class_ inherited__">animal</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">who</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">super</span>().who()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I am cat&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">bird</span>(<span class="hljs-title class_ inherited__">animal</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">who</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">super</span>().who()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I am bird&quot;</span>)<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">funwho</span>(<span class="hljs-params"><span class="hljs-built_in">object</span></span>):<br>    <span class="hljs-built_in">object</span>.who()<br>a=animal()<br>d=dog()<br>c=cat()<br>b=bird()<br>funwho(a)<br>funwho(d)<br>funwho(c)<br>funwho(b)<br><span class="hljs-comment"># 运行结果:</span><br><span class="hljs-comment"># I am an animal</span><br><span class="hljs-comment"># I am an animal</span><br><span class="hljs-comment"># I am dog</span><br><span class="hljs-comment"># I am an animal</span><br><span class="hljs-comment"># I am cat</span><br><span class="hljs-comment"># I am an animal</span><br><span class="hljs-comment"># I am bird</span><br></code></pre></td></tr></table></figure></li>
+<p>扩展时不需要修改已有的内容，只需要定义新类和新方法，然后直接调用即可，便于扩展。</p>
+</li>
+<li class="lvl-2">
+<p>有继承关系，可以使用，应用更广泛：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">animal</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">who</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I am an animal&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">dog</span>(<span class="hljs-title class_ inherited__">animal</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">who</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">super</span>().who()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I am dog&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">cat</span>(<span class="hljs-title class_ inherited__">animal</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">who</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">super</span>().who()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I am cat&quot;</span>)<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">bird</span>(<span class="hljs-title class_ inherited__">animal</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">who</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">super</span>().who()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I am bird&quot;</span>)<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">funwho</span>(<span class="hljs-params"><span class="hljs-built_in">object</span></span>):<br>    <span class="hljs-built_in">object</span>.who()<br>a=animal()<br>d=dog()<br>c=cat()<br>b=bird()<br>funwho(a)<br>funwho(d)<br>funwho(c)<br>funwho(b)<br><span class="hljs-comment"># 运行结果:</span><br><span class="hljs-comment"># I am an animal</span><br><span class="hljs-comment"># I am an animal</span><br><span class="hljs-comment"># I am dog</span><br><span class="hljs-comment"># I am an animal</span><br><span class="hljs-comment"># I am cat</span><br><span class="hljs-comment"># I am an animal</span><br><span class="hljs-comment"># I am bird</span><br></code></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4><span id="4-鸭子类型">4. 鸭子类型：</span></h4>
-<p>实际上，python的多态并不是显式支持的，其多态更像是python强大功能的体现之一，python对于动态类型的使用更多的是鸭子类型（Duck
-Typing）。</p>
+<h4 id="4-鸭子类型"><a href="#4-鸭子类型" class="header-anchor">¶</a>4. 鸭子类型：</h4>
+<p>实际上，python的多态并不是显式支持的，其多态更像是python强大功能的体现之一，python对于动态类型的使用更多的是鸭子类型（Duck Typing）。</p>
 <p>鸭子类型是程序设计中动态类型的一种风格，在这种风格中，一个对象的有效语义，不是由继承自特定类或者实现特定接口决定，而是由当前方法和属性的集合决定。</p>
 <p>鸭子类型实际上可以由James Whitcomb Riley的鸭子测试来表述：</p>
 <p>“当看到一只鸟走起来像鸭子、游泳起来像鸭子、叫起来也像鸭子，那么这只鸟就可以被称为鸭子。”</p>
 <p>鸭子类型中，关注的不是对象类型本身，而是对象的用法。</p>
 <p>鸭子类型的表现形式就是上面所谓“多态”的表现形式，函数不会检查对象的类型，而是只关注其是否有相关的方法，有的话即可正确调用。</p>
-<p>比起多态，鸭子类型更符合Python的"一切接对象"的设计理念。</p>
+<p>比起多态，鸭子类型更符合Python的&quot;一切接对象&quot;的设计理念。</p>
 
                 
               </div>
@@ -427,7 +437,7 @@ Typing）。</p>
     
       <span class="category-chain">
         
-  <a href="/categories/python-study/" class="category-chain-item">python_study</a>
+  <a href="/xiaohei07/xiaohei07.github.io/categories/python-study/" class="category-chain-item">python_study</a>
   
   
 
@@ -442,9 +452,9 @@ Typing）。</p>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
       
-        <a href="/tags/python/">#python</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/python/">#python</a>
       
     </div>
   
@@ -457,7 +467,7 @@ Typing）。</p>
   <div class="license-box my-3">
     <div class="license-title">
       <div>python进阶——类(三)方法重写、多态</div>
-      <div>http://example.com/2023/07/23/python进阶——类(三)方法重用、多态/</div>
+      <div>https://github.com/xiaohei07/xiaohei07.github.io/2023/07/23/python进阶——类(三)方法重用、多态/</div>
     </div>
     <div class="license-meta">
       
@@ -501,9 +511,9 @@ Typing）。</p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%B8%89)%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99%E3%80%81%E5%A4%9A%E6%80%81/" title="python进阶——类(三)方法重写、多态">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E5%9B%9B)%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95/" title="python进阶——类(四)常用内置方法">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">python进阶——类(三)方法重写、多态</span>
+                        <span class="hidden-mobile">python进阶——类(四)常用内置方法</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -511,7 +521,7 @@ Typing）。</p>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/07/15/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E6%A8%A1%E5%9D%97%E5%8C%96(%E4%BA%8C)%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%85/" title="python进阶——模块化(二)模块和包">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/07/15/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E6%A8%A1%E5%9D%97%E5%8C%96(%E4%BA%8C)%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%85/" title="python进阶——模块化(二)模块和包">
                         <span class="hidden-mobile">python进阶——模块化(二)模块和包</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -571,7 +581,6 @@ Typing）。</p>
 </div>
 
 
-
   </aside>
 
 
@@ -591,15 +600,18 @@ Typing）。</p>
 
 
 
-  
-
-
 
   
 
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -646,7 +658,7 @@ Typing）。</p>
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -697,8 +709,8 @@ Typing）。</p>
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -720,93 +732,56 @@ Typing）。</p>
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
+   <script>
+  Fluid.utils.createScript('https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.28.2/tocbot.min.js', function() {
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !window.tocbot) { return; }
+  var boardCtn = jQuery('#board-ctn');
+  var boardTop = boardCtn.offset().top;
 
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
+  window.tocbot.init(Object.assign({
+  tocSelector : '#toc-body',
+  contentSelector : '.markdown-body',
+  headingSelector : 'h1, h2, h3, h4, h5, h6',
+  linkClass : 'tocbot-link',
+  activeLinkClass : 'tocbot-active-link',
+  listClass : 'tocbot-list',
+  isCollapsedClass: 'tocbot-is-collapsed',
+  collapsibleClass: 'tocbot-is-collapsible',
+  scrollSmooth : true,
+  includeTitleTags: true,
+  includeHtml: true,
+  headingsOffset : -boardTop,
+  }, CONFIG.toc));
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
 
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
+  Fluid.events.registerRefreshCallback(function() {
+  if ('tocbot' in window) {
+  tocbot.refresh();
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !tocbot) {
+  return;
+  }
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
+  }
   });
-</script>
-
+  });
+  </script>
+  
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
 
 
   
@@ -819,17 +794,58 @@ Typing）。</p>
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script defer src="/js/leancloud.js" ></script>
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
 
-  <script  src="/js/local-search.js" ></script>
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
+
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -837,7 +853,7 @@ Typing）。</p>
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="（一）概述： 1. 简介： 多态字面意思就是多种形态，可以简单地概括为“一个接口，多种方法”，多态性指相同对象收到不同消息或不同对象收到相同消息时产生不同的实现动作，多态是面向对象编程领域的核心概念。 2. 目的： 封装可以使得代码模块化，继承可以扩展已存在的代码，他们的目的都是为了代码重用。而多态的目的则是为了“接口重用”。也即，不论传递过来的究竟是类的哪个对象，函数都能够通过同一个接口">
+    <meta name="description" content="¶（一）概述： ¶1. 简介： 多态字面意思就是多种形态，可以简单地概括为“一个接口，多种方法”，多态性指相同对象收到不同消息或不同对象收到相同消息时产生不同的实现动作，多态是面向对象编程领域的核心概念。 ¶2. 目的： 封装可以使得代码模块化，继承可以扩展已存在的代码，他们的目的都是为了代码重用。而多态的目的则是为了“接口重用”。也即，不论传递过来的究竟是类的哪个对象，函数都能够通过同一个接口调">
 <meta property="og:type" content="website">
 <meta property="og:title" content="c++类——多态(一)">
-<meta property="og:url" content="http://example.com/backup/backup[2023-04-10-22-06]/c++%E7%B1%BB%E2%80%94%E2%80%94%E5%A4%9A%E6%80%81(%E4%B8%80).html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（一）概述： 1. 简介： 多态字面意思就是多种形态，可以简单地概括为“一个接口，多种方法”，多态性指相同对象收到不同消息或不同对象收到相同消息时产生不同的实现动作，多态是面向对象编程领域的核心概念。 2. 目的： 封装可以使得代码模块化，继承可以扩展已存在的代码，他们的目的都是为了代码重用。而多态的目的则是为了“接口重用”。也即，不论传递过来的究竟是类的哪个对象，函数都能够通过同一个接口">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/backup/backup[2023-04-10-22-06]/c++%E7%B1%BB%E2%80%94%E2%80%94%E5%A4%9A%E6%80%81(%E4%B8%80).html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="¶（一）概述： ¶1. 简介： 多态字面意思就是多种形态，可以简单地概括为“一个接口，多种方法”，多态性指相同对象收到不同消息或不同对象收到相同消息时产生不同的实现动作，多态是面向对象编程领域的核心概念。 ¶2. 目的： 封装可以使得代码模块化，继承可以扩展已存在的代码，他们的目的都是为了代码重用。而多态的目的则是为了“接口重用”。也即，不论传递过来的究竟是类的哪个对象，函数都能够通过同一个接口调">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-08T03:42:28.000Z">
 <meta property="article:modified_time" content="2023-04-10T14:06:00.386Z">
@@ -33,7 +33,7 @@
   
   
   
-  <title>c++类——多态(一) - ZZHの个人博客</title>
+  <title>c++类——多态(一) - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -51,35 +51,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -113,7 +113,7 @@
 <div class="header-inner" style="height: 60vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -132,7 +132,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -144,7 +144,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -156,21 +156,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -190,7 +178,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -198,15 +194,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -220,7 +208,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -232,7 +220,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -262,7 +250,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -296,50 +284,68 @@
                 
 
 <article class="page-content">
-  <h3><span id="一概述">（一）概述：</span></h3>
-<h4><span id="1-简介">1. 简介：</span></h4>
+  <h3 id="一概述"><a href="#一概述" class="header-anchor">¶</a>（一）概述：</h3>
+<h4 id="1-简介"><a href="#1-简介" class="header-anchor">¶</a>1. 简介：</h4>
 <p>多态字面意思就是多种形态，可以简单地概括为“一个接口，多种方法”，多态性指相同对象收到不同消息或不同对象收到相同消息时产生不同的实现动作，多态是面向对象编程领域的核心概念。</p>
-<h4><span id="2-目的">2. 目的：</span></h4>
+<h4 id="2-目的"><a href="#2-目的" class="header-anchor">¶</a>2. 目的：</h4>
 <p>封装可以使得代码模块化，继承可以扩展已存在的代码，他们的目的都是为了代码重用。而多态的目的则是为了“接口重用”。也即，不论传递过来的究竟是类的哪个对象，函数都能够通过同一个接口调用到适应各自对象的实现方法。</p>
-<h4><span id="3-c的应用">3. c++的应用：</span></h4>
+<h4 id="3-c的应用"><a href="#3-c的应用" class="header-anchor">¶</a>3. c++的应用：</h4>
 <p>当类之间存在层次结构，并且类之间是通过继承关联时，就会用到多态。C++中的多态意味着调用成员函数时，会根据调用函数的对象的类型来执行不同的函数。</p>
 <p>c++中多态最常见的用法就是声明基类类型的指针，利用该指针指向任意一个子类对象，调用相应的虚函数，可以根据指向的子类的不同而实现不同的方法。</p>
-<h4><span id="4-分类">4. 分类：</span></h4>
+<h4 id="4-分类"><a href="#4-分类" class="header-anchor">¶</a>4. 分类：</h4>
 <p>C++支持两种多态性：编译时多态性，运行时多态性。前者被称为静态多态（也叫静态联编），通过重载函数和泛型编程实现；后者被称为动态多态（也叫动态联编），主要依赖虚函数体现。</p>
 <p>两者的实质区别就是函数地址是早绑定还是晚绑定。如果函数的调用，在编译器编译期间就可以确定函数的调用地址，并生产代码，是静态的，就是说地址是早绑定的。而如果函数调用的地址不能在编译器期间确定，需要在运行时才确定，这就属于晚绑定。</p>
 <p>一般情况下，我们说明的多态多数是指动态多态。</p>
-<h3><span id="二静态联编">（二）静态联编：</span></h3>
-<h4><span id="1-联编">1. 联编：</span></h4>
+<h3 id="二静态联编"><a href="#二静态联编" class="header-anchor">¶</a>（二）静态联编：</h3>
+<h4 id="1-联编"><a href="#1-联编" class="header-anchor">¶</a>1. 联编：</h4>
 <p>联编是指一个程序模块、代码之间相互关联的过程。</p>
 <p>将源代码中的函数调用解释为执行特定的函数代码块的过程称为函数名联编。</p>
 <p>同一个名称的函数有多种，联编可以把调用和具体的实现进行链接映射到某个最适合的函数。</p>
-<h4><span id="2-概念">2. 概念：</span></h4>
+<h4 id="2-概念"><a href="#2-概念" class="header-anchor">¶</a>2. 概念：</h4>
 <p>C++编译器在编译过程中完成的编译叫做静态联编，也就是早期匹配。因为这种联编实在程序开始运行之前就完成了。在程序编译阶段进行的这种联编在编译时就解决了程序的操作调用与执行该操作代码间的关系。</p>
 <p>静态联编的效率高，但灵活性差。</p>
-<h4><span id="3-体现">3. 体现：</span></h4>
+<h4 id="3-体现"><a href="#3-体现" class="header-anchor">¶</a>3. 体现：</h4>
 <p>普通成员函数重载可表达为两种形式：</p>
-<ul>
-<li><p>只在一个类说明中重载：</p>
-<p>等价于一般函数重载，编译器可以根据其形参表进行区分。</p></li>
-<li><p>基类的成员在派生类重载：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>只在一个类说明中重载：</p>
+<p>等价于一般函数重载，编译器可以根据其形参表进行区分。</p>
+</li>
+<li class="lvl-2">
+<p>基类的成员在派生类重载：</p>
 <p>有三种编译区分方法：</p>
-<ul>
-<li>根据参数的特征加以区分。（该方法实际上和上面的类似，只是可以都在任何一个继承层次上）</li>
-<li>使用"::"加以区分。</li>
-<li>根据类对象加以区分。</li>
-</ul></li>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>根据参数的特征加以区分。（该方法实际上和上面的类似，只是可以都在任何一个继承层次上）</p>
+</li>
+<li class="lvl-4">
+<p>使用&quot;::&quot;加以区分。</p>
+</li>
+<li class="lvl-4">
+<p>根据类对象加以区分。</p>
+</li>
+</ul>
+</li>
 </ul>
 <p>实际上，静态联编对函数的选择是基于指向对象的指针或者引用的类型。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">double</span> a;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">A</span>(<span class="hljs-type">double</span> i = <span class="hljs-number">0</span>) :<span class="hljs-built_in">a</span>(i) &#123;&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt;<span class="hljs-string">&quot;A1:&quot;</span> &lt;&lt; <span class="hljs-string">&quot;a:&quot;</span> &lt;&lt; a &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-type">bool</span>)</span> </span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;A2:&quot;</span> &lt;&lt; <span class="hljs-string">&quot;a:&quot;</span> &lt;&lt; a &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">B</span>:<span class="hljs-keyword">public</span> A<br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">double</span> b;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">B</span>(<span class="hljs-type">double</span> i = <span class="hljs-number">0</span>) :<span class="hljs-built_in">b</span>(i) &#123;&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;B1:&quot;</span> &lt;&lt; <span class="hljs-string">&quot;b:&quot;</span> &lt;&lt; b &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">print</span><span class="hljs-params">(string)</span></span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;B2:&quot;</span> &lt;&lt; <span class="hljs-string">&quot;b:&quot;</span> &lt;&lt; b &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span><br><span class="hljs-function"></span>&#123;<br>	A a;<br>	B b;<br>	a.<span class="hljs-built_in">print</span>();      <span class="hljs-comment">//A1</span><br>	a.<span class="hljs-built_in">print</span>(<span class="hljs-literal">true</span>);  <span class="hljs-comment">//A2</span><br>	b.<span class="hljs-built_in">print</span>();      <span class="hljs-comment">//B1</span><br>	b.<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;1&quot;</span>);   <span class="hljs-comment">//B2</span><br>	a.<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;1&quot;</span>);   <span class="hljs-comment">//A2,强制类型转换</span><br>	<span class="hljs-comment">//b.print(true);//无法匹配</span><br>	b.A::<span class="hljs-built_in">print</span>();   <span class="hljs-comment">//A1</span><br>	b.A::<span class="hljs-built_in">print</span>(<span class="hljs-literal">true</span>);   <span class="hljs-comment">//A2</span><br>	b.B::<span class="hljs-built_in">print</span>();   <span class="hljs-comment">//B1</span><br>	b.B::<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;1&quot;</span>);<span class="hljs-comment">//B2</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h3><span id="三类指针的关系">（三）类指针的关系：</span></h3>
+<h3 id="三类指针的关系"><a href="#三类指针的关系" class="header-anchor">¶</a>（三）类指针的关系：</h3>
 <p>基类指针、引用和派生类指针、引用与基类对象和派生类对象有4种的可能匹配：</p>
-<ul>
-<li><p>直接用基类指针、引用来引用基类对象。</p></li>
-<li><p>直接用派生类指针、引用来引用派生类对象。</p></li>
-<li><p>用基类的指针、引用来引用一个派生类对象：</p>
-<p>只能访问从基类继承的对象，除非对这个基类指针进行强制类型转换成派生类指针，用派生类指针访问。</p></li>
-<li><p>用派生类指针、引用来引用一个基类对象：</p>
-<p>不安全，会越界访问，不被允许，派生类指针只有经过强制类型转换之后才能引用基类对象。</p></li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>直接用基类指针、引用来引用基类对象。</p>
+</li>
+<li class="lvl-2">
+<p>直接用派生类指针、引用来引用派生类对象。</p>
+</li>
+<li class="lvl-2">
+<p>用基类的指针、引用来引用一个派生类对象：</p>
+<p>只能访问从基类继承的对象，除非对这个基类指针进行强制类型转换成派生类指针，用派生类指针访问。</p>
+</li>
+<li class="lvl-2">
+<p>用派生类指针、引用来引用一个基类对象：</p>
+<p>不安全，会越界访问，不被允许，派生类指针只有经过强制类型转换之后才能引用基类对象。</p>
+</li>
 </ul>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-meta">#include&lt;iostream&gt;</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-title">std</span>;<br><span class="hljs-keyword">class</span> <span class="hljs-title">A</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-built_in">double</span> a;<br><span class="hljs-keyword">public</span>:<br>	A(<span class="hljs-built_in">double</span> i = <span class="hljs-number">0</span>) :a(i) &#123;&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span>()</span> <br>	&#123;<br>		cout &lt;&lt; typeid(<span class="hljs-keyword">this</span>).name() &lt;&lt; endl;<br>		cout &lt;&lt;<span class="hljs-string">&quot;A1:&quot;</span> &lt;&lt; <span class="hljs-string">&quot;a:&quot;</span> &lt;&lt; a &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span>(<span class="hljs-params"><span class="hljs-built_in">bool</span></span>)</span> <br>	&#123;<br>		cout &lt;&lt; typeid(<span class="hljs-keyword">this</span>).name() &lt;&lt; endl;<br>		cout &lt;&lt; <span class="hljs-string">&quot;A2:&quot;</span> &lt;&lt; <span class="hljs-string">&quot;a:&quot;</span> &lt;&lt; a &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title">B</span>:<span class="hljs-title">public</span> <span class="hljs-title">A</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-built_in">double</span> b;<br><span class="hljs-keyword">public</span>:<br>	B(<span class="hljs-built_in">double</span> i = <span class="hljs-number">0</span>) :b(i) &#123;&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span>()</span><br>	&#123;<br>		cout &lt;&lt; typeid(<span class="hljs-keyword">this</span>).name() &lt;&lt; endl;<br>		cout &lt;&lt; typeid((A*)<span class="hljs-keyword">this</span>).name() &lt;&lt; endl;<br>		cout &lt;&lt; <span class="hljs-string">&quot;B1:&quot;</span> &lt;&lt; <span class="hljs-string">&quot;b:&quot;</span> &lt;&lt; b &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span>(<span class="hljs-params"><span class="hljs-built_in">string</span></span>)</span><br>	&#123;<br>		cout &lt;&lt; typeid(<span class="hljs-keyword">this</span>).name() &lt;&lt; endl;<br>		cout &lt;&lt; <span class="hljs-string">&quot;B2:&quot;</span> &lt;&lt; <span class="hljs-string">&quot;b:&quot;</span> &lt;&lt; b &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-function"><span class="hljs-built_in">int</span> <span class="hljs-title">main</span>()</span> <br>&#123;<br>	<span class="hljs-function">A <span class="hljs-title">a</span>(<span class="hljs-params"><span class="hljs-number">3</span></span>)</span>;<br>	<span class="hljs-function">B <span class="hljs-title">b</span>(<span class="hljs-params"><span class="hljs-number">4</span></span>)</span>;<br>	A* pa = &amp;a;<br>	pa-&gt;print();<br>	cout &lt;&lt; endl;<br>	B* pb = &amp;b;<br>	pb-&gt;print();<br>	cout &lt;&lt; endl;<br>	pa = &amp;b;<br>	pa-&gt;print();<br>	cout &lt;&lt; endl;<br>	B* pbb = (B*)pa;<br>	pbb-&gt;print();<br>	cout &lt;&lt; endl;<br>	A* paa = (A*)&amp;pb; <span class="hljs-comment">//A中数未初始化</span><br>	paa-&gt;print();<br>	cout &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
@@ -394,7 +400,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -445,8 +451,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -468,23 +474,21 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  <script defer src="/js/leancloud.js" ></script>
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -492,7 +496,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

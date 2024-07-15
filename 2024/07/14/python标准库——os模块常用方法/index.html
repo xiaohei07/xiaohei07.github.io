@@ -7,25 +7,25 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="[TOC] 写在前面： Python的os模块是Python的标准库之一，是访问多种操作系统的接口，主要涉及与文件系统的交互和操作功能 ，具有如下作用：  路径操作(os.path模块) 文件和目录操作、文件属性获取 执行系统命令、执行特定系统功能 环境变量管理 进程管理  鉴于网上对os相关方法的说明和使用大多太过含糊简单（特别是某菜鸟编程），或者存在错误理解和使用（特指某">
+    <meta name="description" content="写在前面：   0.os.path模块中使用的数据类型   1.os.path模块：  (1)os.path.join方法： (2)os.path.abspath方法： (2)[续]os.path.realpath方法： (2)[续]os.path.isabs方法： (3)os.path.splitext方法： (3)[续]os.path.split方法： (3)[续]os.path.di">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python标准库——os模块常用方法">
-<meta property="og:url" content="http://example.com/2024/07/14/python%E6%A0%87%E5%87%86%E5%BA%93%E2%80%94%E2%80%94os%E6%A8%A1%E5%9D%97%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/index.html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="[TOC] 写在前面： Python的os模块是Python的标准库之一，是访问多种操作系统的接口，主要涉及与文件系统的交互和操作功能 ，具有如下作用：  路径操作(os.path模块) 文件和目录操作、文件属性获取 执行系统命令、执行特定系统功能 环境变量管理 进程管理  鉴于网上对os相关方法的说明和使用大多太过含糊简单（特别是某菜鸟编程），或者存在错误理解和使用（特指某">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/2024/07/14/python%E6%A0%87%E5%87%86%E5%BA%93%E2%80%94%E2%80%94os%E6%A8%A1%E5%9D%97%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="写在前面：   0.os.path模块中使用的数据类型   1.os.path模块：  (1)os.path.join方法： (2)os.path.abspath方法： (2)[续]os.path.realpath方法： (2)[续]os.path.isabs方法： (3)os.path.splitext方法： (3)[续]os.path.split方法： (3)[续]os.path.di">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s21.ax1x.com/2024/04/15/pFvcmzq.png">
 <meta property="article:published_time" content="2024-07-14T03:29:11.000Z">
-<meta property="article:modified_time" content="2024-07-14T11:48:14.057Z">
+<meta property="article:modified_time" content="2024-07-15T16:04:57.931Z">
 <meta property="article:author" content="07xiaohei">
 <meta property="article:tag" content="知识点">
 <meta property="article:tag" content="python">
@@ -34,7 +34,7 @@
   
   
   
-  <title>python标准库——os模块常用方法 - ZZHの个人博客</title>
+  <title>python标准库——os模块常用方法 - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -58,35 +58,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -120,7 +120,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -139,7 +139,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -151,7 +151,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -163,21 +163,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -197,7 +185,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -205,15 +201,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -227,7 +215,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -239,7 +227,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -269,7 +257,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -282,6 +270,11 @@
         
           
   <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        07xiaohei
+      </span>
     
     
       <span class="post-meta">
@@ -298,7 +291,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          19k 字
+          20k 字
         
       </span>
     
@@ -309,7 +302,7 @@
         
         
         
-          159 分钟
+          49 分钟
         
       </span>
     
@@ -357,96 +350,174 @@
             <!-- SEO header -->
             <h1 style="display: none">python标准库——os模块常用方法</h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：10 分钟前
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
-                <p>[TOC]</p>
-<h3><span id="写在前面">写在前面：</span></h3>
-<p>Python的os模块是Python的标准库之一，是访问多种操作系统的接口，主要涉及与<strong>文件系统的交互和操作功能</strong>
-，具有如下作用：</p>
-<ul>
-<li>路径操作(<a href="#os.path"><strong>os.path模块</strong></a>)</li>
-<li>文件和目录操作、文件属性获取</li>
-<li>执行系统命令、执行特定系统功能</li>
-<li>环境变量管理</li>
-<li>进程管理</li>
+                <div class="toc">
+<!-- toc -->
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><a href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2">写在前面：</a></p>
+</li>
+<li class="lvl-2">
+<p><a href="#0ospath%E6%A8%A1%E5%9D%97%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">0.os.path模块中使用的数据类型</a></p>
+</li>
+<li class="lvl-2">
+<p><a href="#1ospath%E6%A8%A1%E5%9D%97">1.os.path模块：</a></p>
+<ul class="lvl-2">
+<li class="lvl-4"><a href="#1ospathjoin%E6%96%B9%E6%B3%95">(1)os.path.join方法：</a></li>
+<li class="lvl-4"><a href="#2ospathabspath%E6%96%B9%E6%B3%95">(2)os.path.abspath方法：</a></li>
+<li class="lvl-4"><a href="#2%E7%BB%ADospathrealpath%E6%96%B9%E6%B3%95">(2)[续]os.path.realpath方法：</a></li>
+<li class="lvl-4"><a href="#2%E7%BB%ADospathisabs%E6%96%B9%E6%B3%95">(2)[续]os.path.isabs方法：</a></li>
+<li class="lvl-4"><a href="#3ospathsplitext%E6%96%B9%E6%B3%95">(3)os.path.splitext方法：</a></li>
+<li class="lvl-4"><a href="#3%E7%BB%ADospathsplit%E6%96%B9%E6%B3%95">(3)[续]os.path.split方法：</a></li>
+<li class="lvl-4"><a href="#3%E7%BB%ADospathdirname%E6%96%B9%E6%B3%95">(3)[续]os.path.dirname方法：</a></li>
+<li class="lvl-4"><a href="#3%E7%BB%ADospathbasename%E6%96%B9%E6%B3%95">(3)[续]os.path.basename方法：</a></li>
+<li class="lvl-4"><a href="#4ospathexists%E6%96%B9%E6%B3%95">(4)os.path.exists方法：</a></li>
+<li class="lvl-4"><a href="#4%E7%BB%ADospathisdir%E6%96%B9%E6%B3%95">(4)[续]os.path.isdir方法：</a></li>
+<li class="lvl-4"><a href="#4%E7%BB%ADospathisfile%E6%96%B9%E6%B3%95">(4)[续]os.path.isfile方法：</a></li>
+<li class="lvl-4"><a href="#5ospathnormpath%E6%96%B9%E6%B3%95">(5)os.path.normpath方法：</a></li>
+</ul>
+</li>
+<li class="lvl-2">
+<p><a href="#2osgetcwd%E6%96%B9%E6%B3%95">2.os.getcwd方法：</a></p>
+</li>
+<li class="lvl-2">
+<p><a href="#2%E7%BB%ADosgetcwdu%E6%96%B9%E6%B3%95python3%E5%B7%B2%E7%A7%BB%E9%99%A4">2.[续]os.getcwdu方法(Python3已移除)：</a></p>
+</li>
+<li class="lvl-2">
+<p><a href="#2%E7%BB%ADosgetcwdb%E6%96%B9%E6%B3%95%E4%BB%85%E9%99%90python3">2.[续]os.getcwdb方法(仅限Python3)：</a></p>
+</li>
+<li class="lvl-2">
+<p><a href="#3oswalk%E6%96%B9%E6%B3%95">3.os.walk方法：</a></p>
+</li>
+<li class="lvl-2">
+<p><a href="#4osmakedirs%E6%96%B9%E6%B3%95">4.os.makedirs方法：</a></p>
+</li>
+<li class="lvl-2">
+<p><a href="#4%E7%BB%ADosmkdir%E6%96%B9%E6%B3%95">4[续].os.mkdir方法：</a></p>
+</li>
+</ul>
+<!-- tocstop -->
+</div>
+<h3 id="写在前面"><a href="#写在前面" class="header-anchor">¶</a>写在前面：</h3>
+<p>Python的os模块是Python的标准库之一，是访问多种操作系统的接口，主要涉及与<strong>文件系统的交互和操作功能</strong> ，具有如下作用：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>路径操作(<a href="#os.path"><strong>os.path模块</strong></a>)</p>
+</li>
+<li class="lvl-2">
+<p>文件和目录操作、文件属性获取</p>
+</li>
+<li class="lvl-2">
+<p>执行系统命令、执行特定系统功能</p>
+</li>
+<li class="lvl-2">
+<p>环境变量管理</p>
+</li>
+<li class="lvl-2">
+<p>进程管理</p>
+</li>
 </ul>
 <p>鉴于网上对os相关方法的说明和使用大多太过含糊简单（特别是某菜鸟编程），或者存在错误理解和使用（特指某些博客），所以写了这篇文章，也是方便自己后续忘记时再次查看os模块中一些常用方法的特定用法</p>
 <p>如果你能够读懂os模块的各个方法的源码，并且有耐心去读的话，那我建议跳过我的使用部分，可能看源码能够有更准确通透的理解。</p>
-<p>观前提醒：需要读者起码具备基本的python代码阅读能力，对python中的字符串有基本的了解（特别是反斜杠""），能够理解什么是字符串的转义，什么是相对路径、绝对路径（不要拿着什么文件名就问为什么找不到这个文件），并且起码了解windows下的路径(Linux都懂的话看我的博客我觉得应该没什么障碍)，有不懂的部分自行谷歌百度吧，总有比我讲的好的</p>
+<p>观前提醒：需要读者起码具备基本的python代码阅读能力，对python中的字符串有基本的了解（特别是反斜杠&quot;&quot;），能够理解什么是字符串的转义，什么是相对路径、绝对路径（不要拿着什么文件名就问为什么找不到这个文件），并且起码了解windows下的路径(Linux都懂的话看我的博客我觉得应该没什么障碍)，有不懂的部分自行谷歌百度吧，总有比我讲的好的</p>
 <p><strong>更重要的一点：如果你是初学者，希望使用os模块完成简单的路径操作的工作的话，我建议直接学pathlib模块的方法，比os要好，os太繁琐了，只是很多开源项目都是用的os模块，一点不懂的话可能看不懂内容，这个怎么取舍看各位了</strong></p>
 <p>学习pathlib模块的话可以先看这篇知乎的文章入个门：</p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/475661402">Python路径操作模块pathlib，看这篇就够了！
-- 知乎 (zhihu.com)</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/139783331">python路径操作新标准：pathlib
-模块 - 知乎 (zhihu.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/475661402">Python路径操作模块pathlib，看这篇就够了！ - 知乎 (zhihu.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/139783331">python路径操作新标准：pathlib 模块 - 知乎 (zhihu.com)</a></p>
 <p>我的整理的话没有什么逻辑，基本是用了什么方法就整理了什么方法，后续也会不定期更新没有的方法(只要用上了就更)</p>
-<h3><span id="0ospath模块中使用的数据类型">0.os.path模块中使用的数据类型</span></h3>
+<h3 id="0ospath模块中使用的数据类型"><a href="#0ospath模块中使用的数据类型" class="header-anchor">¶</a>0.os.path模块中使用的数据类型</h3>
 <p>如果是初学者，可以跳过下面的复杂说明，并<strong>默认os模块中的方法支持的数据类型为str类型和bytes类型，可以先不考虑自定义的路径类</strong></p>
 <p>os模块中的<strong>os.path模块</strong>对各个方法提供了相应的类型别名，指定了各个方法支持传入的数据类型，为了避免使用python的<strong>typing库</strong>一次次进行<strong>类型注解</strong>，或能够处理特定的数据类型，os模块使用了自定义的类<strong>PathLike</strong>和其他库中支持的类型别名<strong>Anystr、StrPath、BytesPath、StrOrBytesPath</strong>进行类型注解，以说明每个方法可以使用的数据类型</p>
 <p>注意，<strong>windows</strong>下请查看stdlib库的<strong>ntpath.pyi文件</strong>以获得os.path模块对各方法的类型注解，<strong>Linux</strong>下则需要查看stdlib库的<strong>pkgutil.pyi</strong>文件，另外，有部分方法的类型注解存放在<strong>genericpath.pyi文件</strong>下，此部分是两个操作系统共用的</p>
 <p>此处对使用的各个类型进行详细的说明：</p>
-<ul>
-<li><p><strong>PathLike</strong><a name="os.PathLike"> </a>：class
-PathLike(abc.ABC)</p>
-<p>是一个继承自抽象基类(abstract base class,
-ABC)，用于实现文件系统路径协议，<strong>使用者可以通过继承PathLike类，实现该类的抽象方法来自定义自己的路径类</strong></p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>PathLike</strong><span id="os.PathLike"> </span> ：class PathLike(abc.ABC)</p>
+<p>是一个继承自抽象基类(abstract base class, ABC)，用于实现文件系统路径协议，<strong>使用者可以通过继承PathLike类，实现该类的抽象方法来自定义自己的路径类</strong></p>
 <p>PathLike类含有的方法包括：</p>
-<ul>
-<li><p>**__fspath__<strong>：（<span class="citation" data-cites="abc.abstractmethod">@abc.abstractmethod</span>）</strong>返回对象的文件系统路径表示<strong>，可以是</strong>str<strong>或者</strong>bytes**类型，即在自定义类实现该方法，使得类的实例对象能够对应一个指定的路径，然后可以使用open()方法或者os模块的方法将实例对象作为一个参数传入这些方法中进行相应的路径操作</p>
-<p>__fspath__是所有继承PathLike的子类必须实现的方法</p></li>
-<li><p><strong>__subclasshook_<em><strong>：（<span class="citation" data-cites="classmethod">@classmethod</span>）</strong>检查传入的类cls是否是PathLike的子类，通过其是否实现了
-</em>_fspath__
-方法作为判断标准，并返回判断结果</strong>，如果传入的类继承PathLike但未实现__fspath__
-方法，也认为该类并不是PathLike类的子类</p></li>
-<li><p>**__class_getitem__**：用于支持PathLike的泛型语法</p></li>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p><strong>__fspath__</strong>：（@abc.abstractmethod）<strong>返回对象的文件系统路径表示</strong>，可以是<strong>str</strong>或者<strong>bytes</strong>类型，即在自定义类实现该方法，使得类的实例对象能够对应一个指定的路径，然后可以使用open()方法或者os模块的方法将实例对象作为一个参数传入这些方法中进行相应的路径操作</p>
+<p>__fspath__是所有继承PathLike的子类必须实现的方法</p>
+</li>
+<li class="lvl-4">
+<p><strong>__subclasshook__</strong>：（@classmethod）<strong>检查传入的类cls是否是PathLike的子类，通过其是否实现了 <em>_fspath</em>_ 方法作为判断标准，并返回判断结果</strong>，如果传入的类继承PathLike但未实现__fspath__ 方法，也认为该类并不是PathLike类的子类</p>
+</li>
+<li class="lvl-4">
+<p><strong>_<em>class_getitem</em>_</strong>：用于支持PathLike的泛型语法</p>
+</li>
 </ul>
 <p>其源代码如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">PathLike</span>(abc.ABC):<br><br>    <span class="hljs-string">&quot;&quot;&quot;Abstract base class for implementing the file system path protocol.&quot;&quot;&quot;</span><br><br><span class="hljs-meta">    @abc.abstractmethod</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__fspath__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Return the file system path representation of the object.&quot;&quot;&quot;</span><br>        <span class="hljs-comment"># NotImplementedError继承自RuntimeError</span><br>        <span class="hljs-keyword">raise</span> NotImplementedError<br><br><span class="hljs-meta">    @classmethod</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__subclasshook__</span>(<span class="hljs-params">cls, subclass</span>):<br>        <span class="hljs-keyword">if</span> cls <span class="hljs-keyword">is</span> PathLike:<br>        	<span class="hljs-comment"># _check_methods是_collections_abc的一个内置方法，用于检查类是否有对应方法名</span><br>            <span class="hljs-keyword">return</span> _check_methods(subclass, <span class="hljs-string">&#x27;__fspath__&#x27;</span>)<br>        <span class="hljs-comment"># NotImplemented实际是None</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">NotImplemented</span><br>      <br>	<span class="hljs-comment"># 支持泛型使用，可以用PathLike[str]形式，GenericAlias是实现参数化的类型</span><br>    __class_getitem__ = <span class="hljs-built_in">classmethod</span>(GenericAlias)<br></code></pre></td></tr></table></figure>
 <p>使用者可以据此定义自己的路径类并用于os模块和open()方法，下面是一个简单的实现</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">##      自定义PathLike子类       ##</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">My_PathClass</span>(os.PathLike):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, path: <span class="hljs-built_in">str</span></span>):<br>        <span class="hljs-string">&quot;&quot;&quot;保存传入的路径&quot;&quot;&quot;</span><br>        <span class="hljs-variable language_">self</span>._path = path<br>    <br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__fspath__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;将保存的路径作为类的路径使用&quot;&quot;&quot;</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>._path<br><br><span class="hljs-comment"># 简单测试子类实例作为path方法中的参数使用</span><br>mypathclass = My_PathClass(<span class="hljs-string">&quot;./os_test.py&quot;</span>)<br><span class="hljs-built_in">print</span>(os.path.abspath(mypathclass))<br><span class="hljs-comment"># result : H:\py_ipynb\audio_to_text_and_translate\os_test.py</span><br><br><span class="hljs-comment"># 测试读取内容，result略</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(mypathclass, encoding= <span class="hljs-string">&#x27;utf-8&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>    <span class="hljs-built_in">print</span>(f.read())<br></code></pre></td></tr></table></figure></li>
-<li><p><strong>AnyStr</strong><a name="os.AnyStr">
-</a>：TypeVar('AnyStr', bytes, str)</p>
-<p>是typing模块中定义的一个<strong>泛型类型变量</strong>，名称为AnyStr，对应<strong>数据类型为str和bytes</strong>，为字符串和字节串的数据类型情况提供灵活和强大的类型注解支持</p></li>
-<li><p><strong>StrPath</strong><a name="os.StrPath"> </a>：Union[str,
-PathLike[str]]</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">##      自定义PathLike子类       ##</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">My_PathClass</span>(os.PathLike):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, path: <span class="hljs-built_in">str</span></span>):<br>        <span class="hljs-string">&quot;&quot;&quot;保存传入的路径&quot;&quot;&quot;</span><br>        <span class="hljs-variable language_">self</span>._path = path<br>    <br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__fspath__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;将保存的路径作为类的路径使用&quot;&quot;&quot;</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>._path<br><br><span class="hljs-comment"># 简单测试子类实例作为path方法中的参数使用</span><br>mypathclass = My_PathClass(<span class="hljs-string">&quot;./os_test.py&quot;</span>)<br><span class="hljs-built_in">print</span>(os.path.abspath(mypathclass))<br><span class="hljs-comment"># result : H:\py_ipynb\audio_to_text_and_translate\os_test.py</span><br><br><span class="hljs-comment"># 测试读取内容，result略</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(mypathclass, encoding= <span class="hljs-string">&#x27;utf-8&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>    <span class="hljs-built_in">print</span>(f.read())<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-2">
+<p><strong>AnyStr</strong><span id="os.AnyStr"> </span> ：TypeVar('AnyStr', bytes, str)</p>
+<p>是typing模块中定义的一个<strong>泛型类型变量</strong>，名称为AnyStr，对应<strong>数据类型为str和bytes</strong>，为字符串和字节串的数据类型情况提供灵活和强大的类型注解支持</p>
+</li>
+<li class="lvl-2">
+<p><strong>StrPath</strong><span id="os.StrPath"> </span> ：Union[str, PathLike[str]]</p>
 <p>是一个<strong>联合类型别名</strong>，表示一个可以是<strong>字符串</strong>或<strong>实现了PathLike接口</strong>的对象（PathLike对象需要<strong>返回str类型</strong>）</p>
-<p>typing库的Union类型注解表示的是传入的参数可以是在"[]"内多种类型中的任何一种</p></li>
-<li><p><strong>BytesPath</strong><a name="os.BytesPath">
-</a>：Union[bytes, PathLike[bytes]]</p>
-<p>是一个<strong>联合类型别名</strong>，表示一个可以是<strong>字节串</strong>或<strong>实现了PathLike接口</strong>的对象（PathLike对象需要<strong>返回bytes类型</strong>）</p></li>
-<li><p><strong>StrOrBytesPath</strong><a name="os.StrOrBytesPath">
-</a>：Union[str, bytes, PathLike[str], PathLike[bytes]]</p>
-<p>是一个<strong>联合类型别名</strong>，表示一个可以是<strong>字符串</strong>、<strong>字节串</strong>或<strong>实现了PathLike接口</strong>的对象（PathLike对象需要<strong>返回str类型或bytes类型</strong>）</p></li>
+<p>typing库的Union类型注解表示的是传入的参数可以是在&quot;[]&quot;内多种类型中的任何一种</p>
+</li>
+<li class="lvl-2">
+<p><strong>BytesPath</strong> <span id="os.BytesPath"> </span>：Union[bytes, PathLike[bytes]]</p>
+<p>是一个<strong>联合类型别名</strong>，表示一个可以是<strong>字节串</strong>或<strong>实现了PathLike接口</strong>的对象（PathLike对象需要<strong>返回bytes类型</strong>）</p>
+</li>
+<li class="lvl-2">
+<p><strong>StrOrBytesPath</strong> <span id="os.StrOrBytesPath"> </span>：Union[str, bytes, PathLike[str], PathLike[bytes]]</p>
+<p>是一个<strong>联合类型别名</strong>，表示一个可以是<strong>字符串</strong>、<strong>字节串</strong>或<strong>实现了PathLike接口</strong>的对象（PathLike对象需要<strong>返回str类型或bytes类型</strong>）</p>
+</li>
 </ul>
-<h3><span id="1ospath模块">1.os.path模块：</span></h3>
-<h4><span id="1ospathjoin方法">(1)os.path.join方法：</span></h4>
+<p><span id="os.path"> </span></p>
+<h3 id="1ospath模块"><a href="#1ospath模块" class="header-anchor">¶</a>1.os.path模块：</h3>
+<p><span id="os.path.join"> </span></p>
+<h4 id="1ospathjoin方法"><a href="#1ospathjoin方法" class="header-anchor">¶</a>(1)os.path.join方法：</h4>
 <p>用途：拼接多个路径并返回最后的拼接结果</p>
-<p>方法原型：<strong><em>os.path.join(path1[, path2[,
-...]])</em></strong></p>
+<p>方法原型：<em><strong>os.path.join(path1[, path2[, ...]])</strong></em></p>
 <p>参数说明：</p>
-<ul>
-<li><p><strong><em>path1</em></strong>：需要拼接的第一个路径片段，<a href="#os.StrPath"><strong>StrPath</strong></a>类型或<a href="#os.BytesPath"><strong>BytesPath</strong></a>类型，该参数必须传递</p></li>
-<li><p><strong><em>path2</em></strong>：需要拼接的第二个路径片段，<strong>StrPath</strong>类型或<strong>BytesPath</strong>类型，该参数可选</p></li>
-<li><p>…：其他需要拼接的路径片段，<strong>StrPath</strong>类型或<strong>BytesPath</strong>类型，均可选</p>
-<p>需要注意的是，所有的路径片段的数据类型必须相同，即不可以将<strong>StrPath</strong>类型与<strong>BytesPath</strong>类型混用</p></li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><em><strong>path1</strong></em>：需要拼接的第一个路径片段，<a href="#os.StrPath"><strong>StrPath</strong></a>类型或<a href="#os.BytesPath"><strong>BytesPath</strong></a>类型，该参数必须传递</p>
+</li>
+<li class="lvl-2">
+<p><em><strong>path2</strong></em>：需要拼接的第二个路径片段，<strong>StrPath</strong>类型或<strong>BytesPath</strong>类型，该参数可选</p>
+</li>
+<li class="lvl-2">
+<p>…：其他需要拼接的路径片段，<strong>StrPath</strong>类型或<strong>BytesPath</strong>类型，均可选</p>
+<p>需要注意的是，所有的路径片段的数据类型必须相同，即不可以将<strong>StrPath</strong>类型与<strong>BytesPath</strong>类型混用</p>
+</li>
 </ul>
-<p>返回值：合并后的路径，
-如果路径片段是<strong>StrPath</strong>，返回类型为<strong>str</strong>，如果是<strong>BytesPath</strong>，返回类型为<strong>bytes</strong></p>
+<p>返回值：合并后的路径， 如果路径片段是<strong>StrPath</strong>，返回类型为<strong>str</strong>，如果是<strong>BytesPath</strong>，返回类型为<strong>bytes</strong></p>
 <p>使用：</p>
 <p>最简单的拼接是拼接目录+文件名，该方法会自动识别操作系统并补全目录分隔符，可以输入多级目录一次性合并</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(os.path.join(<span class="hljs-string">&quot;D:\\video&quot;</span>, <span class="hljs-string">&quot;test.m4a&quot;</span>))    <span class="hljs-comment"># result: D:\video\test.m4a</span><br><span class="hljs-built_in">print</span>(os.path.join(<span class="hljs-string">&quot;E:&quot;</span>, <span class="hljs-string">&quot;video&quot;</span>, <span class="hljs-string">&quot;audio\\test&quot;</span>, <span class="hljs-string">&quot;test.m4a&quot;</span>))   <span class="hljs-comment"># result: E:video\audio\test\test.m4a</span><br><span class="hljs-built_in">print</span>(os.path.join(<span class="hljs-string">&quot;video&quot;</span>, <span class="hljs-string">&quot;test.m4a&quot;</span>))    <span class="hljs-comment"># result: video\test.m4a</span><br><span class="hljs-built_in">print</span>(os.path.join(<span class="hljs-string">&quot;/video&quot;</span>, <span class="hljs-string">&quot;test.m4a&quot;</span>))   <span class="hljs-comment"># result: /test.m4a</span><br></code></pre></td></tr></table></figure>
 <p>该方法实际有很多需要考虑的问题：</p>
 <p>首先要注意的是，<strong>os.path.join</strong>方法全程不<strong>会去考虑路径是否真实存在，是否是有效路径</strong>，它只是一个<strong>处理字符串格式的路径方法，不涉及任何目录和文件的读写</strong></p>
-<p>其次要注意的是，如果输入的路径有绝对路径(此处指以"/"开头的路径或者以盘符开头的路径)，<strong>os.path.join</strong>会根据情况对其中的部分参数的路径进行丢弃，规则如下：</p>
-<ul>
-<li><p>在不包括任何盘符时：</p>
-<ul>
-<li>只有一个绝对路径：绝对路径之前的全部参数会被全部丢弃</li>
-<li>存在多个绝对路径：最后一个绝对路径之前的全部参数会被全部丢弃</li>
-</ul></li>
-<li><p>存在单个或多个盘符时：</p>
-<p>绝对路径的逻辑同不包括任何盘符时的情况，但是丢弃参数时会保留最后一个出现的盘符，即，单独判断盘符出现的位置，选择最后一个盘符保存到路径中(即使这个盘符对应的后续路径被丢弃)</p></li>
+<p>其次要注意的是，如果输入的路径有绝对路径(此处指以&quot;/&quot;开头的路径或者以盘符开头的路径)，<strong>os.path.join</strong>会根据情况对其中的部分参数的路径进行丢弃，规则如下：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>在不包括任何盘符时：</p>
+<ul class="lvl-2">
+<li class="lvl-4">只有一个绝对路径：绝对路径之前的全部参数会被全部丢弃</li>
+<li class="lvl-4">存在多个绝对路径：最后一个绝对路径之前的全部参数会被全部丢弃</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>存在单个或多个盘符时：</p>
+<p>绝对路径的逻辑同不包括任何盘符时的情况，但是丢弃参数时会保留最后一个出现的盘符，即，单独判断盘符出现的位置，选择最后一个盘符保存到路径中(即使这个盘符对应的后续路径被丢弃)</p>
+</li>
 </ul>
 <p>从这些规则中可以看出，存在绝对路径时的逻辑是，<strong>只保留最后一个出现的盘符和绝对路径</strong>：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># result: /audio\test.m4a ——绝对路径&quot;/audio&quot;前面的&quot;root_path&quot;和&quot;video&quot;被丢弃</span><br><span class="hljs-built_in">print</span>(os.path.join(<span class="hljs-string">&quot;root_path&quot;</span>, <span class="hljs-string">&quot;video&quot;</span>, <span class="hljs-string">&quot;/audio&quot;</span>, <span class="hljs-string">&quot;test.m4a&quot;</span>))<br><br><span class="hljs-comment"># result: /test\test.m4a ——最后一个绝对路径&quot;/test&quot;之前的root_path&quot;、&quot;/video&quot;和&quot;/audio&quot;被丢弃</span><br><span class="hljs-built_in">print</span>(os.path.join(<span class="hljs-string">&quot;root_path&quot;</span>, <span class="hljs-string">&quot;/video&quot;</span>, <span class="hljs-string">&quot;/audio&quot;</span>, <span class="hljs-string">&quot;/test&quot;</span>, <span class="hljs-string">&quot;test.m4a&quot;</span>))<br><br><span class="hljs-comment"># result: E:/audio\test.m4a ——最后一个绝对路径/audio&quot;之前的参数&quot;&quot;test&quot;、&quot;/action&quot;和&quot;/audio&quot;被丢弃.而&quot;E:\\video&quot;的&quot;\\video&quot;被丢弃,&quot;E:&quot;盘符被保留</span><br><span class="hljs-built_in">print</span>(os.path.join(<span class="hljs-string">&quot;E:\\video&quot;</span>, <span class="hljs-string">&quot;test&quot;</span>, <span class="hljs-string">&quot;/action&quot;</span>, <span class="hljs-string">&quot;/audio&quot;</span>, <span class="hljs-string">&quot;test.m4a&quot;</span>))<br><br><span class="hljs-comment"># result: E:/video\test.m4a ——最后一个绝对路径/video&quot;之前的参数&quot;\\action&quot;、&quot;F:/test&quot;和&quot;E:\\audio&quot;除最后一个盘符&quot;E:&quot;外均被丢弃</span><br><span class="hljs-built_in">print</span>(os.path.join(<span class="hljs-string">&quot;\\action&quot;</span>, <span class="hljs-string">&quot;F:/test&quot;</span>, <span class="hljs-string">&quot;E:\\audio&quot;</span>, <span class="hljs-string">&quot;/video&quot;</span>, <span class="hljs-string">&quot;test.m4a&quot;</span>))<br></code></pre></td></tr></table></figure>
@@ -457,33 +528,43 @@ PathLike[str]]</p>
 <p>可以看到，在某些情况下，先拼接相对路径再转绝对路径会出现问题，推荐拼接时先将相对路径转为绝对路径</p>
 <p>最后，如果传入的最后一个路径是空字符串，则该方法会为路径最后添加一个目录分隔符作为结尾：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># result: ./save_video\</span><br><span class="hljs-built_in">print</span>(os.path.join(<span class="hljs-string">&quot;./save_video&quot;</span>, <span class="hljs-string">&quot;&quot;</span>))<br></code></pre></td></tr></table></figure>
-<h4><span id="2ospathabspath方法">(2)os.path.abspath方法：</span></h4>
+<p><span id="os.path.abspath"> </span></p>
+<h4 id="2ospathabspath方法"><a href="#2ospathabspath方法" class="header-anchor">¶</a>(2)os.path.abspath方法：</h4>
 <p>用途：获得指定文件/目录<strong>路径</strong>的绝对路径</p>
-<p>方法原型：<strong><em>os.path.abspath(path)</em></strong></p>
-<p>参数说明：<strong><em>path</em></strong>：需要获得绝对路径的对应文件的路径，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，可以是绝对路径/相对路径</p>
+<p>方法原型：<em><strong>os.path.abspath(path)</strong></em></p>
+<p>参数说明：<em><strong>path</strong></em>：需要获得绝对路径的对应文件的路径，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，可以是绝对路径/相对路径</p>
 <p>返回值：<strong>AnyStr</strong>类型，返回其对应的绝对路径</p>
 <p>使用：</p>
 <p><strong>os.path.abspath</strong>方法没有想象的那么简单，其实际的使用基于<a href="#os.getcwd"><strong>os.getcwd</strong></a>方法，其内部逻辑分为三步：</p>
-<ol type="1">
-<li>检验<strong><em>path</em></strong>是否是绝对路径，如果是，则直接返回</li>
-<li>否则，利用<strong>os.getcwd</strong>方法(如果<strong><em>path</em></strong>是Unicode编码，使用<a href="#os.getcwdu"><strong>os.getcwdu</strong></a>方法)获得当前的工作路径</li>
-<li>将传入的<strong><em>path</em></strong>与当前工作路径进行路径拼接</li>
+<ol>
+<li class="lvl-3">
+<p>检验<em><strong>path</strong></em>是否是绝对路径，如果是，则直接返回</p>
+</li>
+<li class="lvl-3">
+<p>否则，利用<strong>os.getcwd</strong>方法(如果<em><strong>path</strong></em>是Unicode编码，使用<a href="#os.getcwdu"><strong>os.getcwdu</strong></a>方法)获得当前的工作路径</p>
+</li>
+<li class="lvl-3">
+<p>将传入的<em><strong>path</strong></em>与当前工作路径进行路径拼接</p>
+</li>
 </ol>
-<p>在传入的<strong><em>path</em></strong>为绝对路径或者基于当前工作路径的正确相对路径时，该方法的工作是正常的，可以获得正确的绝对路径。但如果<strong><em>path</em></strong>是非当前工作目录的文件名，或者是错误的文件相对路径时，该方法只会错误的将传入的<strong><em>path</em></strong>与当前工作路径直接拼接，详细例子如下：</p>
+<p>在传入的<em><strong>path</strong></em>为绝对路径或者基于当前工作路径的正确相对路径时，该方法的工作是正常的，可以获得正确的绝对路径。但如果<em><strong>path</strong></em>是非当前工作目录的文件名，或者是错误的文件相对路径时，该方法只会错误的将传入的<em><strong>path</strong></em>与当前工作路径直接拼接，详细例子如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 在子目录下有一个vidio/test.m4a文件</span><br><span class="hljs-built_in">print</span>(os.path.abspath(<span class="hljs-string">&quot;./vidio/test.m4a&quot;</span>))<br><br><span class="hljs-comment"># 在其他目录下有一个music_translate\music_use.ipynb文件路径</span><br><span class="hljs-comment"># result :H:\py_ipynb\music_trans\music_use.ipynb 结果准确</span><br><span class="hljs-built_in">print</span>(os.path.abspath(<span class="hljs-string">&quot;../music_translate/music_use.ipynb&quot;</span>))<br><br><span class="hljs-comment"># 传入错误的test.m4a文件相对路径</span><br><span class="hljs-comment"># result: H:\py_ipynb\audio_to_text\error_vidio\test.m4a 结果错误,只是去掉了&quot;.&quot;后进行了拼接</span><br><span class="hljs-built_in">print</span>(os.path.abspath(<span class="hljs-string">&quot;./error_vidio/test.m4a&quot;</span>))<br><br><span class="hljs-comment"># 直接传入music_use.ipynb文件路径</span><br><span class="hljs-comment"># result: H:\py_ipynb\audio_to_text\music_use.ipynb 结果错误,只是进行了拼接</span><br><span class="hljs-built_in">print</span>(os.path.abspath(<span class="hljs-string">&quot;music_use.ipynb&quot;</span>))<br><br><span class="hljs-comment"># 传入错误的music_use.ipynb文件相对路径</span><br><span class="hljs-comment"># result: H:\py_ipynb\error\music_use.ipynb 结果错误,只是去掉了&quot;..&quot;和当前工作路径的最后一个目录后进行了拼接</span><br><span class="hljs-built_in">print</span>(os.path.abspath(<span class="hljs-string">&quot;../error/music_use.ipynb&quot;</span>))<br><br><span class="hljs-comment"># 随便传入一个字符串</span><br><span class="hljs-comment"># result: H:\py_ipynb\audio_to_text\you are happy 结果错误,只是进行了拼接</span><br><span class="hljs-built_in">print</span>(os.path.abspath(<span class="hljs-string">&quot;you are happy&quot;</span>))<br></code></pre></td></tr></table></figure>
 <p>由此可以看出，该方法<strong>实际并不判断文件是否存在，路径是否有效</strong>，其只是将当前工作路径和传入的字符串中有效的相对路径进行合并，然后直接拼接，所以需要谨慎使用，或者结合其他判断路径/文件存在方法使用</p>
-<p>另外，如果传入的是一个以"/"开头的绝对路径，该方法会直接将盘符与传入路径字符串进行合并：</p>
+<p>另外，如果传入的是一个以&quot;/&quot;开头的绝对路径，该方法会直接将盘符与传入路径字符串进行合并：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 传入一个绝对路径</span><br><span class="hljs-comment"># result: H:\test.m4a 仅将盘符与其拼接</span><br>os.path.abspath(<span class="hljs-string">&quot;/test.m4a&quot;</span>)<br></code></pre></td></tr></table></figure>
-<h4><span id="2续ospathrealpath方法">(2)[续]os.path.realpath方法：</span></h4>
+<p><span id="os.path.realpath"> </span></p>
+<h4 id="2续ospathrealpath方法"><a href="#2续ospathrealpath方法" class="header-anchor">¶</a>(2)[续]os.path.realpath方法：</h4>
 <p>用途：获得指定文件/目录<strong>路径</strong>的绝对路径</p>
-<p>方法原型：<strong><em>os.path.realpath(path, strict=
-False)</em></strong>（Python3.10以上版本有额外参数strict，3.9及以下是没有的）</p>
+<p>方法原型：<em><strong>os.path.realpath(path, strict= False)</strong></em>（Python3.10以上版本有额外参数strict，3.9及以下是没有的）</p>
 <p>参数说明：</p>
-<ul>
-<li><p><strong><em>path</em></strong>：需要获得绝对路径的对应文件的路径，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，可以是绝对路径/相对路径</p></li>
-<li><p><strong><em>strict</em></strong>：解析<strong>符号链接</strong>的模式(详见下方使用部分)，<strong>True时表示严格模式</strong>，如果路径中的任何部分（包括符号链接的目标路径）不存在，会抛出错误FileNotFoundError，即<strong>使用的必须是文件系统实际存在的路径</strong>，<strong>False时表示非严格模式</strong>，此时方法会尽可能地解析路径的符号链接，但路径中某些部分不存在时不会引发错误，即<strong>允许路径包含未创建的部分</strong></p>
-<p>对于<strong>Python3.9及以下版本</strong>，<strong>使用效果和strict=
-False相同</strong></p></li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><em><strong>path</strong></em>：需要获得绝对路径的对应文件的路径，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，可以是绝对路径/相对路径</p>
+</li>
+<li class="lvl-2">
+<p><em><strong>strict</strong></em>：解析<strong>符号链接</strong>的模式(详见下方使用部分)，<strong>True时表示严格模式</strong>，如果路径中的任何部分（包括符号链接的目标路径）不存在，会抛出错误FileNotFoundError，即<strong>使用的必须是文件系统实际存在的路径</strong>，<strong>False时表示非严格模式</strong>，此时方法会尽可能地解析路径的符号链接，但路径中某些部分不存在时不会引发错误，即<strong>允许路径包含未创建的部分</strong></p>
+<p>对于<strong>Python3.9及以下版本</strong>，<strong>使用效果和strict= False相同</strong></p>
+</li>
 </ul>
 <p>返回值：<strong>AnyStr</strong>类型，返回解析结果对应的绝对路径</p>
 <p>使用：</p>
@@ -491,174 +572,217 @@ False相同</strong></p></li>
 <p>对于Windows用户，此处的<strong>软链接并非快捷方式</strong>，创建软链接需要使用<strong>cmd的mklink命令</strong>(详见这个博客<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35896136/article/details/105667678">Windows:在Windows下创建并删除软连接_如何查询windows删除软链接-CSDN博客</a>)</p>
 <p>下面仅说明和<strong>os.path.abspath</strong>方法不同的用法</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># # 3.10以后可用，对不存在的文件strict为False时不报错</span><br><span class="hljs-comment"># # result:H:\py_ipynb\audio_to_text_and_translate\you are happy</span><br><span class="hljs-comment"># print(os.path.realpath(&quot;you are happy&quot;, strict=False))</span><br><br><span class="hljs-comment"># # 3.10以后可用，对不存在的文件strict为True时报错FileNotFoundError</span><br><span class="hljs-comment"># print(os.path.realpath(&quot;you are happy&quot;, strict=True))</span><br><br><span class="hljs-comment"># 否则这样使用，和strict=False的效果相同</span><br><span class="hljs-comment"># result: H:\py_ipynb\audio_to_text_and_translate\you are happy</span><br><span class="hljs-built_in">print</span>(os.path.realpath(<span class="hljs-string">&quot;you are happy&quot;</span>))<br><br><span class="hljs-comment"># 尝试解析符号链接，链接为当前文件</span><br><span class="hljs-comment"># H:\py_ipynb\audio_to_text_and_translate\os_test.py，此为软链接指向的文件</span><br><span class="hljs-built_in">print</span>(os.path.realpath(<span class="hljs-string">&quot;./video/link.py&quot;</span>))<br></code></pre></td></tr></table></figure>
-<h4><span id="2续ospathisabs方法">(2)[续]os.path.isabs方法：</span></h4>
+<p><span id="os.path.isabs"> </span></p>
+<h4 id="2续ospathisabs方法"><a href="#2续ospathisabs方法" class="header-anchor">¶</a>(2)[续]os.path.isabs方法：</h4>
 <p>用途：判断指定文件/目录<strong>路径</strong>是否为绝对路径</p>
-<p>方法原型：<strong><em>os.path.isabs(path)</em></strong></p>
-<p>参数说明：<strong><em>path</em></strong>：指定的路径字符串，<a href="#os.StrOrBytesPath"><strong>StrOrBytesPath</strong></a>类型，可以是绝对路径/相对路径</p>
+<p>方法原型：<em><strong>os.path.isabs(path)</strong></em></p>
+<p>参数说明：<em><strong>path</strong></em>：指定的路径字符串，<a href="#os.StrOrBytesPath"><strong>StrOrBytesPath</strong></a>类型，可以是绝对路径/相对路径</p>
 <p>返回值：bool类型，True表示路径是绝对路径，False表示不是绝对路径</p>
 <p>使用：</p>
-<p><strong>os.path.isabs</strong>方法只是判断<strong><em>path</em></strong>是否是一个绝对路径，即该参数值是否符合绝对路径的格式，<strong>不会判断该绝对路径是否是真实存在的</strong></p>
+<p><strong>os.path.isabs</strong>方法只是判断<em><strong>path</strong></em>是否是一个绝对路径，即该参数值是否符合绝对路径的格式，<strong>不会判断该绝对路径是否是真实存在的</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">##       os.path.isabs方法：判断传入路径是否是绝对路径       ##</span><br><span class="hljs-comment"># 相对报错</span><br><span class="hljs-built_in">print</span>(os.path.isabs(<span class="hljs-string">&quot;./music_use.ipynb&quot;</span>))   <span class="hljs-comment"># False</span><br><span class="hljs-comment"># 任意字符串报错</span><br><span class="hljs-built_in">print</span>(os.path.isabs(<span class="hljs-string">&quot;you are happy&quot;</span>))       <span class="hljs-comment"># False</span><br><span class="hljs-comment"># 绝对无论是否存在均不报错</span><br><span class="hljs-built_in">print</span>(os.path.isabs(<span class="hljs-string">&quot;H:\py_ipynb\\audio_to_text_and_translate\os_test.py&quot;</span>))    <span class="hljs-comment"># True</span><br><span class="hljs-built_in">print</span>(os.path.isabs(<span class="hljs-string">&quot;H:\py_ipynb\error\music_use.ipynb&quot;</span>))   <span class="hljs-comment"># True</span><br><span class="hljs-comment"># 注意格式需要正确，以及转移字符不一定影响正确性</span><br><span class="hljs-built_in">print</span>(os.path.isabs(<span class="hljs-string">&quot;K:\\root\c\c\c\d&quot;</span>))    <span class="hljs-comment"># True</span><br><span class="hljs-built_in">print</span>(os.path.isabs(<span class="hljs-string">&quot;K:\\root\ac\c\c\d&quot;</span>))   <span class="hljs-comment"># True</span><br><span class="hljs-built_in">print</span>(os.path.isabs(<span class="hljs-string">&quot;K:\root\c\c\c\d&quot;</span>))     <span class="hljs-comment"># False</span><br><span class="hljs-built_in">print</span>(os.path.isabs(<span class="hljs-string">&quot;Kk:\\root\c\c\c\d&quot;</span>))   <span class="hljs-comment"># False</span><br></code></pre></td></tr></table></figure>
-<h4><span id="3ospathsplitext方法">(3)os.path.splitext方法：</span></h4>
+<p><span id="os.path.splitext"> </span></p>
+<h4 id="3ospathsplitext方法"><a href="#3ospathsplitext方法" class="header-anchor">¶</a>(3)os.path.splitext方法：</h4>
 <p>用途：将传入路径分割，获得<strong>文件路径名称</strong>(无扩展名)和<strong>文件扩展名</strong></p>
-<p>方法原型：<strong><em>os.path.splitext(path)</em></strong></p>
-<p>参数说明：<strong><em>path</em></strong>：分割的路径，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，一般是绝对路径(相对路径也可以，但该方法<strong>不会主动转化相对路径为绝对路径</strong>)</p>
+<p>方法原型：<em><strong>os.path.splitext(path)</strong></em></p>
+<p>参数说明：<em><strong>path</strong></em>：分割的路径，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，一般是绝对路径(相对路径也可以，但该方法<strong>不会主动转化相对路径为绝对路径</strong>)</p>
 <p>返回值：含两个<strong>AnyStr</strong>元素的元组，前者为文件路径名称(包括文件所在目录路径+文件名称)，后者为文件扩展名</p>
 <p>使用：</p>
 <p><strong>os.path.splitext</strong>方法实际是通过<strong>从右向左寻找第一个点号分隔符</strong>完成的分割操作，如果没有点号分隔符(目录/无后缀文件)，则第二个元素(扩展名部分)为空字符串</p>
 <p>该方法可用于更换扩展名、计算某文件夹下的对应文件类型数量：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 通过分割将txt扩展名更换为md</span><br>file_use = <span class="hljs-string">&quot;D:/save/a.txt&quot;</span><br><span class="hljs-comment"># result：(&#x27;D:/save/a&#x27;, &#x27;.txt&#x27;)</span><br><span class="hljs-built_in">print</span>(os.path.splitext(file_use))<br>new_suffix = <span class="hljs-string">&quot;.md&quot;</span><br><span class="hljs-comment"># result: D:/save/a.md</span><br><span class="hljs-built_in">print</span>(os.path.splitext(file_use)[<span class="hljs-number">0</span>] + new_suffix)<br><br><span class="hljs-comment"># 统计对特定目录的txt文件数量</span><br>target_dir = <span class="hljs-string">&quot;D:/file_count&quot;</span><br>file_number = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> root, dirs, files <span class="hljs-keyword">in</span> os.walk(target_dir):<br>    <span class="hljs-keyword">for</span> file <span class="hljs-keyword">in</span> files:<br>        <span class="hljs-keyword">if</span> os.path.splitext(file)[<span class="hljs-number">1</span>] == <span class="hljs-string">&quot;.txt&quot;</span>:<br>            file_number += <span class="hljs-number">1</span><br><span class="hljs-comment"># result: file_number = 10</span><br><span class="hljs-built_in">print</span>(file_number)<br><br><span class="hljs-comment"># 无扩展名文件的第二个元素是空字符串</span><br>file = <span class="hljs-string">&quot;D:/save/a&quot;</span><br><span class="hljs-comment"># result: &quot;&quot;</span><br><span class="hljs-built_in">print</span>(os.path.splitext(file)[<span class="hljs-number">1</span>])<br></code></pre></td></tr></table></figure>
-<h4><span id="3续ospathsplit方法">(3)[续]os.path.split方法：</span></h4>
+<p><span id="os.path.split"> </span></p>
+<h4 id="3续ospathsplit方法"><a href="#3续ospathsplit方法" class="header-anchor">¶</a>(3)[续]os.path.split方法：</h4>
 <p>用途：将传入路径分割，获得<strong>文件目录路径</strong>和<strong>文件名(文件名称+扩展名)</strong></p>
-<p>方法原型：<strong><em>os.path.split(path)</em></strong></p>
-<p>参数说明：<strong><em>path</em></strong>：分割的路径，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，一般是绝对路径(相对路径也可以，但该方法<strong>不会主动转化相对路径为绝对路径</strong>)</p>
+<p>方法原型：<em><strong>os.path.split(path)</strong></em></p>
+<p>参数说明：<em><strong>path</strong></em>：分割的路径，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，一般是绝对路径(相对路径也可以，但该方法<strong>不会主动转化相对路径为绝对路径</strong>)</p>
 <p>返回值：含两个<strong>AnyStr</strong>元素的元组，前者为文件目录路径，后者为文件名</p>
 <p>使用：</p>
 <p><strong>os.path.split</strong>方法实际是通过<strong>从右向左寻找第一个路径分隔符</strong>完成的分割操作，如果没有路径分隔符，则第一个元素(目录路径部分)为空字符串</p>
 <p>如果路径以路径分隔符结尾，第二个元素(文件名部分)为空字符串</p>
 <p>该方法可用于文件重命名(基于已有名称)，路径规范化，通常与<a href="#os.path.join"><strong>os.path.join</strong></a>和<a href="#os.path.normpath"><strong>os.path.normpath</strong></a>组合使用：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 通过分割将文件名中的序号+1并规范化文件名</span><br>file_use = <span class="hljs-string">&quot;D:/save/1.txt&quot;</span><br><span class="hljs-comment"># result：(&#x27;D:/save/&#x27;, &#x27;1.txt&#x27;)</span><br>file_split = os.path.split(file_use)<br><span class="hljs-built_in">print</span>(file_split)<br>new_filename = <span class="hljs-built_in">str</span>(<span class="hljs-built_in">int</span>(file_split[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>]) + <span class="hljs-number">1</span>) + file_split[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>:]<br><span class="hljs-comment"># result: D:/save/2.txt</span><br><span class="hljs-built_in">print</span>(os.path.normpath(os.path.join(file_split[<span class="hljs-number">0</span>], new_filename)))<br><br><span class="hljs-comment"># 没有路径分隔符的第1个元素是空字符串</span><br>file_use = <span class="hljs-string">&quot;D:/save&quot;</span><br><span class="hljs-comment"># result: (&#x27;D:/&#x27;, &#x27;save&#x27;)</span><br><span class="hljs-built_in">print</span>(os.path.split(file_use))<br><br><span class="hljs-comment"># 以路径分隔符结尾的第2个元素是空字符串</span><br>file_use = <span class="hljs-string">&quot;D:/save/&quot;</span><br><span class="hljs-comment"># result: (&#x27;D:/save&#x27;, &#x27;&#x27;)</span><br><span class="hljs-built_in">print</span>(os.path.split(file_use))<br></code></pre></td></tr></table></figure>
-<h4><span id="3续ospathdirname方法">(3)[续]os.path.dirname方法：</span></h4>
+<p><span id="os.path.dirname"> </span></p>
+<h4 id="3续ospathdirname方法"><a href="#3续ospathdirname方法" class="header-anchor">¶</a>(3)[续]os.path.dirname方法：</h4>
 <p>用途：获得指定路径的文件目录路径部分</p>
-<p>方法原型：<strong><em>os.path.dirname(path)</em></strong></p>
-<p>参数说明：<strong><em>path</em></strong>：指定的文件路径，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，一般是绝对路径(相对路径也可以，但该方法<strong>不会主动转化相对路径为绝对路径</strong>)</p>
+<p>方法原型：<em><strong>os.path.dirname(path)</strong></em></p>
+<p>参数说明：<em><strong>path</strong></em>：指定的文件路径，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，一般是绝对路径(相对路径也可以，但该方法<strong>不会主动转化相对路径为绝对路径</strong>)</p>
 <p>返回值：<strong>AnyStr</strong>类型，返回指定路径的目录路径部分</p>
 <p>使用：</p>
 <p>实际获得的是<a href="#os.path.split"><strong>os.path.split</strong></a>方法所分割的第一个元素</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">file_use = <span class="hljs-string">&quot;D:/save/1.txt&quot;</span><br><span class="hljs-comment"># result：D:/save/</span><br>dir_name = os.path.dirname(file_use)<br><span class="hljs-built_in">print</span>(dir_name)<br></code></pre></td></tr></table></figure>
-<h4><span id="3续ospathbasename方法">(3)[续]os.path.basename方法：</span></h4>
+<p><span id="os.path.basename"> </span></p>
+<h4 id="3续ospathbasename方法"><a href="#3续ospathbasename方法" class="header-anchor">¶</a>(3)[续]os.path.basename方法：</h4>
 <p>用途：获得指定路径的文件名部分</p>
-<p>方法原型：<strong><em>os.path.basename(path)</em></strong></p>
-<p>参数说明：<strong><em>path</em></strong>：指定的文件路径，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，绝对路径/相对路径均可</p>
+<p>方法原型：<em><strong>os.path.basename(path)</strong></em></p>
+<p>参数说明：<em><strong>path</strong></em>：指定的文件路径，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，绝对路径/相对路径均可</p>
 <p>返回值：<strong>AnyStr</strong>类型，返回指定路径的文件名部分</p>
 <p>使用：</p>
 <p>实际获得的是<a href="#os.path.split"><strong>os.path.split</strong></a>方法所分割的第二个元素</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">file_use = <span class="hljs-string">&quot;D:/save/1.txt&quot;</span><br><span class="hljs-comment"># result：1.txt</span><br>base_name = os.path.basename(file_use)<br><span class="hljs-built_in">print</span>(base_name)<br></code></pre></td></tr></table></figure>
-<h4><span id="4ospathexists方法">(4)os.path.exists方法：</span></h4>
+<p><span id="os.path.exists"> </span></p>
+<h4 id="4ospathexists方法"><a href="#4ospathexists方法" class="header-anchor">¶</a>(4)os.path.exists方法：</h4>
 <p>用途：判断文件系统中是否存在与传入的路径所对应的真实文件/目录</p>
-<p>方法原型：<strong><em>os.path.exists(path)</em></strong></p>
-<p>参数说明：<strong><em>path</em></strong>：传入的路径，<a href="#os.StrOrBytesPath"><strong>StrOrBytesPath</strong></a>类型，可以是绝对路径/相对路径</p>
+<p>方法原型：<em><strong>os.path.exists(path)</strong></em></p>
+<p>参数说明：<em><strong>path</strong></em>：传入的路径，<a href="#os.StrOrBytesPath"><strong>StrOrBytesPath</strong></a>类型，可以是绝对路径/相对路径</p>
 <p>返回值：bool类型，True表示传入路径存在真实文件/目录，False表示不存在真实文件/目录</p>
 <p>使用：</p>
-<p>该方法较简单，但是要注意传入路径的转义，在<strong><em>path</em></strong>前加"r"完成转义，另外，注意同一路径可能有同名的目录和文件，注意区别：</p>
+<p>该方法较简单，但是要注意传入路径的转义，在<em><strong>path</strong></em>前加&quot;r&quot;完成转义，另外，注意同一路径可能有同名的目录和文件，注意区别：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">file_use = <span class="hljs-string">r&quot;D:\save\1.txt&quot;</span><br><span class="hljs-built_in">print</span>(os.path.exists(file_use))     <span class="hljs-comment"># True</span><br>file_use = <span class="hljs-string">r&quot;D:\save\2.txt&quot;</span><br><span class="hljs-built_in">print</span>(os.path.exists(file_use))     <span class="hljs-comment"># False</span><br><span class="hljs-built_in">print</span>(os.path.exists(<span class="hljs-string">&quot;./os_test.py&quot;</span>))   <span class="hljs-comment"># True</span><br><span class="hljs-built_in">print</span>(os.path.exists(<span class="hljs-string">&quot;./video&quot;</span>))    <span class="hljs-comment"># True</span><br><span class="hljs-built_in">print</span>(os.path.exists(<span class="hljs-string">&quot;./no_exist&quot;</span>))    <span class="hljs-comment"># False</span><br></code></pre></td></tr></table></figure>
-<h4><span id="4续ospathisdir方法">(4)[续]os.path.isdir方法：</span></h4>
+<p><span id="os.path.isdir"> </span></p>
+<h4 id="4续ospathisdir方法"><a href="#4续ospathisdir方法" class="header-anchor">¶</a>(4)[续]os.path.isdir方法：</h4>
 <p>用途：判断文件系统中是否存在与传入的路径所对应的真实目录</p>
-<p>方法原型：<strong><em>os.path.isdir(path)</em></strong></p>
-<p>参数说明：<strong><em>path</em></strong>：传入的路径，<a href="#os.StrOrBytesPath"><strong>StrOrBytesPath</strong></a>类型，可以是绝对路径/相对路径</p>
+<p>方法原型：<em><strong>os.path.isdir(path)</strong></em></p>
+<p>参数说明：<em><strong>path</strong></em>：传入的路径，<a href="#os.StrOrBytesPath"><strong>StrOrBytesPath</strong></a>类型，可以是绝对路径/相对路径</p>
 <p>返回值：bool类型，True表示传入路径存在真实目录，False表示不存在真实目录</p>
 <p>使用：</p>
 <p>该方法逻辑和<strong>os.path.exists</strong>基本相同，判断的目标从是否存在文件/目录变为了是否是目录，使用该方法需要注意<strong>目录和文件存在同名现象</strong>，需要判断使用场景：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">file_use = <span class="hljs-string">r&quot;D:\save\1.txt&quot;</span><br><span class="hljs-built_in">print</span>(os.path.isdir(file_use))  <span class="hljs-comment"># False</span><br><span class="hljs-comment"># 文件夹以&quot;.&quot;+特定后缀名结尾判断</span><br>file_use = <span class="hljs-string">r&quot;D:\save\dir.txt&quot;</span><br><span class="hljs-built_in">print</span>(os.path.isdir(file_use))  <span class="hljs-comment"># True</span><br></code></pre></td></tr></table></figure>
-<h4><span id="4续ospathisfile方法">(4)[续]os.path.isfile方法：</span></h4>
+<p><span id="os.path.isfile"> </span></p>
+<h4 id="4续ospathisfile方法"><a href="#4续ospathisfile方法" class="header-anchor">¶</a>(4)[续]os.path.isfile方法：</h4>
 <p>用途：判断文件系统中是否存在与传入的路径所对应的真实文件</p>
-<p>方法原型：<strong><em>os.path.isfile(path)</em></strong></p>
-<p>参数说明：<strong><em>path</em></strong>：传入的路径，<a href="#os.StrOrBytesPath"><strong>StrOrBytesPath</strong></a>类型，可以是绝对路径/相对路径</p>
+<p>方法原型：<em><strong>os.path.isfile(path)</strong></em></p>
+<p>参数说明：<em><strong>path</strong></em>：传入的路径，<a href="#os.StrOrBytesPath"><strong>StrOrBytesPath</strong></a>类型，可以是绝对路径/相对路径</p>
 <p>返回值：bool类型，True表示传入路径存在真实文件，False表示不存在真实文件</p>
 <p>使用：</p>
 <p>该方法逻辑和<strong>os.path.exists</strong>基本相同，判断的目标从是否存在文件/目录变为了是否是文件，使用该方法需要注意<strong>目录和文件存在同名现象</strong>，需要判断使用场景：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">file_use = <span class="hljs-string">r&quot;D:\save\1.txt&quot;</span><br><span class="hljs-built_in">print</span>(os.path.isfile(file_use))  <span class="hljs-comment"># True</span><br><span class="hljs-comment"># 文件夹以&quot;.&quot;+特定后缀名结尾判断</span><br>file_use = <span class="hljs-string">r&quot;D:\save\dir.txt&quot;</span><br><span class="hljs-built_in">print</span>(os.path.isfile(file_use))  <span class="hljs-comment"># False</span><br></code></pre></td></tr></table></figure>
-<h4><span id="5ospathnormpath方法">(5)os.path.normpath方法：</span></h4>
+<p><span id="os.path.normpath"> </span></p>
+<h4 id="5ospathnormpath方法"><a href="#5ospathnormpath方法" class="header-anchor">¶</a>(5)os.path.normpath方法：</h4>
 <p>用途：规范化路径字符串</p>
-<p>方法原型：<strong><em>os.path.normpath(path)</em></strong></p>
-<p>参数说明：<strong><em>path</em></strong>：传入的路径，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，可以是绝对路径/相对路径</p>
+<p>方法原型：<em><strong>os.path.normpath(path)</strong></em></p>
+<p>参数说明：<em><strong>path</strong></em>：传入的路径，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，可以是绝对路径/相对路径</p>
 <p>返回值：<strong>AnyStr</strong>类型，返回规范化后的路径字符串</p>
 <p>使用：</p>
 <p><strong>os.path.normpath</strong>方法是一个仅操作路径字符串的方法，<strong>不会访问文件系统</strong>，<strong>具有操作系统依赖性</strong></p>
 <p>该方法的规范化方法主要包括：</p>
-<ul>
-<li><strong>去除冗余的分隔符</strong>：将连续的分隔符合并为一个</li>
-<li><strong>移除当前目录引用</strong>：当前目录引用 <code>.</code>
-会被移除，因为其不改变路径</li>
-<li><strong>解析上层目录引用</strong>：上层目录引用 <code>..</code>
-会被解析为返回上一级目录，即移除上层目录引用的前一个目录路径</li>
-<li><strong>转换路径分隔符</strong>：自动将路径的分隔符转换为当前操作系统的默认分隔符</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>去除冗余的分隔符</strong>：将连续的分隔符合并为一个</p>
+</li>
+<li class="lvl-2">
+<p><strong>移除当前目录引用</strong>：当前目录引用 <code>.</code> 会被移除，因为其不改变路径</p>
+</li>
+<li class="lvl-2">
+<p><strong>解析上层目录引用</strong>：上层目录引用 <code>..</code> 会被解析为返回上一级目录，即移除上层目录引用的前一个目录路径</p>
+</li>
+<li class="lvl-2">
+<p><strong>转换路径分隔符</strong>：自动将路径的分隔符转换为当前操作系统的默认分隔符</p>
+</li>
 </ul>
 <p>实际效果如下(windows平台)：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 规范绝对路径</span><br><span class="hljs-comment"># result: D:\save\1.txt</span><br><span class="hljs-built_in">print</span>(os.path.normpath(<span class="hljs-string">&quot;D://////save\\\\1.txt&quot;</span>))<br><br><span class="hljs-comment"># 规范相对路径</span><br><span class="hljs-comment"># result: os_test.py</span><br><span class="hljs-built_in">print</span>(os.path.normpath(<span class="hljs-string">&quot;./\/\/\/\os_test.py&quot;</span>))<br><span class="hljs-comment"># result: ..\dir_file.txt</span><br><span class="hljs-built_in">print</span>(os.path.normpath(<span class="hljs-string">&quot;.///..///dir_file.txt&quot;</span>))<br><br><span class="hljs-comment"># 规范有冗余的相对路径</span><br><span class="hljs-comment"># result: folder\file.txt</span><br><span class="hljs-comment"># 移除多余的&quot;/&quot; -&gt; ./folder/./subfolder/../file.txt</span><br><span class="hljs-comment"># 转换路径分隔符 -&gt; .\folder\.\subfolder\..\file.txt</span><br><span class="hljs-comment"># 移除&quot;.&quot; -&gt; folder\subfolder\..\file.txt</span><br><span class="hljs-comment"># 解析&quot;..&quot;，将\subfolder\..移除 -&gt; folder\file.txt</span><br><span class="hljs-built_in">print</span>(os.path.normpath(<span class="hljs-string">&quot;./folder///./subfolder//../file.txt&quot;</span>))<br><br><span class="hljs-comment"># result: ..\dir_file.txt</span><br><span class="hljs-built_in">print</span>(os.path.normpath(<span class="hljs-string">&quot;../\/\././/./dirname/../dir_file.txt&quot;</span>))<br></code></pre></td></tr></table></figure>
-<h3><span id="2osgetcwd方法">2.os.getcwd方法：</span></h3>
+<p><span id="os.getcwd"> </span></p>
+<h3 id="2osgetcwd方法"><a href="#2osgetcwd方法" class="header-anchor">¶</a>2.os.getcwd方法：</h3>
 <p>用途：获得当前工作目录(working directory)的路径</p>
-<p>方法原型：<strong><em>os.getcwd()</em></strong></p>
+<p>方法原型：<em><strong>os.getcwd()</strong></em></p>
 <p>参数说明：无</p>
 <p>返回值：当前的工作目录路径，在Python3中返回类型为<strong>unicode字符串</strong>(str数据类型)，在Python2中返回类型为<strong>字节字符串</strong>(bytes数据类型)</p>
 <p>使用：</p>
-<p><strong>os.getcwd()</strong>返回的不是使用该方法的py脚本文件的目录的路径，而是是<strong>运行/调用/执行脚本的工作文件的目录的路径</strong>，<strong>前者称为当前文件目录，后者称为当前工作路径</strong>，如果希望获得当前文件路径的话，需要使用**__file__**属性，而目录需要结合其他os模块方法获得</p>
-<p>如果执行脚本即为运行<strong>os.getcwd()</strong>和**__file__**的脚本，则当前工作目录和当前文件目录是一致的</p>
-<p>一般情况下，<strong>os.getcwd()</strong>和**__file__**会结合<a href="#os.path.abspath"><strong>os.path.abspath</strong></a>和<a href="#os.path.dirname"><strong>os.path.dirname</strong></a>使用：</p>
-<ul>
-<li>当前文件路径通过os.path.abspath(__file__))获得(直接__file__也可以)</li>
-<li>当前文件目录通过os.path.abspath(os.path.dirname(__file__))获得</li>
-<li>当前工作目录通过os.path.abspath(os.getcwd())获得(直接os.getcwd()也可以)</li>
+<p><strong>os.getcwd()<strong>返回的不是使用该方法的py脚本文件的目录的路径，而是是</strong>运行/调用/执行脚本的工作文件的目录的路径</strong>，<strong>前者称为当前文件目录，后者称为当前工作路径</strong>，如果希望获得当前文件路径的话，需要使用**_<em>file</em>_**属性，而目录需要结合其他os模块方法获得</p>
+<p>如果执行脚本即为运行**os.getcwd()<strong>和</strong>_<em>file</em>_**的脚本，则当前工作目录和当前文件目录是一致的</p>
+<p>一般情况下，**os.getcwd()<strong>和</strong>_<em>file</em>_**会结合<a href="#os.path.abspath"><strong>os.path.abspath</strong></a>和<a href="#os.path.dirname"><strong>os.path.dirname</strong></a>使用：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>当前文件路径通过os.path.abspath(_<em>file</em>_))获得(直接__file__也可以)</p>
+</li>
+<li class="lvl-2">
+<p>当前文件目录通过os.path.abspath(os.path.dirname(_<em>file</em>_))获得</p>
+</li>
+<li class="lvl-2">
+<p>当前工作目录通过os.path.abspath(os.getcwd())获得(直接os.getcwd()也可以)</p>
+</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">##      os.getcwd方法：获得当前工作路径        ##</span><br><span class="hljs-comment"># 当前工作目录</span><br><span class="hljs-comment"># result: H:\py_ipynb\audio_to_text_and_translate</span><br><span class="hljs-built_in">print</span>(os.path.abspath(os.getcwd()))<br><br><span class="hljs-comment"># 当前文件路径</span><br><span class="hljs-comment"># result: H:\py_ipynb\audio_to_text_and_translate\os_test.py</span><br><span class="hljs-built_in">print</span>(os.path.abspath(__file__))<br><br><span class="hljs-comment"># 当前文件目录</span><br><span class="hljs-comment"># result: H:\py_ipynb\audio_to_text_and_translate</span><br><span class="hljs-built_in">print</span>(os.path.abspath(os.path.dirname(__file__)))<br></code></pre></td></tr></table></figure>
-<h3><span id="2续osgetcwdu方法python3已移除">2.[续]os.getcwdu方法(Python3已移除)：</span></h3>
+<p><span id="os.getcwdu"> </span></p>
+<h3 id="2续osgetcwdu方法python3已移除"><a href="#2续osgetcwdu方法python3已移除" class="header-anchor">¶</a>2.[续]os.getcwdu方法(Python3已移除)：</h3>
 <p>只能在Python2中使用，且返回类型为<strong>unicode字符串</strong>(str数据类型)，其返回内容和Python3中<a href="#os.getcwd"><strong>os.getcwd()</strong></a>方法相同</p>
 <p><strong>Python3用户请不要使用此方法</strong></p>
-<h3><span id="2续osgetcwdb方法仅限python3">2.[续]os.getcwdb方法(仅限Python3)：</span></h3>
-<p>只能在Python3中使用，且返回类型在Python3.8之前为ANSI编码的字节字符串(bytes数据类型)，在Python3.8及以后为UTF-8的编码的字节字符串(<a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3.8/whatsnew/3.8.html">Python 3.8
-有什么新变化 — Python 3.8.19 文档</a>)，其返回内容和Python3中<a href="#os.getcwd"><strong>os.getcwd()</strong></a>方法相同</p>
+<p><span id="os.getcwdb"> </span></p>
+<h3 id="2续osgetcwdb方法仅限python3"><a href="#2续osgetcwdb方法仅限python3" class="header-anchor">¶</a>2.[续]os.getcwdb方法(仅限Python3)：</h3>
+<p>只能在Python3中使用，且返回类型在Python3.8之前为ANSI编码的字节字符串(bytes数据类型)，在Python3.8及以后为UTF-8的编码的字节字符串(<a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3.8/whatsnew/3.8.html">Python 3.8 有什么新变化 — Python 3.8.19 文档</a>)，其返回内容和Python3中<a href="#os.getcwd"><strong>os.getcwd()</strong></a>方法相同</p>
 <p><strong>Python2用户请不要使用此方法</strong></p>
-<h3><span id="3oswalk方法">3.os.walk方法：</span></h3>
+<p><span id="os.walk"> </span></p>
+<h3 id="3oswalk方法"><a href="#3oswalk方法" class="header-anchor">¶</a>3.os.walk方法：</h3>
 <p>用途：递归地遍历指定目录下的全部子文件及子目录的全部文件</p>
-<p>方法原型：<strong><em>os.walk( top [, topdown=True [, onerror=None [,
-followlinks=False] ] ] )</em></strong></p>
+<p>方法原型：<em><strong>os.walk( top [, topdown=True [, onerror=None [, followlinks=False] ] ] )</strong></em></p>
 <p>参数说明：</p>
-<ul>
-<li><strong><em>top</em></strong>：需要遍历的目录，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，该参数必须传递</li>
-<li><strong><em>topdown</em></strong>：是否优先遍历<strong><em>top</em></strong>对应的目录，bool类型，True时优先遍历<strong><em>top</em></strong>目录，对应目录树的向下查找；False时优先遍历<strong><em>top</em></strong>子目录，对应目录树的向上查找，默认为True，该参数可选</li>
-<li><strong><em>onerror</em></strong>：自定义的回调函数，<strong>Callable对象类型</strong>(实际是Callable[[OSError],
-Any])，在<strong><em>os.walk</em></strong>遇到异常(权限不足、文件被删除或无法访问)时调用<strong><em>onerror</em></strong>处理遍历时发生的错误，可以使用日志记录，输出错误信息等函数作为<strong><em>onerror</em></strong>参数，默认为None，该参数可选</li>
-<li><strong><em>followlinks</em></strong>：是否遍历目录下的快捷方式实际指向的目录
-，bool类型，True时遍历快捷方式实际指向的目录，False时不遍历快捷方式实际指向的目录，默认为False，该参数可选</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><em><strong>top</strong></em>：需要遍历的目录，<a href="#os.AnyStr"><strong>AnyStr</strong></a>或者<a href="#os.PathLike"><strong>PathLike[AnyStr]</strong></a>类型，该参数必须传递</p>
+</li>
+<li class="lvl-2">
+<p><em><strong>topdown</strong></em>：是否优先遍历<em><strong>top</strong></em>对应的目录，bool类型，True时优先遍历<em><strong>top</strong></em>目录，对应目录树的向下查找；False时优先遍历<em><strong>top</strong></em>子目录，对应目录树的向上查找，默认为True，该参数可选</p>
+</li>
+<li class="lvl-2">
+<p><em><strong>onerror</strong></em>：自定义的回调函数，<strong>Callable对象类型</strong>(实际是Callable[[OSError], Any])，在<em><strong>os.walk</strong></em>遇到异常(权限不足、文件被删除或无法访问)时调用<em><strong>onerror</strong></em>处理遍历时发生的错误，可以使用日志记录，输出错误信息等函数作为<em><strong>onerror</strong></em>参数，默认为None，该参数可选</p>
+</li>
+<li class="lvl-2">
+<p><em><strong>followlinks</strong></em>：是否遍历目录下的快捷方式实际指向的目录 ，bool类型，True时遍历快捷方式实际指向的目录，False时不遍历快捷方式实际指向的目录，默认为False，该参数可选</p>
+</li>
 </ul>
-<p>返回值：<strong><em>os.walk</em></strong>返回一个生成器对象，<strong>类型为Iterator[tuple[AnyStr,
-list[AnyStr],
-list[AnyStr]]]</strong>，实际上，其每次返回的是(<strong><em>root,dirs,files</em></strong>)的三元组作为该次遍历时的返回值</p>
-<ul>
-<li><strong><em>root</em></strong>：<strong>AnyStr</strong>类型，对应当前遍历的目录路径</li>
-<li><strong><em>dirs</em></strong>：<strong>list[AnyStr]</strong>类型，对应当前遍历的目录下的全部目录名集合</li>
-<li><strong><em>files</em></strong>：<strong>list[AnyStr]</strong>类型，对应当前遍历的目录下的全部文件名集合</li>
+<p>返回值：<em><strong>os.walk</strong></em>返回一个生成器对象，<strong>类型为Iterator[tuple[AnyStr, list[AnyStr], list[AnyStr]]]</strong>，实际上，其每次返回的是(<em><strong>root,dirs,files</strong></em>)的三元组作为该次遍历时的返回值</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><em><strong>root</strong></em>：<strong>AnyStr</strong>类型，对应当前遍历的目录路径</p>
+</li>
+<li class="lvl-2">
+<p><em><strong>dirs</strong></em>：**list[AnyStr]**类型，对应当前遍历的目录下的全部目录名集合</p>
+</li>
+<li class="lvl-2">
+<p><em><strong>files</strong></em>：**list[AnyStr]**类型，对应当前遍历的目录下的全部文件名集合</p>
+</li>
 </ul>
-<p>使用：如果希望获得的是<strong><em>top</em></strong>目录下的文件/目录的相对路径，需要将root与dirs/files拼接，此处可使用<a href="#os.path.join"><strong>os.path.join</strong></a>方法完成，例子如下：</p>
+<p>使用：如果希望获得的是<em><strong>top</strong></em>目录下的文件/目录的相对路径，需要将root与dirs/files拼接，此处可使用<a href="#os.path.join"><strong>os.path.join</strong></a>方法完成，例子如下：</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs vim">path_files = []<br><span class="hljs-keyword">for</span> root, dirs, <span class="hljs-keyword">files</span> in os.walk(path):<br>    <span class="hljs-keyword">for</span> <span class="hljs-keyword">file</span> in <span class="hljs-keyword">files</span>:<br>        path_files.<span class="hljs-keyword">append</span>(os.path.<span class="hljs-keyword">join</span>(root, <span class="hljs-keyword">file</span>))<br>	<span class="hljs-keyword">return</span> path_files<br></code></pre></td></tr></table></figure>
 <p>如果希望该路径是绝对路径，需要在append方法前使用<a href="#os.path.abspath"><strong>os.path.abspath</strong></a>方法：</p>
 <figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs lua">path_files = []<br><span class="hljs-keyword">for</span> root, dirs, files <span class="hljs-keyword">in</span> <span class="hljs-built_in">os</span>.walk(<span class="hljs-built_in">path</span>):<br>    <span class="hljs-keyword">for</span> file <span class="hljs-keyword">in</span> files:<br>        path_files.append(<span class="hljs-built_in">os</span>.<span class="hljs-built_in">path</span>.abspath(<span class="hljs-built_in">os</span>.<span class="hljs-built_in">path</span>.join(root, file)))<br>	<span class="hljs-keyword">return</span> path_files<br></code></pre></td></tr></table></figure>
-<h3><span id="4osmakedirs方法">4.os.makedirs方法：</span></h3>
+<p><span id="os.makedirs"> </span></p>
+<h3 id="4osmakedirs方法"><a href="#4osmakedirs方法" class="header-anchor">¶</a>4.os.makedirs方法：</h3>
 <p>用途：递归地创建多级目录，对于中间级不存在的目录也会自动创建</p>
-<p>方法原型：<strong><em>os.makedirs(name [, mode=0o777 [,
-exist_ok=False]])</em></strong></p>
+<p>方法原型：<em><strong>os.makedirs(name [, mode=0o777 [, exist_ok=False]])</strong></em></p>
 <p>参数说明：</p>
-<ul>
-<li><strong><em>name</em></strong>：需要递归创建的目录路径，<a href="#os.StrOrBytesPath"><strong>StrOrBytesPath</strong></a>类型，可以是绝对路径/相对路径，该参数必须传递</li>
-<li><strong><em>mode</em></strong>：Linux目录权限数字模式，windows下该参数无效，int类型(一般用3位八进制数字表示)，默认为0o777(即任何用户均可读可写可执行)，该参数可选</li>
-<li><strong><em>exist_ok</em></strong>：是否在目录存在时抛出异常，bool类型，如果<strong><em>name</em></strong>已存在且为目录，在<strong><em>exist_ok</em></strong>为True不抛出异常，否则均抛出<strong>FileExistsError</strong>异常(Windows下为<strong>WinError183</strong>)，默认为False，该参数可选</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><em><strong>name</strong></em>：需要递归创建的目录路径，<a href="#os.StrOrBytesPath"><strong>StrOrBytesPath</strong></a>类型，可以是绝对路径/相对路径，该参数必须传递</p>
+</li>
+<li class="lvl-2">
+<p><em><strong>mode</strong></em>：Linux目录权限数字模式，windows下该参数无效，int类型(一般用3位八进制数字表示)，默认为0o777(即任何用户均可读可写可执行)，该参数可选</p>
+</li>
+<li class="lvl-2">
+<p><em><strong>exist_ok</strong></em>：是否在目录存在时抛出异常，bool类型，如果<em><strong>name</strong></em>已存在且为目录，在<em><strong>exist_ok</strong></em>为True不抛出异常，否则均抛出<strong>FileExistsError</strong>异常(Windows下为<strong>WinError183</strong>)，默认为False，该参数可选</p>
+</li>
 </ul>
 <p>返回值：无返回值</p>
 <p>使用：该方法实际上要注意的点很多</p>
 <p>首先，在基本使用时，由于其递归创建多级目录，所以在中间级目录名出现错误的情况下该方法不会报错，而是会沿着一个错误的路径进行创建，需要注意检查：</p>
 <figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs pf"><span class="hljs-comment"># 尝试当前目录创建</span><br><span class="hljs-keyword">os</span>.makedirs(name=<span class="hljs-string">&quot;./test&quot;</span>)    <span class="hljs-comment"># 正确，在当前工作目录子目录下创建了一个test目录</span><br><span class="hljs-keyword">os</span>.makedirs(name=<span class="hljs-string">&quot;./vidio/test&quot;</span>)    <span class="hljs-comment"># 错误，创建了不存在的vidio目录，并在该目录下创建了test目录，与实际预期不符</span><br></code></pre></td></tr></table></figure>
 <p>其次，Linux用户需要考虑mode模式的权限，有些目录的权限不可使用默认的777；而windows用户无论怎么修改mode，实际对创建的目录是没有权限影响的，使用的都是windows默认创建目录的权限，需要自行手动修改：</p>
-<p><img src="https://s21.ax1x.com/2024/04/15/pFvcmzq.png" srcset="/img/loading.gif" lazyload alt="image-20240415132343397" style="zoom:50%;"></p>
+<img src="https://s21.ax1x.com/2024/04/15/pFvcmzq.png" srcset="/xiaohei07/xiaohei07.github.io/img/loading.gif" lazyload alt="image-20240415132343397" style="zoom:50%;">
 <p>上图为手动创建的video文件夹和指定mode=0o111时创建的vidio文件夹，可以看到二者权限完全一致(其他组/用户也相同，此处不再一一展示)</p>
 <p>另外，使用<a href="#os.path.exists"><strong>os.path.exists</strong></a>方法和该方法的一种常见创建多级目录方法：</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text"># 错误的创建方法<br>if not os.path.exists(path):<br>    os.makedirs(path)<br></code></pre></td></tr></table></figure>
 <p>这样的处理是错误的，在多线程或多进程环境中，即使在执行两个方法之间没有其他线程或进程修改文件系统，也同样存在着竞态条件：</p>
 <p>假定存在线程A、B，线程A执行了<strong>os.path.exists</strong>方法后被操作系统中断——此时操作系统切换到线程B，因为path未存在，线程B执行了完整的<strong>os.path.exist</strong>和<strong>os.makedirs</strong>方法并创建了path目录——线程B被操作系统中断并切换到线程A，此时的A在执行<strong>os.makedirs</strong>方法时就会因path目录已存在而抛出异常，影响程序执行</p>
-<p>解决的方法是设置<strong><em>exist_ok</em></strong>为True避免报错，且此目录一旦被创建，其他线程/进程希望创建此目录时能够发现此目录已存在，进而终止创建操作，保证创建时不会报错</p>
-<p>同时，考虑到目录和文件可能同名影响创建，判断时最好使用<a href="#os.path.isdir"><strong>os.path.isdir</strong></a>方法判断<strong><em>name</em></strong>是否是一个目录：</p>
+<p>解决的方法是设置<em><strong>exist_ok</strong></em>为True避免报错，且此目录一旦被创建，其他线程/进程希望创建此目录时能够发现此目录已存在，进而终止创建操作，保证创建时不会报错</p>
+<p>同时，考虑到目录和文件可能同名影响创建，判断时最好使用<a href="#os.path.isdir"><strong>os.path.isdir</strong></a>方法判断<em><strong>name</strong></em>是否是一个目录：</p>
 <figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs lua"># 正确的创建方法<br><span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> <span class="hljs-built_in">os</span>.<span class="hljs-built_in">path</span>.isdir(<span class="hljs-built_in">path</span>):<br>	<span class="hljs-built_in">os</span>.makedirs(<span class="hljs-built_in">path</span>, exist_ok = True)<br></code></pre></td></tr></table></figure>
-<h3><span id="4续osmkdir方法">4[续].os.mkdir方法：</span></h3>
+<p><span id="os.mkdir"> </span></p>
+<h3 id="4续osmkdir方法"><a href="#4续osmkdir方法" class="header-anchor">¶</a>4[续].os.mkdir方法：</h3>
 <p>用途：创建单级目录，即对于多级目录的路径，只为最后一级目录创建</p>
-<p>方法原型：<strong><em>os.makedirs(path [,
-mode=0o777])</em></strong></p>
+<p>方法原型：<em><strong>os.makedirs(path [, mode=0o777])</strong></em></p>
 <p>参数说明：</p>
-<ul>
-<li><strong><em>path</em></strong>：需要创建的目录路径，<a href="#os.StrOrBytesPath"><strong>StrOrBytesPath</strong></a>类型，可以是绝对路径/相对路径，该参数必须传递</li>
-<li><strong><em>mode</em></strong>：和<a href="#os.makedirs"><strong>os.makedirs</strong></a>方法的mode相同</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><em><strong>path</strong></em>：需要创建的目录路径，<a href="#os.StrOrBytesPath"><strong>StrOrBytesPath</strong></a>类型，可以是绝对路径/相对路径，该参数必须传递</p>
+</li>
+<li class="lvl-2">
+<p><em><strong>mode</strong></em>：和<a href="#os.makedirs"><strong>os.makedirs</strong></a>方法的mode相同</p>
+</li>
 </ul>
 <p>返回值：无返回值</p>
 <p>使用：</p>
-<p>该方法的使用较简单，其创建只针对最后一级目录，如果最后一集目录的上级目录有任何一级不存在均会抛出<strong>FileNotFoundError</strong>错误(Windows下为<strong>WinError3</strong>)，如果已存在文件/目录与<strong><em>path</em></strong>对应，则抛出<strong>FileExistsError</strong>异常，否则正常创建目录，故一般先使用<a href="#os.path.isdir"><strong>os.path.isdir</strong></a>方法判断<strong><em>path</em></strong>是否是一个目录：</p>
+<p>该方法的使用较简单，其创建只针对最后一级目录，如果最后一集目录的上级目录有任何一级不存在均会抛出<strong>FileNotFoundError</strong>错误(Windows下为<strong>WinError3</strong>)，如果已存在文件/目录与<em><strong>path</strong></em>对应，则抛出<strong>FileExistsError</strong>异常，否则正常创建目录，故一般先使用<a href="#os.path.isdir"><strong>os.path.isdir</strong></a>方法判断<em><strong>path</strong></em>是否是一个目录：</p>
 <figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> <span class="hljs-built_in">os</span>.<span class="hljs-built_in">path</span>.isdir(<span class="hljs-built_in">path</span>):<br>	<span class="hljs-built_in">os</span>.mkdir(<span class="hljs-built_in">path</span>)<br></code></pre></td></tr></table></figure>
 
                 
@@ -678,7 +802,7 @@ mode=0o777])</em></strong></p>
     
       <span class="category-chain">
         
-  <a href="/categories/python-study/" class="category-chain-item">python_study</a>
+  <a href="/xiaohei07/xiaohei07.github.io/categories/python-study/" class="category-chain-item">python_study</a>
   
   
 
@@ -693,9 +817,9 @@ mode=0o777])</em></strong></p>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
       
-        <a href="/tags/python/">#python</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/python/">#python</a>
       
     </div>
   
@@ -708,7 +832,7 @@ mode=0o777])</em></strong></p>
   <div class="license-box my-3">
     <div class="license-title">
       <div>python标准库——os模块常用方法</div>
-      <div>http://example.com/2024/07/14/python标准库——os模块常用方法/</div>
+      <div>https://github.com/xiaohei07/xiaohei07.github.io/2024/07/14/python标准库——os模块常用方法/</div>
     </div>
     <div class="license-meta">
       
@@ -752,11 +876,17 @@ mode=0o777])</em></strong></p>
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/xiaohei07/xiaohei07.github.io/2024/07/15/%E8%BF%91%E6%9C%9F%E7%9B%AE%E6%A0%87/" title="近期目标">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">近期目标</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%BA%94)%E7%B1%BB%E8%A3%85%E9%A5%B0%E5%99%A8/" title="python进阶——类(五)类装饰器">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%BA%94)%E7%B1%BB%E8%A3%85%E9%A5%B0%E5%99%A8/" title="python进阶——类(五)类装饰器">
                         <span class="hidden-mobile">python进阶——类(五)类装饰器</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -816,7 +946,6 @@ mode=0o777])</em></strong></p>
 </div>
 
 
-
   </aside>
 
 
@@ -836,15 +965,18 @@ mode=0o777])</em></strong></p>
 
 
 
-  
-
-
 
   
 
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -891,7 +1023,7 @@ mode=0o777])</em></strong></p>
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -942,8 +1074,8 @@ mode=0o777])</em></strong></p>
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -965,93 +1097,56 @@ mode=0o777])</em></strong></p>
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
+   <script>
+  Fluid.utils.createScript('https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.28.2/tocbot.min.js', function() {
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !window.tocbot) { return; }
+  var boardCtn = jQuery('#board-ctn');
+  var boardTop = boardCtn.offset().top;
 
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
+  window.tocbot.init(Object.assign({
+  tocSelector : '#toc-body',
+  contentSelector : '.markdown-body',
+  headingSelector : 'h1, h2, h3, h4, h5, h6',
+  linkClass : 'tocbot-link',
+  activeLinkClass : 'tocbot-active-link',
+  listClass : 'tocbot-list',
+  isCollapsedClass: 'tocbot-is-collapsed',
+  collapsibleClass: 'tocbot-is-collapsible',
+  scrollSmooth : true,
+  includeTitleTags: true,
+  includeHtml: true,
+  headingsOffset : -boardTop,
+  }, CONFIG.toc));
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
 
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
+  Fluid.events.registerRefreshCallback(function() {
+  if ('tocbot' in window) {
+  tocbot.refresh();
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !tocbot) {
+  return;
+  }
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
+  }
   });
-</script>
-
+  });
+  </script>
+  
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
 
 
   
@@ -1064,17 +1159,58 @@ mode=0o777])</em></strong></p>
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script defer src="/js/leancloud.js" ></script>
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
 
-  <script  src="/js/local-search.js" ></script>
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
+
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -1082,7 +1218,7 @@ mode=0o777])</em></strong></p>
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

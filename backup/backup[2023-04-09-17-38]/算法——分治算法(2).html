@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="例子均使用c++实现。 （一）汉诺塔问题： 1. 问题： 汉诺塔问题是一个经典的问题。该问题是在一块铜板装置上，有三根杆(编号A、B、C)，在A杆自下而上、由大到小按顺序放置n个盘子。 问题的目标是把A杆上的金盘全部移到C杆上，并仍保持原有顺序叠好。 操作规则：每次只能移动一个盘子，并且在移动过程中三根杆上都始终保持大盘在下，小盘在上，操作过程中盘子可以置于A、B、C任一杆上。 2.">
+    <meta name="description" content="例子均使用c++实现。 ¶（一）汉诺塔问题： ¶1. 问题： 汉诺塔问题是一个经典的问题。该问题是在一块铜板装置上，有三根杆(编号A、B、C)，在A杆自下而上、由大到小按顺序放置n个盘子。 问题的目标是把A杆上的金盘全部移到C杆上，并仍保持原有顺序叠好。 操作规则：每次只能移动一个盘子，并且在移动过程中三根杆上都始终保持大盘在下，小盘在上，操作过程中盘子可以置于A、B、C任一杆上。 ¶2. 基本思">
 <meta property="og:type" content="website">
 <meta property="og:title" content="算法——分治算法(2)">
-<meta property="og:url" content="http://example.com/backup/backup[2023-04-09-17-38]/%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95(2).html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="例子均使用c++实现。 （一）汉诺塔问题： 1. 问题： 汉诺塔问题是一个经典的问题。该问题是在一块铜板装置上，有三根杆(编号A、B、C)，在A杆自下而上、由大到小按顺序放置n个盘子。 问题的目标是把A杆上的金盘全部移到C杆上，并仍保持原有顺序叠好。 操作规则：每次只能移动一个盘子，并且在移动过程中三根杆上都始终保持大盘在下，小盘在上，操作过程中盘子可以置于A、B、C任一杆上。 2.">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/backup/backup[2023-04-09-17-38]/%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95(2).html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="例子均使用c++实现。 ¶（一）汉诺塔问题： ¶1. 问题： 汉诺塔问题是一个经典的问题。该问题是在一块铜板装置上，有三根杆(编号A、B、C)，在A杆自下而上、由大到小按顺序放置n个盘子。 问题的目标是把A杆上的金盘全部移到C杆上，并仍保持原有顺序叠好。 操作规则：每次只能移动一个盘子，并且在移动过程中三根杆上都始终保持大盘在下，小盘在上，操作过程中盘子可以置于A、B、C任一杆上。 ¶2. 基本思">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2023/04/05/pp57e58.png">
 <meta property="article:published_time" content="2023-03-23T16:13:21.000Z">
@@ -34,7 +34,7 @@
   
   
   
-  <title>算法——分治算法(2) - ZZHの个人博客</title>
+  <title>算法——分治算法(2) - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -52,35 +52,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -114,7 +114,7 @@
 <div class="header-inner" style="height: 60vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -133,7 +133,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -145,7 +145,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -157,21 +157,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -191,7 +179,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -199,15 +195,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -221,7 +209,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -233,7 +221,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -263,7 +251,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -298,85 +286,90 @@
 
 <article class="page-content">
   <p>例子均使用c++实现。</p>
-<h3><span id="一汉诺塔问题">（一）汉诺塔问题：</span></h3>
-<h4><span id="1-问题">1. 问题：</span></h4>
+<h3 id="一汉诺塔问题"><a href="#一汉诺塔问题" class="header-anchor">¶</a>（一）汉诺塔问题：</h3>
+<h4 id="1-问题"><a href="#1-问题" class="header-anchor">¶</a>1. 问题：</h4>
 <p>汉诺塔问题是一个经典的问题。该问题是在一块铜板装置上，有三根杆(编号A、B、C)，在A杆自下而上、由大到小按顺序放置n个盘子。</p>
 <p>问题的目标是把A杆上的金盘全部移到C杆上，并仍保持原有顺序叠好。</p>
 <p>操作规则：每次只能移动一个盘子，并且在移动过程中三根杆上都始终保持大盘在下，小盘在上，操作过程中盘子可以置于A、B、C任一杆上。</p>
-<h4><span id="2-基本思想">2. 基本思想：</span></h4>
+<h4 id="2-基本思想"><a href="#2-基本思想" class="header-anchor">¶</a>2. 基本思想：</h4>
 <p>假设共需要移动A柱的n个盘子。</p>
 <p>首先考虑最大的盘子，如果移到B柱，未来仍需要移动到C柱，等于直接从A柱移到C柱，所以可以省略无用的这一步，直接从A-&gt;C，那么其他的n-1个盘子应当为其腾出空间移动，移动至B柱，否则此步无法进行。等待最大的移动到C柱之后将这n-1个盘子其移动到C柱，而此过程可以看作新的汉诺塔问题：从B柱到C柱移动n-1个盘子，问题性质不变.......直到只剩最小的盘子，此时可以直接移到C柱，问题的解是显然的。</p>
 <p>由上面的过程和性质，汉诺塔问题显然可以分治解决，将一个复杂的N问题一步步分解为子问题，直到变成1问题，1问题的解是直观的，再逐步合并子问题，得到原问题的解。</p>
-<h4><span id="3-时间复杂度">3. 时间复杂度：</span></h4>
-<p>设盘子个数为n时，需要T(n)步，把A柱子n-1个盘子移到B柱子，需要T(n-1)步，而A柱子最后一个盘子移到C柱子1步，B柱子上n-1个盘子移到C柱子上T(n-1)步。
-进而可得公式：</p>
-<p><strong><em>T(n）=2T(n-1)+1</em></strong></p>
-<p>所以汉诺塔问题的时间复杂度为<strong><em>O(2<sup>n</sup>)</em></strong>;</p>
-<h4><span id="4-代码">4. 代码：</span></h4>
+<h4 id="3-时间复杂度"><a href="#3-时间复杂度" class="header-anchor">¶</a>3. 时间复杂度：</h4>
+<p>设盘子个数为n时，需要T(n)步，把A柱子n-1个盘子移到B柱子，需要T(n-1)步，而A柱子最后一个盘子移到C柱子1步，B柱子上n-1个盘子移到C柱子上T(n-1)步。进而可得公式：</p>
+<p><em><strong>T(n）=2T(n-1)+1</strong></em></p>
+<p>所以汉诺塔问题的时间复杂度为<em><strong>O(2<sup>n</sup>)</strong></em>;</p>
+<h4 id="4-代码"><a href="#4-代码" class="header-anchor">¶</a>4. 代码：</h4>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-comment">//b为辅助的那根柱子，a为盘子所在的柱子，c为要移动到的柱子</span><br><span class="hljs-comment">//盘子顺序由小到大排序，最小的为第一个盘子</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">tower_of_Hanoi</span><span class="hljs-params">(<span class="hljs-type">int</span> n, <span class="hljs-type">char</span> a, <span class="hljs-type">char</span> b, <span class="hljs-type">char</span> c)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span>)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;第1个盘子由&quot;</span> &lt;&lt; a &lt;&lt; <span class="hljs-string">&quot;-&gt;&quot;</span> &lt;&lt; c &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-keyword">else</span><br>	&#123;<br>		<span class="hljs-built_in">tower_of_Hanoi</span>(n - <span class="hljs-number">1</span>, a, c, b);   <span class="hljs-comment">//将A柱的n-1个盘子借助C移向B</span><br>		cout &lt;&lt; <span class="hljs-string">&quot;第&quot;</span> &lt;&lt; n &lt;&lt; <span class="hljs-string">&quot;个盘子由&quot;</span> &lt;&lt; a &lt;&lt; <span class="hljs-string">&quot;-&gt;&quot;</span> &lt;&lt; c &lt;&lt; endl;   <span class="hljs-comment">//将A柱的最小的盘子移向C</span><br>		<span class="hljs-built_in">tower_of_Hanoi</span>(n - <span class="hljs-number">1</span>, b, a, c);   <span class="hljs-comment">//将B柱的n-1个盘子借助A移向C</span><br>	&#125;<br>	<span class="hljs-keyword">return</span>;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-built_in">tower_of_Hanoi</span>(<span class="hljs-number">16</span>,<span class="hljs-string">&#x27;A&#x27;</span>,<span class="hljs-string">&#x27;B&#x27;</span>,<span class="hljs-string">&#x27;C&#x27;</span>);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果:(仅展示n=4的结果，否则太长了)</span><br><span class="hljs-comment">//第1个盘子由A-&gt;B</span><br><span class="hljs-comment">//第2个盘子由A-&gt;C</span><br><span class="hljs-comment">//第1个盘子由B-&gt;C</span><br><span class="hljs-comment">//第3个盘子由A-&gt;B</span><br><span class="hljs-comment">//第1个盘子由C-&gt;A</span><br><span class="hljs-comment">//第2个盘子由C-&gt;B</span><br><span class="hljs-comment">//第1个盘子由A-&gt;B</span><br><span class="hljs-comment">//第4个盘子由A-&gt;C</span><br><span class="hljs-comment">//第1个盘子由B-&gt;C</span><br><span class="hljs-comment">//第2个盘子由B-&gt;A</span><br><span class="hljs-comment">//第1个盘子由C-&gt;A</span><br><span class="hljs-comment">//第3个盘子由B-&gt;C</span><br><span class="hljs-comment">//第1个盘子由A-&gt;B</span><br><span class="hljs-comment">//第2个盘子由A-&gt;C</span><br><span class="hljs-comment">//第1个盘子由B-&gt;C</span><br></code></pre></td></tr></table></figure>
-<h3><span id="二有序二分查找问题">（二）有序二分查找问题：</span></h3>
-<h4><span id="1-问题">1. 问题：</span></h4>
+<h3 id="二有序二分查找问题"><a href="#二有序二分查找问题" class="header-anchor">¶</a>（二）有序二分查找问题：</h3>
+<h4 id="1-问题"><a href="#1-问题" class="header-anchor">¶</a>1. 问题：</h4>
 <p>在某一个有序序列内查找某个值是否存在。</p>
-<h4><span id="2-基本思想">2. 基本思想：</span></h4>
+<h4 id="2-基本思想"><a href="#2-基本思想" class="header-anchor">¶</a>2. 基本思想：</h4>
 <p>二分查找算法，也称折半搜索算法、对数搜索算法，是一种在有序数组中查找某一特定元素的分治搜索算法。</p>
 <p>二分查找算法有许多中变种。比如分散层叠可以提升在多个数组中对同一个数值的搜索，指数搜索将二分查找算法拓宽到无边界的列表。二叉搜索树和B树数据结构就是基于二分查找算法的。</p>
 <p>二分查找算法的搜索过程从数组的中间元素开始，如果中间元素正好是要查找的元素，则搜索过程结束；如果某一特定元素大于或者小于中间元素，则在数组大于或小于中间元素的那一半中查找，而且跟开始一样从中间元素开始比较。如果在某一步骤数组为空，则代表找不到。这种搜索算法每一次比较都使搜索范围缩小一半。</p>
 <p>我们假设查询对象是一个名为array的数组，且为升序排序，使用变量left表示查找范围的左边界，right表示右边界，mid表示中间位置(向下取整)，value为要查找的元素。二分查找算法的实现过程如下：</p>
-<ol type="1">
-<li><p>初始化数组array的值(有序升序排序)。</p>
+<ol>
+<li class="lvl-3">
+<p>初始化数组array的值(有序升序排序)。</p>
 <p>left=0，指向array[ ]的第一个元素。</p>
 <p>right=array.length-1，指向数组array[ ]的最后一个元素。</p>
-<p>mid=(left+right) / 2，即指向查找范围的中间元素，且向下取整。</p></li>
-<li><p>判定
-left&lt;=right是否成立，如果不成立，算法结束，说明该列表中没有指定元素。</p></li>
-<li><p>如果2中判断成立，比较value和 array[mid] 。如果 value ==
-array[mid] ，搜索成功，算法结束，返回相对应的位置或者布尔值；如果 value
-&gt;array[mid] ，令 left=mid+1，并更新<strong><em>mid=(left+right) /
-2</em></strong>，继续在数组的后半部分进行搜索，重复2和3步即可；如果
-value &lt;array[mid] ，令
-right=mid-1，同样更新mid，继续在数组的前半部分进行搜索，重复2和3步即可。</p></li>
+<p>mid=(left+right) / 2，即指向查找范围的中间元素，且向下取整。</p>
+</li>
+<li class="lvl-3">
+<p>判定 left&lt;=right是否成立，如果不成立，算法结束，说明该列表中没有指定元素。</p>
+</li>
+<li class="lvl-3">
+<p>如果2中判断成立，比较value和 array[mid] 。如果 value == array[mid] ，搜索成功，算法结束，返回相对应的位置或者布尔值；如果 value &gt;array[mid] ，令 left=mid+1，并更新<em><strong>mid=(left+right) / 2</strong></em>，继续在数组的后半部分进行搜索，重复2和3步即可；如果 value &lt;array[mid] ，令 right=mid-1，同样更新mid，继续在数组的前半部分进行搜索，重复2和3步即可。</p>
+</li>
 </ol>
-<h4><span id="3-时间复杂度">3. 时间复杂度：</span></h4>
+<h4 id="3-时间复杂度"><a href="#3-时间复杂度" class="header-anchor">¶</a>3. 时间复杂度：</h4>
 <p>二分查找每次会使得查找区间缩小一半，从n到n/2，n/4，…，n/2^k。</p>
 <p>k为循环的次数，最坏情况下k次二分之后在区间长度为1时找到了需要的元素。</p>
-<p>则有：<strong><em>n/2<sup>k</sup>=1</em></strong> ，可得
-<strong><em>k=log<sub>2</sub>n</em></strong>，</p>
-<p>故复杂度为 <strong><em>O(logn)</em></strong>;</p>
+<p>则有：<em><strong>n/2<sup>k</sup>=1</strong></em> ，可得 <em><strong>k=log<sub>2</sub>n</strong></em>，</p>
+<p>故复杂度为 <em><strong>O(logn)</strong></em>;</p>
 <p>二分查找算法在一般情况下的复杂度是对数时间并使用常数空间，无论对任何大小的输入数据，算法使用的空间都是一样的。</p>
 <p>除非输入数据数量很少，否则二分查找算法比线性搜索更快，但数组必须事先被排序。尽管特定的、为了快速搜索而设计的数据结构更有效（比如哈希表），但二分查找算法应用面更广。</p>
-<h4><span id="4-代码">4. 代码：</span></h4>
+<h4 id="4-代码"><a href="#4-代码" class="header-anchor">¶</a>4. 代码：</h4>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;ctime&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;random&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;vector&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;algorithm&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-comment">//用随机数测试二分查找（小范围，少数量）</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">search_binary</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;v, <span class="hljs-type">int</span> value)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">int</span> left = <span class="hljs-number">0</span>;<br>	<span class="hljs-type">int</span> right = v.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>;<br>	<span class="hljs-type">int</span> mid = left + right &gt;&gt;<span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">while</span> (left &lt;= right)<br>	&#123;<br>		<span class="hljs-keyword">if</span> (v[mid] == value)<br>		&#123;<br>			<span class="hljs-keyword">return</span> mid;<br>		&#125;<br>		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (value &lt; v[mid])<br>		&#123;<br>			right = mid - <span class="hljs-number">1</span>;<br>		&#125;<br>		<span class="hljs-keyword">else</span><br>		&#123;<br>			left = mid + <span class="hljs-number">1</span>;<br>		&#125;<br>		mid = left + right &gt;&gt; <span class="hljs-number">1</span>;<br>	&#125;<br>	cout &lt;&lt; <span class="hljs-string">&quot;未查询到结果!!!&quot;</span> &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	std::default_random_engine e;<br>	<span class="hljs-function">std::uniform_int_distribution&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">u</span><span class="hljs-params">(<span class="hljs-number">1</span>, <span class="hljs-number">200</span>)</span></span>;<br>	e.<span class="hljs-built_in">seed</span>(<span class="hljs-built_in">time</span>(<span class="hljs-number">0</span>));<br>	vector&lt;<span class="hljs-type">int</span>&gt;v;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">50</span>; i++) <br>	&#123;<br>		<span class="hljs-type">int</span> j = <span class="hljs-built_in">u</span>(e);<br>		v.<span class="hljs-built_in">push_back</span>(j); <br>	&#125;<br>	<span class="hljs-built_in">sort</span>(v.<span class="hljs-built_in">begin</span>(),v.<span class="hljs-built_in">end</span>());<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) &#123;<br>		cout &lt;&lt; <span class="hljs-built_in">search_binary</span>(v, <span class="hljs-number">50</span> + i) &lt;&lt; endl;;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果随机</span><br></code></pre></td></tr></table></figure>
-<h3><span id="三归并排序">（三）归并排序：</span></h3>
-<h3><span id="四快速排序">（四）快速排序：</span></h3>
-<h3><span id="五线性时间选择无序二分查找">（五）线性时间选择（无序二分查找）：</span></h3>
-<h4><span id="1-问题">1. 问题：</span></h4>
+<h3 id="三归并排序"><a href="#三归并排序" class="header-anchor">¶</a>（三）归并排序：</h3>
+<h3 id="四快速排序"><a href="#四快速排序" class="header-anchor">¶</a>（四）快速排序：</h3>
+<h3 id="五线性时间选择无序二分查找"><a href="#五线性时间选择无序二分查找" class="header-anchor">¶</a>（五）线性时间选择（无序二分查找）：</h3>
+<h4 id="1-问题"><a href="#1-问题" class="header-anchor">¶</a>1. 问题：</h4>
 <p>给定线性序集中n个元素（元素不重复）和一个整数k，1≤k≤n，要求找出这n个元素中第k小的元素。</p>
-<h4><span id="2-基本思想">2. 基本思想：</span></h4>
+<h4 id="2-基本思想"><a href="#2-基本思想" class="header-anchor">¶</a>2. 基本思想：</h4>
 <p>使用线性时间选择算法Select()，此方法实际上是从快速排序方法上改进而来的。</p>
-<p>此算法常使用的场景是：找出待排序序列中，
-第k大或第k小元素(1&lt;k&lt;n)。此种算法常用于待排序序列&gt;75时，因为元素个数75时，时间复杂度很低，可以直接进行冒泡排序返回arr[n-k+1]。</p>
+<p>此算法常使用的场景是：找出待排序序列中， 第k大或第k小元素(1&lt;k&lt;n)。此种算法常用于待排序序列&gt;75时，因为元素个数75时，时间复杂度很低，可以直接进行冒泡排序返回arr[n-k+1]。</p>
 <p>步骤为：</p>
-<ol type="1">
-<li><p>将n个输入元素划分成n/5（向上取整）个组，每组5个元素，最多只可能有一个组不是5个元素。用任意一种排序算法，将每个元素数量为5的组的元素排好序，同时依次将每组的中位数（第三小的元素）与该序列进行元素交换到序列最前方（以便于后续求中位数的中位数），中位数数量共n/5（向下取整）个。</p></li>
-<li><p>求出序列开始处这n/5（向下取整）个元素的中位数。如果n/5（向下取整）是偶数，就找它的2个中位数中较大的一个。</p></li>
-<li><p>将这个最终的中位数交换到序列最开始的地方，并以这个元素作为划分基准，遍历全序列进行划分，用两个指针从开始处和结尾处不断将前面比这个元素大的和后面比这个元素小的数进行交换（优先移动后面的指针，这样保证两个指针相遇时指向的值比划分元素小），直到两个指针相遇，随后将划分元素和指针指向的元素交换。</p>
-<p><img src="https://s1.ax1x.com/2023/04/05/pp57e58.png" srcset="/img/loading.gif" lazyload style="zoom:80%;"></p></li>
-<li><p>此时根据此划分元素位置pos可以确定其为第pos+1小的元素，进行pos+1和k的比较，如果相等，返回划分元素即为答案；如果k&lt;pos+1，对划分元素左侧进行递归处理（即为子问题），如果k&gt;pos+1,对划分元素右侧进行递归处理。</p></li>
+<ol>
+<li class="lvl-3">
+<p>将n个输入元素划分成n/5（向上取整）个组，每组5个元素，最多只可能有一个组不是5个元素。用任意一种排序算法，将每个元素数量为5的组的元素排好序，同时依次将每组的中位数（第三小的元素）与该序列进行元素交换到序列最前方（以便于后续求中位数的中位数），中位数数量共n/5（向下取整）个。</p>
+</li>
+<li class="lvl-3">
+<p>求出序列开始处这n/5（向下取整）个元素的中位数。如果n/5（向下取整）是偶数，就找它的2个中位数中较大的一个。</p>
+</li>
+<li class="lvl-3">
+<p>将这个最终的中位数交换到序列最开始的地方，并以这个元素作为划分基准，遍历全序列进行划分，用两个指针从开始处和结尾处不断将前面比这个元素大的和后面比这个元素小的数进行交换（优先移动后面的指针，这样保证两个指针相遇时指向的值比划分元素小），直到两个指针相遇，随后将划分元素和指针指向的元素交换。</p>
+<img src="https://s1.ax1x.com/2023/04/05/pp57e58.png" srcset="/xiaohei07/xiaohei07.github.io/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li class="lvl-3">
+<p>此时根据此划分元素位置pos可以确定其为第pos+1小的元素，进行pos+1和k的比较，如果相等，返回划分元素即为答案；如果k&lt;pos+1，对划分元素左侧进行递归处理（即为子问题），如果k&gt;pos+1,对划分元素右侧进行递归处理。</p>
+</li>
 </ol>
-<h4><span id="3-时间复杂度">3. 时间复杂度：</span></h4>
+<h4 id="3-时间复杂度"><a href="#3-时间复杂度" class="header-anchor">¶</a>3. 时间复杂度：</h4>
 <p>线性时间选择算法划分的基准是固定的，可以在线性时间内找到一个划分基准并完成划分。</p>
 <p>对于线性时间选择算法每次选择的划分元素，能够确定比划分元素大的数包括比它大的中位数，和这些中位数所在组的比这些中位数大的数，约占整个数组的3/10（1/2*3/5），确定比划分元素小的数的数量同理。——这也就是说，即使在最恶劣的情况下，也可以每次丢弃3/10的元素进行子问题的递归处理。</p>
 <p>由此可得复杂度的递推公式：</p>
-<p><strong><em>T(n) = T(3n/10)+O(n)</em></strong></p>
+<p><em><strong>T(n) = T(3n/10)+O(n)</strong></em></p>
 <p>由主方法，可解得</p>
-<p><strong><em>T(n) =O(n)</em></strong></p>
-<h4><span id="4-代码">4. 代码：</span></h4>
+<p><em><strong>T(n) =O(n)</strong></em></p>
+<h4 id="4-代码"><a href="#4-代码" class="header-anchor">¶</a>4. 代码：</h4>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;vector&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;algorithm&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-comment">//冒泡排序：</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">bubbleSort</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp;a, <span class="hljs-type">int</span> p, <span class="hljs-type">int</span> r)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = p; i &lt; r; i++)<br>	&#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = i + <span class="hljs-number">1</span>; j &lt;= r; j++)<br>		&#123;<br>			<span class="hljs-keyword">if</span> (a[j] &lt; a[i])<br>			<span class="hljs-built_in">swap</span>(a[i], a[j]);<br>		&#125;<br>	&#125;<br>&#125;<br><span class="hljs-comment">//根据划分元素调整容器元素的位置，返回划分元素对应位置。</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">Partition</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; &amp;a, <span class="hljs-type">int</span> p, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> val)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">int</span> pos=<span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> q = p; q &lt;= r; q++)<br>	&#123;<br>		<span class="hljs-keyword">if</span> (a[q] == val)<br>		&#123;<br>			pos = q;<br>			<span class="hljs-keyword">break</span>;<br>		&#125;<br>	&#125;<br>	<span class="hljs-built_in">swap</span>(a[p], a[pos]);<br>	<span class="hljs-type">int</span> midmidpos;<br>	<span class="hljs-type">int</span> i = p, j = r + <span class="hljs-number">1</span>, midmid = a[p];<br>	<span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>)<br>	&#123;<br>		<span class="hljs-keyword">while</span> (a[--j] &gt; midmid &amp;&amp; j &gt; p<span class="hljs-number">+1</span>);<br>		<span class="hljs-keyword">while</span> (a[++i] &lt; midmid);<br>		<span class="hljs-keyword">if</span> (i &gt;= j) &#123; <span class="hljs-keyword">break</span>; &#125;<br>		<span class="hljs-built_in">swap</span>(a[i], a[j]);<br>	&#125;<br>	a[p] = a[j];<br>	a[j] = midmid;<br>	midmidpos = j;<br>	<span class="hljs-keyword">return</span> midmidpos;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">Select</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; &amp;a, <span class="hljs-type">int</span> p, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> k)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">if</span> (r - p &lt; <span class="hljs-number">75</span>)<br>	&#123;<br>		<span class="hljs-built_in">bubbleSort</span>(a, p, r);<br>		<span class="hljs-keyword">return</span> a[p + k - <span class="hljs-number">1</span>];<br>	&#125;<br>	<span class="hljs-comment">//找中位数的中位数，r-p-4即上面所说的n-5</span><br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt;= (r - p - <span class="hljs-number">4</span>) / <span class="hljs-number">5</span>; i++) <span class="hljs-comment">//把每个组的中位数交换到区间[p,p+(r-p-4)/4]</span><br>	&#123;<br>		<span class="hljs-type">int</span> s = p + <span class="hljs-number">5</span> * i, t = s + <span class="hljs-number">4</span>;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">3</span>; j++) <span class="hljs-comment">//冒泡排序，从后开始排，结果使得后三个数是排好顺序的（递增）</span><br>		&#123;<br>			<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> n = s; n &lt; t - j; n++)<br>			&#123;<br>				<span class="hljs-keyword">if</span> (a[n] &gt; a[n + <span class="hljs-number">1</span>])<br>					<span class="hljs-built_in">swap</span>(a[n<span class="hljs-number">+1</span>], a[n]);<br>			&#125;<br>		&#125;<br>		<span class="hljs-built_in">swap</span>(a[p + i], a[s + <span class="hljs-number">2</span>]);<span class="hljs-comment">//交换每组中的中位数到前面</span><br>	&#125;<br>	<span class="hljs-comment">//(r-p-4)/5表示组数-1，则[p,p+(r-p-4)/5]</span><br>	<span class="hljs-comment">//求中位数的中位数 (r-p+1)/10 = (p+(r+p-4)/5-p+1)/2</span><br>	<span class="hljs-type">int</span> midmid = <span class="hljs-built_in">Select</span>(a, p, p + (r - p - <span class="hljs-number">4</span>) / <span class="hljs-number">5</span>, (r - p + <span class="hljs-number">1</span>) / <span class="hljs-number">10</span>);<br>	<span class="hljs-type">int</span> midmidpos = <span class="hljs-built_in">Partition</span>(a, p, r, midmid);<br>	<span class="hljs-type">int</span> realmidmidpos = midmid - p + <span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">if</span> (k &lt;= realmidmidpos)<span class="hljs-keyword">return</span> <span class="hljs-built_in">Select</span>(a, p, midmidpos<span class="hljs-number">-1</span>, k);<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-built_in">Select</span>(a, midmidpos + <span class="hljs-number">1</span>, r , k - realmidmidpos);<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">int</span> x;<br>	vector&lt;<span class="hljs-type">int</span>&gt; a;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=<span class="hljs-number">1000</span>;i++)<br>	&#123;<br>		a.<span class="hljs-built_in">push_back</span>(i);<br>	&#125;<br>	<span class="hljs-built_in">random_shuffle</span>(a.<span class="hljs-built_in">begin</span>(), a.<span class="hljs-built_in">end</span>());<br>	<span class="hljs-comment">//容器a的大小为1000,值为1-1000的随机数。</span><br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">15</span>;i++)<br>	&#123;<br>		vector&lt;<span class="hljs-type">int</span>&gt; aa = a;<br>		<span class="hljs-comment">//可以找需要的第几小的数，可以在0-999的范围内随意找</span><br>		cout &lt;&lt; <span class="hljs-string">&quot;第&quot;</span> &lt;&lt; i + <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-string">&quot;小的数是:&quot;</span> &lt;&lt; <span class="hljs-built_in">Select</span>(aa,<span class="hljs-number">0</span>,<span class="hljs-number">777</span>,i<span class="hljs-number">+1</span>)&lt;&lt;endl;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果：</span><br><span class="hljs-comment">//第1小的数是:2</span><br><span class="hljs-comment">//第2小的数是 : 5</span><br><span class="hljs-comment">//第3小的数是 : 6</span><br><span class="hljs-comment">//第4小的数是 : 9</span><br><span class="hljs-comment">//第5小的数是 : 10</span><br><span class="hljs-comment">//第6小的数是 : 11</span><br><span class="hljs-comment">//第7小的数是 : 12</span><br><span class="hljs-comment">//第8小的数是 : 13</span><br><span class="hljs-comment">//第9小的数是 : 14</span><br><span class="hljs-comment">//第10小的数是 : 16</span><br><span class="hljs-comment">//第11小的数是 : 18</span><br><span class="hljs-comment">//第12小的数是 : 21</span><br><span class="hljs-comment">//第13小的数是 : 22</span><br><span class="hljs-comment">//第14小的数是 : 23</span><br><span class="hljs-comment">//第15小的数是 : 24</span><br></code></pre></td></tr></table></figure>
-<h3><span id="六大整数乘法">（六）大整数乘法：</span></h3>
-<h3><span id="七strassen矩阵乘法">（七）Strassen矩阵乘法：</span></h3>
-<h3><span id="八循环赛日程表">（八）循环赛日程表：</span></h3>
-<h3><span id="九最近点对问题">（九）最近点对问题：</span></h3>
-<h3><span id="十棋盘覆盖">（十）棋盘覆盖：</span></h3>
+<h3 id="六大整数乘法"><a href="#六大整数乘法" class="header-anchor">¶</a>（六）大整数乘法：</h3>
+<h3 id="七strassen矩阵乘法"><a href="#七strassen矩阵乘法" class="header-anchor">¶</a>（七）Strassen矩阵乘法：</h3>
+<h3 id="八循环赛日程表"><a href="#八循环赛日程表" class="header-anchor">¶</a>（八）循环赛日程表：</h3>
+<h3 id="九最近点对问题"><a href="#九最近点对问题" class="header-anchor">¶</a>（九）最近点对问题：</h3>
+<h3 id="十棋盘覆盖"><a href="#十棋盘覆盖" class="header-anchor">¶</a>（十）棋盘覆盖：</h3>
 
 
   
@@ -429,7 +422,7 @@ right=mid-1，同样更新mid，继续在数组的前半部分进行搜索，重
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -480,8 +473,8 @@ right=mid-1，同样更新mid，继续在数组的前半部分进行搜索，重
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -503,23 +496,21 @@ right=mid-1，同样更新mid，继续在数组的前半部分进行搜索，重
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  <script defer src="/js/leancloud.js" ></script>
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -527,7 +518,7 @@ right=mid-1，同样更新mid，继续在数组的前半部分进行搜索，重
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

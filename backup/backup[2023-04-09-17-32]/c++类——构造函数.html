@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="（一）概念: 创建类的对象的时候，编译系统需要对象分配内存空间，完成数据成员的初始化工作并请求其他资源，此时，编译系统自动调用构造函数来完成这些工作。 因此，构造函数是在创建类的对象时使用，它的核心作用是初始化对象的数据成员和分配内存。 （二）原型和特点: 构造函数的原型为：类名::类名(参数表):初始化列表 { 构造函数体 } ​ ——所有倾斜内容表示在构造函数中此内容可选，不是必要">
+    <meta name="description" content="¶（一）概念: 创建类的对象的时候，编译系统需要对象分配内存空间，完成数据成员的初始化工作并请求其他资源，此时，编译系统自动调用构造函数来完成这些工作。 因此，构造函数是在创建类的对象时使用，它的核心作用是初始化对象的数据成员和分配内存。 ¶（二）原型和特点: 构造函数的原型为：**类名::类名(参数表):初始化列表 { 构造函数体 } ​	   ——所有倾斜内容表示在构造函数中此内容可选，不是必">
 <meta property="og:type" content="website">
 <meta property="og:title" content="c++类——构造函数">
-<meta property="og:url" content="http://example.com/backup/backup[2023-04-09-17-32]/c++%E7%B1%BB%E2%80%94%E2%80%94%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0.html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（一）概念: 创建类的对象的时候，编译系统需要对象分配内存空间，完成数据成员的初始化工作并请求其他资源，此时，编译系统自动调用构造函数来完成这些工作。 因此，构造函数是在创建类的对象时使用，它的核心作用是初始化对象的数据成员和分配内存。 （二）原型和特点: 构造函数的原型为：类名::类名(参数表):初始化列表 { 构造函数体 } ​ ——所有倾斜内容表示在构造函数中此内容可选，不是必要">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/backup/backup[2023-04-09-17-32]/c++%E7%B1%BB%E2%80%94%E2%80%94%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0.html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="¶（一）概念: 创建类的对象的时候，编译系统需要对象分配内存空间，完成数据成员的初始化工作并请求其他资源，此时，编译系统自动调用构造函数来完成这些工作。 因此，构造函数是在创建类的对象时使用，它的核心作用是初始化对象的数据成员和分配内存。 ¶（二）原型和特点: 构造函数的原型为：**类名::类名(参数表):初始化列表 { 构造函数体 } ​	   ——所有倾斜内容表示在构造函数中此内容可选，不是必">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-16T09:15:43.000Z">
 <meta property="article:modified_time" content="2023-04-09T09:32:00.052Z">
@@ -33,7 +33,7 @@
   
   
   
-  <title>c++类——构造函数 - ZZHの个人博客</title>
+  <title>c++类——构造函数 - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -51,35 +51,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -113,7 +113,7 @@
 <div class="header-inner" style="height: 60vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -132,7 +132,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -144,7 +144,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -156,21 +156,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -190,7 +178,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -198,15 +194,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -220,7 +208,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -232,7 +220,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -262,7 +250,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -296,64 +284,83 @@
                 
 
 <article class="page-content">
-  <h3><span id="一概念">（一）概念:</span></h3>
+  <h3 id="一概念"><a href="#一概念" class="header-anchor">¶</a>（一）概念:</h3>
 <p>创建类的对象的时候，编译系统需要对象分配内存空间，完成数据成员的初始化工作并请求其他资源，此时，编译系统自动调用构造函数来完成这些工作。</p>
 <p>因此，构造函数是在创建类的对象时使用，它的核心作用是<strong>初始化对象的数据成员</strong>和<strong>分配内存</strong>。</p>
-<h3><span id="二原型和特点">（二）原型和特点:</span></h3>
-<p>构造函数的原型为：<strong><em>类名::</em>类名(<em>参数表</em>):<em>初始化列表
-{ 构造函数体 }</em></strong></p>
-<p>​ ——所有倾斜内容表示在构造函数中此内容可选，不是必要的。</p>
-<p>​ ——参数表即为所有的传入形参</p>
-<p>​
-——初始化列表结构为：<em>数据成员名(某形参名),数据成员名(某形参名)...</em></p>
-<p>​
-——构造函数体可执行相关操作可为cout&lt;&lt;某些信息，对数据成员的某些操作等等。</p>
+<h3 id="二原型和特点"><a href="#二原型和特点" class="header-anchor">¶</a>（二）原型和特点:</h3>
+<p>构造函数的原型为：**<em>类名::<em>类名(<em>参数表</em>):<em>初始化列表 { 构造函数体 }</em></em></em></p>
+<p>​	   ——所有倾斜内容表示在构造函数中此内容可选，不是必要的。</p>
+<p>​       ——参数表即为所有的传入形参</p>
+<p>​       ——初始化列表结构为：<em>数据成员名(某形参名),数据成员名(某形参名)...</em></p>
+<p>​	    ——构造函数体可执行相关操作可为cout&lt;&lt;某些信息，对数据成员的某些操作等等。</p>
 <p>构造函数的特点：</p>
-<ol type="1">
-<li><p>名字<strong>与类名相同</strong>，允许设定参数，但是<strong>不允许设置返回值</strong>(<strong>包括void</strong>)。</p></li>
-<li><p>构造函数是编译系统在实例化一个对象时<strong>自动执行</strong>的，不需要手动调用(当然也可以主动手动调用)。调用后会对对象的数据成员进行初始化。</p>
-<p>定义自己的无参构造函数实际上是<strong>有用构造函数</strong></p></li>
-<li><p>构造函数<strong>可以重载</strong>，但是对象的实例化只会使用其中的一个构造函数（参数类型和个数能够最佳匹配），且实例化后<strong>不会再次执行</strong>构造函数，另外，重载构造函数后<strong>不允许出现二义性</strong>情况。</p>
-<ul>
-<li><p>重载构造函数具有不同的参数表和相同的名称</p></li>
-<li><p>根据传参个数决定调用哪个构造函数</p></li>
-<li><p>创建对象时要传参数让编译器明确知道调用哪个构造函数</p></li>
-</ul></li>
-<li><p>在未定义构造函数时，编译系统生成一个<strong>无用的默认构造函数</strong>，无用的默认构造函数不含参数，<strong>不做任何初始化工作</strong>。</p>
-<p>一旦定义了自己的构造函数，系统不会自己生成无用的默认的无参构造函数，但是仍然可以自己指定系统生成无用默认无参构造函数。</p></li>
+<ol>
+<li class="lvl-3">
+<p>名字<strong>与类名相同</strong>，允许设定参数，但是<strong>不允许设置返回值</strong>(<strong>包括void</strong>)。</p>
+</li>
+<li class="lvl-3">
+<p>构造函数是编译系统在实例化一个对象时<strong>自动执行</strong>的，不需要手动调用(当然也可以主动手动调用)。调用后会对对象的数据成员进行初始化。</p>
+<p>定义自己的无参构造函数实际上是<strong>有用构造函数</strong></p>
+</li>
+<li class="lvl-3">
+<p>构造函数<strong>可以重载</strong>，但是对象的实例化只会使用其中的一个构造函数（参数类型和个数能够最佳匹配），且实例化后<strong>不会再次执行</strong>构造函数，另外，重载构造函数后<strong>不允许出现二义性</strong>情况。</p>
+<ul class="lvl-2">
+<li class="lvl-5">
+<p>重载构造函数具有不同的参数表和相同的名称</p>
+</li>
+<li class="lvl-5">
+<p>根据传参个数决定调用哪个构造函数</p>
+</li>
+<li class="lvl-5">
+<p>创建对象时要传参数让编译器明确知道调用哪个构造函数</p>
+</li>
+</ul>
+</li>
+<li class="lvl-3">
+<p>在未定义构造函数时，编译系统生成一个<strong>无用的默认构造函数</strong>，无用的默认构造函数不含参数，<strong>不做任何初始化工作</strong>。</p>
+<p>一旦定义了自己的构造函数，系统不会自己生成无用的默认的无参构造函数，但是仍然可以自己指定系统生成无用默认无参构造函数。</p>
+</li>
 </ol>
-<h3><span id="三分类">（三）分类:</span></h3>
-<ol type="1">
-<li>默认构造函数，又名缺省构造函数，分为有用和无用两种，是不需要显式指定实参的构造函数——即原型为无参构造函数。</li>
-<li>初始化构造函数——有参数。</li>
-<li>复制(拷贝构造函数(不显式指定时有默认的复制构造函数)。</li>
-<li>转换构造函数</li>
+<h3 id="三分类"><a href="#三分类" class="header-anchor">¶</a>（三）分类:</h3>
+<ol>
+<li class="lvl-3">
+<p>默认构造函数，又名缺省构造函数，分为有用和无用两种，是不需要显式指定实参的构造函数——即原型为无参构造函数。</p>
+</li>
+<li class="lvl-3">
+<p>初始化构造函数——有参数。</p>
+</li>
+<li class="lvl-3">
+<p>复制(拷贝构造函数(不显式指定时有默认的复制构造函数)。</p>
+</li>
+<li class="lvl-3">
+<p>转换构造函数</p>
+</li>
 </ol>
-<h3><span id="四基本用法">（四）基本用法:</span></h3>
-<h4><span id="1默认构造函数">1.默认构造函数：</span></h4>
+<h3 id="四基本用法"><a href="#四基本用法" class="header-anchor">¶</a>（四）基本用法:</h3>
+<h4 id="1默认构造函数"><a href="#1默认构造函数" class="header-anchor">¶</a>1.默认构造函数：</h4>
 <p>形式：</p>
-<ol type="1">
-<li><p><em>“<strong>类名()
-=default;</strong></em>”的形式或者不存在任何构造函数——指定无用默认构造函数。</p></li>
-<li><p>"<strong><em>类名(){ 函数体
-}</em></strong>"的形式——指定有用默认构造函数</p></li>
+<ol>
+<li class="lvl-3">
+<p><em>“<strong>类名() =default;</strong></em>”的形式或者不存在任何构造函数——指定无用默认构造函数。</p>
+</li>
+<li class="lvl-3">
+<p>&quot;<em><strong>类名(){ 函数体 }</strong></em>&quot;的形式——指定有用默认构造函数</p>
+</li>
 </ol>
 <p>调用时，因默认构造参数不需要形参，直接声明类的对象即可(<strong>切记不要在后面跟“()”!</strong>)。</p>
 <p>代码如下：</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-meta">#include &lt;iostream&gt;</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-title">std</span>;<br><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-built_in">int</span> hour;  <br>	<span class="hljs-built_in">int</span> minute;<br>	<span class="hljs-built_in">int</span> sec;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-comment">//此时状态为无构造参数，编译系统自动生成无用构造参数</span><br>	<span class="hljs-comment">//Time() = default; 仅去掉本行注释仍为无用构造参数</span><br>	<span class="hljs-comment">//Time() &#123;hour=0;minute=0;sec=0;&#125; 仅去掉本行注释为有用构造参数,可对三个数初始化为0</span><br>	<span class="hljs-comment">//上两行注释不能同时去掉，否则产生二义性。</span><br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set_time</span>()</span><br>	&#123;<br>		cin &gt;&gt; hour &gt;&gt; minute &gt;&gt; sec;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">show_time</span>()</span><br>	&#123;<br>		cout &lt;&lt; hour &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; minute &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; sec &lt;&lt; endl;<br>	&#125;<br><br>&#125;;<br><span class="hljs-function"><span class="hljs-built_in">int</span> <span class="hljs-title">main</span>()</span><br>&#123;<br>	Time t1; <span class="hljs-comment">//不能加&quot;()&quot;</span><br>	t1.set_time(); <br>	t1.show_time();  <br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h4><span id="2带参构造函数">2.带参构造函数：</span></h4>
-<p>形式：<strong>类名:构造函数名(参数表):初始化列表 { 构造函数体
-}</strong></p>
+<h4 id="2带参构造函数"><a href="#2带参构造函数" class="header-anchor">¶</a>2.带参构造函数：</h4>
+<p>形式：<strong>类名:构造函数名(参数表):初始化列表 { 构造函数体 }</strong></p>
 <p>如果数据成员中有数组，要在构造函数体中用语句对其进行赋值，<strong>不能用初始化列表</strong>进行初始化。</p>
 <p>以其他类作为数据成员时，需要在初始化列表进行初始化。初始化列表需要<strong>首先调用成员类</strong>的构造函数，再初始化自身的数据成员。</p>
 <p>通常带参构造函数需要重载。</p>
 <p>代码如下：</p>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs processing">#include &lt;iostream&gt;<br>using namespace std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Time</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">hour</span>;  <br>	<span class="hljs-type">int</span> <span class="hljs-built_in">minute</span>;<br>	<span class="hljs-type">int</span> sec;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-comment">//Time() = default;</span><br>	<span class="hljs-title function_">Time</span>() &#123; <span class="hljs-built_in">hour</span> = <span class="hljs-built_in">minute</span> = sec = <span class="hljs-number">0</span>; &#125;<br>	<span class="hljs-title function_">Time</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3) :<span class="hljs-built_in">hour</span>(i1), <span class="hljs-built_in">minute</span>(i2), <span class="hljs-title function_">sec</span>(i3) &#123;&#125;<span class="hljs-comment">//初始化列表方法</span><br>	<span class="hljs-comment">//Time(int i1, int i2, int i3) &#123; hour = i1; minute = i2; sec = i3; &#125;//构造函数体方法</span><br>	<span class="hljs-title function_">Time</span>(<span class="hljs-type">int</span> h) :<span class="hljs-built_in">hour</span>(h) &#123; <span class="hljs-built_in">minute</span> = sec = <span class="hljs-number">0</span>; &#125;<span class="hljs-comment">//重载构造函数1，实际上是转换构造函数</span><br>	<span class="hljs-title function_">Time</span>(<span class="hljs-type">int</span> h, <span class="hljs-type">int</span> m) :<span class="hljs-built_in">hour</span>(h), <span class="hljs-built_in">minute</span>(m) &#123; sec = <span class="hljs-number">0</span>; &#125;<span class="hljs-comment">//重载构造函数2</span><br>	<span class="hljs-comment">//Time(int i1=0,int i2=0,int i3=0) :hour(i1), minute(i2), sec(i3) &#123;&#125;//含默认参数的构造函数，但要注意如果三个数均含默认参数，则会导致与默认构造参数产生二义性，只能保留一个。</span><br>	<span class="hljs-keyword">void</span> <span class="hljs-title function_">set_time</span>()<br>	&#123;<br>		cin &gt;&gt; <span class="hljs-built_in">hour</span> &gt;&gt; <span class="hljs-built_in">minute</span> &gt;&gt; sec;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-title function_">show_time</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-built_in">hour</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; <span class="hljs-built_in">minute</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; sec &lt;&lt; endl;<br>	&#125;<br><br>&#125;;<br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span>()<br>&#123;<br>	Time <span class="hljs-title function_">t1</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>);<br>	<span class="hljs-comment">//Time t2;</span><br>    <span class="hljs-comment">//Time t3(1,2);</span><br>    <span class="hljs-comment">//Time t4(1);</span><br>	t1.<span class="hljs-property">set_time</span>(); <br>	t1.<span class="hljs-property">show_time</span>();  <br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h4><span id="3复制拷贝构造函数">3.复制（拷贝）构造函数：</span></h4>
+<h4 id="3复制拷贝构造函数"><a href="#3复制拷贝构造函数" class="header-anchor">¶</a>3.复制（拷贝）构造函数：</h4>
 <p>此内容较多，单开一篇博客，详见<a target="_blank" rel="noopener" href="https://07xiaohei.com/2023/03/17/c-%E7%B1%BB%E2%80%94%E2%80%94%E5%A4%8D%E5%88%B6%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">c++类——复制构造函数</a></p>
-<h4><span id="4转换构造函数">4.转换构造函数：</span></h4>
-<p>形式：<strong>类名:构造函数名(单一参数):初始化列表 { 构造函数体
-}</strong></p>
+<h4 id="4转换构造函数"><a href="#4转换构造函数" class="header-anchor">¶</a>4.转换构造函数：</h4>
+<p>形式：<strong>类名:构造函数名(单一参数):初始化列表 { 构造函数体 }</strong></p>
 <p>转换构造函数用于将其他类型的变量，<strong>隐式</strong>转换为本类对象。</p>
 <p>传入的单一参数不能是本类的const引用，否则为复制构造函数。</p>
 <p>转换构造函数可以与运算符重载配合使用（运算符重载详见c++类——运算符重载）。</p>
@@ -417,7 +424,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -468,8 +475,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -491,23 +498,21 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  <script defer src="/js/leancloud.js" ></script>
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -515,7 +520,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

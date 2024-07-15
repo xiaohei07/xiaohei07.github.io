@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="纯虚函数和抽象类： （一）概念：  纯虚函数： 纯虚函数是指在基类中声明的虚函数，它在基类中没有定义，但要求任何派生类都要定义自己的实现方法。在基类中实现纯虚函数的方法是在函数原型后面加&#x3D;0。 纯虚函数是一定要被继承的，它为各派生类提供了一个公共界面，方便了多态的使用，而且无需在基类中实现函数（有时这样的操作是不合理的）。 纯虚函数可以写实现，但不建议写。 纯虚函数格式：virtua">
+    <meta name="description" content="¶纯虚函数和抽象类： ¶（一）概念：   纯虚函数： 纯虚函数是指在基类中声明的虚函数，它在基类中没有定义，但要求任何派生类都要定义自己的实现方法。在基类中实现纯虚函数的方法是在函数原型后面加&#x3D;0。 纯虚函数是一定要被继承的，它为各派生类提供了一个公共界面，方便了多态的使用，而且无需在基类中实现函数（有时这样的操作是不合理的）。 纯虚函数可以写实现，但不建议写。 纯虚函数格式：virtual 类型">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c++类——多态(三)">
-<meta property="og:url" content="http://example.com/2023/04/08/c++%E7%B1%BB%E2%80%94%E2%80%94%E5%A4%9A%E6%80%81(%E4%B8%89)/index.html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="纯虚函数和抽象类： （一）概念：  纯虚函数： 纯虚函数是指在基类中声明的虚函数，它在基类中没有定义，但要求任何派生类都要定义自己的实现方法。在基类中实现纯虚函数的方法是在函数原型后面加&#x3D;0。 纯虚函数是一定要被继承的，它为各派生类提供了一个公共界面，方便了多态的使用，而且无需在基类中实现函数（有时这样的操作是不合理的）。 纯虚函数可以写实现，但不建议写。 纯虚函数格式：virtua">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/2023/04/08/c++%E7%B1%BB%E2%80%94%E2%80%94%E5%A4%9A%E6%80%81(%E4%B8%89)/index.html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="¶纯虚函数和抽象类： ¶（一）概念：   纯虚函数： 纯虚函数是指在基类中声明的虚函数，它在基类中没有定义，但要求任何派生类都要定义自己的实现方法。在基类中实现纯虚函数的方法是在函数原型后面加&#x3D;0。 纯虚函数是一定要被继承的，它为各派生类提供了一个公共界面，方便了多态的使用，而且无需在基类中实现函数（有时这样的操作是不合理的）。 纯虚函数可以写实现，但不建议写。 纯虚函数格式：virtual 类型">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-08T03:42:40.000Z">
 <meta property="article:modified_time" content="2023-04-14T08:18:58.172Z">
@@ -33,7 +33,7 @@
   
   
   
-  <title>c++类——多态(三) - ZZHの个人博客</title>
+  <title>c++类——多态(三) - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -57,35 +57,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -119,7 +119,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -138,7 +138,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -150,7 +150,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -162,21 +162,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -196,7 +184,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -204,15 +200,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -226,7 +214,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -238,7 +226,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -268,7 +256,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -281,6 +269,11 @@
         
           
   <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        07xiaohei
+      </span>
     
     
       <span class="post-meta">
@@ -308,7 +301,7 @@
         
         
         
-          55 分钟
+          17 分钟
         
       </span>
     
@@ -356,50 +349,81 @@
             <!-- SEO header -->
             <h1 style="display: none">c++类——多态(三)</h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：1 年前
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
-                <h3><span id="纯虚函数和抽象类">纯虚函数和抽象类：</span></h3>
-<h4><span id="一概念">（一）概念：</span></h4>
-<ul>
-<li><p>纯虚函数：</p>
+                <h3 id="纯虚函数和抽象类"><a href="#纯虚函数和抽象类" class="header-anchor">¶</a>纯虚函数和抽象类：</h3>
+<h4 id="一概念"><a href="#一概念" class="header-anchor">¶</a>（一）概念：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>纯虚函数：</p>
 <p>纯虚函数是指在基类中声明的虚函数，它在基类中没有定义，但要求任何派生类都要定义自己的实现方法。在基类中实现纯虚函数的方法是在函数原型后面加=0。</p>
 <p>纯虚函数是一定要被继承的，它为各派生类提供了一个公共界面，方便了多态的使用，而且无需在基类中实现函数（有时这样的操作是不合理的）。</p>
 <p>纯虚函数可以写实现，但不建议写。</p>
-<p><em>纯虚函数格式：<strong>virtual 类型 函数名(参数表
-)=0</strong></em></p></li>
-<li><p>抽象类：</p>
+<p><em>纯虚函数格式：<strong>virtual 类型 函数名(参数表 )=0</strong></em></p>
+</li>
+<li class="lvl-2">
+<p>抽象类：</p>
 <p>一个具有纯虚函数的类被称为抽象类，也被称为接口类。</p>
 <p>抽象类的主要作用是将有关的操作作为结果接口组织在一个继承层次结构中，由它来为派生类提供一个公共的根，派生类将具体实现在其基类中作为接口的操作。</p>
-<p>所以，派生类实际上刻画了一组派生类的操作接口的通用语义，这些语义能够传给派生类，派生类可以具体实现这些语义，也可以再将这些语义传给自己的派生类。</p></li>
+<p>所以，派生类实际上刻画了一组派生类的操作接口的通用语义，这些语义能够传给派生类，派生类可以具体实现这些语义，也可以再将这些语义传给自己的派生类。</p>
+</li>
 </ul>
-<h4><span id="二抽象类的限制">（二）抽象类的限制：</span></h4>
-<ul>
-<li>抽象类最重要的一点是无法实例化出对象。</li>
-<li>抽象类的派生类也无法实例化出对象，除非其重写了基类的纯虚函数——不重写，该派生类仍为抽象类，重写后成为可以建立具体的对象的类。</li>
-<li>抽象类创建抽象类的指针和引用，但其只能用来指向派生类的对象。</li>
-<li>抽象类不能作为函数的返回类型。</li>
-<li>抽象类不能作为传值参数类型。</li>
-<li>不能建立抽象类型存储空间。</li>
+<h4 id="二抽象类的限制"><a href="#二抽象类的限制" class="header-anchor">¶</a>（二）抽象类的限制：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>抽象类最重要的一点是无法实例化出对象。</p>
+</li>
+<li class="lvl-2">
+<p>抽象类的派生类也无法实例化出对象，除非其重写了基类的纯虚函数——不重写，该派生类仍为抽象类，重写后成为可以建立具体的对象的类。</p>
+</li>
+<li class="lvl-2">
+<p>抽象类创建抽象类的指针和引用，但其只能用来指向派生类的对象。</p>
+</li>
+<li class="lvl-2">
+<p>抽象类不能作为函数的返回类型。</p>
+</li>
+<li class="lvl-2">
+<p>抽象类不能作为传值参数类型。</p>
+</li>
+<li class="lvl-2">
+<p>不能建立抽象类型存储空间。</p>
+</li>
 </ul>
-<h4><span id="三接口继承和实现继承">（三）接口继承和实现继承：</span></h4>
+<h4 id="三接口继承和实现继承"><a href="#三接口继承和实现继承" class="header-anchor">¶</a>（三）接口继承和实现继承：</h4>
 <p>普通成员函数的继承就是实现继承，虚函数的继承就是接口继承。</p>
 <p>派生类的成员函数通过实现继承来继承，可以直接使用；而虚函数通过接口继承只会继承接口，需要重写实现。</p>
 <p>所以，如果不用多态，不要把函数写成虚函数。</p>
-<h4><span id="四代码">（四）代码：</span></h4>
+<h4 id="四代码"><a href="#四代码" class="header-anchor">¶</a>（四）代码：</h4>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-meta">#include &lt;iostream&gt;</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-title">std</span>;<br><span class="hljs-comment">//抽象类,不能创建对象,可以创建指针和引用</span><br><span class="hljs-keyword">class</span> <span class="hljs-title">AbstractClass</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	AbstractClass() &#123;&#125;<br>	<span class="hljs-keyword">virtual</span> ~AbstractClass() &#123;&#125;<br>	<br>	<span class="hljs-comment">//纯虚函数</span><br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">toString</span>()</span> = <span class="hljs-number">0</span>;<br>	<span class="hljs-comment">//实现的纯虚函数,但是没必要实现</span><br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">toString2</span>()</span> = <span class="hljs-number">0</span> &#123; cout &lt;&lt; <span class="hljs-string">&quot;toString2&quot;</span> &lt;&lt; endl; &#125;<br>&#125;;<br><br><span class="hljs-comment">//派生类继承抽象类</span><br><span class="hljs-keyword">class</span> <span class="hljs-title">SubClass</span> : <span class="hljs-title">public</span> <span class="hljs-title">AbstractClass</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	SubClass() : AbstractClass() &#123;&#125;<br><span class="hljs-keyword">public</span>:<br>	~SubClass() &#123;&#125;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-comment">//完成纯虚函数实现,可以创建对象</span><br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">toString</span>()</span> &#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Sub::toString()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">toString2</span>()</span> &#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Sub::toString2()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><br><span class="hljs-comment">//同样继承,但是未全部实现,仍为抽象类</span><br><span class="hljs-keyword">class</span> <span class="hljs-title">SubClass2</span> :<span class="hljs-title">public</span> <span class="hljs-title">AbstractClass</span> <br>&#123;<br><span class="hljs-keyword">public</span>:<br>	SubClass2() : AbstractClass() &#123;&#125;<br><span class="hljs-keyword">public</span>:<br>	~SubClass2() &#123;&#125;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-comment">//完成部分纯虚函数实现,不能创建对象</span><br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">toString</span>()</span> &#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;SubClass2::toString()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title">SubClass3</span> :<span class="hljs-title">public</span> <span class="hljs-title">SubClass2</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	SubClass3() : SubClass2() &#123;&#125;<br><span class="hljs-keyword">public</span>:<br>	~SubClass3() &#123;&#125;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-comment">//toString的纯虚函数实现在SubClass2中实现了,此处可以不实现,也可以再次实现</span><br>	<span class="hljs-comment">//完成剩余部分的纯虚函数实现,可以创建对象</span><br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">toString2</span>()</span> &#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;SubClass3::toString2()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title">SubClass4</span> :<span class="hljs-title">public</span> <span class="hljs-title">SubClass2</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	SubClass4() : SubClass2() &#123;&#125;<br><span class="hljs-keyword">public</span>:<br>	~SubClass4() &#123;&#125;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-comment">//toString的纯虚函数实现在SubClass2中实现了,此处重写实现</span><br>	<span class="hljs-comment">//完成全部的纯虚函数实现,可以创建对象</span><br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">toString</span>()</span> &#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;SubClass4::toString()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">toString2</span>()</span> &#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;SubClass4::toString2()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-comment">//错误函数:不能将抽象类作为函数参数,也不能作为函数返回值。</span><br><span class="hljs-comment">//AbstractClass print(AbstractClass a) &#123; return; &#125;</span><br><span class="hljs-function"><span class="hljs-built_in">int</span> <span class="hljs-title">main</span>(<span class="hljs-params"><span class="hljs-built_in">int</span> argc, <span class="hljs-built_in">char</span>** argv</span>)</span> &#123;<br>	<span class="hljs-comment">//AbstractClass a;error:不允许使用抽象类类型的对象</span><br>	cout &lt;&lt; <span class="hljs-keyword">sizeof</span>(AbstractClass) &lt;&lt; endl; <span class="hljs-comment">//为8,是虚指针</span><br>	cout &lt;&lt; <span class="hljs-keyword">sizeof</span>(SubClass) &lt;&lt; endl;      <span class="hljs-comment">//亦为8，也是虚指针,两者始终相同</span><br>	SubClass s;<br>	<span class="hljs-comment">//SubClass2 s2; error:不允许使用抽象类类型的对象</span><br>	SubClass3 s3;<br>	SubClass4 s4;<br>	AbstractClass&amp; c = s;<br>	AbstractClass* pc = &amp;s;<br>	c.toString();<br>	pc-&gt;toString2();<br>	pc = &amp;s3;<br>	pc-&gt;toString();<br>	pc-&gt;toString2();<br>	pc = &amp;s4;<br>	pc-&gt;toString();<br>	pc-&gt;toString2();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//Sub::toString()</span><br><span class="hljs-comment">//Sub::toString2()</span><br><span class="hljs-comment">//SubClass2::toString()</span><br><span class="hljs-comment">//SubClass3::toString2()</span><br><span class="hljs-comment">//SubClass4::toString()</span><br><span class="hljs-comment">//SubClass4::toString2()</span><br></code></pre></td></tr></table></figure>
-<h3><span id="异质链表">异质链表：</span></h3>
-<h4><span id="一概念">（一）概念：</span></h4>
+<h3 id="异质链表"><a href="#异质链表" class="header-anchor">¶</a>异质链表：</h3>
+<h4 id="一概念"><a href="#一概念" class="header-anchor">¶</a>（一）概念：</h4>
 <p>用基类类型指针（抽象类类型指针也可以），可以生成一个连接不同派生类对象的动态链表。</p>
 <p>每个结点指针可以指向类层次中不同的派生类对象，这种结点类型不相同的链表被称为异质链表。</p>
-<h4><span id="二限制">（二）限制：</span></h4>
-<ul>
-<li>链表节点的类类型不止一个时，这些类必须是继承关系。</li>
-<li>可以是多层继承关系，但是必须有一个基类是所有类的基类（类似于树的根节点）。</li>
-<li>声明节点时的指针必须是基类类型，创建节点时new后面的类型可以是基类或者是派生类。</li>
-<li>输出方法可以是各个类的自己成员函数或友元函数，或者是另写一个输出方法。</li>
+<h4 id="二限制"><a href="#二限制" class="header-anchor">¶</a>（二）限制：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>链表节点的类类型不止一个时，这些类必须是继承关系。</p>
+</li>
+<li class="lvl-2">
+<p>可以是多层继承关系，但是必须有一个基类是所有类的基类（类似于树的根节点）。</p>
+</li>
+<li class="lvl-2">
+<p>声明节点时的指针必须是基类类型，创建节点时new后面的类型可以是基类或者是派生类。</p>
+</li>
+<li class="lvl-2">
+<p>输出方法可以是各个类的自己成员函数或友元函数，或者是另写一个输出方法。</p>
+</li>
 </ul>
-<h4><span id="三代码">（三）代码：</span></h4>
+<h4 id="三代码"><a href="#三代码" class="header-anchor">¶</a>（三）代码：</h4>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> &#123;<br><span class="hljs-keyword">protected</span>:<br>	string name;<br>	<span class="hljs-type">int</span> age;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-type">static</span> Person* head;<br>	<span class="hljs-type">static</span> Person* tail;<br>	Person* next;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">Person</span>(string n = <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-type">int</span> a = <span class="hljs-number">0</span>) :<span class="hljs-built_in">name</span>(n), <span class="hljs-built_in">age</span>(a) &#123; cout &lt;&lt; <span class="hljs-string">&quot;Person()&quot;</span> &lt;&lt; endl; &#125;<br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">insert</span><span class="hljs-params">()</span> </span>&#123;   <span class="hljs-comment">//将新结点加入链表</span><br>	    <span class="hljs-comment">//head、tail 是静态的，就相当于全局变量；</span><br>		<span class="hljs-keyword">if</span> (tail == <span class="hljs-literal">NULL</span>)<br>			head = tail = <span class="hljs-keyword">this</span>;<br>		<span class="hljs-keyword">else</span> &#123;<br>			tail-&gt;next = <span class="hljs-keyword">this</span>;<br>			tail = <span class="hljs-keyword">this</span>;<br>			tail-&gt;next = <span class="hljs-literal">NULL</span>;<br>		&#125;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">display</span><span class="hljs-params">()</span> </span>&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot; name = &quot;</span> &lt;&lt; name &lt;&lt; endl;<br>		cout &lt;&lt; <span class="hljs-string">&quot; age = &quot;</span> &lt;&lt; age &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-keyword">virtual</span> ~<span class="hljs-built_in">Person</span>() &#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;~person()&quot;</span> &lt;&lt; endl;<br>	&#125;<br><br>&#125;;<br>Person* Person::head = <span class="hljs-literal">NULL</span>;<br>Person* Person::tail = <span class="hljs-literal">NULL</span>;<br><br><span class="hljs-comment">//Student中增加了一个score</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span> : <span class="hljs-keyword">public</span> Person &#123;<br>	<span class="hljs-type">float</span> score;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">Student</span>(string n, <span class="hljs-type">int</span> a, <span class="hljs-type">float</span> f) :<span class="hljs-built_in">Person</span>(n, a),<span class="hljs-built_in">score</span>(f) &#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Student()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">display</span><span class="hljs-params">()</span> </span>&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;display student:&quot;</span> &lt;&lt; endl;<br>		Person::<span class="hljs-built_in">display</span>();<br>		cout &lt;&lt; <span class="hljs-string">&quot; score =&quot;</span> &lt;&lt; score &lt;&lt; endl;<br>	&#125;<br>	~<span class="hljs-built_in">Student</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;~Student()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><br><span class="hljs-comment">//Teacher中增加了salary</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Teacher</span> : <span class="hljs-keyword">public</span> Person &#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">double</span> salary;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">Teacher</span>(string n, <span class="hljs-type">int</span> a, <span class="hljs-type">double</span> salary) :<span class="hljs-built_in">Person</span>(n, a) &#123;<br>		<span class="hljs-keyword">this</span>-&gt;salary = salary;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">display</span><span class="hljs-params">()</span> </span>&#123;<br>		cout &lt;&lt; endl &lt;&lt; <span class="hljs-string">&quot;display teacher:&quot;</span> &lt;&lt; endl;<br>		Person::<span class="hljs-built_in">display</span>();<br>		cout &lt;&lt; <span class="hljs-string">&quot; Salary =&quot;</span> &lt;&lt; salary &lt;&lt; endl;<br>	&#125;<br>	~<span class="hljs-built_in">Teacher</span>() &#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;~Teacher()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><br><span class="hljs-function">Student* <span class="hljs-title">CreateStudent</span><span class="hljs-params">()</span> </span>&#123;<br>	string name;<br>	<span class="hljs-type">int</span>  age;<br>	<span class="hljs-type">float</span> score;<br>	cout &lt;&lt; <span class="hljs-string">&quot;Student name:&quot;</span> &lt;&lt; endl;<br>	cin &gt;&gt; name;<br>	cout &lt;&lt; <span class="hljs-string">&quot;age: &quot;</span> &lt;&lt; endl;<br>	cin &gt;&gt; age;<br>	cout &lt;&lt; <span class="hljs-string">&quot;score: &quot;</span> &lt;&lt; endl;<br>	cin &gt;&gt; score;<br>	Student* p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Student</span>(name, age, score);<br>	<span class="hljs-keyword">return</span> p;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	Teacher* t1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Teacher</span>(<span class="hljs-string">&quot;最萌斌斌姐&quot;</span>, <span class="hljs-number">25</span>, <span class="hljs-number">100</span>);<br>	Student* s1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Student</span>(<span class="hljs-string">&quot;wlh&quot;</span>, <span class="hljs-number">21</span>, <span class="hljs-number">99</span>);<br>	Student* s2 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Student</span>(<span class="hljs-string">&quot;zk&quot;</span>, <span class="hljs-number">21</span>, <span class="hljs-number">60</span>);<br>	Teacher* t2 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Teacher</span>(<span class="hljs-string">&quot;wdg&quot;</span>, <span class="hljs-number">45</span>, <span class="hljs-number">20</span>);<br>	Student* ps = <span class="hljs-built_in">CreateStudent</span>();<br>	cout &lt;&lt; endl &lt;&lt; <span class="hljs-string">&quot;Person list&quot;</span> &lt;&lt; endl;<br>	t1-&gt;<span class="hljs-built_in">insert</span>();<br>	s1-&gt;<span class="hljs-built_in">insert</span>();<br>	s2-&gt;<span class="hljs-built_in">insert</span>();<br>	t2-&gt;<span class="hljs-built_in">insert</span>();<br>	ps-&gt;<span class="hljs-built_in">insert</span>();<br>	cout &lt;&lt; endl;<br>	cout &lt;&lt; <span class="hljs-string">&quot;dispay Person list:&quot;</span> &lt;&lt; endl;<br>	Person* p;<br>	p = Person::head;<br>	<span class="hljs-keyword">while</span> (p != <span class="hljs-literal">NULL</span>) &#123;<br>		p-&gt;<span class="hljs-built_in">display</span>();<br>		cout &lt;&lt; endl;<br>		p = p-&gt;next;<br>	&#125;<br>	cout &lt;&lt; endl;<br>	cout &lt;&lt; <span class="hljs-string">&quot;delete whole list&quot;</span> &lt;&lt; endl;<br>	p = Person::head;<br>	<span class="hljs-keyword">while</span> (p != <span class="hljs-literal">NULL</span>)<br>	&#123;<br>		Person::head = p-&gt;next;<br>		<span class="hljs-keyword">delete</span> p;<br>		p = Person::head;<br>	&#125;<br>	Person::tail = <span class="hljs-literal">NULL</span>;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">/*运行结果</span><br><span class="hljs-comment">Person()</span><br><span class="hljs-comment">Person()</span><br><span class="hljs-comment">Student()</span><br><span class="hljs-comment">Person()</span><br><span class="hljs-comment">Student()</span><br><span class="hljs-comment">Person()</span><br><span class="hljs-comment">Student name :</span><br><span class="hljs-comment">zzh</span><br><span class="hljs-comment">age :</span><br><span class="hljs-comment">21</span><br><span class="hljs-comment">score :</span><br><span class="hljs-comment">	100</span><br><span class="hljs-comment">	Person()</span><br><span class="hljs-comment">	Student()</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">	Person list</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">	dispay Person list :</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">display teacher :</span><br><span class="hljs-comment">name = 最萌斌斌姐</span><br><span class="hljs-comment">age = 25</span><br><span class="hljs-comment">Salary = 100</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">display student :</span><br><span class="hljs-comment">name = wlh</span><br><span class="hljs-comment">age = 21</span><br><span class="hljs-comment">score = 99</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">display student :</span><br><span class="hljs-comment">name = zk</span><br><span class="hljs-comment">age = 21</span><br><span class="hljs-comment">score = 60</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"></span><br><span class="hljs-comment">display teacher :</span><br><span class="hljs-comment">name = wdg</span><br><span class="hljs-comment">age = 45</span><br><span class="hljs-comment">Salary = 20</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">display student :</span><br><span class="hljs-comment">name = zzh</span><br><span class="hljs-comment">age = 21</span><br><span class="hljs-comment">score = 100</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"></span><br><span class="hljs-comment">delete whole list</span><br><span class="hljs-comment">~Teacher()</span><br><span class="hljs-comment">~person()</span><br><span class="hljs-comment">~Student()</span><br><span class="hljs-comment">~person()</span><br><span class="hljs-comment">~Student()</span><br><span class="hljs-comment">~person()</span><br><span class="hljs-comment">~Teacher()</span><br><span class="hljs-comment">~person()</span><br><span class="hljs-comment">~Student()</span><br><span class="hljs-comment">~person()*/</span><br></code></pre></td></tr></table></figure>
 
                 
@@ -419,7 +443,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/c-study/" class="category-chain-item">c++_study</a>
+  <a href="/xiaohei07/xiaohei07.github.io/categories/c-study/" class="category-chain-item">c++_study</a>
   
   
 
@@ -434,11 +458,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/c/">#c++</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/c/">#c++</a>
       
-        <a href="/tags/%E7%B1%BB/">#类</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/%E7%B1%BB/">#类</a>
       
-        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
       
     </div>
   
@@ -451,7 +475,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>c++类——多态(三)</div>
-      <div>http://example.com/2023/04/08/c++类——多态(三)/</div>
+      <div>https://github.com/xiaohei07/xiaohei07.github.io/2023/04/08/c++类——多态(三)/</div>
     </div>
     <div class="license-meta">
       
@@ -495,7 +519,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/04/14/c++%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E7%AC%A6/" title="c++基础——强制类型转换符">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/04/14/c++%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E7%AC%A6/" title="c++基础——强制类型转换符">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">c++基础——强制类型转换符</span>
                         <span class="visible-mobile">上一篇</span>
@@ -505,7 +529,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/04/08/c++%E7%B1%BB%E2%80%94%E2%80%94%E5%A4%9A%E6%80%81(%E4%BA%8C)/" title="c++类——多态(二)">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/04/08/c++%E7%B1%BB%E2%80%94%E2%80%94%E5%A4%9A%E6%80%81(%E4%BA%8C)/" title="c++类——多态(二)">
                         <span class="hidden-mobile">c++类——多态(二)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -565,7 +589,6 @@
 </div>
 
 
-
   </aside>
 
 
@@ -585,15 +608,18 @@
 
 
 
-  
-
-
 
   
 
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -640,7 +666,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -691,8 +717,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -714,93 +740,56 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
+   <script>
+  Fluid.utils.createScript('https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.28.2/tocbot.min.js', function() {
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !window.tocbot) { return; }
+  var boardCtn = jQuery('#board-ctn');
+  var boardTop = boardCtn.offset().top;
 
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
+  window.tocbot.init(Object.assign({
+  tocSelector : '#toc-body',
+  contentSelector : '.markdown-body',
+  headingSelector : 'h1, h2, h3, h4, h5, h6',
+  linkClass : 'tocbot-link',
+  activeLinkClass : 'tocbot-active-link',
+  listClass : 'tocbot-list',
+  isCollapsedClass: 'tocbot-is-collapsed',
+  collapsibleClass: 'tocbot-is-collapsible',
+  scrollSmooth : true,
+  includeTitleTags: true,
+  includeHtml: true,
+  headingsOffset : -boardTop,
+  }, CONFIG.toc));
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
 
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
+  Fluid.events.registerRefreshCallback(function() {
+  if ('tocbot' in window) {
+  tocbot.refresh();
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !tocbot) {
+  return;
+  }
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
+  }
   });
-</script>
-
+  });
+  </script>
+  
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
 
 
   
@@ -813,17 +802,58 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script defer src="/js/leancloud.js" ></script>
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
 
-  <script  src="/js/local-search.js" ></script>
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
+
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -831,7 +861,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

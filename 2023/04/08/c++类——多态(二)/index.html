@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="（一）动态联编： 1. 概念： 编译程序在编译阶段不能确定将要调用的函数，只有在程序执行时才能动态地确定将要调用的同名函数，为此。如果要确切地指明将要调用的函数，就要求联编工作在程序运行时进行，这种在程序运行时进行的联编工作被称为动态联编，或称动态束定，又叫晚期联编。 一旦涉及到虚函数和多态性均应当使用动态联编。 2. 使用： 必须用基类指针调用派生类的不同实现版本，且被调用的必须是虚函">
+    <meta name="description" content="¶（一）动态联编： ¶1. 概念： 编译程序在编译阶段不能确定将要调用的函数，只有在程序执行时才能动态地确定将要调用的同名函数，为此。如果要确切地指明将要调用的函数，就要求联编工作在程序运行时进行，这种在程序运行时进行的联编工作被称为动态联编，或称动态束定，又叫晚期联编。 一旦涉及到虚函数和多态性均应当使用动态联编。 ¶2. 使用： 必须用基类指针调用派生类的不同实现版本，且被调用的必须是虚函数，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c++类——多态(二)">
-<meta property="og:url" content="http://example.com/2023/04/08/c++%E7%B1%BB%E2%80%94%E2%80%94%E5%A4%9A%E6%80%81(%E4%BA%8C)/index.html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（一）动态联编： 1. 概念： 编译程序在编译阶段不能确定将要调用的函数，只有在程序执行时才能动态地确定将要调用的同名函数，为此。如果要确切地指明将要调用的函数，就要求联编工作在程序运行时进行，这种在程序运行时进行的联编工作被称为动态联编，或称动态束定，又叫晚期联编。 一旦涉及到虚函数和多态性均应当使用动态联编。 2. 使用： 必须用基类指针调用派生类的不同实现版本，且被调用的必须是虚函">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/2023/04/08/c++%E7%B1%BB%E2%80%94%E2%80%94%E5%A4%9A%E6%80%81(%E4%BA%8C)/index.html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="¶（一）动态联编： ¶1. 概念： 编译程序在编译阶段不能确定将要调用的函数，只有在程序执行时才能动态地确定将要调用的同名函数，为此。如果要确切地指明将要调用的函数，就要求联编工作在程序运行时进行，这种在程序运行时进行的联编工作被称为动态联编，或称动态束定，又叫晚期联编。 一旦涉及到虚函数和多态性均应当使用动态联编。 ¶2. 使用： 必须用基类指针调用派生类的不同实现版本，且被调用的必须是虚函数，">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-08T03:42:35.000Z">
 <meta property="article:modified_time" content="2023-04-11T06:19:58.100Z">
@@ -33,7 +33,7 @@
   
   
   
-  <title>c++类——多态(二) - ZZHの个人博客</title>
+  <title>c++类——多态(二) - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -57,35 +57,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -119,7 +119,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -138,7 +138,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -150,7 +150,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -162,21 +162,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -196,7 +184,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -204,15 +200,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -226,7 +214,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -238,7 +226,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -268,7 +256,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -281,6 +269,11 @@
         
           
   <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        07xiaohei
+      </span>
     
     
       <span class="post-meta">
@@ -308,7 +301,7 @@
         
         
         
-          74 分钟
+          23 分钟
         
       </span>
     
@@ -356,58 +349,87 @@
             <!-- SEO header -->
             <h1 style="display: none">c++类——多态(二)</h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：1 年前
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
-                <h3><span id="一动态联编">（一）动态联编：</span></h3>
-<h4><span id="1-概念">1. 概念：</span></h4>
+                <h3 id="一动态联编"><a href="#一动态联编" class="header-anchor">¶</a>（一）动态联编：</h3>
+<h4 id="1-概念"><a href="#1-概念" class="header-anchor">¶</a>1. 概念：</h4>
 <p>编译程序在编译阶段不能确定将要调用的函数，只有在程序执行时才能动态地确定将要调用的同名函数，为此。如果要确切地指明将要调用的函数，就要求联编工作在程序运行时进行，这种在程序运行时进行的联编工作被称为动态联编，或称动态束定，又叫晚期联编。</p>
 <p>一旦涉及到虚函数和多态性均应当使用动态联编。</p>
-<h4><span id="2-使用">2. 使用：</span></h4>
+<h4 id="2-使用"><a href="#2-使用" class="header-anchor">¶</a>2. 使用：</h4>
 <p>必须用基类指针调用派生类的不同实现版本，且被调用的必须是虚函数，且必须完成对基类虚函数的重写（稍后说明虚函数和重写），动态联编对成员函数的选择是基于指针所指向的对象类型。（因为基类指针引用派生类对象不需要进行显式转换）</p>
-<h4><span id="3-优点">3. 优点：</span></h4>
+<h4 id="3-优点"><a href="#3-优点" class="header-anchor">¶</a>3. 优点：</h4>
 <p>灵活性强但效率低。</p>
-<h3><span id="二虚函数">（二）虚函数：</span></h3>
-<h4><span id="1-概念">1. 概念：</span></h4>
+<h3 id="二虚函数"><a href="#二虚函数" class="header-anchor">¶</a>（二）虚函数：</h3>
+<h4 id="1-概念"><a href="#1-概念" class="header-anchor">¶</a>1. 概念：</h4>
 <p><strong>虚函数</strong>是在基类中使用关键字<strong>virtual</strong>声明的函数。在派生类中重新定义基类中定义的虚函数时，会告诉编译器不要静态链接到该函数。</p>
 <p>virtual关键字只用在类定义里的函数声明中，写函数体时不用。</p>
 <p>c++规定，当一个成员函数被声明为虚函数后，其派生类中的同名函数都自动成为虚函数。因此，在子类从新声明该虚函数时，可以加，也可以不加，但习惯上每一层声明函数时都加virtual,使程序更加清晰。</p>
 <p>虚函数需要重写，一个虚函数在派生类层界面相同的重载函数都保持虚特性。</p>
-<ul>
-<li><p>虚函数重写：虚函数重写是指在基类中声明实现的虚函数在派生类中再次实现，且基类和派生类中虚函数的原型必须保持一致（返回值类型，函数名称以及参数列表），协变函数（基类或派生类的虚函数返回本身类型的指针或引用）和析构函数除外。</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>虚函数重写：虚函数重写是指在基类中声明实现的虚函数在派生类中再次实现，且基类和派生类中虚函数的原型必须保持一致（返回值类型，函数名称以及参数列表），协变函数（基类或派生类的虚函数返回本身类型的指针或引用）和析构函数除外。</p>
 <p>协变函数：子类的虚函数和父类的虚函数的返回值可以不同，也能构成重载。但需要子类的返回值是一个子类的指针或者引用，父类的返回值是一个父类的指针或者引用，且返回值代表的两个类也成继承关系。这个叫做协变。</p>
 <p>重写的访问限定符可以不同。</p>
 <p>如果仅仅返回类型不同，c++认为是错误重载。</p>
-<p>如果函数原型不同，仅函数名相同，会丢失虚特性。</p></li>
-<li><p>隐藏：不局限于虚函数，但需要和虚函数概念结合理解。</p>
+<p>如果函数原型不同，仅函数名相同，会丢失虚特性。</p>
+</li>
+<li class="lvl-2">
+<p>隐藏：不局限于虚函数，但需要和虚函数概念结合理解。</p>
 <p>隐藏是指派生类的函数屏蔽了与其同名的基类函数。</p>
 <p>如果派生类的函数与基类的函数同名，但是参数不同。此时，不论是否为虚函数，基类的函数将被隐藏（注意不是重载，重载是在同一个类中发生）。</p>
-<p>如果派生类的函数与基类的函数同名，并且参数也相同，但是基类函数没有virtual
-关键字。此时，基类的函数被隐藏（注意不是重写，重写有virtual关键字）。</p></li>
+<p>如果派生类的函数与基类的函数同名，并且参数也相同，但是基类函数没有virtual 关键字。此时，基类的函数被隐藏（注意不是重写，重写有virtual关键字）。</p>
+</li>
 </ul>
 <p>——实际上共有四种情况：</p>
-<ol type="1">
-<li>参数相同、有virtual关键字：多态重写；</li>
-<li>参数相同、无virtual关键字：隐藏；与重写区分。</li>
-<li>参数不同、有virtual关键字：隐藏；与重载区分。</li>
-<li>参数不同、无virtual关键字：隐藏；与重载区分。</li>
+<ol>
+<li class="lvl-3">
+<p>参数相同、有virtual关键字：多态重写；</p>
+</li>
+<li class="lvl-3">
+<p>参数相同、无virtual关键字：隐藏；与重写区分。</p>
+</li>
+<li class="lvl-3">
+<p>参数不同、有virtual关键字：隐藏；与重载区分。</p>
+</li>
+<li class="lvl-3">
+<p>参数不同、无virtual关键字：隐藏；与重载区分。</p>
+</li>
 </ol>
-<h4><span id="2-限制">2. 限制：</span></h4>
-<ul>
-<li><p>只有类的成员函数才能声明为虚函数（友元函数、全局函数等都不可以），虚函数仅适用于有继承关系的类对象。普通函数不能声明为虚函数。</p></li>
-<li><p>静态成员函数不能是虚函数，因为静态成员函数不受限于某个对象。</p></li>
-<li><p>内联函数不能是虚函数，因为内联函数不能在运行中动态确定位置。</p></li>
-<li><p>构造函数不能是虚函数：</p>
-<p>建立派生类对象是从类层次的根开始沿着继承路径逐个调用基类的构造函数，声明为虚的无法全部初始化，而且构造函数是创建时自动调用的，不可能用父类的指针引用or调用。</p></li>
-<li><p>析构函数可以是虚函数，而且建议声明为虚函数。</p>
+<h4 id="2-限制"><a href="#2-限制" class="header-anchor">¶</a>2. 限制：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>只有类的成员函数才能声明为虚函数（友元函数、全局函数等都不可以），虚函数仅适用于有继承关系的类对象。普通函数不能声明为虚函数。</p>
+</li>
+<li class="lvl-2">
+<p>静态成员函数不能是虚函数，因为静态成员函数不受限于某个对象。</p>
+</li>
+<li class="lvl-2">
+<p>内联函数不能是虚函数，因为内联函数不能在运行中动态确定位置。</p>
+</li>
+<li class="lvl-2">
+<p>构造函数不能是虚函数：</p>
+<p>建立派生类对象是从类层次的根开始沿着继承路径逐个调用基类的构造函数，声明为虚的无法全部初始化，而且构造函数是创建时自动调用的，不可能用父类的指针引用or调用。</p>
+</li>
+<li class="lvl-2">
+<p>析构函数可以是虚函数，而且建议声明为虚函数。</p>
 <p>虚析构函数用于指引delete运算符正确析构动态对象。否则可能不能正确识别对象类型而不能正确调用析构函数。</p>
-<p>实际上，析构函数被编译器全部换成了Destructor，所以加上virtual就可以成为虚析构函数。
-只要父类的析构函数用virtual修饰，无论子类是否有virtual，都构成析构。
-这也解释了为什么派生类不写virtual可以构成重写，因为编译器担心你忘记析构。</p>
-<p>实际上，析构函数即使是虚函数，仍为静态联编。因为它们所调用的虚函数是自己的类，或者基类中定义的函数而不是在任何派生类中重定义的函数</p></li>
-<li><p>不建议把赋值运算符重载作为虚函数。</p></li>
+<p>实际上，析构函数被编译器全部换成了Destructor，所以加上virtual就可以成为虚析构函数。只要父类的析构函数用virtual修饰，无论子类是否有virtual，都构成析构。这也解释了为什么派生类不写virtual可以构成重写，因为编译器担心你忘记析构。</p>
+<p>实际上，析构函数即使是虚函数，仍为静态联编。因为它们所调用的虚函数是自己的类，或者基类中定义的函数而不是在任何派生类中重定义的函数</p>
+</li>
+<li class="lvl-2">
+<p>不建议把赋值运算符重载作为虚函数。</p>
+</li>
 </ul>
-<h4><span id="3-工作原理">3. 工作原理：</span></h4>
+<h4 id="3-工作原理"><a href="#3-工作原理" class="header-anchor">¶</a>3. 工作原理：</h4>
 <p>C++编译器处理虚函数的方法是给每个对象添加一个隐藏成员。隐藏成员中保存了一个指向存放函数地址的数组的指针（vptr）。这种数组称为<strong>虚函数表</strong>（vtable）。虚函数表中存储了为类对象进行声明的虚函数的地址。</p>
 <p>注意：这个隐藏成员默认是第一个数据成员，在地址中分布在最开始处。</p>
 <p>虚函数表只存在于有虚函数的类及其派生类中，会使其多出8字节，这8字节存放了虚函数表本身的地址。</p>
@@ -417,49 +439,69 @@
 <p>不论包含的虚函数数量，都只需要在对象中添加一个地址成员，只是大小不同而已。</p>
 <p>当调用虚函数时，程序将查看存储在对象中的指针地址，然后转向相应的函数地址表。如果类声明中定义的第一个虚函数，则程序将使用数组中的第一个函数地址，并执行该地址对应的函数。如果使用类声明中的第三个函数，程序将使用地址为数组中的第三个元素的函数。</p>
 <p>所以使用虚函数和动态联编，无可避免地会增加内存和时间的开销，</p>
-<ul>
-<li>每个对象都将增大，增大量为存储地址的空间；</li>
-<li>对于每个类，编译器都会创建一个虚函数地址表（本质上就是数组）；</li>
-<li>对于每个函数调用，都需要执行一项额外的操作，即到表中查找地址。</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>每个对象都将增大，增大量为存储地址的空间；</p>
+</li>
+<li class="lvl-2">
+<p>对于每个类，编译器都会创建一个虚函数地址表（本质上就是数组）；</p>
+</li>
+<li class="lvl-2">
+<p>对于每个函数调用，都需要执行一项额外的操作，即到表中查找地址。</p>
+</li>
 </ul>
-<h4><span id="4-c11-override-ampamp-final">4. C++11 override &amp;&amp; final</span></h4>
+<h4 id="4-c11-override-ampamp-final"><a href="#4-c11-override-ampamp-final" class="header-anchor">¶</a>4. C++11 override &amp;&amp; final</h4>
 <p>C++11新增了两个关键字override和final。</p>
 <p>被override修饰的虚函数，编译器会检查这个虚函数是否重写。如果没有重写，编译器会报错。</p>
 <p>用final修饰的虚函数无法重写。用final修饰的类无法被继承。final像这个单词的意思一样，这就是最终的版本，不用再更新了。</p>
-<h4><span id="5-表现">5. 表现：</span></h4>
-<ul>
-<li><p>通过基类指针调用基类和派生类中的同名虚函数时:</p>
-<ol type="1">
-<li>若该指针指向一个基类的对象，那么被调用的是基类的虚函数；</li>
-<li>若该指针指向一个派生类的对象，那么被调用的是派生类的虚函数。</li>
+<h4 id="5-表现"><a href="#5-表现" class="header-anchor">¶</a>5. 表现：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>通过基类指针调用基类和派生类中的同名虚函数时:</p>
+<ol>
+<li class="lvl-5">若该指针指向一个基类的对象，那么被调用的是基类的虚函数；</li>
+<li class="lvl-5">若该指针指向一个派生类的对象，那么被调用的是派生类的虚函数。</li>
 </ol>
-<p>这种机制就是实际上的“多态”——调用哪个虚函数，取决于指针对象指向哪种类型的对象。</p></li>
-<li><p>通过基类引用调用基类和派生类中的同名虚函数时:</p>
-<ol type="1">
-<li>若该引用引用了一个基类的对象，那么被调用的是基类的虚函数；</li>
-<li>若该引用引用了一个派生类的对象，那么被调用的是派生类的虚函数。</li>
+<p>这种机制就是实际上的“多态”——调用哪个虚函数，取决于指针对象指向哪种类型的对象。</p>
+</li>
+<li class="lvl-2">
+<p>通过基类引用调用基类和派生类中的同名虚函数时:</p>
+<ol>
+<li class="lvl-5">若该引用引用了一个基类的对象，那么被调用的是基类的虚函数；</li>
+<li class="lvl-5">若该引用引用了一个派生类的对象，那么被调用的是派生类的虚函数。</li>
 </ol>
-<p>这种机制也是实际上的“多态”——调用哪个虚函数，取决于指针对象指向哪种类型的对象。</p></li>
+<p>这种机制也是实际上的“多态”——调用哪个虚函数，取决于指针对象指向哪种类型的对象。</p>
+</li>
 </ul>
-<h4><span id="6代码">6.代码：</span></h4>
-<ul>
-<li><p>一般情况的函数的虚函数重写，发生了动态联编（各种错误也在其中）：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br></pre></td><td class="code"><pre><code class="hljs kotlin">#include&lt;iostream&gt;<br>using namespace std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span><br>&#123;<br>	<span class="hljs-comment">//不允许对友元函数使用virtual</span><br>	<span class="hljs-comment">//virtual friend void fun();</span><br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-comment">//如果下面的静态数据成员和成员函数被声明,不允许加virtual,必须去掉</span><br>	<span class="hljs-comment">//static int i;</span><br>	<span class="hljs-comment">//virtual static void addi()&#123;&#125;</span><br>	<br>	<span class="hljs-comment">//不能对构造函数加virtual,必须去掉</span><br>	<span class="hljs-comment">//virtual Person() &#123;&#125;</span><br><br>	<span class="hljs-comment">//一般虚函数声明</span><br>	virtual void <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Person-&gt;fun()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<br>	<span class="hljs-comment">//内联虚函数,能否内联成功取决于编译器对其的判断是否为虚函数</span><br>	<span class="hljs-keyword">inline</span> virtual void fun2()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Person-&gt;fun()2&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-comment">//不被允许的操作:仅改变返回类型,编译器无法区别。</span><br>	<span class="hljs-comment">//virtual int fun()</span><br>	<span class="hljs-comment">//&#123;</span><br>	<span class="hljs-comment">//	cout &lt;&lt; &quot;Person-&gt;fun()&quot; &lt;&lt; endl;</span><br>	<span class="hljs-comment">//&#125;</span><br>&#125;;<br><span class="hljs-comment">//不能对全局函数使用virtual</span><br><span class="hljs-comment">//virtual void fun()&#123;&#125;</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span>:<span class="hljs-type">public</span> <span class="hljs-title">Person</span><br>&#123;<br><span class="hljs-keyword">public</span>:       <br>	virtual void <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span><span class="hljs-comment">//子类重写父类虚函数</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Student-&gt;fun()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-comment">//重写内联虚函数,能否内联成功取决于编译器对其的判断是否为虚函数</span><br>	<span class="hljs-keyword">inline</span> virtual void fun2()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Student-&gt;fun()2&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Teacher</span>:<span class="hljs-type">public</span> <span class="hljs-title">Person</span><br>&#123;<br><span class="hljs-keyword">public</span>:      <br>	void <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span><span class="hljs-comment">//子类重写父类虚函数,不加virtual但编译器默认其为虚函数</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Teacher-&gt;fun()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-comment">//下面的fun函数因为有参数,和前面了产生了函数原型的区别,</span><br>	<span class="hljs-comment">//实际上丢失了虚特性</span><br>	void <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(int)</span></span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Person2-&gt;fun()&quot;</span> &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">GoodStudent</span> :<span class="hljs-type">public</span> <span class="hljs-title">Student</span> <br>&#123;<br>	virtual void <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span><span class="hljs-comment">//子类重写父类虚函数</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;GoodStudent-&gt;fun()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">GoodTeacher</span> :<span class="hljs-type">public</span> <span class="hljs-title">Teacher</span><br>&#123;<br>	void <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span><span class="hljs-comment">//子类重写父类虚函数,不加virtual但编译器默认其为虚函数</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;GoodTeacher-&gt;fun()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br>int main()<br>&#123;<br>	Student s;<br>	GoodStudent gs;<br>	Teacher t;<br>	GoodTeacher gt;<br>	Person* p = &amp;s;<br>	<span class="hljs-comment">//基类指针指向派生类,因为虚函数的声明,所以调用的是派生类的重写虚函数。</span><br>	p-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<br>	<span class="hljs-comment">//此处发生内联，因为用对象执行成员函数是可以在编译时确定联编的</span><br>	s.fun2();<br>	<span class="hljs-comment">//此处未发生内联,inline被自动忽略了，因为用指针发生虚函数执行，此时是动态联编，不能直接内联。</span><br>	p-&gt;fun2();<br>	p = &amp;t;<br>	<span class="hljs-comment">//同p-&gt;fun();</span><br>	p-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<br>	p = &amp;gs;<br>	<span class="hljs-comment">//调用GoodStudent的重写虚函数</span><br>	p-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<br>	p = &amp;gt;<br>	<span class="hljs-comment">//调用GoodTeacher的重写虚函数</span><br>	p-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<br>	Student* ps = &amp;gs;<br>	<span class="hljs-comment">//派生类Student指针指向其派生类GoodStudent,调用GoodStudent的重写虚函数</span><br>	ps-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<br>	Teacher* pt = &amp;gt;<br>	pt-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<br>	pt-&gt;Teacher::<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//访问限定符可以不同,强制执行Teacher的fun函数</span><br><br>	cout &lt;&lt; endl;<br>	<span class="hljs-comment">//基类引用引用派生类,和指针效果相同。</span><br>	<span class="hljs-comment">//注意引用一经确定对象后就无法修改了</span><br>	Person&amp; cp1=s;<br>	cp1.<span class="hljs-keyword">fun</span>();<br>	cp1.fun2();<br>	Person&amp; cp2 = t;<br>	cp2.<span class="hljs-keyword">fun</span>();<br>	Person&amp; cp3 = gs;<br>	cp3.<span class="hljs-keyword">fun</span>();<br>	Person&amp; cp4 = gt;<br>	cp4.<span class="hljs-keyword">fun</span>();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果:</span><br><span class="hljs-comment">//Student-&gt;fun()</span><br><span class="hljs-comment">//Student-&gt;fun()2</span><br><span class="hljs-comment">//Student-&gt;fun()2</span><br><span class="hljs-comment">//Teacher-&gt;fun()</span><br><span class="hljs-comment">//GoodStudent-&gt;fun()</span><br><span class="hljs-comment">//GoodTeacher-&gt;fun()</span><br><span class="hljs-comment">//GoodStudent-&gt;fun()</span><br><span class="hljs-comment">//GoodTeacher-&gt;fun()</span><br><span class="hljs-comment">//Teacher-&gt;fun()</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//Student-&gt;fun()</span><br><span class="hljs-comment">//Student-&gt;fun()2</span><br><span class="hljs-comment">//Teacher-&gt;fun()</span><br><span class="hljs-comment">//GoodStudent-&gt;fun()</span><br><span class="hljs-comment">//GoodTeacher-&gt;fun()</span><br></code></pre></td></tr></table></figure></li>
-<li><p>协变函数的重写，发生了动态联编：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs kotlin">#include&lt;iostream&gt;<br>using namespace std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	virtual Person* <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span><span class="hljs-comment">//返回父类指针</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Person-&gt;fun()&quot;</span> &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span> nullptr;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span>:<span class="hljs-type">public</span> <span class="hljs-title">Person</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-comment">//返回子类指针，虽然返回值不同，也构成重写</span><br>	virtual Student* <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span><span class="hljs-comment">//子类重写父类虚函数</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Student-&gt;fun()&quot;</span> &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span> nullptr;<br>	&#125;<br>&#125;;<br>int main()<br>&#123;<br>	Person p;<br>	Student s;<br>	Person* pp = &amp;p;<br>	pp-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<br>	pp = &amp;s;<br>	pp-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//执行Student的成员函数</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure></li>
-<li><p>虚函数表指针的占用大小和实际作用：</p>
+<h4 id="6代码"><a href="#6代码" class="header-anchor">¶</a>6.代码：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>一般情况的函数的虚函数重写，发生了动态联编（各种错误也在其中）：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br></pre></td><td class="code"><pre><code class="hljs kotlin">#include&lt;iostream&gt;<br>using namespace std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span><br>&#123;<br>	<span class="hljs-comment">//不允许对友元函数使用virtual</span><br>	<span class="hljs-comment">//virtual friend void fun();</span><br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-comment">//如果下面的静态数据成员和成员函数被声明,不允许加virtual,必须去掉</span><br>	<span class="hljs-comment">//static int i;</span><br>	<span class="hljs-comment">//virtual static void addi()&#123;&#125;</span><br>	<br>	<span class="hljs-comment">//不能对构造函数加virtual,必须去掉</span><br>	<span class="hljs-comment">//virtual Person() &#123;&#125;</span><br><br>	<span class="hljs-comment">//一般虚函数声明</span><br>	virtual void <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Person-&gt;fun()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<br>	<span class="hljs-comment">//内联虚函数,能否内联成功取决于编译器对其的判断是否为虚函数</span><br>	<span class="hljs-keyword">inline</span> virtual void fun2()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Person-&gt;fun()2&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-comment">//不被允许的操作:仅改变返回类型,编译器无法区别。</span><br>	<span class="hljs-comment">//virtual int fun()</span><br>	<span class="hljs-comment">//&#123;</span><br>	<span class="hljs-comment">//	cout &lt;&lt; &quot;Person-&gt;fun()&quot; &lt;&lt; endl;</span><br>	<span class="hljs-comment">//&#125;</span><br>&#125;;<br><span class="hljs-comment">//不能对全局函数使用virtual</span><br><span class="hljs-comment">//virtual void fun()&#123;&#125;</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span>:<span class="hljs-type">public</span> <span class="hljs-title">Person</span><br>&#123;<br><span class="hljs-keyword">public</span>:       <br>	virtual void <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span><span class="hljs-comment">//子类重写父类虚函数</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Student-&gt;fun()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-comment">//重写内联虚函数,能否内联成功取决于编译器对其的判断是否为虚函数</span><br>	<span class="hljs-keyword">inline</span> virtual void fun2()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Student-&gt;fun()2&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Teacher</span>:<span class="hljs-type">public</span> <span class="hljs-title">Person</span><br>&#123;<br><span class="hljs-keyword">public</span>:      <br>	void <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span><span class="hljs-comment">//子类重写父类虚函数,不加virtual但编译器默认其为虚函数</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Teacher-&gt;fun()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-comment">//下面的fun函数因为有参数,和前面了产生了函数原型的区别,</span><br>	<span class="hljs-comment">//实际上丢失了虚特性</span><br>	void <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(int)</span></span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Person2-&gt;fun()&quot;</span> &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">GoodStudent</span> :<span class="hljs-type">public</span> <span class="hljs-title">Student</span> <br>&#123;<br>	virtual void <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span><span class="hljs-comment">//子类重写父类虚函数</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;GoodStudent-&gt;fun()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">GoodTeacher</span> :<span class="hljs-type">public</span> <span class="hljs-title">Teacher</span><br>&#123;<br>	void <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span><span class="hljs-comment">//子类重写父类虚函数,不加virtual但编译器默认其为虚函数</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;GoodTeacher-&gt;fun()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br>int main()<br>&#123;<br>	Student s;<br>	GoodStudent gs;<br>	Teacher t;<br>	GoodTeacher gt;<br>	Person* p = &amp;s;<br>	<span class="hljs-comment">//基类指针指向派生类,因为虚函数的声明,所以调用的是派生类的重写虚函数。</span><br>	p-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<br>	<span class="hljs-comment">//此处发生内联，因为用对象执行成员函数是可以在编译时确定联编的</span><br>	s.fun2();<br>	<span class="hljs-comment">//此处未发生内联,inline被自动忽略了，因为用指针发生虚函数执行，此时是动态联编，不能直接内联。</span><br>	p-&gt;fun2();<br>	p = &amp;t;<br>	<span class="hljs-comment">//同p-&gt;fun();</span><br>	p-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<br>	p = &amp;gs;<br>	<span class="hljs-comment">//调用GoodStudent的重写虚函数</span><br>	p-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<br>	p = &amp;gt;<br>	<span class="hljs-comment">//调用GoodTeacher的重写虚函数</span><br>	p-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<br>	Student* ps = &amp;gs;<br>	<span class="hljs-comment">//派生类Student指针指向其派生类GoodStudent,调用GoodStudent的重写虚函数</span><br>	ps-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<br>	Teacher* pt = &amp;gt;<br>	pt-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<br>	pt-&gt;Teacher::<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//访问限定符可以不同,强制执行Teacher的fun函数</span><br><br>	cout &lt;&lt; endl;<br>	<span class="hljs-comment">//基类引用引用派生类,和指针效果相同。</span><br>	<span class="hljs-comment">//注意引用一经确定对象后就无法修改了</span><br>	Person&amp; cp1=s;<br>	cp1.<span class="hljs-keyword">fun</span>();<br>	cp1.fun2();<br>	Person&amp; cp2 = t;<br>	cp2.<span class="hljs-keyword">fun</span>();<br>	Person&amp; cp3 = gs;<br>	cp3.<span class="hljs-keyword">fun</span>();<br>	Person&amp; cp4 = gt;<br>	cp4.<span class="hljs-keyword">fun</span>();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果:</span><br><span class="hljs-comment">//Student-&gt;fun()</span><br><span class="hljs-comment">//Student-&gt;fun()2</span><br><span class="hljs-comment">//Student-&gt;fun()2</span><br><span class="hljs-comment">//Teacher-&gt;fun()</span><br><span class="hljs-comment">//GoodStudent-&gt;fun()</span><br><span class="hljs-comment">//GoodTeacher-&gt;fun()</span><br><span class="hljs-comment">//GoodStudent-&gt;fun()</span><br><span class="hljs-comment">//GoodTeacher-&gt;fun()</span><br><span class="hljs-comment">//Teacher-&gt;fun()</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//Student-&gt;fun()</span><br><span class="hljs-comment">//Student-&gt;fun()2</span><br><span class="hljs-comment">//Teacher-&gt;fun()</span><br><span class="hljs-comment">//GoodStudent-&gt;fun()</span><br><span class="hljs-comment">//GoodTeacher-&gt;fun()</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-2">
+<p>协变函数的重写，发生了动态联编：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs kotlin">#include&lt;iostream&gt;<br>using namespace std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	virtual Person* <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span><span class="hljs-comment">//返回父类指针</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Person-&gt;fun()&quot;</span> &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span> nullptr;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span>:<span class="hljs-type">public</span> <span class="hljs-title">Person</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-comment">//返回子类指针，虽然返回值不同，也构成重写</span><br>	virtual Student* <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span><span class="hljs-comment">//子类重写父类虚函数</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;Student-&gt;fun()&quot;</span> &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span> nullptr;<br>	&#125;<br>&#125;;<br>int main()<br>&#123;<br>	Person p;<br>	Student s;<br>	Person* pp = &amp;p;<br>	pp-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<br>	pp = &amp;s;<br>	pp-&gt;<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//执行Student的成员函数</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-2">
+<p>虚函数表指针的占用大小和实际作用：</p>
 <p>64位和32位的大小不同（因为虚指针vptr在64位占8字节，int发生了自动补齐，需要全部按数据成员最大占8字节处理所有数据成员，32位因为vptr只占4位，不会发生自动补齐）</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-meta">#include&lt;iostream&gt;</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-title">std</span>;<br><span class="hljs-keyword">class</span> <span class="hljs-title">Base</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">int</span> i;<br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Print</span>()</span> &#123; &#125; <span class="hljs-comment">// 虚函数</span><br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Print2</span>()</span> &#123; &#125; <span class="hljs-comment">// 虚函数</span><br>&#125;;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title">Derived</span> : <span class="hljs-title">public</span> <span class="hljs-title">Base</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">int</span> n;<br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Print</span>()</span> &#123; &#125; <span class="hljs-comment">// 虚函数</span><br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Print2</span>()</span> &#123; &#125; <span class="hljs-comment">// 虚函数</span><br>&#125;;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title">Base2</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">int</span> i;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Print</span>()</span> &#123; &#125;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-built_in">int</span> <span class="hljs-title">main</span>()</span><br>&#123;<br>	Base2 b;<br>	Base bb;<br>	Derived d;<br>	<span class="hljs-comment">//64位下运行结果:</span><br>	cout &lt;&lt; <span class="hljs-keyword">sizeof</span>(b) &lt;&lt; endl; 	 <span class="hljs-comment">//4-&gt;int              </span><br>	cout &lt;&lt; <span class="hljs-keyword">sizeof</span>(bb) &lt;&lt; endl;  <span class="hljs-comment">//16=8+8-&gt;vptr(64位下占8字节)+int(从4补齐到8)</span><br>	cout &lt;&lt; <span class="hljs-keyword">sizeof</span>(d) &lt;&lt; endl;   <span class="hljs-comment">//24=8+8+8-&gt;vptr+int+int(均从4补齐到8)</span><br><br>	cout &lt;&lt; <span class="hljs-keyword">sizeof</span>(Base2) &lt;&lt; endl; 	 <span class="hljs-comment">//4</span><br>	cout &lt;&lt; <span class="hljs-keyword">sizeof</span>(Base) &lt;&lt; endl;    <span class="hljs-comment">//16</span><br>	cout &lt;&lt; <span class="hljs-keyword">sizeof</span>(Derived) &lt;&lt; endl; <span class="hljs-comment">//24</span><br>	<span class="hljs-comment">//32位下运行结果:</span><br>	cout &lt;&lt; <span class="hljs-keyword">sizeof</span>(b) &lt;&lt; endl; 	 <span class="hljs-comment">//4-&gt;int              </span><br>	cout &lt;&lt; <span class="hljs-keyword">sizeof</span>(bb) &lt;&lt; endl;  <span class="hljs-comment">//8=4+4-&gt;vptr(64位下占4字节)+int</span><br>	cout &lt;&lt; <span class="hljs-keyword">sizeof</span>(d) &lt;&lt; endl;   <span class="hljs-comment">//12=4+4+4-&gt;vptr+int+int</span><br><br>	cout &lt;&lt; <span class="hljs-keyword">sizeof</span>(Base2) &lt;&lt; endl; 	 <span class="hljs-comment">//4</span><br>	cout &lt;&lt; <span class="hljs-keyword">sizeof</span>(Base) &lt;&lt; endl;    <span class="hljs-comment">//8</span><br>	cout &lt;&lt; <span class="hljs-keyword">sizeof</span>(Derived) &lt;&lt; endl; <span class="hljs-comment">//12</span><br>	<br>	Base* pb = <span class="hljs-keyword">new</span> Derived();<br>	pb-&gt;Print();<br>	<span class="hljs-comment">//Derive</span><br>	<span class="hljs-built_in">int</span>* p1 = (<span class="hljs-built_in">int</span>*)&amp;bb;<br>	<span class="hljs-built_in">int</span>* p2 = (<span class="hljs-built_in">int</span>*)pb;<br><br>	*p2 = *p1;<br>	pb-&gt;Print();<br>	<span class="hljs-comment">//Base</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>Derive原因:pb指向的是Derived对象，因此pb执行Print()时实际执行的是Derived的虚函数。</p>
 <p>p1实际是Base的虚指针(64位请改成double，因为要占8位才能和pvtr对齐)，p2实际是Derive的虚指针。</p>
-<p>通过*p2=*p1，将Base的虚指针赋给了Derive的虚指针，从而修改了Derive对应的虚指针，使其也指向了Base的虚函数表，故代码后面的调用最终执行了Base的虚函数。</p></li>
-<li><p>虚析构函数的实际效果：</p>
+<p>通过*p2=*p1，将Base的虚指针赋给了Derive的虚指针，从而修改了Derive对应的虚指针，使其也指向了Base的虚函数表，故代码后面的调用最终执行了Base的虚函数。</p>
+</li>
+<li class="lvl-2">
+<p>虚析构函数的实际效果：</p>
 <p>如下，对于基类指针指向派生类对象，如果对析构函数进行了virtual声明，在析构此指针指向对象时调用的是派生类的析构函数（这个析构函数可以再调用基类的析构函数）；如果不进行声明，在析构此指针指向对象时调用的是基类的析构函数。</p>
 <p>显然前者是我们更需要的，否则派生类中的某些成员我们无法析构。</p>
-<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs perl"><span class="hljs-comment">#include&lt;iostream&gt;</span><br>using namespace std;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span></span><br><span class="hljs-class"></span>&#123;<br>public:<br>	virtual  ~A()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;~A()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">B</span><span class="hljs-attr"> : public</span> <span class="hljs-title">A</span></span><br><span class="hljs-class"></span>&#123;<br>public:<br>	virtual ~B()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;~B()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A2</span></span><br><span class="hljs-class"></span>&#123;<br>public:<br>	 ~A2()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;~A2()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">B2</span><span class="hljs-attr"> : public</span> <span class="hljs-title">A2</span></span><br><span class="hljs-class"></span>&#123;<br>public:<br>	~B2()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;~B2()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">int</span> main()<br>&#123;<br>	A* a = new B;<br>	<span class="hljs-keyword">delete</span> a;<br>	<span class="hljs-regexp">//</span>~B()<br>	//~A()<br>	A2* a2 = new B2;<br>	<span class="hljs-keyword">delete</span> a2;<br>	<span class="hljs-regexp">//</span>~A2()<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure></li>
-<li><p>override &amp;&amp; final：</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs perl"><span class="hljs-comment">#include&lt;iostream&gt;</span><br>using namespace std;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span></span><br><span class="hljs-class"></span>&#123;<br>public:<br>	virtual  ~A()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;~A()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">B</span><span class="hljs-attr"> : public</span> <span class="hljs-title">A</span></span><br><span class="hljs-class"></span>&#123;<br>public:<br>	virtual ~B()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;~B()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A2</span></span><br><span class="hljs-class"></span>&#123;<br>public:<br>	 ~A2()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;~A2()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">B2</span><span class="hljs-attr"> : public</span> <span class="hljs-title">A2</span></span><br><span class="hljs-class"></span>&#123;<br>public:<br>	~B2()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;~B2()&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">int</span> main()<br>&#123;<br>	A* a = new B;<br>	<span class="hljs-keyword">delete</span> a;<br>	<span class="hljs-regexp">//</span>~B()<br>	//~A()<br>	A2* a2 = new B2;<br>	<span class="hljs-keyword">delete</span> a2;<br>	<span class="hljs-regexp">//</span>~A2()<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-2">
+<p>override &amp;&amp; final：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">fun</span><span class="hljs-params">()</span> </span>&#123;&#125;<br>&#125;;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">B</span> : <span class="hljs-keyword">public</span> A<br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-comment">//正确,前面有声明的成员虚函数可供其重写,不会报错</span><br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">fun</span><span class="hljs-params">()</span>  <span class="hljs-keyword">override</span></span>&#123;&#125;<br>	<span class="hljs-comment">//错误:使用“override”声明的成员函数不能重写基类成员</span><br>	<span class="hljs-comment">//也就是前面必须有基类成员声明为了虚函数可供其重写</span><br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">fun2</span><span class="hljs-params">()</span> <span class="hljs-keyword">override</span></span>&#123;&#125;<br>&#125;;<br><br></code></pre></td></tr></table></figure>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span> <span class="hljs-keyword">final</span> <span class="hljs-comment">//A类无法被继承</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">fun</span><span class="hljs-params">()</span> <span class="hljs-keyword">final</span> <span class="hljs-comment">//fun函数无法被重写</span></span><br><span class="hljs-function">	</span>&#123;&#125;<br>&#125;;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">B</span> : <span class="hljs-keyword">public</span> A <span class="hljs-comment">//错误:不能将final类类型作为基类</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">fun</span><span class="hljs-params">()</span> <span class="hljs-comment">//错误:不能重写final中的虚函数</span></span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt; endl;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span> <span class="hljs-keyword">final</span> <span class="hljs-comment">//A类无法被继承</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">fun</span><span class="hljs-params">()</span> <span class="hljs-keyword">final</span> <span class="hljs-comment">//fun函数无法被重写</span></span><br><span class="hljs-function">	</span>&#123;&#125;<br>&#125;;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">B</span> : <span class="hljs-keyword">public</span> A <span class="hljs-comment">//错误:不能将final类类型作为基类</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">fun</span><span class="hljs-params">()</span> <span class="hljs-comment">//错误:不能重写final中的虚函数</span></span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt; endl;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+</li>
 </ul>
 
                 
@@ -479,7 +521,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/c-study/" class="category-chain-item">c++_study</a>
+  <a href="/xiaohei07/xiaohei07.github.io/categories/c-study/" class="category-chain-item">c++_study</a>
   
   
 
@@ -494,11 +536,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/c/">#c++</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/c/">#c++</a>
       
-        <a href="/tags/%E7%B1%BB/">#类</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/%E7%B1%BB/">#类</a>
       
-        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
       
     </div>
   
@@ -511,7 +553,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>c++类——多态(二)</div>
-      <div>http://example.com/2023/04/08/c++类——多态(二)/</div>
+      <div>https://github.com/xiaohei07/xiaohei07.github.io/2023/04/08/c++类——多态(二)/</div>
     </div>
     <div class="license-meta">
       
@@ -555,7 +597,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/04/08/c++%E7%B1%BB%E2%80%94%E2%80%94%E5%A4%9A%E6%80%81(%E4%B8%89)/" title="c++类——多态(三)">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/04/08/c++%E7%B1%BB%E2%80%94%E2%80%94%E5%A4%9A%E6%80%81(%E4%B8%89)/" title="c++类——多态(三)">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">c++类——多态(三)</span>
                         <span class="visible-mobile">上一篇</span>
@@ -565,7 +607,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/04/08/c++%E7%B1%BB%E2%80%94%E2%80%94%E5%A4%9A%E6%80%81(%E4%B8%80)/" title="c++类——多态(一)">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/04/08/c++%E7%B1%BB%E2%80%94%E2%80%94%E5%A4%9A%E6%80%81(%E4%B8%80)/" title="c++类——多态(一)">
                         <span class="hidden-mobile">c++类——多态(一)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -625,7 +667,6 @@
 </div>
 
 
-
   </aside>
 
 
@@ -645,15 +686,18 @@
 
 
 
-  
-
-
 
   
 
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -700,7 +744,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -751,8 +795,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -774,93 +818,56 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
+   <script>
+  Fluid.utils.createScript('https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.28.2/tocbot.min.js', function() {
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !window.tocbot) { return; }
+  var boardCtn = jQuery('#board-ctn');
+  var boardTop = boardCtn.offset().top;
 
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
+  window.tocbot.init(Object.assign({
+  tocSelector : '#toc-body',
+  contentSelector : '.markdown-body',
+  headingSelector : 'h1, h2, h3, h4, h5, h6',
+  linkClass : 'tocbot-link',
+  activeLinkClass : 'tocbot-active-link',
+  listClass : 'tocbot-list',
+  isCollapsedClass: 'tocbot-is-collapsed',
+  collapsibleClass: 'tocbot-is-collapsible',
+  scrollSmooth : true,
+  includeTitleTags: true,
+  includeHtml: true,
+  headingsOffset : -boardTop,
+  }, CONFIG.toc));
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
 
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
+  Fluid.events.registerRefreshCallback(function() {
+  if ('tocbot' in window) {
+  tocbot.refresh();
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !tocbot) {
+  return;
+  }
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
+  }
   });
-</script>
-
+  });
+  </script>
+  
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
 
 
   
@@ -873,17 +880,58 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script defer src="/js/leancloud.js" ></script>
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
 
-  <script  src="/js/local-search.js" ></script>
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
+
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -891,7 +939,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

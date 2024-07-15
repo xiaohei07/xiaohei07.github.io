@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="（七）常用内置方法 1. 简介： 这里介绍的常用内置方法主要是对类的一些相关用法的补充，便于解决创建类遇到的一些常见问题，同时对其进行简单演示来表示其具体的应用场景。 __init__方法不再介绍，前面的使用和介绍已经非常详细了。  __str__()和__repr__()： 这两个方法的目的使为了显式的显示对象的必要信息，方便查看和调试。 __str__()被print默认调用，控">
+    <meta name="description" content="¶（七）常用内置方法 ¶1. 简介： 这里介绍的常用内置方法主要是对类的一些相关用法的补充，便于解决创建类遇到的一些常见问题，同时对其进行简单演示来表示其具体的应用场景。 __init__方法不再介绍，前面的使用和介绍已经非常详细了。   __str__()和__repr__()： 这两个方法的目的使为了显式的显示对象的必要信息，方便查看和调试。 __str__()被print默认调用，控制用户的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python进阶——类(四)常用内置方法">
-<meta property="og:url" content="http://example.com/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E5%9B%9B)%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95/index.html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（七）常用内置方法 1. 简介： 这里介绍的常用内置方法主要是对类的一些相关用法的补充，便于解决创建类遇到的一些常见问题，同时对其进行简单演示来表示其具体的应用场景。 __init__方法不再介绍，前面的使用和介绍已经非常详细了。  __str__()和__repr__()： 这两个方法的目的使为了显式的显示对象的必要信息，方便查看和调试。 __str__()被print默认调用，控">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E5%9B%9B)%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="¶（七）常用内置方法 ¶1. 简介： 这里介绍的常用内置方法主要是对类的一些相关用法的补充，便于解决创建类遇到的一些常见问题，同时对其进行简单演示来表示其具体的应用场景。 __init__方法不再介绍，前面的使用和介绍已经非常详细了。   __str__()和__repr__()： 这两个方法的目的使为了显式的显示对象的必要信息，方便查看和调试。 __str__()被print默认调用，控制用户的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-23T06:17:34.000Z">
 <meta property="article:modified_time" content="2023-07-23T14:11:54.995Z">
@@ -32,7 +32,7 @@
   
   
   
-  <title>python进阶——类(四)常用内置方法 - ZZHの个人博客</title>
+  <title>python进阶——类(四)常用内置方法 - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -56,35 +56,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -118,7 +118,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -137,7 +137,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -149,7 +149,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -161,21 +161,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -195,7 +183,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -203,15 +199,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -225,7 +213,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -237,7 +225,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -267,7 +255,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -280,6 +268,11 @@
         
           
   <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        07xiaohei
+      </span>
     
     
       <span class="post-meta">
@@ -307,7 +300,7 @@
         
         
         
-          81 分钟
+          25 分钟
         
       </span>
     
@@ -355,47 +348,63 @@
             <!-- SEO header -->
             <h1 style="display: none">python进阶——类(四)常用内置方法</h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：1 年前
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
-                <h3><span id="七常用内置方法">（七）常用内置方法</span></h3>
-<h4><span id="1-简介">1. 简介：</span></h4>
+                <h3 id="七常用内置方法"><a href="#七常用内置方法" class="header-anchor">¶</a>（七）常用内置方法</h3>
+<h4 id="1-简介"><a href="#1-简介" class="header-anchor">¶</a>1. 简介：</h4>
 <p>这里介绍的常用内置方法主要是对类的一些相关用法的补充，便于解决创建类遇到的一些常见问题，同时对其进行简单演示来表示其具体的应用场景。</p>
 <p>__init__方法不再介绍，前面的使用和介绍已经非常详细了。</p>
-<ul>
-<li><p>__str__()和__repr__()：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>__str__()和__repr__()：</p>
 <p>这两个方法的目的使为了显式的显示对象的必要信息，方便查看和调试。</p>
 <p>__str__()被print默认调用，控制用户的展示；而__repr__被控制台输出默认调用,控制调试的展示。</p>
-<ul>
-<li><p>__str__用于表示对象代表的含义，返回一个字符串，可以根据需要返回一个实例转化成字符串之后的结果。</p>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>__str__用于表示对象代表的含义，返回一个字符串，可以根据需要返回一个实例转化成字符串之后的结果。</p>
 <p>具体用法如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">exmp</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-variable language_">self</span>.x=<span class="hljs-number">1</span><br>        <span class="hljs-variable language_">self</span>.y=<span class="hljs-number">2</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;self.__class__&#125;</span>:x=<span class="hljs-subst">&#123;self.x&#125;</span>,y=<span class="hljs-subst">&#123;self.y&#125;</span>&#x27;</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">exmp2</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-variable language_">self</span>.x=<span class="hljs-number">1</span><br>        <span class="hljs-variable language_">self</span>.y=<span class="hljs-number">2</span><br>e=exmp()<br>e2=exmp2()<br><span class="hljs-built_in">print</span>(e)<br><span class="hljs-built_in">print</span>(e2)<br><span class="hljs-comment"># 运行结果:</span><br><span class="hljs-comment"># &lt;class &#x27;__main__.exmp&#x27;&gt;:x=1,y=2</span><br><span class="hljs-comment"># &lt;__main__.exmp2 object at 0x0000017336228210&gt;</span><br></code></pre></td></tr></table></figure>
-<p>能够看出输出实例时的内容发生了改变。</p></li>
-<li><p>__repr__的用途和用法都与__str__类似，所以一般直接使用__repr__=
-__str__将其返回字符串复制给__repr__</p>
+<p>能够看出输出实例时的内容发生了改变。</p>
+</li>
+<li class="lvl-4">
+<p>__repr__的用途和用法都与__str__类似，所以一般直接使用__repr__= __str__将其返回字符串复制给__repr__</p>
 <p>如果为使用者和开发者提供的信息不一致，再单独定义__repr__即可。</p>
 <p>简单例子如下（）此为控制台的输入和输出。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">exmp3</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-variable language_">self</span>.x=<span class="hljs-number">1</span><br>        <span class="hljs-variable language_">self</span>.y=<span class="hljs-number">2</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;self.__class__&#125;</span>:x=<span class="hljs-subst">&#123;self.x&#125;</span>,y=<span class="hljs-subst">&#123;self.y&#125;</span>&#x27;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__repr__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;self.__class__&#125;</span>:x=<span class="hljs-subst">&#123;self.x&#125;</span>,y=<span class="hljs-subst">&#123;self.y&#125;</span>&#x27;</span>+<span class="hljs-string">&#x27;——repr&#x27;</span><br>    <br>e=exmp3()<br>e<br>&lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.exmp3&#x27;</span>&gt;:x=<span class="hljs-number">1</span>,y=<span class="hljs-number">2</span>——<span class="hljs-built_in">repr</span><br><br></code></pre></td></tr></table></figure></li>
-</ul></li>
-<li><p>__call__()：</p>
-<p>不管是内置函数还是自定以函数，函数实际上是实现了__call__方法的对象，这是可调用对象的一种——调用函数时，"名称()"实际上等价于"名称.__call__()"的写法。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">exmp3</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-variable language_">self</span>.x=<span class="hljs-number">1</span><br>        <span class="hljs-variable language_">self</span>.y=<span class="hljs-number">2</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;self.__class__&#125;</span>:x=<span class="hljs-subst">&#123;self.x&#125;</span>,y=<span class="hljs-subst">&#123;self.y&#125;</span>&#x27;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__repr__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;self.__class__&#125;</span>:x=<span class="hljs-subst">&#123;self.x&#125;</span>,y=<span class="hljs-subst">&#123;self.y&#125;</span>&#x27;</span>+<span class="hljs-string">&#x27;——repr&#x27;</span><br>    <br>e=exmp3()<br>e<br>&lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;__main__.exmp3&#x27;</span>&gt;:x=<span class="hljs-number">1</span>,y=<span class="hljs-number">2</span>——<span class="hljs-built_in">repr</span><br><br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>__call__()：</p>
+<p>不管是内置函数还是自定以函数，函数实际上是实现了__call__方法的对象，这是可调用对象的一种——调用函数时，&quot;名称()&quot;实际上等价于&quot;名称.__call__()&quot;的写法。</p>
 <p>其他的可调用对象还包括Python的实例对象和实例方法。</p>
-<p>__call__方法除了函数以外，也可以给实例对象提供被执行的能力，也就是将实例对象转变为一个可调用对象，其实际功能效果类似于在类中重载了()运算符，使得类的实例对象可以以"对象名()"的形式使用。</p>
+<p>__call__方法除了函数以外，也可以给实例对象提供被执行的能力，也就是将实例对象转变为一个可调用对象，其实际功能效果类似于在类中重载了()运算符，使得类的实例对象可以以&quot;对象名()&quot;的形式使用。</p>
 <p>实现了__call__方法的类实例，可以传入参数也可以返回值。</p>
 <p>具体例子如下：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">class</span> <span class="hljs-title class_">exmp</span>:<br>    <span class="hljs-type">def</span> <span class="hljs-title">__init__</span>(self,a):<br>        self.a=a<br>    def __call__(self,b):<br>        print(<span class="hljs-string">&quot;a=&quot;</span>,self.a)<br>        print(<span class="hljs-string">&quot;b=&quot;</span>,b)<br>        print(<span class="hljs-string">&quot;a+b=&quot;</span>,self.a+b)<br>        <span class="hljs-keyword">return</span> self.a+b<br>e=exmp(<span class="hljs-number">10</span>)<br>result=e(<span class="hljs-number">20</span>)<br>print(result)<br>def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(i)</span></span>:<br>    print(<span class="hljs-string">&quot;fun&quot;</span>,i)<br><span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(<span class="hljs-number">10</span>)</span></span><br><span class="hljs-keyword">fun</span>.__call__(<span class="hljs-number">20</span>)<br># 运行结果:<br># a= <span class="hljs-number">10</span><br># b= <span class="hljs-number">20</span><br># a+b= <span class="hljs-number">30</span><br># <span class="hljs-number">30</span><br># <span class="hljs-function"><span class="hljs-keyword">fun</span> 10</span><br># <span class="hljs-function"><span class="hljs-keyword">fun</span> 20</span><br></code></pre></td></tr></table></figure></li>
-<li><p>__iter__()和__next__()：</p>
-<p>这两个方法的具体内容在<a target="_blank" rel="noopener" href="https://07xiaohei.com/2023/07/13/python进阶——高级特性(二)迭代、迭代器/">python进阶——高级特性(二)迭代、迭代器
-- ZZHの个人博客
-(07xiaohei.com)</a>种已经进行了详细的介绍，这里只进行简要介绍。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">class</span> <span class="hljs-title class_">exmp</span>:<br>    <span class="hljs-type">def</span> <span class="hljs-title">__init__</span>(self,a):<br>        self.a=a<br>    def __call__(self,b):<br>        print(<span class="hljs-string">&quot;a=&quot;</span>,self.a)<br>        print(<span class="hljs-string">&quot;b=&quot;</span>,b)<br>        print(<span class="hljs-string">&quot;a+b=&quot;</span>,self.a+b)<br>        <span class="hljs-keyword">return</span> self.a+b<br>e=exmp(<span class="hljs-number">10</span>)<br>result=e(<span class="hljs-number">20</span>)<br>print(result)<br>def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(i)</span></span>:<br>    print(<span class="hljs-string">&quot;fun&quot;</span>,i)<br><span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(<span class="hljs-number">10</span>)</span></span><br><span class="hljs-keyword">fun</span>.__call__(<span class="hljs-number">20</span>)<br># 运行结果:<br># a= <span class="hljs-number">10</span><br># b= <span class="hljs-number">20</span><br># a+b= <span class="hljs-number">30</span><br># <span class="hljs-number">30</span><br># <span class="hljs-function"><span class="hljs-keyword">fun</span> 10</span><br># <span class="hljs-function"><span class="hljs-keyword">fun</span> 20</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-2">
+<p>__iter__()和__next__()：</p>
+<p>这两个方法的具体内容在<a target="_blank" rel="noopener" href="https://07xiaohei.com/2023/07/13/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7(%E4%BA%8C)%E8%BF%AD%E4%BB%A3%E3%80%81%E8%BF%AD%E4%BB%A3%E5%99%A8/">python进阶——高级特性(二)迭代、迭代器 - ZZHの个人博客 (07xiaohei.com)</a>种已经进行了详细的介绍，这里只进行简要介绍。</p>
 <p>这两个方法用于将一个对象模拟成序列，内部类型如列表、元组等都可以迭代，重写这两个方法就可以实现自定义的迭代对象。
 __iter__方法向系统说明了这是一个可迭代对象，__next__方法向系统说明了该可迭代对象的迭代算法。</p>
 <p>__iter__方法需要返回self，__next__方法需要返回对应的元素。</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs routeros">class Myfib:<br>    def __iter__(self):<br>        self.<span class="hljs-attribute">i1</span>=0<br>        self.<span class="hljs-attribute">i2</span>=1<br>        return self<br>    def __next__(self):<br>        <span class="hljs-attribute">result</span>=self.i1+self.i2<br>        self.<span class="hljs-attribute">i1</span>=self.i2<br>        self.<span class="hljs-attribute">i2</span>=result<br>        return result<br><span class="hljs-attribute">use_fib</span>=Myfib()<br>j = 1<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> use_fib:<br>    <span class="hljs-keyword">if</span> i&lt;100000:<br>        <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br>        j+=1<br>    <span class="hljs-keyword">else</span>:<br>        break<br>    <span class="hljs-keyword">if</span> <span class="hljs-attribute">j</span>==10:<br>        <span class="hljs-built_in">print</span>()<br>        <span class="hljs-attribute">j</span>=1<br><span class="hljs-comment"># 运行结果:</span><br><span class="hljs-comment"># 1 2 3 5 8 13 21 34 55</span><br><span class="hljs-comment"># 89 144 233 377 610 987 1597 2584 4181</span><br><span class="hljs-comment"># 6765 10946 17711 28657 46368 75025</span><br></code></pre></td></tr></table></figure>
 <p>再举一个例子，写一个首项为10，公差为5的等差数列：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Mysequence</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__iter__</span>(<span class="hljs-params"><span class="hljs-variable language_">self</span></span>):<br>        <span class="hljs-variable language_">self</span>.i=<span class="hljs-number">10</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__next__</span>(<span class="hljs-params"><span class="hljs-variable language_">self</span></span>):<br>        <span class="hljs-variable language_">self</span>.i+=<span class="hljs-number">5</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.i<br>se=<span class="hljs-title class_">Mysequence</span>()<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-symbol">se:</span><br>    <span class="hljs-keyword">if</span> i&lt;=<span class="hljs-number">100</span>:<br>        print(i,<span class="hljs-keyword">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br>    <span class="hljs-symbol">else:</span><br>        <span class="hljs-keyword">break</span><br><span class="hljs-comment"># 运行结果:</span><br><span class="hljs-comment"># 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100</span><br></code></pre></td></tr></table></figure></li>
-<li><p>__getitem__()，__setitem__()，__delitem__()：</p>
-<p>__getitem__()方法把类中的属性定义为序列或者字典，并且可以用此方法输出其中的某个元素，其效果类似于重载[]运算符给类，可以通过"实例名[索引]/[切片]"的方式来访问实例对象的某个元素。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Mysequence</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__iter__</span>(<span class="hljs-params"><span class="hljs-variable language_">self</span></span>):<br>        <span class="hljs-variable language_">self</span>.i=<span class="hljs-number">10</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__next__</span>(<span class="hljs-params"><span class="hljs-variable language_">self</span></span>):<br>        <span class="hljs-variable language_">self</span>.i+=<span class="hljs-number">5</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.i<br>se=<span class="hljs-title class_">Mysequence</span>()<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-symbol">se:</span><br>    <span class="hljs-keyword">if</span> i&lt;=<span class="hljs-number">100</span>:<br>        print(i,<span class="hljs-keyword">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br>    <span class="hljs-symbol">else:</span><br>        <span class="hljs-keyword">break</span><br><span class="hljs-comment"># 运行结果:</span><br><span class="hljs-comment"># 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-2">
+<p>__getitem__()，__setitem__()，__delitem__()：</p>
+<p>__getitem__()方法把类中的属性定义为序列或者字典，并且可以用此方法输出其中的某个元素，其效果类似于重载[]运算符给类，可以通过&quot;实例名[索引]/[切片]&quot;的方式来访问实例对象的某个元素。</p>
 <p>对于传入的是索引还是切片，可以通过isinstance函数判断。</p>
 <p>判断是索引，使用ininstance(item,int)判断item是否为int类型，确定其是否为数字索引；使用ininstance(item,slice)判断其是否为切片；使用ininstance(item,str)等判断其是否为key。</p>
 <p>具体的例子如下：</p>
@@ -410,8 +419,10 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
 <p>__delitem__方法在对对象的组成部分使用__del__语句的时候被调用，需删除与key相关联的值。</p>
 <p>举例如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">mynumlist</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-variable language_">self</span>.list_use=[]<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__iter__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-variable language_">self</span>.i=<span class="hljs-number">10</span><br>        <span class="hljs-variable language_">self</span>.list_use.append(<span class="hljs-variable language_">self</span>.i)<br>        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__next__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-variable language_">self</span>.i+=<span class="hljs-number">5</span><br>        <span class="hljs-variable language_">self</span>.list_use.append(<span class="hljs-variable language_">self</span>.i)<br>        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.i<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__getitem__</span>(<span class="hljs-params">self, item</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(item,<span class="hljs-built_in">int</span>):<br>            <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.list_use[item]<br>        <span class="hljs-keyword">elif</span> <span class="hljs-built_in">isinstance</span>(item,<span class="hljs-built_in">slice</span>):<br>            start=item.start<br>            stop=item.stop<br>            <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.list_use[start:stop]<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;error&quot;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__setitem__</span>(<span class="hljs-params">self, key, value</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(key, <span class="hljs-built_in">int</span>):<br>            <span class="hljs-variable language_">self</span>.list_use[key]=value<br>        <span class="hljs-keyword">else</span>:<br>             <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;error&quot;</span>)<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__delitem__</span>(<span class="hljs-params">self, key</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(key, <span class="hljs-built_in">int</span>):<br>            <span class="hljs-keyword">del</span> <span class="hljs-variable language_">self</span>.list_use[key]<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;error&quot;</span>)<br>mn=mynumlist()<br>y=<span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> mn:<br>    <span class="hljs-keyword">if</span> y!=<span class="hljs-number">30</span>:<br>        y+=<span class="hljs-number">1</span><br>        <span class="hljs-built_in">print</span>(i,end=<span class="hljs-string">&quot; &quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">break</span><br><span class="hljs-built_in">print</span>()<br><span class="hljs-built_in">print</span>(mn[<span class="hljs-number">10</span>])<br>mn[<span class="hljs-number">10</span>]=<span class="hljs-number">114514</span><br><span class="hljs-built_in">print</span>(mn[<span class="hljs-number">8</span>:<span class="hljs-number">11</span>])<br><span class="hljs-keyword">del</span> mn[<span class="hljs-number">10</span>]<br><span class="hljs-built_in">print</span>(mn[<span class="hljs-number">8</span>:<span class="hljs-number">11</span>])<br><span class="hljs-comment"># 运行结果:</span><br><span class="hljs-comment"># 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160</span><br><span class="hljs-comment"># 60</span><br><span class="hljs-comment"># [50, 55, 114514]</span><br><span class="hljs-comment"># [50, 55, 65]</span><br></code></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">mydic</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-variable language_">self</span>.dirc_use=&#123;&#125;<br>        <span class="hljs-variable language_">self</span>.index=<span class="hljs-number">1</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__iter__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-variable language_">self</span>.i=<span class="hljs-number">10</span><br>        <span class="hljs-variable language_">self</span>.dirc_use[<span class="hljs-built_in">str</span>(<span class="hljs-variable language_">self</span>.index)]=<span class="hljs-variable language_">self</span>.i<br>        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__next__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-variable language_">self</span>.index+=<span class="hljs-number">1</span><br>        <span class="hljs-variable language_">self</span>.i+=<span class="hljs-number">5</span><br>        <span class="hljs-variable language_">self</span>.dirc_use[<span class="hljs-built_in">str</span>(<span class="hljs-variable language_">self</span>.index)] = <span class="hljs-variable language_">self</span>.i<br>        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.i<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__getitem__</span>(<span class="hljs-params">self, item</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(item,<span class="hljs-built_in">str</span>):<br>            <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.dirc_use.get(item)<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;error&quot;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__setitem__</span>(<span class="hljs-params">self, key, value</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(key,<span class="hljs-built_in">str</span>):<br>            <span class="hljs-variable language_">self</span>.dirc_use[key]=value<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;error&quot;</span>)<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__delitem__</span>(<span class="hljs-params">self, key</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(key, <span class="hljs-built_in">str</span>):<br>            <span class="hljs-keyword">del</span> <span class="hljs-variable language_">self</span>.dirc_use[key]<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;error&quot;</span>)<br>md=mydic()<br>y=<span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> md:<br>    <span class="hljs-keyword">if</span> y!=<span class="hljs-number">30</span>:<br>        y+=<span class="hljs-number">1</span><br>        <span class="hljs-built_in">print</span>(i,end=<span class="hljs-string">&quot; &quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">break</span><br><span class="hljs-built_in">print</span>()<br><span class="hljs-built_in">print</span>(md[<span class="hljs-string">&quot;1&quot;</span>])<br><span class="hljs-built_in">print</span>(md[<span class="hljs-number">8</span>])<br><span class="hljs-built_in">print</span>(md[<span class="hljs-string">&quot;1000&quot;</span>])<br>md[<span class="hljs-string">&quot;3&quot;</span>]=<span class="hljs-string">&quot;123456789&quot;</span><br><span class="hljs-built_in">print</span>(md[<span class="hljs-string">&quot;3&quot;</span>])<br><span class="hljs-keyword">del</span> md[<span class="hljs-string">&quot;3&quot;</span>]<br><span class="hljs-built_in">print</span>(md[<span class="hljs-string">&quot;3&quot;</span>])<br><span class="hljs-comment"># 运行结果:</span><br><span class="hljs-comment"># 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160</span><br><span class="hljs-comment"># 10</span><br><span class="hljs-comment"># error</span><br><span class="hljs-comment"># None</span><br><span class="hljs-comment"># 123456789</span><br><span class="hljs-comment"># None</span><br></code></pre></td></tr></table></figure></li>
-<li><p>__slots__：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">mydic</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-variable language_">self</span>.dirc_use=&#123;&#125;<br>        <span class="hljs-variable language_">self</span>.index=<span class="hljs-number">1</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__iter__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-variable language_">self</span>.i=<span class="hljs-number">10</span><br>        <span class="hljs-variable language_">self</span>.dirc_use[<span class="hljs-built_in">str</span>(<span class="hljs-variable language_">self</span>.index)]=<span class="hljs-variable language_">self</span>.i<br>        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__next__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-variable language_">self</span>.index+=<span class="hljs-number">1</span><br>        <span class="hljs-variable language_">self</span>.i+=<span class="hljs-number">5</span><br>        <span class="hljs-variable language_">self</span>.dirc_use[<span class="hljs-built_in">str</span>(<span class="hljs-variable language_">self</span>.index)] = <span class="hljs-variable language_">self</span>.i<br>        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.i<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__getitem__</span>(<span class="hljs-params">self, item</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(item,<span class="hljs-built_in">str</span>):<br>            <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.dirc_use.get(item)<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;error&quot;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__setitem__</span>(<span class="hljs-params">self, key, value</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(key,<span class="hljs-built_in">str</span>):<br>            <span class="hljs-variable language_">self</span>.dirc_use[key]=value<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;error&quot;</span>)<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__delitem__</span>(<span class="hljs-params">self, key</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(key, <span class="hljs-built_in">str</span>):<br>            <span class="hljs-keyword">del</span> <span class="hljs-variable language_">self</span>.dirc_use[key]<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;error&quot;</span>)<br>md=mydic()<br>y=<span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> md:<br>    <span class="hljs-keyword">if</span> y!=<span class="hljs-number">30</span>:<br>        y+=<span class="hljs-number">1</span><br>        <span class="hljs-built_in">print</span>(i,end=<span class="hljs-string">&quot; &quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">break</span><br><span class="hljs-built_in">print</span>()<br><span class="hljs-built_in">print</span>(md[<span class="hljs-string">&quot;1&quot;</span>])<br><span class="hljs-built_in">print</span>(md[<span class="hljs-number">8</span>])<br><span class="hljs-built_in">print</span>(md[<span class="hljs-string">&quot;1000&quot;</span>])<br>md[<span class="hljs-string">&quot;3&quot;</span>]=<span class="hljs-string">&quot;123456789&quot;</span><br><span class="hljs-built_in">print</span>(md[<span class="hljs-string">&quot;3&quot;</span>])<br><span class="hljs-keyword">del</span> md[<span class="hljs-string">&quot;3&quot;</span>]<br><span class="hljs-built_in">print</span>(md[<span class="hljs-string">&quot;3&quot;</span>])<br><span class="hljs-comment"># 运行结果:</span><br><span class="hljs-comment"># 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160</span><br><span class="hljs-comment"># 10</span><br><span class="hljs-comment"># error</span><br><span class="hljs-comment"># None</span><br><span class="hljs-comment"># 123456789</span><br><span class="hljs-comment"># None</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-2">
+<p>__slots__：</p>
 <p>__slots__是一个类属性，可以赋值为字符串、可迭代对象或由实例使用的变量名构成的字符串序列。</p>
 <p>__slots__允许显式声明数据成员，为已声明的变量保留空间，限制能够添加的属性名（也就是禁止为每个实例创建__dict__和__weakref__）。</p>
 <p>通过阻止每个实例创建自己的__dict__而使用__slots__，在大量创建实例时，可以显著地节省内存空间并提升属性的查找速度。</p>
@@ -419,13 +430,16 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
 <p>__slots__仅对当前类实例起作用，不会对继承的派生类起作用，需要派生类定义自己的__slots__。</p>
 <p>例子如下：</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs routeros">class test:<br>    __slots__ = (<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>)<br>    def __init__(self):<br>        self.<span class="hljs-attribute">a</span>=1<br>        self.<span class="hljs-attribute">b</span>=2<br>        self.<span class="hljs-attribute">c</span>=3<br>        self.<span class="hljs-attribute">d</span>=10<br><span class="hljs-attribute">t</span>=test()<br><span class="hljs-comment"># 运行结果:</span><br><span class="hljs-comment"># Traceback (most recent call last):</span><br><span class="hljs-comment">#   File &quot;D:\pycharmwork\blog_use.py&quot;, line 3587, in &lt;module&gt;</span><br><span class="hljs-comment">#     t=test()</span><br><span class="hljs-comment">#       ^^^^^^</span><br><span class="hljs-comment">#   File &quot;D:\pycharmwork\blog_use.py&quot;, line 3586, in __init__</span><br><span class="hljs-comment">#     self.d=10</span><br><span class="hljs-comment">#     ^^^^^^</span><br><span class="hljs-comment"># AttributeError: &#x27;test&#x27; object has no attribute &#x27;d&#x27;</span><br></code></pre></td></tr></table></figure>
-<p>可以看到，只有abc的属性名可以使用，其他的属性名使用均错误。</p></li>
-<li><p>__getattr__()，__setattr__()，__delattr__()：</p>
+<p>可以看到，只有abc的属性名可以使用，其他的属性名使用均错误。</p>
+</li>
+<li class="lvl-2">
+<p>__getattr__()，__setattr__()，__delattr__()：</p>
 <p>__getattr__方法用于处理访问不存在属性的方法，可以输出相关的异常信息。</p>
 <p>__setattr__方法用于设置属性值的时候，每设置一次属性的值都要进入一次该方法，注意该方法不要递归调用，也不要在该方法种再次直接设置属性值，否则可能会造成死循环。</p>
 <p>__delattr__方法用于删除属性值的时候，也要注意避开死循环。</p>
 <p>使用的举例如下：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs routeros">class test:<br>    def __init__(self):<br>        self.<span class="hljs-attribute">i</span>=1<br>    def __getattr__(self, item):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Don&#x27;t get!&quot;</span>)<br>        return <span class="hljs-literal">False</span><br>    def __setattr__(self, key, value):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Setting...&quot;</span>)<br>        self.__dict__[key]=value<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Finish!&quot;</span>)<br>    def __delattr__(self, item):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Deling...&quot;</span>)<br>        <span class="hljs-keyword">if</span> self.__dict__.<span class="hljs-built_in">get</span>(item):<br>            del self.__dict__[item]<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Successful!&quot;</span>)<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Failed!&quot;</span>)<br><span class="hljs-attribute">t</span>=test()<br>t.<span class="hljs-attribute">i</span>=5<br><span class="hljs-built_in">print</span>(t.i)<br>t.<span class="hljs-attribute">j</span>=10<br><span class="hljs-built_in">print</span>(t.j)<br><span class="hljs-built_in">print</span>(t.z)<br>del t.i<br>del t.z<br><span class="hljs-comment"># 运行结果:</span><br><span class="hljs-comment"># Setting...</span><br><span class="hljs-comment"># Finish!</span><br><span class="hljs-comment"># Setting...</span><br><span class="hljs-comment"># Finish!</span><br><span class="hljs-comment"># 5</span><br><span class="hljs-comment"># Setting...</span><br><span class="hljs-comment"># Finish!</span><br><span class="hljs-comment"># 10</span><br><span class="hljs-comment"># Don&#x27;t get!</span><br><span class="hljs-comment"># False</span><br><span class="hljs-comment"># Deling...</span><br><span class="hljs-comment"># Successful!</span><br><span class="hljs-comment"># Deling...</span><br><span class="hljs-comment"># Failed!</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs routeros">class test:<br>    def __init__(self):<br>        self.<span class="hljs-attribute">i</span>=1<br>    def __getattr__(self, item):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Don&#x27;t get!&quot;</span>)<br>        return <span class="hljs-literal">False</span><br>    def __setattr__(self, key, value):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Setting...&quot;</span>)<br>        self.__dict__[key]=value<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Finish!&quot;</span>)<br>    def __delattr__(self, item):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Deling...&quot;</span>)<br>        <span class="hljs-keyword">if</span> self.__dict__.<span class="hljs-built_in">get</span>(item):<br>            del self.__dict__[item]<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Successful!&quot;</span>)<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Failed!&quot;</span>)<br><span class="hljs-attribute">t</span>=test()<br>t.<span class="hljs-attribute">i</span>=5<br><span class="hljs-built_in">print</span>(t.i)<br>t.<span class="hljs-attribute">j</span>=10<br><span class="hljs-built_in">print</span>(t.j)<br><span class="hljs-built_in">print</span>(t.z)<br>del t.i<br>del t.z<br><span class="hljs-comment"># 运行结果:</span><br><span class="hljs-comment"># Setting...</span><br><span class="hljs-comment"># Finish!</span><br><span class="hljs-comment"># Setting...</span><br><span class="hljs-comment"># Finish!</span><br><span class="hljs-comment"># 5</span><br><span class="hljs-comment"># Setting...</span><br><span class="hljs-comment"># Finish!</span><br><span class="hljs-comment"># 10</span><br><span class="hljs-comment"># Don&#x27;t get!</span><br><span class="hljs-comment"># False</span><br><span class="hljs-comment"># Deling...</span><br><span class="hljs-comment"># Successful!</span><br><span class="hljs-comment"># Deling...</span><br><span class="hljs-comment"># Failed!</span><br></code></pre></td></tr></table></figure>
+</li>
 </ul>
 
                 
@@ -445,7 +459,7 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
     
       <span class="category-chain">
         
-  <a href="/categories/python-study/" class="category-chain-item">python_study</a>
+  <a href="/xiaohei07/xiaohei07.github.io/categories/python-study/" class="category-chain-item">python_study</a>
   
   
 
@@ -460,9 +474,9 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
       
-        <a href="/tags/python/">#python</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/python/">#python</a>
       
     </div>
   
@@ -475,7 +489,7 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
   <div class="license-box my-3">
     <div class="license-title">
       <div>python进阶——类(四)常用内置方法</div>
-      <div>http://example.com/2023/07/23/python进阶——类(四)常用内置方法/</div>
+      <div>https://github.com/xiaohei07/xiaohei07.github.io/2023/07/23/python进阶——类(四)常用内置方法/</div>
     </div>
     <div class="license-meta">
       
@@ -519,7 +533,7 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%BA%94)%E7%B1%BB%E8%A3%85%E9%A5%B0%E5%99%A8/" title="python进阶——类(五)类装饰器">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%BA%94)%E7%B1%BB%E8%A3%85%E9%A5%B0%E5%99%A8/" title="python进阶——类(五)类装饰器">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">python进阶——类(五)类装饰器</span>
                         <span class="visible-mobile">上一篇</span>
@@ -529,7 +543,7 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%B8%89)%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99%E3%80%81%E5%A4%9A%E6%80%81/" title="python进阶——类(三)方法重写、多态">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%B8%89)%E6%96%B9%E6%B3%95%E9%87%8D%E7%94%A8%E3%80%81%E5%A4%9A%E6%80%81/" title="python进阶——类(三)方法重写、多态">
                         <span class="hidden-mobile">python进阶——类(三)方法重写、多态</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -589,7 +603,6 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
 </div>
 
 
-
   </aside>
 
 
@@ -609,15 +622,18 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
 
 
 
-  
-
-
 
   
 
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -664,7 +680,7 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -715,8 +731,8 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -738,93 +754,56 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
+   <script>
+  Fluid.utils.createScript('https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.28.2/tocbot.min.js', function() {
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !window.tocbot) { return; }
+  var boardCtn = jQuery('#board-ctn');
+  var boardTop = boardCtn.offset().top;
 
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
+  window.tocbot.init(Object.assign({
+  tocSelector : '#toc-body',
+  contentSelector : '.markdown-body',
+  headingSelector : 'h1, h2, h3, h4, h5, h6',
+  linkClass : 'tocbot-link',
+  activeLinkClass : 'tocbot-active-link',
+  listClass : 'tocbot-list',
+  isCollapsedClass: 'tocbot-is-collapsed',
+  collapsibleClass: 'tocbot-is-collapsible',
+  scrollSmooth : true,
+  includeTitleTags: true,
+  includeHtml: true,
+  headingsOffset : -boardTop,
+  }, CONFIG.toc));
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
 
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
+  Fluid.events.registerRefreshCallback(function() {
+  if ('tocbot' in window) {
+  tocbot.refresh();
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !tocbot) {
+  return;
+  }
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
+  }
   });
-</script>
-
+  });
+  </script>
+  
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
 
 
   
@@ -837,17 +816,58 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script defer src="/js/leancloud.js" ></script>
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
 
-  <script  src="/js/local-search.js" ></script>
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
+
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -855,7 +875,7 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

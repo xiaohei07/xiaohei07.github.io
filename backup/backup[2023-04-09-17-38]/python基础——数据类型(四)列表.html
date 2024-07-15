@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="（一）概述： list列表的本质是一种有序的集合，是可变的序列（具有先后顺序），是python最基本的数据结构，。 列表元素的个数没有限制，元素的类型是任意的（只要python支持），不同类型的元素也可以存储在同一列表中。 列表的长度是系统内置的，可以调用len()函数获得列表长度。 本章将会讲述所有列表相关操作，包括创建，索引访问，切片访问，增删改查、以及各类操作。 （二）创建与形式：">
+    <meta name="description" content="¶（一）概述： list列表的本质是一种有序的集合，是可变的序列（具有先后顺序），是python最基本的数据结构，。 列表元素的个数没有限制，元素的类型是任意的（只要python支持），不同类型的元素也可以存储在同一列表中。 列表的长度是系统内置的，可以调用len()函数获得列表长度。 本章将会讲述所有列表相关操作，包括创建，索引访问，切片访问，增删改查、以及各类操作。 ¶（二）创建与形式： py">
 <meta property="og:type" content="website">
 <meta property="og:title" content="python基础——数据类型(四)列表">
-<meta property="og:url" content="http://example.com/backup/backup[2023-04-09-17-38]/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B(%E5%9B%9B)%E5%88%97%E8%A1%A8.html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（一）概述： list列表的本质是一种有序的集合，是可变的序列（具有先后顺序），是python最基本的数据结构，。 列表元素的个数没有限制，元素的类型是任意的（只要python支持），不同类型的元素也可以存储在同一列表中。 列表的长度是系统内置的，可以调用len()函数获得列表长度。 本章将会讲述所有列表相关操作，包括创建，索引访问，切片访问，增删改查、以及各类操作。 （二）创建与形式：">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/backup/backup[2023-04-09-17-38]/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B(%E5%9B%9B)%E5%88%97%E8%A1%A8.html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="¶（一）概述： list列表的本质是一种有序的集合，是可变的序列（具有先后顺序），是python最基本的数据结构，。 列表元素的个数没有限制，元素的类型是任意的（只要python支持），不同类型的元素也可以存储在同一列表中。 列表的长度是系统内置的，可以调用len()函数获得列表长度。 本章将会讲述所有列表相关操作，包括创建，索引访问，切片访问，增删改查、以及各类操作。 ¶（二）创建与形式： py">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-20T09:36:04.000Z">
 <meta property="article:modified_time" content="2023-04-09T09:38:38.199Z">
@@ -32,7 +32,7 @@
   
   
   
-  <title>python基础——数据类型(四)列表 - ZZHの个人博客</title>
+  <title>python基础——数据类型(四)列表 - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -50,35 +50,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -112,7 +112,7 @@
 <div class="header-inner" style="height: 60vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -131,7 +131,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -143,7 +143,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -155,21 +155,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -189,7 +177,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -197,15 +193,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -219,7 +207,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -231,7 +219,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -261,7 +249,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -295,199 +283,251 @@
                 
 
 <article class="page-content">
-  <h3><span id="一概述">（一）概述：</span></h3>
+  <h3 id="一概述"><a href="#一概述" class="header-anchor">¶</a>（一）概述：</h3>
 <p>list列表的本质是一种有序的集合，是可变的序列（具有先后顺序），是python最基本的数据结构，。</p>
 <p>列表元素的个数没有限制，元素的类型是任意的（只要python支持），不同类型的元素也可以存储在同一列表中。</p>
 <p>列表的长度是系统内置的，可以调用len()函数获得列表长度。</p>
 <p>本章将会讲述所有列表相关操作，包括创建，索引访问，切片访问，增删改查、以及各类操作。</p>
-<h3><span id="二创建与形式">（二）创建与形式：</span></h3>
+<h3 id="二创建与形式"><a href="#二创建与形式" class="header-anchor">¶</a>（二）创建与形式：</h3>
 <p>python中用[]方括号表示列表，并用逗号分割其中的元素。</p>
-<p>形式为： <strong><em>列表名 = [元素1,元素2......]</em></strong> /
-<strong><em>列表名=[]</em></strong>（空列表）</p>
+<p>形式为： <em><strong>列表名 = [元素1,元素2......]</strong></em>  / <em><strong>列表名=[]</strong></em>（空列表）</p>
 <figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs clean">list1 = []     #空列表<br>list2 = list() #格式化，空列表<br>list3 = [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">3.14</span>, <span class="hljs-number">6.28</span>, <span class="hljs-string">&quot;aaa&quot;</span>, <span class="hljs-string">&quot;bbb&quot;</span>, [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>], <span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>, <span class="hljs-number">3</span>+<span class="hljs-number">7</span>j, &#123;<span class="hljs-string">&quot;a&quot;</span>:<span class="hljs-number">1</span>&#125;, <span class="hljs-string">&quot;\n&quot;</span>]<br>print(list3)<br>#运算结果:<br># [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">3.14</span>, <span class="hljs-number">6.28</span>, <span class="hljs-string">&#x27;aaa&#x27;</span>, <span class="hljs-string">&#x27;bbb&#x27;</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], <span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>, (<span class="hljs-number">3</span>+<span class="hljs-number">7</span>j), &#123;<span class="hljs-string">&#x27;a&#x27;</span>: <span class="hljs-number">1</span>&#125;, <span class="hljs-string">&#x27;\n&#x27;</span>]<br></code></pre></td></tr></table></figure>
-<h3><span id="三列表的特性">（三）列表的特性：</span></h3>
-<h3><span id="1-访问">1. 访问：</span></h3>
-<ol type="1">
-<li><p>索引访问：</p>
-<p>格式：<strong><em>listname[index]</em></strong>，listname是列表名字，index是索引值。</p>
-<p>index的取值范围为<strong>[0，列表长度-1]</strong></p>
+<h3 id="三列表的特性"><a href="#三列表的特性" class="header-anchor">¶</a>（三）列表的特性：</h3>
+<h3 id="1-访问"><a href="#1-访问" class="header-anchor">¶</a>1. 访问：</h3>
+<ol>
+<li class="lvl-3">
+<p>索引访问：</p>
+<p>格式：<em><strong>listname[index]</strong></em>，listname是列表名字，index是索引值。</p>
+<p>index的取值范围为**[0，列表长度-1]**</p>
 <p>索引值有正负之分。</p>
 <p>正索引值从0开始对应第一个元素，并以此类推。</p>
 <p>负索引值从-1开始对应最后一个元素，是反向访问。</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs routeros">listprint = [1,2,3,4,5,6,7,8,9,10,<span class="hljs-string">&quot;11&quot;</span>,<span class="hljs-string">&quot;12&quot;</span>,<span class="hljs-string">&quot;13&quot;</span>]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range (0,13):<br>    <span class="hljs-built_in">print</span>(listprint[i],<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot;  &quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&quot;</span>)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(0, 13):<br>    <span class="hljs-built_in">print</span>(listprint[-i-1],<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot;  &quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&#x27;</span>)<br><span class="hljs-comment"># 运算结果：</span><br><span class="hljs-comment"># 1  2  3  4  5  6  7  8  9  10  11  12  13</span><br><span class="hljs-comment"># 13  12  11  10  9  8  7  6  5  4  3  2  1</span><br></code></pre></td></tr></table></figure></li>
-<li><p>切片访问：</p>
-<p>格式：<strong><em>listname[start: end:
-step]</em></strong>，listname是列表名字，start是开始索引，默认为1，end是结束索引，默认为列表末尾，step是步长，默认为1。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs routeros">listprint = [1,2,3,4,5,6,7,8,9,10,<span class="hljs-string">&quot;11&quot;</span>,<span class="hljs-string">&quot;12&quot;</span>,<span class="hljs-string">&quot;13&quot;</span>]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range (0,13):<br>    <span class="hljs-built_in">print</span>(listprint[i],<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot;  &quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&quot;</span>)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(0, 13):<br>    <span class="hljs-built_in">print</span>(listprint[-i-1],<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot;  &quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&#x27;</span>)<br><span class="hljs-comment"># 运算结果：</span><br><span class="hljs-comment"># 1  2  3  4  5  6  7  8  9  10  11  12  13</span><br><span class="hljs-comment"># 13  12  11  10  9  8  7  6  5  4  3  2  1</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>切片访问：</p>
+<p>格式：<em><strong>listname[start: end: step]</strong></em>，listname是列表名字，start是开始索引，默认为1，end是结束索引，默认为列表末尾，step是步长，默认为1。</p>
 <p>开始索引到结束索引是一个左闭右开区间，表示截取此部分列表内容进行访问。步长是从开始索引开始每次访问相邻元素的距离。</p>
 <p>三者均可以是负值，也可以不同时为正或负，两个索引为负代表反向索引，步长为负代表从结束索引向开始索引移动。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listprint</span> =<span class="hljs-meta"> [1,2,3,4,5,6,7,8,9,10,&quot;11&quot;,&quot;12&quot;,&quot;13&quot;]</span><br><span class="hljs-attribute">print</span>(listprint[::])     #相当于正向遍历<br><br><span class="hljs-attribute">print</span>(listprint[::-<span class="hljs-number">1</span>])   #相当于反向遍历<br><br><span class="hljs-attribute">print</span>(listprint[<span class="hljs-number">2</span>:<span class="hljs-number">6</span>])    #相对于访问第<span class="hljs-number">3</span>-<span class="hljs-number">6</span>个元素<br><br><span class="hljs-attribute">print</span>(listprint[<span class="hljs-number">6</span>:<span class="hljs-number">2</span>])    #但结束索引小于开始索引，直接结束、<br><br><span class="hljs-attribute">print</span>(listprint[-<span class="hljs-number">2</span>:-<span class="hljs-number">6</span>])  #同上<br><br><span class="hljs-attribute">print</span>(listprint[-<span class="hljs-number">6</span>:-<span class="hljs-number">2</span>])  #相当于访问倒数第<span class="hljs-number">6</span>-<span class="hljs-number">3</span>个元素<br><br><span class="hljs-attribute">print</span>(listprint[<span class="hljs-number">1</span>:<span class="hljs-number">8</span>:<span class="hljs-number">2</span>])  #相当于访问<span class="hljs-number">1</span>，<span class="hljs-number">3</span>，<span class="hljs-number">5</span>，<span class="hljs-number">7</span>索引元素<br><br><span class="hljs-attribute">print</span>(listprint[<span class="hljs-number">8</span>:<span class="hljs-number">1</span>:<span class="hljs-number">2</span>])  #直接结束<br><br><span class="hljs-attribute">print</span>(listprint[<span class="hljs-number">1</span>:<span class="hljs-number">8</span>:-<span class="hljs-number">2</span>]) #要反向访问，开始索引应大于结束索引，否则直接结束<br><br><span class="hljs-attribute">print</span>(listprint[<span class="hljs-number">8</span>:<span class="hljs-number">1</span>:-<span class="hljs-number">2</span>]) #相当于访问<span class="hljs-number">8</span>，<span class="hljs-number">6</span>，<span class="hljs-number">4</span>，<span class="hljs-number">1</span>索引元素<br><br><span class="hljs-attribute">print</span>(listprint[-<span class="hljs-number">1</span>:-<span class="hljs-number">8</span>:<span class="hljs-number">2</span>])#直接结束<br><br><span class="hljs-attribute">print</span>(listprint[-<span class="hljs-number">8</span>:-<span class="hljs-number">1</span>:<span class="hljs-number">2</span>])#相当于访问-<span class="hljs-number">8</span>，-<span class="hljs-number">6</span>，-<span class="hljs-number">4</span>，-<span class="hljs-number">2</span>元素<br><br><span class="hljs-attribute">print</span>(listprint[-<span class="hljs-number">1</span>:-<span class="hljs-number">8</span>:-<span class="hljs-number">2</span>])#相当于访问-<span class="hljs-number">1</span>，-<span class="hljs-number">3</span>，-<span class="hljs-number">5</span>，-<span class="hljs-number">7</span>元素<br><br><span class="hljs-attribute">print</span>(listprint[-<span class="hljs-number">8</span>:-<span class="hljs-number">1</span>:-<span class="hljs-number">2</span>])#直接结束<br><br><span class="hljs-comment"># 运算结果：</span><br><span class="hljs-comment">#1  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, &#x27;11&#x27;, &#x27;12&#x27;, &#x27;13&#x27;]</span><br><span class="hljs-comment">#2  [&#x27;13&#x27;, &#x27;12&#x27;, &#x27;11&#x27;, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]</span><br><span class="hljs-comment">#3  [3, 4, 5, 6]</span><br><span class="hljs-comment">#4  []</span><br><span class="hljs-comment">#5  []</span><br><span class="hljs-comment">#6  [8, 9, 10, &#x27;11&#x27;]</span><br><span class="hljs-comment">#7  [2, 4, 6, 8]</span><br><span class="hljs-comment">#8  []</span><br><span class="hljs-comment">#9  []</span><br><span class="hljs-comment">#10 [9, 7, 5, 3]</span><br><span class="hljs-comment">#11 []</span><br><span class="hljs-comment">#12 [6, 8, 10, &#x27;12&#x27;]</span><br><span class="hljs-comment">#13 [&#x27;13&#x27;, &#x27;11&#x27;, 9, 7]</span><br><span class="hljs-comment">#14 []</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listprint</span> =<span class="hljs-meta"> [1,2,3,4,5,6,7,8,9,10,&quot;11&quot;,&quot;12&quot;,&quot;13&quot;]</span><br><span class="hljs-attribute">print</span>(listprint[::])     #相当于正向遍历<br><br><span class="hljs-attribute">print</span>(listprint[::-<span class="hljs-number">1</span>])   #相当于反向遍历<br><br><span class="hljs-attribute">print</span>(listprint[<span class="hljs-number">2</span>:<span class="hljs-number">6</span>])    #相对于访问第<span class="hljs-number">3</span>-<span class="hljs-number">6</span>个元素<br><br><span class="hljs-attribute">print</span>(listprint[<span class="hljs-number">6</span>:<span class="hljs-number">2</span>])    #但结束索引小于开始索引，直接结束、<br><br><span class="hljs-attribute">print</span>(listprint[-<span class="hljs-number">2</span>:-<span class="hljs-number">6</span>])  #同上<br><br><span class="hljs-attribute">print</span>(listprint[-<span class="hljs-number">6</span>:-<span class="hljs-number">2</span>])  #相当于访问倒数第<span class="hljs-number">6</span>-<span class="hljs-number">3</span>个元素<br><br><span class="hljs-attribute">print</span>(listprint[<span class="hljs-number">1</span>:<span class="hljs-number">8</span>:<span class="hljs-number">2</span>])  #相当于访问<span class="hljs-number">1</span>，<span class="hljs-number">3</span>，<span class="hljs-number">5</span>，<span class="hljs-number">7</span>索引元素<br><br><span class="hljs-attribute">print</span>(listprint[<span class="hljs-number">8</span>:<span class="hljs-number">1</span>:<span class="hljs-number">2</span>])  #直接结束<br><br><span class="hljs-attribute">print</span>(listprint[<span class="hljs-number">1</span>:<span class="hljs-number">8</span>:-<span class="hljs-number">2</span>]) #要反向访问，开始索引应大于结束索引，否则直接结束<br><br><span class="hljs-attribute">print</span>(listprint[<span class="hljs-number">8</span>:<span class="hljs-number">1</span>:-<span class="hljs-number">2</span>]) #相当于访问<span class="hljs-number">8</span>，<span class="hljs-number">6</span>，<span class="hljs-number">4</span>，<span class="hljs-number">1</span>索引元素<br><br><span class="hljs-attribute">print</span>(listprint[-<span class="hljs-number">1</span>:-<span class="hljs-number">8</span>:<span class="hljs-number">2</span>])#直接结束<br><br><span class="hljs-attribute">print</span>(listprint[-<span class="hljs-number">8</span>:-<span class="hljs-number">1</span>:<span class="hljs-number">2</span>])#相当于访问-<span class="hljs-number">8</span>，-<span class="hljs-number">6</span>，-<span class="hljs-number">4</span>，-<span class="hljs-number">2</span>元素<br><br><span class="hljs-attribute">print</span>(listprint[-<span class="hljs-number">1</span>:-<span class="hljs-number">8</span>:-<span class="hljs-number">2</span>])#相当于访问-<span class="hljs-number">1</span>，-<span class="hljs-number">3</span>，-<span class="hljs-number">5</span>，-<span class="hljs-number">7</span>元素<br><br><span class="hljs-attribute">print</span>(listprint[-<span class="hljs-number">8</span>:-<span class="hljs-number">1</span>:-<span class="hljs-number">2</span>])#直接结束<br><br><span class="hljs-comment"># 运算结果：</span><br><span class="hljs-comment">#1  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, &#x27;11&#x27;, &#x27;12&#x27;, &#x27;13&#x27;]</span><br><span class="hljs-comment">#2  [&#x27;13&#x27;, &#x27;12&#x27;, &#x27;11&#x27;, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]</span><br><span class="hljs-comment">#3  [3, 4, 5, 6]</span><br><span class="hljs-comment">#4  []</span><br><span class="hljs-comment">#5  []</span><br><span class="hljs-comment">#6  [8, 9, 10, &#x27;11&#x27;]</span><br><span class="hljs-comment">#7  [2, 4, 6, 8]</span><br><span class="hljs-comment">#8  []</span><br><span class="hljs-comment">#9  []</span><br><span class="hljs-comment">#10 [9, 7, 5, 3]</span><br><span class="hljs-comment">#11 []</span><br><span class="hljs-comment">#12 [6, 8, 10, &#x27;12&#x27;]</span><br><span class="hljs-comment">#13 [&#x27;13&#x27;, &#x27;11&#x27;, 9, 7]</span><br><span class="hljs-comment">#14 []</span><br></code></pre></td></tr></table></figure>
+</li>
 </ol>
-<h4><span id="2-删除列表">2. 删除列表：</span></h4>
+<h4 id="2-删除列表"><a href="#2-删除列表" class="header-anchor">¶</a>2. 删除列表：</h4>
 <p>python自带垃圾回收机制，已创建的列表如不再使用，将会被编译器自动回收，不会产生内存垃圾。</p>
 <p>如果需要可以手动删除，使用del 关键字手动删除列表。</p>
-<p>形式为： <strong><em>del listname</em></strong></p>
+<p>形式为： <em><strong>del listname</strong></em></p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus">a=<span class="hljs-selector-attr">[1,2,3,4,5]</span><br><span class="hljs-selector-tag">del</span> <span class="hljs-selector-tag">a</span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(a)</span></span> #此句无法输出，因为a已经被删除了，a变量处于未定义状态<br></code></pre></td></tr></table></figure>
-<h4><span id="3多维列表">3.多维列表:</span></h4>
+<h4 id="3多维列表"><a href="#3多维列表" class="header-anchor">¶</a>3.多维列表:</h4>
 <p>多维列表是将其他列表当做列表的元素放在一个列表当中，也就是列表的嵌套，一般我们常用的是二位列表，这里以二维列表为例。</p>
 <p>二维列表形式为：</p>
-<p><strong><em>listname = [ sublistname1, sublistname2 , sublistname3,
-....... , sublistnamen ]</em></strong></p>
+<p><em><strong>listname = [ sublistname1, sublistname2 , sublistname3, ....... , sublistnamen ]</strong></em></p>
 <p>访问形式为：</p>
-<p><strong><em>listname[ index1] [index2]</em></strong></p>
+<p><em><strong>listname[ index1] [index2]</strong></em></p>
 <p>index1代表索引中的行，代表二维列表中第index1-1个列表；</p>
 <p>index2代表索引中的列，代表二维列表中第index1-1个列表的第index2-1个元素。</p>
 <p>如果是多维列表，逻辑同一维列表转变为二维列表。</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>]]<br><span class="hljs-attribute">print</span>(a[<span class="hljs-number">0</span>],a[<span class="hljs-number">1</span>],a[<span class="hljs-number">2</span>],sep=<span class="hljs-string">&quot; &quot;</span>,end=<span class="hljs-string">&quot;\n&quot;</span>)<br><span class="hljs-attribute">print</span>(a[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>],a[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>],a[<span class="hljs-number">2</span>][<span class="hljs-number">0</span>],sep=<span class="hljs-string">&quot; &quot;</span>,end=<span class="hljs-string">&quot;\n&quot;</span>)<br><span class="hljs-attribute">print</span>(a[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>],a[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>],a[<span class="hljs-number">2</span>][<span class="hljs-number">1</span>],sep=<span class="hljs-string">&quot; &quot;</span>,end=<span class="hljs-string">&quot;\n&quot;</span>)<br><span class="hljs-attribute">print</span>(a[<span class="hljs-number">0</span>][<span class="hljs-number">2</span>],a[<span class="hljs-number">1</span>][<span class="hljs-number">2</span>],a[<span class="hljs-number">2</span>][<span class="hljs-number">2</span>],sep=<span class="hljs-string">&quot; &quot;</span>,end=<span class="hljs-string">&quot;\n&quot;</span>)<br><span class="hljs-comment"># 输出结果</span><br><span class="hljs-comment"># [1, 2, 3] [4, 5, 6] [7, 8, 9]</span><br><span class="hljs-comment"># 1 4 7</span><br><span class="hljs-comment"># 2 5 8</span><br><span class="hljs-comment"># 3 6 9</span><br></code></pre></td></tr></table></figure>
-<h4><span id="4-列表的主要操作增删改查">4. 列表的主要操作（增删改查）：</span></h4>
-<ul>
-<li><p>修改列表元素：</p>
-<ul>
-<li><p>单个元素的修改：</p>
-<p>形式：<strong><em>list1[index] =
-value</em></strong>，就可以修改列表中对应索引的内容为value。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span> =<span class="hljs-meta"> [1,2,3]</span><br><span class="hljs-attribute">a</span>[<span class="hljs-number">1</span>]=<span class="hljs-number">4</span><br><span class="hljs-attribute">print</span>(a)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [1, 4, 3]</span><br></code></pre></td></tr></table></figure></li>
-<li><p>一组元素的修改：</p>
+<h4 id="4-列表的主要操作增删改查"><a href="#4-列表的主要操作增删改查" class="header-anchor">¶</a>4. 列表的主要操作（增删改查）：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>修改列表元素：</p>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>单个元素的修改：</p>
+<p>形式：<em><strong>list1[index] = value</strong></em>，就可以修改列表中对应索引的内容为value。</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span> =<span class="hljs-meta"> [1,2,3]</span><br><span class="hljs-attribute">a</span>[<span class="hljs-number">1</span>]=<span class="hljs-number">4</span><br><span class="hljs-attribute">print</span>(a)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [1, 4, 3]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>一组元素的修改：</p>
 <p>实际上是使用切片的形式给一组元素赋值。此方法不能给单个数字赋值，也会把字符串自动转换为列表，每个字符对应一个元素。</p>
 <p>如果不指定步长，新赋值的元素个数可以和要修改的列表元素个数不相同（实际上，这种方法可以为列表删除/添加元素）。</p>
 <p>如果指定步长，要求新赋值的元素个数和要修改的列表元素个数相同。</p>
-<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs prolog">listdisplay = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>]<br>print(<span class="hljs-string">&quot;修改前:&quot;</span>,listdisplay)<br>listdisplay[<span class="hljs-number">0</span>: <span class="hljs-number">2</span>] = [<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>]<br>print(<span class="hljs-string">&quot;修改后:&quot;</span>,listdisplay)<br><br># listdisplay = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>]<br># print(<span class="hljs-string">&quot;修改前:&quot;</span>,listdisplay)<br># listdisplay[<span class="hljs-number">0</span>: <span class="hljs-number">0</span>] = <span class="hljs-number">9</span>  #此句话错误，不能用切片方式对数字单独赋值。<br><br>listdisplay = [<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>]<br>print(<span class="hljs-string">&quot;修改前:&quot;</span>,listdisplay)<br>listdisplay[<span class="hljs-number">0</span>: <span class="hljs-number">0</span>] = <span class="hljs-string">&quot;5678&quot;</span>  #此句话错误，不能用切片方式对数字单独赋值。<br>print(<span class="hljs-string">&quot;修改后:&quot;</span>,listdisplay)  #可以用切片方式对数字单独赋值，而且会改变元素个数<br><br>listdisplay = []<br>print(<span class="hljs-string">&quot;修改前:&quot;</span>,listdisplay)<br>listdisplay[<span class="hljs-number">0</span>: <span class="hljs-number">0</span>] = [<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>]  # 对空切片赋值<br>print(<span class="hljs-string">&quot;修改后:&quot;</span>,listdisplay)<br><br>listdisplay = [<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>]<br>print(<span class="hljs-string">&quot;修改前:&quot;</span>,listdisplay)<br>listdisplay[:] = [<span class="hljs-string">&quot;5&quot;</span>,<span class="hljs-string">&quot;6&quot;</span>,<span class="hljs-string">&quot;7&quot;</span>,<span class="hljs-string">&quot;8&quot;</span>,<span class="hljs-string">&quot;9&quot;</span>]  # 新赋值的元素个数与原来的元素个数可以不相同。并且元素个数增加了。<br>print(<span class="hljs-string">&#x27;修改后:&#x27;</span>, listdisplay)<br><br>listdisplay = [<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>]<br>print(<span class="hljs-string">&quot;修改前:&quot;</span>,listdisplay)<br>listdisplay[:] = [<span class="hljs-string">&quot;5&quot;</span>,<span class="hljs-string">&quot;6&quot;</span>,<span class="hljs-string">&quot;7&quot;</span>,<span class="hljs-string">&quot;8&quot;</span>,<span class="hljs-string">&quot;9&quot;</span>]  # 新赋值的元素个数与原来的元素个数可以不相同。并且元素个数减少了。<br>print(<span class="hljs-string">&#x27;修改后:&#x27;</span>, listdisplay)<br><br>listdisplay = [<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>,<span class="hljs-string">&quot;5&quot;</span>,<span class="hljs-string">&quot;6&quot;</span>]<br>print(<span class="hljs-string">&quot;修改前:&quot;</span>,listdisplay)<br>listdisplay[<span class="hljs-number">1</span>: <span class="hljs-number">6</span>: <span class="hljs-number">2</span>] = [<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>, <span class="hljs-string">&#x27;c&#x27;</span>]  # 从索引 <span class="hljs-number">1</span> 开始每隔两个添加一个新元素，到索引 <span class="hljs-number">6</span> ，不包括 索引 <span class="hljs-number">6</span><br>print(<span class="hljs-string">&#x27;修改后:&#x27;</span>, listdisplay)<br><br># 运行结果：<br># 修改前: [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]<br># 修改后: [<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]<br># 修改前: [<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>]<br># 修改后: [<span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-string">&#x27;6&#x27;</span>, <span class="hljs-string">&#x27;7&#x27;</span>, <span class="hljs-string">&#x27;8&#x27;</span>, <span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>]<br># 修改前: []<br># 修改后: [<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>]<br># 修改前: [<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>]<br># 修改后: [<span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-string">&#x27;6&#x27;</span>, <span class="hljs-string">&#x27;7&#x27;</span>, <span class="hljs-string">&#x27;8&#x27;</span>, <span class="hljs-string">&#x27;9&#x27;</span>]<br># 修改前: [<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>]<br># 修改后: [<span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-string">&#x27;6&#x27;</span>, <span class="hljs-string">&#x27;7&#x27;</span>, <span class="hljs-string">&#x27;8&#x27;</span>, <span class="hljs-string">&#x27;9&#x27;</span>]<br># 修改前: [<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>, <span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-string">&#x27;6&#x27;</span>]<br># 修改后: [<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>, <span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-string">&#x27;c&#x27;</span>]<br></code></pre></td></tr></table></figure></li>
-</ul></li>
-<li><p>查询列表元素：</p>
-<ul>
-<li><p>使用 in 和 not in判断元素是否在列表内：</p>
-<p>格式： <strong><em>value in listname</em></strong> /
-<strong><em>value not in listname</em></strong></p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs prolog">listdisplay = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>]<br>print(<span class="hljs-string">&quot;修改前:&quot;</span>,listdisplay)<br>listdisplay[<span class="hljs-number">0</span>: <span class="hljs-number">2</span>] = [<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>]<br>print(<span class="hljs-string">&quot;修改后:&quot;</span>,listdisplay)<br><br># listdisplay = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>]<br># print(<span class="hljs-string">&quot;修改前:&quot;</span>,listdisplay)<br># listdisplay[<span class="hljs-number">0</span>: <span class="hljs-number">0</span>] = <span class="hljs-number">9</span>  #此句话错误，不能用切片方式对数字单独赋值。<br><br>listdisplay = [<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>]<br>print(<span class="hljs-string">&quot;修改前:&quot;</span>,listdisplay)<br>listdisplay[<span class="hljs-number">0</span>: <span class="hljs-number">0</span>] = <span class="hljs-string">&quot;5678&quot;</span>  #此句话错误，不能用切片方式对数字单独赋值。<br>print(<span class="hljs-string">&quot;修改后:&quot;</span>,listdisplay)  #可以用切片方式对数字单独赋值，而且会改变元素个数<br><br>listdisplay = []<br>print(<span class="hljs-string">&quot;修改前:&quot;</span>,listdisplay)<br>listdisplay[<span class="hljs-number">0</span>: <span class="hljs-number">0</span>] = [<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>]  # 对空切片赋值<br>print(<span class="hljs-string">&quot;修改后:&quot;</span>,listdisplay)<br><br>listdisplay = [<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>]<br>print(<span class="hljs-string">&quot;修改前:&quot;</span>,listdisplay)<br>listdisplay[:] = [<span class="hljs-string">&quot;5&quot;</span>,<span class="hljs-string">&quot;6&quot;</span>,<span class="hljs-string">&quot;7&quot;</span>,<span class="hljs-string">&quot;8&quot;</span>,<span class="hljs-string">&quot;9&quot;</span>]  # 新赋值的元素个数与原来的元素个数可以不相同。并且元素个数增加了。<br>print(<span class="hljs-string">&#x27;修改后:&#x27;</span>, listdisplay)<br><br>listdisplay = [<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>]<br>print(<span class="hljs-string">&quot;修改前:&quot;</span>,listdisplay)<br>listdisplay[:] = [<span class="hljs-string">&quot;5&quot;</span>,<span class="hljs-string">&quot;6&quot;</span>,<span class="hljs-string">&quot;7&quot;</span>,<span class="hljs-string">&quot;8&quot;</span>,<span class="hljs-string">&quot;9&quot;</span>]  # 新赋值的元素个数与原来的元素个数可以不相同。并且元素个数减少了。<br>print(<span class="hljs-string">&#x27;修改后:&#x27;</span>, listdisplay)<br><br>listdisplay = [<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>,<span class="hljs-string">&quot;5&quot;</span>,<span class="hljs-string">&quot;6&quot;</span>]<br>print(<span class="hljs-string">&quot;修改前:&quot;</span>,listdisplay)<br>listdisplay[<span class="hljs-number">1</span>: <span class="hljs-number">6</span>: <span class="hljs-number">2</span>] = [<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>, <span class="hljs-string">&#x27;c&#x27;</span>]  # 从索引 <span class="hljs-number">1</span> 开始每隔两个添加一个新元素，到索引 <span class="hljs-number">6</span> ，不包括 索引 <span class="hljs-number">6</span><br>print(<span class="hljs-string">&#x27;修改后:&#x27;</span>, listdisplay)<br><br># 运行结果：<br># 修改前: [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]<br># 修改后: [<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]<br># 修改前: [<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>]<br># 修改后: [<span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-string">&#x27;6&#x27;</span>, <span class="hljs-string">&#x27;7&#x27;</span>, <span class="hljs-string">&#x27;8&#x27;</span>, <span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>]<br># 修改前: []<br># 修改后: [<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>]<br># 修改前: [<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>]<br># 修改后: [<span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-string">&#x27;6&#x27;</span>, <span class="hljs-string">&#x27;7&#x27;</span>, <span class="hljs-string">&#x27;8&#x27;</span>, <span class="hljs-string">&#x27;9&#x27;</span>]<br># 修改前: [<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>]<br># 修改后: [<span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-string">&#x27;6&#x27;</span>, <span class="hljs-string">&#x27;7&#x27;</span>, <span class="hljs-string">&#x27;8&#x27;</span>, <span class="hljs-string">&#x27;9&#x27;</span>]<br># 修改前: [<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>, <span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-string">&#x27;6&#x27;</span>]<br># 修改后: [<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>, <span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-string">&#x27;c&#x27;</span>]<br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>查询列表元素：</p>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>使用 in 和 not in判断元素是否在列表内：</p>
+<p>格式： <em><strong>value in listname</strong></em> / <em><strong>value not in listname</strong></em></p>
 <p>可以判断value值是否在listname中，整体为布尔值。</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs routeros">listdisplay = [1,2,3,4,5,6,7]<br><span class="hljs-built_in">print</span>(1 <span class="hljs-keyword">in</span> listdisplay)<br><span class="hljs-built_in">print</span>(3 <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> listdisplay)<br><span class="hljs-built_in">print</span>(8 <span class="hljs-keyword">in</span> listdisplay)<br><span class="hljs-built_in">print</span>(10 <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> listdisplay)<br><span class="hljs-comment"># 输出结果:</span><br><span class="hljs-comment"># True</span><br><span class="hljs-comment"># False</span><br><span class="hljs-comment"># False</span><br><span class="hljs-comment"># True</span><br></code></pre></td></tr></table></figure>
-<p>此方法配合下面的index方法食用更佳（先判断在不在列表内部，再用index方法，以免index没查到而报错）。</p></li>
-<li><p>使用列表的index()方法查找元素：</p>
-<p>格式：<strong><em>listname.index(obj, start, end)</em></strong></p>
+<p>此方法配合下面的index方法食用更佳（先判断在不在列表内部，再用index方法，以免index没查到而报错）。</p>
+</li>
+<li class="lvl-4">
+<p>使用列表的index()方法查找元素：</p>
+<p>格式：<em><strong>listname.index(obj, start, end)</strong></em></p>
 <p>返回值为查找到的元素第一次在列表中出现的索引值。</p>
 <p>obj表示要查找的元素；</p>
 <p>start表示起始索引，默认为列表初始元素；</p>
 <p>end表示结束索引，默认为列表末尾元素；（检查不包括end元素本身）</p>
 <p>start和end均可不写，此时检索全列表。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span> =<span class="hljs-meta"> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="hljs-attribute">getindex1</span> = listdisplay.index(<span class="hljs-number">3</span>)  # 整个列表中检索元素<span class="hljs-number">3</span>的位置<br><span class="hljs-attribute">print</span>(getindex1)<br><br><span class="hljs-attribute">getindex2</span> = listdisplay.index(<span class="hljs-number">10</span>,<span class="hljs-number">0</span>,len(listdisplay)+<span class="hljs-number">1</span>) #和上面查询范围等价<br><span class="hljs-attribute">print</span>(getindex2)<br><br><span class="hljs-attribute">getindex3</span> = listdisplay.index(<span class="hljs-number">5</span>,<span class="hljs-number">0</span>,<span class="hljs-number">5</span>)  # 检索元素<span class="hljs-number">5</span>在列表索引<span class="hljs-number">0</span>-<span class="hljs-number">4</span>中的位置<br><span class="hljs-attribute">print</span>(getindex3)<br><br><span class="hljs-comment"># getindex4 = listdisplay.index(6, 0, 5)  #检查元素6在列表索引中0-4的位置，但是不在其中，报错</span><br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 9</span><br><span class="hljs-comment"># 4</span><br></code></pre></td></tr></table></figure></li>
-<li><p>使用列表的count()方法查找元素：</p>
-<p>格式：<strong><em>listname.count(obj)</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span> =<span class="hljs-meta"> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="hljs-attribute">getindex1</span> = listdisplay.index(<span class="hljs-number">3</span>)  # 整个列表中检索元素<span class="hljs-number">3</span>的位置<br><span class="hljs-attribute">print</span>(getindex1)<br><br><span class="hljs-attribute">getindex2</span> = listdisplay.index(<span class="hljs-number">10</span>,<span class="hljs-number">0</span>,len(listdisplay)+<span class="hljs-number">1</span>) #和上面查询范围等价<br><span class="hljs-attribute">print</span>(getindex2)<br><br><span class="hljs-attribute">getindex3</span> = listdisplay.index(<span class="hljs-number">5</span>,<span class="hljs-number">0</span>,<span class="hljs-number">5</span>)  # 检索元素<span class="hljs-number">5</span>在列表索引<span class="hljs-number">0</span>-<span class="hljs-number">4</span>中的位置<br><span class="hljs-attribute">print</span>(getindex3)<br><br><span class="hljs-comment"># getindex4 = listdisplay.index(6, 0, 5)  #检查元素6在列表索引中0-4的位置，但是不在其中，报错</span><br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 9</span><br><span class="hljs-comment"># 4</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>使用列表的count()方法查找元素：</p>
+<p>格式：<em><strong>listname.count(obj)</strong></em></p>
 <p>返回值为查找元素在列表中出现的次数，返回0意味着列表中未出现此元素。</p>
 <p>obj为要统计的元素。</p>
 <p>不能指定查询列表的某个范围，只能全局查找。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span> =<span class="hljs-meta"> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 3, 3, 3]</span><br><span class="hljs-attribute">getcount1</span> = listdisplay.count(<span class="hljs-number">3</span>)  # 整个列表中检索元素<span class="hljs-number">3</span>的数量<br><span class="hljs-attribute">print</span>(getcount1)<br><span class="hljs-attribute">getcount2</span> = listdisplay.count(<span class="hljs-number">12</span>)  # 整个列表中检索元素<span class="hljs-number">12</span>的数量,返回<span class="hljs-number">0</span>,即未出现<br><span class="hljs-attribute">print</span>(getcount2)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># 4</span><br><span class="hljs-comment"># 0</span><br><br></code></pre></td></tr></table></figure></li>
-</ul></li>
-<li><p>添加列表元素：</p>
-<ul>
-<li><p>列表的组合（使用"+"符号）：</p>
-<p>格式：<strong><em>listname =
-listname1+listname2+...+listnamen</em></strong></p>
-<p>"+"运算符在操作多个列表时，可以将列表拼接到一起，生成一个新的列表，新列表按所加的顺序生成所有元素。</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span> =<span class="hljs-meta"> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 3, 3, 3]</span><br><span class="hljs-attribute">getcount1</span> = listdisplay.count(<span class="hljs-number">3</span>)  # 整个列表中检索元素<span class="hljs-number">3</span>的数量<br><span class="hljs-attribute">print</span>(getcount1)<br><span class="hljs-attribute">getcount2</span> = listdisplay.count(<span class="hljs-number">12</span>)  # 整个列表中检索元素<span class="hljs-number">12</span>的数量,返回<span class="hljs-number">0</span>,即未出现<br><span class="hljs-attribute">print</span>(getcount2)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># 4</span><br><span class="hljs-comment"># 0</span><br><br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>添加列表元素：</p>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>列表的组合（使用&quot;+&quot;符号）：</p>
+<p>格式：<em><strong>listname = listname1+listname2+...+listnamen</strong></em></p>
+<p>&quot;+&quot;运算符在操作多个列表时，可以将列表拼接到一起，生成一个新的列表，新列表按所加的顺序生成所有元素。</p>
 <p>此方法虽然简便直观，但是执行效率低，不建议经常使用。</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs routeros">listdisplay1 = [1, 2, 3, 4, 5]<br>listdisplay2 = [6, 7, 8, 9, 10]<br>listdisplay3 = listdisplay1+listdisplay2<br><span class="hljs-built_in">print</span>(listdisplay1)<br><span class="hljs-built_in">print</span>(listdisplay2)<br><span class="hljs-built_in">print</span>(listdisplay3)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5]</span><br><span class="hljs-comment"># [6, 7, 8, 9, 10]</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br></code></pre></td></tr></table></figure></li>
-<li><p>列表的重复（使用"*"符号）：</p>
-<p>格式：<strong><em>listname= listname1</em></strong> *****
-<strong><em>n</em></strong></p>
-<p>"*"运算符对单个列表操作时，将被操作列表复制n遍合成一个列表，相当于用当前元素生成长度为原长度n倍的列表。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs routeros">listdisplay1 = [1, 2, 3, 4, 5]<br>listdisplay2 = [6, 7, 8, 9, 10]<br>listdisplay3 = listdisplay1+listdisplay2<br><span class="hljs-built_in">print</span>(listdisplay1)<br><span class="hljs-built_in">print</span>(listdisplay2)<br><span class="hljs-built_in">print</span>(listdisplay3)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5]</span><br><span class="hljs-comment"># [6, 7, 8, 9, 10]</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>列表的重复（使用&quot;*&quot;符号）：</p>
+<p>格式：<em><strong>listname= listname1</strong></em> ***** <em><strong>n</strong></em></p>
+<p>&quot;*&quot;运算符对单个列表操作时，将被操作列表复制n遍合成一个列表，相当于用当前元素生成长度为原长度n倍的列表。</p>
 <p>同样，此方法执行效率不高。</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs routeros">listdisplay = [1, 2, 3, 4, 5]<br>listdisplaynew = listdisplay<span class="hljs-number">*3</span><br><span class="hljs-built_in">print</span>(listdisplay)<br><span class="hljs-built_in">print</span>(listdisplaynew)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5]</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]</span><br></code></pre></td></tr></table></figure></li>
-<li><p>append()方法添加元素：</p>
-<p>格式：<strong><em>listname.append(obj)</em></strong></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs routeros">listdisplay = [1, 2, 3, 4, 5]<br>listdisplaynew = listdisplay<span class="hljs-number">*3</span><br><span class="hljs-built_in">print</span>(listdisplay)<br><span class="hljs-built_in">print</span>(listdisplaynew)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5]</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>append()方法添加元素：</p>
+<p>格式：<em><strong>listname.append(obj)</strong></em></p>
 <p>append()函数添加元素至列表末尾，obj可以是一个列表/元组等等，但是obj会作为一个整体被添加进入listname这个列表中，也就是只添加一个元素，形成一个新列表（但地址不变，只是长度和元素更新了）。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span>=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]<br><span class="hljs-attribute">listdisplay</span>.append(<span class="hljs-number">5</span>)<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.append(<span class="hljs-string">&quot;12345&quot;</span>)<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.append([<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>])<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.append(&#123;<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>,<span class="hljs-number">14</span>,<span class="hljs-number">15</span>&#125;)<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5]</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5, &#x27;12345&#x27;]</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5, &#x27;12345&#x27;, [6, 7, 8, 9, 10]]</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5, &#x27;12345&#x27;, [6, 7, 8, 9, 10], &#123;11, 12, 13, 14, 15&#125;]</span><br></code></pre></td></tr></table></figure></li>
-<li><p>extend()方法添加元素：</p>
-<p>格式：<strong><em>listname.extend(obj)</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span>=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]<br><span class="hljs-attribute">listdisplay</span>.append(<span class="hljs-number">5</span>)<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.append(<span class="hljs-string">&quot;12345&quot;</span>)<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.append([<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>])<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.append(&#123;<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>,<span class="hljs-number">14</span>,<span class="hljs-number">15</span>&#125;)<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5]</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5, &#x27;12345&#x27;]</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5, &#x27;12345&#x27;, [6, 7, 8, 9, 10]]</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5, &#x27;12345&#x27;, [6, 7, 8, 9, 10], &#123;11, 12, 13, 14, 15&#125;]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>extend()方法添加元素：</p>
+<p>格式：<em><strong>listname.extend(obj)</strong></em></p>
 <p>extend()函数添加元素至列表末尾，obj可以是一个字符串/列表/元组，但是不能是单个数据，必须是这种序列形式，哪怕里面只有一个元素。</p>
 <p>extend()函数会将obj包含的所有元素逐个提取加入listname列表中，也就是被添加的数据不止一个，形成一个新列表（地址不变，只是长度和元素更新了）。</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs vim">listdisplay=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]<br>listdisplay.<span class="hljs-built_in">extend</span>([<span class="hljs-number">5</span>])<br><span class="hljs-keyword">print</span>(listdisplay)<br>listdisplay.<span class="hljs-built_in">extend</span>(<span class="hljs-string">&quot;12345&quot;</span>)<br><span class="hljs-keyword">print</span>(listdisplay)<br>listdisplay.<span class="hljs-built_in">extend</span>([<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>])<br><span class="hljs-keyword">print</span>(listdisplay)<br>listdisplay.<span class="hljs-built_in">extend</span>(&#123;<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>,<span class="hljs-number">14</span>,<span class="hljs-number">15</span>&#125;)<br><span class="hljs-keyword">print</span>(listdisplay)<br># # 输出结果：<br># [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]<br># [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>, <span class="hljs-string">&#x27;5&#x27;</span>]<br># [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>, <span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>]<br># [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>, <span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">15</span>]<br></code></pre></td></tr></table></figure></li>
-<li><p>insert()方法添加元素：</p>
-<p>格式：<strong><em>listname.insert(index , obj)</em></strong></p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs vim">listdisplay=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]<br>listdisplay.<span class="hljs-built_in">extend</span>([<span class="hljs-number">5</span>])<br><span class="hljs-keyword">print</span>(listdisplay)<br>listdisplay.<span class="hljs-built_in">extend</span>(<span class="hljs-string">&quot;12345&quot;</span>)<br><span class="hljs-keyword">print</span>(listdisplay)<br>listdisplay.<span class="hljs-built_in">extend</span>([<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>])<br><span class="hljs-keyword">print</span>(listdisplay)<br>listdisplay.<span class="hljs-built_in">extend</span>(&#123;<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>,<span class="hljs-number">14</span>,<span class="hljs-number">15</span>&#125;)<br><span class="hljs-keyword">print</span>(listdisplay)<br># # 输出结果：<br># [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]<br># [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>, <span class="hljs-string">&#x27;5&#x27;</span>]<br># [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>, <span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>]<br># [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;4&#x27;</span>, <span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">15</span>]<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>insert()方法添加元素：</p>
+<p>格式：<em><strong>listname.insert(index , obj)</strong></em></p>
 <p>insert()函数可以在列表的指定位置插入元素，通过index索引值确定插入位置，在此位置的原来的元素默认后移为新插入元素空出空间。</p>
 <p>obj的插入和append的情况相同。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span>=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]<br><span class="hljs-attribute">listdisplay</span>.insert(<span class="hljs-number">1</span>,[<span class="hljs-number">1</span>.<span class="hljs-number">5</span>])<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.insert(<span class="hljs-number">0</span>,<span class="hljs-string">&quot;12345&quot;</span>)<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.insert(<span class="hljs-number">4</span>,[<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>])<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.insert(<span class="hljs-number">3</span>,&#123;<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>,<span class="hljs-number">14</span>,<span class="hljs-number">15</span>&#125;)<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-comment"># # 输出结果：</span><br><span class="hljs-comment"># [1, [1.5], 2, 3, 4]</span><br><span class="hljs-comment"># [&#x27;12345&#x27;, 1, [1.5], 2, 3, 4]</span><br><span class="hljs-comment"># [&#x27;12345&#x27;, 1, [1.5], 2, [6, 7, 8, 9, 10], 3, 4]</span><br><span class="hljs-comment"># [&#x27;12345&#x27;, 1, [1.5], &#123;11, 12, 13, 14, 15&#125;, 2, [6, 7, 8, 9, 10], 3, 4]</span><br></code></pre></td></tr></table></figure></li>
-</ul></li>
-<li><p>删除列表元素：</p>
-<ul>
-<li><p>del关键字进行删除：</p>
-<p>格式：<strong><em>del listname[index]</em></strong></p>
-<p>​ <strong><em>del listname[start : end]</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span>=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]<br><span class="hljs-attribute">listdisplay</span>.insert(<span class="hljs-number">1</span>,[<span class="hljs-number">1</span>.<span class="hljs-number">5</span>])<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.insert(<span class="hljs-number">0</span>,<span class="hljs-string">&quot;12345&quot;</span>)<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.insert(<span class="hljs-number">4</span>,[<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>])<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.insert(<span class="hljs-number">3</span>,&#123;<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>,<span class="hljs-number">14</span>,<span class="hljs-number">15</span>&#125;)<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-comment"># # 输出结果：</span><br><span class="hljs-comment"># [1, [1.5], 2, 3, 4]</span><br><span class="hljs-comment"># [&#x27;12345&#x27;, 1, [1.5], 2, 3, 4]</span><br><span class="hljs-comment"># [&#x27;12345&#x27;, 1, [1.5], 2, [6, 7, 8, 9, 10], 3, 4]</span><br><span class="hljs-comment"># [&#x27;12345&#x27;, 1, [1.5], &#123;11, 12, 13, 14, 15&#125;, 2, [6, 7, 8, 9, 10], 3, 4]</span><br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>删除列表元素：</p>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>del关键字进行删除：</p>
+<p>格式：<em><strong>del listname[index]</strong></em></p>
+<p>​		    <em><strong>del listname[start : end]</strong></em></p>
 <p>del关键字可以根据列表的索引值进行指定值/范围删除，也可以直接删除整个列表（见上），可以指定超过范围的索引值，但不建议。</p>
 <p>删除后列表的长度和元素均进行更新。</p>
 <p>end本身不会被删除。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span>=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>]<br><span class="hljs-attribute">del</span> listdisplay[<span class="hljs-number">1</span>]   #删一个<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">del</span> listdisplay[<span class="hljs-number">1</span>:<span class="hljs-number">5</span>] #删四个<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">del</span> listdisplay[<span class="hljs-number">6</span>:<span class="hljs-number">7</span>] #无效操作<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">del</span> listdisplay[-<span class="hljs-number">2</span>:-<span class="hljs-number">1</span>] #删除倒数第二个<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-comment"># # 输出结果：</span><br><span class="hljs-comment"># [1, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="hljs-comment"># [1, 7, 8, 9, 10]</span><br><span class="hljs-comment"># [1, 7, 8, 9, 10]</span><br><span class="hljs-comment"># [1, 7, 8, 10]</span><br></code></pre></td></tr></table></figure></li>
-<li><p>pop方法进行删除：</p>
-<p>格式：<strong><em>listname.pop(index)</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span>=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>]<br><span class="hljs-attribute">del</span> listdisplay[<span class="hljs-number">1</span>]   #删一个<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">del</span> listdisplay[<span class="hljs-number">1</span>:<span class="hljs-number">5</span>] #删四个<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">del</span> listdisplay[<span class="hljs-number">6</span>:<span class="hljs-number">7</span>] #无效操作<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">del</span> listdisplay[-<span class="hljs-number">2</span>:-<span class="hljs-number">1</span>] #删除倒数第二个<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-comment"># # 输出结果：</span><br><span class="hljs-comment"># [1, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="hljs-comment"># [1, 7, 8, 9, 10]</span><br><span class="hljs-comment"># [1, 7, 8, 9, 10]</span><br><span class="hljs-comment"># [1, 7, 8, 10]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>pop方法进行删除：</p>
+<p>格式：<em><strong>listname.pop(index)</strong></em></p>
 <p>pop()函数同样根据列表的索引值进行指定值删除，不能指定范围，不能整个列表删除。</p>
 <p>index的默认值为列表最后一个元素，其值不能超过范围。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span>=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>]<br><span class="hljs-attribute">listdisplay</span>.pop(<span class="hljs-number">1</span>)   #删位置为<span class="hljs-number">1</span>的元素<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.pop()  #删除最后一个元素<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.pop(-<span class="hljs-number">2</span>) #删除倒数第二个<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [1, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="hljs-comment"># [1, 3, 4, 5, 6, 7, 8, 9]</span><br><span class="hljs-comment"># [1, 3, 4, 5, 6, 7, 9]</span><br></code></pre></td></tr></table></figure></li>
-<li><p>remove方法进行删除：</p>
-<p>格式：<strong><em>listname.remove(element)</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span>=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>]<br><span class="hljs-attribute">listdisplay</span>.pop(<span class="hljs-number">1</span>)   #删位置为<span class="hljs-number">1</span>的元素<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.pop()  #删除最后一个元素<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.pop(-<span class="hljs-number">2</span>) #删除倒数第二个<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [1, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="hljs-comment"># [1, 3, 4, 5, 6, 7, 8, 9]</span><br><span class="hljs-comment"># [1, 3, 4, 5, 6, 7, 9]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>remove方法进行删除：</p>
+<p>格式：<em><strong>listname.remove(element)</strong></em></p>
 <p>remove()函数根据元素本身的值（element）进行删除，且只删除第一个指定元素值，随后结束函数，不会删除其他相同元素。</p>
 <p>被删除元素必须在列表中存在，否则会报错。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span>=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">2</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>]<br><span class="hljs-attribute">listdisplay</span>.remove(<span class="hljs-number">2</span>) #删除第一个值为<span class="hljs-number">2</span>的元素，第二个不删除<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.remove(<span class="hljs-number">2</span>) #删除值为<span class="hljs-number">2</span>的元素<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-comment"># listdisplay.remove(-2)   #-2不存在，报错</span><br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [1, 3, 4, 5, 6, 7, 2, 8, 9, 10]</span><br><span class="hljs-comment"># [1, 3, 4, 5, 6, 7, 8, 9, 10]</span><br></code></pre></td></tr></table></figure></li>
-<li><p>clear方法进行删除：</p>
-<p>格式：<strong><em>listname.clear()</em></strong></p>
-<p>clear()函数删除所有元素，但变量名还存在（区别于上面del
-删除列表操作）。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span>=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">2</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>]<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.clear()<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5, 6, 7, 2, 8, 9, 10]</span><br><span class="hljs-comment"># []</span><br></code></pre></td></tr></table></figure></li>
-</ul></li>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span>=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">2</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>]<br><span class="hljs-attribute">listdisplay</span>.remove(<span class="hljs-number">2</span>) #删除第一个值为<span class="hljs-number">2</span>的元素，第二个不删除<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.remove(<span class="hljs-number">2</span>) #删除值为<span class="hljs-number">2</span>的元素<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-comment"># listdisplay.remove(-2)   #-2不存在，报错</span><br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [1, 3, 4, 5, 6, 7, 2, 8, 9, 10]</span><br><span class="hljs-comment"># [1, 3, 4, 5, 6, 7, 8, 9, 10]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>clear方法进行删除：</p>
+<p>格式：<em><strong>listname.clear()</strong></em></p>
+<p>clear()函数删除所有元素，但变量名还存在（区别于上面del 删除列表操作）。</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span>=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">2</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>]<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">listdisplay</span>.clear()<br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [1, 2, 3, 4, 5, 6, 7, 2, 8, 9, 10]</span><br><span class="hljs-comment"># []</span><br></code></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4><span id="5-列表的其他操作">5. 列表的其他操作：</span></h4>
-<ul>
-<li><p>获得最大，最小值：</p>
-<p>格式：<strong><em>max(listname) / min(listname)</em></strong></p>
+</li>
+</ul>
+<h4 id="5-列表的其他操作"><a href="#5-列表的其他操作" class="header-anchor">¶</a>5. 列表的其他操作：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>获得最大，最小值：</p>
+<p>格式：<em><strong>max(listname) / min(listname)</strong></em></p>
 <p>获得列表最大值/最小值。（只限于可比较类型比较而出的最大/最小值）。</p>
-<figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs monkey">listdisplay = [<span class="hljs-string">&quot;ayz&quot;</span>,<span class="hljs-string">&quot;bcd&quot;</span>,<span class="hljs-string">&quot;jkl&quot;</span>,<span class="hljs-string">&quot;w&quot;</span>]<span class="hljs-meta"> #按首字母的ASCII码比较</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">max</span>(listdisplay))<span class="hljs-meta"></span><br><span class="hljs-meta"># 输出结果：</span><span class="hljs-meta"></span><br><span class="hljs-meta"># w  </span><br></code></pre></td></tr></table></figure></li>
-<li><p>排序：</p>
-<ul>
-<li><p>列表的sort方法排序：</p>
-<p>格式：<strong><em>listname.sort(</em></strong> ***** <strong><em>,
-key=None, reverse=False)</em></strong></p>
+<figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs monkey">listdisplay = [<span class="hljs-string">&quot;ayz&quot;</span>,<span class="hljs-string">&quot;bcd&quot;</span>,<span class="hljs-string">&quot;jkl&quot;</span>,<span class="hljs-string">&quot;w&quot;</span>]<span class="hljs-meta"> #按首字母的ASCII码比较</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">max</span>(listdisplay))<span class="hljs-meta"></span><br><span class="hljs-meta"># 输出结果：</span><span class="hljs-meta"></span><br><span class="hljs-meta"># w  </span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-2">
+<p>排序：</p>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>列表的sort方法排序：</p>
+<p>格式：<em><strong>listname.sort(</strong></em> ***** <em><strong>, key=None, reverse=False)</strong></em></p>
 <p>key：指定带有一个参数的函数，用于从每个序列元素中提取比较键。对应于序列中的每一项的键会被计算一次，然后在整个排序过程中使用，默认值None代表直接对序列项排序，不计算单独的键值。</p>
 <p>reverse：为一个布尔值，默认False，表示升序排序，如果指定了True，则表示降序排序</p>
 <p>sort方法对原列表进行修改。</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs routeros">listdisplay = [8,6,4,6,8,1,9]<br>listdisplay.sort(<span class="hljs-attribute">reverse</span>=<span class="hljs-literal">True</span>)<br><span class="hljs-built_in">print</span>(listdisplay)<br>listdisplay.sort()<br><span class="hljs-built_in">print</span>(listdisplay)<br>listdisplay2= [<span class="hljs-string">&quot;abc&quot;</span>,<span class="hljs-string">&quot;qwe&quot;</span>,<span class="hljs-string">&quot;jkl&quot;</span>,<span class="hljs-string">&quot;zxc&quot;</span>]<br>listdisplay2.sort(<span class="hljs-attribute">reverse</span>=<span class="hljs-literal">False</span>)<br><span class="hljs-built_in">print</span>(listdisplay2)<br><span class="hljs-comment"># 输出结果:</span><br><span class="hljs-comment"># [9, 8, 8, 6, 6, 4, 1]</span><br><span class="hljs-comment"># [1, 4, 6, 6, 8, 8, 9]</span><br><span class="hljs-comment"># [&#x27;abc&#x27;, &#x27;jkl&#x27;, &#x27;qwe&#x27;, &#x27;zxc&#x27;]</span><br></code></pre></td></tr></table></figure></li>
-<li><p>内置的sorted()函数排序：</p>
-<p>格式：<strong><em>sorted(iterable,</em></strong> *****
-<strong><em>,key=None, reverse=False)</em></strong></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs routeros">listdisplay = [8,6,4,6,8,1,9]<br>listdisplay.sort(<span class="hljs-attribute">reverse</span>=<span class="hljs-literal">True</span>)<br><span class="hljs-built_in">print</span>(listdisplay)<br>listdisplay.sort()<br><span class="hljs-built_in">print</span>(listdisplay)<br>listdisplay2= [<span class="hljs-string">&quot;abc&quot;</span>,<span class="hljs-string">&quot;qwe&quot;</span>,<span class="hljs-string">&quot;jkl&quot;</span>,<span class="hljs-string">&quot;zxc&quot;</span>]<br>listdisplay2.sort(<span class="hljs-attribute">reverse</span>=<span class="hljs-literal">False</span>)<br><span class="hljs-built_in">print</span>(listdisplay2)<br><span class="hljs-comment"># 输出结果:</span><br><span class="hljs-comment"># [9, 8, 8, 6, 6, 4, 1]</span><br><span class="hljs-comment"># [1, 4, 6, 6, 8, 8, 9]</span><br><span class="hljs-comment"># [&#x27;abc&#x27;, &#x27;jkl&#x27;, &#x27;qwe&#x27;, &#x27;zxc&#x27;]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>内置的sorted()函数排序：</p>
+<p>格式：<em><strong>sorted(iterable,</strong></em> ***** <em><strong>,key=None, reverse=False)</strong></em></p>
 <p>sorted()函数从一个可迭代对象根据iterable的项返回一个新的排序列表</p>
 <p>key和reverse同上。</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs routeros">listdisplay = [8,6,4,6,8,1,9]<br><span class="hljs-attribute">listdisplay2</span>=sorted(listdisplay,reverse=True)<br><span class="hljs-built_in">print</span>(listdisplay)<br><span class="hljs-built_in">print</span>(listdisplay2)<br><span class="hljs-attribute">listdisplay3</span>=sorted(listdisplay)<br><span class="hljs-built_in">print</span>(listdisplay)<br><span class="hljs-built_in">print</span>(listdisplay3)<br>listdisplay2= [<span class="hljs-string">&quot;abc&quot;</span>,<span class="hljs-string">&quot;qwe&quot;</span>,<span class="hljs-string">&quot;jkl&quot;</span>,<span class="hljs-string">&quot;zxc&quot;</span>]<br><span class="hljs-attribute">listdisplay4</span>=sorted(listdisplay2,reverse=False)<br><span class="hljs-built_in">print</span>(listdisplay4)<br><span class="hljs-comment"># 输出结果:</span><br><span class="hljs-comment"># [8, 6, 4, 6, 8, 1, 9]</span><br><span class="hljs-comment"># [9, 8, 8, 6, 6, 4, 1]</span><br><span class="hljs-comment"># [8, 6, 4, 6, 8, 1, 9]</span><br><span class="hljs-comment"># [1, 4, 6, 6, 8, 8, 9]</span><br><span class="hljs-comment"># [&#x27;abc&#x27;, &#x27;jkl&#x27;, &#x27;qwe&#x27;, &#x27;zxc&#x27;]</span><br></code></pre></td></tr></table></figure></li>
-</ul></li>
-<li><p>复制：</p>
-<ul>
-<li><p>直接赋值：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs routeros">listdisplay = [8,6,4,6,8,1,9]<br><span class="hljs-attribute">listdisplay2</span>=sorted(listdisplay,reverse=True)<br><span class="hljs-built_in">print</span>(listdisplay)<br><span class="hljs-built_in">print</span>(listdisplay2)<br><span class="hljs-attribute">listdisplay3</span>=sorted(listdisplay)<br><span class="hljs-built_in">print</span>(listdisplay)<br><span class="hljs-built_in">print</span>(listdisplay3)<br>listdisplay2= [<span class="hljs-string">&quot;abc&quot;</span>,<span class="hljs-string">&quot;qwe&quot;</span>,<span class="hljs-string">&quot;jkl&quot;</span>,<span class="hljs-string">&quot;zxc&quot;</span>]<br><span class="hljs-attribute">listdisplay4</span>=sorted(listdisplay2,reverse=False)<br><span class="hljs-built_in">print</span>(listdisplay4)<br><span class="hljs-comment"># 输出结果:</span><br><span class="hljs-comment"># [8, 6, 4, 6, 8, 1, 9]</span><br><span class="hljs-comment"># [9, 8, 8, 6, 6, 4, 1]</span><br><span class="hljs-comment"># [8, 6, 4, 6, 8, 1, 9]</span><br><span class="hljs-comment"># [1, 4, 6, 6, 8, 8, 9]</span><br><span class="hljs-comment"># [&#x27;abc&#x27;, &#x27;jkl&#x27;, &#x27;qwe&#x27;, &#x27;zxc&#x27;]</span><br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>复制：</p>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>直接赋值：</p>
 <p>= 直接赋值是非拷贝方法。</p>
 <p>两个列表是等价的，修改其中任何一个列表都会影响另一个列表。</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs routeros">listdisplay = [8,6,4,6,8,1,9]<br>listdisplay1= listdisplay<br>listdisplay1[1]=0<br><span class="hljs-built_in">print</span>(listdisplay)<br><span class="hljs-built_in">print</span>(listdisplay1)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [8, 0, 4, 6, 8, 1, 9]</span><br><span class="hljs-comment"># [8, 0, 4, 6, 8, 1, 9]</span><br></code></pre></td></tr></table></figure></li>
-<li><p>copy方法（浅拷贝）：</p>
-<p>格式：<strong><em>listnewname = listname.copy()</em></strong></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs routeros">listdisplay = [8,6,4,6,8,1,9]<br>listdisplay1= listdisplay<br>listdisplay1[1]=0<br><span class="hljs-built_in">print</span>(listdisplay)<br><span class="hljs-built_in">print</span>(listdisplay1)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [8, 0, 4, 6, 8, 1, 9]</span><br><span class="hljs-comment"># [8, 0, 4, 6, 8, 1, 9]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>copy方法（浅拷贝）：</p>
+<p>格式：<em><strong>listnewname = listname.copy()</strong></em></p>
 <p>python中浅拷贝是指list保存的地址同样被复制过去，而不是创建新的地址复制值过去。</p>
 <p>copy方法对嵌套的list只能对第一层实现深拷贝，而其内嵌套的list仍是浅拷贝。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span> =<span class="hljs-meta"> [1,2,3,[1,2,3]]</span><br><span class="hljs-attribute">listdisplay1</span>=listdisplay.copy()<br><span class="hljs-attribute">listdisplay</span>[<span class="hljs-number">0</span>]=<span class="hljs-number">3</span><br><span class="hljs-attribute">listdisplay</span>[<span class="hljs-number">3</span>][<span class="hljs-number">1</span>]=<span class="hljs-number">3</span><br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">print</span>(listdisplay1)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [3, 2, 3, [1, 3, 3]]</span><br><span class="hljs-comment"># [1, 2, 3, [1, 3, 3]]</span><br></code></pre></td></tr></table></figure></li>
-<li><p>使用切片：</p>
-<p>格式：<strong><em>listnewname= listname[:]</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">listdisplay</span> =<span class="hljs-meta"> [1,2,3,[1,2,3]]</span><br><span class="hljs-attribute">listdisplay1</span>=listdisplay.copy()<br><span class="hljs-attribute">listdisplay</span>[<span class="hljs-number">0</span>]=<span class="hljs-number">3</span><br><span class="hljs-attribute">listdisplay</span>[<span class="hljs-number">3</span>][<span class="hljs-number">1</span>]=<span class="hljs-number">3</span><br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">print</span>(listdisplay1)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [3, 2, 3, [1, 3, 3]]</span><br><span class="hljs-comment"># [1, 2, 3, [1, 3, 3]]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>使用切片：</p>
+<p>格式：<em><strong>listnewname= listname[:]</strong></em></p>
 <p>同为浅拷贝。</p>
-<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs inform7">listdisplay = <span class="hljs-comment">[1,2,3,<span class="hljs-comment">[1,2,3]</span>]</span><br>listdisplay1=listdisplay<span class="hljs-comment">[:]</span><br>listdisplay<span class="hljs-comment">[0]</span>=3<br>listdisplay<span class="hljs-comment">[3]</span><span class="hljs-comment">[1]</span>=3<br>print(listdisplay)<br>print(listdisplay1)<br># 输出结果：<br># <span class="hljs-comment">[3, 2, 3, <span class="hljs-comment">[1, 3, 3]</span>]</span><br># <span class="hljs-comment">[1, 2, 3, <span class="hljs-comment">[1, 3, 3]</span>]</span><br></code></pre></td></tr></table></figure></li>
-<li><p>for循环遍历：</p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs inform7">listdisplay = <span class="hljs-comment">[1,2,3,<span class="hljs-comment">[1,2,3]</span>]</span><br>listdisplay1=listdisplay<span class="hljs-comment">[:]</span><br>listdisplay<span class="hljs-comment">[0]</span>=3<br>listdisplay<span class="hljs-comment">[3]</span><span class="hljs-comment">[1]</span>=3<br>print(listdisplay)<br>print(listdisplay1)<br># 输出结果：<br># <span class="hljs-comment">[3, 2, 3, <span class="hljs-comment">[1, 3, 3]</span>]</span><br># <span class="hljs-comment">[1, 2, 3, <span class="hljs-comment">[1, 3, 3]</span>]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>for循环遍历：</p>
 <p>无具体格式，是一个操作流程。</p>
 <p>同为浅拷贝。</p>
-<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs inform7">listdisplay = <span class="hljs-comment">[1,2,3,<span class="hljs-comment">[1,2,3]</span>]</span><br>listdisplay1=<span class="hljs-comment">[]</span><br>for i in range(len(listdisplay)):<br>    listdisplay1.append(listdisplay<span class="hljs-comment">[i]</span>)<br>listdisplay<span class="hljs-comment">[0]</span>=3<br>listdisplay<span class="hljs-comment">[3]</span><span class="hljs-comment">[1]</span>=3<br>print(listdisplay)<br>print(listdisplay1)<br># 输出结果：<br># <span class="hljs-comment">[3, 2, 3, <span class="hljs-comment">[1, 3, 3]</span>]</span><br># <span class="hljs-comment">[1, 2, 3, <span class="hljs-comment">[1, 3, 3]</span>]</span><br></code></pre></td></tr></table></figure></li>
-<li><p>列表生成式：</p>
-<p>格式：<strong><em>listnewname = [i for i in listname
-]</em></strong></p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs inform7">listdisplay = <span class="hljs-comment">[1,2,3,<span class="hljs-comment">[1,2,3]</span>]</span><br>listdisplay1=<span class="hljs-comment">[]</span><br>for i in range(len(listdisplay)):<br>    listdisplay1.append(listdisplay<span class="hljs-comment">[i]</span>)<br>listdisplay<span class="hljs-comment">[0]</span>=3<br>listdisplay<span class="hljs-comment">[3]</span><span class="hljs-comment">[1]</span>=3<br>print(listdisplay)<br>print(listdisplay1)<br># 输出结果：<br># <span class="hljs-comment">[3, 2, 3, <span class="hljs-comment">[1, 3, 3]</span>]</span><br># <span class="hljs-comment">[1, 2, 3, <span class="hljs-comment">[1, 3, 3]</span>]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>列表生成式：</p>
+<p>格式：<em><strong>listnewname = [i for i in listname ]</strong></em></p>
 <p>同为浅拷贝。</p>
-<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs inform7">listdisplay = <span class="hljs-comment">[1,2,3,<span class="hljs-comment">[1,2,3]</span>]</span><br>listdisplay1=<span class="hljs-comment">[i for i in listdisplay]</span><br>listdisplay<span class="hljs-comment">[0]</span>=3<br>listdisplay<span class="hljs-comment">[3]</span><span class="hljs-comment">[1]</span>=3<br>print(listdisplay)<br>print(listdisplay1)<br># 输出结果：<br># <span class="hljs-comment">[3, 2, 3, <span class="hljs-comment">[1, 3, 3]</span>]</span><br># <span class="hljs-comment">[1, 2, 3, <span class="hljs-comment">[1, 3, 3]</span>]</span><br></code></pre></td></tr></table></figure></li>
-<li><p>deepcopy方法：</p>
-<p>格式：<strong><em>listnewname=
-copy.deepcopy(listname)</em></strong></p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs inform7">listdisplay = <span class="hljs-comment">[1,2,3,<span class="hljs-comment">[1,2,3]</span>]</span><br>listdisplay1=<span class="hljs-comment">[i for i in listdisplay]</span><br>listdisplay<span class="hljs-comment">[0]</span>=3<br>listdisplay<span class="hljs-comment">[3]</span><span class="hljs-comment">[1]</span>=3<br>print(listdisplay)<br>print(listdisplay1)<br># 输出结果：<br># <span class="hljs-comment">[3, 2, 3, <span class="hljs-comment">[1, 3, 3]</span>]</span><br># <span class="hljs-comment">[1, 2, 3, <span class="hljs-comment">[1, 3, 3]</span>]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>deepcopy方法：</p>
+<p>格式：<em><strong>listnewname= copy.deepcopy(listname)</strong></em></p>
 <p>是深拷贝，原来的列表和新列表完全无关。</p>
 <p>需要import copy库</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">import</span> copy<br><span class="hljs-attribute">listdisplay</span> =<span class="hljs-meta"> [1,2,3,[1,2,3]]</span><br><span class="hljs-attribute">listdisplay1</span> = copy.deepcopy(listdisplay)<br><span class="hljs-attribute">listdisplay</span>[<span class="hljs-number">0</span>]=<span class="hljs-number">3</span><br><span class="hljs-attribute">listdisplay</span>[<span class="hljs-number">3</span>][<span class="hljs-number">1</span>]=<span class="hljs-number">3</span><br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">print</span>(listdisplay1)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [3, 2, 3, [1, 3, 3]]</span><br><span class="hljs-comment"># [1, 2, 3, [1, 2, 3]] #唯一未随之改变的</span><br></code></pre></td></tr></table></figure></li>
-</ul></li>
-<li><p>翻转：</p>
-<p>格式： <strong><em>listname.reverse()</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">import</span> copy<br><span class="hljs-attribute">listdisplay</span> =<span class="hljs-meta"> [1,2,3,[1,2,3]]</span><br><span class="hljs-attribute">listdisplay1</span> = copy.deepcopy(listdisplay)<br><span class="hljs-attribute">listdisplay</span>[<span class="hljs-number">0</span>]=<span class="hljs-number">3</span><br><span class="hljs-attribute">listdisplay</span>[<span class="hljs-number">3</span>][<span class="hljs-number">1</span>]=<span class="hljs-number">3</span><br><span class="hljs-attribute">print</span>(listdisplay)<br><span class="hljs-attribute">print</span>(listdisplay1)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># [3, 2, 3, [1, 3, 3]]</span><br><span class="hljs-comment"># [1, 2, 3, [1, 2, 3]] #唯一未随之改变的</span><br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>翻转：</p>
+<p>格式： <em><strong>listname.reverse()</strong></em></p>
 <p>将列表元素倒叙，对原列表操作，不返回新列表。</p>
 <p>不会翻转里面的内嵌套列表/字符串/元组，只是更换元素位置。</p>
-<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs axapta">listdisplay = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]]<br>listdisplay.<span class="hljs-keyword">reverse</span>()<br><span class="hljs-keyword">print</span>((listdisplay))<br><span class="hljs-meta"># 输出结果：</span><br><span class="hljs-meta"># [[1, 2, 3], 3, 2, 1]</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs axapta">listdisplay = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]]<br>listdisplay.<span class="hljs-keyword">reverse</span>()<br><span class="hljs-keyword">print</span>((listdisplay))<br><span class="hljs-meta"># 输出结果：</span><br><span class="hljs-meta"># [[1, 2, 3], 3, 2, 1]</span><br></code></pre></td></tr></table></figure>
+</li>
 </ul>
 
 
@@ -541,7 +581,7 @@ copy.deepcopy(listname)</em></strong></p>
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -592,8 +632,8 @@ copy.deepcopy(listname)</em></strong></p>
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -615,23 +655,21 @@ copy.deepcopy(listname)</em></strong></p>
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  <script defer src="/js/leancloud.js" ></script>
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -639,7 +677,7 @@ copy.deepcopy(listname)</em></strong></p>
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

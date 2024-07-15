@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="（四）函数式编程 Python是面向对象的程序设计语言，也是面向过程的程序语言,同时也支持函数式编程。 Pyhon标准库functools 提供了若干关于函数的函数，提供了Haskell和Standard ML中的函数式程序设计工具。 Python中的函数与其他数据类型处于平等地位，因此函数可以赋值给变量，可以作为参数传入其他函数，存储在其他数据结构中，或者作为函数的返回值。 1. 作">
+    <meta name="description" content="¶（四）函数式编程 Python是面向对象的程序设计语言，也是面向过程的程序语言,同时也支持函数式编程。 Pyhon标准库functools 提供了若干关于函数的函数，提供了Haskell和Standard ML中的函数式程序设计工具。 Python中的函数与其他数据类型处于平等地位，因此函数可以赋值给变量，可以作为参数传入其他函数，存储在其他数据结构中，或者作为函数的返回值。 ¶1. 作为对象的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python进阶——函数(三)">
-<meta property="og:url" content="http://example.com/2023/07/12/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%B8%89)/index.html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（四）函数式编程 Python是面向对象的程序设计语言，也是面向过程的程序语言,同时也支持函数式编程。 Pyhon标准库functools 提供了若干关于函数的函数，提供了Haskell和Standard ML中的函数式程序设计工具。 Python中的函数与其他数据类型处于平等地位，因此函数可以赋值给变量，可以作为参数传入其他函数，存储在其他数据结构中，或者作为函数的返回值。 1. 作">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/2023/07/12/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%B8%89)/index.html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="¶（四）函数式编程 Python是面向对象的程序设计语言，也是面向过程的程序语言,同时也支持函数式编程。 Pyhon标准库functools 提供了若干关于函数的函数，提供了Haskell和Standard ML中的函数式程序设计工具。 Python中的函数与其他数据类型处于平等地位，因此函数可以赋值给变量，可以作为参数传入其他函数，存储在其他数据结构中，或者作为函数的返回值。 ¶1. 作为对象的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-12T09:40:29.000Z">
 <meta property="article:modified_time" content="2023-07-16T14:21:39.311Z">
@@ -32,7 +32,7 @@
   
   
   
-  <title>python进阶——函数(三) - ZZHの个人博客</title>
+  <title>python进阶——函数(三) - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -56,35 +56,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -118,7 +118,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -137,7 +137,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -149,7 +149,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -161,21 +161,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -195,7 +183,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -203,15 +199,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -225,7 +213,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -237,7 +225,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -267,7 +255,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -280,6 +268,11 @@
         
           
   <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        07xiaohei
+      </span>
     
     
       <span class="post-meta">
@@ -307,7 +300,7 @@
         
         
         
-          49 分钟
+          15 分钟
         
       </span>
     
@@ -355,16 +348,22 @@
             <!-- SEO header -->
             <h1 style="display: none">python进阶——函数(三)</h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：1 年前
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
-                <h3><span id="四函数式编程">（四）函数式编程</span></h3>
+                <h3 id="四函数式编程"><a href="#四函数式编程" class="header-anchor">¶</a>（四）函数式编程</h3>
 <p>Python是面向对象的程序设计语言，也是面向过程的程序语言,同时也支持函数式编程。</p>
-<p>Pyhon标准库functools
-提供了若干关于函数的函数，提供了Haskell和Standard
-ML中的函数式程序设计工具。</p>
+<p>Pyhon标准库functools 提供了若干关于函数的函数，提供了Haskell和Standard ML中的函数式程序设计工具。</p>
 <p>Python中的函数与其他数据类型处于平等地位，因此函数可以赋值给变量，可以作为参数传入其他函数，存储在其他数据结构中，或者作为函数的返回值。</p>
-<h4><span id="1-作为对象的函数">1. 作为对象的函数：</span></h4>
+<h4 id="1-作为对象的函数"><a href="#1-作为对象的函数" class="header-anchor">¶</a>1. 作为对象的函数：</h4>
 <p>函数在Python中是作为对象存在的，故函数对象可以赋值给变量，然后调用该变量。</p>
 <figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-variable">def</span> <span class="hljs-function"><span class="hljs-title">printself</span>():</span><br><span class="hljs-function">    <span class="hljs-title">print</span>(<span class="hljs-string">&quot;123321&quot;</span>)</span><br><span class="hljs-variable">copyfun</span> = <span class="hljs-variable">printself</span><br><span class="hljs-function"><span class="hljs-title">copyfun</span>()</span><br></code></pre></td></tr></table></figure>
 <p>数据结构内的函数：函数作为对象，也可以存储数据结构内部。</p>
@@ -374,61 +373,57 @@ ML中的函数式程序设计工具。</p>
 <p>函数名实际上也是变量，可以让函数名指向其他对象，但是这样会导致原有的函数无法使用。</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">def <span class="hljs-built_in">add</span>(<span class="hljs-keyword">a</span>,b):<br>    <span class="hljs-literal">return</span> <span class="hljs-keyword">a</span>+b<br><span class="hljs-built_in">add</span> =<span class="hljs-number">10</span><br>print(<span class="hljs-built_in">add</span>)<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># 10</span><br></code></pre></td></tr></table></figure>
 <p>嵌套函数、Lambda表达式也是函数式编程的一部分，详见之前的博客，下面介绍更进一步的内容。</p>
-<h4><span id="2-map-filter-和-reduce">2. Map、Filter 和 Reduce:</span></h4>
-<h5><span id="1-map函数">(1) map函数：</span></h5>
-<p>map
-函数的功能是对可迭代对象中的每个元素都调用指定的函数，并返回一个map对象的iterator迭代器（可以转化为list对象）。</p>
-<p>语法格式：<strong><em>map(function, iterable)</em></strong></p>
-<p>function参数表示传入的函数，可以是内置函数、自定义函数或者 lambda
-匿名函数，iterable表示可迭代对象，可以是列表、元组等，允许一到多个。</p>
+<h4 id="2-map-filter-和-reduce"><a href="#2-map-filter-和-reduce" class="header-anchor">¶</a>2. Map、Filter 和 Reduce:</h4>
+<h5 id="1-map函数"><a href="#1-map函数" class="header-anchor">¶</a>(1) map函数：</h5>
+<p>map 函数的功能是对可迭代对象中的每个元素都调用指定的函数，并返回一个map对象的iterator迭代器（可以转化为list对象）。</p>
+<p>语法格式：<em><strong>map(function, iterable)</strong></em></p>
+<p>function参数表示传入的函数，可以是内置函数、自定义函数或者 lambda 匿名函数，iterable表示可迭代对象，可以是列表、元组等，允许一到多个。</p>
 <p>一般用于对某个集合对象的全部值执行某个特定操作。</p>
 <p>map() 函数由 C 语言实现，执行效率高。</p>
 <p>例子如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">list_use = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>]<br>list_new = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-keyword">lambda</span> x:x*<span class="hljs-number">2</span>, list_use))<br><span class="hljs-built_in">print</span>(list_new)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># [2, 4, 6, 8, 10, 12, 14, 16, 18]</span><br></code></pre></td></tr></table></figure>
-<h5><span id="2-fiter函数">(2) fiter函数：</span></h5>
-<p>filter函数的功能是对传入的可迭代对象中的每个元素，都进行函数判断，并返回True或者False，最后将返回
-True 的元素组成一个新的可遍历的集合对象，返回其迭代器。</p>
-<p>语法格式：<strong><em>filter(function, iterable)</em></strong></p>
-<p>function参数表示传入的函数，可以是内置函数、自定义函数或者 lambda
-匿名函数，iterable表示可迭代对象，可以是列表、元组等，允许一到多个。</p>
+<h5 id="2-fiter函数"><a href="#2-fiter函数" class="header-anchor">¶</a>(2) fiter函数：</h5>
+<p>filter函数的功能是对传入的可迭代对象中的每个元素，都进行函数判断，并返回True或者False，最后将返回 True 的元素组成一个新的可遍历的集合对象，返回其迭代器。</p>
+<p>语法格式：<em><strong>filter(function, iterable)</strong></em></p>
+<p>function参数表示传入的函数，可以是内置函数、自定义函数或者 lambda 匿名函数，iterable表示可迭代对象，可以是列表、元组等，允许一到多个。</p>
 <p>一般用于筛除可迭代对象的不想要的项。</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs routeros">list_use = [1,2,3,4,5,6,7,8,9]<br>list_new = list(filter(lambda x:x%<span class="hljs-attribute">2</span>==0, list_use))<br><span class="hljs-built_in">print</span>(list_new)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># [2, 4, 6, 8]</span><br></code></pre></td></tr></table></figure>
-<h5><span id="3redeuce函数">（3）redeuce函数：</span></h5>
+<h5 id="3redeuce函数"><a href="#3redeuce函数" class="header-anchor">¶</a>（3）redeuce函数：</h5>
 <p>reduce() 函数通常用来对一个集合做一些累积操作。</p>
-<p>语法格式：<strong><em>reduce(function, iterable)</em></strong></p>
-<p>function规定必须传入一个包含 2 个参数的函数；iterable
-表示可迭代对象，可以是列表、元组等，允许一到多个。</p>
-<p>reduce() 函数在Python 3.x
-中已经从内置函数中被移除，在functools模块使用
-，需要导入functools模块。</p>
+<p>语法格式：<em><strong>reduce(function, iterable)</strong></em></p>
+<p>function规定必须传入一个包含 2 个参数的函数；iterable 表示可迭代对象，可以是列表、元组等，允许一到多个。</p>
+<p>reduce() 函数在Python 3.x 中已经从内置函数中被移除，在functools模块使用 ，需要导入functools模块。</p>
 <p>reduce 函数一般用于总结或者概述数据集。</p>
 <figure class="highlight golo"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs golo"><span class="hljs-keyword">import</span> functools<br>list_use = [<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>]<br>list_new = functools.<span class="hljs-keyword">reduce</span>(lambda x,y:x+y, list_use)<br><span class="hljs-keyword">print</span>(list_new)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 25</span><br></code></pre></td></tr></table></figure>
-<h4><span id="3-函数装饰器">3. 函数装饰器：</span></h4>
-<h5><span id="1闭包">（1）闭包：</span></h5>
+<h4 id="3-函数装饰器"><a href="#3-函数装饰器" class="header-anchor">¶</a>3. 函数装饰器：</h4>
+<h5 id="1闭包"><a href="#1闭包" class="header-anchor">¶</a>（1）闭包：</h5>
 <p>是指在函数中嵌套其他函数时引用外部函数变量，即在一个内部函数中，对外部作用域的变量进行引用，内部函数即为闭包。</p>
 <p>一般情况下，内部函数是外部函数的返回值。</p>
 <p>闭包无法修改外部函数的局部变量。</p>
 <p>举例：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">add_two</span>(<span class="hljs-params">a</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">add_new</span>(<span class="hljs-params">b</span>):<br>        <span class="hljs-keyword">return</span> a+b<br>    <span class="hljs-keyword">return</span> add_new<br><span class="hljs-built_in">print</span>(add_two(<span class="hljs-number">2</span>)(<span class="hljs-number">3</span>))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 5</span><br></code></pre></td></tr></table></figure>
-<h5><span id="2装饰器">（2）装饰器：</span></h5>
+<h5 id="2装饰器"><a href="#2装饰器" class="header-anchor">¶</a>（2）装饰器：</h5>
 <p>是闭包的一个应用，能够使得代码更简短。</p>
 <p>装饰器是用于拓展原函数功能的一种函数，不需要修改原函数的内容和调用。</p>
 <p>装饰器常用于授权、日志等行为。</p>
 <p>语法格式：</p>
 <p><strong>def 装饰器函数名(唯一形参):</strong></p>
-<p>​ <strong>函数体</strong></p>
-<p><strong><span class="citation" data-cites="装饰器函数名">@装饰器函数名</span></strong></p>
+<p>​	<strong>函数体</strong></p>
+<p><strong>@装饰器函数名</strong></p>
 <p><strong>def 被装饰的函数名(形参列表):</strong></p>
-<p>​ <strong>函数体</strong></p>
+<p>​	<strong>函数体</strong></p>
 <p>使用时直接调用被装饰的函数名即可。</p>
 <p>装饰器函数的形参需要一个函数作为参数传入，同时需要在内部代码块执行该函数，以保证被装饰函数的正确执行。</p>
 <p>传参时和带参数时需要装饰器函数嵌套函数，后面进行介绍。</p>
-<p>Python内置了3种函数装饰器，分别是＠staticmethod、＠classmethod
-和@property，我们也可以自己定义函数装饰器。</p>
+<p>Python内置了3种函数装饰器，分别是＠staticmethod、＠classmethod 和@property，我们也可以自己定义函数装饰器。</p>
 <p><strong>装饰器完成的内容：</strong></p>
-<ul>
-<li>将被装饰的函数作为参数传给装饰器函数（后面-&gt;前面）。</li>
-<li>将被装饰的函数的返回值替换成装饰器函数的返回值（前面-&gt;后面）。</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>将被装饰的函数作为参数传给装饰器函数（后面-&gt;前面）。</p>
+</li>
+<li class="lvl-2">
+<p>将被装饰的函数的返回值替换成装饰器函数的返回值（前面-&gt;后面）。</p>
+</li>
 </ul>
 <p>实际上，就是把装饰器函数的功能按一定逻辑顺序加入到被装饰的函数当中，使得原函数不需要修改。</p>
 <p>因此，不用@函数也可以完成装饰器的功能，只是相对而言阅读比较困难。</p>
@@ -436,17 +431,16 @@ True 的元素组成一个新的可遍历的集合对象，返回其迭代器。
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs routeros">def use_decorator_fun(used_for_decorator_fun):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;添加新功能的位置，在被装饰的函数执行之前执行&quot;</span>)<br>    used_for_decorator_fun()<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;添加新功能的位置，在被装饰的函数执行之后执行&quot;</span>)<br>    return <span class="hljs-literal">True</span><br>@use_decorator_fun<br>def used_for_decorator_fun():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;执行正常功能中&quot;</span>)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(1,11,2):<br>        <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&#x27;,&#x27;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\n执行完毕&quot;</span>)<br><br>result = used_for_decorator_fun<br><span class="hljs-keyword">if</span> result:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;执行成功&quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 添加新功能的位置，在被装饰的函数执行之前执行</span><br><span class="hljs-comment"># 执行正常功能中</span><br><span class="hljs-comment"># 1,3,5,7,9,</span><br><span class="hljs-comment"># 执行完毕</span><br><span class="hljs-comment"># 添加新功能的位置，在被装饰的函数执行之后执行</span><br><span class="hljs-comment"># 执行成功</span><br><br></code></pre></td></tr></table></figure>
 <p>如果不用@，可以是以下形式来表示：</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs routeros">def use_decorator_fun(used_for_decorator_fun):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;添加新功能的位置，在被装饰的函数执行之前执行&quot;</span>)<br>    used_for_decorator_fun()<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;添加新功能的位置，在被装饰的函数执行之后执行&quot;</span>)<br>    return <span class="hljs-literal">True</span><br>def used_for_decorator_fun():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;执行正常功能中&quot;</span>)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(1,11,2):<br>        <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&#x27;,&#x27;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\n执行完毕&quot;</span>)<br>used_for_decorator_fun =use_decorator_fun(used_for_decorator_fun)<br>result = used_for_decorator_fun<br><span class="hljs-keyword">if</span> result:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;执行成功&quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 添加新功能的位置，在被装饰的函数执行之前执行</span><br><span class="hljs-comment"># 执行正常功能中</span><br><span class="hljs-comment"># 1,3,5,7,9,</span><br><span class="hljs-comment"># 执行完毕</span><br><span class="hljs-comment"># 添加新功能的位置，在被装饰的函数执行之后执行</span><br><span class="hljs-comment"># 执行成功</span><br></code></pre></td></tr></table></figure>
-<p>可以看到，<span class="citation" data-cites="use_decorator_fun只是换成了used_for_decorator_fun">@use_decorator_fun只是换成了used_for_decorator_fun</span>
-=use_decorator_fun(used_for_decorator_fun)，不过此句的位置换到了两个函数定义之后。</p>
+<p>可以看到，@use_decorator_fun只是换成了used_for_decorator_fun =use_decorator_fun(used_for_decorator_fun)，不过此句的位置换到了两个函数定义之后。</p>
 <p>这就是装饰器的实质。</p>
-<h5><span id="3装饰器传参">（3）装饰器传参：</span></h5>
+<h5 id="3装饰器传参"><a href="#3装饰器传参" class="header-anchor">¶</a>（3）装饰器传参：</h5>
 <p>被装饰的函数带有参数时，需要对装饰器函数进行处理，以便前者为后者传递参数。</p>
 <p>此时，需要为装饰器函数增加一个嵌套函数，嵌套的内部函数带有形参列表，如果其接收参数数量确定可以直接指定好形参列表数量，但多数时候参数数量是不固定的，此时使用前文已讲述的过的两个参数*args和**kwargs来完成接收任意数量参数的要求。</p>
 <p>例子如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">fun_use_add</span>(<span class="hljs-params">fun_use</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">fun_use_add_fact</span>(<span class="hljs-params">a</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;添加新功能的位置，在被装饰的函数执行之前执行&quot;</span>)<br>        fun_use(a)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;添加新功能的位置，在被装饰的函数执行之后执行&quot;</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">return</span> fun_use_add_fact<br><span class="hljs-meta">@fun_use_add</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">fun_use</span>(<span class="hljs-params">a</span>):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;执行正常功能中&quot;</span>)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,a,<span class="hljs-number">2</span>):<br>        <span class="hljs-built_in">print</span>(i,end=<span class="hljs-string">&#x27;,&#x27;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\n执行完毕&quot;</span>)<br>result = fun_use(<span class="hljs-number">11</span>)<br><span class="hljs-keyword">if</span> result:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;执行成功&quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 添加新功能的位置，在被装饰的函数执行之前执行</span><br><span class="hljs-comment"># 执行正常功能中</span><br><span class="hljs-comment"># 1,3,5,7,9,</span><br><span class="hljs-comment"># 执行完毕</span><br><span class="hljs-comment"># 添加新功能的位置，在被装饰的函数执行之后执行</span><br><span class="hljs-comment"># 执行成功</span><br></code></pre></td></tr></table></figure>
 <p>此时完成了一个参数的传递，如果参数不固定，可以改为：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">fun_use_add</span>(<span class="hljs-params">fun_use</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">fun_use_add_fact</span>(<span class="hljs-params">*args,**kwargs</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;添加新功能的位置，在被装饰的函数执行之前执行&quot;</span>)<br>        fun_use(*args,**kwargs)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;添加新功能的位置，在被装饰的函数执行之后执行&quot;</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">return</span> fun_use_add_fact<br><span class="hljs-meta">@fun_use_add</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">fun_use</span>(<span class="hljs-params">a</span>):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;执行正常功能中&quot;</span>)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,a,<span class="hljs-number">2</span>):<br>        <span class="hljs-built_in">print</span>(i,end=<span class="hljs-string">&#x27;,&#x27;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\n执行完毕&quot;</span>)<br>result = fun_use(<span class="hljs-number">11</span>)<br><span class="hljs-keyword">if</span> result:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;执行成功&quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 添加新功能的位置，在被装饰的函数执行之前执行</span><br><span class="hljs-comment"># 执行正常功能中</span><br><span class="hljs-comment"># 1,3,5,7,9,</span><br><span class="hljs-comment"># 执行完毕</span><br><span class="hljs-comment"># 添加新功能的位置，在被装饰的函数执行之后执行</span><br><span class="hljs-comment"># 执行成功</span><br></code></pre></td></tr></table></figure>
-<h5><span id="4带参数的装饰器">（4）带参数的装饰器：</span></h5>
+<h5 id="4带参数的装饰器"><a href="#4带参数的装饰器" class="header-anchor">¶</a>（4）带参数的装饰器：</h5>
 <p>装饰器除了接收原函数任意类型和数量的参数，还可以接收自己定义的参数。</p>
 <p>此时，需要在装饰器函数外部额外嵌套一层函数，该层负责接收自己定义的参数，内部代码块的对应return也要添加。</p>
 <p>同时，在@处需要在函数名后增加要传入的实参，注意，此处必须传入对应参数。</p>
@@ -470,7 +464,7 @@ True 的元素组成一个新的可遍历的集合对象，返回其迭代器。
     
       <span class="category-chain">
         
-  <a href="/categories/python-study/" class="category-chain-item">python_study</a>
+  <a href="/xiaohei07/xiaohei07.github.io/categories/python-study/" class="category-chain-item">python_study</a>
   
   
 
@@ -485,9 +479,9 @@ True 的元素组成一个新的可遍历的集合对象，返回其迭代器。
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
       
-        <a href="/tags/python/">#python</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/python/">#python</a>
       
     </div>
   
@@ -500,7 +494,7 @@ True 的元素组成一个新的可遍历的集合对象，返回其迭代器。
   <div class="license-box my-3">
     <div class="license-title">
       <div>python进阶——函数(三)</div>
-      <div>http://example.com/2023/07/12/python进阶——函数(三)/</div>
+      <div>https://github.com/xiaohei07/xiaohei07.github.io/2023/07/12/python进阶——函数(三)/</div>
     </div>
     <div class="license-meta">
       
@@ -544,7 +538,7 @@ True 的元素组成一个新的可遍历的集合对象，返回其迭代器。
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/13/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7(%E4%B8%80)%E5%88%87%E7%89%87/" title="python进阶——高级特性(一)切片">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/07/13/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7(%E4%B8%80)%E5%88%87%E7%89%87/" title="python进阶——高级特性(一)切片">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">python进阶——高级特性(一)切片</span>
                         <span class="visible-mobile">上一篇</span>
@@ -554,7 +548,7 @@ True 的元素组成一个新的可遍历的集合对象，返回其迭代器。
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%BA%8C)/" title="python基础——函数(二)">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%BA%8C)/" title="python基础——函数(二)">
                         <span class="hidden-mobile">python基础——函数(二)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -614,7 +608,6 @@ True 的元素组成一个新的可遍历的集合对象，返回其迭代器。
 </div>
 
 
-
   </aside>
 
 
@@ -634,15 +627,18 @@ True 的元素组成一个新的可遍历的集合对象，返回其迭代器。
 
 
 
-  
-
-
 
   
 
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -689,7 +685,7 @@ True 的元素组成一个新的可遍历的集合对象，返回其迭代器。
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -740,8 +736,8 @@ True 的元素组成一个新的可遍历的集合对象，返回其迭代器。
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -763,93 +759,56 @@ True 的元素组成一个新的可遍历的集合对象，返回其迭代器。
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
+   <script>
+  Fluid.utils.createScript('https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.28.2/tocbot.min.js', function() {
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !window.tocbot) { return; }
+  var boardCtn = jQuery('#board-ctn');
+  var boardTop = boardCtn.offset().top;
 
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
+  window.tocbot.init(Object.assign({
+  tocSelector : '#toc-body',
+  contentSelector : '.markdown-body',
+  headingSelector : 'h1, h2, h3, h4, h5, h6',
+  linkClass : 'tocbot-link',
+  activeLinkClass : 'tocbot-active-link',
+  listClass : 'tocbot-list',
+  isCollapsedClass: 'tocbot-is-collapsed',
+  collapsibleClass: 'tocbot-is-collapsible',
+  scrollSmooth : true,
+  includeTitleTags: true,
+  includeHtml: true,
+  headingsOffset : -boardTop,
+  }, CONFIG.toc));
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
 
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
+  Fluid.events.registerRefreshCallback(function() {
+  if ('tocbot' in window) {
+  tocbot.refresh();
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !tocbot) {
+  return;
+  }
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
+  }
   });
-</script>
-
+  });
+  </script>
+  
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
 
 
   
@@ -862,17 +821,58 @@ True 的元素组成一个新的可遍历的集合对象，返回其迭代器。
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script defer src="/js/leancloud.js" ></script>
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
 
-  <script  src="/js/local-search.js" ></script>
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
+
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -880,7 +880,7 @@ True 的元素组成一个新的可遍历的集合对象，返回其迭代器。
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

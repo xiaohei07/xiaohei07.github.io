@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="（一）引言: 类具有封装和信息隐藏的特性，只有类的成员函数能够访问类的私有成员，程序中其他的函数在一般情况下是无法访问私有成员的。 然而，有些时候，类要求自己的成员可对部分外部函数&#x2F;类可见，如果将其内部数据成员和成员函数均声明为公有的，会破坏类隐藏的特性。另外，对某些成员函数多次调用时，由于参数传递、类型检查和安全性检查等需要时间开销，定义过多的成员函数会影响程序的运行效率。 因此，为了解决">
+    <meta name="description" content="¶（一）引言: 类具有封装和信息隐藏的特性，只有类的成员函数能够访问类的私有成员，程序中其他的函数在一般情况下是无法访问私有成员的。 然而，有些时候，类要求自己的成员可对部分外部函数&#x2F;类可见，如果将其内部数据成员和成员函数均声明为公有的，会破坏类隐藏的特性。另外，对某些成员函数多次调用时，由于参数传递、类型检查和安全性检查等需要时间开销，定义过多的成员函数会影响程序的运行效率。 因此，为了解决上述">
 <meta property="og:type" content="website">
 <meta property="og:title" content="c++类——友元">
-<meta property="og:url" content="http://example.com/backup/backup[2023-04-10-22-06]/c++%E7%B1%BB%E2%80%94%E2%80%94%E5%8F%8B%E5%85%83.html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（一）引言: 类具有封装和信息隐藏的特性，只有类的成员函数能够访问类的私有成员，程序中其他的函数在一般情况下是无法访问私有成员的。 然而，有些时候，类要求自己的成员可对部分外部函数&#x2F;类可见，如果将其内部数据成员和成员函数均声明为公有的，会破坏类隐藏的特性。另外，对某些成员函数多次调用时，由于参数传递、类型检查和安全性检查等需要时间开销，定义过多的成员函数会影响程序的运行效率。 因此，为了解决">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/backup/backup[2023-04-10-22-06]/c++%E7%B1%BB%E2%80%94%E2%80%94%E5%8F%8B%E5%85%83.html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="¶（一）引言: 类具有封装和信息隐藏的特性，只有类的成员函数能够访问类的私有成员，程序中其他的函数在一般情况下是无法访问私有成员的。 然而，有些时候，类要求自己的成员可对部分外部函数&#x2F;类可见，如果将其内部数据成员和成员函数均声明为公有的，会破坏类隐藏的特性。另外，对某些成员函数多次调用时，由于参数传递、类型检查和安全性检查等需要时间开销，定义过多的成员函数会影响程序的运行效率。 因此，为了解决上述">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-17T13:35:24.000Z">
 <meta property="article:modified_time" content="2023-04-10T14:06:00.384Z">
@@ -33,7 +33,7 @@
   
   
   
-  <title>c++类——友元 - ZZHの个人博客</title>
+  <title>c++类——友元 - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -51,35 +51,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -113,7 +113,7 @@
 <div class="header-inner" style="height: 60vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -132,7 +132,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -144,7 +144,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -156,21 +156,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -190,7 +178,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -198,15 +194,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -220,7 +208,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -232,7 +220,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -262,7 +250,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -296,58 +284,86 @@
                 
 
 <article class="page-content">
-  <h3><span id="一引言">（一）引言:</span></h3>
+  <h3 id="一引言"><a href="#一引言" class="header-anchor">¶</a>（一）引言:</h3>
 <p>类具有封装和信息隐藏的特性，只有类的成员函数能够访问类的私有成员，程序中其他的函数在一般情况下是无法访问私有成员的。</p>
 <p>然而，有些时候，类要求自己的成员可对部分外部函数/类可见，如果将其内部数据成员和成员函数均声明为公有的，会破坏类隐藏的特性。另外，对某些成员函数多次调用时，由于参数传递、类型检查和安全性检查等需要时间开销，定义过多的成员函数会影响程序的运行效率。</p>
 <p>因此，为了解决上述问题，需要在类中声明友元——为了让非成员函数/类即普通函数/类能够访问类的私有成员。</p>
-<h3><span id="二概念">（二）概念：</span></h3>
+<h3 id="二概念"><a href="#二概念" class="header-anchor">¶</a>（二）概念：</h3>
 <p>友元是一种定义在类外部的普通函数或类或类的成员函数，需要在类的体内进行声明。</p>
-<p>友元的关键字为
-<strong>friend</strong>，在声明时加在需要设为友元的类/函数头前。</p>
+<p>友元的关键字为 <strong>friend</strong>，在声明时加在需要设为友元的类/函数头前。</p>
 <p>友元本身不是成员函数，但可以访问类中的私有成员，与成员函数的特权相同。</p>
 <p>友元能够提高程序的运行效率，但是它破坏了类的封装性和隐蔽性，需要谨慎使用。</p>
-<h3><span id="三特性">（三）特性：</span></h3>
-<ol type="1">
-<li>友元只能出现在类的定义中。</li>
-<li>友元只能通过其所在类的对象访问它所在类的成员。</li>
-<li>友元关系是单向的，不具有交换性，即A是B的友元，但B不一定是A的友元。</li>
-<li>友元关系不具有传递性，即A是B的友元，B是C的友元，但是C不一定是A的友元。（以声明为准）</li>
-<li>友元的声明位置在类中是任意的，不受类访问限定符限制。</li>
-<li>友元函数不能用const修饰，也没有this指针。</li>
-<li>一个函数/类可以是多个类的友元函数。</li>
-<li>友元的成立是由这个类来决定的。</li>
+<h3 id="三特性"><a href="#三特性" class="header-anchor">¶</a>（三）特性：</h3>
+<ol>
+<li class="lvl-3">
+<p>友元只能出现在类的定义中。</p>
+</li>
+<li class="lvl-3">
+<p>友元只能通过其所在类的对象访问它所在类的成员。</p>
+</li>
+<li class="lvl-3">
+<p>友元关系是单向的，不具有交换性，即A是B的友元，但B不一定是A的友元。</p>
+</li>
+<li class="lvl-3">
+<p>友元关系不具有传递性，即A是B的友元，B是C的友元，但是C不一定是A的友元。（以声明为准）</p>
+</li>
+<li class="lvl-3">
+<p>友元的声明位置在类中是任意的，不受类访问限定符限制。</p>
+</li>
+<li class="lvl-3">
+<p>友元函数不能用const修饰，也没有this指针。</p>
+</li>
+<li class="lvl-3">
+<p>一个函数/类可以是多个类的友元函数。</p>
+</li>
+<li class="lvl-3">
+<p>友元的成立是由这个类来决定的。</p>
+</li>
 </ol>
-<h3><span id="四分类">（四）分类：</span></h3>
-<h4><span id="1普通函数做友元">1.普通函数做友元：</span></h4>
+<h3 id="四分类"><a href="#四分类" class="header-anchor">¶</a>（四）分类：</h3>
+<h4 id="1普通函数做友元"><a href="#1普通函数做友元" class="header-anchor">¶</a>1.普通函数做友元：</h4>
 <p>多用于运算符重载(详见<a href>c++类——运算符重载</a>)。</p>
-<p>形式为：类内 <strong><em>friend 返回类型 函数名(参数表)
-;</em></strong></p>
-<p>​ 类外 <strong><em>返回类型 函数名(参数表) { 函数体}</em></strong></p>
+<p>形式为：类内  <em><strong>friend 返回类型 函数名(参数表) ;</strong></em></p>
+<p>​			   类外 <em><strong>返回类型 函数名(参数表) { 函数体}</strong></em></p>
 <p>参数表内一定有类的值传递/引用传递/地址传递（用于访问类的私有成员，要不然定义它为友元干嘛呢）。</p>
-<h4><span id="2类做友元">2.类做友元：</span></h4>
+<h4 id="2类做友元"><a href="#2类做友元" class="header-anchor">¶</a>2.类做友元：</h4>
 <p>友元类中所有的成员函数均为友元函数。</p>
 <p>编译器对格式有严格要求：</p>
-<ol type="1">
-<li>首先对友元类进行前置声明（有些编译器可以省略，会自动补全）。</li>
-<li>然后定义要声明友元类的一般类，此时在其中可以将友元类声明为友元。</li>
-<li>最后定义友元类本身，因为前面对声明友元类的一般类进行了定义，此时可以在其中访问一般类的私有数据成员。</li>
+<ol>
+<li class="lvl-3">
+<p>首先对友元类进行前置声明（有些编译器可以省略，会自动补全）。</p>
+</li>
+<li class="lvl-3">
+<p>然后定义要声明友元类的一般类，此时在其中可以将友元类声明为友元。</p>
+</li>
+<li class="lvl-3">
+<p>最后定义友元类本身，因为前面对声明友元类的一般类进行了定义，此时可以在其中访问一般类的私有数据成员。</p>
+</li>
 </ol>
 <p>即按声明友元类——定义一般类——定义友元类的顺序进行，一般类要声明友元，友元类可以访问一般类的私有数据成员。</p>
-<h4><span id="3类的成员函数做友元">3.类的成员函数做友元：</span></h4>
+<h4 id="3类的成员函数做友元"><a href="#3类的成员函数做友元" class="header-anchor">¶</a>3.类的成员函数做友元：</h4>
 <p>声明时要在函数名前加上类名::（是成员函数所在类）。</p>
 <p>编译器对其格式要求更加严格。</p>
-<ol type="1">
-<li>首先对一般类进行前置声明（在成员函数做友元时此句绝对不可以省略）。</li>
-<li>然后对含友元函数的类进行定义。此时，要被用于作为友元函数的成员函数只进行声明，不进行定义。成员函数的参数表一定有一般类的值/引用/指针用于访问其私有成员。</li>
-<li>定义一般类，声明友元函数（做友元函数的成员函数所在类类名一定要加上）。</li>
-<li>定义做友元函数的成员函数（在其所在类的类外），因为前面的三步，此时才可以访问一般类的私有成员。</li>
+<ol>
+<li class="lvl-3">
+<p>首先对一般类进行前置声明（在成员函数做友元时此句绝对不可以省略）。</p>
+</li>
+<li class="lvl-3">
+<p>然后对含友元函数的类进行定义。此时，要被用于作为友元函数的成员函数只进行声明，不进行定义。成员函数的参数表一定有一般类的值/引用/指针用于访问其私有成员。</p>
+</li>
+<li class="lvl-3">
+<p>定义一般类，声明友元函数（做友元函数的成员函数所在类类名一定要加上）。</p>
+</li>
+<li class="lvl-3">
+<p>定义做友元函数的成员函数（在其所在类的类外），因为前面的三步，此时才可以访问一般类的私有成员。</p>
+</li>
 </ol>
-<h3><span id="五代码实现">（五）代码实现：</span></h3>
-<h4><span id="1普通函数做友元">1.普通函数做友元：</span></h4>
+<h3 id="五代码实现"><a href="#五代码实现" class="header-anchor">¶</a>（五）代码实现：</h3>
+<h4 id="1普通函数做友元"><a href="#1普通函数做友元" class="header-anchor">¶</a>1.普通函数做友元：</h4>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;cmath&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Point</span><br>&#123;<br>	<span class="hljs-function"><span class="hljs-keyword">friend</span> <span class="hljs-type">double</span> <span class="hljs-title">Distance</span><span class="hljs-params">(Point&amp; a, Point&amp; b)</span></span>;<span class="hljs-comment">//一般建议友元函数声明放在最前面</span><br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">double</span> x, y;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">Point</span>()<br>	&#123;<br>		x = <span class="hljs-number">0</span>;<br>		y = <span class="hljs-number">0</span>;<br>	&#125;<br>	<span class="hljs-built_in">Point</span>(<span class="hljs-type">double</span> x, <span class="hljs-type">double</span> y)<br>	&#123;<br>		<span class="hljs-keyword">this</span>-&gt;x = x;<br>		<span class="hljs-keyword">this</span>-&gt;y = y;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">move</span><span class="hljs-params">(<span class="hljs-type">double</span> x, <span class="hljs-type">double</span> y)</span></span><br><span class="hljs-function">	</span>&#123;<br>		<span class="hljs-keyword">this</span>-&gt;x = x;<br>		<span class="hljs-keyword">this</span>-&gt;y = y;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">getX</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		<span class="hljs-keyword">return</span> x;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">getY</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		<span class="hljs-keyword">return</span> y;<br>	&#125;<br>	~<span class="hljs-built_in">Point</span>()<br>	&#123;<br>	&#125;<br>&#125;;<br><span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">Distance</span><span class="hljs-params">(Point&amp; a, Point&amp; b)</span> </span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">double</span> temp1 = a.x - b.x;<span class="hljs-comment">//因友元可以访问a和b对象的私有数据成员</span><br>	<span class="hljs-type">double</span> temp2 = a.y - b.y;<br>	<span class="hljs-keyword">return</span> <span class="hljs-built_in">sqrt</span>(temp1 * temp1 + temp2 * temp2);<br>&#125;<br><span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">Distance2</span><span class="hljs-params">(Point&amp; a, Point&amp; b)</span> </span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">double</span> temp1 = a.<span class="hljs-built_in">getX</span>() - b.<span class="hljs-built_in">getX</span>();<span class="hljs-comment">//不是友元函数，通过类公有的成员函数获得私有数据成员值</span><br>	<span class="hljs-type">double</span> temp2 = a.<span class="hljs-built_in">getY</span>() - b.<span class="hljs-built_in">getY</span>();<br>	<span class="hljs-keyword">return</span> <span class="hljs-built_in">sqrt</span>(temp1 * temp1 + temp2 * temp2);<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	Point* p1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Point</span>(<span class="hljs-number">1.0</span>, <span class="hljs-number">2.0</span>);<br>	Point* p2 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Point</span>(<span class="hljs-number">2.0</span>, <span class="hljs-number">3.0</span>);<br>	Point* p3 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Point</span>(<span class="hljs-number">2.0</span>, <span class="hljs-number">3.0</span>);<br>	<span class="hljs-type">double</span> d1 = <span class="hljs-built_in">Distance</span>(*p1, *p2);<br>	<span class="hljs-type">double</span> d2 = <span class="hljs-built_in">Distance</span>(*p1, *p3);<br>	cout &lt;&lt; d1 &lt;&lt; endl &lt;&lt; d2 &lt;&lt; endl;<span class="hljs-comment">//均可成功</span><br>	<span class="hljs-keyword">delete</span> p1;<br>	<span class="hljs-keyword">delete</span> p2;<br>	<span class="hljs-keyword">delete</span> p3;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h4><span id="2类做友元">2.类做友元：</span></h4>
+<h4 id="2类做友元"><a href="#2类做友元" class="header-anchor">¶</a>2.类做友元：</h4>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs processing">#include&lt;iostream&gt;<br>using namespace std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Date</span>; <span class="hljs-comment">//前置声明，部分编译器可省略。</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Time</span><br>&#123;<br>	friend <span class="hljs-keyword">class</span> <span class="hljs-title class_">Date</span>;<span class="hljs-comment">//友元类声明</span><br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">hour</span>;<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">minute</span>;<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">second</span>;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-title function_">Time</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3) :<span class="hljs-built_in">hour</span>(i1), <span class="hljs-built_in">minute</span>(i2), <span class="hljs-built_in">second</span>(i3) &#123;&#125;<br>	<span class="hljs-title function_">Time</span>() &#123; <span class="hljs-built_in">hour</span> = <span class="hljs-built_in">minute</span> = <span class="hljs-built_in">second</span> = <span class="hljs-number">0</span>; &#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-title function_">display</span>() <br>	&#123;<br>		cout &lt;&lt; <span class="hljs-built_in">hour</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; <span class="hljs-built_in">minute</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; <span class="hljs-built_in">second</span> &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Date</span><span class="hljs-comment">//定义友元类</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">year</span>;<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">month</span>;<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">day</span>;<br>	Time t;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-title function_">Date</span>()&#123; <span class="hljs-built_in">year</span> = <span class="hljs-built_in">month</span> = <span class="hljs-built_in">day</span> = <span class="hljs-number">0</span>; &#125;<br>	<span class="hljs-title function_">Date</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3) :<span class="hljs-built_in">year</span>(i1), <span class="hljs-built_in">month</span>(i2), <span class="hljs-built_in">day</span>(i3)&#123;&#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-title function_">display</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-built_in">year</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; <span class="hljs-built_in">month</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; <span class="hljs-built_in">day</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span>;<br>		cout &lt;&lt; t.<span class="hljs-property">hour</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; t.<span class="hljs-property">minute</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; t.<span class="hljs-property">second</span> &lt;&lt; endl;<span class="hljs-comment">//友元类使用Time类私有数据成员</span><br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-title function_">settime</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3)<br>	&#123;<br>		t.<span class="hljs-property">hour</span> = i1, t.<span class="hljs-property">minute</span> = i2, t.<span class="hljs-property">second</span> = i3;<span class="hljs-comment">//友元类修改Time类私有数据成员的值</span><br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>&#125;;<br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span>() <br>&#123;<br>	Date d;<span class="hljs-comment">//可以调用Time类的构造函数</span><br>	d.<span class="hljs-property">display</span>();<span class="hljs-comment">//可以使用上面创建的Time对象的值</span><br>	d.<span class="hljs-property">settime</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//可修改</span><br>	d.<span class="hljs-property">display</span>();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h4><span id="3类的成员函数做友元">3.类的成员函数做友元：</span></h4>
+<h4 id="3类的成员函数做友元"><a href="#3类的成员函数做友元" class="header-anchor">¶</a>3.类的成员函数做友元：</h4>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs processing">#include&lt;iostream&gt;<br>using namespace std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Time</span>; <span class="hljs-comment">//前置声明一般类</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Date</span>  <span class="hljs-comment">//定义Date类，此类含有友元函数</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">year</span>;<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">month</span>;<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">day</span>;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-title function_">Date</span>() &#123; <span class="hljs-built_in">year</span> = <span class="hljs-built_in">month</span> = <span class="hljs-built_in">day</span> = <span class="hljs-number">0</span>; &#125;<br>	<span class="hljs-title function_">Date</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3) :<span class="hljs-built_in">year</span>(i1), <span class="hljs-built_in">month</span>(i2), <span class="hljs-built_in">day</span>(i3) &#123;&#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-title function_">display</span>(Time&amp; t); <span class="hljs-comment">//声明成员函数，此为Time类的友元函数</span><br>	<span class="hljs-keyword">void</span> <span class="hljs-title function_">settime</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3, Time&amp; t); <span class="hljs-comment">//同上</span><br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Time</span><br>&#123;<br>	friend <span class="hljs-keyword">void</span> Date::<span class="hljs-title function_">settime</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3, Time&amp; t);<span class="hljs-comment">//Date类的成员函数做友元函数的声明</span><br>	friend <span class="hljs-keyword">void</span> Date::<span class="hljs-title function_">display</span>(Time &amp;t);<span class="hljs-comment">//同上</span><br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">hour</span>;<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">minute</span>;<br>	<span class="hljs-type">int</span> <span class="hljs-built_in">second</span>;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-title function_">Time</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3) :<span class="hljs-built_in">hour</span>(i1), <span class="hljs-built_in">minute</span>(i2), <span class="hljs-built_in">second</span>(i3) &#123;&#125;<br>	<span class="hljs-title function_">Time</span>() &#123; <span class="hljs-built_in">hour</span> = <span class="hljs-built_in">minute</span> = <span class="hljs-built_in">second</span> = <span class="hljs-number">0</span>; &#125;<br>	<span class="hljs-keyword">void</span> <span class="hljs-title function_">display</span>()<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-built_in">hour</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; <span class="hljs-built_in">minute</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; <span class="hljs-built_in">second</span> &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">void</span> Date::<span class="hljs-title function_">display</span>(Time&amp; t) <span class="hljs-comment">//定义Date类要做友元函数的成员函数，此时可访问Time类私有成员 </span><br>&#123;<br>	cout &lt;&lt; <span class="hljs-built_in">year</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; <span class="hljs-built_in">month</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; <span class="hljs-built_in">day</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span>;<br>	cout &lt;&lt; t.<span class="hljs-property">hour</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; t.<span class="hljs-property">minute</span> &lt;&lt; <span class="hljs-string">&quot;:&quot;</span> &lt;&lt; t.<span class="hljs-property">second</span> &lt;&lt; endl; <span class="hljs-comment">//可以访问Time类的私有成员</span><br>	<span class="hljs-keyword">return</span>;<br>&#125;<br><span class="hljs-keyword">void</span> Date::<span class="hljs-title function_">settime</span>(<span class="hljs-type">int</span> i1, <span class="hljs-type">int</span> i2, <span class="hljs-type">int</span> i3, Time&amp; t) <span class="hljs-comment">//同上</span><br>&#123;<br>	t.<span class="hljs-property">hour</span> = i1, t.<span class="hljs-property">minute</span> = i2, t.<span class="hljs-property">second</span> = i3;<br>	<span class="hljs-keyword">return</span>;<br>&#125;<br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span>() <br>&#123;<br>	Date d;<br>	Time t;<br>	d.<span class="hljs-property">display</span>(t);<br>	d.<span class="hljs-property">settime</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>,t);<br>	d.<span class="hljs-property">display</span>(t);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
@@ -401,7 +417,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -452,8 +468,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -475,23 +491,21 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  <script defer src="/js/leancloud.js" ></script>
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -499,7 +513,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="（一）概述： 集合set是一个无序的唯一确定元素序列。 无序代表着其每次输出时元素的排列顺序可能都不相同。 唯一确定意味着元素是不可重复的，且每个元素互不相同。 元素的个数无限制。 set是可变数据类型，其内容是可以改变的，因此set没有哈希值，不能被用作字典的键或是其他集合的元素。 同一集合中，只能存储不可变的数据类型，不能再存储列表、set集合、字典等可变数据类型元素，因此set集">
+    <meta name="description" content="¶（一）概述： 集合set是一个无序的唯一确定元素序列。 无序代表着其每次输出时元素的排列顺序可能都不相同。 唯一确定意味着元素是不可重复的，且每个元素互不相同。 元素的个数无限制。 set是可变数据类型，其内容是可以改变的，因此set没有哈希值，不能被用作字典的键或是其他集合的元素。 同一集合中，只能存储不可变的数据类型，不能再存储列表、set集合、字典等可变数据类型元素，因此set集合没有多维">
 <meta property="og:type" content="website">
 <meta property="og:title" content="python基础——数据类型(六)集合">
-<meta property="og:url" content="http://example.com/backup/backup[2023-04-09-17-38]/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B(%E5%85%AD)%E9%9B%86%E5%90%88.html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（一）概述： 集合set是一个无序的唯一确定元素序列。 无序代表着其每次输出时元素的排列顺序可能都不相同。 唯一确定意味着元素是不可重复的，且每个元素互不相同。 元素的个数无限制。 set是可变数据类型，其内容是可以改变的，因此set没有哈希值，不能被用作字典的键或是其他集合的元素。 同一集合中，只能存储不可变的数据类型，不能再存储列表、set集合、字典等可变数据类型元素，因此set集">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/backup/backup[2023-04-09-17-38]/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B(%E5%85%AD)%E9%9B%86%E5%90%88.html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="¶（一）概述： 集合set是一个无序的唯一确定元素序列。 无序代表着其每次输出时元素的排列顺序可能都不相同。 唯一确定意味着元素是不可重复的，且每个元素互不相同。 元素的个数无限制。 set是可变数据类型，其内容是可以改变的，因此set没有哈希值，不能被用作字典的键或是其他集合的元素。 同一集合中，只能存储不可变的数据类型，不能再存储列表、set集合、字典等可变数据类型元素，因此set集合没有多维">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-23T11:01:42.000Z">
 <meta property="article:modified_time" content="2023-04-09T09:38:38.199Z">
@@ -32,7 +32,7 @@
   
   
   
-  <title>python基础——数据类型(六)集合 - ZZHの个人博客</title>
+  <title>python基础——数据类型(六)集合 - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -50,35 +50,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -112,7 +112,7 @@
 <div class="header-inner" style="height: 60vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -131,7 +131,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -143,7 +143,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -155,21 +155,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -189,7 +177,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -197,15 +193,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -219,7 +207,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -231,7 +219,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -261,7 +249,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -295,166 +283,220 @@
                 
 
 <article class="page-content">
-  <h3><span id="一概述">（一）概述：</span></h3>
+  <h3 id="一概述"><a href="#一概述" class="header-anchor">¶</a>（一）概述：</h3>
 <p>集合set是一个无序的唯一确定元素序列。</p>
 <p>无序代表着其每次输出时元素的排列顺序可能都不相同。</p>
 <p>唯一确定意味着元素是不可重复的，且每个元素互不相同。</p>
 <p>元素的个数无限制。</p>
 <p>set是可变数据类型，其内容是可以改变的，因此set没有哈希值，不能被用作字典的键或是其他集合的元素。</p>
 <p>同一集合中，只能存储不可变的数据类型，不能再存储列表、set集合、字典等可变数据类型元素，因此set集合没有多维形式。（代码见(二)内代码）</p>
-<h3><span id="二创建与形式">（二）创建与形式：</span></h3>
+<h3 id="二创建与形式"><a href="#二创建与形式" class="header-anchor">¶</a>（二）创建与形式：</h3>
 <p>python用{}大括号表示set集合，并用逗号分隔元素。</p>
-<p>形式为： <strong><em>setname = { element1 , element2 , ... , elementn
-}</em></strong></p>
-<p>注意：set没有直接的空集合创建形式。因为直接用{}创建表示的是空字典，而不是空列表，此时应使用<strong><em>set()</em></strong>表示空集合。</p>
+<p>形式为： <em><strong>setname = { element1 , element2 , ... , elementn }</strong></em></p>
+<p>注意：set没有直接的空集合创建形式。因为直接用{}创建表示的是空字典，而不是空列表，此时应使用***set()***表示空集合。</p>
 <p>set创建时若有重复元素，只保留其中一个。（备注：列表去除重复元素最迅速的方法就是转为集合，其运行时间远小于其他去重方法）</p>
 <p>set集合内的bool值True不会被创建，只有False才会被创建（不知道为什么）。</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs routeros">a = &#123;1 , <span class="hljs-string">&quot;a&quot;</span> , 3.14 , <span class="hljs-literal">True</span> &#125;<br>b = &#123;&#125;<br>bb = <span class="hljs-built_in">set</span>()<br>c = &#123;1 , 1 , <span class="hljs-string">&quot;a&quot;</span> , <span class="hljs-string">&quot;a&quot;</span> , 3.14 , 3.14 , <span class="hljs-literal">False</span> , <span class="hljs-literal">True</span>&#125;<br><span class="hljs-comment"># d = &#123;[1,2,3],1,2,3&#125; 此句会运行失败，因为不允许在set集合内创建列表。</span><br><span class="hljs-built_in">print</span>(a)<br><span class="hljs-built_in">print</span>(type(a))<br><span class="hljs-built_in">print</span>(type(b))<br><span class="hljs-built_in">print</span>(type(bb))<br><span class="hljs-built_in">print</span>(c)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;&#x27;a&#x27;, 1, 3.14&#125;</span><br><span class="hljs-comment"># &lt;class &#x27;set&#x27;&gt;</span><br><span class="hljs-comment"># &lt;class &#x27;dict&#x27;&gt;</span><br><span class="hljs-comment"># &lt;class &#x27;set&#x27;&gt;</span><br><span class="hljs-comment"># &#123;&#x27;a&#x27;, 1, 3.14, False&#125;</span><br></code></pre></td></tr></table></figure>
-<h3><span id="三集合的特性">（三）集合的特性：</span></h3>
-<h4><span id="1-访问元素">1. 访问元素：</span></h4>
+<h3 id="三集合的特性"><a href="#三集合的特性" class="header-anchor">¶</a>（三）集合的特性：</h3>
+<h4 id="1-访问元素"><a href="#1-访问元素" class="header-anchor">¶</a>1. 访问元素：</h4>
 <p>set集合因其无序，没有索引和下标，一般情况下访问元素只能通过遍历和枚举逐一读取（枚举中会有索引值，但不意味着set有索引）。</p>
 <p>遍历一般会使用in关键字。</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs routeros">a = &#123;1,2,3,4,<span class="hljs-literal">True</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>,<span class="hljs-string">&quot;d&quot;</span>&#125;<br><span class="hljs-keyword">for</span> i,v <span class="hljs-keyword">in</span> enumerate(a):<br>	<span class="hljs-built_in">print</span>(i,<span class="hljs-string">&quot; &quot;</span>,v,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot;\n&quot;</span>)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> a:<br>    <span class="hljs-built_in">print</span>(i,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 0   1</span><br><span class="hljs-comment"># 1   2</span><br><span class="hljs-comment"># 2   3</span><br><span class="hljs-comment"># 3   4</span><br><span class="hljs-comment"># 4   d</span><br><span class="hljs-comment"># 5   a</span><br><span class="hljs-comment"># 6   b</span><br><span class="hljs-comment"># 7   c</span><br><span class="hljs-comment"># 1 2 3 4 d a b c </span><br></code></pre></td></tr></table></figure>
-<h4><span id="2-删除集合">2. 删除集合</span></h4>
+<h4 id="2-删除集合"><a href="#2-删除集合" class="header-anchor">¶</a>2. 删除集合</h4>
 <p>python自带垃圾回收机制，已创建的集合如不再使用，将会被编译器自动回收，不会产生内存垃圾。</p>
 <p>如果需要可以手动删除，使用del 关键字手动删除集合。</p>
-<p>形式为： <strong><em>del setname</em></strong></p>
+<p>形式为： <em><strong>del setname</strong></em></p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;<br><span class="hljs-attribute">del</span> a<br><span class="hljs-attribute">print</span>(a) #此句无法输出，因为a已经被删除了，a变量处于未定义状态<br></code></pre></td></tr></table></figure>
-<h4><span id="3-集合的关系">3. 集合的关系：</span></h4>
-<ul>
-<li><p>判断子集关系：</p>
-<ul>
-<li><p>使用关系运算符&lt; 、&lt;=、&gt;、&gt;=(用rop指代)：</p>
-<p>形式：<strong><em>setname1 rop setname2</em></strong></p>
+<h4 id="3-集合的关系"><a href="#3-集合的关系" class="header-anchor">¶</a>3. 集合的关系：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>判断子集关系：</p>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>使用关系运算符&lt; 、&lt;=、&gt;、&gt;=(用rop指代)：</p>
+<p>形式：<em><strong>setname1 rop setname2</strong></em></p>
 <p>返回True或者False</p>
 <p>当rop为&lt;=，表示子集判断，即当setname1中元素均在setname2中出现时，表示集合1为集合2子集，返回True；否则返回False。</p>
 <p>当rop为&lt;，表示真子集判断，即当setname1中元素均在setname2中出现且setname2有setname1中没有的元素时，表示集合1为集合2真子集，返回True，否则均返回False。</p>
-<p>&gt;=和&gt;的逻辑和前两者相同，但是setname1和setname2的地位互换，表示setname1对setname2的包含和真包含关系。</p></li>
-<li><p>使用方法：</p>
-<ol type="1">
-<li><p>issubset方法：</p>
-<p>形式：<strong><em>setname1.issubset(setname2)</em></strong></p>
-<p>与<strong><em>setname1&lt;=setname2</em></strong>等价。</p></li>
-<li><p>issuperset方法：</p>
-<p>形式：<strong><em>setname1.issuperset(setname2)</em></strong></p>
-<p>与<strong><em>setname&gt;=setname2</em></strong>等价。</p></li>
-</ol></li>
+<p>&gt;=和&gt;的逻辑和前两者相同，但是setname1和setname2的地位互换，表示setname1对setname2的包含和真包含关系。</p>
+</li>
+<li class="lvl-4">
+<p>使用方法：</p>
+<ol>
+<li class="lvl-7">
+<p>issubset方法：</p>
+<p>形式：<em><strong>setname1.issubset(setname2)</strong></em></p>
+<p>与<em><strong>setname1&lt;=setname2</strong></em>等价。</p>
+</li>
+<li class="lvl-7">
+<p>issuperset方法：</p>
+<p>形式：<em><strong>setname1.issuperset(setname2)</strong></em></p>
+<p>与<em><strong>setname&gt;=setname2</strong></em>等价。</p>
+</li>
+</ol>
+</li>
 </ul>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span> = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">b</span> = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>&#125;<br><span class="hljs-attribute">c</span> = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">print</span>(b&lt;a,b&gt;a,b&lt;=a,b&gt;=a,sep=<span class="hljs-string">&quot;\t&quot;</span>)<br><span class="hljs-attribute">print</span>(c&lt;a,c&gt;a,c&lt;=a,c&gt;=a,sep=<span class="hljs-string">&quot;\t&quot;</span>)<br><span class="hljs-attribute">print</span>(b.issubset(a),c.issubset(a),sep=<span class="hljs-string">&quot;\t&quot;</span>)<br><span class="hljs-attribute">print</span>(b.issuperset(a),c.issuperset(a),sep=<span class="hljs-string">&quot;\t&quot;</span>)<br><span class="hljs-comment"># True	 False	 True	False</span><br><span class="hljs-comment"># False	 False	 True	True</span><br><span class="hljs-comment"># True	 True</span><br><span class="hljs-comment"># False	 True</span><br></code></pre></td></tr></table></figure></li>
-<li><p>集合运算方法：</p>
-<ul>
-<li><p>交集运算：</p>
-<p>形式：<strong><em>setname1&amp;setname2</em></strong> /
-<strong><em>setname1.intersection(setname2)</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span> = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">b</span> = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>&#125;<br><span class="hljs-attribute">c</span> = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">print</span>(b&lt;a,b&gt;a,b&lt;=a,b&gt;=a,sep=<span class="hljs-string">&quot;\t&quot;</span>)<br><span class="hljs-attribute">print</span>(c&lt;a,c&gt;a,c&lt;=a,c&gt;=a,sep=<span class="hljs-string">&quot;\t&quot;</span>)<br><span class="hljs-attribute">print</span>(b.issubset(a),c.issubset(a),sep=<span class="hljs-string">&quot;\t&quot;</span>)<br><span class="hljs-attribute">print</span>(b.issuperset(a),c.issuperset(a),sep=<span class="hljs-string">&quot;\t&quot;</span>)<br><span class="hljs-comment"># True	 False	 True	False</span><br><span class="hljs-comment"># False	 False	 True	True</span><br><span class="hljs-comment"># True	 True</span><br><span class="hljs-comment"># False	 True</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-2">
+<p>集合运算方法：</p>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>交集运算：</p>
+<p>形式：<em><strong>setname1&amp;setname2</strong></em> / <em><strong>setname1.intersection(setname2)</strong></em></p>
 <p>两个集合可以交换位置，生成结果相同。</p>
 <p>生成一个新集合获得两个集合的所有公共元素。</p>
 <p>可以进行多个集合的连续交运算。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;<br><span class="hljs-attribute">b</span>=&#123;<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>&#125;<br><span class="hljs-attribute">c</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>&#125;<br><span class="hljs-attribute">print</span>(a&amp;b)<br><span class="hljs-attribute">print</span>(a.intersection(b))<br><span class="hljs-attribute">print</span>(b.intersection(a))<br><span class="hljs-attribute">print</span>(a&amp;b&amp;c)<br><span class="hljs-attribute">print</span>(c.intersection(a,b))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;3, 4, 5&#125;</span><br><span class="hljs-comment"># &#123;3, 4, 5&#125;</span><br><span class="hljs-comment"># &#123;3, 4, 5&#125;</span><br><span class="hljs-comment"># &#123;3, 5&#125;</span><br><span class="hljs-comment"># &#123;3, 5&#125;</span><br></code></pre></td></tr></table></figure></li>
-<li><p>并集运算：</p>
-<p>形式：<strong><em>setname1 | setname2</em></strong> /
-<strong><em>setname1.union(setname2)</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;<br><span class="hljs-attribute">b</span>=&#123;<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>&#125;<br><span class="hljs-attribute">c</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>&#125;<br><span class="hljs-attribute">print</span>(a&amp;b)<br><span class="hljs-attribute">print</span>(a.intersection(b))<br><span class="hljs-attribute">print</span>(b.intersection(a))<br><span class="hljs-attribute">print</span>(a&amp;b&amp;c)<br><span class="hljs-attribute">print</span>(c.intersection(a,b))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;3, 4, 5&#125;</span><br><span class="hljs-comment"># &#123;3, 4, 5&#125;</span><br><span class="hljs-comment"># &#123;3, 4, 5&#125;</span><br><span class="hljs-comment"># &#123;3, 5&#125;</span><br><span class="hljs-comment"># &#123;3, 5&#125;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>并集运算：</p>
+<p>形式：<em><strong>setname1 | setname2</strong></em> / <em><strong>setname1.union(setname2)</strong></em></p>
 <p>两个集合可以交换位置，生成结果相同。</p>
 <p>生成一个新集合获得两个集合的所有元素，且不重复。</p>
 <p>可以进行多个集合的连续并运算。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;<br><span class="hljs-attribute">b</span>=&#123;<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>&#125;<br><span class="hljs-attribute">c</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>&#125;<br><span class="hljs-attribute">print</span>(a|b)<br><span class="hljs-attribute">print</span>(a.union(b))<br><span class="hljs-attribute">print</span>(b.union(a))<br><span class="hljs-attribute">print</span>(a|b|c)<br><span class="hljs-attribute">print</span>(c.union(a,b))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6, 7&#125;</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6, 7&#125;</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6, 7&#125;</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6, 7, 8, 9&#125;</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6, 7, 8, 9&#125;</span><br></code></pre></td></tr></table></figure></li>
-<li><p>差集运算：</p>
-<p>形式：<strong><em>setname1 - setname2</em></strong> /
-<strong><em>setname1.difference(setname2)</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;<br><span class="hljs-attribute">b</span>=&#123;<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>&#125;<br><span class="hljs-attribute">c</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>&#125;<br><span class="hljs-attribute">print</span>(a|b)<br><span class="hljs-attribute">print</span>(a.union(b))<br><span class="hljs-attribute">print</span>(b.union(a))<br><span class="hljs-attribute">print</span>(a|b|c)<br><span class="hljs-attribute">print</span>(c.union(a,b))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6, 7&#125;</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6, 7&#125;</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6, 7&#125;</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6, 7, 8, 9&#125;</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6, 7, 8, 9&#125;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>差集运算：</p>
+<p>形式：<em><strong>setname1 - setname2</strong></em> / <em><strong>setname1.difference(setname2)</strong></em></p>
 <p>两个集合可以交换位置，但是生成结果会不同。</p>
 <p>生成一个集合获得setname1中所有不在setname2中出现的元素，即新集合和setname2的交集一定为空集。</p>
 <p>可以进行多个集合的差集运算，得到的是该集合去除其他所有集合含有元素之后的剩余元素。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;<br><span class="hljs-attribute">b</span>=&#123;<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>&#125;<br><span class="hljs-attribute">c</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>&#125;<br><span class="hljs-attribute">print</span>(a-b)<br><span class="hljs-attribute">print</span>(b-a)<br><span class="hljs-attribute">print</span>(a.difference(b))<br><span class="hljs-attribute">print</span>(b.difference(a))<br><span class="hljs-attribute">print</span>(c-a-b)<br><span class="hljs-attribute">print</span>(c.difference(a,b))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;1, 2&#125;</span><br><span class="hljs-comment"># &#123;6, 7&#125;</span><br><span class="hljs-comment"># &#123;1, 2&#125;</span><br><span class="hljs-comment"># &#123;6, 7&#125;</span><br><span class="hljs-comment"># &#123;8, 9&#125;</span><br><span class="hljs-comment"># &#123;8, 9&#125;</span><br></code></pre></td></tr></table></figure></li>
-<li><p>对称差集运算：</p>
-<p>形式：<strong><em>setname1 ^ setname2</em></strong> /
-<strong><em>setname1.symmetric_difference(setname2)</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;<br><span class="hljs-attribute">b</span>=&#123;<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>&#125;<br><span class="hljs-attribute">c</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>&#125;<br><span class="hljs-attribute">print</span>(a-b)<br><span class="hljs-attribute">print</span>(b-a)<br><span class="hljs-attribute">print</span>(a.difference(b))<br><span class="hljs-attribute">print</span>(b.difference(a))<br><span class="hljs-attribute">print</span>(c-a-b)<br><span class="hljs-attribute">print</span>(c.difference(a,b))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;1, 2&#125;</span><br><span class="hljs-comment"># &#123;6, 7&#125;</span><br><span class="hljs-comment"># &#123;1, 2&#125;</span><br><span class="hljs-comment"># &#123;6, 7&#125;</span><br><span class="hljs-comment"># &#123;8, 9&#125;</span><br><span class="hljs-comment"># &#123;8, 9&#125;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>对称差集运算：</p>
+<p>形式：<em><strong>setname1 ^ setname2</strong></em> / <em><strong>setname1.symmetric_difference(setname2)</strong></em></p>
 <p>两个集合可以交换位置，生成结果相同。</p>
 <p>生成一个集合获得setname1和setname2中不同时出现的元素，即新集合和两个集合的交集的交集一定为空集。</p>
 <p>只能进行多个集合的连续对称差集运算，不能做同时的对称差集运算（也就是每次的运算对象只能有两个）。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;<br><span class="hljs-attribute">b</span>=&#123;<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>&#125;<br><span class="hljs-attribute">c</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>&#125;<br><span class="hljs-attribute">print</span>(a^b)<br><span class="hljs-attribute">print</span>(a.symmetric_difference(b))<br><span class="hljs-attribute">print</span>(a^b^c)<br><span class="hljs-attribute">print</span>(c.symmetric_difference(a.symmetric_difference(b))) #不允许在symmetric_difference方法中加入多个参数。<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;1, 2, 6, 7&#125;</span><br><span class="hljs-comment"># &#123;1, 2, 6, 7&#125;</span><br><span class="hljs-comment"># &#123;3, 5, 8, 9&#125;</span><br><span class="hljs-comment"># &#123;3, 5, 8, 9&#125;</span><br></code></pre></td></tr></table></figure></li>
-</ul></li>
-<li><p>判断相交方法：</p>
-<p>形式： <strong><em>setname1.isdisjoint(setname2)</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;<br><span class="hljs-attribute">b</span>=&#123;<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>&#125;<br><span class="hljs-attribute">c</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>&#125;<br><span class="hljs-attribute">print</span>(a^b)<br><span class="hljs-attribute">print</span>(a.symmetric_difference(b))<br><span class="hljs-attribute">print</span>(a^b^c)<br><span class="hljs-attribute">print</span>(c.symmetric_difference(a.symmetric_difference(b))) #不允许在symmetric_difference方法中加入多个参数。<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;1, 2, 6, 7&#125;</span><br><span class="hljs-comment"># &#123;1, 2, 6, 7&#125;</span><br><span class="hljs-comment"># &#123;3, 5, 8, 9&#125;</span><br><span class="hljs-comment"># &#123;3, 5, 8, 9&#125;</span><br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>判断相交方法：</p>
+<p>形式： <em><strong>setname1.isdisjoint(setname2)</strong></em></p>
 <p>两个集合可以交换位置，生成结果相同。</p>
 <p>两个集合交集为空时返回False，否则返回True(此时有公共元素)。</p>
 <p>不允许连续集合相交判断或者多个集合同时相交判断。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;<br><span class="hljs-attribute">b</span>=&#123;<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>&#125;<br><span class="hljs-attribute">c</span>=&#123;<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>&#125;<br><span class="hljs-attribute">print</span>(a.isdisjoint(b))<br><span class="hljs-attribute">print</span>(a.isdisjoint(c)) #isdisjoint方法只接受一个参数<br><span class="hljs-comment"># 运算结果：</span><br><span class="hljs-comment"># False</span><br><span class="hljs-comment"># True</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;<br><span class="hljs-attribute">b</span>=&#123;<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>&#125;<br><span class="hljs-attribute">c</span>=&#123;<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>&#125;<br><span class="hljs-attribute">print</span>(a.isdisjoint(b))<br><span class="hljs-attribute">print</span>(a.isdisjoint(c)) #isdisjoint方法只接受一个参数<br><span class="hljs-comment"># 运算结果：</span><br><span class="hljs-comment"># False</span><br><span class="hljs-comment"># True</span><br></code></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4><span id="4-集合的增删改查">4. 集合的增删改查：</span></h4>
-<ul>
-<li><p>向set集合添加元素：</p>
-<p>set集合不支持重复和连接操作（也就是"+"和"*"运算符）。</p>
-<ul>
-<li><p>add方法：</p>
-<p>形式：<strong><em>setname.add(element)</em></strong></p>
+<h4 id="4-集合的增删改查"><a href="#4-集合的增删改查" class="header-anchor">¶</a>4. 集合的增删改查：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>向set集合添加元素：</p>
+<p>set集合不支持重复和连接操作（也就是&quot;+&quot;和&quot;*&quot;运算符）。</p>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>add方法：</p>
+<p>形式：<em><strong>setname.add(element)</strong></em></p>
 <p>只向set集合添加一个元素，只允许添加不可变类型。</p>
 <p>添加已有元素不对集合进行任何操作。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;<br><span class="hljs-attribute">a</span>.add(<span class="hljs-number">6</span>)<br><span class="hljs-attribute">a</span>.add(<span class="hljs-number">1</span>)<br><span class="hljs-attribute">print</span>(a)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6&#125;</span><br></code></pre></td></tr></table></figure></li>
-<li><p>update方法：</p>
-<p>形式：<strong><em>setname.update(elements)</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;<br><span class="hljs-attribute">a</span>.add(<span class="hljs-number">6</span>)<br><span class="hljs-attribute">a</span>.add(<span class="hljs-number">1</span>)<br><span class="hljs-attribute">print</span>(a)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6&#125;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>update方法：</p>
+<p>形式：<em><strong>setname.update(elements)</strong></em></p>
 <p>向set集合中添加传入update的一系列元素，只允许添加不可变类型。</p>
 <p>添加已有元素不对集合进行任何操作。</p>
 <p>update一般是传入另一个集合，会将其所有非公共元素分别加入setname中。</p>
 <p>可以传入非集合的一系列字符串。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;<br><span class="hljs-attribute">b</span>=&#123;<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>&#125;<br><span class="hljs-attribute">a</span>.update(b)<br><span class="hljs-attribute">a</span>.update(<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>)<br><span class="hljs-attribute">a</span>.update()<br><span class="hljs-attribute">print</span>(a)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6, 7, &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;&#125;</span><br></code></pre></td></tr></table></figure></li>
-<li><p>交/差/对称差更新：</p>
-<p>在其相关方法后加_update，不会返回新集合，而是直接将原集合替换为运算结果。（详细方法略，有兴趣请了解difference_update、intersection_update等函数）</p></li>
-</ul></li>
-<li><p>删除set集合元素：</p>
-<ul>
-<li><p>pop方法：</p>
-<p>形式：<strong><em>setname.pop()</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;<br><span class="hljs-attribute">b</span>=&#123;<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>&#125;<br><span class="hljs-attribute">a</span>.update(b)<br><span class="hljs-attribute">a</span>.update(<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>)<br><span class="hljs-attribute">a</span>.update()<br><span class="hljs-attribute">print</span>(a)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6, 7, &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;&#125;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>交/差/对称差更新：</p>
+<p>在其相关方法后加_update，不会返回新集合，而是直接将原集合替换为运算结果。（详细方法略，有兴趣请了解difference_update、intersection_update等函数）</p>
+</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>删除set集合元素：</p>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>pop方法：</p>
+<p>形式：<em><strong>setname.pop()</strong></em></p>
 <p>pop方法从集合中移除并返回一个元素，此元素的选择是随机的。</p>
 <p>注意：如果有一系列数字，从0开始删除，不是完全随机的。</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs routeros">a=&#123;<span class="hljs-string">&quot;a&quot;</span>,3,1,2,5,6,4,0&#125;<br>b=&#123;<span class="hljs-string">&quot;我&quot;</span>,<span class="hljs-string">&quot;你&quot;</span>,<span class="hljs-string">&quot;她&quot;</span>&#125;<br><span class="hljs-built_in">print</span>(a.pop())<br><span class="hljs-built_in">print</span>(a.pop())<br><span class="hljs-built_in">print</span>(a)<br><span class="hljs-built_in">print</span>(b.pop())<br><span class="hljs-built_in">print</span>(b)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 0</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># &#123;2, 3, &#x27;a&#x27;, 5, 6, 4&#125;</span><br><span class="hljs-comment"># 你</span><br><span class="hljs-comment"># &#123;&#x27;她&#x27;, &#x27;我&#x27;&#125;、</span><br></code></pre></td></tr></table></figure></li>
-<li><p>remove方法：</p>
-<p>形式：<strong><em>setname.remove(element)</em></strong></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs routeros">a=&#123;<span class="hljs-string">&quot;a&quot;</span>,3,1,2,5,6,4,0&#125;<br>b=&#123;<span class="hljs-string">&quot;我&quot;</span>,<span class="hljs-string">&quot;你&quot;</span>,<span class="hljs-string">&quot;她&quot;</span>&#125;<br><span class="hljs-built_in">print</span>(a.pop())<br><span class="hljs-built_in">print</span>(a.pop())<br><span class="hljs-built_in">print</span>(a)<br><span class="hljs-built_in">print</span>(b.pop())<br><span class="hljs-built_in">print</span>(b)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 0</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># &#123;2, 3, &#x27;a&#x27;, 5, 6, 4&#125;</span><br><span class="hljs-comment"># 你</span><br><span class="hljs-comment"># &#123;&#x27;她&#x27;, &#x27;我&#x27;&#125;、</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>remove方法：</p>
+<p>形式：<em><strong>setname.remove(element)</strong></em></p>
 <p>从集合中移除指定元素，如果该元素不存在会引发KeyError错误。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">a</span>.remove(<span class="hljs-number">1</span>)<br><span class="hljs-attribute">a</span>.remove(<span class="hljs-number">2</span>)<br><span class="hljs-comment"># a.remove(7) 此句会报错</span><br><span class="hljs-attribute">print</span>(a)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;3, 4, 5, 6&#125;</span><br></code></pre></td></tr></table></figure></li>
-<li><p>discard方法：</p>
-<p>形式：<strong><em>setname.discard(element)</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">a</span>.remove(<span class="hljs-number">1</span>)<br><span class="hljs-attribute">a</span>.remove(<span class="hljs-number">2</span>)<br><span class="hljs-comment"># a.remove(7) 此句会报错</span><br><span class="hljs-attribute">print</span>(a)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;3, 4, 5, 6&#125;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>discard方法：</p>
+<p>形式：<em><strong>setname.discard(element)</strong></em></p>
 <p>和remove要求相同，但是在删除不存在元素时不会报错。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">a</span>.discard(<span class="hljs-number">1</span>)<br><span class="hljs-attribute">a</span>.discard(<span class="hljs-number">2</span>)<br><span class="hljs-attribute">a</span>.discard(<span class="hljs-number">7</span>) <br><span class="hljs-attribute">print</span>(a)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;3, 4, 5, 6&#125;</span><br></code></pre></td></tr></table></figure></li>
-<li><p>clear方法：</p>
-<p>形式：<strong><em>setname.discard()</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">a</span>.discard(<span class="hljs-number">1</span>)<br><span class="hljs-attribute">a</span>.discard(<span class="hljs-number">2</span>)<br><span class="hljs-attribute">a</span>.discard(<span class="hljs-number">7</span>) <br><span class="hljs-attribute">print</span>(a)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># &#123;3, 4, 5, 6&#125;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-4">
+<p>clear方法：</p>
+<p>形式：<em><strong>setname.discard()</strong></em></p>
 <p>清空元素</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">a</span>.clear()<br><span class="hljs-attribute">print</span>(a)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># set()</span><br></code></pre></td></tr></table></figure></li>
-</ul></li>
-<li><p>查询set集合元素</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">a</span>.clear()<br><span class="hljs-attribute">print</span>(a)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># set()</span><br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>查询set集合元素</p>
 <p>not in和in关键字。</p>
 <p>使用形式不在赘述</p>
-<p>注意：集合的查询时间是θ(1)，而列表的时间是θ(n)。</p></li>
+<p>注意：集合的查询时间是θ(1)，而列表的时间是θ(n)。</p>
+</li>
 </ul>
-<h4><span id="5集合的其他操作">5.集合的其他操作：</span></h4>
+<h4 id="5集合的其他操作"><a href="#5集合的其他操作" class="header-anchor">¶</a>5.集合的其他操作：</h4>
 <p>内置函数：</p>
-<ol type="1">
-<li>len()求集合长度（即元素数量）。</li>
-<li>max()求集合内元素最大值。</li>
-<li>min()求集合内元素最小值。</li>
-<li>sum()求集合元素之和(如果可以求出的话)。</li>
+<ol>
+<li class="lvl-3">
+<p>len()求集合长度（即元素数量）。</p>
+</li>
+<li class="lvl-3">
+<p>max()求集合内元素最大值。</p>
+</li>
+<li class="lvl-3">
+<p>min()求集合内元素最小值。</p>
+</li>
+<li class="lvl-3">
+<p>sum()求集合元素之和(如果可以求出的话)。</p>
+</li>
 </ol>
 <p>集合的复制：</p>
 <p>集合的复制一般不考虑深浅拷贝。</p>
-<ul>
-<li><p>直接赋值：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>直接赋值：</p>
 <p>= 直接赋值是非拷贝方法。</p>
-<p>两个集合是等价的，修改其中任何一个集合都会影响另一个集合。（代码略）</p></li>
-<li><p>集合推导式：</p>
-<p>形式：<strong><em>setname1 = { i for i in setname2
-}</em></strong></p>
+<p>两个集合是等价的，修改其中任何一个集合都会影响另一个集合。（代码略）</p>
+</li>
+<li class="lvl-2">
+<p>集合推导式：</p>
+<p>形式：<em><strong>setname1 = { i for i in setname2 }</strong></em></p>
 <p>利用推导式完成复制。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">b</span>=&#123;i for i in a if i!=<span class="hljs-number">1</span>&#125;<br><span class="hljs-attribute">print</span>(b)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># &#123;2, 3, 4, 5, 6&#125;</span><br></code></pre></td></tr></table></figure></li>
-<li><p>for循环：略</p></li>
-<li><p>copy方法：</p>
-<p>形式：<strong><em>setname1=setname2.copy()</em></strong></p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">b</span>=a.copy()<br><span class="hljs-attribute">print</span>(b)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6&#125;</span><br></code></pre></td></tr></table></figure></li>
-<li><p>deepcopy方法：</p>
-<p>格式：<strong><em>setname1= copy.deepcopy(setname2)</em></strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">b</span>=&#123;i for i in a if i!=<span class="hljs-number">1</span>&#125;<br><span class="hljs-attribute">print</span>(b)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># &#123;2, 3, 4, 5, 6&#125;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-2">
+<p>for循环：略</p>
+</li>
+<li class="lvl-2">
+<p>copy方法：</p>
+<p>形式：<em><strong>setname1=setname2.copy()</strong></em></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">b</span>=a.copy()<br><span class="hljs-attribute">print</span>(b)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6&#125;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-2">
+<p>deepcopy方法：</p>
+<p>格式：<em><strong>setname1= copy.deepcopy(setname2)</strong></em></p>
 <p>需要import copy库：</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">import</span> copy<br><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">b</span>=copy.deepcopy(a)<br><span class="hljs-attribute">print</span>(b)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6&#125;</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">import</span> copy<br><span class="hljs-attribute">a</span>=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>&#125;<br><span class="hljs-attribute">b</span>=copy.deepcopy(a)<br><span class="hljs-attribute">print</span>(b)<br><span class="hljs-comment"># 输出结果：</span><br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6&#125;</span><br></code></pre></td></tr></table></figure>
+</li>
 </ul>
 <p>排序：</p>
 <p>sorted函数排序：略（有需要请看前面的内容）。</p>
-<h4><span id="四不可变集合frozenset">（四）不可变集合frozenset ：</span></h4>
+<h4 id="四不可变集合frozenset"><a href="#四不可变集合frozenset" class="header-anchor">¶</a>（四）不可变集合frozenset ：</h4>
 <p>和set相关，是不可变的，且为hashable，其元素一经创建无法更改。</p>
 <p>可以用作字典的键或者其他集合的元素。</p>
 <p>set中所有改变集合本身的方法都不支持（如add、remove方法等等），其余的方法都支持。</p>
@@ -514,7 +556,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -565,8 +607,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -588,23 +630,21 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  <script defer src="/js/leancloud.js" ></script>
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -612,7 +652,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

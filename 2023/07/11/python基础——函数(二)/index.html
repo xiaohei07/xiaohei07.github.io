@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="（三）函数调用 1. 基本内容： 定义一个函数只给了函数一个名称，指定了函数里包含的参数，和代码块结构。 Python中需要显式说明函数的调用，并为其指定参数（如需要参数）完成函数功能。 函数的调用可以是直接调用，可以是通过另一个函数调用来执行，也可以直接用Python提示符执行。 123456789101112def caixukun():    print(&quot;小黑子露出鸡脚">
+    <meta name="description" content="¶（三）函数调用 ¶1. 基本内容： 定义一个函数只给了函数一个名称，指定了函数里包含的参数，和代码块结构。 Python中需要显式说明函数的调用，并为其指定参数（如需要参数）完成函数功能。 函数的调用可以是直接调用，可以是通过另一个函数调用来执行，也可以直接用Python提示符执行。 123456789101112def caixukun():    print(&quot;小黑子露出鸡脚了&amp;q">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python基础——函数(二)">
-<meta property="og:url" content="http://example.com/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%BA%8C)/index.html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（三）函数调用 1. 基本内容： 定义一个函数只给了函数一个名称，指定了函数里包含的参数，和代码块结构。 Python中需要显式说明函数的调用，并为其指定参数（如需要参数）完成函数功能。 函数的调用可以是直接调用，可以是通过另一个函数调用来执行，也可以直接用Python提示符执行。 123456789101112def caixukun():    print(&quot;小黑子露出鸡脚">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%BA%8C)/index.html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="¶（三）函数调用 ¶1. 基本内容： 定义一个函数只给了函数一个名称，指定了函数里包含的参数，和代码块结构。 Python中需要显式说明函数的调用，并为其指定参数（如需要参数）完成函数功能。 函数的调用可以是直接调用，可以是通过另一个函数调用来执行，也可以直接用Python提示符执行。 123456789101112def caixukun():    print(&quot;小黑子露出鸡脚了&amp;q">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-11T12:32:49.000Z">
 <meta property="article:modified_time" content="2023-07-12T08:57:23.554Z">
@@ -32,7 +32,7 @@
   
   
   
-  <title>python基础——函数(二) - ZZHの个人博客</title>
+  <title>python基础——函数(二) - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -56,35 +56,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -118,7 +118,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -137,7 +137,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -149,7 +149,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -161,21 +161,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -195,7 +183,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -203,15 +199,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -225,7 +213,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -237,7 +225,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -267,7 +255,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -280,6 +268,11 @@
         
           
   <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        07xiaohei
+      </span>
     
     
       <span class="post-meta">
@@ -307,7 +300,7 @@
         
         
         
-          42 分钟
+          13 分钟
         
       </span>
     
@@ -355,34 +348,47 @@
             <!-- SEO header -->
             <h1 style="display: none">python基础——函数(二)</h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：1 年前
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
-                <h3><span id="三函数调用">（三）函数调用</span></h3>
-<h4><span id="1-基本内容">1. 基本内容：</span></h4>
+                <h3 id="三函数调用"><a href="#三函数调用" class="header-anchor">¶</a>（三）函数调用</h3>
+<h4 id="1-基本内容"><a href="#1-基本内容" class="header-anchor">¶</a>1. 基本内容：</h4>
 <p>定义一个函数只给了函数一个名称，指定了函数里包含的参数，和代码块结构。</p>
 <p>Python中需要显式说明函数的调用，并为其指定参数（如需要参数）完成函数功能。</p>
 <p>函数的调用可以是直接调用，可以是通过另一个函数调用来执行，也可以直接用Python提示符执行。</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs routeros">def caixukun():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;小黑子露出鸡脚了&quot;</span>)<br><br>def usefun():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;usefun&quot;</span>,<span class="hljs-attribute">end</span>=<span class="hljs-string">&quot;,&quot;</span>)<br>    caixukun()<br><br>usefun()<br>caixukun()<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># usefun,小黑子露出鸡脚了</span><br><span class="hljs-comment"># 小黑子露出鸡脚了</span><br></code></pre></td></tr></table></figure>
-<h4><span id="2-内置函数">2. 内置函数：</span></h4>
+<h4 id="2-内置函数"><a href="#2-内置函数" class="header-anchor">¶</a>2. 内置函数：</h4>
 <p>Python中提供了众多的内置函数，这些函数不需要我们定义，可以直接调用。</p>
 <p>一旦我们定义了与内置函数名相同的函数名，就会覆盖内置函数，但因为一般内置函数会有参数检查，所以不建议直接覆盖定义。</p>
 <p>具体的内置函数种类众多，数量巨大，这里不一一讲述，详细函数根据需要查询使用即可。</p>
 <figure class="highlight hsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs hsp">result = <span class="hljs-keyword">input</span>(<span class="hljs-string">&quot;请输入内容:&quot;</span>)<br><span class="hljs-keyword">print</span>(result)<br>def <span class="hljs-keyword">input</span>():<br>    <span class="hljs-keyword">print</span>(<span class="hljs-string">&quot;input变为print，输出了1&quot;</span>)<br><span class="hljs-keyword">input</span>()<br><span class="hljs-meta"># 运行结果:</span><br><span class="hljs-meta"># 请输入内容:<span class="hljs-number">10</span></span><br><span class="hljs-meta"># <span class="hljs-number">10</span></span><br><span class="hljs-meta"># input变为print，输出了<span class="hljs-number">1</span></span><br></code></pre></td></tr></table></figure>
-<h4><span id="3-参数传递">3. 参数传递：</span></h4>
+<h4 id="3-参数传递"><a href="#3-参数传递" class="header-anchor">¶</a>3. 参数传递：</h4>
 <p>在调用函数时，通常会传递参数，函数内部的代码保持不变，针对不同的参数处理不同的数据。</p>
 <p><strong>形参和实参</strong>：</p>
-<ul>
-<li>形参是定义函数时的参数变量，Python中没有类型，主要是为了代码块的使用和确定参数数量。</li>
-<li>实参是调用函数时使用的实际参数变量。</li>
-<li>参数传递实际就是<strong>把实参的引用传递给形参，使用实参的值来执行函数体的过程。</strong></li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>形参是定义函数时的参数变量，Python中没有类型，主要是为了代码块的使用和确定参数数量。</p>
+</li>
+<li class="lvl-2">
+<p>实参是调用函数时使用的实际参数变量。</p>
+</li>
+<li class="lvl-2">
+<p>参数传递实际就是<strong>把实参的引用传递给形参，使用实参的值来执行函数体的过程。</strong></p>
+</li>
 </ul>
 <p>Python中，类型属于对象，变量是没有类型的——变量是一个对象的引用（或者说是指针），因此函数中的参数没有类型，在传递时必须考虑传递的参数类型是否能够符合要求，不会引发错误。</p>
-<h5><span id="1可更改和不可更改对象">（1）可更改和不可更改对象：</span></h5>
-<p>详见之前的博客——<a target="_blank" rel="noopener" href="https://07xiaohei.com/2023/03/19/python基础——数据类型(一)简介/">python基础——数据类型（一）简介
-- ZZHの个人博客 (07xiaohei.com)</a></p>
+<h5 id="1可更改和不可更改对象"><a href="#1可更改和不可更改对象" class="header-anchor">¶</a>（1）可更改和不可更改对象：</h5>
+<p>详见之前的博客——<a target="_blank" rel="noopener" href="https://07xiaohei.com/2023/03/19/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B(%E4%B8%80)%E7%AE%80%E4%BB%8B/">python基础——数据类型（一）简介 - ZZHの个人博客 (07xiaohei.com)</a></p>
 <p>了解了这个之后，就可以说明参数传递的底层实现了。</p>
-<p>从结果上看，Python的参数传递中，可变类型的参数传递类似于c++的引用传递，被传递的实参对象在函数中修改时<strong>会影响</strong>到外部的对象；而不可变类型的参数传递类似于c++的值传递，被传递的实参对象在函数中进行任何修改<strong>不会影响</strong>到外部的对象，因为实际上传递时<strong>实参对象是被复制了一份进入了函数</strong>，原对象不会受到其影响。</p>
+<p>从结果上看，Python的参数传递中，可变类型的参数传递类似于c<ins>的引用传递，被传递的实参对象在函数中修改时<strong>会影响</strong>到外部的对象；而不可变类型的参数传递类似于c</ins>的值传递，被传递的实参对象在函数中进行任何修改<strong>不会影响</strong>到外部的对象，因为实际上传递时<strong>实参对象是被复制了一份进入了函数</strong>，原对象不会受到其影响。</p>
 <p>而实际上，Python的参数传递是<strong>赋值传递，即对象的引用传递</strong>，由于Python的所有数据类型都是对象，所以参数传递实际上是复制出新的变量，让新的变量和原变量指向一个相同的对象。</p>
 <p>——换言之，Python里的参数传递，外部的变量和函数的变量指向的是一个具体的对象，不是一个具体的内存地址。因此对象可变时，改变对象，所有指向这个对象的变量都会改变，表现为引用传递；而对象不可变时，赋值等操作实际是创建了一个新的对象并让函数的变量指向新的对象，这样无论如何修改自然不会影响到外部变量指向的对象，此时表现为了值传递。</p>
 <p>下面通过几个例子来加深理解：</p>
@@ -395,41 +401,52 @@
 <p>再进行赋值操作，n[0]指向的对象发生了改变，id变为了140709379830728，但是注意，n的指向没有发生改变，所以内外的变量n访问n[0]指向对象时都是赋值之后的n[0]，表现为了引用传递，内外的输出均变为6,2,3,4——其实质，就是因为列表可变，而number不可变导致的。</p>
 <p>综上，如果想要通过函数来改变某个变量的值，可以直接将可变数据类型当作参数传入，直接进行修改，也可以针对不可变数据类型，创建一个新对象，来保存修改后的值，然后将其返回给原变量完成修改。</p>
 <p>一般建议使用第二种方式，因为其简明易懂，不易出错。</p>
-<h5><span id="2参数类型">（2）参数类型：</span></h5>
-<ul>
-<li><p>位置参数：必须以在被调用函数中的定义的准确顺序来传递。</p>
+<h5 id="2参数类型"><a href="#2参数类型" class="header-anchor">¶</a>（2）参数类型：</h5>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>位置参数：必须以在被调用函数中的定义的准确顺序来传递。</p>
 <p>当不含默认参数时，传入函数的参数数量必须和声明时的参数数量相一致。</p>
 <p>是最普通的传递方式。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">add_three</span>(<span class="hljs-params">a,b,c</span>):<br>    <span class="hljs-keyword">return</span> a+b+c<br><span class="hljs-built_in">print</span>(add_three(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 6</span><br></code></pre></td></tr></table></figure></li>
-<li><p>关键字参数（命名参数）：和函数调用密切相关，函数调用使用关键字参数来确定传入参数值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">add_three</span>(<span class="hljs-params">a,b,c</span>):<br>    <span class="hljs-keyword">return</span> a+b+c<br><span class="hljs-built_in">print</span>(add_three(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 6</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-2">
+<p>关键字参数（命名参数）：和函数调用密切相关，函数调用使用关键字参数来确定传入参数值。</p>
 <p>关键字参数允许函数调用的参数顺序和声明的不一致，由解释器用参数名来匹配参数值。</p>
-<p>调用的形参列表格式：<strong><em>参数名k1=实参值1，参数名k2=实参值2，......，参数名kn=实参值n</em></strong></p>
+<p>调用的形参列表格式：<em><strong>参数名k1=实参值1，参数名k2=实参值2，......，参数名kn=实参值n</strong></em></p>
 <p>关键字参数必须在位置参数的后面，否则解释器不能识别结果。</p>
 <p>了解即可，一般不常用。</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs routeros">def add_three(a,b,c):<br>    return a+b<span class="hljs-number">*2</span>+c<span class="hljs-number">*3</span><br><span class="hljs-built_in">print</span>(add_three(<span class="hljs-attribute">c</span>=1,a=2,b=3))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 11 （2+3*2+1*3）</span><br></code></pre></td></tr></table></figure></li>
-<li><p>默认值参数：为一个参数指定默认值，如果没有给该参数传值，则按默认值传入处理。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs routeros">def add_three(a,b,c):<br>    return a+b<span class="hljs-number">*2</span>+c<span class="hljs-number">*3</span><br><span class="hljs-built_in">print</span>(add_three(<span class="hljs-attribute">c</span>=1,a=2,b=3))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 11 （2+3*2+1*3）</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-2">
+<p>默认值参数：为一个参数指定默认值，如果没有给该参数传值，则按默认值传入处理。</p>
 <p>具有默认值的参数也叫做缺省参数。</p>
 <p>缺省参数应当在参数列表的末尾。也就是默认参数必须在所有位置参数的后面设定，否则解释器不能准确识别对应结果。</p>
 <p>调用时，允许参数数量在所有位置参数数量和全部参数数量之间，赋值从左到右逐个进行，剩余则使用默认参数。</p>
 <p>注意：默认值只会执行一次，当默认值为可变对象时，要注意多次调用可能会出现每次结果保留了上次调用结果的可能性。</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs routeros">def add_two_three(a,b,<span class="hljs-attribute">c</span>=0):<br>    return a+b+c<br><span class="hljs-built_in">print</span>(add_two_three(1,2))<br><span class="hljs-built_in">print</span>(add_two_three(3,4,5))<br>def app(<span class="hljs-attribute">i</span>=0,list_use = [] ):<br>    list_use.append(i)<br>    <span class="hljs-built_in">print</span>(list_use)<br>app()<br>app(1)<br>app(2)<br>app(3)<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 12</span><br><span class="hljs-comment"># [0]</span><br><span class="hljs-comment"># [0, 1]</span><br><span class="hljs-comment"># [0, 1, 2]</span><br><span class="hljs-comment"># [0, 1, 2, 3]</span><br></code></pre></td></tr></table></figure>
 <p>默认参数可以和关键字参数一起使用：</p>
-<p>关键字参数必须跟随在位置参数的后面。传递的所有关键字参数必须与函数接受的其中一个参数匹配，它们的顺序并不重要。这也包括非可选参数。不能对同一个参数多次赋值。</p></li>
-<li><p>不定长参数（多值参数）：函数处理参数个数不能确定时使用，对于参数个数可能超过声明时个数需要声明多值参数将多出的参数打包处理。</p>
+<p>关键字参数必须跟随在位置参数的后面。传递的所有关键字参数必须与函数接受的其中一个参数匹配，它们的顺序并不重要。这也包括非可选参数。不能对同一个参数多次赋值。</p>
+</li>
+<li class="lvl-2">
+<p>不定长参数（多值参数）：函数处理参数个数不能确定时使用，对于参数个数可能超过声明时个数需要声明多值参数将多出的参数打包处理。</p>
 <p>Python的多值参数有两种：</p>
-<ul>
-<li>接收元组的参数包：参数名前加一个*，一般用*args表示。</li>
-<li>接收字典的参数包：参数名前加两个**，一般用**kwargs表示。</li>
+<ul class="lvl-2">
+<li class="lvl-4">
+<p>接收元组的参数包：参数名前加一个*，一般用*args表示。</p>
+</li>
+<li class="lvl-4">
+<p>接收字典的参数包：参数名前加两个**，一般用**kwargs表示。</p>
+</li>
 </ul>
-<p>形参列表的格式为：<strong><em>([formal_args,] *var_args_tuple ): /
-([formal_args,] **var_kwargs_dict):</em></strong></p>
+<p>形参列表的格式为：<em><strong>([formal_args,] *var_args_tuple ): / ([formal_args,] **var_kwargs_dict):</strong></em></p>
 <p>增加的*和**就是解包的表现。</p>
 <p>解包参数列表：当参数在列表或者元组中，又需要为单独的位置参数的函数提供参数时，通过对其解包完成参数传递。</p>
 <p>对于元组，每个元素作为一个参数传递，按顺序进行；对于字典，参数名作为键，参数传入值作为值，形成键值对完成传递。</p>
 <p><strong>强制命名参数</strong>：如果有其他参数被定义到了多值参数的后面，称为强制命名参数，调用时必须显式使用关键字参数传递值。</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">def</span> add_many(*args):<br>    <span class="hljs-attribute">print</span>(args)<br>    <span class="hljs-attribute">count</span>=<span class="hljs-number">0</span><br>    <span class="hljs-attribute">for</span> i in args:<br>        <span class="hljs-attribute">count</span> =count+i<br>    <span class="hljs-attribute">print</span>(count)<br><span class="hljs-attribute">add_many</span>(<span class="hljs-number">1</span>)<br><span class="hljs-attribute">add_many</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>)<br><span class="hljs-attribute">add_many</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)<br><span class="hljs-attribute">add_many</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>)<br><span class="hljs-attribute">tuple_temp</span>=(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>)<br><span class="hljs-attribute">add_many</span>(*tuple_temp)<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># (1,)</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># (1, 2)</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># (1, 2, 3)</span><br><span class="hljs-comment"># 6</span><br><span class="hljs-comment"># (1, 2, 3, 4, 5, 6, 7, 8, 9)</span><br><span class="hljs-comment"># 45</span><br><span class="hljs-comment"># (1, 2, 3, 4, 5, 6, 7, 8, 9)</span><br><span class="hljs-comment"># 45</span><br><span class="hljs-attribute">def</span> add_many(**kwargs):<br>    <span class="hljs-attribute">count</span>=<span class="hljs-number">0</span><br>    <span class="hljs-attribute">for</span> i in kwargs.values():<br>        <span class="hljs-attribute">count</span> = count+int(i)<br>    <span class="hljs-attribute">print</span>(count)<br>    <span class="hljs-attribute">print</span>(kwargs)<br><span class="hljs-attribute">temp</span> =&#123;&#x27;a&#x27;:&#x27;<span class="hljs-number">1</span>&#x27;,&#x27;b&#x27;:&#x27;<span class="hljs-number">2</span>&#x27;,&#x27;c&#x27;:&#x27;<span class="hljs-number">3</span>&#x27;&#125;<br><span class="hljs-attribute">add_many</span>(**temp)<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># 6</span><br><span class="hljs-comment"># &#123;&#x27;a&#x27;: &#x27;1&#x27;, &#x27;b&#x27;: &#x27;2&#x27;, &#x27;c&#x27;: &#x27;3&#x27;&#125;</span><br><br><span class="hljs-attribute">def</span> add_three(a,b,c):<br>    <span class="hljs-attribute">return</span> a+b*<span class="hljs-number">2</span>+c*<span class="hljs-number">3</span><br><span class="hljs-attribute">list_temp</span>=(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)<br><span class="hljs-attribute">print</span>(add_three(*list_temp))<br><span class="hljs-attribute">dict_temp</span>=&#123;&#x27;b&#x27;:<span class="hljs-number">1</span>,&#x27;a&#x27;:<span class="hljs-number">2</span>,&#x27;c&#x27;:<span class="hljs-number">3</span>&#125;<br><span class="hljs-attribute">print</span>(add_three(**dict_temp))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 14</span><br><span class="hljs-comment"># 13</span><br><br><span class="hljs-attribute">def</span> add_more_solid(*args,solid):<br>    <span class="hljs-attribute">count</span>=solid<br>    <span class="hljs-attribute">for</span> i in args:<br>        <span class="hljs-attribute">count</span> =count + i<br>    <span class="hljs-attribute">print</span>(count)<br><span class="hljs-attribute">tuple_temp</span>=(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)<br><span class="hljs-attribute">add_more_solid</span>(*tuple_temp,solid =<span class="hljs-number">10</span>)<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># 25</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">def</span> add_many(*args):<br>    <span class="hljs-attribute">print</span>(args)<br>    <span class="hljs-attribute">count</span>=<span class="hljs-number">0</span><br>    <span class="hljs-attribute">for</span> i in args:<br>        <span class="hljs-attribute">count</span> =count+i<br>    <span class="hljs-attribute">print</span>(count)<br><span class="hljs-attribute">add_many</span>(<span class="hljs-number">1</span>)<br><span class="hljs-attribute">add_many</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>)<br><span class="hljs-attribute">add_many</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)<br><span class="hljs-attribute">add_many</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>)<br><span class="hljs-attribute">tuple_temp</span>=(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>)<br><span class="hljs-attribute">add_many</span>(*tuple_temp)<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># (1,)</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># (1, 2)</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># (1, 2, 3)</span><br><span class="hljs-comment"># 6</span><br><span class="hljs-comment"># (1, 2, 3, 4, 5, 6, 7, 8, 9)</span><br><span class="hljs-comment"># 45</span><br><span class="hljs-comment"># (1, 2, 3, 4, 5, 6, 7, 8, 9)</span><br><span class="hljs-comment"># 45</span><br><span class="hljs-attribute">def</span> add_many(**kwargs):<br>    <span class="hljs-attribute">count</span>=<span class="hljs-number">0</span><br>    <span class="hljs-attribute">for</span> i in kwargs.values():<br>        <span class="hljs-attribute">count</span> = count+int(i)<br>    <span class="hljs-attribute">print</span>(count)<br>    <span class="hljs-attribute">print</span>(kwargs)<br><span class="hljs-attribute">temp</span> =&#123;&#x27;a&#x27;:&#x27;<span class="hljs-number">1</span>&#x27;,&#x27;b&#x27;:&#x27;<span class="hljs-number">2</span>&#x27;,&#x27;c&#x27;:&#x27;<span class="hljs-number">3</span>&#x27;&#125;<br><span class="hljs-attribute">add_many</span>(**temp)<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># 6</span><br><span class="hljs-comment"># &#123;&#x27;a&#x27;: &#x27;1&#x27;, &#x27;b&#x27;: &#x27;2&#x27;, &#x27;c&#x27;: &#x27;3&#x27;&#125;</span><br><br><span class="hljs-attribute">def</span> add_three(a,b,c):<br>    <span class="hljs-attribute">return</span> a+b*<span class="hljs-number">2</span>+c*<span class="hljs-number">3</span><br><span class="hljs-attribute">list_temp</span>=(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)<br><span class="hljs-attribute">print</span>(add_three(*list_temp))<br><span class="hljs-attribute">dict_temp</span>=&#123;&#x27;b&#x27;:<span class="hljs-number">1</span>,&#x27;a&#x27;:<span class="hljs-number">2</span>,&#x27;c&#x27;:<span class="hljs-number">3</span>&#125;<br><span class="hljs-attribute">print</span>(add_three(**dict_temp))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 14</span><br><span class="hljs-comment"># 13</span><br><br><span class="hljs-attribute">def</span> add_more_solid(*args,solid):<br>    <span class="hljs-attribute">count</span>=solid<br>    <span class="hljs-attribute">for</span> i in args:<br>        <span class="hljs-attribute">count</span> =count + i<br>    <span class="hljs-attribute">print</span>(count)<br><span class="hljs-attribute">tuple_temp</span>=(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)<br><span class="hljs-attribute">add_more_solid</span>(*tuple_temp,solid =<span class="hljs-number">10</span>)<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># 25</span><br></code></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4><span id="4内嵌函数">4.内嵌函数：</span></h4>
+<h4 id="4内嵌函数"><a href="#4内嵌函数" class="header-anchor">¶</a>4.内嵌函数：</h4>
 <p>在一个函数内创建另一个函数，通常还需要在其中调用，一旦脱离函数，创建的函数也不能够再使用了。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">add_three</span>(<span class="hljs-params">a,b,c</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">add_two</span>(<span class="hljs-params">x,y</span>):<br>        <span class="hljs-built_in">print</span>(x+y)<br>        <span class="hljs-keyword">return</span> x+y<br>    <span class="hljs-keyword">return</span> add_two(a,b)+c<br><span class="hljs-built_in">print</span>(add_three(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>))<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 6</span><br></code></pre></td></tr></table></figure>
 
@@ -450,7 +467,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/python-study/" class="category-chain-item">python_study</a>
+  <a href="/xiaohei07/xiaohei07.github.io/categories/python-study/" class="category-chain-item">python_study</a>
   
   
 
@@ -465,9 +482,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
       
-        <a href="/tags/python/">#python</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/python/">#python</a>
       
     </div>
   
@@ -480,7 +497,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>python基础——函数(二)</div>
-      <div>http://example.com/2023/07/11/python基础——函数(二)/</div>
+      <div>https://github.com/xiaohei07/xiaohei07.github.io/2023/07/11/python基础——函数(二)/</div>
     </div>
     <div class="license-meta">
       
@@ -524,7 +541,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/12/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%B8%89)/" title="python进阶——函数(三)">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/07/12/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%B8%89)/" title="python进阶——函数(三)">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">python进阶——函数(三)</span>
                         <span class="visible-mobile">上一篇</span>
@@ -534,7 +551,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%B8%80)/" title="python基础——函数(一)">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%B8%80)/" title="python基础——函数(一)">
                         <span class="hidden-mobile">python基础——函数(一)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -594,7 +611,6 @@
 </div>
 
 
-
   </aside>
 
 
@@ -614,15 +630,18 @@
 
 
 
-  
-
-
 
   
 
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -669,7 +688,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -720,8 +739,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -743,93 +762,56 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
+   <script>
+  Fluid.utils.createScript('https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.28.2/tocbot.min.js', function() {
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !window.tocbot) { return; }
+  var boardCtn = jQuery('#board-ctn');
+  var boardTop = boardCtn.offset().top;
 
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
+  window.tocbot.init(Object.assign({
+  tocSelector : '#toc-body',
+  contentSelector : '.markdown-body',
+  headingSelector : 'h1, h2, h3, h4, h5, h6',
+  linkClass : 'tocbot-link',
+  activeLinkClass : 'tocbot-active-link',
+  listClass : 'tocbot-list',
+  isCollapsedClass: 'tocbot-is-collapsed',
+  collapsibleClass: 'tocbot-is-collapsible',
+  scrollSmooth : true,
+  includeTitleTags: true,
+  includeHtml: true,
+  headingsOffset : -boardTop,
+  }, CONFIG.toc));
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
 
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
+  Fluid.events.registerRefreshCallback(function() {
+  if ('tocbot' in window) {
+  tocbot.refresh();
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !tocbot) {
+  return;
+  }
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
+  }
   });
-</script>
-
+  });
+  </script>
+  
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
 
 
   
@@ -842,17 +824,58 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script defer src="/js/leancloud.js" ></script>
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
 
-  <script  src="/js/local-search.js" ></script>
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
+
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -860,7 +883,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="（一）条件判断 根据条件的成立情况决定执行哪些代码。 （二）if条件判断 1. if语句格式： if 条件表达式: ​ if成立后执行代码块 elif 条件表达式: ​ elif成立后执行代码块 elif 条件表达式: ​ elif成立后执行代码块 elif 条件表达式: ​ elif成立后执行代码块 ...... else: ​ else成立后执行代码块 2. if">
+    <meta name="description" content="¶（一）条件判断 根据条件的成立情况决定执行哪些代码。 ¶（二）if条件判断 ¶1. if语句格式： if 条件表达式: ​	if成立后执行代码块 elif 条件表达式: ​	elif成立后执行代码块 elif 条件表达式: ​	elif成立后执行代码块 elif 条件表达式: ​	elif成立后执行代码块 ...... else: ​	else成立后执行代码块 ¶2. if条件语句的限制：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python基础——条件判断">
-<meta property="og:url" content="http://example.com/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/index.html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（一）条件判断 根据条件的成立情况决定执行哪些代码。 （二）if条件判断 1. if语句格式： if 条件表达式: ​ if成立后执行代码块 elif 条件表达式: ​ elif成立后执行代码块 elif 条件表达式: ​ elif成立后执行代码块 elif 条件表达式: ​ elif成立后执行代码块 ...... else: ​ else成立后执行代码块 2. if">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/index.html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="¶（一）条件判断 根据条件的成立情况决定执行哪些代码。 ¶（二）if条件判断 ¶1. if语句格式： if 条件表达式: ​	if成立后执行代码块 elif 条件表达式: ​	elif成立后执行代码块 elif 条件表达式: ​	elif成立后执行代码块 elif 条件表达式: ​	elif成立后执行代码块 ...... else: ​	else成立后执行代码块 ¶2. if条件语句的限制：">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-11T03:53:03.000Z">
 <meta property="article:modified_time" content="2023-07-11T09:13:43.759Z">
@@ -32,7 +32,7 @@
   
   
   
-  <title>python基础——条件判断 - ZZHの个人博客</title>
+  <title>python基础——条件判断 - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -56,35 +56,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -118,7 +118,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -137,7 +137,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -149,7 +149,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -161,21 +161,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -195,7 +183,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -203,15 +199,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -225,7 +213,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -237,7 +225,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -267,7 +255,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -280,6 +268,11 @@
         
           
   <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        07xiaohei
+      </span>
     
     
       <span class="post-meta">
@@ -307,7 +300,7 @@
         
         
         
-          20 分钟
+          6 分钟
         
       </span>
     
@@ -355,82 +348,103 @@
             <!-- SEO header -->
             <h1 style="display: none">python基础——条件判断</h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：1 年前
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
-                <h3><span id="一条件判断">（一）条件判断</span></h3>
+                <h3 id="一条件判断"><a href="#一条件判断" class="header-anchor">¶</a>（一）条件判断</h3>
 <p>根据条件的成立情况决定执行哪些代码。</p>
-<h3><span id="二if条件判断">（二）if条件判断</span></h3>
-<h4><span id="1-if语句格式">1. if语句格式：</span></h4>
+<h3 id="二if条件判断"><a href="#二if条件判断" class="header-anchor">¶</a>（二）if条件判断</h3>
+<h4 id="1-if语句格式"><a href="#1-if语句格式" class="header-anchor">¶</a>1. if语句格式：</h4>
 <p><strong>if 条件表达式:</strong></p>
-<p>​ <strong>if成立后执行代码块</strong></p>
+<p>​	<strong>if成立后执行代码块</strong></p>
 <p><strong>elif 条件表达式:</strong></p>
-<p>​ <strong>elif成立后执行代码块</strong></p>
+<p>​	<strong>elif成立后执行代码块</strong></p>
 <p><strong>elif 条件表达式:</strong></p>
-<p>​ <strong>elif成立后执行代码块</strong></p>
+<p>​	<strong>elif成立后执行代码块</strong></p>
 <p><strong>elif 条件表达式:</strong></p>
-<p>​ <strong>elif成立后执行代码块</strong></p>
+<p>​	<strong>elif成立后执行代码块</strong></p>
 <p><strong>......</strong></p>
 <p><strong>else:</strong></p>
-<p>​ <strong>else成立后执行代码块</strong></p>
-<h4><span id="2-if条件语句的限制">2. if条件语句的限制：</span></h4>
-<ul>
-<li><p><strong>代码块：</strong></p>
+<p>​	<strong>else成立后执行代码块</strong></p>
+<h4 id="2-if条件语句的限制"><a href="#2-if条件语句的限制" class="header-anchor">¶</a>2. if条件语句的限制：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><strong>代码块：</strong></p>
 <p>代码块是一组代码作为的一个整体，其执行的选择是统一的（要么执行代码块，要么全部跳过），python作为解释性语言，对一个代码块不是逐个语句读取就解释的，而是读完一个代码块后统一解释一个代码块。</p>
 <p>代码块是一种为代码分组的机制，其作用是组织代码。</p>
 <p>代码块以缩进开始，直至代码恢复到之前的缩进级别时结束，该范围为代码块的作用域，一旦退出代码块范围就退出了作用域范围。</p>
-<p><strong>if判断条件为真时进入代码块，为假时跳过整个代码块。</strong></p></li>
-<li><p><strong>多条件判断：</strong></p>
+<p><strong>if判断条件为真时进入代码块，为假时跳过整个代码块。</strong></p>
+</li>
+<li class="lvl-2">
+<p><strong>多条件判断：</strong></p>
 <p>if语句中没有switch语句，因此只能使用elif作为多条件判断。</p>
 <p>每次if语句只可能执行一个分支或者一个都不执行。</p>
-<p>多个条件符合时，由于if语句是逐个分支判断的，所以只可能执行最上方的满足条件的分支。</p></li>
-<li><p><strong>嵌套:</strong></p>
+<p>多个条件符合时，由于if语句是逐个分支判断的，所以只可能执行最上方的满足条件的分支。</p>
+</li>
+<li class="lvl-2">
+<p><strong>嵌套:</strong></p>
 <p>将一个if语句嵌入到某个分支的代码块中即可完成嵌套。</p>
-<p>python支持任意层次的if语句嵌套。</p></li>
+<p>python支持任意层次的if语句嵌套。</p>
+</li>
 </ul>
-<h4><span id="3-条件表达式">3. 条件表达式：</span></h4>
+<h4 id="3-条件表达式"><a href="#3-条件表达式" class="header-anchor">¶</a>3. 条件表达式：</h4>
 <p>可以是一个单一的值或者变量，也可以是由运算符组成的复杂语句，形式不限。</p>
 <p>整体作为一个布尔值被使用，是True和False的一个，判断可以等同于判断其真假。</p>
-<h4><span id="4-三目运算">4. 三目运算：</span></h4>
-<p>格式：<strong>exp1 if condition else
-exp2</strong>，exp1和exp2是两个表达是，condition是判断条件。</p>
+<h4 id="4-三目运算"><a href="#4-三目运算" class="header-anchor">¶</a>4. 三目运算：</h4>
+<p>格式：<strong>exp1 if condition else exp2</strong>，exp1和exp2是两个表达是，condition是判断条件。</p>
 <p>如果condition为真，执行exp1，如果为假就执行exp2</p>
 <p>三目运算允许嵌套，嵌套内容相当于在else之后再进行一个三目运算。</p>
-<h3><span id="三条件表达式的运算符">（三）条件表达式的运算符</span></h3>
-<h4><span id="1-比较运算符">1. 比较运算符：</span></h4>
-<p>包括等于运算符==，不等于运算符!=，大于运算符＞，小于运算符＜，大于等于运算符＞=、小于等于运算符＜=六个基本运算符，另外还有is
-in两个特殊比较运算符</p>
+<h3 id="三条件表达式的运算符"><a href="#三条件表达式的运算符" class="header-anchor">¶</a>（三）条件表达式的运算符</h3>
+<h4 id="1-比较运算符"><a href="#1-比较运算符" class="header-anchor">¶</a>1. 比较运算符：</h4>
+<p>包括等于运算符==，不等于运算符!=，大于运算符＞，小于运算符＜，大于等于运算符＞=、小于等于运算符＜=六个基本运算符，另外还有is in两个特殊比较运算符</p>
 <p>基本比较逻辑不再赘述（简单易懂），注意一下字符串的大小比较是一个个字符的比较即可。</p>
 <p>如果想对汉字等特殊字符比较，更换编码格式即可（详见之前的博客）。</p>
 <p>另外，注意Python允许范围比较，即用一个区间判断作为表达式。</p>
-<ul>
-<li><p>is比较运算符：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>is比较运算符：</p>
 <p>is是Python身份运算符，用于判断两个对象的标识符是否相等（注意，Python中一切皆对象）。</p>
 <p>实际上，is是用于比较左右两方的对应存储位置是否相同。</p>
 <p>注意：None对象是一个单例类的实例，具有唯一的标识号，因此判断对象是否为None时，使用：</p>
 <p><strong>对象 is None</strong>判断其是否为None。</p>
-<p>is的否定一般使用<strong>is not</strong>来表示，不使用not 对象 is
-.......来表示。</p></li>
-<li><p>in比较运算符：</p>
+<p>is的否定一般使用<strong>is not</strong>来表示，不使用not 对象 is .......来表示。</p>
+</li>
+<li class="lvl-2">
+<p>in比较运算符：</p>
 <p>in是Python的成员检测运算符，用于判断某个元素是否属于某个序列，序列可以是各种集合，包括字符串。</p>
-<p>元素不一定必须是单个的，可以是另一个集合构成的元素，例如可以判断一个字符串是否是另一个字符串的子串。</p></li>
+<p>元素不一定必须是单个的，可以是另一个集合构成的元素，例如可以判断一个字符串是否是另一个字符串的子串。</p>
+</li>
 </ul>
-<h4><span id="2-逻辑运算符">2. 逻辑运算符：</span></h4>
-<p>包括与运算符<strong>and</strong>，或运算符<strong>or</strong>和非运算符<strong>not</strong>，其中运算优先级<strong>not&gt;and&gt;or</strong>，如果需要改变优先级，使用<strong>()</strong>来修改运算优先级。</p>
-<ul>
-<li><p>and（逻辑与）：</p>
+<h4 id="2-逻辑运算符"><a href="#2-逻辑运算符" class="header-anchor">¶</a>2. 逻辑运算符：</h4>
+<p>包括与运算符<strong>and</strong>，或运算符<strong>or</strong>和非运算符<strong>not</strong>，其中运算优先级<strong>not&gt;and&gt;or</strong>，如果需要改变优先级，使用**()**来修改运算优先级。</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>and（逻辑与）：</p>
 <p>and可以对运算符两侧的表达式进行与运算，只有两侧的值均为True时，才会返回True，否则均返回False。</p>
-<p>注意：与运算中，如果第一个表达式已经为False，则直接返回False，不会再判断第二个表达式。</p></li>
-<li><p>or（逻辑或）：</p>
+<p>注意：与运算中，如果第一个表达式已经为False，则直接返回False，不会再判断第二个表达式。</p>
+</li>
+<li class="lvl-2">
+<p>or（逻辑或）：</p>
 <p>or可以对运算符两侧的表达式进行或运算，只有两侧的值均为False时，才会返回False，否则均返回True。</p>
-<p>注意：或运算中，如果第一个表达式已经为True，则直接返回True，不会再判断第二个表达式。</p></li>
-<li><p>not（逻辑非）：</p>
-<p>not可以对运算符右侧的表达式进行非运算，使其最后的布尔值取反。</p></li>
+<p>注意：或运算中，如果第一个表达式已经为True，则直接返回True，不会再判断第二个表达式。</p>
+</li>
+<li class="lvl-2">
+<p>not（逻辑非）：</p>
+<p>not可以对运算符右侧的表达式进行非运算，使其最后的布尔值取反。</p>
+</li>
 </ul>
 <p>注意：对非布尔值也可以进行与或运算，Python会将其当做布尔值运算，最终会返回原值。</p>
 <p>与运算：如果第一个值是True，返回第二个值；如果第一个值是False，直接返回第一个值。</p>
 <p>或运算：如果第一个值是False，返回第二个值；如果第一个值是True，直接返回第一个值。</p>
-<h3><span id="四运行样例">（四）运行样例</span></h3>
+<h3 id="四运行样例"><a href="#四运行样例" class="header-anchor">¶</a>（四）运行样例</h3>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">value</span> = <span class="hljs-number">25</span><br><span class="hljs-attribute">while</span>(value &gt;= <span class="hljs-number">10</span>):<br>    <span class="hljs-attribute">if</span> value &gt; <span class="hljs-number">20</span> :<br>        <span class="hljs-attribute">print</span>(<span class="hljs-string">&quot;value &gt; 20&quot;</span>)<br>        <span class="hljs-attribute">value</span> = <span class="hljs-number">15</span><br>    <span class="hljs-attribute">elif</span> <span class="hljs-number">15</span> &lt;= value &lt;= <span class="hljs-number">20</span>:<br>        <span class="hljs-attribute">print</span>(<span class="hljs-string">&quot;15 &lt;= value &lt;= 20&quot;</span>)<br>        <span class="hljs-attribute">value</span> = <span class="hljs-number">10</span><br>    <span class="hljs-attribute">else</span>:<br>        <span class="hljs-attribute">print</span>(<span class="hljs-string">&quot;value &lt;15&quot;</span>)<br>        <span class="hljs-attribute">value</span> = <span class="hljs-number">5</span><br><span class="hljs-comment">#运行结果:</span><br><span class="hljs-comment"># value &gt; 20</span><br><span class="hljs-comment"># 15 &lt;= value &lt;= 20</span><br><span class="hljs-comment"># value &lt;15</span><br><br><span class="hljs-attribute">val</span> = <span class="hljs-number">7</span><br><span class="hljs-attribute">if</span> val&gt;<span class="hljs-number">5</span> and val &lt;<span class="hljs-number">8</span>:<br>    <span class="hljs-attribute">print</span>(<span class="hljs-string">&quot;val=%d&quot;</span>%val)<br><span class="hljs-attribute">elif</span> val&gt;=<span class="hljs-number">8</span> and val&lt;<span class="hljs-number">10</span>:<br>    <span class="hljs-attribute">print</span>(<span class="hljs-string">&quot;val &gt;=8, and val=%d&quot;</span>%val)<br><span class="hljs-attribute">else</span>:<br>    <span class="hljs-attribute">print</span>(<span class="hljs-string">&quot;val is no in range&quot;</span>)<br><span class="hljs-comment"># 运行结果：</span><br><span class="hljs-comment"># val=10:</span><br><span class="hljs-comment"># val is no in range</span><br><span class="hljs-comment"># val =8:</span><br><span class="hljs-comment"># val &gt;=8, and val=8</span><br><span class="hljs-comment"># val =7:</span><br><span class="hljs-comment"># val=7</span><br><br><span class="hljs-attribute">r1</span> = <span class="hljs-number">2</span> and <span class="hljs-number">3</span><br><span class="hljs-attribute">r2</span> = <span class="hljs-number">0</span> and <span class="hljs-number">4</span><br><span class="hljs-attribute">r3</span> = <span class="hljs-number">2</span> or <span class="hljs-number">3</span><br><span class="hljs-attribute">r4</span> = <span class="hljs-number">0</span> or <span class="hljs-number">4</span><br><span class="hljs-attribute">print</span>(r1,r2,r3,r4,sep=&#x27;\n&#x27;)<br><span class="hljs-comment">#运行结果：</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 0</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 4</span><br><br></code></pre></td></tr></table></figure>
 <p>更多的运行在实际中检验即可。</p>
 
@@ -451,7 +465,7 @@ in两个特殊比较运算符</p>
     
       <span class="category-chain">
         
-  <a href="/categories/python-study/" class="category-chain-item">python_study</a>
+  <a href="/xiaohei07/xiaohei07.github.io/categories/python-study/" class="category-chain-item">python_study</a>
   
   
 
@@ -466,9 +480,9 @@ in两个特殊比较运算符</p>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
       
-        <a href="/tags/python/">#python</a>
+        <a href="/xiaohei07/xiaohei07.github.io/tags/python/">#python</a>
       
     </div>
   
@@ -481,7 +495,7 @@ in两个特殊比较运算符</p>
   <div class="license-box my-3">
     <div class="license-title">
       <div>python基础——条件判断</div>
-      <div>http://example.com/2023/07/11/python基础——条件判断/</div>
+      <div>https://github.com/xiaohei07/xiaohei07.github.io/2023/07/11/python基础——条件判断/</div>
     </div>
     <div class="license-meta">
       
@@ -525,7 +539,7 @@ in两个特殊比较运算符</p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%BE%AA%E7%8E%AF/" title="python基础——循环">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%BE%AA%E7%8E%AF/" title="python基础——循环">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">python基础——循环</span>
                         <span class="visible-mobile">上一篇</span>
@@ -535,7 +549,7 @@ in两个特殊比较运算符</p>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/04/14/%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95(3)/" title="算法——分治算法(3)">
+                      <a href="/xiaohei07/xiaohei07.github.io/2023/04/14/%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95(3)/" title="算法——分治算法(3)">
                         <span class="hidden-mobile">算法——分治算法(3)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -595,7 +609,6 @@ in两个特殊比较运算符</p>
 </div>
 
 
-
   </aside>
 
 
@@ -615,15 +628,18 @@ in两个特殊比较运算符</p>
 
 
 
-  
-
-
 
   
 
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -670,7 +686,7 @@ in两个特殊比较运算符</p>
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -721,8 +737,8 @@ in两个特殊比较运算符</p>
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -744,93 +760,56 @@ in两个特殊比较运算符</p>
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
+   <script>
+  Fluid.utils.createScript('https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.28.2/tocbot.min.js', function() {
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !window.tocbot) { return; }
+  var boardCtn = jQuery('#board-ctn');
+  var boardTop = boardCtn.offset().top;
 
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
+  window.tocbot.init(Object.assign({
+  tocSelector : '#toc-body',
+  contentSelector : '.markdown-body',
+  headingSelector : 'h1, h2, h3, h4, h5, h6',
+  linkClass : 'tocbot-link',
+  activeLinkClass : 'tocbot-active-link',
+  listClass : 'tocbot-list',
+  isCollapsedClass: 'tocbot-is-collapsed',
+  collapsibleClass: 'tocbot-is-collapsible',
+  scrollSmooth : true,
+  includeTitleTags: true,
+  includeHtml: true,
+  headingsOffset : -boardTop,
+  }, CONFIG.toc));
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
 
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
+  Fluid.events.registerRefreshCallback(function() {
+  if ('tocbot' in window) {
+  tocbot.refresh();
+  var toc = jQuery('#toc');
+  if (toc.length === 0 || !tocbot) {
+  return;
+  }
+  if (toc.find('.toc-list-item').length > 0) {
+  toc.css('visibility', 'visible');
+  }
+  }
   });
-</script>
-
+  });
+  </script>
+  
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
 
 
   
@@ -843,17 +822,58 @@ in两个特殊比较运算符</p>
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script defer src="/js/leancloud.js" ></script>
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
 
-  <script  src="/js/local-search.js" ></script>
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
+
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -861,7 +881,7 @@ in两个特殊比较运算符</p>
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

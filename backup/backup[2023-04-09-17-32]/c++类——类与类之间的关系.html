@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="（一）依赖： 1. 概念： 是一种使用关系，耦合度最弱。 类A使用类B的一部分属性和方法，不会主动改变类B的内容，但是类B的变化会影响到A。 具有偶然性、临时性。 2. 体现：  类B作为类A的成员函数参数。 类B作为A的成员函数的局部变量 类A的成员函数调用的类B的静态方法  3. 代码： 12345678910111213141516171819202122232425">
+    <meta name="description" content="¶（一）依赖： ¶1. 概念： 是一种使用关系，耦合度最弱。类A使用类B的一部分属性和方法，不会主动改变类B的内容，但是类B的变化会影响到A。具有偶然性、临时性。 ¶2. 体现：   类B作为类A的成员函数参数。   类B作为A的成员函数的局部变量   类A的成员函数调用的类B的静态方法   ¶3. 代码： 123456789101112131415161718192021222324252627">
 <meta property="og:type" content="website">
 <meta property="og:title" content="“c++类——类与类之间的关系”">
-<meta property="og:url" content="http://example.com/backup/backup[2023-04-09-17-32]/c++%E7%B1%BB%E2%80%94%E2%80%94%E7%B1%BB%E4%B8%8E%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB.html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="（一）依赖： 1. 概念： 是一种使用关系，耦合度最弱。 类A使用类B的一部分属性和方法，不会主动改变类B的内容，但是类B的变化会影响到A。 具有偶然性、临时性。 2. 体现：  类B作为类A的成员函数参数。 类B作为A的成员函数的局部变量 类A的成员函数调用的类B的静态方法  3. 代码： 12345678910111213141516171819202122232425">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/backup/backup[2023-04-09-17-32]/c++%E7%B1%BB%E2%80%94%E2%80%94%E7%B1%BB%E4%B8%8E%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB.html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="¶（一）依赖： ¶1. 概念： 是一种使用关系，耦合度最弱。类A使用类B的一部分属性和方法，不会主动改变类B的内容，但是类B的变化会影响到A。具有偶然性、临时性。 ¶2. 体现：   类B作为类A的成员函数参数。   类B作为A的成员函数的局部变量   类A的成员函数调用的类B的静态方法   ¶3. 代码： 123456789101112131415161718192021222324252627">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-31T11:21:43.000Z">
 <meta property="article:modified_time" content="2023-04-09T09:32:00.054Z">
@@ -33,7 +33,7 @@
   
   
   
-  <title>“c++类——类与类之间的关系” - ZZHの个人博客</title>
+  <title>“c++类——类与类之间的关系” - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -51,35 +51,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -113,7 +113,7 @@
 <div class="header-inner" style="height: 60vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -132,7 +132,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -144,7 +144,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -156,21 +156,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -190,7 +178,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -198,15 +194,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -220,7 +208,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -232,7 +220,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -262,7 +250,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -296,70 +284,78 @@
                 
 
 <article class="page-content">
-  <h3><span id="一依赖">（一）依赖：</span></h3>
-<h4><span id="1-概念">1. 概念：</span></h4>
-<p>是一种使用关系，耦合度最弱。
-类A使用类B的一部分属性和方法，不会主动改变类B的内容，但是类B的变化会影响到A。
-具有偶然性、临时性。</p>
-<h4><span id="2-体现">2. 体现：</span></h4>
-<ul>
-<li>类B作为类A的成员函数参数。</li>
-<li>类B作为A的成员函数的局部变量</li>
-<li>类A的成员函数调用的类B的静态方法</li>
+  <h3 id="一依赖"><a href="#一依赖" class="header-anchor">¶</a>（一）依赖：</h3>
+<h4 id="1-概念"><a href="#1-概念" class="header-anchor">¶</a>1. 概念：</h4>
+<p>是一种使用关系，耦合度最弱。类A使用类B的一部分属性和方法，不会主动改变类B的内容，但是类B的变化会影响到A。具有偶然性、临时性。</p>
+<h4 id="2-体现"><a href="#2-体现" class="header-anchor">¶</a>2. 体现：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>类B作为类A的成员函数参数。</p>
+</li>
+<li class="lvl-2">
+<p>类B作为A的成员函数的局部变量</p>
+</li>
+<li class="lvl-2">
+<p>类A的成员函数调用的类B的静态方法</p>
+</li>
 </ul>
-<h4><span id="3-代码">3. 代码：</span></h4>
+<h4 id="3-代码"><a href="#3-代码" class="header-anchor">¶</a>3. 代码：</h4>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">B</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-type">static</span> <span class="hljs-type">void</span> <span class="hljs-title">showB</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	</span>&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;showB&quot;</span> &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">CallB1</span><span class="hljs-params">()</span> </span><br><span class="hljs-function">	</span>&#123;<br>		B::<span class="hljs-built_in">showB</span>();<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">CallB2</span><span class="hljs-params">(B b)</span> </span><br><span class="hljs-function">	</span>&#123;<br>		b.<span class="hljs-built_in">showB</span>();<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">CallB3</span><span class="hljs-params">()</span> </span><br><span class="hljs-function">	</span>&#123;<br>		B b;<br>		b.<span class="hljs-built_in">showB</span>();<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span><br><span class="hljs-function"></span>&#123;<br>	B b;<br>	A a;<br>	a.<span class="hljs-built_in">CallB1</span>();<br>	a.<span class="hljs-built_in">CallB2</span>(b);<br>	a.<span class="hljs-built_in">CallB3</span>();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果：</span><br><span class="hljs-comment">//showB</span><br><span class="hljs-comment">//showB</span><br><span class="hljs-comment">//showB</span><br></code></pre></td></tr></table></figure>
-<h3><span id="二关联">（二）关联：</span></h3>
-<h4><span id="1-概念">1. 概念：</span></h4>
+<h3 id="二关联"><a href="#二关联" class="header-anchor">¶</a>（二）关联：</h3>
+<h4 id="1-概念"><a href="#1-概念" class="header-anchor">¶</a>1. 概念：</h4>
 <p>关联是对象之间的一种引用关系，用于表示一类对象与另一类对象的联系。</p>
 <p>关连也是一种弱从属关系，是可以有方向的，可以是单向也可以是双向的。</p>
 <p>关联体现的是两个类之间的一种强依赖关系，不存在偶然性和临时性，一般是长期性的、平等的。</p>
 <p>依赖和关联都是一个类用乐另一个类，但是前者是使用，后者是拥有。</p>
-<h4><span id="2-体现">2. 体现：</span></h4>
-<ul>
-<li>被关联类B以类的属性形式出来在关联类A中。</li>
-<li>关联类A引用了一个类型为被关联类B的全局变量。</li>
+<h4 id="2-体现"><a href="#2-体现" class="header-anchor">¶</a>2. 体现：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>被关联类B以类的属性形式出来在关联类A中。</p>
+</li>
+<li class="lvl-2">
+<p>关联类A引用了一个类型为被关联类B的全局变量。</p>
+</li>
 </ul>
-<h4><span id="3-代码">3. 代码：</span></h4>
+<h4 id="3-代码"><a href="#3-代码" class="header-anchor">¶</a>3. 代码：</h4>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-comment">//A和B是关联关系：</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Me</span>;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">You</span><br>&#123;<br><span class="hljs-keyword">private</span>: <br>	Me* pm;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">printMe</span><span class="hljs-params">()</span></span>;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">printYou</span><span class="hljs-params">()</span></span>;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Me</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	You* py;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">printme</span><span class="hljs-params">()</span></span>;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">printyou</span><span class="hljs-params">()</span></span>;<br>&#125;;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">You::printMe</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-string">&quot;You:&quot;</span> &lt;&lt; endl;<br>	pm-&gt;<span class="hljs-built_in">printme</span>();<br>	<span class="hljs-keyword">return</span>;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">You::printYou</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-string">&quot;我中有你&quot;</span> &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span>;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Me::printyou</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-string">&quot;Me:&quot;</span> &lt;&lt; endl;<br>	py-&gt;<span class="hljs-built_in">printYou</span>();<br>	<span class="hljs-keyword">return</span>;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Me::printme</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-string">&quot;你中有我&quot;</span> &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span>;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span><br><span class="hljs-function"></span>&#123;<br>	Me zzh;<br>	zzh.<span class="hljs-built_in">printyou</span>();<br>	zzh.<span class="hljs-built_in">printme</span>();<br>	You xxx;<br>	xxx.<span class="hljs-built_in">printMe</span>();<br>	xxx.<span class="hljs-built_in">printYou</span>();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//Me:</span><br><span class="hljs-comment">//我中有你</span><br><span class="hljs-comment">//你中有我</span><br><span class="hljs-comment">//You :</span><br><span class="hljs-comment">//你中有我</span><br><span class="hljs-comment">//我中有你</span><br></code></pre></td></tr></table></figure>
-<h3><span id="三聚合">（三）聚合：</span></h3>
-<h4><span id="1-概念">1. 概念：</span></h4>
+<h3 id="三聚合"><a href="#三聚合" class="header-anchor">¶</a>（三）聚合：</h3>
+<h4 id="1-概念"><a href="#1-概念" class="header-anchor">¶</a>1. 概念：</h4>
 <p>聚合关系又名委托关系，聚合关系是关联关系的一种，是一种强关联关系，是整体和部分之间的关系，是has-a的关系。</p>
 <p>聚合关系也是一种弱所属关系，整体和部分之间是可分离的，具有各自的生命周期，部分可以属于多个整体的对象，也可以为多个整体对象共享。</p>
 <p>聚合和关联的区别主要是语义，关联的两个对象一般是平等的，而聚合一般不是平等的。</p>
-<h4><span id="2-体现">2. 体现：</span></h4>
+<h4 id="2-体现"><a href="#2-体现" class="header-anchor">¶</a>2. 体现：</h4>
 <p>聚合通过成员对象来实现的。</p>
 <p>聚合需要配合语义，结合上下文才能判断出是否为聚合，无法直接判断。</p>
-<h4><span id="3-代码">3. 代码：</span></h4>
+<h4 id="3-代码"><a href="#3-代码" class="header-anchor">¶</a>3. 代码：</h4>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-meta">#include&lt;iostream&gt;</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-title">std</span>;<br><span class="hljs-keyword">class</span> <span class="hljs-title">Husband</span>;<br><span class="hljs-keyword">class</span> <span class="hljs-title">Wife</span>;<br><span class="hljs-keyword">class</span> <span class="hljs-title">House</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-built_in">string</span> name;<br><span class="hljs-keyword">public</span>:<br>	House(<span class="hljs-built_in">string</span> s=<span class="hljs-string">&quot;家&quot;</span>):name(s)&#123;&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">showname</span>()</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;家:&quot;</span> &lt;&lt; name &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title">Husband</span> <br>&#123;<br><span class="hljs-keyword">private</span>:<br>	House h;<br>	<span class="hljs-built_in">string</span> name;<br><span class="hljs-keyword">public</span>:<br>	Husband(<span class="hljs-built_in">string</span> s1, <span class="hljs-built_in">string</span> s2=<span class="hljs-string">&quot;zzh&quot;</span>) :h(s1),name(s2) <br>	&#123;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">showHouse</span>()</span> <br>	&#123;<br>		h.showname();<br>		cout &lt;&lt; <span class="hljs-string">&quot;丈夫&quot;</span> &lt;&lt; name &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title">Wife</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	House h;<br>	<span class="hljs-built_in">string</span> name;<br><span class="hljs-keyword">public</span>:<br>	Wife(<span class="hljs-built_in">string</span> s1, <span class="hljs-built_in">string</span> s2 = <span class="hljs-string">&quot;xxx&quot;</span>) :h(s1), name(s2)<br>	&#123;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">showHouse</span>()</span><br>	&#123;<br>		h.showname();<br>		cout &lt;&lt; <span class="hljs-string">&quot;妻子:&quot;</span>&lt;&lt;name &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><span class="hljs-function"><span class="hljs-built_in">int</span> <span class="hljs-title">main</span>()</span> <br>&#123;<br>	<span class="hljs-function">Husband <span class="hljs-title">me</span>(<span class="hljs-params"><span class="hljs-string">&quot;home&quot;</span></span>)</span>;<br>	<span class="hljs-function">Wife <span class="hljs-title">who</span>(<span class="hljs-params"><span class="hljs-string">&quot;Home&quot;</span></span>)</span>;<br>	me.showHouse();<br>	who.showHouse();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果：</span><br><span class="hljs-comment">//家:home</span><br><span class="hljs-comment">//丈夫zzh</span><br><span class="hljs-comment">//家 : Home</span><br><span class="hljs-comment">//妻子 : xxx</span><br></code></pre></td></tr></table></figure>
-<h3><span id="四组合">（四）组合：</span></h3>
-<h4><span id="1-概念">1. 概念：</span></h4>
+<h3 id="四组合"><a href="#四组合" class="header-anchor">¶</a>（四）组合：</h3>
+<h4 id="1-概念"><a href="#1-概念" class="header-anchor">¶</a>1. 概念：</h4>
 <p>也是关联关系的一种特例，是整体和部分的关系，一个对象（是部分）被放到另一个对象中（是整体），是contains-a的关系。</p>
 <p>是一种强所属关系（比聚合更强），和聚合不同的是，整体和部分是不可分的，具有相同的生命周期，整体（组合类）可以控制部分（被组合类）的生命周期，整体的对象不存在，则部分的对象也不存在，也就是部分对象不能独立存在。</p>
 <p>相比聚合，组合的两个对象的不平等性进一步加大。</p>
-<h4><span id="2-体现">2. 体现：</span></h4>
+<h4 id="2-体现"><a href="#2-体现" class="header-anchor">¶</a>2. 体现：</h4>
 <p>同聚合关系，组合也是通过成员对象来实现的。</p>
 <p>组合也需要配合语义，结合上下文才能判断出是否为聚合，无法直接判断。</p>
 <p>聚合和组合的最关键区别是两个对象的生命周期是否一致，而不是出现的形式。</p>
-<h4><span id="3-代码">3. 代码：</span></h4>
+<h4 id="3-代码"><a href="#3-代码" class="header-anchor">¶</a>3. 代码：</h4>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-meta">#include&lt;iostream&gt;</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-title">std</span>;<br><span class="hljs-keyword">class</span> <span class="hljs-title">eye</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-built_in">double</span> lefteyesight;<br>	<span class="hljs-built_in">double</span> righteyesight;<br><span class="hljs-keyword">public</span>:<br>	eye(<span class="hljs-built_in">double</span> d1, <span class="hljs-built_in">double</span> d2) :lefteyesight(d1), righteyesight(d2) <br>	&#123;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printeyesight</span>()</span> <br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;左眼:&quot;</span> &lt;&lt; lefteyesight &lt;&lt; endl;<br>		cout &lt;&lt; <span class="hljs-string">&quot;右眼:&quot;</span> &lt;&lt; righteyesight &lt;&lt; endl;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title">person</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	eye e;<br>	<span class="hljs-built_in">int</span> sex;<br><span class="hljs-keyword">public</span>:<br>	person(<span class="hljs-built_in">int</span> x=<span class="hljs-number">0</span>, <span class="hljs-built_in">double</span> d1 = <span class="hljs-number">1.0</span>, <span class="hljs-built_in">double</span> d2 = <span class="hljs-number">1.0</span>) :e(d1, d2), sex(x)&#123;&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printperson</span>()</span> <br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;性别:&quot;</span> &lt;&lt; sex &lt;&lt; endl;<br>		e.printeyesight();<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>&#125;;<br><span class="hljs-function"><span class="hljs-built_in">int</span> <span class="hljs-title">main</span>()</span> <br>&#123;<br>	person p;<br>	p.printperson();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果:</span><br><span class="hljs-comment">//性别:0</span><br><span class="hljs-comment">//左眼 : 1</span><br><span class="hljs-comment">//右眼 : 1</span><br></code></pre></td></tr></table></figure>
-<h3><span id="五实现">（五）实现：</span></h3>
-<h4><span id="1-概念">1. 概念：</span></h4>
+<h3 id="五实现"><a href="#五实现" class="header-anchor">¶</a>（五）实现：</h3>
+<h4 id="1-概念"><a href="#1-概念" class="header-anchor">¶</a>1. 概念：</h4>
 <p>是接口与实现类之间的关系，在此关系中，类实现接口，类中的操作实现了接口中所声明的所有的抽象操作。</p>
-<h4><span id="2-体现">2. 体现：</span></h4>
+<h4 id="2-体现"><a href="#2-体现" class="header-anchor">¶</a>2. 体现：</h4>
 <p>接口通过纯虚函数来实现，多态就是通过虚函数来实现的。</p>
-<h4><span id="3-代码">3. 代码：</span></h4>
+<h4 id="3-代码"><a href="#3-代码" class="header-anchor">¶</a>3. 代码：</h4>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-meta">#include&lt;iostream&gt;</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-title">std</span>;<br><span class="hljs-keyword">class</span> <span class="hljs-title">person</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printperson</span>()</span> = <span class="hljs-number">0</span>;<br>&#125;;<br><span class="hljs-keyword">class</span> <span class="hljs-title">student</span>:<span class="hljs-title">public</span> <span class="hljs-title">person</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-built_in">string</span> name;<br><span class="hljs-keyword">public</span>:<br>	student(<span class="hljs-built_in">string</span> s=<span class="hljs-string">&quot;zzh&quot;</span>) :name(s) &#123;&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printperson</span>()</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;这是一个人&quot;</span> &lt;&lt; endl;<br>		cout &lt;&lt; <span class="hljs-string">&quot;是学生,名字是:&quot;</span> &lt;&lt; name &lt;&lt; endl;<br>	&#125;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-built_in">int</span> <span class="hljs-title">main</span>()</span> <br>&#123;<br>	student s;<br>	s.printperson();<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//运行结果：</span><br><span class="hljs-comment">//这是一个人</span><br><span class="hljs-comment">//是学生, 名字是:zzh</span><br></code></pre></td></tr></table></figure>
-<h3><span id="六继承">（六）继承：</span></h3>
-<h4><span id="1-概念">1. 概念：</span></h4>
+<h3 id="六继承"><a href="#六继承" class="header-anchor">¶</a>（六）继承：</h3>
+<h4 id="1-概念"><a href="#1-概念" class="header-anchor">¶</a>1. 概念：</h4>
 <p>继承关系又名泛化关系，是面向对象的三大特征之一，是对象之间耦合度最大的一种关系，表示一般与特殊的关系，是is-a关系。</p>
 <p>继承表达的是一种上下级关系。</p>
 <p>更多内容详见c++类——继承关系。</p>
-<h4><span id="2-体现">2. 体现：</span></h4>
+<h4 id="2-体现"><a href="#2-体现" class="header-anchor">¶</a>2. 体现：</h4>
 <p>通过面向对象的继承机制实现继承关系。</p>
-<h4><span id="3-代码">3. 代码：</span></h4>
+<h4 id="3-代码"><a href="#3-代码" class="header-anchor">¶</a>3. 代码：</h4>
 <figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs perl"><span class="hljs-comment">#include&lt;iostream&gt;</span><br>using namespace std;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">person</span> </span>&#123;&#125;;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">student</span><span class="hljs-attr"> :public</span> <span class="hljs-title">person</span> </span>&#123;&#125;;<br></code></pre></td></tr></table></figure>
-<h3><span id="七不同类之间关系的强弱比较">（七）不同类之间关系的强弱比较：</span></h3>
+<h3 id="七不同类之间关系的强弱比较"><a href="#七不同类之间关系的强弱比较" class="header-anchor">¶</a>（七）不同类之间关系的强弱比较：</h3>
 <p>继承=实现&gt;组合&gt;聚合&gt;关联&gt;依赖</p>
 
 
@@ -413,7 +409,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -464,8 +460,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -487,23 +483,21 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  <script defer src="/js/leancloud.js" ></script>
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -511,7 +505,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   

@@ -7,21 +7,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
+  <link rel="icon" href="/xiaohei07/xiaohei07.github.io/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="07xiaohei">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="python、c++、机器学习、计算机视觉、资源技巧">
   
-    <meta name="description" content="(一)概念： 此处说明的输入和输出是指控制台从键盘输入文本和输出在屏幕指定文字，暂不包括向文件的输入和输出。 输入是基于input()的函数输入，输出是基于print()的函数输出。 此外还将讲解print涉及的格式化输出。 （二）基于input()函数的输入： 1.基本用法： input()函数的作用是获得键盘的输入数据。 一般格式： 变量名&#x3D;input() input()函数在">
+    <meta name="description" content="¶(一)概念： 此处说明的输入和输出是指控制台从键盘输入文本和输出在屏幕指定文字，暂不包括向文件的输入和输出。 输入是基于input()的函数输入，输出是基于print()的函数输出。 此外还将讲解print涉及的格式化输出。 ¶（二）基于input()函数的输入： ¶1.基本用法： input()函数的作用是获得键盘的输入数据。 一般格式： 变量名&#x3D;input(&lt;提示字符串&gt;) in">
 <meta property="og:type" content="website">
 <meta property="og:title" content="python基础——输入和输出详解">
-<meta property="og:url" content="http://example.com/backup/backup[2023-04-09-17-38]/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA%E8%AF%A6%E8%A7%A3.html">
-<meta property="og:site_name" content="ZZHの个人博客">
-<meta property="og:description" content="(一)概念： 此处说明的输入和输出是指控制台从键盘输入文本和输出在屏幕指定文字，暂不包括向文件的输入和输出。 输入是基于input()的函数输入，输出是基于print()的函数输出。 此外还将讲解print涉及的格式化输出。 （二）基于input()函数的输入： 1.基本用法： input()函数的作用是获得键盘的输入数据。 一般格式： 变量名&#x3D;input() input()函数在">
+<meta property="og:url" content="https://github.com/xiaohei07/xiaohei07.github.io/backup/backup[2023-04-09-17-38]/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA%E8%AF%A6%E8%A7%A3.html">
+<meta property="og:site_name" content="07xiaoheiの个人博客">
+<meta property="og:description" content="¶(一)概念： 此处说明的输入和输出是指控制台从键盘输入文本和输出在屏幕指定文字，暂不包括向文件的输入和输出。 输入是基于input()的函数输入，输出是基于print()的函数输出。 此外还将讲解print涉及的格式化输出。 ¶（二）基于input()函数的输入： ¶1.基本用法： input()函数的作用是获得键盘的输入数据。 一般格式： 变量名&#x3D;input(&lt;提示字符串&gt;) in">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-18T12:28:37.000Z">
 <meta property="article:modified_time" content="2023-04-09T09:38:38.199Z">
@@ -32,7 +32,7 @@
   
   
   
-  <title>python基础——输入和输出详解 - ZZHの个人博客</title>
+  <title>python基础——输入和输出详解 - 07xiaoheiの个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -50,35 +50,35 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css# 滚动条颜色.css">
+<link rel="stylesheet" href="/xiaohei07/xiaohei07.github.io/css/fluid-extention.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/xiaohei07/xiaohei07.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/xiaohei07/xiaohei07.github.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/utils.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/color-schema.js" ></script>
   
 
   
@@ -112,7 +112,7 @@
 <div class="header-inner" style="height: 60vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/xiaohei07/xiaohei07.github.io/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -131,7 +131,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -143,7 +143,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -155,21 +155,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/HTML/index.html">
-                <i class="iconfont icon-bilibili-fill"></i>
-                <span>happy birthday</span>
               </a>
             </li>
           
@@ -189,7 +177,15 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-baiduyun">
+                    
+                    <span>百度网盘</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -197,15 +193,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
-                    
-                    <span>baiduyun</span>
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/xiaohei07/xiaohei07.github.io/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -219,7 +207,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -231,7 +219,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/xiaohei07/xiaohei07.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -261,7 +249,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/xiaohei07/xiaohei07.github.io/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -295,56 +283,60 @@
                 
 
 <article class="page-content">
-  <h3><span id="一概念">(一)概念：</span></h3>
+  <h3 id="一概念"><a href="#一概念" class="header-anchor">¶</a>(一)概念：</h3>
 <p>此处说明的输入和输出是指控制台从键盘输入文本和输出在屏幕指定文字，暂不包括向文件的输入和输出。</p>
 <p>输入是基于input()的函数输入，输出是基于print()的函数输出。</p>
 <p>此外还将讲解print涉及的格式化输出。</p>
-<h3><span id="二基于input函数的输入">（二）基于input()函数的输入：</span></h3>
-<h4><span id="1基本用法">1.基本用法：</span></h4>
+<h3 id="二基于input函数的输入"><a href="#二基于input函数的输入" class="header-anchor">¶</a>（二）基于input()函数的输入：</h3>
+<h4 id="1基本用法"><a href="#1基本用法" class="header-anchor">¶</a>1.基本用法：</h4>
 <p>input()函数的作用是获得键盘的输入数据。</p>
-<p>一般格式： <strong><em>变量名=input(<提示字符串>)</提示字符串></em></strong></p>
+<p>一般格式： <em><strong>变量名=input(&lt;提示字符串&gt;)</strong></em></p>
 <p>input()函数在接受输入前先输出提示字符串，等待用户的键盘输入。</p>
 <p>以用户输入回车符作为结束的标志，随后input()函数结束，返回用户输入的字符串（回车符被丢弃）。</p>
 <p>返回的字符串就是一行文本，且无论用户输入任何内容均被视为字符串，如需要其他类型，应对返回内容进行类型转化。</p>
 <p>返回值被用来给变量赋值，否则返回值被丢弃，不会保留。</p>
-<h4><span id="2进阶用法">2.进阶用法：</span></h4>
-<ul>
-<li>在提示字符串处加入变量：因为提示字符串必须是字符串的形式输出到终端，所以，如果希望在提示字符串处输出变量值，需要对非字符型的变量进行强制的类型转换。</li>
-<li>input一次输入多个变量值：需要调用它所有的split()分割函数，这个函数的作用是一旦在输入中遇到它()中的内容就以其为分界符将输入内容分割开，对应的分割出的输入串数量我们也应该设置对应数量的变量来接收内容。另外，split后返回的是一个字符串列表，如要强制类型转换，需要在最外面再加一个map()对每个被分割的输入进行强制类型转换。（详见下方代码）</li>
+<h4 id="2进阶用法"><a href="#2进阶用法" class="header-anchor">¶</a>2.进阶用法：</h4>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>在提示字符串处加入变量：因为提示字符串必须是字符串的形式输出到终端，所以，如果希望在提示字符串处输出变量值，需要对非字符型的变量进行强制的类型转换。</p>
+</li>
+<li class="lvl-2">
+<p>input一次输入多个变量值：需要调用它所有的split()分割函数，这个函数的作用是一旦在输入中遇到它()中的内容就以其为分界符将输入内容分割开，对应的分割出的输入串数量我们也应该设置对应数量的变量来接收内容。另外，split后返回的是一个字符串列表，如要强制类型转换，需要在最外面再加一个map()对每个被分割的输入进行强制类型转换。（详见下方代码）</p>
+</li>
 </ul>
-<h4><span id="3代码展示">3.代码展示：</span></h4>
+<h4 id="3代码展示"><a href="#3代码展示" class="header-anchor">¶</a>3.代码展示：</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">testinput1 = <span class="hljs-string">&quot;请输入&quot;</span><br>name = <span class="hljs-built_in">input</span>(testinput1+<span class="hljs-string">&quot;名字\n&quot;</span>)  <span class="hljs-comment">#input()内有变量，\n是换行符</span><br>number = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(testinput1+name+<span class="hljs-string">&quot;他的序号数\n&quot;</span>)) <span class="hljs-comment">#对input结果进行强制类型转化</span><br>subject1,subject2,subject3 = <span class="hljs-built_in">input</span>(testinput1+<span class="hljs-built_in">str</span>(number)+<span class="hljs-string">&quot;号的三个学科名,以\&quot;,\&quot;分割\n&quot;</span>).split(<span class="hljs-string">&quot;,&quot;</span>) <span class="hljs-comment">#input()得到多个输入值</span><br>score1,score2,score3 = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">float</span>,<span class="hljs-built_in">input</span>(testinput1+<span class="hljs-built_in">str</span>(number)+<span class="hljs-string">&quot;的三科成绩,以\&quot;,\&quot;分割\n&quot;</span>).split(<span class="hljs-string">&quot;,&quot;</span>)) <span class="hljs-comment">#对input的多个输入值分别进行强制类型转化</span><br><span class="hljs-built_in">print</span>(subject1,subject2,subject3) <span class="hljs-comment">#展示结果</span><br><span class="hljs-built_in">print</span>(score1,score2,score3)<br></code></pre></td></tr></table></figure>
-<h3><span id="三基于print函数的输出">（三）基于print()函数的输出：</span></h3>
+<h3 id="三基于print函数的输出"><a href="#三基于print函数的输出" class="header-anchor">¶</a>（三）基于print()函数的输出：</h3>
 <p>print()函数可以说是python中大家认识最多的一个函数了，本次将会进行详细介绍。</p>
-<h4><span id="1基本用法">1.基本用法：</span></h4>
+<h4 id="1基本用法"><a href="#1基本用法" class="header-anchor">¶</a>1.基本用法：</h4>
 <p>函数语法为：</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-built_in">print</span>(*objects, <span class="hljs-attribute">sep</span>=<span class="hljs-string">&#x27; &#x27;</span>, <span class="hljs-attribute">end</span>=<span class="hljs-string">&#x27;\n&#x27;</span>, <span class="hljs-attribute">file</span>=sys.stdout)<br></code></pre></td></tr></table></figure>
 <p>其中objects对应复数，表示可以一次输出多个对象，用“,”进行分隔。</p>
 <p>sep -用于间隔多个对象，默认是一个空格。</p>
-<p>end -用于设定以什么为结尾，默认是换行符。</p>
+<p>end -用于设定以什么为结尾，默认是换行符\n。</p>
 <p>file -要写入的文件对象。</p>
 <p>print()函数没有返回值。</p>
 <p>print()函数可以输出任何变量，包括但不限于数值型、布尔型、列表型、字典型等等。</p>
 <p>print()输出时end=的后面参数可以用条件语句来判断不同情况下输出的具体值。</p>
 <p>代码如下：</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-built_in">print</span>(1) #输出数值<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;欧尼酱~&quot;</span>) #输出字符串<br><span class="hljs-built_in">print</span>(1,2,3,<span class="hljs-string">&quot;面对疾风吧&quot;</span>) #输出多个对象<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;www&quot;</span>,<span class="hljs-string">&quot;面对疾风吧&quot;</span>,<span class="hljs-string">&quot;com&quot;</span>,<span class="hljs-attribute">sep</span>=<span class="hljs-string">&quot;.&quot;</span>) #输出多个对象，并以<span class="hljs-string">&quot;.&quot;</span>分隔<br><span class="hljs-attribute">a</span>=3.1415926<br><span class="hljs-attribute">b</span>=<span class="hljs-string">&quot;abcdefg&quot;</span><br><span class="hljs-built_in">print</span>(a,b) #可以输出变量<br>list = [1, <span class="hljs-string">&#x27;a&#x27;</span>, 3,14]<br><span class="hljs-built_in">print</span>(list)  #输出列表变量<br>tuple = (1, <span class="hljs-string">&#x27;a&#x27;</span>, 3,14)<br><span class="hljs-built_in">print</span>(tuple)  #输出元组变量<br>dict = &#123;<span class="hljs-string">&#x27;a&#x27;</span>: 1, <span class="hljs-string">&#x27;b&#x27;</span>: 2&#125;<br><span class="hljs-built_in">print</span>(dict)  # 输出字典变量<br><br>l= [1, 2, 3, 4]<br><span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> l:<br>    <span class="hljs-built_in">print</span>(x, <span class="hljs-attribute">end</span>=<span class="hljs-string">&#x27; &#x27;</span> <span class="hljs-keyword">if</span> x != l[-1] <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;\n&#x27;</span>) #不同情况输出的分隔符不同。<br></code></pre></td></tr></table></figure>
-<h4><span id="2格式化输出">2.格式化输出：</span></h4>
-<p>print中允许数据的格式化输出。其格式控制符和转换说明符用"%"分隔（C语言用逗号）</p>
+<h4 id="2格式化输出"><a href="#2格式化输出" class="header-anchor">¶</a>2.格式化输出：</h4>
+<p>print中允许数据的格式化输出。其格式控制符和转换说明符用&quot;%&quot;分隔（C语言用逗号）</p>
 <p>%字符在字符串中，是格式控制符，在后面则是转换说明符，%是标记转换的开始。</p>
 <p>如：</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus">s = <span class="hljs-string">&#x27;fxfILY&#x27;</span><br><span class="hljs-attribute">x</span> = <span class="hljs-built_in">len</span>(s)<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;The length of %s is %d&#x27;</span> % (s,x)</span></span>) <br></code></pre></td></tr></table></figure>
-<p>形式为<strong><em>‘ 其他+%格式化字符 +其他 ’ % exp</em></strong></p>
+<p>形式为***‘ 其他+%格式化字符 +其他 ’ % exp***</p>
 <p>数据的格式化输出符号和描述：</p>
 <figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs haml"><span class="hljs-tag">%<span class="hljs-selector-tag">c</span></span> 格式化字符及其ASCII码<br><span class="hljs-tag">%<span class="hljs-selector-tag">s</span></span> 格式化字符串<br><span class="hljs-tag">%<span class="hljs-selector-tag">d</span></span> 格式化整数<br><span class="hljs-tag">%<span class="hljs-selector-tag">u</span></span> 格式化无符号整型<br><span class="hljs-tag">%<span class="hljs-selector-tag">o</span></span> 格式化无符号八进制数<br><span class="hljs-tag">%<span class="hljs-selector-tag">x</span></span> 格式化无符号十六进制数<br><span class="hljs-tag">%<span class="hljs-selector-tag">X</span></span> 格式化无符号十六进制数（大写）<br><span class="hljs-tag">%<span class="hljs-selector-tag">f</span></span> 格式化浮点数字，可指定小数点后的精度<br><span class="hljs-tag">%<span class="hljs-selector-tag">e</span></span> 用科学计数法格式化浮点数<br><span class="hljs-tag">%<span class="hljs-selector-tag">E</span></span> 作用同%e，用科学计数法格式化浮点数<br><span class="hljs-tag">%<span class="hljs-selector-tag">g</span></span> %f和%e的简写<br><span class="hljs-tag">%<span class="hljs-selector-tag">G</span></span> %f 和 %E 的简写<br><span class="hljs-tag">%<span class="hljs-selector-tag">p</span></span> 用十六进制数格式化变量的地址<br></code></pre></td></tr></table></figure>
 <p>格式化操作符辅助指令：</p>
 <figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs gcode">*     定义宽度或者小数点精度<br>-     用做左对齐<br>+     在正数前面显示加号<span class="hljs-comment">( + )</span><br>&lt;sp&gt;  在正数前面显示空格<br><span class="hljs-attr">#     在八进制数前面显示零(&#x27;0</span><span class="hljs-string">&#x27;)，在十六进制前面显示&#x27;</span><span class="hljs-number">0</span>x<span class="hljs-string">&#x27;或者&#x27;</span><span class="hljs-number">0</span>X<span class="hljs-string">&#x27;(取决于用的是&#x27;</span>x<span class="hljs-string">&#x27;还是&#x27;</span>X<span class="hljs-string">&#x27;)</span><br><span class="hljs-string">0     显示的数字前面填充&#x27;</span><span class="hljs-number">0</span><span class="hljs-string">&#x27;而不是默认的空格</span><br><span class="hljs-string">%     &#x27;</span><span class="hljs-meta">%</span><span class="hljs-meta">%</span><span class="hljs-string">&#x27;输出一个单一的&#x27;</span><span class="hljs-meta">%</span><span class="hljs-string">&#x27;</span><br><span class="hljs-string">(var) 映射变量(字典参数)</span><br><span class="hljs-string">m.n.  m是显示的最小总宽度,n 是小数点后的位数(如果可用的话)</span><br></code></pre></td></tr></table></figure>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">PI</span> = <span class="hljs-number">3</span>.<span class="hljs-number">141592653</span><br><span class="hljs-attribute">print</span>(&#x27;%<span class="hljs-number">10</span>.<span class="hljs-number">3</span>f&#x27;%PI)  #字段宽<span class="hljs-number">10</span>，精度<span class="hljs-number">3</span><br><span class="hljs-comment">#输出结果:     3.142（左边5个空格，以保证指定宽度为10成立，3f表明精确到小数点后三位）</span><br><br><span class="hljs-attribute">PI</span>=<span class="hljs-number">3</span>.<span class="hljs-number">1415926</span><br><span class="hljs-attribute">print</span>(&#x27;%-<span class="hljs-number">10</span>.<span class="hljs-number">3</span>f&#x27; %PI) #-表示左对齐<br><span class="hljs-comment">#输出结果:3.142     (左对齐，仍为10个字符，但空格在右边)</span><br><br><span class="hljs-attribute">PI</span>=<span class="hljs-number">3</span>.<span class="hljs-number">1415926</span><br><span class="hljs-attribute">print</span>(&#x27;%+f&#x27; % PI)  #+表示显式正负号<br><span class="hljs-comment">#输出结果:+3.141593(显示正号,类型f的默认精度为6位小数)  </span><br><br><span class="hljs-attribute">PI</span>=<span class="hljs-number">3</span>.<span class="hljs-number">1415926</span><br><span class="hljs-attribute">print</span>(&#x27;%<span class="hljs-number">010</span>.<span class="hljs-number">3</span>f&#x27;%PI) #<span class="hljs-number">0</span>表示转换值若位数不够则用<span class="hljs-number">0</span>填充<br><span class="hljs-comment">#输出结果:000003.142（字段宽度为10，精度为3，不足处用0填充空白）</span><br></code></pre></td></tr></table></figure>
-<h4><span id="3format函数">3.format()函数：</span></h4>
+<h4 id="3format函数"><a href="#3format函数" class="header-anchor">¶</a>3.format()函数：</h4>
 <p>format()函数和%的格式化字符串功能类似，但更加强大。</p>
-<p>形式上，format()函数用{|}来代替%（"|"可以是数字，代表后面的参数位置，也可以是变量名称，参数传递时直接传递给该变量），可以用接收参数的方式对字符串进行格式化。</p>
+<p>形式上，format()函数用{|}来代替%（&quot;|&quot;可以是数字，代表后面的参数位置，也可以是变量名称，参数传递时直接传递给该变量），可以用接收参数的方式对字符串进行格式化。</p>
 <p>参数位置可以不按显式顺序，参数也可以不用或者用多次。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello &#123;0&#125;! I am &#123;1&#125;&#x27;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;python&#x27;</span>,<span class="hljs-string">&#x27;zzh&#x27;</span>)) <span class="hljs-comment">#按顺序</span><br><span class="hljs-comment"># 输入结果：Hello python! I am zzh</span><br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello &#123;&#125; I am &#123;&#125;&#x27;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;python&#x27;</span>,<span class="hljs-string">&#x27;zzh&#x27;</span>)) <span class="hljs-comment">#默认顺序</span><br><span class="hljs-comment"># 输入结果：Hello python! I am zzh</span><br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello &#123;1&#125;! I am &#123;0&#125;. &#123;0&#125; is alaways smart!&#x27;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;zzh&#x27;</span>,<span class="hljs-string">&#x27;python&#x27;</span>)) <span class="hljs-comment">#不按顺序+多次使用一个变量</span><br><span class="hljs-comment"># 输出结果：Hello python! I am zzh. zzh is alaways smart!</span><br><br>name = <span class="hljs-string">&#x27;zzh&#x27;</span><br>noname = <span class="hljs-string">&#x27;???&#x27;</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&#123;a&#125; love &#123;b&#125;&#x27;</span>.<span class="hljs-built_in">format</span>(a = name,b = noname)) <span class="hljs-comment">#使用变量</span><br><span class="hljs-comment">#输出结果：zzh love ???</span><br><br>name= [<span class="hljs-string">&#x27;zzh&#x27;</span>, <span class="hljs-string">&#x27;???&#x27;</span>]<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&#123;l[0]&#125; love &#123;l[1]&#125;&#x27;</span>.<span class="hljs-built_in">format</span>(l =name )) <span class="hljs-comment">#使用列表</span><br><br>names=&#123;<span class="hljs-string">&#x27;name1&#x27;</span>:<span class="hljs-string">&#x27;zzh&#x27;</span>,<span class="hljs-string">&#x27;name2&#x27;</span>:<span class="hljs-string">&#x27;???&#x27;</span>&#125;<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&#123;name[name1]&#125; love &#123;name[name2]&#125;&#x27;</span>.<span class="hljs-built_in">format</span>(name=names)) <span class="hljs-comment">#用字典</span><br></code></pre></td></tr></table></figure>
-<h4><span id="4join函数">4.join()函数：</span></h4>
+<h4 id="4join函数"><a href="#4join函数" class="header-anchor">¶</a>4.join()函数：</h4>
 <p>将一个包含多个字符串的可迭代对象，转为用分隔符s连接的字符。</p>
 <p>不是字符串的可以参考上面的map()函数，第一个参数设置为str，将每个可迭代对象转化过来即可。</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">number</span>=[<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>]<br><span class="hljs-attribute">print</span>(<span class="hljs-string">&quot;?&quot;</span>.join(map(str,(number))))<br><span class="hljs-comment">#输出结果: 0?1?2?3?4?5?6</span><br></code></pre></td></tr></table></figure>
@@ -401,7 +393,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a> 
+       <a target="_blank" rel="nofollow noopener"><span>ZZH</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="nofollow noopener"><span>???(等待有缘人)</span></a>
     </div>
   
   
@@ -452,8 +444,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/events.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -475,23 +467,21 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/xiaohei07/xiaohei07.github.io/js/img-lazyload.js" ></script>
   
 
 
 
 
-  <script defer src="/js/leancloud.js" ></script>
+  <script defer src="/xiaohei07/xiaohei07.github.io/js/leancloud.js" ></script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/xiaohei07/xiaohei07.github.io/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/qipao.js"></script>
-<script src="/js/star.js"></script>
-<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js"></script>
+<script src="/xiaohei07/xiaohei07.github.io/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -499,7 +489,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/xiaohei07/xiaohei07.github.io/js/boot.js" ></script>
 
 
   
