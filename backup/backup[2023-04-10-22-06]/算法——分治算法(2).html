@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/256.svg">
+  <link rel="icon" href="/blog/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -19,7 +19,7 @@
     <meta name="description" content="例子均使用c++实现。 ¶（一）汉诺塔问题： ¶1. 问题： 汉诺塔问题是一个经典的问题。该问题是在一块铜板装置上，有三根杆(编号A、B、C)，在A杆自下而上、由大到小按顺序放置n个盘子。 问题的目标是把A杆上的金盘全部移到C杆上，并仍保持原有顺序叠好。 操作规则：每次只能移动一个盘子，并且在移动过程中三根杆上都始终保持大盘在下，小盘在上，操作过程中盘子可以置于A、B、C任一杆上。 ¶2. 基本思">
 <meta property="og:type" content="website">
 <meta property="og:title" content="算法——分治算法(2)">
-<meta property="og:url" content="https://blog.07xiaohei.com/backup/backup[2023-04-10-22-06]/%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95(2).html">
+<meta property="og:url" content="https://07xiaohei.com/backup/backup[2023-04-10-22-06]/%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95(2).html">
 <meta property="og:site_name" content="07xiaoheiの个人博客">
 <meta property="og:description" content="例子均使用c++实现。 ¶（一）汉诺塔问题： ¶1. 问题： 汉诺塔问题是一个经典的问题。该问题是在一块铜板装置上，有三根杆(编号A、B、C)，在A杆自下而上、由大到小按顺序放置n个盘子。 问题的目标是把A杆上的金盘全部移到C杆上，并仍保持原有顺序叠好。 操作规则：每次只能移动一个盘子，并且在移动过程中三根杆上都始终保持大盘在下，小盘在上，操作过程中盘子可以置于A、B、C任一杆上。 ¶2. 基本思">
 <meta property="og:locale" content="zh_CN">
@@ -52,19 +52,19 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/blog/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
+<link rel="stylesheet" href="/blog/css/fluid-extention.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
@@ -72,15 +72,15 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"blog.07xiaohei.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"07xiaohei.com","root":"/blog/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/blog/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
   
 
   
@@ -114,7 +114,7 @@
 <div class="header-inner" style="height: 60vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/blog/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -133,7 +133,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/blog/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -145,7 +145,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/blog/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -157,7 +157,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/blog/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -179,7 +179,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
+                  <a class="dropdown-item" href="/blog/mysourse/download-baiduyun">
                     
                     <span>百度网盘</span>
                   </a>
@@ -187,7 +187,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/blog/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -195,7 +195,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/blog/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -209,7 +209,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/blog/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -221,7 +221,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/blog/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -251,7 +251,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/blog/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -350,7 +350,7 @@
 </li>
 <li class="lvl-3">
 <p>将这个最终的中位数交换到序列最开始的地方，并以这个元素作为划分基准，遍历全序列进行划分，用两个指针从开始处和结尾处不断将前面比这个元素大的和后面比这个元素小的数进行交换（优先移动后面的指针，这样保证两个指针相遇时指向的值比划分元素小），直到两个指针相遇，随后将划分元素和指针指向的元素交换。</p>
-<img src="https://s1.ax1x.com/2023/04/05/pp57e58.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+<img src="https://s1.ax1x.com/2023/04/05/pp57e58.png" srcset="/blog/img/loading.gif" lazyload style="zoom:80%;">
 </li>
 <li class="lvl-3">
 <p>此时根据此划分元素位置pos可以确定其为第pos+1小的元素，进行pos+1和k的比较，如果相等，返回划分元素即为答案；如果k&lt;pos+1，对划分元素左侧进行递归处理（即为子问题），如果k&gt;pos+1,对划分元素右侧进行递归处理。</p>
@@ -473,8 +473,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -496,21 +496,21 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/blog/js/img-lazyload.js" ></script>
   
 
 
 
 
-  <script defer src="/js/leancloud.js" ></script>
+  <script defer src="/blog/js/leancloud.js" ></script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/blog/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/star.js"></script>
+<script src="/blog/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -518,7 +518,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/blog/js/boot.js" ></script>
 
 
   

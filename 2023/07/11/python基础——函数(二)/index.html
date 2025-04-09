@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
-  <link rel="icon" href="/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/256.svg">
+  <link rel="icon" href="/blog/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -19,7 +19,7 @@
     <meta name="description" content="¶（三）函数调用 ¶1. 基本内容： 定义一个函数只给了函数一个名称，指定了函数里包含的参数，和代码块结构。 Python中需要显式说明函数的调用，并为其指定参数（如需要参数）完成函数功能。 函数的调用可以是直接调用，可以是通过另一个函数调用来执行，也可以直接用Python提示符执行。 123456789101112def caixukun():    print(&quot;小黑子露出鸡脚了&amp;q">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python基础——函数(二)">
-<meta property="og:url" content="https://blog.07xiaohei.com/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%BA%8C)/index.html">
+<meta property="og:url" content="https://07xiaohei.com/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%BA%8C)/index.html">
 <meta property="og:site_name" content="07xiaoheiの个人博客">
 <meta property="og:description" content="¶（三）函数调用 ¶1. 基本内容： 定义一个函数只给了函数一个名称，指定了函数里包含的参数，和代码块结构。 Python中需要显式说明函数的调用，并为其指定参数（如需要参数）完成函数功能。 函数的调用可以是直接调用，可以是通过另一个函数调用来执行，也可以直接用Python提示符执行。 123456789101112def caixukun():    print(&quot;小黑子露出鸡脚了&amp;q">
 <meta property="og:locale" content="zh_CN">
@@ -56,19 +56,19 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/blog/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/css/fluid-extention.css">
+<link rel="stylesheet" href="/blog/css/fluid-extention.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
@@ -76,15 +76,15 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"blog.07xiaohei.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"07xiaohei.com","root":"/blog/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/blog/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
   
 
   
@@ -118,7 +118,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/blog/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -137,7 +137,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/blog/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -149,7 +149,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/blog/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -161,7 +161,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/blog/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -183,7 +183,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
+                  <a class="dropdown-item" href="/blog/mysourse/download-baiduyun">
                     
                     <span>百度网盘</span>
                   </a>
@@ -191,7 +191,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/download-office">
+                  <a class="dropdown-item" href="/blog/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -199,7 +199,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/mysourse/visit-use">
+                  <a class="dropdown-item" href="/blog/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -213,7 +213,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/blog/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -225,7 +225,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/blog/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -255,7 +255,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/blog/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -386,7 +386,7 @@
 </ul>
 <p>Python中，类型属于对象，变量是没有类型的——变量是一个对象的引用（或者说是指针），因此函数中的参数没有类型，在传递时必须考虑传递的参数类型是否能够符合要求，不会引发错误。</p>
 <h5 id="1可更改和不可更改对象"><a href="#1可更改和不可更改对象" class="header-anchor">¶</a>（1）可更改和不可更改对象：</h5>
-<p>详见之前的博客——<a target="_blank" rel="noopener" href="https://07xiaohei.com/2023/03/19/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B(%E4%B8%80)%E7%AE%80%E4%BB%8B/">python基础——数据类型（一）简介 - ZZHの个人博客 (07xiaohei.com)</a></p>
+<p>详见之前的博客——<a href="https://07xiaohei.com/2023/03/19/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B(%E4%B8%80)%E7%AE%80%E4%BB%8B/">python基础——数据类型（一）简介 - ZZHの个人博客 (07xiaohei.com)</a></p>
 <p>了解了这个之后，就可以说明参数传递的底层实现了。</p>
 <p>从结果上看，Python的参数传递中，可变类型的参数传递类似于c<ins>的引用传递，被传递的实参对象在函数中修改时<strong>会影响</strong>到外部的对象；而不可变类型的参数传递类似于c</ins>的值传递，被传递的实参对象在函数中进行任何修改<strong>不会影响</strong>到外部的对象，因为实际上传递时<strong>实参对象是被复制了一份进入了函数</strong>，原对象不会受到其影响。</p>
 <p>而实际上，Python的参数传递是<strong>赋值传递，即对象的引用传递</strong>，由于Python的所有数据类型都是对象，所以参数传递实际上是复制出新的变量，让新的变量和原变量指向一个相同的对象。</p>
@@ -467,7 +467,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/python-study/" class="category-chain-item">python_study</a>
+  <a href="/blog/categories/python-study/" class="category-chain-item">python_study</a>
   
   
 
@@ -482,9 +482,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+        <a href="/blog/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
       
-        <a href="/tags/python/">#python</a>
+        <a href="/blog/tags/python/">#python</a>
       
     </div>
   
@@ -497,7 +497,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>python基础——函数(二)</div>
-      <div>https://blog.07xiaohei.com/2023/07/11/python基础——函数(二)/</div>
+      <div>https://07xiaohei.com/2023/07/11/python基础——函数(二)/</div>
     </div>
     <div class="license-meta">
       
@@ -541,7 +541,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/12/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%B8%89)/" title="python进阶——函数(三)">
+                      <a href="/blog/2023/07/12/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%B8%89)/" title="python进阶——函数(三)">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">python进阶——函数(三)</span>
                         <span class="visible-mobile">上一篇</span>
@@ -551,7 +551,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%B8%80)/" title="python基础——函数(一)">
+                      <a href="/blog/2023/07/11/python%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0(%E4%B8%80)/" title="python基础——函数(一)">
                         <span class="hidden-mobile">python基础——函数(一)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -739,8 +739,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -762,7 +762,7 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/blog/js/img-lazyload.js" ></script>
   
 
 
@@ -867,15 +867,15 @@
 
   <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
-  <script defer src="/js/leancloud.js" ></script>
+  <script defer src="/blog/js/leancloud.js" ></script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/blog/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/js/star.js"></script>
+<script src="/blog/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -883,7 +883,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/blog/js/boot.js" ></script>
 
 
   
