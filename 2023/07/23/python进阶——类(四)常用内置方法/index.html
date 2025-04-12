@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/256.svg">
-  <link rel="icon" href="/blog/img/256.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/256.svg">
+  <link rel="icon" href="/img/256.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -19,7 +19,7 @@
     <meta name="description" content="¶（七）常用内置方法 ¶1. 简介： 这里介绍的常用内置方法主要是对类的一些相关用法的补充，便于解决创建类遇到的一些常见问题，同时对其进行简单演示来表示其具体的应用场景。 __init__方法不再介绍，前面的使用和介绍已经非常详细了。   __str__()和__repr__()： 这两个方法的目的使为了显式的显示对象的必要信息，方便查看和调试。 __str__()被print默认调用，控制用户的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python进阶——类(四)常用内置方法">
-<meta property="og:url" content="https://07xiaohei.com/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E5%9B%9B)%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:url" content="https://blog.07xiaohei.com/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E5%9B%9B)%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="07xiaoheiの个人博客">
 <meta property="og:description" content="¶（七）常用内置方法 ¶1. 简介： 这里介绍的常用内置方法主要是对类的一些相关用法的补充，便于解决创建类遇到的一些常见问题，同时对其进行简单演示来表示其具体的应用场景。 __init__方法不再介绍，前面的使用和介绍已经非常详细了。   __str__()和__repr__()： 这两个方法的目的使为了显式的显示对象的必要信息，方便查看和调试。 __str__()被print默认调用，控制用户的">
 <meta property="og:locale" content="zh_CN">
@@ -56,19 +56,19 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/blog/css/main.css" />
+<link  rel="stylesheet" href="/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3947243_zafr06rmfy.css">
-<link rel="stylesheet" href="/blog/css/fluid-extention.css">
+<link rel="stylesheet" href="/css/fluid-extention.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css">
 
 
@@ -76,15 +76,15 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"07xiaohei.com","root":"/blog/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/blog/local-search.xml"};
+    var CONFIG = {"hostname":"blog.07xiaohei.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":false,"scope":null},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"always","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ubSvOh5T4Yo2ADwlKs6NuZA6-MdYXbMMI","app_key":"ooOKmecfVZV0i2v0cvsyZGdl","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/blog/js/utils.js" ></script>
-  <script  src="/blog/js/color-schema.js" ></script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
   
 
   
@@ -118,7 +118,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/blog/">
+    <a class="navbar-brand" href="/">
       <strong>07xiaoheiの个人博客</strong>
     </a>
 
@@ -137,7 +137,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/">
+              <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -149,7 +149,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/archives/">
+              <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -161,7 +161,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/categories/">
+              <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -183,7 +183,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/blog/mysourse/download-baiduyun">
+                  <a class="dropdown-item" href="/mysourse/download-baiduyun">
                     
                     <span>百度网盘</span>
                   </a>
@@ -191,7 +191,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/blog/mysourse/download-office">
+                  <a class="dropdown-item" href="/mysourse/download-office">
                     
                     <span>下载官网</span>
                   </a>
@@ -199,7 +199,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/blog/mysourse/visit-use">
+                  <a class="dropdown-item" href="/mysourse/visit-use">
                     
                     <span>有用的网站</span>
                   </a>
@@ -213,7 +213,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/tags/">
+              <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -225,7 +225,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/about/">
+              <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于我</span>
               </a>
@@ -255,7 +255,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/blog/img/preview2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/preview2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -394,7 +394,7 @@
 </li>
 <li class="lvl-2">
 <p>__iter__()和__next__()：</p>
-<p>这两个方法的具体内容在<a href="https://07xiaohei.com/2023/07/13/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7(%E4%BA%8C)%E8%BF%AD%E4%BB%A3%E3%80%81%E8%BF%AD%E4%BB%A3%E5%99%A8/">python进阶——高级特性(二)迭代、迭代器 - ZZHの个人博客 (07xiaohei.com)</a>种已经进行了详细的介绍，这里只进行简要介绍。</p>
+<p>这两个方法的具体内容在<a target="_blank" rel="noopener" href="https://07xiaohei.com/2023/07/13/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7(%E4%BA%8C)%E8%BF%AD%E4%BB%A3%E3%80%81%E8%BF%AD%E4%BB%A3%E5%99%A8/">python进阶——高级特性(二)迭代、迭代器 - ZZHの个人博客 (07xiaohei.com)</a>种已经进行了详细的介绍，这里只进行简要介绍。</p>
 <p>这两个方法用于将一个对象模拟成序列，内部类型如列表、元组等都可以迭代，重写这两个方法就可以实现自定义的迭代对象。
 __iter__方法向系统说明了这是一个可迭代对象，__next__方法向系统说明了该可迭代对象的迭代算法。</p>
 <p>__iter__方法需要返回self，__next__方法需要返回对应的元素。</p>
@@ -459,7 +459,7 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
     
       <span class="category-chain">
         
-  <a href="/blog/categories/python-study/" class="category-chain-item">python_study</a>
+  <a href="/categories/python-study/" class="category-chain-item">python_study</a>
   
   
 
@@ -474,9 +474,9 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/blog/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
+        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">#知识点</a>
       
-        <a href="/blog/tags/python/">#python</a>
+        <a href="/tags/python/">#python</a>
       
     </div>
   
@@ -489,7 +489,7 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
   <div class="license-box my-3">
     <div class="license-title">
       <div>python进阶——类(四)常用内置方法</div>
-      <div>https://07xiaohei.com/2023/07/23/python进阶——类(四)常用内置方法/</div>
+      <div>https://blog.07xiaohei.com/2023/07/23/python进阶——类(四)常用内置方法/</div>
     </div>
     <div class="license-meta">
       
@@ -533,7 +533,7 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%BA%94)%E7%B1%BB%E8%A3%85%E9%A5%B0%E5%99%A8/" title="python进阶——类(五)类装饰器">
+                      <a href="/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%BA%94)%E7%B1%BB%E8%A3%85%E9%A5%B0%E5%99%A8/" title="python进阶——类(五)类装饰器">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">python进阶——类(五)类装饰器</span>
                         <span class="visible-mobile">上一篇</span>
@@ -543,7 +543,7 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%B8%89)%E6%96%B9%E6%B3%95%E9%87%8D%E7%94%A8%E3%80%81%E5%A4%9A%E6%80%81/" title="python进阶——类(三)方法重写、多态">
+                      <a href="/2023/07/23/python%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94%E7%B1%BB(%E4%B8%89)%E6%96%B9%E6%B3%95%E9%87%8D%E7%94%A8%E3%80%81%E5%A4%9A%E6%80%81/" title="python进阶——类(三)方法重写、多态">
                         <span class="hidden-mobile">python进阶——类(三)方法重写、多态</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -731,8 +731,8 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/blog/js/events.js" ></script>
-<script  src="/blog/js/plugins.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -754,7 +754,7 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
 
 
   
-    <script  src="/blog/js/img-lazyload.js" ></script>
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
@@ -859,15 +859,15 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
 
   <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
-  <script defer src="/blog/js/leancloud.js" ></script>
+  <script defer src="/js/leancloud.js" ></script>
 
-  <script  src="/blog/js/local-search.js" ></script>
+  <script  src="/js/local-search.js" ></script>
 
 
 
 
   
-<script src="/blog/js/star.js"></script>
+<script src="/js/star.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js"></script>
 
@@ -875,7 +875,7 @@ __iter__方法向系统说明了这是一个可迭代对象，__next__方法向�
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/blog/js/boot.js" ></script>
+<script  src="/js/boot.js" ></script>
 
 
   
