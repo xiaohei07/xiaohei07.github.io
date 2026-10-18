@@ -1,0 +1,322 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","953","$c"],"default"]
+16:I[6279,["825","$2","953","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"python进阶——函数(三)"}],["$","p",null,{"className":"article-deck","children":"从函数对象出发，介绍映射、筛选和归约，再通过闭包说明装饰器与参数传递"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"slug","t":"d","k":"python-functions-3","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"python进阶——函数(三) | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从函数对象出发，介绍映射、筛选和归约，再通过闭包说明装饰器与参数传递。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","953","$c"],"ArticleToc"]
+26:I[4711,["825","$2","953","$c"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-07-12","children":"2023-07-12"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,646"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",9," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","python",{"href":"/blog/#tag=python","children":"python"}],["$","$L16","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-四函数式编程","text":"（四）函数式编程","level":3},{"id":"section-1-作为对象的函数","text":"1. 作为对象的函数：","level":4},{"id":"section-2-mapfilter-和-reduce","text":"2. Map、Filter 和 Reduce:","level":4},{"id":"section-1-map函数","text":"(1) map函数：","level":5},{"id":"section-2-fiter函数","text":"(2) fiter函数：","level":5},{"id":"section-3redeuce函数","text":"（3）redeuce函数：","level":5},{"id":"section-3-函数装饰器","text":"3. 函数装饰器：","level":4},{"id":"section-1闭包","text":"（1）闭包：","level":5},{"id":"section-2装饰器","text":"（2）装饰器：","level":5},{"id":"section-3装饰器传参","text":"（3）装饰器传参：","level":5},{"id":"section-4带参数的装饰器","text":"（4）带参数的装饰器：","level":5}],"mobile":true}]
+27:T3b0c,<span id="四函数式编程" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-四函数式编程">（四）函数式编程</h3>
+<p>Python是面向对象的程序设计语言，也是面向过程的程序语言,同时也支持函数式编程。</p>
+<p>Pyhon标准库functools 提供了若干关于函数的函数，提供了Haskell和Standard ML中的函数式程序设计工具。</p>
+<p>Python中的函数与其他数据类型处于平等地位，因此函数可以赋值给变量，可以作为参数传入其他函数，存储在其他数据结构中，或者作为函数的返回值。</p>
+<span id="1-作为对象的函数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-作为对象的函数">1. 作为对象的函数：</h4>
+<p>函数在Python中是作为对象存在的，故函数对象可以赋值给变量，然后调用该变量。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def printself():
+    print("123321")
+copyfun = printself
+copyfun()
+</code></pre></div>
+<p>数据结构内的函数：函数作为对象，也可以存储数据结构内部。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def fun1():
+    print("fun1")
+def fun2():
+    print("fun2")
+def fun3():
+    print("fun3")
+map_fun = {1:fun1,2:fun2,3:fun3}
+map_fun[2]()
+#运行结果：
+# fun2
+</code></pre></div>
+<p>函数作为参数和返回值：函数可以作为其他函数的参数和返回值，接受函数作为输入或返回函数的函数叫做高阶函数。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def fun_use(fun,list_use):
+    return fun(list_use)
+print(fun_use(max,[1,2,3,4,5,6,3.4,7.2]))
+# 运行结果:
+# 7.2
+
+def add(a,b):
+    return a+b
+def sub(a,b):
+    return a-b
+def fun_high(x):
+    if x==1:
+        return add
+    elif x==2:
+        return sub
+    else:
+        return None
+fun_use = fun_high(1)
+print(fun_use(2,1))
+fun_use = fun_high(2)
+print(fun_use(2,1))
+#运行结果：
+# 3
+# 1
+</code></pre></div>
+<p>函数名实际上也是变量，可以让函数名指向其他对象，但是这样会导致原有的函数无法使用。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def add(a,b):
+    return a+b
+add =10
+print(add)
+#运行结果：
+# 10
+</code></pre></div>
+<p>嵌套函数、Lambda表达式也是函数式编程的一部分，详见之前的博客，下面介绍更进一步的内容。</p>
+<span id="2-map-filter-和-reduce" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-mapfilter-和-reduce">2. Map、Filter 和 Reduce:</h4>
+<span id="1-map函数" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-1-map函数">(1) map函数：</h5>
+<p>map 函数的功能是对可迭代对象中的每个元素都调用指定的函数，并返回一个map对象的iterator迭代器（可以转化为list对象）。</p>
+<p>语法格式：<em><strong>map(function, iterable)</strong></em></p>
+<p>function参数表示传入的函数，可以是内置函数、自定义函数或者 lambda 匿名函数，iterable表示可迭代对象，可以是列表、元组等，允许一到多个。</p>
+<p>一般用于对某个集合对象的全部值执行某个特定操作。</p>
+<p>map() 函数由 C 语言实现，执行效率高。</p>
+<p>例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>list_use = [1,2,3,4,5,6,7,8,9]
+list_new = list(map(lambda x:x*2, list_use))
+print(list_new)
+# 运行结果：
+# [2, 4, 6, 8, 10, 12, 14, 16, 18]
+</code></pre></div>
+<span id="2-fiter函数" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-2-fiter函数">(2) fiter函数：</h5>
+<p>filter函数的功能是对传入的可迭代对象中的每个元素，都进行函数判断，并返回True或者False，最后将返回 True 的元素组成一个新的可遍历的集合对象，返回其迭代器。</p>
+<p>语法格式：<em><strong>filter(function, iterable)</strong></em></p>
+<p>function参数表示传入的函数，可以是内置函数、自定义函数或者 lambda 匿名函数，iterable表示可迭代对象，可以是列表、元组等，允许一到多个。</p>
+<p>一般用于筛除可迭代对象的不想要的项。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>list_use = [1,2,3,4,5,6,7,8,9]
+list_new = list(filter(lambda x:x%2==0, list_use))
+print(list_new)
+# 运行结果：
+# [2, 4, 6, 8]
+</code></pre></div>
+<span id="3redeuce函数" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-3redeuce函数">（3）redeuce函数：</h5>
+<p>reduce() 函数通常用来对一个集合做一些累积操作。</p>
+<p>语法格式：<em><strong>reduce(function, iterable)</strong></em></p>
+<p>function规定必须传入一个包含 2 个参数的函数；iterable 表示可迭代对象，可以是列表、元组等，允许一到多个。</p>
+<p>reduce() 函数在Python 3.x 中已经从内置函数中被移除，在functools模块使用 ，需要导入functools模块。</p>
+<p>reduce 函数一般用于总结或者概述数据集。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>import functools
+list_use = [3,4,5,6,7]
+list_new = functools.reduce(lambda x,y:x+y, list_use)
+print(list_new)
+# 运行结果：
+# 25
+</code></pre></div>
+<span id="3-函数装饰器" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-函数装饰器">3. 函数装饰器：</h4>
+<span id="1闭包" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-1闭包">（1）闭包：</h5>
+<p>是指在函数中嵌套其他函数时引用外部函数变量，即在一个内部函数中，对外部作用域的变量进行引用，内部函数即为闭包。</p>
+<p>一般情况下，内部函数是外部函数的返回值。</p>
+<p>闭包无法修改外部函数的局部变量。</p>
+<p>举例：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def add_two(a):
+    def add_new(b):
+        return a+b
+    return add_new
+print(add_two(2)(3))
+# 运行结果：
+# 5
+</code></pre></div>
+<span id="2装饰器" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-2装饰器">（2）装饰器：</h5>
+<p>是闭包的一个应用，能够使得代码更简短。</p>
+<p>装饰器是用于拓展原函数功能的一种函数，不需要修改原函数的内容和调用。</p>
+<p>装饰器常用于授权、日志等行为。</p>
+<p>语法格式：</p>
+<p><strong>def 装饰器函数名(唯一形参):</strong></p>
+<p>​	<strong>函数体</strong></p>
+<p><strong>@装饰器函数名</strong></p>
+<p><strong>def 被装饰的函数名(形参列表):</strong></p>
+<p>​	<strong>函数体</strong></p>
+<p>使用时直接调用被装饰的函数名即可。</p>
+<p>装饰器函数的形参需要一个函数作为参数传入，同时需要在内部代码块执行该函数，以保证被装饰函数的正确执行。</p>
+<p>传参时和带参数时需要装饰器函数嵌套函数，后面进行介绍。</p>
+<p>Python内置了3种函数装饰器，分别是＠staticmethod、＠classmethod 和@property，我们也可以自己定义函数装饰器。</p>
+<p><strong>装饰器完成的内容：</strong></p>
+<ul>
+<li>将被装饰的函数作为参数传给装饰器函数（后面->前面）。</li>
+<li>将被装饰的函数的返回值替换成装饰器函数的返回值（前面->后面）。</li>
+</ul>
+<p>实际上，就是把装饰器函数的功能按一定逻辑顺序加入到被装饰的函数当中，使得原函数不需要修改。</p>
+<p>因此，不用@函数也可以完成装饰器的功能，只是相对而言阅读比较困难。</p>
+<p>例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def use_decorator_fun(used_for_decorator_fun):
+    print("添加新功能的位置，在被装饰的函数执行之前执行")
+    used_for_decorator_fun()
+    print("添加新功能的位置，在被装饰的函数执行之后执行")
+    return True
+@use_decorator_fun
+def used_for_decorator_fun():
+    print("执行正常功能中")
+    for i in range(1,11,2):
+        print(i,end=',')
+    print("\n执行完毕")
+
+result = used_for_decorator_fun
+if result:
+    print("执行成功")
+# 运行结果：
+# 添加新功能的位置，在被装饰的函数执行之前执行
+# 执行正常功能中
+# 1,3,5,7,9,
+# 执行完毕
+# 添加新功能的位置，在被装饰的函数执行之后执行
+# 执行成功
+
+</code></pre></div>
+<p>如果不用@，可以是以下形式来表示：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def use_decorator_fun(used_for_decorator_fun):
+    print("添加新功能的位置，在被装饰的函数执行之前执行")
+    used_for_decorator_fun()
+    print("添加新功能的位置，在被装饰的函数执行之后执行")
+    return True
+def used_for_decorator_fun():
+    print("执行正常功能中")
+    for i in range(1,11,2):
+        print(i,end=',')
+    print("\n执行完毕")
+used_for_decorator_fun =use_decorator_fun(used_for_decorator_fun)
+result = used_for_decorator_fun
+if result:
+    print("执行成功")
+# 运行结果：
+# 添加新功能的位置，在被装饰的函数执行之前执行
+# 执行正常功能中
+# 1,3,5,7,9,
+# 执行完毕
+# 添加新功能的位置，在被装饰的函数执行之后执行
+# 执行成功
+</code></pre></div>
+<p>可以看到，@use_decorator_fun只是换成了used_for_decorator_fun =use_decorator_fun(used_for_decorator_fun)，不过此句的位置换到了两个函数定义之后。</p>
+<p>这就是装饰器的实质。</p>
+<span id="3装饰器传参" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-3装饰器传参">（3）装饰器传参：</h5>
+<p>被装饰的函数带有参数时，需要对装饰器函数进行处理，以便前者为后者传递参数。</p>
+<p>此时，需要为装饰器函数增加一个嵌套函数，嵌套的内部函数带有形参列表，如果其接收参数数量确定可以直接指定好形参列表数量，但多数时候参数数量是不固定的，此时使用前文已讲述的过的两个参数*args和**kwargs来完成接收任意数量参数的要求。</p>
+<p>例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def fun_use_add(fun_use):
+    def fun_use_add_fact(a):
+        print("添加新功能的位置，在被装饰的函数执行之前执行")
+        fun_use(a)
+        print("添加新功能的位置，在被装饰的函数执行之后执行")
+        return True
+    return fun_use_add_fact
+@fun_use_add
+def fun_use(a):
+    print("执行正常功能中")
+    for i in range(1,a,2):
+        print(i,end=',')
+    print("\n执行完毕")
+result = fun_use(11)
+if result:
+    print("执行成功")
+# 运行结果：
+# 添加新功能的位置，在被装饰的函数执行之前执行
+# 执行正常功能中
+# 1,3,5,7,9,
+# 执行完毕
+# 添加新功能的位置，在被装饰的函数执行之后执行
+# 执行成功
+</code></pre></div>
+<p>此时完成了一个参数的传递，如果参数不固定，可以改为：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def fun_use_add(fun_use):
+    def fun_use_add_fact(*args,**kwargs):
+        print("添加新功能的位置，在被装饰的函数执行之前执行")
+        fun_use(*args,**kwargs)
+        print("添加新功能的位置，在被装饰的函数执行之后执行")
+        return True
+    return fun_use_add_fact
+@fun_use_add
+def fun_use(a):
+    print("执行正常功能中")
+    for i in range(1,a,2):
+        print(i,end=',')
+    print("\n执行完毕")
+result = fun_use(11)
+if result:
+    print("执行成功")
+# 运行结果：
+# 添加新功能的位置，在被装饰的函数执行之前执行
+# 执行正常功能中
+# 1,3,5,7,9,
+# 执行完毕
+# 添加新功能的位置，在被装饰的函数执行之后执行
+# 执行成功
+</code></pre></div>
+<span id="4带参数的装饰器" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-4带参数的装饰器">（4）带参数的装饰器：</h5>
+<p>装饰器除了接收原函数任意类型和数量的参数，还可以接收自己定义的参数。</p>
+<p>此时，需要在装饰器函数外部额外嵌套一层函数，该层负责接收自己定义的参数，内部代码块的对应return也要添加。</p>
+<p>同时，在@处需要在函数名后增加要传入的实参，注意，此处必须传入对应参数。</p>
+<p>例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def fun_use_parameter(a,b):
+    def fun_use_add(fun_use):
+        def fun_use_add_fact(*args,**kwargs):
+            print("添加新功能的位置，在被装饰的函数执行之前执行")
+            for i in range(1,a+1):
+                print("第"+str(i)+"次执行函数功能,函数功能序号为"+str(b))
+                fun_use(*args,**kwargs)
+            print("添加新功能的位置，在被装饰的函数执行之后执行")
+            return True
+        return fun_use_add_fact
+    return fun_use_add
+@fun_use_parameter(2,5)
+def fun_use(a):
+    print("执行正常功能中")
+    for i in range(1,a,2):
+        print(i,end=',')
+    print("\n执行完毕")
+result = fun_use(11)
+if result:
+    print("执行成功")
+# 运行结果：
+# 添加新功能的位置，在被装饰的函数执行之前执行
+# 第1次执行函数功能,函数功能序号为5
+# 执行正常功能中
+# 1,3,5,7,9,
+# 执行完毕
+# 第2次执行函数功能,函数功能序号为5
+# 执行正常功能中
+# 1,3,5,7,9,
+# 执行完毕
+# 添加新功能的位置，在被装饰的函数执行之后执行
+# 执行成功
+</code></pre></div>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],"$L28","$L29","$L2a"]}],"$L2b"]}]
+1b:["$","$L2c",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+2e:I[2708,["825","$2","953","$c"],"FeedbackForm"]
+f:300
+28:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/python-slices/","children":[["$","span",null,{"children":"上一篇"}],"python进阶——高级特性(一)切片"]}],["$","$Ld",null,{"href":"/blog/python-conditionals/","children":[["$","span",null,{"children":"下一篇"}],"python基础——条件判断"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$Ld",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-class-decorators",{"children":[["$","$Ld",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$Ld",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+29:["$","$L2e",null,{"contentId":"python-functions-3"}]
+2a:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+2b:["$","$L25",null,{"headings":"$19:props:headings"}]
+2d:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"

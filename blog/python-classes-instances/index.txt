@@ -1,0 +1,320 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"python-classes-instances","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","python-classes-instances",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+14:"static/chunks/825-1a8f209f3ada760f.js"
+15:"static/chunks/app/layout-b30e31df6c2e8735.js"
+16:I[6767,["825","$14","177","$15"],"DisplayProvider"]
+17:"NavigationFeedback"
+18:I[2842,["825","$14","177","$15"],"$17"]
+19:I[8587,["825","$14","177","$15"],"SiteHeader"]
+1a:I[5803,["825","$14","177","$15"],"SiteFrame"]
+1b:I[164,["825","$14","177","$15"],"ProfileSidebar"]
+1c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+1d:I[3498,["825","$14","953","$1c"],"default"]
+6:C
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L16",null,{"children":[["$","$L18",null,{}],["$","$L19",null,{"tags":["知识点","python","C++"]}],["$","$L1a",null,{"sidebar":["$","$L1b",null,{}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1d",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1d",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1d",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1d",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+1f:I[6279,["825","$14","953","$1c"],"FilterLink"]
+20:I[4067,["825","$14","953","$1c"],"ArticleToc"]
+21:I[4711,["825","$14","953","$1c"],"ArticleBody"]
+22:T45e6,<span id="一面向对象" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一面向对象">（一）面向对象</h3>
+<span id="1-基本概念" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-基本概念">1. 基本概念：</h4>
+<p>面向对象编程——Object Oriented Programming（OOP），是一种程序的设计思想，以对象作为程序的基本单元，在对象中封装数据和操作数据的函数。</p>
+<p>和把程序作为一系列函数命令集合运行的面向过程不同，面向对象把函数继续分解为子函数，简化程序设计、降低系统复杂度。</p>
+<p>对于众多的子函数，面向对象的程序设计把计算机程序视为一组对象的集合，不同的对象具有不同的属性和功能，这些子函数就被用在不同的对象之中。进而，程序的执行就是对象之间处理交互信息、完成自身功能的过程。</p>
+<span id="2-使用技术" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-使用技术">2. 使用技术：</h4>
+<p>下面简要说明面向对象的常用技术（后面会详细介绍）：</p>
+<ul>
+<li>
+<p><strong>类</strong>：用于描述具有相同的属性和方法的对象的集合，定义了该集合中每个对象所共有的属性和方法。对象是类的实例。</p>
+<p>类把数据和功能绑定在了一起，创建新类就是创建新的对象类型，从而以类为蓝图创建该类型的新的实例，也就是对象。</p>
+</li>
+<li>
+<p><strong>实例化：</strong>创建一个类的实例，类的具体对象，实例支持维持自身状态的属性以及修改自身状态的方法。</p>
+</li>
+<li>
+<p><strong>对象：</strong>通过类定义的数据结构实例。对象包括两个数据成员（类变量和实例变量）和方法。</p>
+</li>
+<li>
+<p><strong>方法：</strong>在类中定义的函数，每个对象都能够使用。</p>
+<p>类似于c++中的成员函数</p>
+</li>
+<li>
+<p><strong>类变量：</strong>类变量是一个类的所有不同对象/实例共享的变量，在整个实例化的对象中是公用的。类变量定义在类中且在函数体之外，且通常不作为实例变量使用。</p>
+<p>类似于c++中的静态变量，只有一份。</p>
+</li>
+<li>
+<p><strong>实例变量：</strong>类声明时的属性用变量表示，此类变量称为实例变量，实例变量就是一个用self修饰的变量。</p>
+<p>实例变量可以用于区分不同的实例，因此，实例变量每个实例都各自拥有，相互独立。</p>
+<p>类似于c++中的非静态数据成员</p>
+</li>
+<li>
+<p><strong>数据成员：</strong>类变量或者实例变量用于处理类及其实例对象的相关的数据。</p>
+<p>和c++中的数据成员概念类似。</p>
+</li>
+<li>
+<p><strong>局部变量：</strong>只定义在方法中的变量，只作用于当前实例的类。</p>
+</li>
+<li>
+<p><strong>继承：</strong>即一个派生类继承基类的成员和方法。继承允许多级，例如A是B的基类，B仍可以是C的基类，此时A实际上也可以算是C的基类，继承可以形成由树组成的森林。</p>
+</li>
+<li>
+<p><strong>方法重写：</strong>如果从基类继承的方法不能满足派生类的需求，可以对其进行改写，这个过程叫方法的覆盖，也称为方法的重写。</p>
+</li>
+</ul>
+<span id="3-python的面向对象" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-python的面向对象">3. Python的面向对象：</h4>
+<p>Python是一门面向对象的语言，这也是设计Python语言的初衷。</p>
+<p>Python中提供了类机制，可以定义类，而且Python的类提供了面向对象编程的所有基本功能和标准特性：类的继承机制支持多个基类，派生类可以覆盖基类中的方法，类的方法可以调用基类中的同名方法，对象可以包含任意数量和类型的数据。</p>
+<p>类机制也支持Python的动态特性：在运行时创建，创建后可以修改。</p>
+<p>和其他编程语言相比，Python 的类只使用了很少的新语法和语义。</p>
+<ul>
+<li>
+<p>如果了解c++类的概念，这里为了防止混淆进行一些说明（不了解的可以跳过）：</p>
+<p>Python中的类成员通常为公有的(public)，成员函数默认均为虚函数(virtual)。</p>
+<p>Python的方法函数在声明时有一个显式的参数代表本对象，在调用时隐式提供，类似this指针。</p>
+<p>和c++不同，Python中内置类型可以用作基类以供用户扩展。</p>
+<p>和c++相同，算术运算符、下标等具有特殊语法的内置运算符可以为类实例而重新定义（运算符重载）。</p>
+</li>
+</ul>
+<p>下面正式介绍Python的类。</p>
+<span id="二python中的类和实例" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二python中的类和实例">（二）Python中的类和实例</h3>
+<p>面向对象最重要的概念就是类和实例，所以，Python中首先必须要知道的一点：<strong>类是创建对象的模版，对象是类的实例。</strong>类本身不占据内存空间，实例才会占据内存空间。</p>
+<span id="1-python的类定义和实例化" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-python的类定义和实例化">1. Python的类定义和实例化：</h4>
+<span id="1简单定义" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-1简单定义">（1）简单定义：</h5>
+<p>Python中，类通过class关键字来定义，简单的类的语法格式为：</p>
+<p><em><strong>class ClassName[(object)]:</strong></em>
+<em><strong>&#x3C;statement-1></strong></em>
+<em><strong>.</strong></em> <em><strong>.</strong></em> <em><strong>.</strong></em>
+<em><strong>&#x3C;statement-N></strong></em></p>
+<p>ClassName是类名，类名的命名一般情况要求是名词，使用首字母大写。</p>
+<p>object是继承的类名，如果没有则一律使用object代替，当然对于这种情况也可以不加()来表示继承关系。更详细的内容后文介绍</p>
+<p>&#x3C;statement-i>是定义/声明语句，后文介绍。</p>
+<p>与函数定义一样，类定义必须先执行才能生效。</p>
+<p>进入类定义后会创建新的局部命名空间和局部作用域，对局部变量的赋值和处理也都是在此命名空间之内。</p>
+<p>下面简单定义一个没有属性和方法的类：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class My_class:
+    pass
+</code></pre></div>
+<span id="2类对象" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-2类对象">（2）类对象：</h5>
+<p>在正常离开类定义后，会创建一个类对象。</p>
+<p>类对象支持两种操作：属性引用和实例化。</p>
+<ul>
+<li>
+<p>属性引用使用Python中的标准属性引用语法：obj.name，obj是对象，name是属性名。</p>
+<p>类对象创建时存在于类命名空间中的全部名称均为有效的属性名，包括数据属性和方法。</p>
+<p>可以通过属性名对类属性进行赋值来修改其值。</p>
+<p>属性引用后文介绍例子。</p>
+</li>
+<li>
+<p>实例化和Python中的函数调用类似，可以将类对象视为一个不带参数的函数，该函数的返回值就是类的一个实例，以此方式来完成类的实例化。</p>
+<p>实例化操作创建类的新实例，将此实例后的对象分配给某个变量，此时的对象是一个空对象。</p>
+<p>如果想要自定义实例化对象，使其带有一定的初始状态，需要使用类定义的特殊方法__init__()，后文会详细介绍。</p>
+<p>类实例化后才可以使用其属性和方法——其访问方式是通过上面的属性引用完成的。</p>
+</li>
+</ul>
+<p>简单的类对象实例化如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class My_class(object):
+    pass
+my_obj=My_class()
+</code></pre></div>
+<span id="3属性和方法" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-3属性和方法">（3）属性和方法：</h5>
+<p>上面创建的类显然是不完整的，需要为类设置属性和方法来定义类的功能，从而完善一个类。</p>
+<p>注意，属性是数据属性，和方法一起都是属性引用的内容。</p>
+<ul>
+<li>
+<p>属性：作为数据属性，其实际是类中的变量，包括了类属性和实例属性。</p>
+<p>属性的添加可以在类中实现，也可以对某个实例对象单独实现。</p>
+</li>
+<li>
+<p>方法：实际是类中的函数，包括了类方法和实例方法。</p>
+<p>类中的方法对应的函数和普通函数的最大区别就是，类方法必须多出一个参数，调用方法的实例对象必须作为第一个参数被传入其中，这是为了区别一个类中的多个对象，便于解释器查找是哪一个对象调用的方法。</p>
+<p>在类方法的定义中，额外的第一个参数名称一般默认为self，随后再根据需要定义参数——self代表的是类的实例，而不是类。</p>
+<p>而在调用时，第一个额外参数self是不能指定的，类方法会隐性传入这个参数——所以，对于类方法，至少有一个参数，而如果类方法有n个参数需要传入，实际调用参数数量为n-1。</p>
+<p>方法定义中的类属性需要指定类名.类属性来使用，实例属性需要指定第一个参数名.实例属性名来使用。</p>
+</li>
+<li>
+<p>初始属性和类的构造方法：</p>
+<p>对于类属性，是在类中直接定义的，但是对于实例属性，由于其对每个实例来说是不同的，又需要统一名称，所以，实例属性在类中的添加一般不是创建一个个实例后一个个指定的，而是利用类的构造方法完成添加的，类的构造方法允许所有实例的相同实例属性使用相同的实例属性名。</p>
+<p>类的构造方法是一个特殊方法，名为__init__，该方法在类实例化时会自动调用。</p>
+<p>__init__方法除了self参数外可以增加任何数量的参数，这些参数被称为初始化参数，会作为值被赋给在该方法中定义的实例属性，当然也可以直接为实例属性指定值。</p>
+<p>__init__方法和c++中的构造函数十分相似，但不像c++的构造函数，它不一定是必要的。</p>
+</li>
+<li>
+<p>类属性的定义：</p>
+<p>类属性在类中直接按局部变量的定义处理即可，且对于定义后的类方法，可以直接使用类属性。</p>
+<p>类属性因为其共享性，允许不通过实例进行访问，直接通过类名访问。</p>
+<p>类属性除了用户定义的属性以外，实际上还有一部分的内置类属性，这些属性是解释器在新建类时自动创建的，用于保证类能够正常运行，上面的__init__也是内置类属性（这里是指方法名）。</p>
+<p>下面列举几个常见的属性：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>部分常用专有属性</th><th>说明</th><th>触发方式</th></tr></thead><tbody><tr><td>__init__</td><td>构造初始化函数</td><td>创建实例后,赋值时使用,在__new__后</td></tr><tr><td>__new__</td><td>生成实例所需属性</td><td>创建实例时</td></tr><tr><td>__class__</td><td>实例所在的类</td><td>实例.__class__</td></tr><tr><td>__str__</td><td>实例字符串表示,可读性</td><td>print(类实例),如没实现，使用repr结果</td></tr><tr><td>__repr__</td><td>实例字符串表示,准确性</td><td>类实例 回车 或者 print(repr(类实例))</td></tr><tr><td>__del__</td><td>析构</td><td>del删除实例</td></tr><tr><td>__dict__</td><td>实例属性和值的键值对</td><td>vars(实例.__dict__)</td></tr><tr><td>__doc__</td><td>类文档,子类不继承</td><td>help(类或实例)</td></tr></tbody></table>
+<p>另外注意，<strong>实例属性访问优先级比类属性高</strong>，可以用实例属性屏蔽掉类属性；<strong>实例无法直接用赋值的方法修改类属性</strong>，因此这实际上是给实例添加了一个同名的新实例属性。</p>
+</li>
+</ul>
+<span id="2-类定义及实例化和使用的例子" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-类定义及实例化和使用的例子">2. 类定义及实例化和使用的例子：</h4>
+<p>首先，定义一个People类，其类属性为人数个数，其初始实例属性包括姓名、年龄、身高、体重、性别，为某些实例对象单独定义血型属性；People类的方法包括输出个人信息（不包括血型）、计算BMI、判断是否成年、输出当前人数。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#类定义
+class People:
+    # 类属性变量，共享
+    count = 0
+
+    # 类的初始化函数，第一个参数是self，其他参数用于接收信息，不传入可以有默认参数
+    def __init__(self,n=None,a=0,h=0,w=0,s="男"):
+        #类属性变量count+1，表示此人被创建
+        #需要使用People来说名变量是属于这个类的，没有就相当于局部变量
+        People.count+=1
+
+        #这五个均为实例属性变量
+        #需要使用self来说明变量是属于这个对象的，没有相当于局部变量
+        self.name=n
+        self.age=a
+        self.height=h
+        self.weight=w
+        self.sex=s
+
+    # 类方法，用于输出个人信息，虽然有一个参数，实际调用不需要传入参数，因为已经有一个隐式传入的参数了
+    def print_information(self):
+        print("个人信息为：")
+        print("姓名：",self.name)
+        print("年龄：",self.age)
+        print("身高：",self.height)
+        print("体重：",self.weight)
+        print("性别：",self.sex)
+    # 类方法，获得BMI
+    def get_BMI(self):
+        return self.weight/((self.height/100)*(self.height/100))
+
+    # 类方法，判断是否成年
+    def judge_adult(self):
+        if self.age>=18:
+            print("已成年")
+            return True
+        else:
+            print("未成年")
+            return False
+
+    # 类方法，输出当前创建的人数数量
+    def print_count(self):
+        print("当前实际人数为：",self.age)
+</code></pre></div>
+<p>下面通过几个例子来展示具体的运行逻辑：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>Bob = People()           # 使用默认参数完成Bob的实例化
+Bob.print_information()  # 通过Bob调用方法，输出对应个人信息
+# 运行结果：
+# 个人信息为：
+# 姓名： None
+# 年龄： 0
+# 身高： 0
+# 体重： 0
+# 性别： 男
+</code></pre></div>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>Tom = People("Tom",20,175,62,"男") #实例化对象Tom，姓名为Tom，20岁，175身高，62kg，性别男
+Tom.print_information()  # 输出Tom的个人信息
+print("Tom的BMI为：",Tom.get_BMI()) #输出Tom的BMI
+if Tom.judge_adult():    # 如果Tom是成年人
+    Tom.blood_type="A"   # 将Tom的血型加入实例变量中，值为A型血
+    print("Tom的血型为：",Tom.blood_type) # 输出血型的实例变量值
+# 运行结果：
+# 个人信息为：
+# 姓名： Tom
+# 年龄： 20
+# 身高： 175
+# 体重： 62
+# 性别： 男
+# Tom的BMI为： 20.244897959183675
+# 已成年
+# Tom的血型为： A
+</code></pre></div>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>Jim =People("Jim",16,166,45,"女")  #实例化对象Jim，姓名为Jim，16岁，166身高，45kg，性别女
+print(Jim.count)  #通过实例Jim输出类属性count的值，应为3
+Jim.count=4       #通过实例Jim修改类属性count的值，实际上是创建了实例属性count覆盖了类属性
+print(id(Jim.count))  #输出Jim实例属性的id
+print(Jim.count)      #输出Jim实例属性的值，应为4
+print(id(Tom.count))  #输出Tom类属性的id，应和上面的id不同
+print(Tom.count)      #输出Tom类属性的值，应为3
+print(id(People.count)) #输出People类属性的id，不通过对象访问，应和Tom输出类属性的id相同
+print(People.count)     #输出People类属性的值，应为3
+# 运行结果：
+# 3
+# 140727492866952
+# 4
+# 140727492866920
+# 3
+# 140727492866920
+# 3
+</code></pre></div>
+<span id="3-一切皆对象" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-一切皆对象">3. 一切皆对象：</h4>
+<p>当学习了类的基本内容之后，可以发现，不管是之前的数据、函数，还是现在的类，全都都是对象，Python中的一切皆为对象，都可以用type函数判断类型，用dir函数查看其属性和方法，用help查看其帮助文档。</p>
+<p>对于变量，Python允许对实例变量绑定任何数据，也就是说，两个不同的实例变量，虽然都是同一个类的不同实例，但拥有的变量名称都可能不同。</p>
+<p>不同的变量名，可以绑定到一个对象上，通过任何一个变量修改对象，会影响到所有指向该对象的所有变量。</p>
+<p>具体的例子，请结合<a href="/blog/python-functions-2/">python基础——函数(二) - ZZHの个人博客 (07xiaohei.com)</a>中的参数传递理解。</p>27:I[2708,["825","$14","953","$1c"],"FeedbackForm"]
+9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L1e",["$","h1",null,{"tabIndex":-1,"children":"python进阶——类(一)面向对象、类和实例"}],["$","p",null,{"className":"article-deck","children":"从类定义和实例化出发，用属性、方法与初始化示例说明对象的组织方式"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-07-13","children":"2023-07-13"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"3,776"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",12," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L1f","python",{"href":"/blog/#tag=python","children":"python"}],["$","$L1f","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]]}],["$","$L20",null,{"headings":[{"id":"section-一面向对象","text":"（一）面向对象","level":3},{"id":"section-1-基本概念","text":"1. 基本概念：","level":4},{"id":"section-2-使用技术","text":"2. 使用技术：","level":4},{"id":"section-3-python的面向对象","text":"3. Python的面向对象：","level":4},{"id":"section-二python中的类和实例","text":"（二）Python中的类和实例","level":3},{"id":"section-1-python的类定义和实例化","text":"1. Python的类定义和实例化：","level":4},{"id":"section-1简单定义","text":"（1）简单定义：","level":5},{"id":"section-2类对象","text":"（2）类对象：","level":5},{"id":"section-3属性和方法","text":"（3）属性和方法：","level":5},{"id":"section-2-类定义及实例化和使用的例子","text":"2. 类定义及实例化和使用的例子：","level":4},{"id":"section-3-一切皆对象","text":"3. 一切皆对象：","level":4}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L21",null,{"html":"$22"}],"$L23","$L24","$L25"]}],"$L26"]}]]}]
+24:["$","$L27",null,{"contentId":"python-classes-instances"}]
+25:["$","div",null,{"className":"related-note","children":[["$","$L1d",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+26:["$","$L20",null,{"headings":"$9:props:children:1:props:headings"}]
+23:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$L1d",null,{"href":"/blog/python-access-inheritance/","children":[["$","span",null,{"children":"上一篇"}],"python进阶——类(二)访问限制、继承"]}],["$","$L1d",null,{"href":"/blog/python-comprehensions-generators/","children":[["$","span",null,{"children":"下一篇"}],"python进阶——高级特性(三)列表生成式、生成器"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$L1d",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-class-decorators",{"children":[["$","$L1d",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$L1d",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+12:[["$","title","0",{"children":"python进阶——类(一)面向对象、类和实例 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从类定义和实例化出发，用属性、方法与初始化示例说明对象的组织方式。"}]]
+1e:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1d",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1d",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$L1d",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L1f",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}]

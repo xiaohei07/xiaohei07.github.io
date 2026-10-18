@@ -1,0 +1,323 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"python-type-conversion","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","python-type-conversion",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+14:"static/chunks/825-1a8f209f3ada760f.js"
+15:"static/chunks/app/layout-b30e31df6c2e8735.js"
+16:I[6767,["825","$14","177","$15"],"DisplayProvider"]
+17:"NavigationFeedback"
+18:I[2842,["825","$14","177","$15"],"$17"]
+19:I[8587,["825","$14","177","$15"],"SiteHeader"]
+1a:I[5803,["825","$14","177","$15"],"SiteFrame"]
+1b:I[164,["825","$14","177","$15"],"ProfileSidebar"]
+1c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+1d:I[3498,["825","$14","953","$1c"],"default"]
+6:C
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L16",null,{"children":[["$","$L18",null,{}],["$","$L19",null,{"tags":["知识点","python","C++"]}],["$","$L1a",null,{"sidebar":["$","$L1b",null,{}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1d",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1d",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1d",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1d",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+1f:I[6279,["825","$14","953","$1c"],"FilterLink"]
+20:I[4067,["825","$14","953","$1c"],"ArticleToc"]
+21:I[4711,["825","$14","953","$1c"],"ArticleBody"]
+22:T371a,<span id="一概述" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一概述">（一）概述：</h3>
+<p>在某些情景下，我们需要对数据内置的类型进行转换，以使其能够参与某些运算/进行某些输出和分析。</p>
+<p>数据类型的转换分为显式（自动）和隐式的类型转换，隐式的可以自动完成，显式的需要使用类型函数。</p>
+<p>类型函数内无参数时创建的是各类型所对应的空值。</p>
+<span id="二隐式类型转换" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二隐式类型转换">（二）隐式类型转换：</h3>
+<p>隐式类型转换主要发生在Number数字的数据类型中（因其内部有不同类型的数据），当两个不同类型的数据进行运算时，默认向更高精度转换。</p>
+<p>数据类型的精度由低到高依次是：bool int float complex</p>
+<p>各种类型的隐式转换如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code># bool->int
+a1 = 99+True
+b1 =False+10
+print(a1)
+print(b1)
+# bool->float
+a2 = 3.14+False
+b2 = True+9.9
+print(a2)
+print(b2)
+# bool->complex
+a3 = 3+4j +True
+b3 = False +5j
+print(a3)
+print(b3)
+# int->float
+aa1 = 5+3.14
+bb1 = 10*8.88
+print(aa1)
+print(bb1)
+# int->complex
+aa2 = 3+(4.5+2j)
+bb2 = 1.1j+3
+print(aa2)
+print(bb2)
+# float->complex
+aaa = 3.14159+(6.28+9.99j)
+bbb = 4j+5.5
+print(aaa)
+print(bbb)
+# 运行结果：
+# 100  int 
+# 10   int
+# 3.14 float
+# 10.9 float
+# (4+4j) complex
+# 5j   complex
+# 8.14 float
+# 88.80000000000001 float
+# (7.5+2j) complex
+# (3+1.1j) complex
+# (9.42159+9.99j) complex
+# (5.5+4j) complex
+</code></pre></div>
+<span id="三显式类型转换" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三显式类型转换">（三）显式类型转换：</h3>
+<span id="1-int将其他类型转换为整型" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-int将其他类型转换为整型">1. int()将其他类型转换为整型：</h4>
+<ul>
+<li>
+<p>形式：<em><strong>int(x, base=10)</strong></em></p>
+</li>
+<li>
+<p>允许的x范围类型：字符串、浮点数、布尔值，base是进制数，默认为十进制。</p>
+<ul>
+<li>浮点型转换为整型，直接舍去小数部分。</li>
+<li>布尔值转换为整型，True为1，False为0。</li>
+<li>字符串转换为整型，仅有纯整型字符串可以转换（即使是浮点型也不可以）。</li>
+</ul>
+</li>
+<li>
+<p>base仅允许在x为纯数字和纯整型字符串的情况下才可以指定，否则报错。</p>
+<p>当字符串对应的纯整型字符串为k进制时，应当将base指定为k进制的形式。</p>
+<p>如果base指定的k进制和字符串存储的数字无法对应（比如base中k=2但字符串出现0和1以外的数字），则报错。</p>
+</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(int(3.14))
+print(int(True))
+print(int("123456"))
+print(int("101010",2))
+print(int("aaac",16))
+#输出结果：
+# 3
+# 1
+# 123456
+# 42
+# 43692
+</code></pre></div>
+<span id="2-float将其他类型转换为浮点型" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-float将其他类型转换为浮点型">2. float()将其他类型转换为浮点型：</h4>
+<ul>
+<li>形式：<em><strong>float(x)</strong></em></li>
+<li>允许的x范围类型：字符串、布尔值和整型。
+<ul>
+<li>整型转换为浮点型，后面+.0</li>
+<li>布尔值转换为浮点型，True为1.0，False为0.0。</li>
+<li>字符串转换为浮点型，只有纯整型字符串（十进制）和纯浮点型字符串可以转换（含小数点，小数点位置任意），其他均不可以。</li>
+</ul>
+</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(float(3))
+print(float(True))
+print(float("123456"))
+print(float("3.14159"))
+print(float(".123"))
+print(float("321."))
+# 运行结果
+# 3.0
+# 1.0
+# 123456.0
+# 3.14159
+# 0.123
+# 321.0
+</code></pre></div>
+<span id="3-complex将其他类型转换为复数类型" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-complex将其他类型转换为复数类型">3. complex()将其他类型转换为复数类型：</h4>
+<ul>
+<li>
+<p>形式：<em><strong>complex(real, imag=0)</strong></em></p>
+</li>
+<li>
+<p>允许的real和imag类型：字符串、布尔值、整型和浮点型。</p>
+<ul>
+<li>整型转换为复数类型，为 (整型数+0j)。</li>
+<li>布尔值类型转换为复数类型，True为 (1+0j)，False为 (0j)</li>
+<li>浮点型转换为复数类型，为 (浮点数+0j)</li>
+<li>事实上，前面三个可以组合输入两次作为 (输入参数1,输入参数2j)转换。</li>
+<li>字符串类型转换为复数类型，只能为一个参数传入，可以是纯整型字符串和浮点型字符串，也可以形如 i +j 形式或者 i-j 形式</li>
+</ul>
+</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(complex(123,2))
+print(complex(True,False))
+print(complex(3.14,2.22))
+print(complex(1,False))
+print(complex(99.9,2))
+print(complex("3+4j"))
+print(complex("3"))
+print(complex("3.14"))
+# 运行结果:
+# (123+2j)
+# (1+0j)
+# (3.14+2.22j)
+# (1+0j)
+# (99.9+2j)
+# (3-4j)
+# (3+0j)
+# (3.14+0j)
+</code></pre></div>
+<span id="4-bool将其他类型转换为布尔类型" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4--bool将其他类型转换为布尔类型">4.  bool()将其他类型转换为布尔类型：</h4>
+<ul>
+<li>形式：<em><strong>bool(x)</strong></em></li>
+<li>所有的数据类型都可以转换成为布尔型，结果只有True和False两种。</li>
+<li>转换为False共十种情况，其余均为True类型：
+<ul>
+<li>整型0</li>
+<li>浮点型0.0</li>
+<li>复数0+0j</li>
+<li>布尔型False</li>
+<li>空字符串""或''或"''"</li>
+<li>空列表[]</li>
+<li>空元组()</li>
+<li>空字典{}</li>
+<li>空集合set()</li>
+<li>python关键字None</li>
+</ul>
+</li>
+</ul>
+<p>不再一一列举（有兴趣的自己去试试）。</p>
+<span id="5-str将其他类型转换为字符串类型" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-5-str将其他类型转换为字符串类型">5. str()将其他类型转换为字符串类型：</h4>
+<ul>
+<li>形式：<em><strong>str(x)</strong></em></li>
+<li>所有类型均可以转换为字符串类型，表示方式只是在最外面增加""。</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(str([1,2,3,4,'\n',"aaa",3+4j]))
+print(str(True))
+print(str(.15926))
+print(str(("i","j","k")))
+print(str({1,"\t\t\t"}))
+print(str({1:True,2:False,3:8+1j,4:[],5:{}}))
+# 输出结果：
+# [1, 2, 3, 4, '\n', 'aaa', (3+4j)]
+# True
+# 0.15926
+# ('i', 'j', 'k')
+# {1, '\t\t\t'}
+# {1: True, 2: False, 3: (8+1j), 4: [], 5: {}}
+</code></pre></div>
+<span id="6-list将其他类型转换为列表类型" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-6-list将其他类型转换为列表类型">6. list()将其他类型转换为列表类型：</h4>
+<ul>
+<li>
+<p>形式：<em><strong>list(x)</strong></em></p>
+</li>
+<li>
+<p>允许的x范围类型：字符串，元组，字典，集合。</p>
+<ul>
+<li>字符串转换为列表，每个字符作为一个元素组成列表。</li>
+<li>字典转换为列表，只将每个键作为一个元素组成列表，值被丢弃。</li>
+<li>元组和集合只是在原有数据的基础上加[]</li>
+</ul>
+</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(list("abcdefg1234\n\n\n"))
+print(list({1:1,2:2,3:3,"a":4,"b":[5,6,7]}))
+print(list((1,2,3,4,"a","b","c",["jkl"])))
+print(list({1,2,3,"a","b","c",(1,2,3)}))
+# 运行结果：
+# ['a', 'b', 'c', 'd', 'e', 'f', 'g', '1', '2', '3', '4', '\n', '\n', '\n']
+# [1, 2, 3, 'a', 'b']
+# [1, 2, 3, 4, 'a', 'b', 'c', ['jkl']] 
+# ['c', 1, 2, 3, (1, 2, 3), 'b', 'a'] #集合转列表时元素顺序无序
+</code></pre></div>
+<span id="7-tuple将其他类型转换为元组类型" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-7-tuple将其他类型转换为元组类型">7. tuple()将其他类型转换为元组类型：</h4>
+<ul>
+<li>形式：<em><strong>tuple(x)</strong></em></li>
+<li>允许的x范围类型：字符串，列表，字典，集合。</li>
+<li>规则和list一致，只是外面加()</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(tuple("abcdefg1234\n\n\n"))
+print(tuple({1:1,2:2,3:3,"a":4,"b":[5,6,7]}))
+print(tuple([1,2,3,4,"a","b","c",["jkl"]]))
+print(tuple({1,2,3,"a","b","c",(1,2,3)}))
+# 运行结果：
+# ('a', 'b', 'c', 'd', 'e', 'f', 'g', '1', '2', '3', '4', '\n', '\n', '\n')
+# (1, 2, 3, 'a', 'b')
+# (1, 2, 3, 4, 'a', 'b', 'c', ['jkl'])
+# (1, 2, 3, 'b', (1, 2, 3), 'c', 'a')
+</code></pre></div>
+<span id="8-set将其他类型转换为集合类型" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-8-set将其他类型转换为集合类型">8. set()将其他类型转换为集合类型：</h4>
+<ul>
+<li>
+<p>形式：<em><strong>set(x)</strong></em></p>
+</li>
+<li>
+<p>允许的x范围类型：字符串，列表，字典，元组。</p>
+</li>
+<li>
+<p>规则和list一致，只是外面加{}，不过元素顺序是无序的。</p>
+<p>注意：pycharm中直接强制转化set会警告，因为直接用{}强制转化就可以代替，为了演示效果，下面进行了两次强制转化：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(set("abcdefg1234\n\n\n"))
+print(set(dict({1: 1, 2: 2, 3: 3, "a": 4, "b": [1, 2, 3]})))
+print(set(list([1, 2, 3, 4, "a", "b", "c", "jkl"])))
+print(set(tuple((1, 2, 3, 4, "a", "b", (4, 5, 6)))))
+#运行结果：
+# {'f', 'a', 'c', 'd', '2', '4', 'b', 'e', 'g', '1', '\n', '3'}
+# {1, 2, 3, 'a', 'b'}
+# {1, 2, 3, 4, 'a', 'c', 'b', 'jkl'}
+# {1, 2, 3, 4, 'a', 'b', (4, 5, 6)}
+</code></pre></div>
+</li>
+</ul>
+<span id="9-dict将其他类型转换为字典类型" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-9-dict将其他类型转换为字典类型">9. dict()将其他类型转换为字典类型：</h4>
+<p>在说明dict的类型转换前，需要说明容器和多级容器的概念：</p>
+<span id="容器" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-容器">容器：</h5>
+<p>Python中，可包含其他对象的对象，称之为“容器”。容器是一种数据结构。</p>
+<p>常用的容器主要划分为两种：序列（如：列表、元祖等）和映射（如：字典）。序列中，每个元素都有下标，它们是有序的。映射中，每个元素都有名称（又称“ 键 ”），它们是无序的。</p>
+<p>除了序列和映射之外，还有一种需要注意的容器——“ 集合 ”。</p>
+<span id="多级容器" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-多级容器">多级容器：</h5>
+<p>在一个容器中嵌套一个容器，这个容器就叫二级容器；在被嵌套的容器中可以再嵌套容器，最外层的容器就叫做多级容器......由此可以获得多级容器。</p>
+<p>多级容器不包括字符串，字符串是特殊的容器，任何字符在字符串中都是字符串的一个单独元素；</p>
+<p>容器的类型取决于最外层的容器，不同的类型容器可以相互嵌套，但是，集合和字典除外；因为字典的键和集合中的值必须是可哈希的类型，即可变数据类型。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>l = [1,2,[3,4,[5,6]]]
+d = {0:{1:1,2:2,3:{4:4,5:5,6:6}}}
+t = (1,2,3,[1,2,3],{1,2,3})
+print(type(l))
+print(type(d))
+print(type(t))
+#运行结果：
+# &#x3C;class 'list'>
+# &#x3C;class 'dict'>
+# &#x3C;class 'tuple'>
+</code></pre></div>
+<span id="等长的多级容器" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-等长的多级容器">等长的多级容器：</h5>
+<p>外层容器中的元素都是容器。</p>
+<p>被嵌套容器中的元素个数是一样的。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>l=[[1,2],[3,4],[5,6]] #等长的二级容器
+</code></pre></div>
+<span id="字典的强制转换" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-字典的强制转换">字典的强制转换：</h5>
+<ul>
+<li>形式：<em><strong>dict(x)</strong></em></li>
+<li>允许的x范围类型：等长的二级容器，且内部元素个数必须为两个。</li>
+<li>转换类型上，不能在最外层使用字符串。</li>
+<li>转换类型的元素建议使用列表和元组，尽量不要用集合和字符串（集合难以形成键值对的对应关系，两者可能互换，而字符串只允许长度为2）</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(dict([[1,2],(3,4),{5,6},"78"]))
+# 运行结果：
+# {1: 2, 3: 4, 5: 6, '7': '8'}  不建议使用集合，但是此处顺序是固定的，字符串如果是两位可以用。
+</code></pre></div>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L1e",["$","h1",null,{"tabIndex":-1,"children":"python基础——数据类型(八)类型转换"}],["$","p",null,{"className":"article-deck","children":"用示例比较隐式与显式类型转换，整理数字、字符串和各类容器之间的转换方法"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-28","children":"2023-03-28"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,256"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",8," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L1f","python",{"href":"/blog/#tag=python","children":"python"}],["$","$L1f","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]]}],["$","$L20",null,{"headings":[{"id":"section-一概述","text":"（一）概述：","level":3},{"id":"section-二隐式类型转换","text":"（二）隐式类型转换：","level":3},{"id":"section-三显式类型转换","text":"（三）显式类型转换：","level":3},{"id":"section-1-int将其他类型转换为整型","text":"1. int()将其他类型转换为整型：","level":4},{"id":"section-2-float将其他类型转换为浮点型","text":"2. float()将其他类型转换为浮点型：","level":4},{"id":"section-3-complex将其他类型转换为复数类型","text":"3. complex()将其他类型转换为复数类型：","level":4},{"id":"section-4--bool将其他类型转换为布尔类型","text":"4.  bool()将其他类型转换为布尔类型：","level":4},{"id":"section-5-str将其他类型转换为字符串类型","text":"5. str()将其他类型转换为字符串类型：","level":4},{"id":"section-6-list将其他类型转换为列表类型","text":"6. list()将其他类型转换为列表类型：","level":4},{"id":"section-7-tuple将其他类型转换为元组类型","text":"7. tuple()将其他类型转换为元组类型：","level":4},{"id":"section-8-set将其他类型转换为集合类型","text":"8. set()将其他类型转换为集合类型：","level":4},{"id":"section-9-dict将其他类型转换为字典类型","text":"9. dict()将其他类型转换为字典类型：","level":4},{"id":"section-容器","text":"容器：","level":5},{"id":"section-多级容器","text":"多级容器：","level":5},{"id":"section-等长的多级容器","text":"等长的多级容器：","level":5},{"id":"section-字典的强制转换","text":"字典的强制转换：","level":5}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L21",null,{"html":"$22"}],"$L23","$L24","$L25"]}],"$L26"]}]]}]
+27:I[2708,["825","$14","953","$1c"],"FeedbackForm"]
+24:["$","$L27",null,{"contentId":"python-type-conversion"}]
+25:["$","div",null,{"className":"related-note","children":[["$","$L1d",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+26:["$","$L20",null,{"headings":"$9:props:children:1:props:headings"}]
+23:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$L1d",null,{"href":"/blog/python-character-encoding/","children":[["$","span",null,{"children":"上一篇"}],"python基础——字符编码"]}],["$","$L1d",null,{"href":"/blog/python-dictionaries/","children":[["$","span",null,{"children":"下一篇"}],"python基础——数据类型(七)字典"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$L1d",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-class-decorators",{"children":[["$","$L1d",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$L1d",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+12:[["$","title","0",{"children":"python基础——数据类型(八)类型转换 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"用示例比较隐式与显式类型转换，整理数字、字符串和各类容器之间的转换方法。"}]]
+1e:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1d",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1d",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$L1d",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L1f",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}]

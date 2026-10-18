@@ -1,0 +1,375 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"python-comprehensions-generators","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","python-comprehensions-generators",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+14:"static/chunks/825-1a8f209f3ada760f.js"
+15:"static/chunks/app/layout-b30e31df6c2e8735.js"
+16:I[6767,["825","$14","177","$15"],"DisplayProvider"]
+17:"NavigationFeedback"
+18:I[2842,["825","$14","177","$15"],"$17"]
+19:I[8587,["825","$14","177","$15"],"SiteHeader"]
+1a:I[5803,["825","$14","177","$15"],"SiteFrame"]
+1b:I[164,["825","$14","177","$15"],"ProfileSidebar"]
+1c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+1d:I[3498,["825","$14","953","$1c"],"default"]
+6:C
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L16",null,{"children":[["$","$L18",null,{}],["$","$L19",null,{"tags":["知识点","python","C++"]}],["$","$L1a",null,{"sidebar":["$","$L1b",null,{}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1d",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1d",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1d",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1d",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+1f:I[6279,["825","$14","953","$1c"],"FilterLink"]
+20:I[4067,["825","$14","953","$1c"],"ArticleToc"]
+21:I[4711,["825","$14","953","$1c"],"ArticleBody"]
+22:T41f3,<span id="五列表生成式" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-五列表生成式">（五）列表生成式</h3>
+<span id="1-概述" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-概述">1. 概述：</h4>
+<p>列表生成式是Python中内置的创建列表的方法。</p>
+<p>列表生成式基于可迭代对象创建，相较于for循环和if循环，创建快捷（基于C语言实现），代码简介，更具可读性。</p>
+<p>但要注意列表生成式对于简单的任务处理更具优势，如果情况复杂，生成难度可能会很高；而且列表生成式会一次性生成全部列表元素，对于大型列表，会导致内存被大量占用。</p>
+<p>列表生成式是Python的高级特性体现之一。</p>
+<span id="2-语法格式" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-语法格式">2. 语法格式：</h4>
+<p><em><strong>[expression for item in iterable if conditional]</strong></em></p>
+<p>expression：expression对应生成式列表的元素，是生成后需要保存的内容，expression通常利用for循环内的变量来计算表示，expression除了使用range循环外，不可省略。</p>
+<p>注意：for循环前面的if...else语句是算入表达式之中的，因此for循环前面的if条件语句必须有else来保证能够取到元素。</p>
+<p>for循环：语法对应基本的for循环，项item对应了可迭代对象iterable的每一个元素。</p>
+<p>允许使用range循环直接表示，可以进行for循环的迭代嵌套创建新的对应关系作为生成式的元素，循环的item可以使用多个变量。</p>
+<p>if条件语句：用于判断循环的每个元素是否符合生成的要求标准，用于筛选循环的元素，因此不能在后面的if判断中使用else，否则失去了筛选的作用。</p>
+<span id="3-例子" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-例子">3. 例子：</h4>
+<ul>
+<li>
+<p>首先是没有if语句时的列表生成式：</p>
+<ul>
+<li>直接使用range迭代快速构建1-10的列表，需要进行list类型转化：</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>list_use = list(range(1,11))
+print(list_use,end=" ")
+# 运行结果：
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</code></pre></div>
+<p>生成一个n*n为元素的1-10的列表：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>list_use = [x*x for x in range(1,11)]
+print(list_use,end=" ")
+# 运行结果：
+# [1, 4, 9, 16, 25, 36, 49, 64, 81, 100] 
+</code></pre></div>
+<p>根据给定列表字符串集生成每个字符串的长度：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>list_use = ["ab","cde","fghi","jklmn"]
+list_use2=[len(x) for x in list_use]
+print(list_use2,end=" ")
+# 运行结果：
+# [2, 3, 4, 5]
+</code></pre></div>
+</li>
+<li>
+<p>带有if语句时的列表生成式：</p>
+<p>生成30以内的偶数列表：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>list_use = [x for x in range(1,31) if x%2==0]
+print(list_use,end=" ")
+# 运行结果：
+# [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+</code></pre></div>
+<p>生成指定字符串中长度大于3的字符串并全部大写：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>list_use = ["ab","cde","fghi","jklmn"]
+list_use2=[x.upper() for x in list_use if len(x)>3]
+print(list_use2,end=" ")
+# 运行结果：
+# ['FGHI', 'JKLMN'] 
+</code></pre></div>
+</li>
+<li>
+<p>多个for循环嵌套的列表生成式：</p>
+<p>全排列的生成：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>list_use1=["a","b","c"]
+list_use2=["1","2","3"]
+list_use=[i+j for i in list_use1 for j in list_use2]
+print(list_use,end=" ")
+# 运行结果：
+# ['a1', 'a2', 'a3', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3'] 
+
+</code></pre></div>
+</li>
+<li>
+<p>for循环使用多个变量的列表生成式：</p>
+<p>经常使用的是把dict的键值对按某种逻辑组合成列表的一个元素：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>dict_use={'a':1,'b':2,'c':3,'d':4}
+list_use=[x+str(y) for x,y in dict_use.items()]
+print(list_use,end=" ")
+# 运行结果：
+# ['a1', 'b2', 'c3', 'd4'] 
+</code></pre></div>
+<p>也可以直接对list的内部元组进行组合：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>list_use1=[("a","1"),("b","2"),("3","c")]
+list_use=[i+j for i,j in list_use1]
+print(list_use,end=" ")
+# 运行结果：
+# ['a1', 'b2', '3c']
+</code></pre></div>
+</li>
+</ul>
+<span id="六生成器" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-六生成器">（六）生成器</h3>
+<p>对于列表生成式，虽然其运行效率高，代码简洁，但是其一次性生成整个列表，内存消耗代价大，因此，为了节约内存，我们可以使用生成器生成列表。</p>
+<p>当然，生成器也可以用于生成其他类型。</p>
+<span id="1-概念" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-概念">1. 概念：</h4>
+<p>生成器(generator)是一种返回一个值的迭代器，每次从该迭代器取下一个值。</p>
+<p>生成器实际上是一种高级迭代器，因此也是可迭代对象，可以使得需要返回一系列元素的函数所需的代码更加的简单和高效，当然也因此只能遍历一次。</p>
+<p>生成器通过某种算法，在循环中能够不断计算处下一次需要生成的元素，而不需要创建完整的生成列表，以此来节省空间。</p>
+<p>注意，生成器实际上保存的是算法，调用next方法时能够就能够计算出下一个元素的值。</p>
+<p>一旦计算到最后一个元素，再次调用next方法，就会抛出StopIteration错误。</p>
+<p>生成器有两种表示：生成器表达式和生成器函数。</p>
+<span id="2-生成器表达式" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-生成器表达式">2. 生成器表达式：</h4>
+<p>生成器表达式也被称为隐式生成器，语法与推导式基本相同，但要用圆括号来创建生成器，也就是将其[]换成()。</p>
+<p>生成器表达式会产生新的生成器对象并返回，不会构建出一个列表进行返回，所以直接输出生成器不会输出对应的结果。</p>
+<p>另外，生成器表达式禁止使用yield和yield from表达式（后文会讲）。</p>
+<p>例子如下：</p>
+<p>将上方例子的[]直接更换为()即可获得生成器，然后使用时直接用next函数或者遍历即可</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>generator_use =(x*x for x in range(1,5))
+print(generator_use)
+print(generator_use.__next__(),end=" ")
+print(generator_use.__next__(),end=" ")
+print(generator_use.__next__(),end=" ")
+print(generator_use.__next__(),end=" ")
+print(generator_use.__next__(),end=" ")
+# 运行结果：
+# Traceback (most recent call last):
+#   File "D:\pycharmwork\blog_use.py", line 2330, in &#x3C;module>
+#     print(generator_use.__next__(),end=" ")
+#           ^^^^^^^^^^^^^^^^^^^^^^^^
+# StopIteration
+# &#x3C;generator object &#x3C;genexpr> at 0x0000016F5D849150>
+# 1 4 9 16
+
+generator_use =(x*x for x in range(1,5))
+for i in generator_use:
+    print(i,end=" ")
+#运行结果：
+# 1 4 9 16
+</code></pre></div>
+<p>判断其是否可迭代及其类型：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>from collections.abc import *
+print(isinstance((x*x for x in range(1,5)),Iterable))
+print(type((x*x for x in range(1,5))))
+#运行结果如下：
+# True
+# &#x3C;class 'generator'>
+</code></pre></div>
+<p>嵌套for等语法同样可以用于生成器：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>list_use1=["a","b","c"]
+list_use2=["1","2","3"]
+generator_use=(i+j for i in list_use1 for j in list_use2)
+for i in generator_use:
+    print(i,end=" ")
+# 运行结果：
+# a1 a2 a3 b1 b2 b3 c1 c2 c3 
+
+dict_use={'a':1,'b':2,'c':3,'d':4}
+generator_use=(x+str(y) for x,y in dict_use.items())
+for i in generator_use:
+    print(i,end=" ")
+# 运行结果：
+# a1 b2 c3 d4 
+</code></pre></div>
+<span id="3-生成器函数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-生成器函数">3. 生成器函数：</h4>
+<p>生成器函数类似一般函数，但是额外增加了yield关键字，此时函数返回的是一个生成器对象。</p>
+<p>生成器函数和一般函数的区别在于，一般函数的执行流程是顺序执行，当遇到return语句或者执行到最后一行语句时才会返回，而对于生成器函数，遇到yield语句会暂停函数的执行并返回此时的中间结果；一般函数的调用是用函数名显式调用，而生成器函数的调用必须显式或者隐式的使用next语句调用，同时恢复到上一次的yield语句处再往下继续执行。</p>
+<p>也就是说，生成器函数能够利用yield语句暂停函数的执行并返回中间元素的对应生成器，并通过next方法恢复函数中断现场，并从暂停的语句处开始继续执行，直到没有yield语句可以运行，此时会引发StopIteration异常。</p>
+<p><strong>yield语句：</strong>语法格式同return语句，只替换关键字。</p>
+<p>yield语句负责产生一个返回值并返回，返回后生成器函数会在yield语句处保存函数的内部状态，并挂起函数，直到再次调用，从上一次yield的地方继续执行，沿用上一轮的函数内部变量的状态。</p>
+<p>注意，return语句对生成器函数返回值不会产生任何影响，函数返回值仍为生成器对象。如果没有return语句的话，注意函数结束时返回的是StopIteration异常，如果有return语句，函数会立刻停止运行并返回StopIteration异常，而return的返回值只作为异常的说明，而不是函数的返回值。</p>
+<p>可以直接显式调用close()来手动关闭生成器函数。</p>
+<p>可以用send()向生成器传入外部的值，但注意不能在启动生成器函数时传入。用一个变量接收send的值。</p>
+<p>接收语法为：<em><strong>receive变量名 = yield value</strong></em>，这里send的信息会被赋给receive变量名。</p>
+<p>send执行时会运行函数，所以如果需要send信息请注意增加yield语句或者修改外部循环。</p>
+<p>生成器函数常用于使用生成器的流数据缓冲区。</p>
+<p>例子如下：</p>
+<p>简单的生成器函数，用next方法显式返回12345序列：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def get_1to5():
+    print("启动生成器函数")
+    for i in range(1,6):
+        print("生成一个新的值中......")
+        print("生成成功")
+        yield i
+generator_use=get_1to5()
+print(generator_use.__next__())
+print(generator_use.__next__())
+print(generator_use.__next__())
+print(generator_use.__next__())
+print(generator_use.__next__())
+print(generator_use.__next__())
+# 运行结果：
+# Traceback (most recent call last):
+#   File "D:\pycharmwork\blog_use.py", line 2387, in &#x3C;module>
+#     print(generator_use.__next__())
+#           ^^^^^^^^^^^^^^^^^^^^^^^^
+# StopIteration
+# 启动生成器函数
+# 生成一个新的值中......
+# 生成成功
+# 1
+# 生成一个新的值中......
+# 生成成功
+# 2
+# 生成一个新的值中......
+# 生成成功
+# 3
+# 生成一个新的值中......
+# 生成成功
+# 4
+# 生成一个新的值中......
+# 生成成功
+# 5
+</code></pre></div>
+<p>for循环返回：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def get_1to5():
+    print("启动生成器函数")
+    for i in range(1,6):
+        print("生成一个新的值中......")
+        print("生成成功")
+        yield i
+for i in get_1to5():
+    print(i)
+# 运行结果：
+# 启动生成器函数
+# 生成一个新的值中......
+# 生成成功
+# 1
+# 生成一个新的值中......
+# 生成成功
+# 2
+# 生成一个新的值中......
+# 生成成功
+# 3
+# 生成一个新的值中......
+# 生成成功
+# 4
+# 生成一个新的值中......
+# 生成成功
+# 5
+</code></pre></div>
+<p>return对结果的影响：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def get_1to5():
+    print("启动生成器函数")
+    for i in range(1,6):
+        print("生成一个新的值中......")
+        print("生成成功")
+        yield i
+        return "错误源于完成了函数"
+t =get_1to5()
+print(t.__next__())
+print(t.__next__())
+# 运行结果：
+# 启动生成器函数
+# 生成一个新的值中......
+# 生成成功
+# 1
+# Traceback (most recent call last):
+#   File "D:\pycharmwork\blog_use.py", line 2446, in &#x3C;module>
+#     print(t.__next__())
+#           ^^^^^^^^^^^^
+# StopIteration: 错误源于完成了函数
+</code></pre></div>
+<p>close显式停止函数运行：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def get_1to5():
+    print("启动生成器函数")
+    for i in range(1,6):
+        print("生成一个新的值中......")
+        print("生成成功")
+        yield i
+generator_use = get_1to5()
+print(generator_use.__next__())
+print(generator_use.__next__())
+generator_use.close()
+print(generator_use.__next__())
+# 运行结果：
+# 启动生成器函数
+# 生成一个新的值中......
+# 生成成功
+# 1
+# 生成一个新的值中......
+# 生成成功
+# 2
+# Traceback (most recent call last):
+#   File "D:\pycharmwork\blog_use.py", line 2468, in &#x3C;module>
+#     print(generator_use.__next__())
+#           ^^^^^^^^^^^^^^^^^^^^^^^^
+# StopIteration
+
+def get_1to5():
+    print("启动生成器函数")
+    for i in range(1,6):
+        print("生成一个新的值中......")
+        print("生成成功")
+        yield i
+generator_use = get_1to5()
+for i in generator_use:
+    print(i)
+    if i == 3:
+        generator_use.close()
+# 运行结果：
+# 启动生成器函数
+# 生成一个新的值中......
+# 生成成功
+# 1
+# 生成一个新的值中......
+# 生成成功
+# 2
+# 生成一个新的值中......
+# 生成成功
+# 3
+
+</code></pre></div>
+<p>send发送信息和receive接收信息：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def get_1to5():
+    for i in range(1,6):
+        val =yield i
+        print("接收信息"+str(val))
+
+generator_use = get_1to5()
+i = generator_use.__next__()
+print(i)
+while True:
+    i = generator_use.send(i*i)
+    print(i)
+    if i == 5:
+        break
+# 运行结果：
+# 1
+# 接收信息1
+# 2
+# 接收信息4
+# 3
+# 接收信息9
+# 4
+# 接收信息16
+# 5
+</code></pre></div>
+<p>最后用生成器函数设计一个杨辉三角：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def Triangle():
+    result=[1]
+    result_next = [1,1]
+    while True:
+        yield result
+        result = result_next
+        result_next=[1]+ [result_next[i]+result_next[i+1] for i in range(len(result_next)-1)]+[1]
+for i in Triangle():
+    print(i)
+    if(len(i)==10):
+        break
+</code></pre></div>27:I[2708,["825","$14","953","$1c"],"FeedbackForm"]
+9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L1e",["$","h1",null,{"tabIndex":-1,"children":"python进阶——高级特性(三)列表生成式、生成器"}],["$","p",null,{"className":"article-deck","children":"从条件筛选和嵌套循环生成列表，再介绍生成器表达式、yield 暂停与恢复"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-07-13","children":"2023-07-13"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,852"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",10," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L1f","python",{"href":"/blog/#tag=python","children":"python"}],["$","$L1f","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]]}],["$","$L20",null,{"headings":[{"id":"section-五列表生成式","text":"（五）列表生成式","level":3},{"id":"section-1-概述","text":"1. 概述：","level":4},{"id":"section-2-语法格式","text":"2. 语法格式：","level":4},{"id":"section-3-例子","text":"3. 例子：","level":4},{"id":"section-六生成器","text":"（六）生成器","level":3},{"id":"section-1-概念","text":"1. 概念：","level":4},{"id":"section-2-生成器表达式","text":"2. 生成器表达式：","level":4},{"id":"section-3-生成器函数","text":"3. 生成器函数：","level":4}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L21",null,{"html":"$22"}],"$L23","$L24","$L25"]}],"$L26"]}]]}]
+24:["$","$L27",null,{"contentId":"python-comprehensions-generators"}]
+25:["$","div",null,{"className":"related-note","children":[["$","$L1d",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+26:["$","$L20",null,{"headings":"$9:props:children:1:props:headings"}]
+23:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$L1d",null,{"href":"/blog/python-classes-instances/","children":[["$","span",null,{"children":"上一篇"}],"python进阶——类(一)面向对象、类和实例"]}],["$","$L1d",null,{"href":"/blog/python-iteration-iterators/","children":[["$","span",null,{"children":"下一篇"}],"python进阶——高级特性(二)迭代、迭代器"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$L1d",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-class-decorators",{"children":[["$","$L1d",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$L1d",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+12:[["$","title","0",{"children":"python进阶——高级特性(三)列表生成式、生成器 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从条件筛选和嵌套循环生成列表，再介绍生成器表达式、yield 暂停与恢复。"}]]
+1e:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1d",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1d",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$L1d",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L1f",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}]

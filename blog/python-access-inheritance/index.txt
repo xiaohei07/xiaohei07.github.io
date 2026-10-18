@@ -1,0 +1,386 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"python-access-inheritance","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","python-access-inheritance",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+14:"static/chunks/825-1a8f209f3ada760f.js"
+15:"static/chunks/app/layout-b30e31df6c2e8735.js"
+16:I[6767,["825","$14","177","$15"],"DisplayProvider"]
+17:"NavigationFeedback"
+18:I[2842,["825","$14","177","$15"],"$17"]
+19:I[8587,["825","$14","177","$15"],"SiteHeader"]
+1a:I[5803,["825","$14","177","$15"],"SiteFrame"]
+1b:I[164,["825","$14","177","$15"],"ProfileSidebar"]
+1c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+1d:I[3498,["825","$14","953","$1c"],"default"]
+6:C
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L16",null,{"children":[["$","$L18",null,{}],["$","$L19",null,{"tags":["知识点","python","C++"]}],["$","$L1a",null,{"sidebar":["$","$L1b",null,{}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1d",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1d",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1d",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1d",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+1f:I[6279,["825","$14","953","$1c"],"FilterLink"]
+20:I[4067,["825","$14","953","$1c"],"ArticleToc"]
+21:I[4711,["825","$14","953","$1c"],"ArticleBody"]
+22:T4730,<span id="三类的访问限制" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三类的访问限制">（三）类的访问限制</h3>
+<span id="1-原因" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-原因">1. 原因：</h4>
+<p>Python中，当正常使用类实例时，外部代码可以通过直接调用实例变量的方法操作数据，从而隐藏内部的复杂逻辑——但有些时候，不希望外部代码自由修改某些属性时，需要为其设置访问权限，阻止外部代码的访问。</p>
+<span id="2-概念" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-概念">2. 概念：</h4>
+<p>Python中，属性权限的控制是通过属性名来实现的。</p>
+<p>当属性名是由双下划线（__）开头但不是以双下划线（__）结尾，该属性就无法被外部访问。（如果是也以双下划线结尾的话就是特殊属性了，一般是内置类属性，不建议自己定义时使用）</p>
+<p>如果以单下划线（_）开头，实际上是不能阻止外部代码访问的，但是一般情况下约定外部代码不应该访问这样的变量。（继承中会详细讲解）</p>
+<ul>
+<li>如果已经学习c++，可以理解为，一般的属性是public的成员，双下划线开头的是private成员，单下划线开头的是protected成员，不过可以被外部访问，但通过约定变成了protected的形式。</li>
+</ul>
+<p>如果想要使用或者修改这些属性，请在类中定义相关的方法，用方法包装好，这样有利于通过方法检查属性的类型和值是否合理，避免传入无效参数。</p>
+<span id="3-深入理解" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-深入理解">3. 深入理解：</h4>
+<p>实际上，以双下划线开头的属性不是一定就不能从外部访问——本质上，Python解释器是把双下划线开头的属性从__属性名解释成为了_类名__属性名的格式（这不一定正确，因为不同版本的解释器可能解释的结果是不同的），如果直接指定这种格式，也可以绕过限制实现访问。</p>
+<p>但按一般要求，强烈不建议这样做，这样做破坏了访问限制本身的约束。</p>
+<p>如果直接在实例中采用__属性名格式赋值的话，实际上，是创建了一个新的变量和对象，和类内部的双下划线开头的属性是不同的。</p>
+<p>根本上，<strong>从语法层面，Python的私有成员和访问限制是不彻底的，Python没有提供完善的机制阻止访问私有成员和公共成员</strong>。</p>
+<p>另外，方法也可以通过加双下划线的方式定义为私有方法，此时方法只能在类内部使用，外部调用同样要用_类名__属性名的形式。</p>
+<span id="4-例子" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-例子">4. 例子：</h4>
+<p>首先定义一个私有成员，实现获得修改方法：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class test:
+    def __init__(self):
+        self.__inter_test=10      #设置私有成员初始值为10
+    def get_inter_test(self):     #负责返回私有成员值
+        return self.__inter_test
+    def set_inter_test(self,val): #负责修改私有成员值
+        self.__inter_test=val
+        return True
+test_exmp= test()                 #实例化，此时是不能直接访问私有成员的
+print(test_exmp.get_inter_test()) #通过方法获得私有成员，应为10
+test_exmp.set_inter_test(20)      #通过方法修改私有成员为20
+print(test_exmp.get_inter_test()) #通过方法获得私有成员，应为20
+# 运行结果：
+# 10
+# 20
+</code></pre></div>
+<p>尝试直接用__属性名修改私有成员：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>test_exmp= test()
+test_exmp.__inter_test=30         #实际上是创建了一个新的属性
+print(test_exmp.get_inter_test()) #输出的是私有成员
+print(id(test_exmp.get_inter_test())) #对应10
+print(id(test_exmp.__inter_test))     #对应30
+# 运行结果：
+# 10
+# 140734138938440
+# 140734138939080
+</code></pre></div>
+<p>用上面的Python的解释器内部格式输出和修改私有成员：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>test_exmp= test()
+print(test_exmp.get_inter_test())
+test_exmp._test__inter_test=20
+print(test_exmp.get_inter_test())
+# 运行结果：
+# 10
+# 20
+</code></pre></div>
+<p>可以看到，私有成员被外部代码修改了，说明了访问权限不是绝对的。</p>
+<span id="四继承" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-四继承">（四）继承</h3>
+<span id="1-概念" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-概念">1. 概念：</h4>
+<p>类的最重要一点就是需要支持继承。</p>
+<p>继承是类和类之间的一种关系，继承是代码重用的最重要的方式之一。</p>
+<p>在实现某个新类，可以通过继承完成——继承中有两类对象，基类和派生类，派生类可以从基类中继承其属性和方法，所以，创建的新类也就是派生类，方法、属性的原所有者也就是基类。</p>
+<p>基类和派生类也可以称为父类和子类。</p>
+<p>派生类除了继承的属性和方法外，还可以覆盖、添加功能——前者是公有的属性和功能，后者是自己特有的属性和功能。</p>
+<p>Python支持多级继承，派生类仍然可以作为另一个类的基类使用；也支持多继承，即一个派生类由多个基类派生。</p>
+<p>对于派生类的一个实例，其也是基类的一个实例；而对于基类的一个实例，其不是派生类的实例——所以，我们说派生类和基类是"is"的关系，可以用isintance判断。</p>
+<p>这里演示一下简单的例子：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class father:
+    pass
+class son(father):
+    pass
+f=father()
+s=son()
+print(isinstance(f,father))
+print(isinstance(f,son))
+print(isinstance(s,father))
+print(isinstance(s,son))
+# 运行结果：
+# True
+# False
+# True
+# True
+</code></pre></div>
+<span id="2-语法格式" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-语法格式">2. 语法格式：</h4>
+<p><em><strong>class DerivedClassName(BaseClassName1, BaseClassName1, ...,BaseClassNameN):</strong></em>
+<em><strong>&#x3C;statement-1></strong></em>
+<strong>. . .</strong>
+<em><strong>&#x3C;statement-N></strong></em></p>
+<p>DerivedClassName是派生类类名，BaseClassNameN对应了每一个被继承的基类类名，内部类语句不变。</p>
+<p>BaseClassName一般情况下必须与派生类定义在一个命名空间内。</p>
+<p>基类类名可以用某些表达式代替，比如<em><strong>modname.BaseClassName</strong></em>，使用某个模块中的类作为基类，这时允许BaseClassNameN与派生类不在一个作用域内。</p>
+<p>例如可以定义如下派生类：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class father1:
+    pass
+class father2:
+    pass
+class father3:
+    pass
+class son(father1,father2,father3):
+    pass
+s =son()
+print(s.__class__.__bases__)
+# 运行结果：
+# (&#x3C;class '__main__.father1'>, &#x3C;class '__main__.father2'>, &#x3C;class '__main__.father3'>)
+</code></pre></div>
+<span id="3-分类" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-分类">3. 分类：</h4>
+<ul>
+<li>
+<p>单继承：</p>
+<p>最普通的继承，单独继承一个父类，获得其全部的属性和方法。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class father:
+    def __init__(self):
+        print("init father work")
+        self.init_f_val1=1
+        self.init_f_val2="classfather"
+    def print_father(self):
+        print("print_father:")
+        print("init_f_val1:",self.init_f_val1)
+        print("init_f_val2:",self.init_f_val2)
+class son(father):
+    def __init__(self):
+        super().__init__()
+        print("init son work")
+        self.init_s_val1=2
+        self.init_s_val2="classson"
+    def print_son(self):
+        self.print_father()
+        print("print son:")
+        print("init_s_val1:", self.init_s_val1)
+        print("init_s_val2:", self.init_s_val2)
+s =son()
+# 运行结果：
+# s.print_son()
+# init father work
+# init son work
+# print_father:
+# init_f_val1: 1
+# init_f_val2: classfather
+# print son:
+# init_s_val1: 2
+# init_s_val2: classson
+</code></pre></div>
+<p>上面使用的super稍微解释。</p>
+</li>
+<li>
+<p>多重继承和多层继承：</p>
+<p>多重继承是对多个类的继承，也就是一个类同时拥有多个基类。</p>
+<p>多层继承是类的继承不只是两级的，派生类可以作为新的基类被继承，从而形成多个层次的继承，派生类本身的属性和方法以及通过继承得来的属性和方法都会继承给下一层派生类。</p>
+<p>多继承和多层继承可以统称为多继承。</p>
+<p>python支持的多继承是有限的，对于一个类继承多个父类时，优先继承第一个类的属性和方法——也就是按照优先顺位完成继承过程。</p>
+<p>不支持对已经有继承关系的多个类先继承其基类，再继承其派生类，这会导致继承顺序的混乱而报错。</p>
+<p>实际上，复杂的继承需要考虑选择同名方法的问题，python3.x版本使用的是<strong>MRO——方法搜索顺序</strong>，而python2.x版本使用的是深度优先继承方式。</p>
+<p>方法搜索顺序的具体原理较复杂，这里不详细讲述，但可以直接利用<strong>内置属性__mro__</strong>来查看类的继承顺序，</p>
+<p><strong>__mro__</strong>属性的查看需要通过类名来进行。</p>
+<p>代码如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code># fun+类名每个类独有，fun1除了最终的派生类每个类都有，fun2ABC三个类有
+class A:
+    def funA(self):
+        print("funA")
+    def fun(self):
+        print("funa")
+    def fun2(self):
+        print("funa")
+class B(A):
+    def funB(self):
+        print("funB")
+    def fun(self):
+        print("funb")
+    def fun2(self):
+        print("funb")
+class C(A):
+    def funC(self):
+        print("funC")
+    def fun(self):
+        print("func")
+    def fun2(self):
+        print("func")
+class D(B,C):
+    def funD(self):
+        print("funD")
+    def fun(self):
+        print("fund")
+class E(B,A):
+    def funE(self):
+        print("funE")
+    def fun(self):
+        print("fune")
+class F(D,E):
+    def funF(self):
+        print("funF")
+f=F()
+print(F.__mro__)
+f.funF()
+f.funA()
+f.funE()
+f.fun()
+f.fun2()
+# 运行结果：
+# (&#x3C;class '__main__.F'>, &#x3C;class '__main__.D'>, &#x3C;class '__main__.E'>, &#x3C;class '__main__.B'>, &#x3C;class '__main__.C'>, &#x3C;class '__main__.A'>, &#x3C;class 'object'>)
+# funF
+# funA
+# funE
+# fund
+# funb
+</code></pre></div>
+<p>可以看到，方法搜索搜索顺序为FDEBCA。</p>
+<p>对于funF，由于自己独有，直接选择自己的方法；对于funA，只有类A有， 则选择A的方法；对于funE，同理要选择E的方法；而对于fun，由于除了最终的派生类每个类都有，按方法搜索顺序搜索到了D，使用D的方法；对于只有ABC有的fun2，由于搜索顺序中第一个是B，所以选择B的方法运行。</p>
+<p>另外，对于派生类没有__init__函数时，会从第一个查询到的有__init__函数的基类中继承，并发生默认调用。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class father1:
+    i = 1
+    def __init__(self):
+        print("father1 __init__")
+class father2:
+    ii = 2
+    def __init__(self):
+        print("father2 __init__")
+class son(father1,father2):
+    def printson(self):
+        print("i:",self.i)
+        print("i:",self.ii)
+s = son()
+s.printson()
+# 运行结果：
+# father1 __init__
+# i: 1
+# i: 2
+</code></pre></div>
+</li>
+</ul>
+<span id="4-super函数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-super函数">4. super函数：</h4>
+<span id="1概念" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-1概念">（1）概念：</h5>
+<p>super()方法用于调用多继承中某基类的一个方法，super()方法的查找顺序遵循上面提到的方法搜索顺序，也就是按__mro__属性的顺序发生继承。</p>
+<p>和直接使用基类类名调用方法不同，super()方法调用方法能够保证每个基类最多只被调用一次，前者在多继承可能会发生一个基类的构造函数被调用多次的情况，这对__init__方法的执行效果很好。</p>
+<p>super()在多层继承的中间某个层次的类中使用，也会按最终派生类的__mro__属性的顺序进行继承，因此会发生一些看似"不合理"的现象。</p>
+<p>多个super()方法的反复调用会按照__mro__属性的顺序调用，直到遇到object类时停止。</p>
+<p>对于单继承，super()方法和单继承调用基类方法的效果是相同的。</p>
+<span id="2语法" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-2语法">（2）语法：</h5>
+<p><em><strong>super(type[, object-or-type]).funcname()</strong></em>（python2.x唯一格式）和<em><strong>super().funcname()</strong></em>（python3.x独有格式）</p>
+<p>其中，type是类名，[]内是对象或者类名，一般指定self，funcname是被调用基类的方法名,_（）_内是形参列表。</p>
+<p>返回一个代理的super对象，对其的方法调用会导致方法搜索的发生，进而实际调用搜索到的第一个方法。</p>
+<span id="3例子" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-3例子">（3）例子：</h5>
+<p>当对多层继承除了最开始的基类以外的所有派生类使用super().__init__方法时：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class father1:
+    f1 = 1
+    def __init__(self):
+        print("father1 __init__")
+    def fun(self):
+        print("father1 fun")
+class father2:
+    f2 = 2
+    def __init__(self):
+        print("father2 __init__")
+    def fun(self):
+        print("father2 fun")
+class son1(father2):
+    s1=3
+    def __init__(self):
+        print("son1 __init__")
+        super().__init__()
+    def fun(self):
+        print("son1 fun")
+class son2(father1,father2):
+    s2=4
+    def __init__(self):
+        print("son2 __init__")
+        super().__init__()
+    def fun(self):
+        print("son2 fun")
+class grandson(son1,son2):
+    gs=5
+    def __init__(self):
+        print("grandson __init__")
+        super().__init__()
+    def fun(self):
+        super().fun()
+gson=grandson()
+print(grandson.__mro__)
+gson.fun()
+print()
+s =son2()
+# 运行结果：
+# grandson __init__
+# son1 __init__
+# son2 __init__
+# father1 __init__
+# (&#x3C;class '__main__.grandson'>, &#x3C;class '__main__.son1'>, &#x3C;class '__main__.son2'>, &#x3C;class '__main__.father1'>, &#x3C;class '__main__.father2'>, &#x3C;class 'object'>)
+# son1 fun
+
+# son2 __init__
+# father1 __init__
+</code></pre></div>
+<p>这里可以看到，两个对象创建时都没有执行father2的__init__方法，实际上很简单，因为从对象出发的__mro__属性决定了super()方法的搜索顺序，比如son1处执行了super().__init__，那么就会按__mro__属性内的顺序搜索下一个，也是就son2的__init__方法，son2进而搜索的是father1，而接下来没有了super()方法，所以停止搜索，执行完成全部遇到__init__方法。</p>
+<p>如果想要保证每个都被执行，只需要对father1和father2也使用super().__init__方法即可，这样就会继续搜索，保证了每个基类的__init__方法都被执行且只执行一次，此时的停止是因为遇到了object类。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class father1:
+    f1 = 1
+    def __init__(self):
+        print("father1 __init__")
+        super().__init__()
+    def fun(self):
+        print("father1 fun")
+class father2:
+    f2 = 2
+    def __init__(self):
+        print("father2 __init__")
+        super().__init__()
+    def fun(self):
+        print("father2 fun")
+class son1(father2):
+    s1=3
+    def __init__(self):
+        print("son1 __init__")
+        super().__init__()
+    def fun(self):
+        print("son1 fun")
+class son2(father1,father2):
+    s2=4
+    def __init__(self):
+        print("son2 __init__")
+        super().__init__()
+    def fun(self):
+        print("son2 fun")
+class grandson(son1,son2):
+    gs=5
+    def __init__(self):
+        print("grandson __init__")
+        super().__init__()
+    def fun(self):
+        super().fun()
+gson=grandson()
+print(grandson.__mro__)
+gson.fun()
+print()
+s =son2()
+# 运行结果：
+# grandson __init__
+# son1 __init__
+# son2 __init__
+# father1 __init__
+# father2 __init__
+# (&#x3C;class '__main__.grandson'>, &#x3C;class '__main__.son1'>, &#x3C;class '__main__.son2'>, &#x3C;class '__main__.father1'>, &#x3C;class '__main__.father2'>, &#x3C;class 'object'>)
+# son1 fun
+# 
+# son2 __init__
+# father1 __init__
+# father2 __init__
+</code></pre></div>27:I[2708,["825","$14","953","$1c"],"FeedbackForm"]
+9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L1e",["$","h1",null,{"tabIndex":-1,"children":"python进阶——类(二)访问限制、继承"}],["$","p",null,{"className":"article-deck","children":"结合属性命名、单继承和多继承示例，介绍方法搜索顺序与 super 调用"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-07-13","children":"2023-07-13"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"3,117"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",11," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L1f","python",{"href":"/blog/#tag=python","children":"python"}],["$","$L1f","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]]}],["$","$L20",null,{"headings":[{"id":"section-三类的访问限制","text":"（三）类的访问限制","level":3},{"id":"section-1-原因","text":"1. 原因：","level":4},{"id":"section-2-概念","text":"2. 概念：","level":4},{"id":"section-3-深入理解","text":"3. 深入理解：","level":4},{"id":"section-4-例子","text":"4. 例子：","level":4},{"id":"section-四继承","text":"（四）继承","level":3},{"id":"section-1-概念","text":"1. 概念：","level":4},{"id":"section-2-语法格式","text":"2. 语法格式：","level":4},{"id":"section-3-分类","text":"3. 分类：","level":4},{"id":"section-4-super函数","text":"4. super函数：","level":4},{"id":"section-1概念","text":"（1）概念：","level":5},{"id":"section-2语法","text":"（2）语法：","level":5},{"id":"section-3例子","text":"（3）例子：","level":5}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L21",null,{"html":"$22"}],"$L23","$L24","$L25"]}],"$L26"]}]]}]
+24:["$","$L27",null,{"contentId":"python-access-inheritance"}]
+25:["$","div",null,{"className":"related-note","children":[["$","$L1d",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+26:["$","$L20",null,{"headings":"$9:props:children:1:props:headings"}]
+23:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$L1d",null,{"href":"/blog/python-namespaces/","children":[["$","span",null,{"children":"上一篇"}],"“python进阶——模块化(一)命名空间和作用域”"]}],["$","$L1d",null,{"href":"/blog/python-classes-instances/","children":[["$","span",null,{"children":"下一篇"}],"python进阶——类(一)面向对象、类和实例"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$L1d",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-class-decorators",{"children":[["$","$L1d",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$L1d",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+12:[["$","title","0",{"children":"python进阶——类(二)访问限制、继承 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"结合属性命名、单继承和多继承示例，介绍方法搜索顺序与 super 调用。"}]]
+1e:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1d",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1d",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$L1d",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L1f",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}]

@@ -1,0 +1,142 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","953","$c"],"default"]
+16:I[6279,["825","$2","953","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"c++类——成员类"}],["$","p",null,{"className":"article-deck","children":"用类中包含另一个类对象的例子，讨论成员对象初始化以及构造、析构的调用顺序"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"slug","t":"d","k":"cpp-member-classes","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"c++类——成员类 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"用类中包含另一个类对象的例子，讨论成员对象初始化以及构造、析构的调用顺序。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","953","$c"],"ArticleToc"]
+26:I[4711,["825","$2","953","$c"],"ArticleBody"]
+2e:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-18","children":"2023-03-18"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"599"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",3," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$L16","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$L16","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-一概念","text":"（一）概念:","level":3},{"id":"section-二特性","text":"（二）特性：","level":3},{"id":"section-三代码实现","text":"（三）代码实现：","level":3}],"mobile":true}]
+27:Te63,<span id="一概念" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一概念">（一）概念:</h3>
+<p>当一个类的数据成员含有一个前面已经声明的类的对象时，这个被包含的类被称作成员类，该数据成员为成员对象。（即类的成员是一个其他类的对象）</p>
+<p>这被称作类的包含（has A），是程序设计中的一种软件重用技术。定义一个新的类时，通过编译器把另一个类“抄”进来。</p>
+<span id="二特性" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二特性">（二）特性：</h3>
+<ol>
+<li>出现成员对象时，该类的构造函数也要初始化成员对象，且必须使用初始化语法形式（在构造函数体内将t初始化无效）。</li>
+<li>如果构造函数的成员初始化列表没有对成员对象初始化时，则使用成员对象的缺省构造函数。</li>
+<li>如果成员对象没有缺省构造函数（仅有参构造函数），那么必须在类的初始化列表对成员对象进行显式的初始化。</li>
+<li>一个含有成员对象的类实例化时要优先调用成员对象的构造函数，然后再调用该类的构造函数；析构时先调用含成员对象的类的析构函数，再调用成员对象对应类的析构函数。</li>
+<li>如果一个类有多个成员类对象，构造函数的调用顺序是对象在类中被声明的顺序，而不是在构造函数初始化列表中的顺序。</li>
+</ol>
+<span id="三代码实现" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三代码实现">（三）代码实现：</h3>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class Time
+{
+private:
+	int hour;
+	int minute;
+	int second;
+public:
+	Time(int i1, int i2, int i3) :hour(i1), minute(i2), second(i3) 
+	{
+		cout &#x3C;&#x3C; "Time类有参构造函数" &#x3C;&#x3C; endl;
+	}
+	Time() {
+		cout &#x3C;&#x3C; "Time类缺省构造函数" &#x3C;&#x3C; endl;
+		hour = minute = second = 0; 
+	}
+	int Gethour() { return hour; }
+	int Getminute() { return minute; }
+	int Getsecond() { return second; }
+	void settime(int i1, int i2, int i3) { hour = i1; minute = i2; second = i3; }
+	void display()
+	{
+		cout &#x3C;&#x3C; hour &#x3C;&#x3C; ":" &#x3C;&#x3C; minute &#x3C;&#x3C; ":" &#x3C;&#x3C; second &#x3C;&#x3C; endl;
+		return;
+	}
+	~Time() { cout &#x3C;&#x3C; "Time类析构函数" &#x3C;&#x3C; endl; }
+};
+class Date
+{
+private:
+	int year;
+	int month;
+	int day;
+	Time t;
+public:
+	Date() {
+		year = month = day = 0;
+		cout &#x3C;&#x3C; "Date类缺省构造函数" &#x3C;&#x3C; endl;
+
+	}
+	Date(int i1, int i2, int i3) :t({ 0, 0, 0 }), year(i1), month(i2), day(i3)
+	{
+		cout &#x3C;&#x3C; "Date类有参构造函数" &#x3C;&#x3C; endl;
+	}
+	void display();
+	void settime(int i1, int i2, int i3); 
+	~Date()
+	{
+		cout &#x3C;&#x3C; "Date类析构函数" &#x3C;&#x3C; endl;
+	}
+};
+
+void Date::display()
+{
+	cout &#x3C;&#x3C; year &#x3C;&#x3C; ":" &#x3C;&#x3C; month &#x3C;&#x3C; ":" &#x3C;&#x3C; day &#x3C;&#x3C; ":";
+	t.display();
+	return;
+}
+void Date::settime(int i1, int i2, int i3)
+{
+	t.settime(i1,i2,i3);
+	return;
+}
+int main()
+{
+	Date d;
+	d.display();
+	d.settime(1, 2, 3);
+	d.display();
+	Date d1(4, 5, 6);
+	d1.display();
+	return 0;
+}
+
+</code></pre></div>
+<p>运行结果：</p>
+<p><a href="https://imgse.com/i/ppJEii6" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2023/03/18/ppJEii6.png" alt="ppJEii6.png" width="229" height="277" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/python-strings/","children":[["$","span",null,{"children":"上一篇"}],"python基础——数据类型(三)字符串"]}],["$","$Ld",null,{"href":"/blog/python-input-output/","children":[["$","span",null,{"children":"下一篇"}],"python基础——输入和输出详解"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":["$L28","$L29","$L2a"]}]]}]]}],"$L2b","$L2c"]}],"$L2d"]}]
+1b:["$","$L2e",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2f"}]}]
+30:I[2708,["825","$2","953","$c"],"FeedbackForm"]
+f:300
+28:["$","li","cpp-templates-1",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"基础知识"}]]}]
+29:["$","li","cpp-templates-2",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"基础知识"}]]}]
+2a:["$","li","cpp-templates-3",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"基础知识"}]]}]
+2b:["$","$L30",null,{"contentId":"cpp-member-classes"}]
+2c:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+2d:["$","$L25",null,{"headings":"$19:props:headings"}]
+2f:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"

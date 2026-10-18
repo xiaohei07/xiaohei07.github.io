@@ -1,0 +1,304 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"python-slices","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","python-slices",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+14:"static/chunks/825-1a8f209f3ada760f.js"
+15:"static/chunks/app/layout-b30e31df6c2e8735.js"
+16:I[6767,["825","$14","177","$15"],"DisplayProvider"]
+17:"NavigationFeedback"
+18:I[2842,["825","$14","177","$15"],"$17"]
+19:I[8587,["825","$14","177","$15"],"SiteHeader"]
+1a:I[5803,["825","$14","177","$15"],"SiteFrame"]
+1b:I[164,["825","$14","177","$15"],"ProfileSidebar"]
+1c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+1d:I[3498,["825","$14","953","$1c"],"default"]
+6:C
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L16",null,{"children":[["$","$L18",null,{}],["$","$L19",null,{"tags":["知识点","python","C++"]}],["$","$L1a",null,{"sidebar":["$","$L1b",null,{}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1d",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1d",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1d",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1d",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+1f:I[6279,["825","$14","953","$1c"],"FilterLink"]
+20:I[4067,["825","$14","953","$1c"],"ArticleToc"]
+21:I[4711,["825","$14","953","$1c"],"ArticleBody"]
+22:T2717,<span id="一概述" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一概述">（一）概述</h3>
+<p>在编程过程中，Python提供了很多高级特性，用于精简代码，提高运行速度或者节省空间。</p>
+<p>该系列将会介绍切片，迭代，迭代器，列表生成式和生成器。</p>
+<p>装饰器实际上也算是高级特性的一部分，但为了文章的连贯，写在了<a href="/blog/python-functions-3/">python进阶——函数(三)</a>中，如希望更多了解装饰器，请移步此博客。</p>
+<span id="二切片" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二切片">（二）切片</h3>
+<span id="1-概述" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-概述">1. 概述：</h4>
+<p>Python中对序列性对象的一种高级索引方法，可以取出序列中的一个范围对应的元素，且范围不一定连续，长度和频率不一定固定。</p>
+<p>切片不会改变原值，返回的结果类型和切片对象的类型是一致的，可以理解为其返回的是切片对象的子序列——字符串切片返回字符串，列表切片返回列表。</p>
+<p>本文的列表切片会创建新列表，但其中的元素仍引用原来的对象，因此是浅拷贝。其他序列类型的具体行为应按该类型说明理解。</p>
+<span id="2-基本索引" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-基本索引">2. 基本索引：</h4>
+<p>Python中的序列性对象有两种索引方式——正索引和负索引。</p>
+<p>以索引序列list_use为例，index为索引下标，list_use[index]表示对应元素，我们有：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="center">list_use元素</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr></thead><tbody><tr><td align="center">正索引index</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr><tr><td align="center">负索引index</td><td>-10</td><td>-9</td><td>-8</td><td>-7</td><td>-6</td><td>-5</td><td>-4</td><td>-3</td><td>-2</td><td>-1</td></tr></tbody></table>
+<p>正索引从0开始，0对应首元素；负索引从-1开始，-1对应末元素。</p>
+<p>正负索引共同构成了Python索引的有效范围，基本索引中如果索引超出了有效范围会报错。</p>
+<span id="3-切片操作" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-切片操作">3. 切片操作：</h4>
+<span id="1语法格式" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-1语法格式">（1）语法格式：</h5>
+<p><em><strong>object[start_index : end_index : step]</strong></em></p>
+<p>完整的切片表达式如上，会包括三个参数，参数之间用":"分割。</p>
+<ul>
+<li>
+<p>step：先介绍step是为了理解后面两个索引的缺省情况。</p>
+<p>step是指切片的步长，可正可负，绝对值代表步长大小，正负性代表了步长的方向——正步长表示从左向右取值，负步长表示从右往左取值。</p>
+<p>step可以缺省，默认值为1，表示逐个元素取值，不会跳过任何一个元素。</p>
+</li>
+<li>
+<p>start_index：表示起始索引，起始索引被包括到了切片子序列中。</p>
+<p>起始索引可以缺省，表示从被切片对象的某一端开始，如果步长为正，表示从最左端开始，如果为负，则从最右端开始。</p>
+</li>
+<li>
+<p>end_index：表示终止索引，终止索引不会包括到切片子序列中。</p>
+</li>
+</ul>
+<p>终止索引可以缺省：正步长时取到序列末尾，负步长时取到序列开头。缺省值会随步长方向调整，不能简单等同于显式填写某个负索引。</p>
+<p><strong>截断</strong>：在切片中，start_index和end_index允许绝对值大于被切片序列的长度，也就是超过索引的有效范围。此时不会发生报错，而是发生截断——所有的超出部分被自动忽略，只选取有效部分进行切片。</p>
+<p><code>step</code> 不能为 0。起止位置与步长方向没有形成可取元素的范围时，切片会得到空序列；方向不匹配本身不会报错。</p>
+<span id="2举例" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-2举例">（2）举例：</h5>
+<ul>
+<li>
+<p>切单一值：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a = [0,1,2,3,4,5,6,7,8,9]
+print(a[0])
+print(a[9])
+print(a[5])
+# 运行结果：
+# 0
+# 9
+# 5
+</code></pre></div>
+</li>
+<li>
+<p>切完整对象：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a = [0,1,2,3,4,5,6,7,8,9]
+print(a[0:10])
+print(a[:])
+print(a[0:])
+print(a[-1::-1])
+# 运行结果：
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+</code></pre></div>
+</li>
+<li>
+<p>start_index>0，end_index>0，step>0：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code># 运行结果：
+a = [0,1,2,3,4,5,6,7,8,9]
+print(a[2:7:1])
+print(a[2:8:2])
+print(a[1:19:3])
+print(a[5:233])
+# 运行结果：
+# [2, 3, 4, 5, 6]
+# [2, 4, 6]
+# [1, 4, 7]
+# [5, 6, 7, 8, 9]
+</code></pre></div>
+</li>
+<li>
+<p>start_index>0，end_index>0，step&#x3C;0：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code># 运行结果：
+a = [0,1,2,3,4,5,6,7,8,9]
+print(a[7:2:-1])
+print(a[8:2:-2])
+print(a[19:1:-3])
+print(a[233:5:-1])
+# 运行结果：
+# [7, 6, 5, 4, 3]
+# [8, 6, 4]
+# [9, 6, 3]
+# [9, 8, 7, 6]
+</code></pre></div>
+</li>
+<li>
+<p>start_index&#x3C;0，end_index&#x3C;0，step>0：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a = [0,1,2,3,4,5,6,7,8,9]
+print(a[-7:-2:1])
+print(a[-8:-2:2])
+print(a[-19:-1:3])
+print(a[-233:-5:1])
+# 运行结果：
+# [3, 4, 5, 6, 7]
+# [2, 4, 6]
+# [0, 3, 6]
+# [0, 1, 2, 3, 4]
+</code></pre></div>
+</li>
+<li>
+<p>start_index&#x3C;0，end_index&#x3C;0，step&#x3C;0：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code># 运行结果：
+a = [0,1,2,3,4,5,6,7,8,9]
+print(a[-2:-7:-1])
+print(a[-2:-8:-2])
+print(a[-1:-19:-3])
+print(a[-5:-233:-1])
+# 运行结果：
+# [8, 7, 6, 5, 4]
+# [8, 6, 4]
+# [9, 6, 3, 0]
+# [5, 4, 3, 2, 1, 0]
+</code></pre></div>
+</li>
+<li>
+<p>start_index>0，end_index&#x3C;0，step>0：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a = [0,1,2,3,4,5,6,7,8,9]
+print(a[2:-2:1])
+print(a[4:-1:2])
+print(a[3:-3:3])
+print(a[0:-5:1])
+# 运行结果：
+# [2, 3, 4, 5, 6, 7]
+# [4, 6, 8]
+# [3, 6]
+# [0, 1, 2, 3, 4]
+</code></pre></div>
+</li>
+<li>
+<p>start_index>0，end_index&#x3C;0，step&#x3C;0：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a = [0,1,2,3,4,5,6,7,8,9]
+print(a[8:-8:-1])
+print(a[6:-9:-2])
+print(a[123:-7:-3])
+print(a[6:-15:-1])
+# 运行结果：
+# [8, 7, 6, 5, 4, 3]
+# [6, 4, 2]
+# [9, 6]
+# [6, 5, 4, 3, 2, 1, 0]
+</code></pre></div>
+</li>
+<li>
+<p>start_index&#x3C;0，end_index>0，step&#x3C;0：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a = [0,1,2,3,4,5,6,7,8,9]
+print(a[-2:2:-1])
+print(a[-4:1:-2])
+print(a[-3:3:-3])
+print(a[-1:5:-1])
+# 运行结果：
+# [8, 7, 6, 5, 4, 3]
+# [6, 4, 2]
+# [7, 4]
+# [9, 8, 7, 6]
+</code></pre></div>
+</li>
+<li>
+<p>start_index&#x3C;0，end_index>0，step>0：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a = [0,1,2,3,4,5,6,7,8,9]
+print(a[-8:8:1])
+print(a[-6:9:2])
+print(a[-7:7:3])
+print(a[-9:5:1])
+# 运行结果：
+# [2, 3, 4, 5, 6, 7]
+# [4, 6, 8]
+# [3, 6]
+# [1, 2, 3, 4]
+</code></pre></div>
+</li>
+<li>
+<p>缺省：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a = [0,1,2,3,4,5,6,7,8,9]
+print(a[::])
+print(a[5::])
+print(a[-5::])
+print(a[:4:])
+print(a[:-6:])
+print(a[::2])
+print(a[::-2])
+print(a[3::2])
+print(a[-7::1])
+print(a[7::-2])
+print(a[-3::-1])
+print(a[:7:2])
+print(a[:-3:1])
+print(a[:-7:-2])
+print(a[:3:-1])
+
+# 运行结果：
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# [5, 6, 7, 8, 9]
+# [5, 6, 7, 8, 9]
+# [0, 1, 2, 3]
+# [0, 1, 2, 3]
+# [0, 2, 4, 6, 8]
+# [9, 7, 5, 3, 1]
+# [3, 5, 7, 9]
+# [3, 4, 5, 6, 7, 8, 9]
+# [7, 5, 3, 1]
+# [7, 6, 5, 4, 3, 2, 1, 0]
+# [0, 2, 4, 6]
+# [0, 1, 2, 3, 4, 5, 6]
+# [9, 7, 5]
+# [9, 8, 7, 6, 5, 4]
+</code></pre></div>
+<p>切片除了用于列表，还可以用于其他序列对象，此处不再举例。</p>
+</li>
+</ul>
+<p>切片参数和缺省边界见 <a href="https://docs.python.org/3.13/library/stdtypes.html#common-sequence-operations" rel="noopener noreferrer">Python 3.13 通用序列操作</a>，列表浅拷贝见 <a href="https://docs.python.org/3.13/tutorial/introduction.html#lists" rel="noopener noreferrer">官方列表教程</a>。本次修订调整说明与链接，保留原代码及输出。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L1e",["$","h1",null,{"tabIndex":-1,"children":"python进阶——高级特性(一)切片"}],["$","p",null,{"className":"article-deck","children":"结合正负索引与步长示例，介绍切片的起止位置、缺省参数和逆序取值"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-07-13","children":"2023-07-13"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-17","children":"2026-10-17"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,645"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",7," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L1f","python",{"href":"/blog/#tag=python","children":"python"}],["$","$L1f","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]]}],["$","$L20",null,{"headings":[{"id":"section-一概述","text":"（一）概述","level":3},{"id":"section-二切片","text":"（二）切片","level":3},{"id":"section-1-概述","text":"1. 概述：","level":4},{"id":"section-2-基本索引","text":"2. 基本索引：","level":4},{"id":"section-3-切片操作","text":"3. 切片操作：","level":4},{"id":"section-1语法格式","text":"（1）语法格式：","level":5},{"id":"section-2举例","text":"（2）举例：","level":5}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L21",null,{"html":"$22"}],"$L23","$L24","$L25"]}],"$L26"]}]]}]
+27:I[2708,["825","$14","953","$1c"],"FeedbackForm"]
+24:["$","$L27",null,{"contentId":"python-slices"}]
+25:["$","div",null,{"className":"related-note","children":[["$","$L1d",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+26:["$","$L20",null,{"headings":"$9:props:children:1:props:headings"}]
+23:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$L1d",null,{"href":"/blog/python-iteration-iterators/","children":[["$","span",null,{"children":"上一篇"}],"python进阶——高级特性(二)迭代、迭代器"]}],["$","$L1d",null,{"href":"/blog/python-functions-3/","children":[["$","span",null,{"children":"下一篇"}],"python进阶——函数(三)"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$L1d",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-class-decorators",{"children":[["$","$L1d",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$L1d",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+12:[["$","title","0",{"children":"python进阶——高级特性(一)切片 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"结合正负索引与步长示例，介绍切片的起止位置、缺省参数和逆序取值。"}]]
+1e:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1d",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1d",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$L1d",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L1f",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}]

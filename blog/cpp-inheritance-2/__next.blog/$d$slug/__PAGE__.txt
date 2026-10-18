@@ -1,0 +1,561 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","953","$c"],"default"]
+16:I[6279,["825","$2","953","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"c++类——继承(二)"}],["$","p",null,{"className":"article-deck","children":"梳理继承中的构造、析构、复制和赋值，再讨论菱形继承及虚继承的使用"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"slug","t":"d","k":"cpp-inheritance-2","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"c++类——继承(二) | 07xiaohei"}],["$","meta","1",{"name":"description","content":"梳理继承中的构造、析构、复制和赋值，再讨论菱形继承及虚继承的使用。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","953","$c"],"ArticleToc"]
+26:I[4711,["825","$2","953","$c"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-04-03","children":"2023-04-03"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-17","children":"2026-10-17"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"3,512"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",13," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$L16","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$L16","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-一基类和派生类的默认成员函数","text":"（一）基类和派生类的默认成员函数：","level":3},{"id":"section-1-构造函数","text":"1. 构造函数：","level":4},{"id":"section-2-析构函数","text":"2. 析构函数：","level":4},{"id":"section-3-拷贝构造函数","text":"3. 拷贝构造函数：","level":4},{"id":"section-4-赋值操作符重载","text":"4. 赋值操作符重载：","level":4},{"id":"section-二基类和派生类的赋值转换","text":"（二）基类和派生类的赋值转换：","level":3},{"id":"section-三单继承和多继承","text":"（三）单继承和多继承：","level":3},{"id":"section-1-基本内容","text":"1. 基本内容","level":4},{"id":"section-2-菱形继承","text":"2. 菱形继承","level":4},{"id":"section-3-菱形继承的解决虚继承","text":"3. 菱形继承的解决：虚继承","level":4}],"mobile":true}]
+27:T4b1c,<span id="一基类和派生类的默认成员函数" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一基类和派生类的默认成员函数">（一）基类和派生类的默认成员函数：</h3>
+<p>从 C++11 起，通常讨论的特殊成员函数有六类：</p>
+<ul>
+<li>默认构造函数</li>
+<li>析构函数</li>
+<li>拷贝构造函数</li>
+<li>移动构造函数</li>
+<li>拷贝赋值运算符</li>
+<li>移动赋值运算符</li>
+</ul>
+<p>编译器是否隐式声明这些函数、何时定义它们，各有条件。例如，声明了其他构造函数后，编译器不会再自动提供无参默认构造函数；用户声明复制操作或析构函数，也会影响移动操作的生成。基类或成员不支持所需操作时，默认化的特殊成员还可能被定义为删除的函数，不能调用。取地址运算符不属于这六类特殊成员。</p>
+<p>分类与条件见 <a href="https://eel.is/c++draft/special" rel="noopener noreferrer">特殊成员函数</a>、<a href="https://eel.is/c++draft/class.default.ctor#1" rel="noopener noreferrer">默认构造函数</a>和<a href="https://eel.is/c++draft/class.copy.ctor" rel="noopener noreferrer">复制/移动构造函数</a>。下面仍围绕原来的构造、析构、拷贝和赋值示例展开，移动操作暂不展开。</p>
+<span id="1-构造函数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-构造函数">1. 构造函数：</h4>
+<p>建立一个类层次后，通常创建某个派生类的对象，该对象也包括使用基类的数据和函数。</p>
+<p>c++提供一种机制，在创建派生类对象时用指定参数调用基类的构造函数来初始化派生类继承基类的数据。</p>
+<p>此时，派生类的构造函数声明为：</p>
+<p><em><strong>派生类构造函数(变元表)：基类(变元表),对象成员1(变元表), ……. , 对象成员n(变元表) { 函数体}</strong></em></p>
+<p>派生类的构造函数必须调用基类的构造函数初始化基类的那一部分成员，如果基类没有默认的构造函数，则必须在派生类构造函数的初始化列表阶段显式调用。</p>
+<p>构造函数的执行顺序为基类->派生类。</p>
+<span id="2-析构函数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-析构函数">2. 析构函数：</h4>
+<p>因为在派生类的构造函数调用了基类的构造函数，因此其析构函数也需要对派生类对象和基类对象都进行清理。该任务的完成由各自的析构函数完成。</p>
+<p>析构函数的执行顺序为派生类->基类。</p>
+<p>注意：不要在派生类中主动调用基类的析构函数，因为派生类的析构函数在被调用完成后会自动调用基类的析构函数清理基类成员。以此来保证派生类对象先清理派生类成员再清理基类成员。</p>
+<span id="3-拷贝构造函数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-拷贝构造函数">3. 拷贝构造函数：</h4>
+<p>自定义派生类拷贝构造函数时，如果要复制基类部分，应在初始化列表中写 <code>Base(other)</code>。下面的 <code>Son(const Son&#x26; s):Father(s)</code> 就是这种写法，<code>Father</code> 的引用参数会绑定到 <code>s</code> 中的基类子对象。若省略该初始化项，基类部分会尝试默认初始化，而不会自动复制。</p>
+<p>编译器隐式定义的拷贝构造函数则会依次复制基类子对象和非静态数据成员。<a href="https://eel.is/c++draft/class.copy.ctor#15" rel="noopener noreferrer">规则依据</a></p>
+<span id="4-赋值操作符重载" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-赋值操作符重载">4. 赋值操作符重载：</h4>
+<p>自定义派生类的 <code>operator=</code> 时，通常显式调用 <code>Base::operator=(other)</code> 来复制基类部分，再处理派生类自己的成员。编译器隐式定义的赋值运算符会自动处理这些基类和成员。</p>
+<p>基类与派生类的赋值运算符同名会产生隐藏，但一次普通赋值不会因此自动无限递归。只有在自己的函数体中又调用了自己，才会递归；下面用 <code>Father::operator=(s)</code> 明确调用基类版本。<a href="https://eel.is/c++draft/class.copy.assign#12" rel="noopener noreferrer">规则依据</a></p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class Father
+{
+protected:
+	string name;
+	int age;
+	double weight;
+	double height;
+public:
+	Father(string s="", int i=0, double w=0, double h=0) :name(s), age(i), weight(w), height(h)
+	{
+		cout &#x3C;&#x3C; "调用基类的构造函数" &#x3C;&#x3C; endl;
+	}
+	Father(const Father&#x26; f)
+	{
+		name = f.name;
+		age = f.age;
+		weight = f.weight;
+		height = f.height;
+		cout &#x3C;&#x3C; "调用基类的拷贝构造函数" &#x3C;&#x3C; endl;
+	}
+	Father&#x26; operator= (const Father&#x26; f)
+	{
+		name = f.name;
+		age = f.age;
+		weight = f.weight;
+		height = f.height;
+		cout &#x3C;&#x3C; "调用基类的赋值运算符" &#x3C;&#x3C; endl;
+		return *this;
+	}
+	~Father()
+	{
+		cout &#x3C;&#x3C; "调用基类的析构函数" &#x3C;&#x3C; endl;
+	}
+};
+class Son:public Father
+{
+protected:
+	int sex;
+public:
+	Son(string s="", int i1=0, double w=0, double h=0, int i2=0):Father(s,i1,w,h),sex(i2)
+	{
+		cout &#x3C;&#x3C; "调用派生类的构造函数" &#x3C;&#x3C; endl;
+	}
+	Son(const Son&#x26; s):Father(s)
+	{
+		sex = s.sex;
+		cout &#x3C;&#x3C; "调用派生类的拷贝构造函数" &#x3C;&#x3C; endl;
+	}
+	Son&#x26; operator= (const Son&#x26; s)
+	{
+		Father::operator=(s);
+		sex = s.sex;
+		cout &#x3C;&#x3C; "调用派生类的赋值运算符" &#x3C;&#x3C; endl;
+		return *this;
+	}
+	~Son()
+	{
+		cout &#x3C;&#x3C; "调用派生类的析构函数" &#x3C;&#x3C; endl;
+	}
+};
+
+int main() 
+{
+	Son me("S", 20, 188, 190, 0);
+	cout &#x3C;&#x3C; endl;
+	Son you("SS", 30, 199, 200, 1);
+	cout &#x3C;&#x3C; endl;
+	Son he;
+	cout &#x3C;&#x3C; endl;
+	he = me;
+	cout &#x3C;&#x3C; endl;
+	Son she(you);
+	cout &#x3C;&#x3C; endl;
+	return 0;
+}
+//运行结果
+//调用基类的构造函数
+//调用派生类的构造函数
+//
+//调用基类的构造函数
+//调用派生类的构造函数
+//
+//调用基类的构造函数
+//调用派生类的构造函数
+//
+//调用基类的赋值运算符
+//调用派生类的赋值运算符
+//
+//调用基类的拷贝构造函数
+//调用派生类的拷贝构造函数
+//
+//调用派生类的析构函数
+//调用基类的析构函数
+//调用派生类的析构函数
+//调用基类的析构函数
+//调用派生类的析构函数
+//调用基类的析构函数
+//调用派生类的析构函数
+//调用基类的析构函数
+</code></pre></div>
+<span id="二基类和派生类的赋值转换" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二基类和派生类的赋值转换">（二）基类和派生类的赋值转换：</h3>
+<p>以下讨论基类可访问且没有二义性的情况，例如下面的公有单继承。派生类对象可以用来初始化或赋值给基类对象，也可以通过基类指针、引用访问：</p>
+<ul>
+<li>
+<p>基类的对象：</p>
+<p>因为派生类中包括基类的所有数据成员，赋值时将这部分赋值给基类即可完成赋值转换。</p>
+</li>
+<li>
+<p>基类的指针：</p>
+<p>将派生类对象的地址转换为基类指针，得到的是该对象中基类子对象的地址；转换时可能调整地址，不能假定它总在整个对象的开头。通过基类指针使用的是基类接口。</p>
+</li>
+<li>
+<p>基类的引用：</p>
+<p>基类引用绑定到派生类对象中的基类子对象，通过基类接口操作原对象，不会另建一个基类对象。</p>
+</li>
+</ul>
+<p>把派生类对象按值复制到基类对象，会只保留基类部分，通常称为对象切片。上面的指针转换和引用绑定仍指向原来的对象，不发生这种按值切片。<a href="https://eel.is/c++draft/conv.ptr#3" rel="noopener noreferrer">指针转换规则</a>与<a href="https://eel.is/c++draft/class.derived.general" rel="noopener noreferrer">引用绑定说明</a>可供对照。</p>
+<p>基类对象不会仅凭继承关系自动变成派生类对象。下面把 <code>pa1</code> 转回 <code>B*</code>，前提是 <code>pa1</code> 确实指向 <code>b1</code> 的基类子对象；不能把任意 <code>A*</code> 都这样使用。类型前提不满足的向下转换可能产生未定义行为，详见 <a href="https://eel.is/c++draft/expr.static.cast#10" rel="noopener noreferrer">基类指针向下转换规则</a>。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class A
+{
+private:
+	int a;
+protected:
+	double aa;
+public:
+	A(int i,double d):a(i),aa(d){}
+	void printA()
+	{
+		cout &#x3C;&#x3C; "a:" &#x3C;&#x3C; a &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; "aa:" &#x3C;&#x3C; aa &#x3C;&#x3C; endl;
+		return;
+	}
+	void changeaa()
+	{
+		aa++;
+		return;
+	}
+};
+class B:public A
+{
+private:
+	int b;
+protected:
+	double bb;
+public:
+	B(int i1, int i2, double d1, double d2) :b(i1), bb(d1), A(i2, d2) {}
+	void printB()
+	{
+		A::printA();
+		cout &#x3C;&#x3C; "b:" &#x3C;&#x3C; b &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; "bb:" &#x3C;&#x3C; bb &#x3C;&#x3C; endl;
+		return;
+	}
+	void changebb()
+	{
+		aa--;
+		bb++;
+		return;
+	}
+};
+
+int main()
+{
+	B b1(1, 10, 1.5, 2.5);
+	B b2(1, 10, 1.5, 2.5);
+	A a1 = b1;
+	A* pa1 = &#x26;b1;
+	A&#x26; a2 = b2;
+	
+	a1.printA();
+	pa1->printA();
+	a2.printA();
+	cout &#x3C;&#x3C; endl;
+	b1.changeaa();
+	a1.printA();
+	pa1->printA();
+	cout &#x3C;&#x3C; endl;
+	b2.changebb();
+	a2.printA();
+	cout &#x3C;&#x3C; endl;
+	B *b3 = (B*)(pa1);
+	b1.printB();
+	b3->printB();
+	return 0;
+}
+//运行结果：
+//a:10
+//aa : 2.5
+//a : 10
+//aa : 2.5
+//a : 10
+//aa : 2.5
+//
+//a : 10
+//aa : 2.5
+//a : 10
+//aa : 3.5
+//
+//a : 10
+//aa : 1.5
+//
+//a : 10
+//aa : 3.5
+//b : 1
+//bb : 1.5
+//a : 10
+//aa : 3.5
+//b : 1
+//bb : 1.5
+</code></pre></div>
+<span id="三单继承和多继承" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三单继承和多继承">（三）单继承和多继承：</h3>
+<span id="1-基本内容" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-基本内容">1. 基本内容</h4>
+<p>单继承是指派生类只有一个直接基类，多继承是指一个派生类拥有两个或多个直接基类。</p>
+<p>继承的格式详见一。</p>
+<p>多继承完成了更多的代码复用，并使得复用的程度更深。</p>
+<p>多继承时，派生类构造函数调用多个基类的构造函数，析构函数同理，构造顺序按照声明继承的顺序进行，析构则相反顺序。</p>
+<p>若不同继承基类有同名成员，直接访问会造成命名冲突，此时需要在名字前加上类名和域解析符::，显式指定使用哪个类的成员，消除二义性。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class A
+{
+protected:
+	int x;
+public:
+	A(int i):x(i)
+	{
+		cout &#x3C;&#x3C; "调用A构造函数" &#x3C;&#x3C; endl;
+	}
+	~A()
+	{
+		cout &#x3C;&#x3C; "调用A析构函数" &#x3C;&#x3C; endl;
+	}
+};
+class B
+{
+protected:
+	int x;
+public:
+	B(int i) :x(i)
+	{
+		cout &#x3C;&#x3C; "调用B构造函数" &#x3C;&#x3C; endl;
+	}
+	~B()
+	{
+		cout &#x3C;&#x3C; "调用B析构函数" &#x3C;&#x3C; endl;
+	}
+};
+class C:public A, public B
+{
+protected:
+	int x;
+public:
+	C(int i1,int i2,int i3) :B(i1),A(i2),x(i3)
+	{
+		cout &#x3C;&#x3C; "调用C构造函数" &#x3C;&#x3C; endl;
+	}
+	void printx()
+	{
+		cout &#x3C;&#x3C; "A.x:" &#x3C;&#x3C; A::x &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; "B.x:" &#x3C;&#x3C; B::x &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; "x:" &#x3C;&#x3C; x &#x3C;&#x3C; endl;
+		return;
+	}
+	~C()
+	{
+		cout &#x3C;&#x3C; "调用C析构函数" &#x3C;&#x3C; endl;
+	}
+};
+int main()
+{
+	C c(1, 2, 3);
+	c.printx();
+	return 0;
+}
+//运行结果：
+//调用A构造函数
+//调用B构造函数
+//调用C构造函数
+// A.x:2
+//B.x:1
+//x : 3
+//调用C析构函数
+//调用B析构函数
+//调用A析构函数
+</code></pre></div>
+<span id="2-菱形继承" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-菱形继承">2. 菱形继承</h4>
+<p>多继承内存在着许多问题，例如二义性和代码冗余，下面通过菱形继承说明。</p>
+<p>菱形继承是多继承的一种特殊情况。</p>
+<p><img src="https://s1.ax1x.com/2023/04/04/pp4VDQs.png" alt="20_C++菱形继承" width="800" height="204" loading="lazy" decoding="async" referrerpolicy="no-referrer"></p>
+<p>如图，在非虚继承下，类 B 和类 C 分别继承类 A，类 D 再继承 B、C，一个 D 对象中会有两个不同的 A 子对象。它们分别构造和析构，各自保存一份 A 的数据。如果设计只需要共享一份 A，这种结构就会保存重复数据。<a href="https://eel.is/c++draft/class.mi#4" rel="noopener noreferrer">规则依据</a></p>
+<p>同时，因为BC都继承了A的成员，D在继承BC时会存在同名的数据成员，无法直接通过变量名读取相应的值，产生了二义性，此时需要通过域解析符::进行区分，非常麻烦。</p>
+<p>一般情况下，不建议设计多继承和菱形继承，因为情况比较复杂。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class A
+{
+private:
+	int a;
+protected:
+	int number;
+public:
+	A(int i1,int i2):a(i1),number(i2)
+	{
+		cout &#x3C;&#x3C; "调用A构造函数" &#x3C;&#x3C; endl;
+	}
+	~A()
+	{
+		cout &#x3C;&#x3C; "调用A析构函数" &#x3C;&#x3C; endl;
+	}
+};
+class B:public A
+{
+private:
+	int b;
+public:
+	B(int i1,int i2,int i3) :A(i1,i2),b(i3)
+	{
+		cout &#x3C;&#x3C; "调用B构造函数" &#x3C;&#x3C; endl;
+	}
+	~B()
+	{
+		cout &#x3C;&#x3C; "调用B析构函数" &#x3C;&#x3C; endl;
+	}
+};
+class C:public A
+{
+private:
+	int c;
+public:
+	C(int i1, int i2, int i3) :A(i1, i2), c(i3)
+	{
+		cout &#x3C;&#x3C; "调用C构造函数" &#x3C;&#x3C; endl;
+	}
+	~C()
+	{
+		cout &#x3C;&#x3C; "调用C析构函数" &#x3C;&#x3C; endl;
+	}
+};
+class D:public B,public C
+{
+private:
+	int d;
+public:
+	D(int i1, int i2, int i3,int i4,int i5) :B(i1,i2,i3),C(i1,i2,i4),d(i5)
+	{
+		cout &#x3C;&#x3C; "调用C构造函数" &#x3C;&#x3C; endl;
+	}
+	void printD() { 
+	cout &#x3C;&#x3C; "sizeof(A):" &#x3C;&#x3C; sizeof(A) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "sizeof(B):" &#x3C;&#x3C; sizeof(B) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "sizeof(C):" &#x3C;&#x3C; sizeof(C) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "sizeof(D):" &#x3C;&#x3C; sizeof(D) &#x3C;&#x3C; endl; 
+	cout &#x3C;&#x3C; "d:" &#x3C;&#x3C; d &#x3C;&#x3C; endl;
+	}
+};
+int main()
+{
+	D d(1, 2, 3, 4, 5);
+	d.printD();
+	return 0;
+}
+//运行结果：
+//调用A构造函数
+//调用B构造函数
+//调用A构造函数
+//调用C构造函数
+//调用C构造函数
+//sizeof(A) : 8
+//sizeof(B) : 12
+//sizeof(C) : 12
+//sizeof(D) : 28
+//d : 5
+//调用C析构函数
+//调用A析构函数
+//调用B析构函数
+//调用A析构函数
+</code></pre></div>
+<span id="3-菱形继承的解决虚继承" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-菱形继承的解决虚继承">3. 菱形继承的解决：虚继承</h4>
+<p>为了避免以上的情况出现，我们需要通过虚继承的方式解决问题——需要虚基类。</p>
+<p>虚基类不是在声明基类时声明的，而是声明派生类时指定继承方式声明的。</p>
+<p>虚继承是指在继承的基类前添加关键字virtual，格式为：</p>
+<p><em><strong>class 派生类名: virtual 继承方式 基类名</strong></em></p>
+<p>此时的基类被称为虚基类，也就是被虚继承的基类（不是抽象类！！）</p>
+<p>在菱形继承中，当BC对A都进行虚继承后，D对BC进行多继承时，重复的变量将只会保留一份。这是因为，D不仅对直接基类进行初始化，也会对虚基类初始化，且只有一次——c++编译器只调用最后的派生类对基类的构造函数调用，忽略其他派生类对虚基类的构造函数调用，避免了对基类数据成员的重复初始化。</p>
+<p>在这里，B 和 C 共享同一个 A 虚基类子对象，因此从 A 继承的那个成员不再因两份 A 而产生二义性。B、C 自己声明的其他同名成员仍可能需要用类名限定。</p>
+<p>此处暂不介绍虚继承的内存模型，以后有需要单开一篇进行介绍。</p>
+<p>以下是虚继承之后的情况：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class A
+{
+private:
+	int a;
+protected:
+	int number;
+public:
+	A(int i1,int i2):a(i1),number(i2)
+	{
+		cout &#x3C;&#x3C; "调用A构造函数" &#x3C;&#x3C; endl;
+	}
+	~A()
+	{
+		cout &#x3C;&#x3C; "调用A析构函数" &#x3C;&#x3C; endl;
+	}
+};
+class B:virtual public A
+{
+private:
+	int b;
+public:
+	B(int i1,int i2,int i3) :A(i1,i2),b(i3)
+	{
+		cout &#x3C;&#x3C; "调用B构造函数" &#x3C;&#x3C; endl;
+	}
+	~B()
+	{
+		cout &#x3C;&#x3C; "调用B析构函数" &#x3C;&#x3C; endl;
+	}
+};
+class C:virtual public A
+{
+private:
+	int c;
+public:
+	C(int i1, int i2, int i3) :A(i1, i2), c(i3)
+	{
+		cout &#x3C;&#x3C; "调用C构造函数" &#x3C;&#x3C; endl;
+	}
+	~C()
+	{
+		cout &#x3C;&#x3C; "调用C析构函数" &#x3C;&#x3C; endl;
+	}
+};
+class D:public B,public C
+{
+private:
+	int d;
+public:
+	D(int i1, int i2, int i3,int i4,int i5) :A(i1,i2),B(i1,i2,i3),C(i1,i2,i4),d(i5)
+	{
+		cout &#x3C;&#x3C; "调用C构造函数" &#x3C;&#x3C; endl;
+	}
+	void printD() { 
+	cout &#x3C;&#x3C; "sizeof(A):" &#x3C;&#x3C; sizeof(A) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "sizeof(B):" &#x3C;&#x3C; sizeof(B) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "sizeof(C):" &#x3C;&#x3C; sizeof(C) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "sizeof(D):" &#x3C;&#x3C; sizeof(D) &#x3C;&#x3C; endl; 
+	cout &#x3C;&#x3C; "anumberaddress:" &#x3C;&#x3C; &#x26;(A::number) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "bnumberaddress:" &#x3C;&#x3C; &#x26;(B::number) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "cnumberaddress:" &#x3C;&#x3C; &#x26;(C::number) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "dnumberaddress:" &#x3C;&#x3C; &#x26;number &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "d:" &#x3C;&#x3C; d &#x3C;&#x3C; endl;
+	}
+};
+int main()
+{
+	D d(1, 2, 3, 4, 5);
+	d.printD();
+	return 0;
+}
+//运行结果：
+//调用A构造函数
+//调用B构造函数
+//调用C构造函数
+//调用C构造函数
+//sizeof(A) : 8
+//sizeof(B) : 24
+//sizeof(C) : 24
+//sizeof(D) : 48
+//anumberaddress : 000000C76B8FF5C4
+//bnumberaddress : 000000C76B8FF5C4
+//cnumberaddress : 000000C76B8FF5C4
+//dnumberaddress : 000000C76B8FF5C4
+//d : 5
+//调用C析构函数
+//调用B析构函数
+//调用A析构函数
+</code></pre></div>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],"$L28","$L29","$L2a"]}],"$L2b"]}]
+1b:["$","$L2c",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+2e:I[2708,["825","$2","953","$c"],"FeedbackForm"]
+f:300
+28:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/cpp-inheritance-3/","children":[["$","span",null,{"children":"上一篇"}],"c++类——继承(三)"]}],["$","$Ld",null,{"href":"/blog/cpp-class-relationships/","children":[["$","span",null,{"children":"下一篇"}],"c++类——类与类之间的关系"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-2",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-3",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+29:["$","$L2e",null,{"contentId":"cpp-inheritance-2"}]
+2a:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+2b:["$","$L25",null,{"headings":"$19:props:headings"}]
+2d:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"

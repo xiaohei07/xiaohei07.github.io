@@ -1,0 +1,262 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"cpp-constructors","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","cpp-constructors",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+6:C
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+14:"static/chunks/825-1a8f209f3ada760f.js"
+15:"static/chunks/app/layout-b30e31df6c2e8735.js"
+16:I[6767,["825","$14","177","$15"],"DisplayProvider"]
+17:"NavigationFeedback"
+18:I[2842,["825","$14","177","$15"],"$17"]
+19:I[8587,["825","$14","177","$15"],"SiteHeader"]
+1a:I[5803,["825","$14","177","$15"],"SiteFrame"]
+1b:I[164,["825","$14","177","$15"],"ProfileSidebar"]
+1c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+1d:I[3498,["825","$14","953","$1c"],"default"]
+1f:I[6279,["825","$14","953","$1c"],"FilterLink"]
+20:I[4067,["825","$14","953","$1c"],"ArticleToc"]
+21:I[4711,["825","$14","953","$1c"],"ArticleBody"]
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L16",null,{"children":[["$","$L18",null,{}],["$","$L19",null,{"tags":["知识点","python","C++"]}],["$","$L1a",null,{"sidebar":["$","$L1b",null,{}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1d",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1d",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1d",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1d",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+22:T2953,<span id="一概念" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一概念">（一）概念:</h3>
+<p>创建类的对象的时候，编译系统需要对象分配内存空间，完成数据成员的初始化工作并请求其他资源，此时，编译系统自动调用构造函数来完成这些工作。</p>
+<p>因此，构造函数是在创建类的对象时使用，它的核心作用是<strong>初始化对象的数据成员</strong>和<strong>分配内存</strong>。</p>
+<span id="二原型和特点" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二原型和特点">（二）原型和特点:</h3>
+<p>构造函数的原型为：<strong><em>类名::</em>类名(<em>参数表</em>):<em>初始化列表 { 构造函数体 }</em></strong></p>
+<p>​	   ——所有倾斜内容表示在构造函数中此内容可选，不是必要的。</p>
+<p>​       ——参数表即为所有的传入形参</p>
+<p>​       ——初始化列表结构为：<em>数据成员名(某形参名),数据成员名(某形参名)...</em></p>
+<p>​	    ——构造函数体可执行相关操作可为cout&#x3C;&#x3C;某些信息，对数据成员的某些操作等等。</p>
+<p>构造函数的特点：</p>
+<ol>
+<li>
+<p>名字<strong>与类名相同</strong>，允许设定参数，但是<strong>不允许设置返回值</strong>(<strong>包括void</strong>)。</p>
+</li>
+<li>
+<p>构造函数是编译系统在实例化一个对象时<strong>自动执行</strong>的，不需要手动调用(当然也可以主动手动调用)。调用后会对对象的数据成员进行初始化。</p>
+<p>定义自己的无参构造函数实际上是<strong>有用构造函数</strong></p>
+</li>
+<li>
+<p>构造函数<strong>可以重载</strong>，但是对象的实例化只会使用其中的一个构造函数（参数类型和个数能够最佳匹配），且实例化后<strong>不会再次执行</strong>构造函数，另外，重载构造函数后<strong>不允许出现二义性</strong>情况。</p>
+<ul>
+<li>
+<p>重载构造函数具有不同的参数表和相同的名称</p>
+</li>
+<li>
+<p>根据传参个数决定调用哪个构造函数</p>
+</li>
+<li>
+<p>创建对象时要传参数让编译器明确知道调用哪个构造函数</p>
+</li>
+</ul>
+</li>
+<li>
+<p>在未定义构造函数时，编译系统生成一个<strong>无用的默认构造函数</strong>，无用的默认构造函数不含参数，<strong>不做任何初始化工作</strong>。</p>
+<p>一旦定义了自己的构造函数，系统不会自己生成无用的默认的无参构造函数，但是仍然可以自己指定系统生成无用默认无参构造函数。</p>
+</li>
+</ol>
+<span id="三分类" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三分类">（三）分类:</h3>
+<ol>
+<li>默认构造函数，又名缺省构造函数，分为有用和无用两种，是不需要显式指定实参的构造函数——即原型为无参构造函数。</li>
+<li>初始化构造函数——有参数。</li>
+<li>复制(拷贝构造函数(不显式指定时有默认的复制构造函数)。</li>
+<li>转换构造函数</li>
+</ol>
+<span id="四基本用法" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-四基本用法">（四）基本用法:</h3>
+<span id="1默认构造函数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1默认构造函数">1.默认构造函数：</h4>
+<p>形式：</p>
+<ol>
+<li>
+<p><em>“<strong>类名() =default;</strong></em>”的形式或者不存在任何构造函数——指定无用默认构造函数。</p>
+</li>
+<li>
+<p>"<em><strong>类名(){ 函数体 }</strong></em>"的形式——指定有用默认构造函数</p>
+</li>
+</ol>
+<p>调用时，因默认构造参数不需要形参，直接声明类的对象即可(<strong>切记不要在后面跟“()”!</strong>)。</p>
+<p>代码如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+class Time
+{
+private:
+	int hour;  
+	int minute;
+	int sec;
+public:
+    //此时状态为无构造参数，编译系统自动生成无用构造参数
+	//Time() = default; 仅去掉本行注释仍为无用构造参数
+	//Time() {hour=0;minute=0;sec=0;} 仅去掉本行注释为有用构造参数,可对三个数初始化为0
+	//上两行注释不能同时去掉，否则产生二义性。
+	void set_time()
+	{
+		cin >> hour >> minute >> sec;
+		return;
+	}
+	void show_time()
+	{
+		cout &#x3C;&#x3C; hour &#x3C;&#x3C; ":" &#x3C;&#x3C; minute &#x3C;&#x3C; ":" &#x3C;&#x3C; sec &#x3C;&#x3C; endl;
+	}
+
+};
+int main()
+{
+	Time t1; //不能加"()"
+	t1.set_time(); 
+	t1.show_time();  
+	return 0;
+}
+</code></pre></div>
+<span id="2带参构造函数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2带参构造函数">2.带参构造函数：</h4>
+<p>形式：<strong>类名:构造函数名(参数表):初始化列表 { 构造函数体 }</strong></p>
+<p>如果数据成员中有数组，要在构造函数体中用语句对其进行赋值，<strong>不能用初始化列表</strong>进行初始化。</p>
+<p>以其他类作为数据成员时，需要在初始化列表进行初始化。初始化列表需要<strong>首先调用成员类</strong>的构造函数，再初始化自身的数据成员。</p>
+<p>通常带参构造函数需要重载。</p>
+<p>代码如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+class Time
+{
+private:
+	int hour;  
+	int minute;
+	int sec;
+public:
+	//Time() = default;
+	Time() { hour = minute = sec = 0; }
+	Time(int i1, int i2, int i3) :hour(i1), minute(i2), sec(i3) {}//初始化列表方法
+	//Time(int i1, int i2, int i3) { hour = i1; minute = i2; sec = i3; }//构造函数体方法
+	Time(int h) :hour(h) { minute = sec = 0; }//重载构造函数1，实际上是转换构造函数
+	Time(int h, int m) :hour(h), minute(m) { sec = 0; }//重载构造函数2
+	//Time(int i1=0,int i2=0,int i3=0) :hour(i1), minute(i2), sec(i3) {}//含默认参数的构造函数，但要注意如果三个数均含默认参数，则会导致与默认构造参数产生二义性，只能保留一个。
+	void set_time()
+	{
+		cin >> hour >> minute >> sec;
+		return;
+	}
+	void show_time()
+	{
+		cout &#x3C;&#x3C; hour &#x3C;&#x3C; ":" &#x3C;&#x3C; minute &#x3C;&#x3C; ":" &#x3C;&#x3C; sec &#x3C;&#x3C; endl;
+	}
+
+};
+int main()
+{
+	Time t1(1,2,3);
+	//Time t2;
+    //Time t3(1,2);
+    //Time t4(1);
+	t1.set_time(); 
+	t1.show_time();  
+	return 0;
+}
+</code></pre></div>
+<span id="3复制拷贝构造函数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3复制拷贝构造函数">3.复制（拷贝）构造函数：</h4>
+<p>此内容较多，单开一篇博客，详见<a href="/blog/cpp-copy-constructors/">c++类——复制构造函数</a></p>
+<span id="4转换构造函数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4转换构造函数">4.转换构造函数：</h4>
+<p>形式：<strong>类名:构造函数名(单一参数):初始化列表 { 构造函数体 }</strong></p>
+<p>转换构造函数用于将其他类型的变量，<strong>隐式</strong>转换为本类对象。</p>
+<p>传入的单一参数不能是本类的const引用，否则为复制构造函数。</p>
+<p>转换构造函数可以与运算符重载配合使用（运算符重载详见c++类——运算符重载）。</p>
+<p>代码如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+class Time
+{
+private:
+	int hour;  
+	int minute;
+	int sec;
+public:
+	//Time() = default;
+	Time() { hour = minute = sec = 0; }
+	Time(int i1, int i2, int i3) :hour(i1), minute(i2), sec(i3) {}
+	Time(int h) :hour(h) { minute = sec = 0; }//转换构造函数
+
+	void set_time()
+	{
+		cin >> hour >> minute >> sec;
+		return;
+	}
+	void show_time()
+	{
+		cout &#x3C;&#x3C; hour &#x3C;&#x3C; ":" &#x3C;&#x3C; minute &#x3C;&#x3C; ":" &#x3C;&#x3C; sec &#x3C;&#x3C; endl;
+	}
+	Time operator+(const Time&#x26; temp) 
+	{
+		return Time(this->hour + temp.hour, this->minute + temp.minute, this->sec + temp.sec);
+	}
+};
+int main()
+{
+	Time t1=4; //此处4先被编译器用转换构造函数隐式转换为Time类的匿名变量，再复制给t1（调用了默认复制函数和转换构造函数）。
+	t1.show_time();
+	t1 = t1 + 5; //此处发生的是5先被编译器用转换构造函数隐式转换为Time类的匿名变量，再和t1通过运算符重载的函数进行相加。
+	t1.show_time();
+	return 0;
+}
+</code></pre></div>
+<p>附：关键字explicit：</p>
+<p>因为隐式类型转换往往会导致工程中出现一些奇奇怪怪的bug，所以，c++中定义了关键字explicit来杜绝转换构造函数的隐式类型转换。</p>
+<p>关键字explicit只能用于修饰转换构造函数(也就是只含一个参数的类构造函数)或参数表中仅有一个没有默认参数的带参构造函数（等效于转换构造函数），其作用是表明该转换构造函数是显式的，而不是隐式的。</p>
+<p>如果想指定默认情况为隐式的声明，可在前面指定关键字implicit。(不常用)</p>
+<p>代码如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+class Time
+{
+private:
+	int hour;  
+	int minute;
+	int sec;
+public:
+	//Time() = default;
+	Time() { hour = minute = sec = 0; }
+	Time(int i1, int i2, int i3) :hour(i1), minute(i2), sec(i3) {}
+	explicit Time(int h) :hour(h) { minute = sec = 0; }//转换构造函数
+
+	void set_time()
+	{
+		cin >> hour >> minute >> sec;
+		return;
+	}
+	void show_time()
+	{
+		cout &#x3C;&#x3C; hour &#x3C;&#x3C; ":" &#x3C;&#x3C; minute &#x3C;&#x3C; ":" &#x3C;&#x3C; sec &#x3C;&#x3C; endl;
+	}
+	Time operator+(const Time&#x26; temp) 
+	{
+		return Time(this->hour + temp.hour, this->minute + temp.minute, this->sec + temp.sec);
+	}
+};
+int main()
+{
+	Time t1= static_cast&#x3C;Time>(4);//必须显式指定，不会隐式转换。
+	//t1.set_time(); 
+	t1.show_time();
+	t1 = t1 + 5;// 不会发生隐式转换，运算符重载函数发生错误。
+	t1.show_time();
+	return 0;
+}
+</code></pre></div>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L1e",["$","h1",null,{"tabIndex":-1,"children":"c++类——构造函数"}],["$","p",null,{"className":"article-deck","children":"介绍对象初始化时的构造函数，列出默认、带参、复制及转换构造函数的使用例子"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-16","children":"2023-03-16"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,889"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",7," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L1f","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$L1f","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$L1f","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]]}],["$","$L20",null,{"headings":[{"id":"section-一概念","text":"（一）概念:","level":3},{"id":"section-二原型和特点","text":"（二）原型和特点:","level":3},{"id":"section-三分类","text":"（三）分类:","level":3},{"id":"section-四基本用法","text":"（四）基本用法:","level":3},{"id":"section-1默认构造函数","text":"1.默认构造函数：","level":4},{"id":"section-2带参构造函数","text":"2.带参构造函数：","level":4},{"id":"section-3复制拷贝构造函数","text":"3.复制（拷贝）构造函数：","level":4},{"id":"section-4转换构造函数","text":"4.转换构造函数：","level":4}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L21",null,{"html":"$22"}],"$L23","$L24","$L25"]}],"$L26"]}]]}]
+c:null
+12:[["$","title","0",{"children":"c++类——构造函数 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"介绍对象初始化时的构造函数，列出默认、带参、复制及转换构造函数的使用例子。"}]]
+27:I[2708,["825","$14","953","$1c"],"FeedbackForm"]
+24:["$","$L27",null,{"contentId":"cpp-constructors"}]
+25:["$","div",null,{"className":"related-note","children":[["$","$L1d",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+26:["$","$L20",null,{"headings":"$9:props:children:1:props:headings"}]
+23:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$L1d",null,{"href":"/blog/cpp-static-members/","children":[["$","span",null,{"children":"上一篇"}],"c++类——静态成员"]}],["$","$L1d",null,{"href":"/blog/cpp-this/","children":[["$","span",null,{"children":"下一篇"}],"c++类——this指针"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-2",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-3",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+1e:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1d",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1d",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$L1d",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L1f",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}]

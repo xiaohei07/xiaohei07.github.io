@@ -1,0 +1,386 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"cpp-copy-constructors","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","cpp-copy-constructors",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+6:C
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+14:"static/chunks/825-1a8f209f3ada760f.js"
+15:"static/chunks/app/layout-b30e31df6c2e8735.js"
+16:I[6767,["825","$14","177","$15"],"DisplayProvider"]
+17:"NavigationFeedback"
+18:I[2842,["825","$14","177","$15"],"$17"]
+19:I[8587,["825","$14","177","$15"],"SiteHeader"]
+1a:I[5803,["825","$14","177","$15"],"SiteFrame"]
+1b:I[164,["825","$14","177","$15"],"ProfileSidebar"]
+1c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+1d:I[3498,["825","$14","953","$1c"],"default"]
+1f:I[6279,["825","$14","953","$1c"],"FilterLink"]
+20:I[4067,["825","$14","953","$1c"],"ArticleToc"]
+21:I[4711,["825","$14","953","$1c"],"ArticleBody"]
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L16",null,{"children":[["$","$L18",null,{}],["$","$L19",null,{"tags":["知识点","python","C++"]}],["$","$L1a",null,{"sidebar":["$","$L1b",null,{}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1d",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1d",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1d",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1d",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+22:T365b,<span id="一引言" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一引言">（一）引言:</h3>
+<p>对于普通类型，复制是极其简单的：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>int a=1;
+int b=a;//复制
+int *p1=&#x26;a;
+int *p2=p1;//复制
+</code></pre></div>
+<p>但对于内部含有多个数据成员的类对象，其结构复杂，复制也相对复杂。</p>
+<p>这时就需要调用复制构造函数来完成拷贝过程。</p>
+<span id="二概念" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二概念">（二）概念:</h3>
+<p>复制构造函数又名拷贝构造函数，是一种特殊的构造函数，它通过编译器调用完成基于同一类的其他对象的构造及初始化。</p>
+<p>复制构造函数必须是非模板构造函数。对类 <code>X</code>，它的第一个形参类型可以是 <code>X&#x26;</code>、<code>const X&#x26;</code>、<code>volatile X&#x26;</code> 或 <code>const volatile X&#x26;</code>；其余形参可以存在，但都必须有默认实参。常见写法是 <code>X(const X&#x26;)</code>，通过 <code>const</code> 限制对源对象的修改。</p>
+<ul>
+<li><code>X(X)</code> 这种按值接收本类对象、且没有其他必填参数的声明不符合语言规则，会在编译时被拒绝。</li>
+<li><code>X(X*)</code> 是接收指针的普通构造函数，不属于复制构造函数；是否发生重载歧义，要看具体的其他声明和调用。</li>
+</ul>
+<p>对本文这种普通类，如果没有用户声明的复制构造函数，编译器会隐式声明一个。隐式声明不保证它可用：例如，类声明了移动构造函数或移动赋值运算符时，隐式复制构造函数会被定义为删除；成员或基类无法复制，也可能使默认复制构造函数被删除。</p>
+<span id="三调用时机" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三调用时机">（三）调用时机:</h3>
+<ol>
+<li>
+<p><strong>对象以值传递的方式传入函数参数。</strong></p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+class Time
+{
+private:
+	int hour;  
+	int minute;
+	int sec;
+public:
+	Time() { hour = minute = sec = 0; }
+	Time(int i1, int i2, int i3) :hour(i1), minute(i2), sec(i3) {}
+	Time(const Time&#x26; t) 
+	{
+		hour = t.hour;
+		minute = t.minute;
+		sec = t.sec;
+		cout &#x3C;&#x3C; "复制构造函数" &#x3C;&#x3C; endl;
+	}//复制构造函数
+	void set_time()
+	{
+		cin >> hour >> minute >> sec;
+		return;
+	}
+	void show_time()
+	{
+		cout &#x3C;&#x3C; hour &#x3C;&#x3C; ":" &#x3C;&#x3C; minute &#x3C;&#x3C; ":" &#x3C;&#x3C; sec &#x3C;&#x3C; endl;
+	}
+};
+void test(Time t) 
+{
+	return;
+}
+int main()
+{
+	Time t1(4, 5, 6);
+	test(t1);//发生复制
+	t1.show_time();
+	return 0;
+}
+</code></pre></div>
+<p>调用 <code>test(t1)</code> 时，形参对象 <code>t</code> 由左值对象 <code>t1</code> 复制构造，随后执行函数体。形参在函数退出时或包含该调用的完整表达式结束时销毁，具体时机由实现规定。</p>
+</li>
+<li>
+<p><strong>函数按值返回对象时，可能调用复制构造函数。</strong></p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+class Time
+{
+private:
+	int hour;  
+	int minute;
+	int sec;
+public:
+	Time() { hour = minute = sec = 0; }
+	Time(int i1, int i2, int i3) :hour(i1), minute(i2), sec(i3) {}
+	Time(const Time&#x26; t) 
+	{
+		hour = t.hour;
+		minute = t.minute;
+		sec = t.sec;
+		cout &#x3C;&#x3C; "复制构造函数" &#x3C;&#x3C; endl;
+	}//复制构造函数
+	void set_time()
+	{
+		cin >> hour >> minute >> sec;
+		return;
+	}
+	void show_time()
+	{
+		cout &#x3C;&#x3C; hour &#x3C;&#x3C; ":" &#x3C;&#x3C; minute &#x3C;&#x3C; ":" &#x3C;&#x3C; sec &#x3C;&#x3C; endl;
+	}
+};
+Time test(int i1,int i2,int i3) 
+{
+	Time t(i1, i2, i3);
+	return t;//这里允许省略复制；未省略时，本例调用复制构造函数
+}
+int main()
+{
+	Time t1(4, 5, 6);
+	t1 = test(10, 9, 8);
+	t1.show_time();
+	return 0;
+}
+</code></pre></div>
+<p>这里的 <code>return t</code> 满足命名返回值优化（NRVO）的条件，编译器可以直接在返回结果的位置构造 <code>t</code>，省略这次复制；未省略时，本例会调用复制构造函数。<code>t1 = test(10, 9, 8)</code> 中的 <code>t1</code> 已经存在，因此接收结果的步骤调用赋值运算符。具体构造、析构次数取决于是否进行了复制省略。</p>
+</li>
+<li>
+<p><strong>对象需要通过另外一个对象进行初始化。</strong></p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+class Time
+{
+private:
+	int hour;  
+	int minute;
+	int sec;
+public:
+	Time() { hour = minute = sec = 0; }
+	Time(int i1, int i2, int i3) :hour(i1), minute(i2), sec(i3) {}
+	Time(const Time&#x26; t) 
+	{
+		hour = t.hour;
+		minute = t.minute;
+		sec = t.sec;
+		cout &#x3C;&#x3C; "复制构造函数" &#x3C;&#x3C; endl;
+	}//复制构造函数
+	void set_time()
+	{
+		cin >> hour >> minute >> sec;
+		return;
+	}
+	void show_time()
+	{
+		cout &#x3C;&#x3C; hour &#x3C;&#x3C; ":" &#x3C;&#x3C; minute &#x3C;&#x3C; ":" &#x3C;&#x3C; sec &#x3C;&#x3C; endl;
+	}
+};
+int main()
+{
+	Time t1(4, 5, 6);
+	Time t2 = t1;//发生复制
+	t1.show_time();
+	return 0;
+}
+</code></pre></div>
+</li>
+<li>
+<p><strong>复制含类类型成员的对象。</strong></p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+class year
+{
+private:
+	int years;
+public:
+	year() { years = 0; }
+	year(const year&#x26; y) { cout &#x3C;&#x3C; "year复制构造函数" &#x3C;&#x3C; endl; }//year的复制构造函数
+};
+class Time
+{
+private:
+	int hour;  
+	int minute;
+	int sec;
+	year y;
+public:
+	Time() { hour = minute = sec = 0; }
+	Time(int i1, int i2, int i3) :hour(i1), minute(i2), sec(i3) {}
+	void set_time()
+	{
+		cin >> hour >> minute >> sec;
+		return;
+	}
+	void show_time()
+	{
+		cout &#x3C;&#x3C; hour &#x3C;&#x3C; ":" &#x3C;&#x3C; minute &#x3C;&#x3C; ":" &#x3C;&#x3C; sec &#x3C;&#x3C; endl;
+	}
+};
+int main()
+{
+	Time t1(4, 5, 6);
+	Time t2 = t1;//由 Time 的隐式复制构造函数调用 year 的复制构造函数。
+	t1.show_time();
+	return 0;
+}
+</code></pre></div>
+<p>这里没有为 <code>Time</code> 显式声明复制构造函数，编译器会隐式声明并按需定义它，逐个初始化基类和非静态数据成员。复制 <code>y</code> 时会调用 <code>year</code> 的复制构造函数。</p>
+<p>如果为 <code>Time</code> 自己编写复制构造函数，可以在成员初始化列表中写 <code>y(t.y)</code>，使 <code>y</code> 由源对象的对应成员复制构造。这两段示例中的 <code>year</code> 复制构造函数只打印提示，尚未初始化 <code>years</code>，用于观察调用关系。</p>
+<p>代码如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+class year
+{
+private:
+	int years;
+public:
+	year() { years = 0; }
+	year(const year&#x26; y) {cout &#x3C;&#x3C; "year复制构造函数" &#x3C;&#x3C; endl;}//year复制构造函数
+};
+class Time
+{
+private:
+	int hour;  
+	int minute;
+	int sec;
+	year y;
+public:
+	Time() { hour = minute = sec = 0; }
+	Time(int i1, int i2, int i3) :hour(i1), minute(i2), sec(i3) {}
+	Time(const Time&#x26; t):y(t.y)
+	{
+		hour = t.hour;
+		minute = t.minute;
+		sec = t.sec;
+		cout &#x3C;&#x3C; "复制构造函数" &#x3C;&#x3C; endl;
+	}//复制构造函数
+	void set_time()
+	{
+		cin >> hour >> minute >> sec;
+		return;
+	}
+	void show_time()
+	{
+		cout &#x3C;&#x3C; hour &#x3C;&#x3C; ":" &#x3C;&#x3C; minute &#x3C;&#x3C; ":" &#x3C;&#x3C; sec &#x3C;&#x3C; endl;
+	}
+};
+int main()
+{
+	Time t1(4, 5, 6);
+	Time t2 = t1;//发生复制，且调用了各自的复制构造函数
+	t1.show_time();
+	return 0;
+}
+</code></pre></div>
+</li>
+</ol>
+<span id="四浅拷贝和深拷贝" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-四浅拷贝和深拷贝">（四）浅拷贝和深拷贝:</h3>
+<ol>
+<li>
+<p><strong>默认拷贝构造函数</strong>：</p>
+<p>编译器隐式声明的复制构造函数可能被定义为删除；能否使用取决于类及其成员、基类的定义。</p>
+<p>可用的默认复制构造函数会逐个复制初始化基类和非静态数据成员。类类型成员调用相应的复制构造函数，原始指针成员复制指针值。静态数据成员不属于每个对象的子对象，无需在复制对象时另行复制。</p>
+</li>
+<li>
+<p><strong>浅拷贝</strong>：</p>
+<p>本文用含原始指针的类说明浅拷贝：复制对象时直接复制指针值，两个对象的指针便指向同一资源。修改其中一个指针变量本身，不会改变另一个指针；通过它修改共享资源时，另一个对象也会观察到资源的变化。</p>
+<p>下面是说明重复释放的错误示例，请勿直接运行。下面的类在析构函数中释放 <code>p</code> 所指的对象；默认复制后，两个对象都会尝试释放同一资源：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+class Time
+{
+private:
+	int hour;  
+	int minute;
+	int sec;
+	int* p;
+public:
+	Time() { hour = minute = sec = 0; p = new int(10); }
+	Time(int i1, int i2, int i3) :hour(i1), minute(i2), sec(i3) { p = new int(5); }
+	~Time() 
+	{
+		delete p;
+	}
+	void set_time()
+	{
+		cin >> hour >> minute >> sec;
+		return;
+	}
+	void show_time()
+	{
+		cout &#x3C;&#x3C; hour &#x3C;&#x3C; ":" &#x3C;&#x3C; minute &#x3C;&#x3C; ":" &#x3C;&#x3C; sec &#x3C;&#x3C; endl;
+	}
+};
+int main()
+{
+	Time t1(4, 5, 6);
+	Time t2(t1);
+	t2.show_time();
+	return 0;
+}
+</code></pre></div>
+<p>按代码推演，<code>t1</code> 和 <code>t2</code> 是两个独立的对象，但默认复制使两个成员 <code>p</code> 保存相同的指针值，指向同一个动态分配的 <code>int</code>。</p>
+<p>其中一个对象析构并释放资源后，另一个对象的 <code>p</code> 成为悬空指针；随后再次 <code>delete</code> 会导致未定义行为。这个例子分配的是单个 <code>int</code>。</p>
+<p>如果希望两个对象各自拥有内容相同、互不影响的资源，就需要为复制后的对象另行分配空间。</p>
+</li>
+<li>
+<p><strong>深拷贝</strong>：</p>
+<p>在这个例子中，深拷贝需要为新对象的 <code>p</code> 另行分配一个 <code>int</code>，再复制原来 <code>p</code> 所指的值。这样两个 <code>Time</code> 对象分别拥有自己的资源。</p>
+<p>对象本身可以具有自动存储期，例如下方 <code>main</code> 中的 <code>t1</code>、<code>t2</code>；需要另行分配的是它们管理的资源。</p>
+<p>代码如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+class Time
+{
+private:
+	int hour;  
+	int minute;
+	int sec;
+	int* p;
+public:
+	Time() { hour = minute = sec = 0; p = new int(10); }
+	Time(int i1, int i2, int i3) :hour(i1), minute(i2), sec(i3) { p = new int(10); }
+	Time(const Time&#x26; t)
+	{
+		hour = t.hour;
+		minute = t.minute;
+		sec = t.sec;
+		p=new int(*t.p);
+		cout &#x3C;&#x3C; "复制构造函数" &#x3C;&#x3C; endl;
+	}//复制构造函数
+	~Time() 
+	{
+		if (p != NULL) {
+			cout &#x3C;&#x3C; "析构"&#x3C;&#x3C;&#x26;p &#x3C;&#x3C; endl;
+			delete p;
+			p = NULL;
+		}
+	}
+	void set_time()
+	{
+		cin >> hour >> minute >> sec;
+		return;
+	}
+	void show_time()
+	{
+		cout &#x3C;&#x3C; hour &#x3C;&#x3C; ":" &#x3C;&#x3C; minute &#x3C;&#x3C; ":" &#x3C;&#x3C; sec &#x3C;&#x3C; endl;
+	}
+};
+int main()
+{
+	Time t1(4, 5, 6);
+	Time t2(t1);//发生复制
+	t2.show_time();
+	return 0;
+}
+</code></pre></div>
+<p>从 <code>p = new int(*t.p)</code> 可以看出，这个复制构造函数为 <code>t2.p</code> 分配了独立的 <code>int</code>，并复制 <code>t1.p</code> 所指的值。析构函数打印的是 <code>&#x26;p</code>，即指针成员自身的地址；要观察它保存的地址，应输出 <code>p</code>。本例展示的是复制构造，尚未定义管理该资源的复制赋值运算符。</p>
+</li>
+<li>
+<p><strong>防止浅拷贝发生</strong>：</p>
+<p>将复制构造函数声明为私有且不提供定义，会使外部需要调用它的复制构造无法通过访问检查；成员和友元仍可能引用它。也可以写 <code>X(const X&#x26;) = delete;</code>，明确禁止相应的复制构造。若还要禁止对已有对象的复制赋值，需要同时处理复制赋值运算符。</p>
+</li>
+</ol>
+<p>本次修订依据 C++ 工作草案的<a href="https://eel.is/c++draft/class.copy.ctor" rel="noopener noreferrer">复制构造函数</a>、<a href="https://eel.is/c++draft/class.copy.elision" rel="noopener noreferrer">复制省略</a>及<a href="https://eel.is/c++draft/dcl.fct.def.delete" rel="noopener noreferrer">删除函数</a>规则。文中的执行过程为静态分析，保留原示例主体，仅修正相关注释，未重新编译或运行。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L1e",["$","h1",null,{"tabIndex":-1,"children":"c++类——复制构造函数(含深浅拷贝)"}],["$","p",null,{"className":"article-deck","children":"介绍复制构造函数的调用场景，并用含指针成员的对象说明浅拷贝与深拷贝"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-17","children":"2023-03-17"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-17","children":"2026-10-17"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,315"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",9," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L1f","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$L1f","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$L1f","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]]}],["$","$L20",null,{"headings":[{"id":"section-一引言","text":"（一）引言:","level":3},{"id":"section-二概念","text":"（二）概念:","level":3},{"id":"section-三调用时机","text":"（三）调用时机:","level":3},{"id":"section-四浅拷贝和深拷贝","text":"（四）浅拷贝和深拷贝:","level":3}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L21",null,{"html":"$22"}],"$L23","$L24","$L25"]}],"$L26"]}]]}]
+c:null
+12:[["$","title","0",{"children":"c++类——复制构造函数(含深浅拷贝) | 07xiaohei"}],["$","meta","1",{"name":"description","content":"介绍复制构造函数的调用场景，并用含指针成员的对象说明浅拷贝与深拷贝。"}]]
+27:I[2708,["825","$14","953","$1c"],"FeedbackForm"]
+24:["$","$L27",null,{"contentId":"cpp-copy-constructors"}]
+25:["$","div",null,{"className":"related-note","children":[["$","$L1d",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+26:["$","$L20",null,{"headings":"$9:props:children:1:props:headings"}]
+23:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$L1d",null,{"href":"/blog/cpp-const-members/","children":[["$","span",null,{"children":"上一篇"}],"c++类——常成员"]}],["$","$L1d",null,{"href":"/blog/cpp-destructors/","children":[["$","span",null,{"children":"下一篇"}],"c++类——析构函数"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-2",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-3",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+1e:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1d",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1d",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$L1d",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L1f",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}]

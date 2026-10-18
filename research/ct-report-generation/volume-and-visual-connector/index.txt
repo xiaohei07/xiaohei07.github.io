@@ -1,0 +1,57 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+b:I[887,[],"OutletBoundary"]
+c:"$Sreact.suspense"
+e:"ViewportBoundary"
+f:I[887,[],"$e"]
+11:"MetadataBoundary"
+12:I[887,[],"$11"]
+14:I[5718,[],"default",1]
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+6:X
+9:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]]}],"p":false,"v":null}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"volume-and-visual-connector","s":[]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q9"}]]
+7:[["children",{"s":{"n":"topic","t":"d","k":"ct-report-generation","s":[]},"h":197120,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"research","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","research","ct-report-generation","volume-and-visual-connector",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":"$L13"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$14",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+15:"static/chunks/825-1a8f209f3ada760f.js"
+16:"static/chunks/app/layout-b30e31df6c2e8735.js"
+17:I[6767,["825","$15","177","$16"],"DisplayProvider"]
+18:"NavigationFeedback"
+19:I[2842,["825","$15","177","$16"],"$18"]
+1a:I[8587,["825","$15","177","$16"],"SiteHeader"]
+1b:I[5803,["825","$15","177","$16"],"SiteFrame"]
+1c:I[164,["825","$15","177","$16"],"ProfileSidebar"]
+1d:"static/chunks/app/research/%5Btopic%5D/%5Bslug%5D/page-49a4399c6cb20b68.js"
+1e:I[3498,["825","$15","154","$1d"],"default"]
+6:C
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L17",null,{"children":[["$","$L19",null,{}],["$","$L1a",null,{"tags":["知识点","python","C++"]}],["$","$L1b",null,{"sidebar":["$","$L1c",null,{}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1e",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1e",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1e",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1e",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+d:null
+13:[["$","title","0",{"children":"三维 CT 怎样变成语言模型可读的视觉表示？ | 07xiaohei"}],["$","meta","1",{"name":"description","content":"07xiaohei 的学习笔记、医学影像研究记录与交互式技术实践。"}]]
+20:I[4067,["825","$15","154","$1d"],"ArticleToc"]
+21:I[4711,["825","$15","154","$1d"],"ArticleBody"]
+22:T13d5,<p>从 CT 到报告，信息先经过输入处理和视觉编码，再由连接器整理成语言模型能够接收的表示。最后一句报告遗漏了某个观察时，问题可能出现在不同环节：相关部位没有进入输入，编码或压缩没有保留信息，或者语言模型没有把已有信息写出来。</p>
+<p>本文按这条处理过程解释概念，不给出某一次实验的完整运行配置。</p>
+<h2 id="section-三维数组怎样对应身体位置">三维数组怎样对应身体位置</h2>
+<p>体数据（volume）包含三维强度数组及空间信息；切片（slice）是其中某个方向的二维截面；体素（voxel）是三维网格中的采样单元。相邻切片之间保留着结构的连续关系，因此只看一张截图并不能表达完整输入。</p>
+<p>数组的下标还需要对应到物理空间。体素间距说明相邻采样位置相隔多少毫米，方向与原点则帮助确定身体位置。举一个纯几何例子：同一方向相隔 10 个网格间隔，间距为 1 毫米时距离是 10 毫米，间距为 2 毫米时距离就是 20 毫米。数组形状相同，不代表物理覆盖相同。</p>
+<p>重采样改变采样网格，裁剪选择保留范围，补边填入原影像之外的位置。处理后需要继续追踪空间对应关系，否则报告中的左、右或某个区域就可能与读取的特征对不上。</p>
+<h2 id="section-裁剪空间窗口和-mask-各做什么">裁剪、空间窗口和 mask 各做什么</h2>
+<p>固定大小的中心裁剪可能舍弃范围之外的影像。若目标是描述完整影像所见，需要先检查实际保留了哪些部位，再确定如何组织输入。第二轮汇报材料采用的思路是：对需要扩展覆盖的输入按共同空间规则取窗口，分别编码，再在患者坐标中合并特征。</p>
+<p>这里的“窗口”指三维空间中的取样范围。肺窗、纵隔窗等显示窗口调节的是强度到灰度的映射，二者处理的对象不同。多取一个空间窗口后，还要处理重叠位置，避免同一片影像被重复计入。</p>
+<p>mask 是与网格对应的标记，但标记含义取决于用途。器官 mask 记录区域归属，扫描支持图记录哪些位置来自原影像、哪些属于后来补出的范围。它们与 CT 必须保持空间对齐；器官 mask 本身也不能直接当作病变真值。利用 mask 引导区域读取或提供局部监督之前，还需要检查区域语义、覆盖和质量。</p>
+<h2 id="section-连接器怎样把密集特征变短">连接器怎样把密集特征变短</h2>
+<p>视觉编码器把影像转换成特征向量。向量保留一定的空间排列，并可能经过上下文建模；一个位置的特征不只等于那个位置的原始强度。语言模型接收的视觉序列长度有限，连接器需要从这些密集特征中形成较短的视觉词元序列。</p>
+<p>视觉词元（visual token）在这里是连续向量，不是一句已经识别出的诊断，也不要求每个词元对应一个器官或一种异常。连接器还会把向量映射到语言模型能够使用的维度。</p>
+<p>规则网格池化按空间分组汇聚特征，容易追踪每组对应的范围。可学习查询则通过训练调整怎样读取密集特征，可以从不同位置组合信息。它们是可比较的读取方式，不必串成同一条处理链。区域先验还可以改变查询对不同位置的偏好，但读取偏好是否帮助保留事实，需要通过实验检查。</p>
+<p>压缩本身提出了一个具体问题：局部异常的信号与周围大量特征一起汇聚后，是否仍然可用？用更多查询或更深的读取结构可能改变信息保留方式，也会增加计算；仅凭结构名称还无法判断报告会怎样变化。</p>
+<h2 id="section-报告遗漏时怎样缩小检查范围">报告遗漏时怎样缩小检查范围</h2>
+<p>可以先核对输入中是否保留了相关部位，以及 CT、mask 与特征坐标是否一致。接着，在相同标签和相近读出条件下，分别检查密集特征与压缩词元能否提供某类信息。读出器是用于检查表示的小预测模型，它的表现只能提供诊断线索。</p>
+<p>如果压缩词元中仍能读出信息，报告却持续遗漏，还要检查生成是否响应视觉条件变化，以及语言训练和监督是否匹配任务。最终仍需回到完整报告，核对事实覆盖、位置和断言；表示读出较好，并不自动等于生成结果较好。</p>
+<p>本文依据本课题 2026 年 10 月研究讲义的输入与表示定义，并结合第二轮汇报中的输入处理思路整理。下一篇继续说明这些环节同时改变后，怎样安排比较。</p>
+<p><a href="/research/ct-report-generation/task-and-clinical-facts/">上一篇：CT 报告生成要保留哪些临床事实？</a> · <a href="/research/ct-report-generation/rounds-and-evaluation/">下一篇：从第一轮到第二轮</a> · <a href="/research/ct-report-generation/">返回 CT 研究主题</a></p>a:["$","article",null,{"className":"shell reading-page research-detail","children":[["$","header",null,{"className":"article-heading","children":["$L1f",["$","h1",null,{"tabIndex":-1,"children":"三维 CT 怎样变成语言模型可读的视觉表示？"}],["$","p",null,{"className":"article-deck","children":"从体数据、物理坐标与 mask 解释三维输入，再说明连接器怎样压缩空间特征，以及怎样检查信息在哪个环节没有进入报告"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"className":"status-tag","children":"研究说明"}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-18","children":"2026-10-18"}]]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","3D CT",{"children":"3D CT"}],["$","span","空间坐标",{"children":"空间坐标"}],["$","span","视觉连接器",{"children":"视觉连接器"}],["$","span","视觉词元",{"children":"视觉词元"}]]}]]}],false,["$","$L20",null,{"headings":[{"id":"section-三维数组怎样对应身体位置","text":"三维数组怎样对应身体位置","level":2},{"id":"section-裁剪空间窗口和-mask-各做什么","text":"裁剪、空间窗口和 mask 各做什么","level":2},{"id":"section-连接器怎样把密集特征变短","text":"连接器怎样把密集特征变短","level":2},{"id":"section-报告遗漏时怎样缩小检查范围","text":"报告遗漏时怎样缩小检查范围","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L21",null,{"html":"$22"}],false,false]}],["$","$L20",null,{"headings":"$a:props:children:2:props:headings"}]]}]]}]
+23:I[6279,["825","$15","154","$1d"],"FilterLink"]
+1f:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1e",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1e",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$L1e",null,{"href":"/research/","children":["研究",["$","span",null,{"children":4}]]}],["$","$L23",null,{"className":"trail-current","href":"/research/#direction-medical-imaging","children":["医学影像处理",["$","span",null,{"children":4}]]}],["$","$L1e",null,{"className":"trail-parent","href":"/research/ct-report-generation/","children":"基于细粒度临床事实建模的三维胸部 CT 报告生成"}]]}]

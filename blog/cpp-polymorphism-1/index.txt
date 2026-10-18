@@ -1,0 +1,205 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"cpp-polymorphism-1","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","cpp-polymorphism-1",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+6:C
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+14:"static/chunks/825-1a8f209f3ada760f.js"
+15:"static/chunks/app/layout-b30e31df6c2e8735.js"
+16:I[6767,["825","$14","177","$15"],"DisplayProvider"]
+17:"NavigationFeedback"
+18:I[2842,["825","$14","177","$15"],"$17"]
+19:I[8587,["825","$14","177","$15"],"SiteHeader"]
+1a:I[5803,["825","$14","177","$15"],"SiteFrame"]
+1b:I[164,["825","$14","177","$15"],"ProfileSidebar"]
+1c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+1d:I[3498,["825","$14","953","$1c"],"default"]
+1f:I[6279,["825","$14","953","$1c"],"FilterLink"]
+20:I[4067,["825","$14","953","$1c"],"ArticleToc"]
+21:I[4711,["825","$14","953","$1c"],"ArticleBody"]
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L16",null,{"children":[["$","$L18",null,{}],["$","$L19",null,{"tags":["知识点","python","C++"]}],["$","$L1a",null,{"sidebar":["$","$L1b",null,{}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1d",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1d",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1d",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1d",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+22:T1cf8,<span id="一概述" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一概述">（一）概述：</h3>
+<span id="1-简介" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-简介">1. 简介：</h4>
+<p>多态字面意思就是多种形态，可以简单地概括为“一个接口，多种方法”，多态性指相同对象收到不同消息或不同对象收到相同消息时产生不同的实现动作，多态是面向对象编程领域的核心概念。</p>
+<span id="2-目的" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-目的">2. 目的：</h4>
+<p>封装可以使得代码模块化，继承可以扩展已存在的代码，他们的目的都是为了代码重用。而多态的目的则是为了“接口重用”。也即，不论传递过来的究竟是类的哪个对象，函数都能够通过同一个接口调用到适应各自对象的实现方法。</p>
+<span id="3-c的应用" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-c的应用">3. c++的应用：</h4>
+<p>当类之间存在层次结构，并且类之间是通过继承关联时，就会用到多态。C++中的多态意味着调用成员函数时，会根据调用函数的对象的类型来执行不同的函数。</p>
+<p>c++中多态最常见的用法就是声明基类类型的指针，利用该指针指向任意一个子类对象，调用相应的虚函数，可以根据指向的子类的不同而实现不同的方法。</p>
+<span id="4-分类" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-分类">4. 分类：</h4>
+<p>C++支持两种多态性：编译时多态性，运行时多态性。前者被称为静态多态（也叫静态联编），通过重载函数和泛型编程实现；后者被称为动态多态（也叫动态联编），主要依赖虚函数体现。</p>
+<p>两者的实质区别就是函数地址是早绑定还是晚绑定。如果函数的调用，在编译器编译期间就可以确定函数的调用地址，并生产代码，是静态的，就是说地址是早绑定的。而如果函数调用的地址不能在编译器期间确定，需要在运行时才确定，这就属于晚绑定。</p>
+<p>一般情况下，我们说明的多态多数是指动态多态。</p>
+<span id="二静态联编" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二静态联编">（二）静态联编：</h3>
+<span id="1-联编" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-联编">1. 联编：</h4>
+<p>联编是指一个程序模块、代码之间相互关联的过程。</p>
+<p>将源代码中的函数调用解释为执行特定的函数代码块的过程称为函数名联编。</p>
+<p>同一个名称的函数有多种，联编可以把调用和具体的实现进行链接映射到某个最适合的函数。</p>
+<span id="2-概念" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-概念">2. 概念：</h4>
+<p>C++编译器在编译过程中完成的编译叫做静态联编，也就是早期匹配。因为这种联编实在程序开始运行之前就完成了。在程序编译阶段进行的这种联编在编译时就解决了程序的操作调用与执行该操作代码间的关系。</p>
+<p>静态联编的效率高，但灵活性差。</p>
+<span id="3-体现" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-体现">3. 体现：</h4>
+<p>普通成员函数重载可表达为两种形式：</p>
+<ul>
+<li>
+<p>只在一个类说明中重载：</p>
+<p>等价于一般函数重载，编译器可以根据其形参表进行区分。</p>
+</li>
+<li>
+<p>基类的成员在派生类重载：</p>
+<p>有三种编译区分方法：</p>
+<ul>
+<li>根据参数的特征加以区分。（该方法实际上和上面的类似，只是可以都在任何一个继承层次上）</li>
+<li>使用"::"加以区分。</li>
+<li>根据类对象加以区分。</li>
+</ul>
+</li>
+</ul>
+<p>实际上，静态联编对函数的选择是基于指向对象的指针或者引用的类型。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class A
+{
+private:
+	double a;
+public:
+	A(double i = 0) :a(i) {}
+	void print() 
+	{
+		cout &#x3C;&#x3C;"A1:" &#x3C;&#x3C; "a:" &#x3C;&#x3C; a &#x3C;&#x3C; endl;
+	}
+	void print(bool) 
+	{
+		cout &#x3C;&#x3C; "A2:" &#x3C;&#x3C; "a:" &#x3C;&#x3C; a &#x3C;&#x3C; endl;
+	}
+};
+class B:public A
+{
+private:
+	double b;
+public:
+	B(double i = 0) :b(i) {}
+	void print()
+	{
+		cout &#x3C;&#x3C; "B1:" &#x3C;&#x3C; "b:" &#x3C;&#x3C; b &#x3C;&#x3C; endl;
+	}
+	void print(string)
+	{
+		cout &#x3C;&#x3C; "B2:" &#x3C;&#x3C; "b:" &#x3C;&#x3C; b &#x3C;&#x3C; endl;
+	}
+};
+int main() 
+{
+	A a;
+	B b;
+	a.print();      //A1
+	a.print(true);  //A2
+	b.print();      //B1
+	b.print("1");   //B2
+	a.print("1");   //A2,强制类型转换
+	//b.print(true);//无法匹配
+	b.A::print();   //A1
+	b.A::print(true);   //A2
+	b.B::print();   //B1
+	b.B::print("1");//B2
+	return 0;
+}
+</code></pre></div>
+<span id="三类指针的关系" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三类指针的关系">（三）类指针的关系：</h3>
+<p>基类指针、引用和派生类指针、引用与基类对象和派生类对象有4种的可能匹配：</p>
+<ul>
+<li>
+<p>直接用基类指针、引用来引用基类对象。</p>
+</li>
+<li>
+<p>直接用派生类指针、引用来引用派生类对象。</p>
+</li>
+<li>
+<p>用基类的指针、引用来引用一个派生类对象：</p>
+<p>只能访问从基类继承的对象，除非对这个基类指针进行强制类型转换成派生类指针，用派生类指针访问。</p>
+</li>
+<li>
+<p>用派生类指针、引用来引用一个基类对象：</p>
+<p>不安全，会越界访问，不被允许，派生类指针只有经过强制类型转换之后才能引用基类对象。</p>
+</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class A
+{
+private:
+	double a;
+public:
+	A(double i = 0) :a(i) {}
+	void print() 
+	{
+		cout &#x3C;&#x3C; typeid(this).name() &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C;"A1:" &#x3C;&#x3C; "a:" &#x3C;&#x3C; a &#x3C;&#x3C; endl;
+	}
+	void print(bool) 
+	{
+		cout &#x3C;&#x3C; typeid(this).name() &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; "A2:" &#x3C;&#x3C; "a:" &#x3C;&#x3C; a &#x3C;&#x3C; endl;
+	}
+};
+class B:public A
+{
+private:
+	double b;
+public:
+	B(double i = 0) :b(i) {}
+	void print()
+	{
+		cout &#x3C;&#x3C; typeid(this).name() &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; typeid((A*)this).name() &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; "B1:" &#x3C;&#x3C; "b:" &#x3C;&#x3C; b &#x3C;&#x3C; endl;
+	}
+	void print(string)
+	{
+		cout &#x3C;&#x3C; typeid(this).name() &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; "B2:" &#x3C;&#x3C; "b:" &#x3C;&#x3C; b &#x3C;&#x3C; endl;
+	}
+};
+int main() 
+{
+	A a(3);
+	B b(4);
+	A* pa = &#x26;a;
+	pa->print();
+	cout &#x3C;&#x3C; endl;
+	B* pb = &#x26;b;
+	pb->print();
+	cout &#x3C;&#x3C; endl;
+	pa = &#x26;b;
+	pa->print();
+	cout &#x3C;&#x3C; endl;
+	B* pbb = (B*)pa;
+	pbb->print();
+	cout &#x3C;&#x3C; endl;
+	A* paa = (A*)&#x26;pb; //A中数未初始化
+	paa->print();
+	cout &#x3C;&#x3C; endl;
+	return 0;
+}
+</code></pre></div>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L1e",["$","h1",null,{"tabIndex":-1,"children":"c++类——多态(一)"}],["$","p",null,{"className":"article-deck","children":"从同一接口调用不同实现谈起，介绍多态分类、静态联编及基类与派生类指针"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-04-08","children":"2023-04-08"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,324"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L1f","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$L1f","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$L1f","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]]}],["$","$L20",null,{"headings":[{"id":"section-一概述","text":"（一）概述：","level":3},{"id":"section-1-简介","text":"1. 简介：","level":4},{"id":"section-2-目的","text":"2. 目的：","level":4},{"id":"section-3-c的应用","text":"3. c++的应用：","level":4},{"id":"section-4-分类","text":"4. 分类：","level":4},{"id":"section-二静态联编","text":"（二）静态联编：","level":3},{"id":"section-1-联编","text":"1. 联编：","level":4},{"id":"section-2-概念","text":"2. 概念：","level":4},{"id":"section-3-体现","text":"3. 体现：","level":4},{"id":"section-三类指针的关系","text":"（三）类指针的关系：","level":3}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L21",null,{"html":"$22"}],"$L23","$L24","$L25"]}],"$L26"]}]]}]
+c:null
+12:[["$","title","0",{"children":"c++类——多态(一) | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从同一接口调用不同实现谈起，介绍多态分类、静态联编及基类与派生类指针。"}]]
+27:I[2708,["825","$14","953","$1c"],"FeedbackForm"]
+24:["$","$L27",null,{"contentId":"cpp-polymorphism-1"}]
+25:["$","div",null,{"className":"related-note","children":[["$","$L1d",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+26:["$","$L20",null,{"headings":"$9:props:children:1:props:headings"}]
+23:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$L1d",null,{"href":"/blog/cpp-templates-3/","children":[["$","span",null,{"children":"上一篇"}],"c++类——模版(三)"]}],["$","$L1d",null,{"href":"/blog/cpp-polymorphism-2/","children":[["$","span",null,{"children":"下一篇"}],"c++类——多态(二)"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-2",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-3",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+1e:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1d",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1d",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$L1d",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L1f",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}]

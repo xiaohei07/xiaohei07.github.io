@@ -1,0 +1,293 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","953","$c"],"default"]
+16:I[6279,["825","$2","953","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"python基础——函数(二)"}],["$","p",null,{"className":"article-deck","children":"用调用示例说明参数传递，整理位置、关键字、默认值及不定长参数的用法"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"slug","t":"d","k":"python-functions-2","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"python基础——函数(二) | 07xiaohei"}],["$","meta","1",{"name":"description","content":"用调用示例说明参数传递，整理位置、关键字、默认值及不定长参数的用法。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","953","$c"],"ArticleToc"]
+26:I[4711,["825","$2","953","$c"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-07-11","children":"2023-07-11"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,602"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",9," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","python",{"href":"/blog/#tag=python","children":"python"}],["$","$L16","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-三函数调用","text":"（三）函数调用","level":3},{"id":"section-1-基本内容","text":"1. 基本内容：","level":4},{"id":"section-2-内置函数","text":"2. 内置函数：","level":4},{"id":"section-3-参数传递","text":"3. 参数传递：","level":4},{"id":"section-1可更改和不可更改对象","text":"（1）可更改和不可更改对象：","level":5},{"id":"section-2参数类型","text":"（2）参数类型：","level":5},{"id":"section-4内嵌函数","text":"4.内嵌函数：","level":4}],"mobile":true}]
+27:T32ac,<span id="三函数调用" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三函数调用">（三）函数调用</h3>
+<span id="1-基本内容" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-基本内容">1. 基本内容：</h4>
+<p>定义一个函数只给了函数一个名称，指定了函数里包含的参数，和代码块结构。</p>
+<p>Python中需要显式说明函数的调用，并为其指定参数（如需要参数）完成函数功能。</p>
+<p>函数的调用可以是直接调用，可以是通过另一个函数调用来执行，也可以直接用Python提示符执行。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def caixukun():
+    print("小黑子露出鸡脚了")
+
+def usefun():
+    print("usefun",end=",")
+    caixukun()
+
+usefun()
+caixukun()
+# 运行结果：
+# usefun,小黑子露出鸡脚了
+# 小黑子露出鸡脚了
+</code></pre></div>
+<span id="2-内置函数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-内置函数">2. 内置函数：</h4>
+<p>Python中提供了众多的内置函数，这些函数不需要我们定义，可以直接调用。</p>
+<p>一旦我们定义了与内置函数名相同的函数名，就会覆盖内置函数，但因为一般内置函数会有参数检查，所以不建议直接覆盖定义。</p>
+<p>具体的内置函数种类众多，数量巨大，这里不一一讲述，详细函数根据需要查询使用即可。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>result = input("请输入内容:")
+print(result)
+def input():
+    print("input变为print，输出了1")
+input()
+# 运行结果:
+# 请输入内容:10
+# 10
+# input变为print，输出了1
+</code></pre></div>
+<span id="3-参数传递" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-参数传递">3. 参数传递：</h4>
+<p>在调用函数时，通常会传递参数，函数内部的代码保持不变，针对不同的参数处理不同的数据。</p>
+<p><strong>形参和实参</strong>：</p>
+<ul>
+<li>形参是定义函数时的参数变量，Python中没有类型，主要是为了代码块的使用和确定参数数量。</li>
+<li>实参是调用函数时使用的实际参数变量。</li>
+<li>参数传递实际就是<strong>把实参的引用传递给形参，使用实参的值来执行函数体的过程。</strong></li>
+</ul>
+<p>Python中，类型属于对象，变量是没有类型的——变量是一个对象的引用（或者说是指针），因此函数中的参数没有类型，在传递时必须考虑传递的参数类型是否能够符合要求，不会引发错误。</p>
+<span id="1可更改和不可更改对象" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-1可更改和不可更改对象">（1）可更改和不可更改对象：</h5>
+<p>详见之前的博客——<a href="/blog/python-data-types/">python基础——数据类型（一）简介 - ZZHの个人博客 (07xiaohei.com)</a></p>
+<p>了解了这个之后，就可以说明参数传递的底层实现了。</p>
+<p>从结果上看，Python的参数传递中，可变类型的参数传递类似于c++的引用传递，被传递的实参对象在函数中修改时<strong>会影响</strong>到外部的对象；而不可变类型的参数传递类似于c++的值传递，被传递的实参对象在函数中进行任何修改<strong>不会影响</strong>到外部的对象，因为实际上传递时<strong>实参对象是被复制了一份进入了函数</strong>，原对象不会受到其影响。</p>
+<p>而实际上，Python的参数传递是<strong>赋值传递，即对象的引用传递</strong>，由于Python的所有数据类型都是对象，所以参数传递实际上是复制出新的变量，让新的变量和原变量指向一个相同的对象。</p>
+<p>——换言之，Python里的参数传递，外部的变量和函数的变量指向的是一个具体的对象，不是一个具体的内存地址。因此对象可变时，改变对象，所有指向这个对象的变量都会改变，表现为引用传递；而对象不可变时，赋值等操作实际是创建了一个新的对象并让函数的变量指向新的对象，这样无论如何修改自然不会影响到外部变量指向的对象，此时表现为了值传递。</p>
+<p>下面通过几个例子来加深理解：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def addn(nn,k):
+    print(id(nn))
+    nn = nn+k
+    print(id(nn))
+    print(nn)
+n = 3
+addn(n,5)
+print(id(n))
+print(n)
+
+# 运行结果：
+# 140709379830632
+# 140709379830792
+# 8
+# 140709379830632
+# 3
+</code></pre></div>
+<p>从上面可以看出，外部变量n和函数传递变量nn指向的对象开始是相同的，都是id为140709379830632的对象，而进行了赋值操作后，nn指向的对象发生了改变，对应了140709379830792，和原来不同，所以其对象值的改变不会影响到外部变量n，因此表现为了值传递。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def addn(n,k):
+    print(id(n))
+    print(id(n[0]))
+    print(n)
+    print()
+    n[0] = n[0]+k
+    print(id(n))
+    print(id(n[0]))
+    print(n)
+    print()
+n= [1,2,3,4]
+print(id(n))
+print(id(n[0]))
+print(n)
+print()
+addn(n,5)
+print(id(n))
+print(id(n[0]))
+print(n)
+# 运行结果：
+# 2740557338880
+# 140709379830568
+# [1, 2, 3, 4]
+#
+# 2740557338880
+# 140709379830568
+# [1, 2, 3, 4]
+#
+# 2740557338880
+# 140709379830728
+# [6, 2, 3, 4]
+#
+# 2740557338880
+# 140709379830728
+# [6, 2, 3, 4]
+</code></pre></div>
+<p>这里就可以明显的看出实际的变化了。</p>
+<p>首先，n变量指向了一个列表对象，id为2740557338880，此时n[0]也指向了一个number对象，id为140709379830568，输出为1,2,3,4</p>
+<p>然后传入函数，生成函数变量n，这个n和外部变量n的指向全部都是相同的对象，说明了传递的底层逻辑。</p>
+<p>再进行赋值操作，n[0]指向的对象发生了改变，id变为了140709379830728，但是注意，n的指向没有发生改变，所以内外的变量n访问n[0]指向对象时都是赋值之后的n[0]，表现为了引用传递，内外的输出均变为6,2,3,4——其实质，就是因为列表可变，而number不可变导致的。</p>
+<p>综上，如果想要通过函数来改变某个变量的值，可以直接将可变数据类型当作参数传入，直接进行修改，也可以针对不可变数据类型，创建一个新对象，来保存修改后的值，然后将其返回给原变量完成修改。</p>
+<p>一般建议使用第二种方式，因为其简明易懂，不易出错。</p>
+<span id="2参数类型" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-2参数类型">（2）参数类型：</h5>
+<ul>
+<li>
+<p>位置参数：必须以在被调用函数中的定义的准确顺序来传递。</p>
+<p>当不含默认参数时，传入函数的参数数量必须和声明时的参数数量相一致。</p>
+<p>是最普通的传递方式。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def add_three(a,b,c):
+    return a+b+c
+print(add_three(1,2,3))
+# 运行结果：
+# 6
+</code></pre></div>
+</li>
+<li>
+<p>关键字参数（命名参数）：和函数调用密切相关，函数调用使用关键字参数来确定传入参数值。</p>
+<p>关键字参数允许函数调用的参数顺序和声明的不一致，由解释器用参数名来匹配参数值。</p>
+<p>调用的形参列表格式：<em><strong>参数名k1=实参值1，参数名k2=实参值2，......，参数名kn=实参值n</strong></em></p>
+<p>关键字参数必须在位置参数的后面，否则解释器不能识别结果。</p>
+<p>了解即可，一般不常用。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def add_three(a,b,c):
+    return a+b*2+c*3
+print(add_three(c=1,a=2,b=3))
+# 运行结果：
+# 11 （2+3*2+1*3）
+</code></pre></div>
+</li>
+<li>
+<p>默认值参数：为一个参数指定默认值，如果没有给该参数传值，则按默认值传入处理。</p>
+<p>具有默认值的参数也叫做缺省参数。</p>
+<p>缺省参数应当在参数列表的末尾。也就是默认参数必须在所有位置参数的后面设定，否则解释器不能准确识别对应结果。</p>
+<p>调用时，允许参数数量在所有位置参数数量和全部参数数量之间，赋值从左到右逐个进行，剩余则使用默认参数。</p>
+<p>注意：默认值只会执行一次，当默认值为可变对象时，要注意多次调用可能会出现每次结果保留了上次调用结果的可能性。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def add_two_three(a,b,c=0):
+    return a+b+c
+print(add_two_three(1,2))
+print(add_two_three(3,4,5))
+def app(i=0,list_use = [] ):
+    list_use.append(i)
+    print(list_use)
+app()
+app(1)
+app(2)
+app(3)
+#运行结果：
+# 3
+# 12
+# [0]
+# [0, 1]
+# [0, 1, 2]
+# [0, 1, 2, 3]
+</code></pre></div>
+<p>默认参数可以和关键字参数一起使用：</p>
+<p>关键字参数必须跟随在位置参数的后面。传递的所有关键字参数必须与函数接受的其中一个参数匹配，它们的顺序并不重要。这也包括非可选参数。不能对同一个参数多次赋值。</p>
+</li>
+<li>
+<p>不定长参数（多值参数）：函数处理参数个数不能确定时使用，对于参数个数可能超过声明时个数需要声明多值参数将多出的参数打包处理。</p>
+<p>Python的多值参数有两种：</p>
+<ul>
+<li>接收元组的参数包：参数名前加一个*，一般用*args表示。</li>
+<li>接收字典的参数包：参数名前加两个**，一般用**kwargs表示。</li>
+</ul>
+<p>形参列表的格式为：<em><strong>([formal_args,] *var_args_tuple ): / ([formal_args,] **var_kwargs_dict):</strong></em></p>
+<p>增加的*和**就是解包的表现。</p>
+<p>解包参数列表：当参数在列表或者元组中，又需要为单独的位置参数的函数提供参数时，通过对其解包完成参数传递。</p>
+<p>对于元组，每个元素作为一个参数传递，按顺序进行；对于字典，参数名作为键，参数传入值作为值，形成键值对完成传递。</p>
+<p><strong>强制命名参数</strong>：如果有其他参数被定义到了多值参数的后面，称为强制命名参数，调用时必须显式使用关键字参数传递值。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def add_many(*args):
+    print(args)
+    count=0
+    for i in args:
+        count =count+i
+    print(count)
+add_many(1)
+add_many(1,2)
+add_many(1,2,3)
+add_many(1,2,3,4,5,6,7,8,9)
+tuple_temp=(1,2,3,4,5,6,7,8,9)
+add_many(*tuple_temp)
+#运行结果：
+# (1,)
+# 1
+# (1, 2)
+# 3
+# (1, 2, 3)
+# 6
+# (1, 2, 3, 4, 5, 6, 7, 8, 9)
+# 45
+# (1, 2, 3, 4, 5, 6, 7, 8, 9)
+# 45
+def add_many(**kwargs):
+    count=0
+    for i in kwargs.values():
+        count = count+int(i)
+    print(count)
+    print(kwargs)
+temp ={'a':'1','b':'2','c':'3'}
+add_many(**temp)
+#运行结果：
+# 6
+# {'a': '1', 'b': '2', 'c': '3'}
+
+def add_three(a,b,c):
+    return a+b*2+c*3
+list_temp=(1,2,3)
+print(add_three(*list_temp))
+dict_temp={'b':1,'a':2,'c':3}
+print(add_three(**dict_temp))
+# 运行结果：
+# 14
+# 13
+
+def add_more_solid(*args,solid):
+    count=solid
+    for i in args:
+        count =count + i
+    print(count)
+tuple_temp=(1,2,3,4,5)
+add_more_solid(*tuple_temp,solid =10)
+#运行结果：
+# 25
+</code></pre></div>
+</li>
+</ul>
+<span id="4内嵌函数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4内嵌函数">4.内嵌函数：</h4>
+<p>在一个函数内创建另一个函数，通常还需要在其中调用，一旦脱离函数，创建的函数也不能够再使用了。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def add_three(a,b,c):
+    def add_two(x,y):
+        print(x+y)
+        return x+y
+    return add_two(a,b)+c
+print(add_three(1,2,3))
+# 运行结果：
+# 3
+# 6
+</code></pre></div>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],"$L28","$L29","$L2a"]}],"$L2b"]}]
+1b:["$","$L2c",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+2e:I[2708,["825","$2","953","$c"],"FeedbackForm"]
+f:300
+28:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/python-functions-1/","children":[["$","span",null,{"children":"上一篇"}],"python基础——函数(一)"]}],["$","$Ld",null,{"href":"/blog/python-loops/","children":[["$","span",null,{"children":"下一篇"}],"python基础——循环"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$Ld",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-class-decorators",{"children":[["$","$Ld",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$Ld",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+29:["$","$L2e",null,{"contentId":"python-functions-2"}]
+2a:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+2b:["$","$L25",null,{"headings":"$19:props:headings"}]
+2d:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"

@@ -1,0 +1,267 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","953","$c"],"default"]
+16:I[6279,["825","$2","953","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"c++类——常成员"}],["$","p",null,{"className":"article-deck","children":"分别介绍常数据成员、常成员函数和常对象，结合代码讨论初始化与成员访问"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"slug","t":"d","k":"cpp-const-members","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"c++类——常成员 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"分别介绍常数据成员、常成员函数和常对象，结合代码讨论初始化与成员访问。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","953","$c"],"ArticleToc"]
+26:I[4711,["825","$2","953","$c"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-17","children":"2023-03-17"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-17","children":"2026-10-17"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,447"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$L16","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$L16","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-一概念","text":"（一）概念:","level":3},{"id":"section-二常数据成员","text":"（二）常数据成员：","level":3},{"id":"section-1-概念","text":"1. 概念：","level":4},{"id":"section-2-特点","text":"2. 特点：","level":4},{"id":"section-3-代码实现","text":"3. 代码实现：","level":4},{"id":"section-三常成员函数","text":"（三）常成员函数：","level":3},{"id":"section-1-概念-1","text":"1. 概念：","level":4},{"id":"section-2-特点-1","text":"2. 特点：","level":4},{"id":"section-3-代码实现-1","text":"3. 代码实现：","level":4},{"id":"section-四常对象","text":"（四）常对象：","level":3},{"id":"section-1-概念-2","text":"1. 概念：","level":4},{"id":"section-2-特点-2","text":"2. 特点：","level":4},{"id":"section-3代码实现","text":"3.代码实现：","level":4}],"mobile":true}]
+27:T249d,<span id="一概念" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一概念">（一）概念:</h3>
+<p>类的常成员包括常数据成员，常成员函数，常对象。</p>
+<p>下面每一部分分别介绍一个内容。文中的代码故意保留了标为“错误”的语句，用来展示限制；这些代码块不能直接作为完整的可编译示例。</p>
+<span id="二常数据成员" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二常数据成员">（二）常数据成员：</h3>
+<span id="1-概念" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-概念">1. 概念：</h4>
+<p>常数据成员使用 <code>const</code> 限定。本文的 <code>const int</code> 成员在初始化后不能再修改，初始化与后续赋值需要分开理解。</p>
+<p>形式为：<em><strong>const 类型 数据成员名;</strong></em></p>
+<span id="2-特点" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-特点">2. 特点：</h4>
+<ul>
+<li>
+<p>不同对象的相同常数据成员可以不同，但对于单个对象来说，常数据成员在初始化后是不可变的。</p>
+</li>
+<li>
+<p>常数据成员要在执行构造函数体之前完成初始化。可以使用构造函数的成员初始化列表；从 C++11 起，也可以在类内给出默认成员初始化器，例如 <code>const int x = 0;</code>。如果构造函数又在初始化列表中指定 <code>x</code>，会使用该初始化列表中的值。构造函数体内的 <code>x = ...</code> 已经是赋值，不能用于修改这个常成员。</p>
+</li>
+<li>
+<p>对于任何函数，无论是成员函数、友元函数还是类外函数，均不允许修改其值，只能读取。</p>
+</li>
+</ul>
+<span id="3-代码实现" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-代码实现">3. 代码实现：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+class Simple
+{
+private:
+	const int x;
+	int y;
+public:
+	Simple():x(0)
+	{
+		x=0;//错误！不允许在构造函数体内初始化常数据成员x的值！
+		cout &#x3C;&#x3C; "创建对象" &#x3C;&#x3C; endl;
+		y = 0; 
+	};
+	Simple (int a, int b) : x(a), y(b)
+	{
+		cout &#x3C;&#x3C; "创建对象" &#x3C;&#x3C; endl;
+	}
+	void showXY() 
+	{
+		cout &#x3C;&#x3C; x &#x3C;&#x3C; "," &#x3C;&#x3C; y &#x3C;&#x3C; endl;
+	}
+	void resetXY(int a, int b) 
+	{
+		x = a, y = b; //错误！不允许修改常数据成员x的值！
+		return ;
+	}
+	void Simple_thisuse(int a,int b)
+	{
+		cout &#x3C;&#x3C; this->x &#x3C;&#x3C; " " &#x3C;&#x3C; this->y &#x3C;&#x3C; endl;
+		(*this).x += a;//错误！不允许修改常数据成员x的值！
+		(*this).y += b;
+		cout &#x3C;&#x3C; this->x &#x3C;&#x3C; " " &#x3C;&#x3C; this->y &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; this &#x3C;&#x3C; endl;
+		return;
+	}
+	~Simple()
+	{
+		cout &#x3C;&#x3C; "释放对象" &#x3C;&#x3C; endl;
+	}
+};
+int main()
+{
+	Simple ss;
+	Simple s(1, 2);//在构造函数处对常数据成员赋值
+	ss.showXY();
+	return 0;
+}
+</code></pre></div>
+<span id="三常成员函数" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三常成员函数">（三）常成员函数：</h3>
+<h4 id="section-1-概念-1">1. 概念：</h4>
+<p>在普通非静态成员函数的参数列表后加上 <code>const</code>，就把它声明为常成员函数。在类 <code>Simple</code> 的这种成员函数中，<code>this</code> 的类型是 <code>const Simple*</code>，即指向常对象的指针；这决定了通过当前对象访问成员时的限制。</p>
+<p>形式：<code>返回类型 成员函数名(参数表) const { 成员函数体 }</code>。</p>
+<p>写在返回类型位置的 <code>const</code> 修饰的是返回类型，不会把函数变成常成员函数。例如下面代码中的 <code>const void Simple_thisuse(...)</code> 没有达到修饰当前对象的目的，<code>const</code> 应放在参数列表后。</p>
+<h4 id="section-2-特点-1">2. 特点：</h4>
+<ul>
+<li>通过当前对象不能修改普通非静态数据成员；<code>mutable</code> 成员是例外。指针成员指向的其他对象也不自动随当前对象变成只读。</li>
+<li>通过当前对象只能调用其他 const 非静态成员函数；这不妨碍调用静态成员函数，或操作另外一个允许修改的对象。</li>
+<li>可以被其他不是常成员函数的成员函数调用。</li>
+<li>参数列表后的 <code>const</code> 可以用于区分成员函数重载。需要同时支持常对象和非常对象时，可以按需提供两个版本；只读操作通常可以直接提供 const 版本。</li>
+<li>在类外写实现时<strong>const仍要保留</strong>。</li>
+</ul>
+<h4 id="section-3-代码实现-1">3. 代码实现：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+class Simple
+{
+private:
+	int x;
+	int y;
+public:
+	Simple():x(0),y(0)
+	{
+		cout &#x3C;&#x3C; "创建对象" &#x3C;&#x3C; endl;
+
+	};
+	Simple (int a, int b) : x(a), y(b)
+	{
+		cout &#x3C;&#x3C; "创建对象" &#x3C;&#x3C; endl;
+	}
+	void showXY()
+	{
+		cout &#x3C;&#x3C; x &#x3C;&#x3C; "," &#x3C;&#x3C; y &#x3C;&#x3C; endl;
+	}
+	void showXY() const  //正确，不修改任意成员变量，可以加const
+	{
+		cout &#x3C;&#x3C; x &#x3C;&#x3C; "," &#x3C;&#x3C; y &#x3C;&#x3C; endl;
+	}
+	void resetXY(int a, int b) 
+	{
+		x = a, y = b;
+		return ;
+	}
+	void resetXY(int a, int b) const //错误，修改了成员变量，不可以加const
+	{
+		x = a, y = b; 
+		return;
+	}
+	const void Simple_thisuse(int a,int b) //const加入位置错误
+	{
+		cout &#x3C;&#x3C; this->x &#x3C;&#x3C; " " &#x3C;&#x3C; this->y &#x3C;&#x3C; endl;
+		(*this).x += a;
+		(*this).y += b;
+		cout &#x3C;&#x3C; this->x &#x3C;&#x3C; " " &#x3C;&#x3C; this->y &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; this &#x3C;&#x3C; endl;
+		return;
+	}
+	~Simple()
+	{
+		cout &#x3C;&#x3C; "释放对象" &#x3C;&#x3C; endl;
+	}
+};
+int main()
+{
+
+	Simple ss;
+	Simple s(1, 2);
+	ss.showXY();
+	return 0;
+}
+</code></pre></div>
+<span id="四常对象" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-四常对象">（四）常对象：</h3>
+<h4 id="section-1-概念-2">1. 概念：</h4>
+<p>在声明对象前加const称该对象为常对象。</p>
+<p>形式：<em><strong>类名 const 对象名[(参数表)]</strong></em> / <em><strong>const 类名 对象名[(参数表)]</strong></em> 两种意义相同。</p>
+<h4 id="section-2-特点-2">2. 特点：</h4>
+<ul>
+<li>
+<p>通过常对象调用普通非静态成员函数时，只能选用 const 版本；它的普通非静态数据成员不能通过该对象修改，<code>mutable</code> 成员除外。</p>
+</li>
+<li>
+<p>构造时应把需要读取的数据成员初始化好；<code>const</code> 本身不会替所有成员自动填写初值。</p>
+</li>
+<li>
+<p>类里仍可同时定义 const 和非 const 成员函数。把对象声明为 const，不会把非 const 成员函数自动变成 const 版本。</p>
+</li>
+</ul>
+<span id="3代码实现" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3代码实现">3.代码实现：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+class Simple
+{
+private:
+	int x;
+	int y;
+public:
+	Simple():x(0),y(0)
+	{
+		cout &#x3C;&#x3C; "创建对象" &#x3C;&#x3C; endl;
+
+	};
+	Simple (int a, int b) : x(a), y(b)
+	{
+		cout &#x3C;&#x3C; "创建对象" &#x3C;&#x3C; endl;
+	}
+	void showXY()
+	{
+		cout &#x3C;&#x3C; x &#x3C;&#x3C; "," &#x3C;&#x3C; y &#x3C;&#x3C; endl;
+	}
+	void showXY() const  //正确，不修改任意成员变量，可以加const
+	{
+		cout &#x3C;&#x3C; "调用const版本:" &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; x &#x3C;&#x3C; "," &#x3C;&#x3C; y &#x3C;&#x3C; endl;
+	}
+	void resetXY(int a, int b) 
+	{
+		x = a, y = b;
+		return ;
+	}
+
+	const void Simple_thisuse(int a,int b) //const加入位置错误
+	{
+		cout &#x3C;&#x3C; this->x &#x3C;&#x3C; " " &#x3C;&#x3C; this->y &#x3C;&#x3C; endl;
+		(*this).x += a;
+		(*this).y += b;
+		cout &#x3C;&#x3C; this->x &#x3C;&#x3C; " " &#x3C;&#x3C; this->y &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; this &#x3C;&#x3C; endl;
+		return;
+	}
+	~Simple()
+	{
+		cout &#x3C;&#x3C; "释放对象" &#x3C;&#x3C; endl;
+	}
+};
+int main()
+{
+	Simple ss;
+	Simple s(1, 2);
+	ss.showXY();
+	const Simple s1;
+	Simple const s2(2, 3);//两种都可以
+	s1.resetXY(1, 2);//不可以调用非常成员函数
+	s2.showXY();//调用const版本
+	return 0;
+}
+</code></pre></div>
+<p>本次修订依据 <a href="https://eel.is/c++draft/class.base.init" rel="noopener noreferrer">C++ 成员初始化规则</a>、<a href="https://eel.is/c++draft/expr.prim.this" rel="noopener noreferrer">this 的类型规则</a>、<a href="https://eel.is/c++draft/dcl.type.cv" rel="noopener noreferrer">const 限定规则</a> 和 <a href="https://gcc.gnu.org/projects/cxx-status.html#cxx11" rel="noopener noreferrer">GCC 的 C++11 特性记录</a>。保留原代码及故意标错的语句，本次仅修订说明，未重新编译或运行。</p>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],"$L28","$L29","$L2a"]}],"$L2b"]}]
+1b:["$","$L2c",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+2e:I[2708,["825","$2","953","$c"],"FeedbackForm"]
+f:300
+28:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/python-input-output/","children":[["$","span",null,{"children":"上一篇"}],"python基础——输入和输出详解"]}],["$","$Ld",null,{"href":"/blog/cpp-copy-constructors/","children":[["$","span",null,{"children":"下一篇"}],"c++类——复制构造函数(含深浅拷贝)"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-2",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-3",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+29:["$","$L2e",null,{"contentId":"cpp-const-members"}]
+2a:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+2b:["$","$L25",null,{"headings":"$19:props:headings"}]
+2d:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"

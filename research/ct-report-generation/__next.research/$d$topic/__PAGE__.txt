@@ -1,0 +1,48 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/research/%5Btopic%5D/page-49a4399c6cb20b68.js"
+d:I[3498,["825","$2","650","$c"],"default"]
+16:I[6279,["825","$2","650","$c"],"FilterLink"]
+1f:"ViewportBoundary"
+20:I[887,[],"$1f"]
+21:"MetadataBoundary"
+22:I[887,[],"$21"]
+23:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","article",null,{"className":"shell reading-page research-detail","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/research/","children":["研究",["$","span",null,{"children":4}]]}],["$","$L16",null,{"className":"trail-current","href":"/research/#direction-medical-imaging","children":["医学影像处理",["$","span",null,{"children":4}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"基于细粒度临床事实建模的三维胸部 CT 报告生成"}],"$L17","$L18","$L19"]}],"$L1a","$L1b","$L1c"]}],null,"$L1d"]}],"p":"$@1e","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"topic","t":"d","k":"ct-report-generation","s":[]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"research","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L20",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L22",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$23",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"3D CT 报告生成 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"07xiaohei 的学习笔记、医学影像研究记录与交互式技术实践。"}]]}]}],null]}],null]}],"p":"$@24","v":null,"s":"$f"}},"a":"$@25","u":"$@26","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+27:I[4067,["825","$2","650","$c"],"ArticleToc"]
+28:I[4711,["825","$2","650","$c"],"ArticleBody"]
+29:I[887,[],"OutletBoundary"]
+17:["$","p",null,{"className":"article-deck","children":"围绕三维胸部 CT 到影像所见的生成，梳理临床事实、空间输入、视觉连接器，以及从第一轮到第二轮的研究变化"}]
+18:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"className":"status-tag","children":"第二轮 · 进行中"}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-18","children":"2026-10-18"}]]}]]}]
+19:["$","div",null,{"className":"tag-list","children":[["$","span","3D CT",{"children":"3D CT"}],["$","span","报告生成",{"children":"报告生成"}],["$","span","临床事实",{"children":"临床事实"}]]}]
+1a:["$","nav",null,{"className":"topic-series-navigation","aria-label":"主题系列内容","children":[["$","h2",null,{"children":"主题内容"}],["$","ol",null,{"children":[["$","li","ct-task-and-clinical-facts",{"children":[["$","span",null,{"children":1}],["$","$Ld",null,{"href":"/research/ct-report-generation/task-and-clinical-facts/","children":"CT 报告生成要保留哪些临床事实？"}]]}],["$","li","ct-volume-and-visual-connector",{"children":[["$","span",null,{"children":2}],["$","$Ld",null,{"href":"/research/ct-report-generation/volume-and-visual-connector/","children":"三维 CT 怎样变成语言模型可读的视觉表示？"}]]}],["$","li","ct-rounds-and-evaluation",{"children":[["$","span",null,{"children":3}],["$","$Ld",null,{"href":"/research/ct-report-generation/rounds-and-evaluation/","children":"从第一轮到第二轮：怎样比较 CT 报告生成方案？"}]]}]]}]]}]
+1b:["$","$L27",null,{"headings":[{"id":"section-从任务读到研究过程","text":"从任务读到研究过程","level":2},{"id":"section-当前阶段","text":"当前阶段","level":2}],"mobile":true}]
+1c:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L28",null,{"html":"<p>一份胸部 CT 包含连续的三维影像，报告用文字描述其中的观察。生成报告时，模型需要保留异常是什么、位于哪里、有哪些属性，以及描述是肯定、否定还是不确定。句子写得通顺之后，还要逐项检查这些事实有没有遗漏或改变。</p>\n<p>这项研究从视觉连接器切入。连接器位于影像编码器和语言模型之间，把密集的空间特征压缩成语言模型能够接收的视觉表示。课题关注的是：当可传入的视觉序列长度有限时，怎样保留与完整影像所见有关的信息，并在生成文本中核对它们。</p>\n<h2 id=\"section-从任务读到研究过程\">从任务读到研究过程</h2>\n<p>下面三篇文章依次说明任务、模型输入和实验比较，也可以按问题单独阅读。</p>\n<ol>\n<li><a href=\"/research/ct-report-generation/task-and-clinical-facts/\">CT 报告生成要保留哪些临床事实？</a> 从影像所见与诊断印象讲起，用人工构造的句子解释位置、属性、否定和不确定性，以及为什么仅找到病名还不够。</li>\n<li><a href=\"/research/ct-report-generation/volume-and-visual-connector/\">三维 CT 怎样变成语言模型可读的视觉表示？</a> 连接体素、物理坐标、裁剪与 mask，再解释视觉特征如何压缩为视觉词元，以及怎样区分输入缺失、压缩丢失和语言模型未使用信息。</li>\n<li><a href=\"/research/ct-report-generation/rounds-and-evaluation/\">从第一轮到第二轮：怎样比较 CT 报告生成方案？</a> 对照第一轮实际运行、第二轮汇报方案与当前确认状态，说明受控比较、定向消融和事实评价分别回答什么。</li>\n</ol>\n<h2 id=\"section-当前阶段\">当前阶段</h2>\n<p>截至 2026 年 10 月 18 日，研究以第二轮方法为准，各模块已启用，研究仍在进行中。完整实验结果及效果结论尚未核验。系列文章围绕任务定义、输入与表示、实验比较展开，历史记录会标明材料日期。</p>\n<p>本主题后续沿输入处理、视觉信息保留和事实核对继续积累文章。现有内容先把研究对象与比较方法讲清楚。</p>\n<p><a href=\"/research/\">返回研究列表</a></p>"}],false,false]}],["$","$L27",null,{"headings":"$1b:props:headings"}]]}]
+1d:["$","$L29",null,{"children":["$","$23",null,{"name":"Next.MetadataOutlet","children":"$@2a"}]}]
+f:300
+2a:null
+26:true
+f:C
+25:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+24:"$undefined"
+1e:"$undefined"

@@ -1,0 +1,458 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"cpp-polymorphism-2","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","cpp-polymorphism-2",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+6:C
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+14:"static/chunks/825-1a8f209f3ada760f.js"
+15:"static/chunks/app/layout-b30e31df6c2e8735.js"
+16:I[6767,["825","$14","177","$15"],"DisplayProvider"]
+17:"NavigationFeedback"
+18:I[2842,["825","$14","177","$15"],"$17"]
+19:I[8587,["825","$14","177","$15"],"SiteHeader"]
+1a:I[5803,["825","$14","177","$15"],"SiteFrame"]
+1b:I[164,["825","$14","177","$15"],"ProfileSidebar"]
+1c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+1d:I[3498,["825","$14","953","$1c"],"default"]
+1f:I[6279,["825","$14","953","$1c"],"FilterLink"]
+20:I[4067,["825","$14","953","$1c"],"ArticleToc"]
+21:I[4711,["825","$14","953","$1c"],"ArticleBody"]
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L16",null,{"children":[["$","$L18",null,{}],["$","$L19",null,{"tags":["知识点","python","C++"]}],["$","$L1a",null,{"sidebar":["$","$L1b",null,{}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1d",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1d",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1d",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1d",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+22:T4aa2,<span id="一动态联编" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一动态联编">（一）动态联编：</h3>
+<span id="1-概念" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-概念">1. 概念：</h4>
+<p>动态联编是根据调用时对象的实际类型，选择相应的虚函数实现，也称晚期联编。这里讲的是语言规定的调用行为；编译器如果能够确定目标，也可能把调用优化为直接调用。</p>
+<p>通过指针或引用调用虚函数时，可以体现这种动态选择。显式写出类名的限定调用（如 <code>p->Base::fun()</code>）会抑制虚调用。</p>
+<span id="2-使用" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-使用">2. 使用：</h4>
+<p>可以通过基类指针或引用调用虚函数，调用目标由对象的实际类型决定。派生类可以重写虚函数，也可以直接继承基类已有的实现；没有重写时，会使用继承的版本。这里的基类转换还要满足可访问、无歧义等条件。</p>
+<span id="3-优点" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-优点">3. 优点：</h4>
+<p>调用方可以使用统一的基类接口处理不同派生类对象。虚调用可能增加间接调用等开销，具体影响还取决于实现和编译器优化。</p>
+<span id="二虚函数" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二虚函数">（二）虚函数：</h3>
+<h4 id="section-1-概念-1">1. 概念：</h4>
+<p><strong>虚函数</strong>是在类中使用 <code>virtual</code> 声明的非静态成员函数。派生类对它进行重写后，通过基类接口调用时可以执行派生类版本。</p>
+<p><code>virtual</code> 写在类内的成员声明中；在类外给出函数定义时不再重复写。</p>
+<p>派生类中符合重写条件的函数仍然是虚函数，即使省略 <code>virtual</code>。仅仅函数名相同还不够，参数列表、成员函数的 cv 限定和引用限定等也必须符合重写规则。C++11 起可以使用 <code>override</code> 让编译器检查。</p>
+<p>普通虚函数不要求每一层派生类都重写，继承的实现可以继续使用。</p>
+<ul>
+<li>
+<p>虚函数重写：派生类声明与基类虚函数对应的成员函数。函数名、参数列表及成员函数的限定条件需要匹配；返回类型通常相同，也可以满足协变返回类型的规则。析构函数的重写由析构函数自身的规则确定。</p>
+<p>协变返回类型：重写函数可以返回更具体的类类型指针或引用。例如基类函数返回 <code>Person*</code>，派生类函数返回 <code>Student*</code>，且 <code>Student</code> 公开、无歧义地派生自 <code>Person</code>。这仍然是重写；返回类型还须满足对应的指针/引用类别及 cv 限定要求。</p>
+<p>重写的访问限定符可以不同。</p>
+<p>除合法的协变返回类型外，不能只改变返回类型来重写基类虚函数。</p>
+<p>只有函数名相同、参数列表等不匹配时，派生类声明可能隐藏基类的同名函数，但不会取消基类函数原有的虚特性。</p>
+</li>
+<li>
+<p>隐藏：不局限于虚函数，但需要和虚函数概念结合理解。</p>
+<p>隐藏是指派生类的函数屏蔽了与其同名的基类函数。</p>
+<p>如果派生类的函数与基类的函数同名，但是参数不同。此时，不论是否为虚函数，基类的函数将被隐藏（注意不是重载，重载是在同一个类中发生）。</p>
+<p>如果派生类的函数与基类的函数同名，并且参数也相同，但是基类函数没有virtual 关键字。此时，基类的函数被隐藏（注意不是重写，重写有virtual关键字）。</p>
+</li>
+</ul>
+<p>——在参数及其他限定条件可比较的简单情形下，可以这样区分；下面的 <code>virtual</code> 指基类函数是否为虚函数：</p>
+<ol>
+<li>签名匹配、基类函数为虚函数：重写；</li>
+<li>签名匹配、基类函数非虚：隐藏；</li>
+<li>参数不同、基类函数为虚函数：隐藏，不构成重写；</li>
+<li>参数不同、基类函数非虚：隐藏。</li>
+</ol>
+<span id="2-限制" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-限制">2. 限制：</h4>
+<ul>
+<li>
+<p>虚函数必须是非静态成员函数。友元非成员函数、全局函数不能声明为虚函数；一个类即使暂时没有派生类，也可以声明虚函数。</p>
+</li>
+<li>
+<p>静态成员函数不能是虚函数，因为静态成员函数不受限于某个对象。</p>
+</li>
+<li>
+<p>虚函数可以声明为 <code>inline</code>。是否把某一次调用实际展开，由编译器决定，不能单凭 <code>inline</code>、对象调用或指针调用就断言一定内联或一定不内联。</p>
+</li>
+<li>
+<p>构造函数不能是虚函数：</p>
+<p>C++ 不允许把构造函数声明为虚函数。创建对象时选择构造函数，随后按规则构造基类和成员子对象；构造期间的虚函数调用还有下述限制。</p>
+</li>
+<li>
+<p>析构函数可以是虚函数。需要通过基类指针删除派生类对象时，本文这种普通 <code>delete</code> 用法要求基类有虚析构函数。</p>
+<p>基类析构函数是虚函数时，派生类析构函数也保持虚特性，无须重复写 <code>virtual</code>。通过基类指针删除派生对象，会先执行派生类析构函数，再依次析构其成员和基类。</p>
+<p>构造或析构期间，如果对正在构造或析构的对象调用虚函数，调用的是当前构造函数或析构函数所属类中的最终重写版本，不会分派到更下层的派生类。这个规则不能解释成“虚析构函数仍是静态联编”。</p>
+</li>
+<li>
+<p>不建议把赋值运算符重载作为虚函数。</p>
+</li>
+</ul>
+<span id="3-工作原理" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-工作原理">3. 工作原理：</h4>
+<p>常见实现使用虚函数表（vtable）和虚表指针（vptr）完成虚调用：对象保存相关表指针，表中记录该类型的虚函数入口，调用时据此选择实现。派生类重写函数后，对应入口使用重写版本；未重写时可以继续使用继承的实现。</p>
+<p>这是实现层面的理解方式。具体有几个表指针、放在对象的什么位置、表中还有哪些信息，由 ABI（应用二进制接口）及继承结构决定。例如 <a href="https://itanium-cxx-abi.github.io/cxx-abi/abi.html#vtable" rel="noopener noreferrer">Itanium C++ ABI 的虚表布局</a> 就有具体规则。不能把“总在第一个数据成员之前”“每个对象固定多出 8 字节”推广为 C++ 规则。</p>
+<p>虚表、对象中的相关指针以及间接调用可能带来存储和执行开销。对象大小还包含对齐填充，调用也可能被优化；下面用 <code>sizeof</code> 观察当前环境的结果。</p>
+<span id="4-c11-override-ampamp-final" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-c11-override--final">4. C++11 override &#x26;&#x26; final</h4>
+<p>C++11新增了两个关键字override和final。</p>
+<p>被override修饰的虚函数，编译器会检查这个虚函数是否重写。如果没有重写，编译器会报错。</p>
+<p>用final修饰的虚函数无法重写。用final修饰的类无法被继承。final像这个单词的意思一样，这就是最终的版本，不用再更新了。</p>
+<span id="5-表现" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-5-表现">5. 表现：</h4>
+<ul>
+<li>
+<p>通过基类指针调用基类和派生类中的同名虚函数时:</p>
+<ol>
+<li>若该指针指向一个基类的对象，那么被调用的是基类的虚函数；</li>
+<li>若该指针指向派生类对象，调用该派生类中的最终重写版本；如果它没有重写，就使用继承的版本。</li>
+</ol>
+<p>这种机制就是实际上的“多态”——调用哪个虚函数，取决于指针对象指向哪种类型的对象。</p>
+</li>
+<li>
+<p>通过基类引用调用基类和派生类中的同名虚函数时:</p>
+<ol>
+<li>若该引用引用了一个基类的对象，那么被调用的是基类的虚函数；</li>
+<li>若该引用绑定派生类对象，调用该派生类中的最终重写版本；如果它没有重写，就使用继承的版本。</li>
+</ol>
+<p>调用哪个虚函数，取决于引用绑定的实际对象类型。</p>
+</li>
+</ul>
+<span id="6代码" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-6代码">6.代码：</h4>
+<ul>
+<li>
+<p>一般情况的函数的虚函数重写，发生了动态联编（各种错误也在其中）：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class Person
+{
+	//不允许对友元函数使用virtual
+	//virtual friend void fun();
+public:
+	//如果下面的静态数据成员和成员函数被声明,不允许加virtual,必须去掉
+	//static int i;
+	//virtual static void addi(){}
+	
+	//不能对构造函数加virtual,必须去掉
+	//virtual Person() {}
+
+	//一般虚函数声明
+	virtual void fun()
+	{
+		cout &#x3C;&#x3C; "Person->fun()" &#x3C;&#x3C; endl;
+	}
+	
+	//内联虚函数；是否实际展开由编译器决定
+	inline virtual void fun2()
+	{
+		cout &#x3C;&#x3C; "Person->fun()2" &#x3C;&#x3C; endl;
+	}
+	//不被允许的操作:仅改变返回类型,编译器无法区别。
+	//virtual int fun()
+	//{
+	//	cout &#x3C;&#x3C; "Person->fun()" &#x3C;&#x3C; endl;
+	//}
+};
+//不能对全局函数使用virtual
+//virtual void fun(){}
+class Student:public Person
+{
+public:       
+	virtual void fun()//子类重写父类虚函数
+	{
+		cout &#x3C;&#x3C; "Student->fun()" &#x3C;&#x3C; endl;
+	}
+	//重写内联虚函数；inline 不保证调用一定展开
+	inline virtual void fun2()
+	{
+		cout &#x3C;&#x3C; "Student->fun()2" &#x3C;&#x3C; endl;
+	}
+};
+class Teacher:public Person
+{
+public:      
+	void fun()//子类重写父类虚函数,不加virtual但编译器默认其为虚函数
+	{
+		cout &#x3C;&#x3C; "Teacher->fun()" &#x3C;&#x3C; endl;
+	}
+	//这个带参数的重载不重写基类的 fun()，自身也未声明为虚函数
+	//上面的无参 fun() 仍然保持虚特性
+	void fun(int)
+	{
+		cout &#x3C;&#x3C; "Person2->fun()" &#x3C;&#x3C; endl;
+		return;
+	}
+};
+class GoodStudent :public Student 
+{
+	virtual void fun()//子类重写父类虚函数
+	{
+		cout &#x3C;&#x3C; "GoodStudent->fun()" &#x3C;&#x3C; endl;
+	}
+};
+class GoodTeacher :public Teacher
+{
+	void fun()//子类重写父类虚函数,不加virtual但编译器默认其为虚函数
+	{
+		cout &#x3C;&#x3C; "GoodTeacher->fun()" &#x3C;&#x3C; endl;
+	}
+};
+int main()
+{
+	Student s;
+	GoodStudent gs;
+	Teacher t;
+	GoodTeacher gt;
+	Person* p = &#x26;s;
+	//基类指针指向派生类,因为虚函数的声明,所以调用的是派生类的重写虚函数。
+	p->fun();
+	//对象类型在此处明确，但是否内联仍由编译器决定
+	s.fun2();
+	//按虚调用语义选择 Student::fun2；是否优化不能只看指针写法
+	p->fun2();
+	p = &#x26;t;
+	//同p->fun();
+	p->fun();
+	p = &#x26;gs;
+	//调用GoodStudent的重写虚函数
+	p->fun();
+	p = &#x26;gt;
+	//调用GoodTeacher的重写虚函数
+	p->fun();
+	Student* ps = &#x26;gs;
+	//派生类Student指针指向其派生类GoodStudent,调用GoodStudent的重写虚函数
+	ps->fun();
+	Teacher* pt = &#x26;gt;
+	pt->fun();
+	pt->Teacher::fun();//访问限定符可以不同,强制执行Teacher的fun函数
+
+	cout &#x3C;&#x3C; endl;
+	//基类引用引用派生类,和指针效果相同。
+	//注意引用一经确定对象后就无法修改了
+	Person&#x26; cp1=s;
+	cp1.fun();
+	cp1.fun2();
+	Person&#x26; cp2 = t;
+	cp2.fun();
+	Person&#x26; cp3 = gs;
+	cp3.fun();
+	Person&#x26; cp4 = gt;
+	cp4.fun();
+	return 0;
+}
+//运行结果:
+//Student->fun()
+//Student->fun()2
+//Student->fun()2
+//Teacher->fun()
+//GoodStudent->fun()
+//GoodTeacher->fun()
+//GoodStudent->fun()
+//GoodTeacher->fun()
+//Teacher->fun()
+//
+//Student->fun()
+//Student->fun()2
+//Teacher->fun()
+//GoodStudent->fun()
+//GoodTeacher->fun()
+</code></pre></div>
+</li>
+<li>
+<p>协变函数的重写，发生了动态联编：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class Person
+{
+public:
+	virtual Person* fun()//返回父类指针
+	{
+		cout &#x3C;&#x3C; "Person->fun()" &#x3C;&#x3C; endl;
+		return nullptr;
+	}
+};
+class Student:public Person
+{
+public:
+	//返回子类指针，虽然返回值不同，也构成重写
+	virtual Student* fun()//子类重写父类虚函数
+	{
+		cout &#x3C;&#x3C; "Student->fun()" &#x3C;&#x3C; endl;
+		return nullptr;
+	}
+};
+int main()
+{
+	Person p;
+	Student s;
+	Person* pp = &#x26;p;
+	pp->fun();
+	pp = &#x26;s;
+	pp->fun();//执行Student的成员函数
+	return 0;
+}
+</code></pre></div>
+</li>
+<li>
+<p>虚函数表指针的占用大小和实际作用：</p>
+<p><code>sizeof</code> 的数值依赖编译器、目标架构和 ABI，也包括对齐填充。下面保留原文的 64 位、32 位数值作为历史记录，原编译器与选项未记录；它们不是所有环境的保证值。填充也不等于每个 <code>int</code> 本身都变成了 8 字节。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class Base
+{
+public:
+	int i;
+	virtual void Print() { } // 虚函数
+	virtual void Print2() { } // 虚函数
+};
+
+class Derived : public Base
+{
+public:
+	int n;
+	virtual void Print() { } // 虚函数
+	virtual void Print2() { } // 虚函数
+};
+
+class Base2
+{
+public:
+	int i;
+	void Print() { }
+};
+
+int main()
+{
+	Base2 b;
+	Base bb;
+	Derived d;
+	//原文记录的某个64位环境结果（编译器与选项未记录）
+	cout &#x3C;&#x3C; sizeof(b) &#x3C;&#x3C; endl;   //原记录:4
+	cout &#x3C;&#x3C; sizeof(bb) &#x3C;&#x3C; endl;  //原记录:16，包含对象布局和填充
+	cout &#x3C;&#x3C; sizeof(d) &#x3C;&#x3C; endl;   //原记录:24，包含对象布局和填充
+
+	cout &#x3C;&#x3C; sizeof(Base2) &#x3C;&#x3C; endl;   //原记录:4
+	cout &#x3C;&#x3C; sizeof(Base) &#x3C;&#x3C; endl;    //原记录:16
+	cout &#x3C;&#x3C; sizeof(Derived) &#x3C;&#x3C; endl; //原记录:24
+	//原文记录的某个32位环境结果（编译器与选项未记录）
+	cout &#x3C;&#x3C; sizeof(b) &#x3C;&#x3C; endl;   //原记录:4
+	cout &#x3C;&#x3C; sizeof(bb) &#x3C;&#x3C; endl;  //原记录:8
+	cout &#x3C;&#x3C; sizeof(d) &#x3C;&#x3C; endl;   //原记录:12
+
+	cout &#x3C;&#x3C; sizeof(Base2) &#x3C;&#x3C; endl;   //原记录:4
+	cout &#x3C;&#x3C; sizeof(Base) &#x3C;&#x3C; endl;    //原记录:8
+	cout &#x3C;&#x3C; sizeof(Derived) &#x3C;&#x3C; endl; //原记录:12
+	
+	Base* pb = &#x26;d;
+	pb->Print(); //调用 Derived::Print()；此函数体为空
+	//以下是原文中的错误实验，已禁用：
+	//int* p1 = (int*)&#x26;bb;
+	//int* p2 = (int*)pb;
+	//*p2 = *p1; //不允许据此改写所谓 vptr，行为未定义
+	//pb->Print(); //不能对错误写入后的调用结果作保证
+	return 0;
+}
+</code></pre></div>
+<p>修改前的 <code>pb->Print()</code> 按虚调用规则选择 <code>Derived::Print()</code>，这里的函数体为空，不会输出 <code>Derive</code>。原文通过 <code>int*</code> 读写对象开头、再断言调用改为 <code>Base::Print()</code> 的做法没有标准保证；这种类型访问会产生未定义行为，改成 <code>double*</code> 也不能解决。因此保留错误实验为注释，不把它作为可执行示例。依据见 <a href="https://eel.is/c++draft/basic.lval#11" rel="noopener noreferrer">C++ 工作草案的类型访问规则</a>。</p>
+</li>
+<li>
+<p>虚析构函数的实际效果：</p>
+<p>下面的 <code>A</code> 有虚析构函数，<code>A*</code> 指向 <code>B</code> 对象时，<code>delete a</code> 会先执行 <code>B</code> 的析构函数，再执行 <code>A</code> 的析构函数。</p>
+<p><code>A2</code> 的析构函数非虚，原文的 <code>A2* a2 = new B2; delete a2;</code> 属于未定义行为，不能把结果概括为“只调用基类析构函数”。这段错误操作已注释禁用。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class A
+{
+public:
+	virtual  ~A()
+	{
+		cout &#x3C;&#x3C; "~A()" &#x3C;&#x3C; endl;
+	}
+};
+class B : public A
+{
+public:
+	virtual ~B()
+	{
+		cout &#x3C;&#x3C; "~B()" &#x3C;&#x3C; endl;
+	}
+};
+class A2
+{
+public:
+	 ~A2()
+	{
+		cout &#x3C;&#x3C; "~A2()" &#x3C;&#x3C; endl;
+	}
+};
+class B2 : public A2
+{
+public:
+	~B2()
+	{
+		cout &#x3C;&#x3C; "~B2()" &#x3C;&#x3C; endl;
+	}
+};
+int main()
+{
+	A* a = new B;
+	delete a;
+	//~B()
+	//~A()
+	//错误示例，禁止执行：
+	//A2* a2 = new B2;
+	//delete a2; //未定义行为，不能保证任何析构输出
+	return 0;
+}
+</code></pre></div>
+</li>
+<li>
+<p>override &#x26;&#x26; final：下面两段故意保留编译错误，用来展示检查规则，不能直接当作通过编译的程序。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class A
+{
+public:
+	virtual void fun() {}
+};
+
+class B : public A
+{
+public:
+	//正确,前面有声明的成员虚函数可供其重写,不会报错
+	virtual void fun()  override{}
+	//错误:使用“override”声明的成员函数不能重写基类成员
+	//也就是前面必须有基类成员声明为了虚函数可供其重写
+	virtual void fun2() override{}
+};
+
+</code></pre></div>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class A final //A类无法被继承
+{
+public:
+	virtual void fun() final //fun函数无法被重写
+	{}
+};
+
+class B : public A //错误:不能将final类类型作为基类
+{
+public:
+	virtual void fun() //错误:不能重写final中的虚函数
+	{
+		cout &#x3C;&#x3C; endl;
+	}
+};
+</code></pre></div>
+</li>
+</ul>
+<p>本次修订依据 <a href="https://eel.is/c++draft/class.virtual" rel="noopener noreferrer">C++ 虚函数规则</a>、<a href="https://eel.is/c++draft/class.cdtor#4" rel="noopener noreferrer">构造和析构期间的调用规则</a>、<a href="https://eel.is/c++draft/expr.delete#3" rel="noopener noreferrer">delete 规则</a> 及 <a href="https://learn.microsoft.com/en-us/cpp/cpp/inline-functions-cpp?view=msvc-170" rel="noopener noreferrer">Microsoft 内联函数文档</a>。代码中的原输出与大小记录没有在本次修订中重新运行；未定义行为示例已禁用。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L1e",["$","h1",null,{"tabIndex":-1,"children":"c++类——多态(二)"}],["$","p",null,{"className":"article-deck","children":"通过基类指针调用的例子讨论动态联编和虚函数，并介绍 override 与 final"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-04-08","children":"2023-04-08"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-17","children":"2026-10-17"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"3,644"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",12," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L1f","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$L1f","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$L1f","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]]}],["$","$L20",null,{"headings":[{"id":"section-一动态联编","text":"（一）动态联编：","level":3},{"id":"section-1-概念","text":"1. 概念：","level":4},{"id":"section-2-使用","text":"2. 使用：","level":4},{"id":"section-3-优点","text":"3. 优点：","level":4},{"id":"section-二虚函数","text":"（二）虚函数：","level":3},{"id":"section-1-概念-1","text":"1. 概念：","level":4},{"id":"section-2-限制","text":"2. 限制：","level":4},{"id":"section-3-工作原理","text":"3. 工作原理：","level":4},{"id":"section-4-c11-override--final","text":"4. C++11 override && final","level":4},{"id":"section-5-表现","text":"5. 表现：","level":4},{"id":"section-6代码","text":"6.代码：","level":4}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L21",null,{"html":"$22"}],"$L23","$L24","$L25"]}],"$L26"]}]]}]
+c:null
+12:[["$","title","0",{"children":"c++类——多态(二) | 07xiaohei"}],["$","meta","1",{"name":"description","content":"通过基类指针调用的例子讨论动态联编和虚函数，并介绍 override 与 final。"}]]
+27:I[2708,["825","$14","953","$1c"],"FeedbackForm"]
+24:["$","$L27",null,{"contentId":"cpp-polymorphism-2"}]
+25:["$","div",null,{"className":"related-note","children":[["$","$L1d",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+26:["$","$L20",null,{"headings":"$9:props:children:1:props:headings"}]
+23:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$L1d",null,{"href":"/blog/cpp-polymorphism-1/","children":[["$","span",null,{"children":"上一篇"}],"c++类——多态(一)"]}],["$","$L1d",null,{"href":"/blog/cpp-polymorphism-3/","children":[["$","span",null,{"children":"下一篇"}],"c++类——多态(三)"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-2",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-3",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+1e:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1d",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1d",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$L1d",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L1f",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}]

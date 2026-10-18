@@ -1,0 +1,353 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","953","$c"],"default"]
+16:I[6279,["825","$2","953","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"python基础——字符编码"}],["$","p",null,{"className":"article-deck","children":"梳理常见字符编码，并用 Python 示例展示字符、字符串与字节的转换"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"slug","t":"d","k":"python-character-encoding","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"python基础——字符编码 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"梳理常见字符编码，并用 Python 示例展示字符、字符串与字节的转换。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","953","$c"],"ArticleToc"]
+26:I[4711,["825","$2","953","$c"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-29","children":"2023-03-29"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"3,337"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",11," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","python",{"href":"/blog/#tag=python","children":"python"}],["$","$L16","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-前言","text":"前言：","level":3},{"id":"section-一ascii编码","text":"（一）ASCII编码：","level":3},{"id":"section-1-概念","text":"1. 概念：","level":4},{"id":"section-2-产生原因","text":"2. 产生原因：","level":4},{"id":"section-3-ascii码内容","text":"3. ASCII码内容：","level":4},{"id":"section-4-python中ascii码的转换","text":"4. python中ASCII码的转换：","level":4},{"id":"section-二gb2312编码","text":"（二）GB2312编码：","level":3},{"id":"section-1-概念-1","text":"1. 概念：","level":4},{"id":"section-2-产生原因-1","text":"2. 产生原因：","level":4},{"id":"section-3-gb2312内容","text":"3. GB2312内容：","level":4},{"id":"section-4-python中gb2312码的转换","text":"4. python中GB2312码的转换：","level":4},{"id":"section-三unicode标准编码","text":"（三）Unicode标准编码:","level":3},{"id":"section-1-概念-2","text":"1. 概念：","level":4},{"id":"section-2-产生原因-2","text":"2. 产生原因：","level":4},{"id":"section-3-unicode标准编码内容","text":"3. Unicode标准编码内容：","level":4},{"id":"section-4-字符串前加urb","text":"4. 字符串前加u、r、b：","level":4},{"id":"section-5-python中unicode标准编码的转换","text":"5. python中Unicode标准编码的转换：","level":4},{"id":"section-四utf-8编码","text":"（四）UTF-8编码：","level":3},{"id":"section-1-概念-3","text":"1. 概念：","level":4},{"id":"section-2-产生原因-3","text":"2. 产生原因：","level":4},{"id":"section-3-utf-8编码内容","text":"3. UTF-8编码内容：","level":4},{"id":"section-4-python中utf-8码的转换","text":"4. python中UTF-8码的转换：","level":4},{"id":"section-五python字符串的unicode存储原因和优化","text":"（五）python字符串的Unicode存储原因和优化：","level":3},{"id":"section-1-原因","text":"1. 原因：","level":4},{"id":"section-2-优化","text":"2. 优化：","level":4}],"mobile":true}]
+27:T4e11,<span id="前言" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-前言">前言：</h3>
+<p>python 2.x默认的字符编码是ASCII，默认的文件编码也是ASCII。</p>
+<p>python 3.x默认的字符编码是unicode，默认的文件编码是utf-8。</p>
+<p>不同的编码之间不能互相识别，不能相互转化，会报错或出现乱码，所以一定要进行区别。</p>
+<p>因此，本篇介绍这三种出现的编码以及额外的中文GB2312编码。</p>
+<span id="一ascii编码" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一ascii编码">（一）ASCII编码：</h3>
+<span id="1-概念" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-概念">1. 概念：</h4>
+<p>ASCII编码是美国信息交换标准代码，是基于拉丁字母的一套电脑编码，主要用于显示现代英语和其他西欧语言，是最通用的信息交换标准。</p>
+<span id="2-产生原因" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-产生原因">2. 产生原因：</h4>
+<p>所有的数据在存储和运算时都要使用二进制表示，在字符和字符串中，对字母、数字以及一些常用符号的存储需要确定使用哪些确定的二进制数来表示对应的符号，因此，ASCII码产生了。</p>
+<span id="3-ascii码内容" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-ascii码内容">3. ASCII码内容：</h4>
+<p>ASCII编码使用1个字节表示常用字符，基础ASCII码字符从对应的二进制数范围从0到127（指定的7位二进制数），扩展则从128到255（指定的8位二进制数）。</p>
+<p>基础ASCII码对应内容如下：</p>
+<ul>
+<li>
+<p>0～31及127 (共33个)是控制字符或通信专用字符（其余为可显示字符）。</p>
+<p>如控制符：LF（换行）、CR（回车）、FF（换页）、DEL（删除）、BS（退格)、BEL（响铃）等；</p>
+<p>通信专用字符：SOH（文头）、EOT（文尾）、ACK（确认）等；</p>
+<p>ASCII值为8、9、10 和13 分别转换为退格、制表、换行和回车字符。</p>
+</li>
+<li>
+<p>32                空格</p>
+</li>
+<li>
+<p>33-47          <strong>! " # $ % &#x26; ' ( ) * + , - . /</strong></p>
+</li>
+<li>
+<p>48-57          数字<strong>0-9</strong></p>
+</li>
+<li>
+<p>58-64          <strong>: ; &#x3C; = > ? @</strong></p>
+</li>
+<li>
+<p>91-96          <strong>[ \ ] ^ _ `</strong></p>
+</li>
+<li>
+<p>65-90          大写字母<strong>A-Z</strong></p>
+</li>
+<li>
+<p>97-122        小写字母<strong>a-z</strong></p>
+</li>
+<li>
+<p>123-126      <strong>{ | } ~</strong></p>
+</li>
+</ul>
+<span id="4-python中ascii码的转换" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-python中ascii码的转换">4. python中ASCII码的转换：</h4>
+<p>事实上下面的两个函数可以传入和Unicode相对应的字符，但这些内容之后讨论。</p>
+<ul>
+<li>
+<p>ASCII码转字符函数chr()：</p>
+<p>形式：<em><strong>chr(int)</strong></em></p>
+<p>int为整数，在此处范围为0~255，可以是十进制和十六进制的形式的数字。</p>
+<p>chr函数返回整数对应的字符。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(chr(112))
+# 运行结果：
+# p
+</code></pre></div>
+</li>
+<li>
+<p>字符转ASCII码函数ord()：</p>
+<p>形式：ord(char)</p>
+<p>char为字符，在此处传入字符可以是那些ASCII码表内有对应的整数的字符，字符长度为1。</p>
+<p>返回值为ASCII码表内对应的整数。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(ord("a"))
+# 运行结果：
+# 97
+</code></pre></div>
+</li>
+</ul>
+<span id="二gb2312编码" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二gb2312编码">（二）GB2312编码：</h3>
+<h4 id="section-1-概念-1">1. 概念：</h4>
+<p>为了能够在计算机中存储汉字，中国国家标准总局发布了一系列的汉字字符集国家标准编码，这些编码统称为GB码，GB全称GuoBiao，也就是国标，所以也称为国标码。</p>
+<p>GB2312是上述编码中最早颁布的和最有影响力的一种汉字编码格式，2312来自于1980年发布的《信息交换用汉字编码字符集 基本集》的标准号GB 2312-1980。</p>
+<p>GB2312因其使用的普遍，也被称为国标码（狭义角度），通行于我国内地，几乎所有的中文系统和国际化软件都支持GB2312。</p>
+<p>GB2312兼容ASCII码，不过需要进行一些转换才能完成。</p>
+<h4 id="section-2-产生原因-1">2. 产生原因：</h4>
+<p>为了满足国内在计算机中使用汉字的需要。</p>
+<span id="3-gb2312内容" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-gb2312内容">3. GB2312内容：</h4>
+<p>共收录了6763个常用汉字（一级汉字3755个，二级汉字3008个）和682个特殊符号，特殊符号包括数字和字母，但是这些数字和字母占据的是两个字节，和ASCII码的数字和字母的区别，相当于输入法中的"全角"和"半角"，编译器只能识别"半角"，不能识别"全角"，注意区别。</p>
+<p>GB2312编码对所收录字符进行了“分区”处理，共94个区，每区含有94个位，共8836个码位。这种表示方式也称为区位码。</p>
+<p>01-09区收录除汉字外的682个字符。</p>
+<p>10-15区为空白区，没有使用。</p>
+<p>16-55区收录3755个一级汉字，按拼音排序。</p>
+<p>56-87区收录3008个二级汉字，按部首/笔画排序。</p>
+<p>88-94区为空白区，没有使用。</p>
+<p>GB2312中每个字符占据2bytes，且最高位不为0（和ASCII码兼容），第一个字节为“高字节”，对应94个区，代表区号；第二个字节为“低字节”，对应94个位，代表位号。</p>
+<p>因此，区位码范围是：0101－9494。对区号和位号分别加上0xA0就是GB2312编码。、</p>
+<p>例如最后一个码位是9494，区号和位号分别转换成十六进制是5E5E，0x5E+0xA0＝0xFE，所以该码位的GB2312编码是FEFE。</p>
+<p>从上面可以看出，GB2312编码范围就是A1A1－FEFE，其中汉字的编码范围为B0A1-F7FE，第一字节0xB0-0xF7（对应区号：16－87），第二个字节0xA1-0xFE（对应位号：01－94）。</p>
+<span id="4-python中gb2312码的转换" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-python中gb2312码的转换">4. python中GB2312码的转换：</h4>
+<p>将python字符串编码为GB2312后，类型为bytes，一般以双字节形式保存，如果是可以以一个字节字符保存的按一个字节保存。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print("中国".encode('gb2312'))
+print("a".encode('gb2312'))
+print(type("中国".encode('gb2312')))
+print(len("中国".encode('gb2312')))
+print(len("中国"))
+print(len("a".encode('gb2312')))
+# 运行结果：
+# b'\xd6\xd0\xb9\xfa'
+# b'a'
+# &#x3C;class 'bytes'>
+# 4
+# 2
+# 1
+</code></pre></div>
+<span id="三unicode标准编码" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三unicode标准编码">（三）Unicode标准编码:</h3>
+<h4 id="section-1-概念-2">1. 概念：</h4>
+<p>Unicode是国际标准字符集，是计算机科学领域里的一项业界标准。是为了解决传统的字符编码方案的局限而产生的，它为每种语言中的每个字符设定了统一并且唯一的二进制编码，以满足跨语言、跨平台进行文本转换、处理的要求，Unicode是国际组织制定的可以容纳世界上所有文字和符号的字符编码方案。</p>
+<p>注意：Unicode标准编码对应的是一个符号集，规定了每个符号的二进制值，但是没有规定符号如何存储。</p>
+<h4 id="section-2-产生原因-2">2. 产生原因：</h4>
+<p>为了所有语言都统一到一套编码里，解决ASCII不能表示其他语言的问题。</p>
+<span id="3-unicode标准编码内容" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-unicode标准编码内容">3. Unicode标准编码内容：</h4>
+<p>Unicode字符集的标准编码范围是 <strong>0x0000 - 0x10FFFF</strong>，可以容纳一百多万个字符， 每个字符都有一个独一无二的编码，也即每个字符都有一个二进制数值和它对应，这里的二进制数值也叫码点。</p>
+<p>比如：汉字"中"的码点是 0x4E2D, 大写字母A的码点是0x41。</p>
+<p>但在Unicode标准编码中，A的存储为0x00000041，必须补0对齐其字节数统一为4（最大存储的字节数为4），Unicode标准编码使用32位进行补0编码的方式占据了过大的空间，浪费了存储空间，因此其不能被用于硬盘存储（文件的存储）和数据传输（网络上的传输）中。</p>
+<p>这使得Unicode需要其他的特定编码格式，稍后我们详细介绍其中的一种编码方式：UTF-8编码。</p>
+<p>在python中，如果想要进行硬盘存储和数据传输，需要将字符串转化为bytes类型。</p>
+<span id="4-字符串前加u-r-b" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-字符串前加urb">4. 字符串前加u、r、b：</h4>
+<ul>
+<li>
+<p>字符串前加u表示以Unicode格式进行编码，一般用于中文字符串前面（一般字符串是不用加的，因为python默认用Unicode进行编码）。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(u"123")
+print(u"中")
+# 运行结果：
+# 123
+# 中
+</code></pre></div>
+</li>
+<li>
+<p>字符串前面加r表示后面的字符串是普通字符串，也就是没有转义字符等其他含义。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(r"\n\n\n")
+print(r"123")
+print(r"中")
+# 运行结果：
+# \n\n\n
+# 123
+# 中
+</code></pre></div>
+</li>
+<li>
+<p>字符串前面加b表示字符串是bytes类型，只能处理ASCII码内有的类型（其他类型需要编码解码等操作）。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(b"123")
+print(b"\n\n\n")
+# print(b"中")  出错
+# # 运行结果：
+# b'123'
+# b'\n\n\n'
+</code></pre></div>
+</li>
+</ul>
+<span id="5-python中unicode标准编码的转换" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-5-python中unicode标准编码的转换">5. python中Unicode标准编码的转换：</h4>
+<ul>
+<li>
+<p>Unicode编码转字符函数chr()：</p>
+<p>形式：<em><strong>chr(int)</strong></em></p>
+<p>int为整数，在此处范围为0~ 1114111，可以是十进制和十六进制 (最大0x10FFFF) 的形式的数字。</p>
+<p>chr函数返回整数对应的字符。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(chr(114514))
+# 运行结果：
+# 𛽒 可能无法显示，但是确实是个字符
+</code></pre></div>
+</li>
+<li>
+<p>字符转Unicode标准编码函数ord()：</p>
+<p>形式：ord(char)</p>
+<p>char为字符，在此处传入字符可以是那些Unicode编码表内有对应的整数的字符，字符长度为1。</p>
+<p>返回值为Unicode码表内对应的整数。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(ord("汉"))
+# 运行结果：
+# 27721
+</code></pre></div>
+</li>
+</ul>
+<span id="四utf-8编码" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-四utf-8编码">（四）UTF-8编码：</h3>
+<h4 id="section-1-概念-3">1. 概念：</h4>
+<p>UTF(Unicode Transformation Format)，是指Unicode转换格式。</p>
+<p>UTF-8是Unicode特定编码的一种，是对Unicode字符串的编码具体实现和存储方法，也是在互联网上使用最广的一种 Unicode 的实现方式。</p>
+<p>UTF-8的最大特点就是就是它是一种变长的编码方式，可以使用1~4个字节来表示一个符号，根据不同的符号变化字节长度。</p>
+<h4 id="section-2-产生原因-3">2. 产生原因：</h4>
+<p>解决Unicode标准编码占用空间过大的问题，统一编码方式。</p>
+<span id="3-utf-8编码内容" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-utf-8编码内容">3. UTF-8编码内容：</h4>
+<p>UTF-8的编码规则很简单，只有二条：</p>
+<ul>
+<li>
+<p>对于单字节的符号，字节的第一位设为0，后面7位为这个符号的unicode码。因此对于英语字母，UTF-8编码和ASCII码是相同的——UTF-8编码能够兼容ASCII编码，这也是互联网普遍采用UTF-8的原因之一。</p>
+</li>
+<li>
+<p>对于n字节的符号（n>1），第一个字节的前n位都设为1，第n+1位设为0，后面字节的前两位一律设为10。剩下的没有提及的二进制位，全部为这个符号的unicode码。</p>
+</li>
+</ul>
+<p>下表是Unicode编码码点对应UTF-8需要的字节数量以及编码格式：</p>
+<p><img src="https://s1.ax1x.com/2023/04/07/ppThZfe.jpg" alt="" width="1776" height="468" loading="lazy" decoding="async" referrerpolicy="no-referrer"></p>
+<p>第一列表示Unicode码点的位数；二三列表示码点的取值范围；第四列表示UTF-8需要的字节数；后面几列则是具体的表示，其中的1和0都是固定的前缀，而x表示可编码的二进制位，与前面的码点位数匹配。</p>
+<p>可以看出，前面有多少个连续的1，后面就有多少位可编码的字节数，随后的一个0表示停止计量字节数，是对可编码位置和不可编码位置的分割，每个字节的10则是固定前缀。</p>
+<p>比如下面的“汉”的Unicode和UTF-8编码对应如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(bin(ord("汉")))
+print(bin(int.from_bytes("汉".encode())))
+# 运行结果：
+# 0b110110001001001
+# 0b111001101011000110001001 注意，11100的最后这个0是因为上面是15位，前面有一位空0需要补齐
+</code></pre></div>
+<span id="4-python中utf-8码的转换" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-python中utf-8码的转换">4. python中UTF-8码的转换：</h4>
+<ul>
+<li>
+<p>encode()函数</p>
+<p>描述：以指定的编码格式编码Unicode标准编码，也就是python的默认字符串，默认编码为 'utf-8'。</p>
+<p>语法：<em><strong>str.encode(encoding='utf-8', errors='strict')</strong></em></p>
+<p>str未无编码的python默认字符串，Unicode标准编码格式，否则需要先解码再编码。</p>
+<p>encoding 参数可选，即要使用的编码，默认编码为 'utf-8'，也可以指定gb2312等编码。</p>
+<p>errors 参数可选，设置不同错误的处理方案。默认为 'strict'，意为编码错误引起一个UnicodeEncodeError。 其它可能值有 'ignore', 'replace', 'xmlcharrefreplace'以及通过 codecs.register_error() 注册其它的值。</p>
+<p>返回编码后的字符串，bytes类型。</p>
+</li>
+<li>
+<p>decode()函数：</p>
+<p>描述：以指定的编码格式解码字符串为Unicode标准编码格式，也就是默认字符串，默认为UTF-8编码进行解码。</p>
+<p>语法：<em><strong>str.decode(encoding='utf-8', errors='strict')</strong></em></p>
+<p>str为已编码的字符串，bytes类型，编码格式多种。</p>
+<p>encoding 参数可选，即要解码的对应编码，默认为 'utf-8'，如：utf-8，gb2312等。</p>
+<p>errors参数可选，设置不同错误的处理方案。默认为 'strict'，意为编码错误引起一个UnicodeDecodeError。其它可能得值有 'ignore', 'replace'以及通过 codecs.register_error() 注册其它的值。</p>
+</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>str1 = "世界"
+str2 = b'\xe4\xb8\xad\xe5\x9b\xbd'
+str3 ='\n'
+str4 = r'\n'
+str5 = "\u5408"
+print(str1)
+print(str1.encode("utf-8"))
+print(type(str1.encode("utf-8")))
+print(str2)
+print(str2.decode("utf-8"))
+print(type(str2.decode("utf-8")))
+print(str3.encode("utf-8"))
+print(str4.encode("utf-8"))
+print(str5.encode("utf-8"))
+print(str5.encode("utf-8").decode("utf-8"))
+# 运行结果：
+# 世界
+# b'\xe4\xb8\x96\xe7\x95\x8c'
+# &#x3C;class 'bytes'>
+# b'\xe4\xb8\xad\xe5\x9b\xbd'
+# 中国
+# &#x3C;class 'str'>
+# b'\n'
+# b'\\n'
+# b'\xe5\x90\x88'
+# 合
+</code></pre></div>
+<span id="五python字符串的unicode存储原因和优化" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-五python字符串的unicode存储原因和优化">（五）python字符串的Unicode存储原因和优化：</h3>
+<span id="1-原因" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-原因">1. 原因：</h4>
+<p>为什么python中依旧要使用Unicode存储而不用UTF-8编码：</p>
+<p>UTF-8编码方案的每个字符的占用字节长度是变化的，导致了无法按索引随意访问单个字符，如果对某个字符串str[n]使用UFT-8编码去访问，需要统计前n个字符占用的字节长度，导致了运行时间从 O(1) 变成了 O(n) ，时间开销太大。</p>
+<p>因此Python内部需要采用定长的方式存储字符串来加快各种操作的速度，所以依然使用Unicode存储。</p>
+<span id="2-优化" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-优化">2. 优化：</h4>
+<ul>
+<li>
+<p>三种内部表示Unicode字符串：</p>
+<p>为了减少内存的消耗，三种内部表示Unicode字符串</p>
+<ul>
+<li>
+<p>每个字符 1 个字节（Latin-1）</p>
+<p>如果字符串的所有字符都在ASCII码范围内，那么就可以用占用1个字符的Latin-1编码进行存储。</p>
+</li>
+<li>
+<p>每个字符 2 个字节（UCS-2）</p>
+<p>如果字符串中存在了需要占用两个字节的字符，整个字符串全部采用占用2个字节的UCS-2编码存储。</p>
+<p>大多数的自然语言只需要2字节编码。</p>
+</li>
+<li>
+<p>每个字符 4 个字节（UCS-4）</p>
+<p>如果加入一些极特殊的字符导致有占用4个字节的字符，就会全体采用UCS-4编码，基本和Unicode彼岸准编码一致。</p>
+</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>import sys
+print(sys.getsizeof("a"))
+print(sys.getsizeof("aa"))
+print(sys.getsizeof("我"))
+print(sys.getsizeof("a我"))
+print(sys.getsizeof("我我"))
+#运行结果：
+# 50
+# 51  aa-a=1，a占用一个字节
+# 76 
+# 78  a我-我=2，a占用两个字节
+# 78  a和我的占用相同了
+</code></pre></div>
+</li>
+<li>
+<p>字符串驻留机制：</p>
+<p>将短小的字符串做成池，当程序创建字符串对象前先检查池中是否有能满足的字符串。</p>
+<p>池中驻留的字符串一般为下划线、字母和数字不超过20的字符串。</p>
+<p>驻留检查：</p>
+<ul>
+<li>空字符串 <code>''</code> 及所有；</li>
+<li>变量名；</li>
+<li>参数名；</li>
+<li>字符串常量（代码中定义的所有字符串）；</li>
+<li>字典键；</li>
+<li>属性名称；</li>
+</ul>
+<p>此机制节省了大量的重复字符串内存。</p>
+</li>
+</ul>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],"$L28","$L29","$L2a"]}],"$L2b"]}]
+1b:["$","$L2c",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+2e:I[2708,["825","$2","953","$c"],"FeedbackForm"]
+f:300
+28:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/cpp-inheritance-1/","children":[["$","span",null,{"children":"上一篇"}],"c++类——继承(一)"]}],["$","$Ld",null,{"href":"/blog/python-type-conversion/","children":[["$","span",null,{"children":"下一篇"}],"python基础——数据类型(八)类型转换"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$Ld",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-class-decorators",{"children":[["$","$Ld",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$Ld",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+29:["$","$L2e",null,{"contentId":"python-character-encoding"}]
+2a:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+2b:["$","$L25",null,{"headings":"$19:props:headings"}]
+2d:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"

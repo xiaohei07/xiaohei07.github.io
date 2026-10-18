@@ -1,0 +1,135 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/cpp-casts/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","524","$c"],"default"]
+16:I[6279,["825","$2","524","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"C++ 类型转换：四种转换符"}],["$","p",null,{"className":"article-deck","children":"比较四种命名转换符的用途，结合对象类型、运行时检查和 const 限定说明使用边界"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":"cpp-casts","h":96,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":96,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"C++ 类型转换：四种转换符 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"比较四种命名转换符的用途，结合对象类型、运行时检查和 const 限定说明使用边界。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","524","$c"],"ArticleToc"]
+26:I[4711,["825","$2","524","$c"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-04-14","children":"2023-04-14"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-17","children":"2026-10-17"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"987"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",4," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$L16","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-先看转换的目的","text":"先看转换的目的","level":2},{"id":"section-static_cast把转换意图写清楚","text":"static_cast：把转换意图写清楚","level":2},{"id":"section-dynamic_cast检查实际对象","text":"dynamic_cast：检查实际对象","level":2},{"id":"section-const_cast区分访问限定与对象属性","text":"const_cast：区分访问限定与对象属性","level":2},{"id":"section-reinterpret_cast保留给有依据的底层操作","text":"reinterpret_cast：保留给有依据的底层操作","level":2},{"id":"section-使用前的三个问题","text":"使用前的三个问题","level":2},{"id":"section-2026-年修订说明","text":"2026 年修订说明","level":2}],"mobile":true}]
+27:T1b35,<p>这篇文章整理自 2023 年的 C++ 学习笔记，介绍四种转换符的用途、约束和常见误用。</p>
+<h2 id="section-先看转换的目的">先看转换的目的</h2>
+<p>隐式转换由编译器在符合语言规则时完成；显式转换由程序员写出来。C++ 的命名转换符区分了转换目的，使用时还要核对源对象与目标类型的条件。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>转换符</th><th>常见用途</th><th>需要特别留意</th></tr></thead><tbody><tr><td><code>static_cast&#x3C;T></code></td><td>明确的数值转换、已知类型关系的转换</td><td>下行转换需要调用方确认对象的实际类型</td></tr><tr><td><code>dynamic_cast&#x3C;T></code></td><td>多态类层次中需要运行时检查的转换</td><td>指针与引用在失败时的行为不同</td></tr><tr><td><code>const_cast&#x3C;T></code></td><td>调整指针或引用的 const / volatile 限定</td><td>修改原本定义为 const 的对象会产生未定义行为</td></tr><tr><td><code>reinterpret_cast&#x3C;T></code></td><td>特定的底层指针等转换</td><td>转换结果能否被访问仍受类型、对齐等规则限制</td></tr></tbody></table>
+<p><a href="https://learn.microsoft.com/en-us/cpp/cpp/casting-operators?view=msvc-170" rel="noopener noreferrer">Microsoft C++ 转换符说明</a>提供了各操作符完整规则的文档入口。</p>
+<h2 id="section-static_cast把转换意图写清楚">static_cast：把转换意图写清楚</h2>
+<p>一个常见例子是明确将浮点数转换为整数：</p>
+<div class="code-block"><div class="code-toolbar"><span>cpp</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-cpp"><span class="hljs-type">double</span> value = <span class="hljs-number">3.14</span>;
+<span class="hljs-type">int</span> whole = <span class="hljs-keyword">static_cast</span>&#x3C;<span class="hljs-type">int</span>>(value);  <span class="hljs-comment">// whole 为 3</span>
+</code></pre></div>
+<p>这里的小数部分被舍弃。数值转换的结果受具体类型规则和目标类型可表示范围约束。</p>
+<p>在类层次中，派生类指针通常可以隐式转成可访问、无歧义的基类指针。用 <code>static_cast</code> 做反方向的下行转换时，<strong>调用方需要事先确认 <code>Base*</code> 指向的确实是相应的 <code>Derived</code> 对象。</strong> 这种转换不做运行时类型检查。</p>
+<h2 id="section-dynamic_cast检查实际对象">dynamic_cast：检查实际对象</h2>
+<p>需要运行时检查的下行转换，可以在多态类层次中使用 <code>dynamic_cast</code>。下面以带虚析构函数的基类为例：</p>
+<div class="code-block"><div class="code-toolbar"><span>cpp</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-cpp"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Base</span> {
+    <span class="hljs-keyword">virtual</span> ~<span class="hljs-built_in">Base</span>() = <span class="hljs-keyword">default</span>;
+};
+
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">Derived</span> : Base {
+    <span class="hljs-type">int</span> value = <span class="hljs-number">42</span>;
+};
+
+Derived object;
+Base* base = &#x26;object;
+
+<span class="hljs-keyword">if</span> (<span class="hljs-keyword">auto</span>* derived = <span class="hljs-keyword">dynamic_cast</span>&#x3C;Derived*>(base)) {
+    <span class="hljs-comment">// 检查通过后，才能按 Derived 访问对应成员。</span>
+    <span class="hljs-type">int</span> result = derived->value;
+    (<span class="hljs-type">void</span>)result;
+}
+</code></pre></div>
+<p>对指针做运行时检查时，失败结果是空指针；对引用做对应检查时，失败会抛出 <code>std::bad_cast</code>。具体可转换关系还涉及继承的访问性与歧义等条件。<a href="https://learn.microsoft.com/en-us/cpp/cpp/dynamic-cast-operator?view=msvc-170" rel="noopener noreferrer">dynamic_cast 官方说明</a></p>
+<h2 id="section-const_cast区分访问限定与对象属性">const_cast：区分访问限定与对象属性</h2>
+<p><code>const_cast</code> 调整访问路径上的类型限定。能否修改还取决于对象最初是否被定义为 const。</p>
+<div class="code-block"><div class="code-toolbar"><span>cpp</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-cpp"><span class="hljs-type">int</span> mutable_value = <span class="hljs-number">10</span>;
+<span class="hljs-type">const</span> <span class="hljs-type">int</span>* view = &#x26;mutable_value;
+<span class="hljs-type">int</span>* writable = <span class="hljs-keyword">const_cast</span>&#x3C;<span class="hljs-type">int</span>*>(view);
+*writable = <span class="hljs-number">20</span>;  <span class="hljs-comment">// 原对象并不是 const</span>
+
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> fixed_value = <span class="hljs-number">10</span>;
+<span class="hljs-type">const</span> <span class="hljs-type">int</span>* fixed_view = &#x26;fixed_value;
+<span class="hljs-comment">// *const_cast&#x3C;int*>(fixed_view) = 20; // 不要这样做：未定义行为</span>
+</code></pre></div>
+<p>上例中，<code>mutable_value</code> 原本可修改，通过去掉访问路径上的 const 后写入是合法的；<code>fixed_value</code> 原本定义为 const，对它写入会产生未定义行为。<a href="https://learn.microsoft.com/en-us/cpp/cpp/const-cast-operator?view=msvc-170" rel="noopener noreferrer">const_cast 官方说明</a></p>
+<h2 id="section-reinterpret_cast保留给有依据的底层操作">reinterpret_cast：保留给有依据的底层操作</h2>
+<p><code>reinterpret_cast</code> 用于语言规则允许的特定底层转换。转换后的访问还需要满足对象类型、对齐、生命周期等要求；跨平台代码还应核对内存布局、指针宽度和函数调用约定。</p>
+<p>阅读底层代码时，分别核对“转换本身允许吗”和“转换后的使用允许吗”。例如，通过不兼容的函数指针类型调用函数会产生未定义行为，即使一次实验碰巧输出了预期结果。</p>
+<h2 id="section-使用前的三个问题">使用前的三个问题</h2>
+<ol>
+<li>能否通过更明确的参数类型或接口设计避免转换？</li>
+<li>如果需要转换，源对象的真实类型、生命周期与限定是否明确？</li>
+<li>转换失败、精度变化或类型不匹配时，调用方如何处理？</li>
+</ol>
+<h2 id="section-2026-年修订说明">2026 年修订说明</h2>
+<p>本次修订补充了指针与引用转换失败时的区别，明确 const 限定与对象可修改性的关系，并替换了原笔记中依赖未定义行为的示例。</p>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],"$L28","$L29","$L2a"]}],"$L2b"]}]
+1b:["$","$L2c",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+2e:I[2708,["825","$2","524","$c"],"FeedbackForm"]
+f:300
+28:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/python-loops/","children":[["$","span",null,{"children":"上一篇"}],"python基础——循环"]}],["$","$Ld",null,{"href":"/blog/cpp-templates-1/","children":[["$","span",null,{"children":"下一篇"}],"c++类——模版(一)"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-2",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-3",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+29:["$","$L2e",null,{"contentId":"cpp-casts"}]
+2a:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+2b:["$","$L25",null,{"headings":"$19:props:headings"}]
+2d:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"

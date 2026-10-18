@@ -1,0 +1,7 @@
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+4:[["children",{"s":"__PAGE__","h":160}]]
+3:[["children",{"s":{"n":"slug","t":"d","k":"volume-and-visual-connector","s":[]},"h":65632,"c":"$Q4"}]]
+2:[["children",{"s":{"n":"topic","t":"d","k":"ct-report-generation","s":[]},"h":196704,"c":"$Q3"}]]
+1:[["children",{"s":"research","h":131168,"c":"$Q2"}]]
+0:{"b":"jPv1KV9ToaFZ1LBtrTwmv","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}

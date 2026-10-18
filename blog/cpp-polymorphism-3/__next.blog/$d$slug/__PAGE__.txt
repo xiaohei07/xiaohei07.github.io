@@ -1,0 +1,376 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","953","$c"],"default"]
+16:I[6279,["825","$2","953","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"c++类——多态(三)"}],["$","p",null,{"className":"article-deck","children":"介绍纯虚函数、抽象类与接口继承，再用异质链表展示不同派生类对象的组织"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"slug","t":"d","k":"cpp-polymorphism-3","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"c++类——多态(三) | 07xiaohei"}],["$","meta","1",{"name":"description","content":"介绍纯虚函数、抽象类与接口继承，再用异质链表展示不同派生类对象的组织。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","953","$c"],"ArticleToc"]
+26:I[4711,["825","$2","953","$c"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-04-08","children":"2023-04-08"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-17","children":"2026-10-17"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,879"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",7," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$L16","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$L16","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-纯虚函数和抽象类","text":"纯虚函数和抽象类：","level":3},{"id":"section-一概念","text":"（一）概念：","level":4},{"id":"section-二抽象类的限制","text":"（二）抽象类的限制：","level":4},{"id":"section-三接口继承和实现继承","text":"（三）接口继承和实现继承：","level":4},{"id":"section-四代码","text":"（四）代码：","level":4},{"id":"section-异质链表","text":"异质链表：","level":3},{"id":"section-一概念-1","text":"（一）概念：","level":4},{"id":"section-二限制","text":"（二）限制：","level":4},{"id":"section-三代码","text":"（三）代码：","level":4}],"mobile":true}]
+27:T2cee,<span id="纯虚函数和抽象类" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-纯虚函数和抽象类">纯虚函数和抽象类：</h3>
+<span id="一概念" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-一概念">（一）概念：</h4>
+<ul>
+<li>
+<p>纯虚函数：</p>
+<p>纯虚函数是在类内的虚函数声明末尾加上 <code>= 0</code> 的函数，用于声明需要由具体类完成的接口。派生类可以继续保持抽象；只有最终重写版本不再是纯虚函数时，才满足这一项实例化条件。</p>
+<p>纯虚函数也可以有定义，但定义应单独放在类外，不能在带 <code>= 0</code> 的同一个声明中同时写函数体。类外定义不会取消它的纯虚属性；派生类可用限定名调用这份公共实现。</p>
+<p>如果析构函数声明为纯虚函数，创建该类或派生类对象时仍需提供析构函数定义，供析构过程使用。</p>
+<p>纯虚函数格式：<code>virtual 返回类型 函数名(参数表) = 0;</code></p>
+</li>
+<li>
+<p>抽象类：</p>
+<p>只要还有某个纯虚函数的最终重写版本仍为纯虚函数，这个类就是抽象类。抽象类可以用来表达接口，也可以同时包含数据成员和已实现的操作。</p>
+<p>抽象类把相关操作组织在一个继承层次中，为派生类提供公共接口。派生类可以实现这些操作，也可以把尚未实现的接口继续交给下一层派生类。</p>
+</li>
+</ul>
+<span id="二抽象类的限制" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-二抽象类的限制">（二）抽象类的限制：</h4>
+<ul>
+<li>抽象类不能创建独立的完整对象，但可以作为具体派生类对象中的基类子对象。</li>
+<li>派生类可以继承上一层已有的重写实现；只要还存在最终重写版本为纯虚函数的操作，它就仍是抽象类。</li>
+<li>可以声明抽象类类型的指针和引用，用来访问具体派生类对象中的基类部分。</li>
+<li>不能定义或调用以抽象类作为按值参数或按值返回类型的函数；使用指针或引用则可以。</li>
+<li>抽象类类型可以用于 <code>sizeof</code>，但这不会创建抽象类对象。</li>
+</ul>
+<span id="三接口继承和实现继承" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-三接口继承和实现继承">（三）接口继承和实现继承：</h4>
+<p>接口继承让派生类遵守基类约定的操作；实现继承让派生类复用已有函数体。两者可以同时存在。</p>
+<p>普通虚函数既提供可重写的接口，也可以提供默认实现。派生类没有重写时，会继续使用继承的实现。纯虚函数则让尚未完成接口的类保持抽象，即使它在类外有定义也是如此。</p>
+<p>需要通过基类接口执行不同派生类行为时，可以把对应操作设计为虚函数；普通的实现复用不必一律使用虚函数。</p>
+<span id="四代码" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-四代码">（四）代码：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+//抽象类,不能创建对象,可以创建指针和引用
+class AbstractClass {
+public:
+	AbstractClass() {}
+	virtual ~AbstractClass() {}
+	
+	//纯虚函数
+	virtual void toString() = 0;
+	//纯虚函数的声明；公共实现单独放在类外
+	virtual void toString2() = 0;
+};
+
+void AbstractClass::toString2() {
+	cout &#x3C;&#x3C; "toString2" &#x3C;&#x3C; endl;
+}
+
+//派生类继承抽象类
+class SubClass : public AbstractClass {
+public:
+	SubClass() : AbstractClass() {}
+public:
+	~SubClass() {}
+public:
+	//完成纯虚函数实现,可以创建对象
+	void toString() {
+		cout &#x3C;&#x3C; "Sub::toString()" &#x3C;&#x3C; endl;
+	}
+	void toString2() {
+		cout &#x3C;&#x3C; "Sub::toString2()" &#x3C;&#x3C; endl;
+	}
+};
+
+//同样继承,但是未全部实现,仍为抽象类
+class SubClass2 :public AbstractClass 
+{
+public:
+	SubClass2() : AbstractClass() {}
+public:
+	~SubClass2() {}
+public:
+	//完成部分纯虚函数实现,不能创建对象
+	void toString() {
+		cout &#x3C;&#x3C; "SubClass2::toString()" &#x3C;&#x3C; endl;
+	}
+};
+class SubClass3 :public SubClass2
+{
+public:
+	SubClass3() : SubClass2() {}
+public:
+	~SubClass3() {}
+public:
+	//toString的纯虚函数实现在SubClass2中实现了,此处可以不实现,也可以再次实现
+	//完成剩余部分的纯虚函数实现,可以创建对象
+	void toString2() {
+		cout &#x3C;&#x3C; "SubClass3::toString2()" &#x3C;&#x3C; endl;
+	}
+};
+class SubClass4 :public SubClass2
+{
+public:
+	SubClass4() : SubClass2() {}
+public:
+	~SubClass4() {}
+public:
+	//toString的纯虚函数实现在SubClass2中实现了,此处重写实现
+	//完成全部的纯虚函数实现,可以创建对象
+	void toString() {
+		cout &#x3C;&#x3C; "SubClass4::toString()" &#x3C;&#x3C; endl;
+	}
+	void toString2() {
+		cout &#x3C;&#x3C; "SubClass4::toString2()" &#x3C;&#x3C; endl;
+	}
+};
+//错误函数:不能将抽象类作为函数参数,也不能作为函数返回值。
+//AbstractClass print(AbstractClass a) { return; }
+int main(int argc, char** argv) {
+	//AbstractClass a;error:不允许使用抽象类类型的对象
+	cout &#x3C;&#x3C; sizeof(AbstractClass) &#x3C;&#x3C; endl; //大小依赖编译器、架构和对象布局
+	cout &#x3C;&#x3C; sizeof(SubClass) &#x3C;&#x3C; endl;      //不能保证恒为8或两者总相等
+	SubClass s;
+	//SubClass2 s2; error:不允许使用抽象类类型的对象
+	SubClass3 s3;
+	SubClass4 s4;
+	AbstractClass&#x26; c = s;
+	AbstractClass* pc = &#x26;s;
+	c.toString();
+	pc->toString2();
+	pc = &#x26;s3;
+	pc->toString();
+	pc->toString2();
+	pc = &#x26;s4;
+	pc->toString();
+	pc->toString2();
+	return 0;
+}
+//下面保留原文的函数调用输出记录，未在本次修订中重新运行。
+//sizeof 的两行输出随环境变化，未列入这份记录。
+//Sub::toString()
+//Sub::toString2()
+//SubClass2::toString()
+//SubClass3::toString2()
+//SubClass4::toString()
+//SubClass4::toString2()
+</code></pre></div>
+<span id="异质链表" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-异质链表">异质链表：</h3>
+<h4 id="section-一概念-1">（一）概念：</h4>
+<p>用基类类型指针（抽象类类型指针也可以），可以生成一个连接不同派生类对象的动态链表。</p>
+<p>每个结点指针可以指向类层次中不同的派生类对象，这种结点类型不相同的链表被称为异质链表。</p>
+<span id="二限制" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-二限制">（二）限制：</h4>
+<ul>
+<li>这里讨论的是使用基类指针连接对象的实现，不同节点类型需要有一个可访问、无歧义的共同基类；各派生类之间不必相互继承。</li>
+<li>可以有多层继承关系，只要节点能通过共同的基类接口访问。</li>
+<li>节点指针使用共同基类类型；<code>new</code> 后必须是可实例化的具体类型，抽象基类本身不能用于创建对象。</li>
+<li>输出方法可以是各个类的自己成员函数或友元函数，或者是另写一个输出方法。</li>
+</ul>
+<span id="三代码" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-三代码">（三）代码：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+class Person {
+protected:
+	string name;
+	int age;
+public:
+	static Person* head;
+	static Person* tail;
+	Person* next;
+public:
+	Person(string n = "", int a = 0) :name(n), age(a), next(nullptr) { cout &#x3C;&#x3C; "Person()" &#x3C;&#x3C; endl; }
+	virtual void insert() {   //将新结点加入链表
+	    //head、tail 是静态的，就相当于全局变量；
+		if (tail == NULL)
+			head = tail = this;
+		else {
+			tail->next = this;
+			tail = this;
+			tail->next = NULL;
+		}
+	}
+	virtual void display() {
+		cout &#x3C;&#x3C; " name = " &#x3C;&#x3C; name &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; " age = " &#x3C;&#x3C; age &#x3C;&#x3C; endl;
+	}
+	virtual ~Person() {
+		cout &#x3C;&#x3C; "~person()" &#x3C;&#x3C; endl;
+	}
+
+};
+Person* Person::head = NULL;
+Person* Person::tail = NULL;
+
+//Student中增加了一个score
+class Student : public Person {
+	float score;
+public:
+	Student(string n, int a, float f) :Person(n, a),score(f) {
+		cout &#x3C;&#x3C; "Student()" &#x3C;&#x3C; endl;
+	}
+	void display() {
+		cout &#x3C;&#x3C; "display student:" &#x3C;&#x3C; endl;
+		Person::display();
+		cout &#x3C;&#x3C; " score =" &#x3C;&#x3C; score &#x3C;&#x3C; endl;
+	}
+	~Student()
+	{
+		cout &#x3C;&#x3C; "~Student()" &#x3C;&#x3C; endl;
+	}
+};
+
+//Teacher中增加了salary
+class Teacher : public Person {
+private:
+	double salary;
+public:
+	Teacher(string n, int a, double salary) :Person(n, a) {
+		this->salary = salary;
+	}
+	void display() {
+		cout &#x3C;&#x3C; endl &#x3C;&#x3C; "display teacher:" &#x3C;&#x3C; endl;
+		Person::display();
+		cout &#x3C;&#x3C; " Salary =" &#x3C;&#x3C; salary &#x3C;&#x3C; endl;
+	}
+	~Teacher() {
+		cout &#x3C;&#x3C; "~Teacher()" &#x3C;&#x3C; endl;
+	}
+};
+
+Student* CreateStudent() {
+	string name;
+	int  age;
+	float score;
+	cout &#x3C;&#x3C; "Student name:" &#x3C;&#x3C; endl;
+	cin >> name;
+	cout &#x3C;&#x3C; "age: " &#x3C;&#x3C; endl;
+	cin >> age;
+	cout &#x3C;&#x3C; "score: " &#x3C;&#x3C; endl;
+	cin >> score;
+	Student* p = new Student(name, age, score);
+	return p;
+}
+
+int main()
+{
+	Teacher* t1 = new Teacher("最萌斌斌姐", 25, 100);
+	Student* s1 = new Student("wlh", 21, 99);
+	Student* s2 = new Student("zk", 21, 60);
+	Teacher* t2 = new Teacher("wdg", 45, 20);
+	Student* ps = CreateStudent();
+	cout &#x3C;&#x3C; endl &#x3C;&#x3C; "Person list" &#x3C;&#x3C; endl;
+	t1->insert();
+	s1->insert();
+	s2->insert();
+	t2->insert();
+	ps->insert();
+	cout &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "dispay Person list:" &#x3C;&#x3C; endl;
+	Person* p;
+	p = Person::head;
+	while (p != NULL) {
+		p->display();
+		cout &#x3C;&#x3C; endl;
+		p = p->next;
+	}
+	cout &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "delete whole list" &#x3C;&#x3C; endl;
+	p = Person::head;
+	while (p != NULL)
+	{
+		Person::head = p->next;
+		delete p;
+		p = Person::head;
+	}
+	Person::tail = NULL;
+	return 0;
+}
+/*运行结果
+Person()
+Person()
+Student()
+Person()
+Student()
+Person()
+Student name :
+zzh
+age :
+21
+score :
+	100
+	Person()
+	Student()
+
+	Person list
+
+	dispay Person list :
+
+display teacher :
+name = 最萌斌斌姐
+age = 25
+Salary = 100
+
+display student :
+name = wlh
+age = 21
+score = 99
+
+display student :
+name = zk
+age = 21
+score = 60
+
+
+display teacher :
+name = wdg
+age = 45
+Salary = 20
+
+display student :
+name = zzh
+age = 21
+score = 100
+
+
+delete whole list
+~Teacher()
+~person()
+~Student()
+~person()
+~Student()
+~person()
+~Teacher()
+~person()
+~Student()
+~person()*/
+</code></pre></div>
+<p>本次修订依据 <a href="https://eel.is/c++draft/class.abstract" rel="noopener noreferrer">C++ 抽象类规则</a>、<a href="https://eel.is/c++draft/class.virtual" rel="noopener noreferrer">虚函数规则</a> 和 <a href="https://eel.is/c++draft/class.dtor#11" rel="noopener noreferrer">虚析构函数定义要求</a>。纯虚函数的类外定义写法已按文档修正；异质链表示例保留原运行记录，并补上 <code>next</code> 的空指针初始化，本次未重新编译或运行。</p>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],"$L28","$L29","$L2a"]}],"$L2b"]}]
+1b:["$","$L2c",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+2e:I[2708,["825","$2","953","$c"],"FeedbackForm"]
+f:300
+28:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/cpp-polymorphism-2/","children":[["$","span",null,{"children":"上一篇"}],"c++类——多态(二)"]}],["$","$Ld",null,{"href":"/blog/cpp-inheritance-3/","children":[["$","span",null,{"children":"下一篇"}],"c++类——继承(三)"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-2",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-3",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+29:["$","$L2e",null,{"contentId":"cpp-polymorphism-3"}]
+2a:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+2b:["$","$L25",null,{"headings":"$19:props:headings"}]
+2d:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"

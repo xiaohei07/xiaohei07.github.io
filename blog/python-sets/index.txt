@@ -1,0 +1,434 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"python-sets","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","python-sets",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+14:"static/chunks/825-1a8f209f3ada760f.js"
+15:"static/chunks/app/layout-b30e31df6c2e8735.js"
+16:I[6767,["825","$14","177","$15"],"DisplayProvider"]
+17:"NavigationFeedback"
+18:I[2842,["825","$14","177","$15"],"$17"]
+19:I[8587,["825","$14","177","$15"],"SiteHeader"]
+1a:I[5803,["825","$14","177","$15"],"SiteFrame"]
+1b:I[164,["825","$14","177","$15"],"ProfileSidebar"]
+1c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+1d:I[3498,["825","$14","953","$1c"],"default"]
+6:C
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L16",null,{"children":[["$","$L18",null,{}],["$","$L19",null,{"tags":["知识点","python","C++"]}],["$","$L1a",null,{"sidebar":["$","$L1b",null,{}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1d",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1d",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1d",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1d",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+1f:I[6279,["825","$14","953","$1c"],"FilterLink"]
+20:I[4067,["825","$14","953","$1c"],"ArticleToc"]
+21:I[4711,["825","$14","953","$1c"],"ArticleBody"]
+22:T42a4,<span id="一概述" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一概述">（一）概述：</h3>
+<p>集合set是一个无序的唯一确定元素序列。</p>
+<p>无序代表着其每次输出时元素的排列顺序可能都不相同。</p>
+<p>唯一确定意味着元素是不可重复的，且每个元素互不相同。</p>
+<p>元素的个数无限制。</p>
+<p>set是可变数据类型，其内容是可以改变的，因此set没有哈希值，不能被用作字典的键或是其他集合的元素。</p>
+<p>同一集合中，只能存储不可变的数据类型，不能再存储列表、set集合、字典等可变数据类型元素，因此set集合没有多维形式。（代码见(二)内代码）</p>
+<span id="二创建与形式" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二创建与形式">（二）创建与形式：</h3>
+<p>python用{}大括号表示set集合，并用逗号分隔元素。</p>
+<p>形式为： <em><strong>setname = { element1 , element2 , ... , elementn }</strong></em></p>
+<p>注意：set没有直接的空集合创建形式。因为直接用{}创建表示的是空字典，而不是空列表，此时应使用<em><strong>set()</strong></em>表示空集合。</p>
+<p>set创建时若有重复元素，只保留其中一个。（备注：列表去除重复元素最迅速的方法就是转为集合，其运行时间远小于其他去重方法）</p>
+<p>set集合内的bool值True不会被创建，只有False才会被创建（不知道为什么）。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a = {1 , "a" , 3.14 , True }
+b = {}
+bb = set()
+c = {1 , 1 , "a" , "a" , 3.14 , 3.14 , False , True}
+# d = {[1,2,3],1,2,3} 此句会运行失败，因为不允许在set集合内创建列表。
+print(a)
+print(type(a))
+print(type(b))
+print(type(bb))
+print(c)
+# 运行结果：
+# {'a', 1, 3.14}
+# &#x3C;class 'set'>
+# &#x3C;class 'dict'>
+# &#x3C;class 'set'>
+# {'a', 1, 3.14, False}
+</code></pre></div>
+<span id="三集合的特性" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三集合的特性">（三）集合的特性：</h3>
+<span id="1-访问元素" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-访问元素">1. 访问元素：</h4>
+<p>set集合因其无序，没有索引和下标，一般情况下访问元素只能通过遍历和枚举逐一读取（枚举中会有索引值，但不意味着set有索引）。</p>
+<p>遍历一般会使用in关键字。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a = {1,2,3,4,True,"a","b","c","d"}
+for i,v in enumerate(a):
+	print(i," ",v,end="\n")
+for i in a:
+    print(i,end=" ")
+# 运行结果：
+# 0   1
+# 1   2
+# 2   3
+# 3   4
+# 4   d
+# 5   a
+# 6   b
+# 7   c
+# 1 2 3 4 d a b c 
+</code></pre></div>
+<span id="2-删除集合" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-删除集合">2. 删除集合</h4>
+<p>python自带垃圾回收机制，已创建的集合如不再使用，将会被编译器自动回收，不会产生内存垃圾。</p>
+<p>如果需要可以手动删除，使用del 关键字手动删除集合。</p>
+<p>形式为： <em><strong>del setname</strong></em></p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a={1,2,3,4,5}
+del a
+print(a) #此句无法输出，因为a已经被删除了，a变量处于未定义状态
+</code></pre></div>
+<span id="3-集合的关系" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-集合的关系">3. 集合的关系：</h4>
+<ul>
+<li>
+<p>判断子集关系：</p>
+<ul>
+<li>
+<p>使用关系运算符&#x3C; 、&#x3C;=、>、>=(用rop指代)：</p>
+<p>形式：<em><strong>setname1 rop setname2</strong></em></p>
+<p>返回True或者False</p>
+<p>当rop为&#x3C;=，表示子集判断，即当setname1中元素均在setname2中出现时，表示集合1为集合2子集，返回True；否则返回False。</p>
+<p>当rop为&#x3C;，表示真子集判断，即当setname1中元素均在setname2中出现且setname2有setname1中没有的元素时，表示集合1为集合2真子集，返回True，否则均返回False。</p>
+<p>>=和>的逻辑和前两者相同，但是setname1和setname2的地位互换，表示setname1对setname2的包含和真包含关系。</p>
+</li>
+<li>
+<p>使用方法：</p>
+<ol>
+<li>
+<p>issubset方法：</p>
+<p>形式：<em><strong>setname1.issubset(setname2)</strong></em></p>
+<p>与<em><strong>setname1&#x3C;=setname2</strong></em>等价。</p>
+</li>
+<li>
+<p>issuperset方法：</p>
+<p>形式：<em><strong>setname1.issuperset(setname2)</strong></em></p>
+<p>与<em><strong>setname>=setname2</strong></em>等价。</p>
+</li>
+</ol>
+</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a = {1,2,3,4,5,6}
+b = {1,2,3,4}
+c = {1,2,3,4,5,6}
+print(b&#x3C;a,b>a,b&#x3C;=a,b>=a,sep="\t")
+print(c&#x3C;a,c>a,c&#x3C;=a,c>=a,sep="\t")
+print(b.issubset(a),c.issubset(a),sep="\t")
+print(b.issuperset(a),c.issuperset(a),sep="\t")
+# True	 False	 True	False
+# False	 False	 True	True
+# True	 True
+# False	 True
+</code></pre></div>
+</li>
+<li>
+<p>集合运算方法：</p>
+<ul>
+<li>
+<p>交集运算：</p>
+<p>形式：<em><strong>setname1&#x26;setname2</strong></em> / <em><strong>setname1.intersection(setname2)</strong></em></p>
+<p>两个集合可以交换位置，生成结果相同。</p>
+<p>生成一个新集合获得两个集合的所有公共元素。</p>
+<p>可以进行多个集合的连续交运算。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a={1,2,3,4,5}
+b={3,4,5,6,7}
+c={1,2,3,5,6,7}
+print(a&#x26;b)
+print(a.intersection(b))
+print(b.intersection(a))
+print(a&#x26;b&#x26;c)
+print(c.intersection(a,b))
+# 运行结果：
+# {3, 4, 5}
+# {3, 4, 5}
+# {3, 4, 5}
+# {3, 5}
+# {3, 5}
+</code></pre></div>
+</li>
+<li>
+<p>并集运算：</p>
+<p>形式：<em><strong>setname1 | setname2</strong></em> / <em><strong>setname1.union(setname2)</strong></em></p>
+<p>两个集合可以交换位置，生成结果相同。</p>
+<p>生成一个新集合获得两个集合的所有元素，且不重复。</p>
+<p>可以进行多个集合的连续并运算。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a={1,2,3,4,5}
+b={3,4,5,6,7}
+c={1,2,3,5,6,7,8,9}
+print(a|b)
+print(a.union(b))
+print(b.union(a))
+print(a|b|c)
+print(c.union(a,b))
+# 运行结果：
+# {1, 2, 3, 4, 5, 6, 7}
+# {1, 2, 3, 4, 5, 6, 7}
+# {1, 2, 3, 4, 5, 6, 7}
+# {1, 2, 3, 4, 5, 6, 7, 8, 9}
+# {1, 2, 3, 4, 5, 6, 7, 8, 9}
+</code></pre></div>
+</li>
+<li>
+<p>差集运算：</p>
+<p>形式：<em><strong>setname1 - setname2</strong></em> / <em><strong>setname1.difference(setname2)</strong></em></p>
+<p>两个集合可以交换位置，但是生成结果会不同。</p>
+<p>生成一个集合获得setname1中所有不在setname2中出现的元素，即新集合和setname2的交集一定为空集。</p>
+<p>可以进行多个集合的差集运算，得到的是该集合去除其他所有集合含有元素之后的剩余元素。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a={1,2,3,4,5}
+b={3,4,5,6,7}
+c={1,2,3,5,6,7,8,9}
+print(a-b)
+print(b-a)
+print(a.difference(b))
+print(b.difference(a))
+print(c-a-b)
+print(c.difference(a,b))
+# 运行结果：
+# {1, 2}
+# {6, 7}
+# {1, 2}
+# {6, 7}
+# {8, 9}
+# {8, 9}
+</code></pre></div>
+</li>
+<li>
+<p>对称差集运算：</p>
+<p>形式：<em><strong>setname1 ^ setname2</strong></em> / <em><strong>setname1.symmetric_difference(setname2)</strong></em></p>
+<p>两个集合可以交换位置，生成结果相同。</p>
+<p>生成一个集合获得setname1和setname2中不同时出现的元素，即新集合和两个集合的交集的交集一定为空集。</p>
+<p>只能进行多个集合的连续对称差集运算，不能做同时的对称差集运算（也就是每次的运算对象只能有两个）。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a={1,2,3,4,5}
+b={3,4,5,6,7}
+c={1,2,3,5,6,7,8,9}
+print(a^b)
+print(a.symmetric_difference(b))
+print(a^b^c)
+print(c.symmetric_difference(a.symmetric_difference(b))) #不允许在symmetric_difference方法中加入多个参数。
+# 运行结果：
+# {1, 2, 6, 7}
+# {1, 2, 6, 7}
+# {3, 5, 8, 9}
+# {3, 5, 8, 9}
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>判断相交方法：</p>
+<p>形式： <em><strong>setname1.isdisjoint(setname2)</strong></em></p>
+<p>两个集合可以交换位置，生成结果相同。</p>
+<p>两个集合交集为空时返回False，否则返回True(此时有公共元素)。</p>
+<p>不允许连续集合相交判断或者多个集合同时相交判断。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a={1,2,3,4,5}
+b={3,4,5,6,7}
+c={6,7,8,9}
+print(a.isdisjoint(b))
+print(a.isdisjoint(c)) #isdisjoint方法只接受一个参数
+# 运算结果：
+# False
+# True
+</code></pre></div>
+</li>
+</ul>
+<span id="4-集合的增删改查" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-集合的增删改查">4. 集合的增删改查：</h4>
+<ul>
+<li>
+<p>向set集合添加元素：</p>
+<p>set集合不支持重复和连接操作（也就是"+"和"*"运算符）。</p>
+<ul>
+<li>
+<p>add方法：</p>
+<p>形式：<em><strong>setname.add(element)</strong></em></p>
+<p>只向set集合添加一个元素，只允许添加不可变类型。</p>
+<p>添加已有元素不对集合进行任何操作。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a={1,2,3,4,5}
+a.add(6)
+a.add(1)
+print(a)
+# 运行结果：
+# {1, 2, 3, 4, 5, 6}
+</code></pre></div>
+</li>
+<li>
+<p>update方法：</p>
+<p>形式：<em><strong>setname.update(elements)</strong></em></p>
+<p>向set集合中添加传入update的一系列元素，只允许添加不可变类型。</p>
+<p>添加已有元素不对集合进行任何操作。</p>
+<p>update一般是传入另一个集合，会将其所有非公共元素分别加入setname中。</p>
+<p>可以传入非集合的一系列字符串。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a={1,2,3,4,5}
+b={3,4,5,6,7}
+a.update(b)
+a.update("a","b","c")
+a.update()
+print(a)
+# 运行结果：
+# {1, 2, 3, 4, 5, 6, 7, 'a', 'b', 'c'}
+</code></pre></div>
+</li>
+<li>
+<p>交/差/对称差更新：</p>
+<p>在其相关方法后加_update，不会返回新集合，而是直接将原集合替换为运算结果。（详细方法略，有兴趣请了解difference_update、intersection_update等函数）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>删除set集合元素：</p>
+<ul>
+<li>
+<p>pop方法：</p>
+<p>形式：<em><strong>setname.pop()</strong></em></p>
+<p>pop方法从集合中移除并返回一个元素，此元素的选择是随机的。</p>
+<p>注意：如果有一系列数字，从0开始删除，不是完全随机的。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a={"a",3,1,2,5,6,4,0}
+b={"我","你","她"}
+print(a.pop())
+print(a.pop())
+print(a)
+print(b.pop())
+print(b)
+# 运行结果：
+# 0
+# 1
+# {2, 3, 'a', 5, 6, 4}
+# 你
+# {'她', '我'}、
+</code></pre></div>
+</li>
+<li>
+<p>remove方法：</p>
+<p>形式：<em><strong>setname.remove(element)</strong></em></p>
+<p>从集合中移除指定元素，如果该元素不存在会引发KeyError错误。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a={1,2,3,4,5,6}
+a.remove(1)
+a.remove(2)
+# a.remove(7) 此句会报错
+print(a)
+# 运行结果：
+# {3, 4, 5, 6}
+</code></pre></div>
+</li>
+<li>
+<p>discard方法：</p>
+<p>形式：<em><strong>setname.discard(element)</strong></em></p>
+<p>和remove要求相同，但是在删除不存在元素时不会报错。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a={1,2,3,4,5,6}
+a.discard(1)
+a.discard(2)
+a.discard(7) 
+print(a)
+# 运行结果：
+# {3, 4, 5, 6}
+</code></pre></div>
+</li>
+<li>
+<p>clear方法：</p>
+<p>形式：<em><strong>setname.discard()</strong></em></p>
+<p>清空元素</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a={1,2,3,4,5,6}
+a.clear()
+print(a)
+# 运行结果：
+# set()
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>查询set集合元素</p>
+<p>not in和in关键字。</p>
+<p>使用形式不在赘述</p>
+<p>注意：集合的查询时间是θ(1)，而列表的时间是θ(n)。</p>
+</li>
+</ul>
+<span id="5集合的其他操作" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-5集合的其他操作">5.集合的其他操作：</h4>
+<p>内置函数：</p>
+<ol>
+<li>len()求集合长度（即元素数量）。</li>
+<li>max()求集合内元素最大值。</li>
+<li>min()求集合内元素最小值。</li>
+<li>sum()求集合元素之和(如果可以求出的话)。</li>
+</ol>
+<p>集合的复制：</p>
+<p>集合的复制一般不考虑深浅拷贝。</p>
+<ul>
+<li>
+<p>直接赋值：</p>
+<p>= 直接赋值是非拷贝方法。</p>
+<p>两个集合是等价的，修改其中任何一个集合都会影响另一个集合。（代码略）</p>
+</li>
+<li>
+<p>集合推导式：</p>
+<p>形式：<em><strong>setname1 = { i for i in setname2 }</strong></em></p>
+<p>利用推导式完成复制。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a={1,2,3,4,5,6}
+b={i for i in a if i!=1}
+print(b)
+# 输出结果：
+# {2, 3, 4, 5, 6}
+</code></pre></div>
+</li>
+<li>
+<p>for循环：略</p>
+</li>
+<li>
+<p>copy方法：</p>
+<p>形式：<em><strong>setname1=setname2.copy()</strong></em></p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a={1,2,3,4,5,6}
+b=a.copy()
+print(b)
+# 输出结果：
+# {1, 2, 3, 4, 5, 6}
+</code></pre></div>
+</li>
+<li>
+<p>deepcopy方法：</p>
+<p>格式：<em><strong>setname1= copy.deepcopy(setname2)</strong></em></p>
+<p>需要import copy库：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>import copy
+a={1,2,3,4,5,6}
+b=copy.deepcopy(a)
+print(b)
+# 输出结果：
+# {1, 2, 3, 4, 5, 6}
+</code></pre></div>
+</li>
+</ul>
+<p>排序：</p>
+<p>sorted函数排序：略（有需要请看前面的内容）。</p>
+<span id="四不可变集合frozenset" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-四不可变集合frozenset-">（四）不可变集合frozenset ：</h4>
+<p>和set相关，是不可变的，且为hashable，其元素一经创建无法更改。</p>
+<p>可以用作字典的键或者其他集合的元素。</p>
+<p>set中所有改变集合本身的方法都不支持（如add、remove方法等等），其余的方法都支持。</p>
+<p>和set进行集合运算时，返回类型为运算左侧对象对应的类型。</p>
+<p>如果set需要不可变就用frozenset来代替。</p>
+<p>由元素创建时，frozenset必须由强制转化指定类型。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a=frozenset({1,2,3,4,5,6}) #由强制转化创建
+b={4,5,6,7,8,9} #可变
+print(type(a&#x26;b))
+print(type(b&#x26;a)) #和右边类型相同
+a.issubset(b) #支持不改变集合的set的所用方法
+# a.remove(1) 此句报错，frozenset没有改变元素的方法
+# 输出结果
+# &#x3C;class 'frozenset'>
+# &#x3C;class 'set'>
+</code></pre></div>27:I[2708,["825","$14","953","$1c"],"FeedbackForm"]
+9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L1e",["$","h1",null,{"tabIndex":-1,"children":"python基础——数据类型(六)集合"}],["$","p",null,{"className":"article-deck","children":"介绍集合的创建、元素增删与集合关系运算，并补充不可变集合的用法"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-23","children":"2023-03-23"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,705"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",10," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L1f","python",{"href":"/blog/#tag=python","children":"python"}],["$","$L1f","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]]}],["$","$L20",null,{"headings":[{"id":"section-一概述","text":"（一）概述：","level":3},{"id":"section-二创建与形式","text":"（二）创建与形式：","level":3},{"id":"section-三集合的特性","text":"（三）集合的特性：","level":3},{"id":"section-1-访问元素","text":"1. 访问元素：","level":4},{"id":"section-2-删除集合","text":"2. 删除集合","level":4},{"id":"section-3-集合的关系","text":"3. 集合的关系：","level":4},{"id":"section-4-集合的增删改查","text":"4. 集合的增删改查：","level":4},{"id":"section-5集合的其他操作","text":"5.集合的其他操作：","level":4},{"id":"section-四不可变集合frozenset-","text":"（四）不可变集合frozenset ：","level":4}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L21",null,{"html":"$22"}],"$L23","$L24","$L25"]}],"$L26"]}]]}]
+24:["$","$L27",null,{"contentId":"python-sets"}]
+25:["$","div",null,{"className":"related-note","children":[["$","$L1d",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+26:["$","$L20",null,{"headings":"$9:props:children:1:props:headings"}]
+23:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$L1d",null,{"href":"/blog/divide-and-conquer-examples/","children":[["$","span",null,{"children":"上一篇"}],"算法——分治算法(2)"]}],["$","$L1d",null,{"href":"/blog/python-tuples/","children":[["$","span",null,{"children":"下一篇"}],"python基础——数据类型(五)元组"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$L1d",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-class-decorators",{"children":[["$","$L1d",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$L1d",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+12:[["$","title","0",{"children":"python基础——数据类型(六)集合 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"介绍集合的创建、元素增删与集合关系运算，并补充不可变集合的用法。"}]]
+1e:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1d",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1d",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$L1d",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L1f",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}]

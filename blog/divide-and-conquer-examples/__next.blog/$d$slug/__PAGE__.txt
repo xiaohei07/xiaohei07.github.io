@@ -1,0 +1,307 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","953","$c"],"default"]
+16:I[6279,["825","$2","953","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#algorithms","children":["算法与数据结构",["$","span",null,{"children":3}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"算法——分治算法(2)"}],["$","p",null,{"className":"article-deck","children":"通过汉诺塔、二分查找与线性选择，说明分治递归、区间边界和复杂度的推导"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"slug","t":"d","k":"divide-and-conquer-examples","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"算法——分治算法(2) | 07xiaohei"}],["$","meta","1",{"name":"description","content":"通过汉诺塔、二分查找与线性选择，说明分治递归、区间边界和复杂度的推导。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","953","$c"],"ArticleToc"]
+26:I[4711,["825","$2","953","$c"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-24","children":"2023-03-24"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-17","children":"2026-10-17"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,182"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",8," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","算法",{"href":"/blog/#tag=%E7%AE%97%E6%B3%95","children":"算法"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-一汉诺塔问题","text":"（一）汉诺塔问题：","level":3},{"id":"section-1-问题","text":"1. 问题：","level":4},{"id":"section-2-基本思想","text":"2. 基本思想：","level":4},{"id":"section-3-时间复杂度","text":"3. 时间复杂度：","level":4},{"id":"section-4-代码","text":"4. 代码：","level":4},{"id":"section-二有序二分查找问题","text":"（二）有序二分查找问题：","level":3},{"id":"section-1-问题-1","text":"1. 问题：","level":4},{"id":"section-2-基本思想-1","text":"2. 基本思想：","level":4},{"id":"section-3-时间复杂度-1","text":"3. 时间复杂度：","level":4},{"id":"section-4-代码-1","text":"4. 代码：","level":4},{"id":"section-三线性时间选择","text":"（三）线性时间选择：","level":3},{"id":"section-1-问题-2","text":"1. 问题：","level":4},{"id":"section-2-基本思想-2","text":"2. 基本思想：","level":4},{"id":"section-3-时间复杂度-2","text":"3. 时间复杂度：","level":4},{"id":"section-4-代码-2","text":"4. 代码：","level":4}],"mobile":true}]
+27:T4c0a,<p>例子均使用 C++ 实现。本文保留汉诺塔、二分查找和线性时间选择三个例子。2026 年修订时移除了原稿中只有标题的七个主题，并修正了查找与选择代码；未完成部分仍保存在迁移源稿中。</p>
+<span id="一汉诺塔问题" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一汉诺塔问题">（一）汉诺塔问题：</h3>
+<span id="1-问题" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-问题">1. 问题：</h4>
+<p>汉诺塔问题是一个经典的问题。该问题是在一块铜板装置上，有三根杆(编号A、B、C)，在A杆自下而上、由大到小按顺序放置n个盘子。</p>
+<p>问题的目标是把A杆上的金盘全部移到C杆上，并仍保持原有顺序叠好。</p>
+<p>操作规则：每次只能移动一个盘子，并且在移动过程中三根杆上都始终保持大盘在下，小盘在上，操作过程中盘子可以置于A、B、C任一杆上。</p>
+<span id="2-基本思想" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-基本思想">2. 基本思想：</h4>
+<p>假设共需要移动A柱的n个盘子。</p>
+<p>首先考虑最大的盘子，如果移到B柱，未来仍需要移动到C柱，等于直接从A柱移到C柱，所以可以省略无用的这一步，直接从A->C，那么其他的n-1个盘子应当为其腾出空间移动，移动至B柱，否则此步无法进行。等待最大的移动到C柱之后将这n-1个盘子其移动到C柱，而此过程可以看作新的汉诺塔问题：从B柱到C柱移动n-1个盘子，问题性质不变.......直到只剩最小的盘子，此时可以直接移到C柱，问题的解是显然的。</p>
+<p>由上面的过程和性质，汉诺塔问题显然可以分治解决，将一个复杂的N问题一步步分解为子问题，直到变成1问题，1问题的解是直观的，再逐步合并子问题，得到原问题的解。</p>
+<span id="3-时间复杂度" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-时间复杂度">3. 时间复杂度：</h4>
+<p>设盘子个数为n时，需要T(n)步，把A柱子n-1个盘子移到B柱子，需要T(n-1)步，而A柱子最后一个盘子移到C柱子1步，B柱子上n-1个盘子移到C柱子上T(n-1)步。
+进而可得公式：</p>
+<p><code>T(n) = 2T(n-1) + 1</code>，<code>T(1) = 1</code>。</p>
+<p>因此移动次数为 <code>2^n - 1</code>，时间复杂度为 <code>Θ(2^n)</code>。下面的函数要求 <code>n >= 1</code>；主函数传入 16，注释仅列出原稿中 <code>n = 4</code> 的历史输出。</p>
+<span id="4-代码" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-代码">4. 代码：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+//b为辅助的那根柱子，a为盘子所在的柱子，c为要移动到的柱子
+//盘子顺序由小到大排序，最小的为第一个盘子
+void tower_of_Hanoi(int n, char a, char b, char c)
+{
+	if (n == 1)
+	{
+		cout &#x3C;&#x3C; "第1个盘子由" &#x3C;&#x3C; a &#x3C;&#x3C; "->" &#x3C;&#x3C; c &#x3C;&#x3C; endl;
+	}
+	else
+	{
+		tower_of_Hanoi(n - 1, a, c, b);   //将A柱的n-1个盘子借助C移向B
+		cout &#x3C;&#x3C; "第" &#x3C;&#x3C; n &#x3C;&#x3C; "个盘子由" &#x3C;&#x3C; a &#x3C;&#x3C; "->" &#x3C;&#x3C; c &#x3C;&#x3C; endl;   //将A柱剩下的最大的盘子移向C
+		tower_of_Hanoi(n - 1, b, a, c);   //将B柱的n-1个盘子借助A移向C
+	}
+	return;
+}
+int main()
+{
+	tower_of_Hanoi(16,'A','B','C');
+	return 0;
+}
+//运行结果:(仅展示n=4的结果，否则太长了)
+//第1个盘子由A->B
+//第2个盘子由A->C
+//第1个盘子由B->C
+//第3个盘子由A->B
+//第1个盘子由C->A
+//第2个盘子由C->B
+//第1个盘子由A->B
+//第4个盘子由A->C
+//第1个盘子由B->C
+//第2个盘子由B->A
+//第1个盘子由C->A
+//第3个盘子由B->C
+//第1个盘子由A->B
+//第2个盘子由A->C
+//第1个盘子由B->C
+</code></pre></div>
+<span id="二有序二分查找问题" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二有序二分查找问题">（二）有序二分查找问题：</h3>
+<h4 id="section-1-问题-1">1. 问题：</h4>
+<p>在某一个有序序列内查找某个值是否存在。</p>
+<h4 id="section-2-基本思想-1">2. 基本思想：</h4>
+<p>二分查找算法，也称折半搜索算法、对数搜索算法，是一种在有序数组中查找某一特定元素的分治搜索算法。</p>
+<p>下面只讨论已经按升序排列、支持随机访问的数组。若输入尚未有序，应另计排序的成本。</p>
+<p>二分查找算法的搜索过程从数组的中间元素开始，如果中间元素正好是要查找的元素，则搜索过程结束；如果某一特定元素大于或者小于中间元素，则在数组大于或小于中间元素的那一半中查找，而且跟开始一样从中间元素开始比较。如果在某一步骤数组为空，则代表找不到。这种搜索算法每一次比较都使搜索范围缩小一半。</p>
+<p>我们假设查询对象是一个名为array的数组，且为升序排序，使用变量left表示查找范围的左边界，right表示右边界，mid表示中间位置(向下取整)，value为要查找的元素。二分查找算法的实现过程如下：</p>
+<ol>
+<li>
+<p>初始化数组array的值(有序升序排序)。</p>
+<p>left=0，指向array[ ]的第一个元素。</p>
+<p>right=array.length-1，指向数组array[ ]的最后一个元素。</p>
+<p>进入循环后计算 <code>mid = left + (right-left) / 2</code>，指向区间中点并向下取整，避免直接相加导致溢出。</p>
+</li>
+<li>
+<p>判定 left&#x3C;=right是否成立，如果不成立，算法结束，说明该列表中没有指定元素。</p>
+</li>
+<li>
+<p>如果2中判断成立，比较value和 array[mid] 。如果 value == array[mid] ，搜索成功，算法结束，返回相对应的位置或者布尔值；如果 value >array[mid] ，令 left=mid+1，并在下一轮更新中点，继续在数组的后半部分进行搜索，重复2和3步即可；如果 value &#x3C;array[mid] ，令 right=mid-1，同样更新mid，继续在数组的前半部分进行搜索，重复2和3步即可。</p>
+</li>
+</ol>
+<h4 id="section-3-时间复杂度-1">3. 时间复杂度：</h4>
+<p>二分查找每次会使得查找区间缩小一半，从n到n/2，n/4，…，n/2^k。</p>
+<p>k为循环的次数，最坏情况下k次二分之后在区间长度为1时找到了需要的元素。</p>
+<p>当 <code>n >= 1</code> 时，区间长度减半约 <code>log₂n</code> 次后至多剩一个元素，查找过程需要 <code>O(log n)</code> 时间。迭代实现仅维护三个下标，额外空间为 <code>O(1)</code>；输入数组占用的空间和预先排序的成本另计。</p>
+<p>下面用常量引用传入数组，避免原稿按值传参带来的 <code>O(n)</code> 拷贝。数组长度须能用 <code>int</code> 表示；空数组直接返回 -1，未命中也返回 -1，有重复值时返回其中一个匹配位置。</p>
+<h4 id="section-4-代码-1">4. 代码：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+#include &#x3C;ctime>
+#include &#x3C;random>
+#include&#x3C;vector>
+#include&#x3C;algorithm>
+#include&#x3C;limits>
+#include&#x3C;stdexcept>
+using namespace std;
+//用随机数测试二分查找（小范围，少数量）
+int search_binary(const vector&#x3C;int>&#x26; v, int value)
+{
+	if (v.size() > static_cast&#x3C;size_t>(numeric_limits&#x3C;int>::max()))
+		throw length_error("array too large for int indices");
+	int left = 0;
+	int right = static_cast&#x3C;int>(v.size()) - 1;
+	while (left &#x3C;= right)
+	{
+		int mid = left + (right - left) / 2;
+		if (v[mid] == value)
+		{
+			return mid;
+		}
+		else if (value &#x3C; v[mid])
+		{
+			right = mid - 1;
+		}
+		else
+		{
+			left = mid + 1;
+		}
+	}
+	return -1;
+}
+int main()
+{
+	std::default_random_engine e;
+	std::uniform_int_distribution&#x3C;int> u(1, 200);
+	e.seed(time(0));
+	vector&#x3C;int>v;
+	for (int i = 0; i &#x3C; 50; i++) 
+	{
+		int j = u(e);
+		v.push_back(j); 
+	}
+	sort(v.begin(),v.end());
+	for (int i = 0; i &#x3C; 10; i++) {
+		cout &#x3C;&#x3C; search_binary(v, 50 + i) &#x3C;&#x3C; endl;;
+	}
+	return 0;
+}
+//运行结果随机
+</code></pre></div>
+<h3 id="section-三线性时间选择">（三）线性时间选择：</h3>
+<h4 id="section-1-问题-2">1. 问题：</h4>
+<p>给定线性序集中n个元素（元素不重复）和一个整数k，1≤k≤n，要求找出这n个元素中第k小的元素。</p>
+<h4 id="section-2-基本思想-2">2. 基本思想：</h4>
+<p>使用线性时间选择算法Select()，此方法实际上是从快速排序方法上改进而来的。</p>
+<p>这里求的是当前区间 <code>[p,r]</code> 内第 <code>k</code> 小的值，<code>k</code> 从 1 开始计数，并非原数组的下标。下面沿用原稿“元素互不相同”的前提。区间不超过 75 个元素时直接排序；75 只是本例的小规模处理阈值，不是算法的适用下限。</p>
+<p>步骤为：</p>
+<ol>
+<li>
+<p>每五个元素组成一组，把完整组的第三小元素交换到区间前端。令 <code>m = floor(n/5)</code>；末尾不足五个的元素暂不参与选基准，仍参与后面的全区间划分。</p>
+</li>
+<li>
+<p>在这 <code>m</code> 个中位数中递归求第 <code>m/2+1</code> 小的值（整数除法），作为划分基准；<code>m</code> 为偶数时选择较大的中位数。</p>
+</li>
+<li>
+<p>把基准移到区间首部，再用有边界检查的双指针划分整个区间。最终基准位于 <code>q</code>，左边的值小于它，右边的值大于它。</p>
+<img src="https://s1.ax1x.com/2023/04/05/pp57e58.png" alt="划分基准示意图" width="547" height="271" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</li>
+<li>
+<p>基准在当前区间的排名是 <code>rank = q-p+1</code>。若 <code>k == rank</code>，直接返回它；若 <code>k &#x3C; rank</code>，在左区间查第 <code>k</code> 小；否则在右区间查第 <code>k-rank</code> 小。</p>
+</li>
+</ol>
+<h4 id="section-3-时间复杂度-2">3. 时间复杂度：</h4>
+<p>五元分组保证基准两侧各至少有 <code>3n/10-O(1)</code> 个元素，因此查找排名时至多递归处理 <code>7n/10+O(1)</code> 个元素。还需计入递归选择中位数的 <code>T(floor(n/5))</code>，不能只写划分后的一次递归。</p>
+<p>递推上界为 <code>T(n) &#x3C;= T(floor(n/5)) + T(7n/10+O(1)) + O(n)</code>。两项递归规模的主要部分相加为 <code>9n/10</code>，可用代入法证明 <code>T(n)=O(n)</code>。这不是等规模子问题，不能直接套用上一篇列出的简化主定理。</p>
+<p>排名分支和递推依据见 <a href="https://courses.csail.mit.edu/6.046/spring03/handouts/lec6.pdf" rel="noopener noreferrer">MIT 6.046 Lecture 6</a> 与 <a href="https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture5.pdf" rel="noopener noreferrer">Stanford CS161 Lecture 5</a>。</p>
+<h4 id="section-4-代码-2">4. 代码：</h4>
+<p>以下为本次修正后的代码。它会原地调整 <code>[p,r]</code>；要求数组长度可用 <code>int</code> 表示，且元素互不相同。无效区间或排名抛出异常。</p>
+<div class="code-block"><div class="code-toolbar"><span>cpp</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&#x3C;iostream></span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&#x3C;vector></span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&#x3C;algorithm></span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&#x3C;random></span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&#x3C;stdexcept></span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-comment">//直接交换排序，用于固定大小的基例：</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">bubbleSort</span><span class="hljs-params">(vector&#x3C;<span class="hljs-type">int</span>>&#x26;a, <span class="hljs-type">int</span> p, <span class="hljs-type">int</span> r)</span>
+</span>{
+	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = p; i &#x3C; r; i++)
+	{
+		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = i + <span class="hljs-number">1</span>; j &#x3C;= r; j++)
+		{
+			<span class="hljs-keyword">if</span> (a[j] &#x3C; a[i])
+			<span class="hljs-built_in">swap</span>(a[i], a[j]);
+		}
+	}
+}
+<span class="hljs-comment">//根据划分元素调整容器元素的位置，返回划分元素对应位置。</span>
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">Partition</span><span class="hljs-params">(vector&#x3C;<span class="hljs-type">int</span>> &#x26;a, <span class="hljs-type">int</span> p, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> val)</span>
+</span>{
+	<span class="hljs-type">int</span> pos=p;
+	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> q = p; q &#x3C;= r; q++)
+	{
+		<span class="hljs-keyword">if</span> (a[q] == val)
+		{
+			pos = q;
+			<span class="hljs-keyword">break</span>;
+		}
+	}
+	<span class="hljs-built_in">swap</span>(a[p], a[pos]);
+	<span class="hljs-type">int</span> midmidpos;
+	<span class="hljs-type">int</span> i = p, j = r + <span class="hljs-number">1</span>, midmid = a[p];
+	<span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>)
+	{
+		<span class="hljs-keyword">while</span> (j > p &#x26;&#x26; a[--j] > midmid);
+		<span class="hljs-keyword">while</span> (i &#x3C; r &#x26;&#x26; a[++i] &#x3C; midmid);
+		<span class="hljs-keyword">if</span> (i >= j) { <span class="hljs-keyword">break</span>; }
+		<span class="hljs-built_in">swap</span>(a[i], a[j]);
+	}
+	a[p] = a[j];
+	a[j] = midmid;
+	midmidpos = j;
+	<span class="hljs-keyword">return</span> midmidpos;
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">Select</span><span class="hljs-params">(vector&#x3C;<span class="hljs-type">int</span>> &#x26;a, <span class="hljs-type">int</span> p, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> k)</span>
+</span>{
+	<span class="hljs-keyword">if</span> (p &#x3C; <span class="hljs-number">0</span> || r &#x3C; p || <span class="hljs-keyword">static_cast</span>&#x3C;<span class="hljs-type">size_t</span>>(r) >= a.<span class="hljs-built_in">size</span>() || k &#x3C; <span class="hljs-number">1</span> || k > r - p + <span class="hljs-number">1</span>)
+		<span class="hljs-keyword">throw</span> <span class="hljs-built_in">out_of_range</span>(<span class="hljs-string">"invalid selection range or rank"</span>);
+	<span class="hljs-keyword">if</span> (r - p &#x3C; <span class="hljs-number">75</span>)
+	{
+		<span class="hljs-built_in">bubbleSort</span>(a, p, r);
+		<span class="hljs-keyword">return</span> a[p + k - <span class="hljs-number">1</span>];
+	}
+	<span class="hljs-comment">//找完整五元组的中位数；不足五个的尾组留待划分</span>
+	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &#x3C;= (r - p - <span class="hljs-number">4</span>) / <span class="hljs-number">5</span>; i++) <span class="hljs-comment">//把每个完整组的中位数交换到区间前端</span>
+	{
+		<span class="hljs-type">int</span> s = p + <span class="hljs-number">5</span> * i, t = s + <span class="hljs-number">4</span>;
+		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &#x3C; <span class="hljs-number">3</span>; j++) <span class="hljs-comment">//冒泡排序，从后开始排，结果使得后三个数是排好顺序的（递增）</span>
+		{
+			<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> n = s; n &#x3C; t - j; n++)
+			{
+				<span class="hljs-keyword">if</span> (a[n] > a[n + <span class="hljs-number">1</span>])
+					<span class="hljs-built_in">swap</span>(a[n<span class="hljs-number">+1</span>], a[n]);
+			}
+		}
+		<span class="hljs-built_in">swap</span>(a[p + i], a[s + <span class="hljs-number">2</span>]);<span class="hljs-comment">//交换每组中的中位数到前面</span>
+	}
+	<span class="hljs-type">int</span> m = (r - p + <span class="hljs-number">1</span>) / <span class="hljs-number">5</span>;
+	<span class="hljs-type">int</span> midmid = <span class="hljs-built_in">Select</span>(a, p, p + m - <span class="hljs-number">1</span>, m / <span class="hljs-number">2</span> + <span class="hljs-number">1</span>);
+	<span class="hljs-type">int</span> midmidpos = <span class="hljs-built_in">Partition</span>(a, p, r, midmid);
+	<span class="hljs-type">int</span> rank = midmidpos - p + <span class="hljs-number">1</span>;
+	<span class="hljs-keyword">if</span> (k == rank) <span class="hljs-keyword">return</span> a[midmidpos];
+	<span class="hljs-keyword">if</span> (k &#x3C; rank) <span class="hljs-keyword">return</span> <span class="hljs-built_in">Select</span>(a, p, midmidpos - <span class="hljs-number">1</span>, k);
+	<span class="hljs-keyword">return</span> <span class="hljs-built_in">Select</span>(a, midmidpos + <span class="hljs-number">1</span>, r, k - rank);
+}
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+	vector&#x3C;<span class="hljs-type">int</span>> a;
+	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &#x3C;= <span class="hljs-number">1000</span>; ++i) a.<span class="hljs-built_in">push_back</span>(i);
+	<span class="hljs-function">mt19937 <span class="hljs-title">engine</span><span class="hljs-params">(<span class="hljs-number">20261017</span>)</span></span>;
+	<span class="hljs-built_in">shuffle</span>(a.<span class="hljs-built_in">begin</span>(), a.<span class="hljs-built_in">end</span>(), engine);
+	<span class="hljs-comment">// 在完整区间内查询第1至15小；每次复制，便于独立展示。</span>
+	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> k = <span class="hljs-number">1</span>; k &#x3C;= <span class="hljs-number">15</span>; ++k)
+	{
+		vector&#x3C;<span class="hljs-type">int</span>> aa = a;
+		cout &#x3C;&#x3C; <span class="hljs-string">"第"</span> &#x3C;&#x3C; k &#x3C;&#x3C; <span class="hljs-string">"小的数是:"</span> &#x3C;&#x3C; <span class="hljs-built_in">Select</span>(aa, <span class="hljs-number">0</span>, <span class="hljs-number">999</span>, k) &#x3C;&#x3C; endl;
+	}
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+<span class="hljs-comment">// 对这组1至1000的输入，第k小的值应当为k；旧随机输出已移除。</span>
+</code></pre></div>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],"$L28","$L29","$L2a"]}],"$L2b"]}]
+1b:["$","$L2c",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+2e:I[2708,["825","$2","953","$c"],"FeedbackForm"]
+f:300
+28:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/cpp-operator-overloading-3/","children":[["$","span",null,{"children":"上一篇"}],"c++类——运算符重载(三)"]}],["$","$Ld",null,{"href":"/blog/python-sets/","children":[["$","span",null,{"children":"下一篇"}],"python基础——数据类型(六)集合"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","divide-and-conquer-theory",{"children":[["$","$Ld",null,{"href":"/blog/divide-and-conquer-theory/","children":"算法——分治算法(1)"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","merge-sort",{"children":[["$","$Ld",null,{"href":"/blog/merge-sort/","children":"看见归并排序的每一步"}],["$","span",null,{"children":"算法与数据结构"}]]}]]}]]}]]}]
+29:["$","$L2e",null,{"contentId":"divide-and-conquer-examples"}]
+2a:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],["$","$Ld",null,{"href":"/blog/merge-sort/","children":"体验归并排序"}]]}]
+2b:["$","$L25",null,{"headings":"$19:props:headings"}]
+2d:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"

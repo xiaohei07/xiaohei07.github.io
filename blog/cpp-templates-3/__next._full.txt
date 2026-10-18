@@ -1,0 +1,423 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"cpp-templates-3","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","cpp-templates-3",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+6:C
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+14:"static/chunks/825-1a8f209f3ada760f.js"
+15:"static/chunks/app/layout-b30e31df6c2e8735.js"
+16:I[6767,["825","$14","177","$15"],"DisplayProvider"]
+17:"NavigationFeedback"
+18:I[2842,["825","$14","177","$15"],"$17"]
+19:I[8587,["825","$14","177","$15"],"SiteHeader"]
+1a:I[5803,["825","$14","177","$15"],"SiteFrame"]
+1b:I[164,["825","$14","177","$15"],"ProfileSidebar"]
+1c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+1d:I[3498,["825","$14","953","$1c"],"default"]
+1f:I[6279,["825","$14","953","$1c"],"FilterLink"]
+20:I[4067,["825","$14","953","$1c"],"ArticleToc"]
+21:I[4711,["825","$14","953","$1c"],"ArticleBody"]
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L16",null,{"children":[["$","$L18",null,{}],["$","$L19",null,{"tags":["知识点","python","C++"]}],["$","$L1a",null,{"sidebar":["$","$L1b",null,{}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1d",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1d",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1d",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1d",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+22:T3768,<p>本文介绍模版的各种特殊情况：</p>
+<span id="一非类型模板参数通常不应用于函数模版中" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一非类型模板参数通常不应用于函数模版中">（一）非类型模板参数（通常不应用于函数模版中）：</h3>
+<ul>
+<li>
+<p>模板的非类型形参是内置类型形参，模板参数不是一个类型而是一个具体的值，且值是常量表达式，因此调用非类型模板形参的实参必须是一个常量表达式（因此模板代码不能修改参数的值，也不能使用参数的地址）。</p>
+<p>例如template&#x3C;class T, int a> class B{}; 其中int a就是非类型的模板形参。</p>
+<p>通常能被传入的常量表达式包括全局变量的地址或引用，全局对象的地址或引用const类型变量，sizeof的表达式的结果以及const int 整型变量。</p>
+</li>
+<li>
+<p>形参只能是整型，枚举，指针和引用，如double，string等是不可以的，但是可以使用double&#x26;或者string*等类型是允许的。</p>
+</li>
+<li>
+<p>当一个模板被实例化时，非类型参数被一个用户提供的或者编译器推断出的值所代替。正因为模板在编译阶段编译器为我们生成一个对应的版本，所以其值应该能够编译时确定，那么他应该是一个常量或者常量表达式。</p>
+</li>
+<li>
+<p>非类型模板形参的形参和实参间所允许的转换</p>
+<ul>
+<li>允许从数组到指针，从函数到指针的转换。如：template &#x3C;int *a> class A{}; int b[1]; A&#x3C;b> m;即数组到指针的转换。</li>
+<li>const修饰符的转换。如：template&#x3C;const int *a> class A{}; int b; A&#x3C;&#x26;b> m; 即从int *到const int *的转换。</li>
+<li>提升转换。如：template&#x3C;int a> class A{}; const short b=2; A&#x3C;b> m; 即从short到int的提升转换。</li>
+<li>整值转换。如：template&#x3C;unsigned int a> class A{}; A&#x3C;3> m; 即从int 到unsigned int的转换。</li>
+<li>常规转换。略。</li>
+</ul>
+</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+
+//定义一个栈,用数组实现,MAXSIZE为非类型模版类参数,其类型确定
+template&#x3C;typename T, int MAXSIZE>
+class Stack
+{
+private:
+	int REALSIZE;
+	//这个非类型模版类参数可以在类中使用其名称
+	T elems[MAXSIZE];
+public:
+	Stack() :REALSIZE(0) {}
+	bool empty() const { return REALSIZE == 0; }
+	bool full() const { return REALSIZE == MAXSIZE; }
+	void push(const T&#x26;);
+	void pop();
+	T&#x26; top();
+	const T&#x26; top() const;
+
+};
+template&#x3C;typename T, int MAXSIZE>
+void Stack&#x3C;T, MAXSIZE>::push(const T&#x26; elem)
+{
+	if (full())
+		throw std::out_of_range("Stack&#x3C;>::push(): full stack");
+	elems[REALSIZE++] = elem;
+}
+template&#x3C;typename T, int MAXSIZE>
+void Stack&#x3C;T, MAXSIZE>::pop()
+{
+	if (!empty())
+		REALSIZE--;
+	else
+		throw std::out_of_range("Stack&#x3C;>::pop(): empty stack");
+}
+template&#x3C;typename T, int MAXSIZE>
+T&#x26; Stack&#x3C;T, MAXSIZE>::top()
+{
+	if (empty())
+		throw std::out_of_range("Stack&#x3C;>::top(): empty stack");
+	return elems[REALSIZE - 1];
+}
+template&#x3C;typename T, int MAXSIZE>
+const T&#x26; Stack&#x3C;T, MAXSIZE>::top() const
+{
+	if (empty())
+		throw std::out_of_range("Stack&#x3C;>::top(): empty stack");
+	return elems[REALSIZE - 1];
+}
+//double类型,类类型不允许作为非类型模版类参数使用
+//template&#x3C;typename T, double MAXSIZE,string name>
+//class A{};
+
+//double引用类型,类指针类型允许作为非类型模版类参数使用
+//枚举也可以，但不再演示
+template&#x3C;typename T,double&#x26; MAXSIZE,string*name>
+class A
+{
+private:
+	double REALSIZE;
+	T elems[MAXSIZE];
+	string names;
+public:
+	A(double d):REALSIZE(d) { names = *name; }
+};
+
+template&#x3C;typename T, const string* p>
+class B {};
+template&#x3C;typename T, unsigned int ui>
+class C {};
+
+double alld = 10.0;
+double&#x26; alldd = alld;
+string alls = "帅";
+string* allss = &#x26;alls;
+string s[3] = { "aaaaaa","bbbbbb","cccccc" };
+int main()
+{
+	//传入常量表达式
+	const int i = 5;
+	Stack&#x3C;int, 10> s1;
+	Stack&#x3C;string, i> s3;
+
+	//sizeof也可以
+	Stack&#x3C;double, sizeof(double)> s2;
+
+	//int ii = 5;
+	//Stack&#x3C;string, ii> s4; //错误,不能传入非常量变量
+
+	//double d = 10.0;
+	//double&#x26; dd = d;
+	//string s = "帅";
+	//string* ss = &#x26;s;
+	//A&#x3C;int, dd, ss>;   //错误,不能传入局部变量,非常量变量
+
+	//可以使用全局引用和全局变量的局部地址传入
+	A&#x3C;int, alld, &#x26;alls> a1(10);
+	//A&#x3C;int, alld, allss>; //错误,不能传入全局指针变量
+
+	//可以传入全局数组,会将其转换为指针传入
+	A&#x3C;double, alld, s> a2(3.14);
+
+	//可以将string*提升为const string*
+	B&#x3C;int, &#x26;alls> b; 
+
+	//可以将short int提升为int
+	const short bbb = 2;
+	Stack&#x3C;char, bbb>;
+
+	//可以将int提升为unsigned int
+	const int n = 9;
+	C&#x3C;int, n>;
+	return 0;
+}
+</code></pre></div>
+<span id="二默认模板类型形参" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二默认模板类型形参">（二）默认模板类型形参：</h3>
+<p>在c++11新规则中，可以为类模板或者函数模版的类型形参提供默认值。</p>
+<p>形式为：<em><strong>template&#x3C;class T1, class T2, ... , class Tk=默认类型 , ... , class Tn=默认类型 > class 类名{ 类体 };</strong></em></p>
+<p><em><strong>or template&#x3C;class T1 =默认类型 , class T2, ... , class Tk=默认类型 , ... , class Tn> 返回类型 类型名(形参列表){函数体}</strong></em></p>
+<p>类模版为多个默认模版参数声明指定默认值时，必须遵照“从右往左”的规则进行指定。</p>
+<p>函数模版不需要遵循此规则，可以任意指定默认值。</p>
+<p>函数模板的参数推导规则简单来说就是：能够从函数实参中推导出类型的话，那么默认模版参数就不会被使用，否则使用默认模版参数。</p>
+<p>因此，函数模版如果需要提供默认类型，因为其形参列表是从右往左给出默认值的，所以只有其默认类型也是从右往左给出且与值的类型匹配（也就是不会出现不匹配情况）、值的个数匹配，才是有效的默认类型。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+template &#x3C;typename T1, typename T2 = int, typename T3=double>
+class A {
+public:
+	T1 Aval1;
+	T2 Aval2;
+	T3 Aval3;
+};
+//template &#x3C;typename T1 = int, typename T2>
+//class DefClass2 {};  // 错误:模板参数的默认值没有遵循“由右往左”的规则
+//
+//template &#x3C;typename T, int i = 0>
+//class DefClass3 {};
+//
+//template &#x3C;int i = 0, typename T>
+//class DefClass4 {};  // 错误:即使是非类型模版参数,模板参数的默认值也必须遵循“由右往左”的规则
+
+//尽管可以进行下面这样的声明,但几乎不会用上这个默认类型参数,可以直接无视
+template &#x3C;typename T1 = int, typename T2>
+void B1(T1 a, T2 b) {
+	cout &#x3C;&#x3C; a &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(T1).name() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; b &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(T2).name() &#x3C;&#x3C; endl;
+	return;
+}; // 函数模板不用遵循“由右往左”的规则
+
+//允许进行这样的声明,当未提供第二个参数时,自动默认b为int类型且值为0
+template &#x3C;typename T1, typename T2= int>
+void B2(T1 a, T2 b=0) {
+	cout &#x3C;&#x3C; a &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(T1).name() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; b &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(T2).name() &#x3C;&#x3C; endl;
+	return;
+}; // 函数模板不用遵循“由右往左”的规则
+
+
+template &#x3C;int i = 0, typename T>
+void B3(T a) {
+	cout &#x3C;&#x3C; i &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(i).name() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; a &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(T).name() &#x3C;&#x3C; endl;
+	return;
+};  // 非类型模版参数也不用遵循“由右往左”的规则
+
+
+int main() 
+{
+	A&#x3C;string> a1;
+	cout &#x3C;&#x3C; typeid(a1.Aval1).name() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(a1.Aval2).name() &#x3C;&#x3C; endl; //为默认的int
+	cout &#x3C;&#x3C; typeid(a1.Aval3).name() &#x3C;&#x3C; endl; //为默认的double
+	A&#x3C;char, unsigned int> a2;
+	cout &#x3C;&#x3C; typeid(a2.Aval1).name() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(a2.Aval2).name() &#x3C;&#x3C; endl; //unsigned int覆盖默认的int
+	cout &#x3C;&#x3C; typeid(a2.Aval3).name() &#x3C;&#x3C; endl; //为默认的double
+	A&#x3C;char, unsigned int,float> a3;
+	cout &#x3C;&#x3C; typeid(a3.Aval1).name() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(a3.Aval2).name() &#x3C;&#x3C; endl; //unsigned int覆盖默认的int
+	cout &#x3C;&#x3C; typeid(a3.Aval3).name() &#x3C;&#x3C; endl; //float覆盖默认的double
+	
+	B1(3, 4.1); //推导出int,double类型,和默认类型无关
+	B1(3.1, 4); //推导出double,int类型,覆盖默认类型
+	B2("s");    //前者推导出const char[2],后者为默认的int且值为0
+	return 0;
+}
+//运行结果:
+//  class std::basic_string&#x3C;char, struct std::char_traits&#x3C;char>, class std::allocator&#x3C;char> >
+//	int
+//	double
+//	char
+//	unsigned int
+//	double
+//	char
+//	unsigned int
+//	float
+//	3
+//	int
+//	4.1
+//	double
+//	3.1
+//	double
+//	4
+//	int
+//	s
+//	char const* __ptr64
+//	0
+//	int
+</code></pre></div>
+<span id="三模版的特化" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三模版的特化">（三）模版的特化：</h3>
+<p>模版的特化是模版参数在某种特定类型下的具体实现，是对单一模版提供的一个特殊实例，它将一个或多个模版参数绑定到特定的类型或值上。</p>
+<p>通常情况下，使用模板可以实现一些与类型无关的代码，但对于一些特殊类型的可能会得到一些错误的结果，比如字符串不能进行比较，此时就需要特化出一个专门用于字符串的模版参数。</p>
+<p>特化分为函数模版特化和类模版特化：</p>
+<ul>
+<li>
+<p>函数模板特化：</p>
+<p>必须要先有一个基础的函数模板，且使用特换模板函数时格式有要求：</p>
+<ol>
+<li>关键字template后面接一对空的尖括号&#x3C;>。</li>
+<li>函数名&#x3C;特化类型>（特化类型 参数1， 特化类型 参数2 , …） 在函数名后跟&#x3C;>其中写要特化的类型。</li>
+</ol>
+<p>函数形参表必须要和模板函数的基础参数类型完全相同，如果不同编译器可能会报一些奇怪的错误。</p>
+<p>（实际上，此为全特化，c++11中，函数模版也可以进行偏特化的部分特化相似操作，但实际上这是一种重载，会导致函数有多个匹配，此时无法区分；不能进行偏特化的部分限制）</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+
+template&#x3C; typename T >
+int compare(const T&#x26; a, const T&#x26; b)
+{
+	if (a > b)return 1;
+	else if (a == b)return 0;
+	else return -1;
+}
+
+template&#x3C;>
+int compare(const char* const &#x26; a, const char* const &#x26; b)
+{
+	return strcmp(a, b);
+}
+int main()
+{
+	cout &#x3C;&#x3C; compare(3, 4) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; compare(4.2, 2.3) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; compare((const char*)"vvv", (const char*)"ttt") &#x3C;&#x3C; endl;
+	return 0;
+}
+</code></pre></div>
+</li>
+<li>
+<p>类模版特化：</p>
+<p>分为全特化和偏特化：</p>
+<ul>
+<li>
+<p>全特化：将模版参数类型中所有的参数都确定化。</p>
+<p>全特化的优先级比偏特化要高。</p>
+</li>
+<li>
+<p>偏特化：对于模版的类型进行限制。</p>
+<p>偏特化有两种表现方式：</p>
+<ul>
+<li>部分特化：将模版参数表中的一部分参数特化。</li>
+<li>对于模版类型进行进一步的限制。（如必须特化为指针类型、引用类型）</li>
+</ul>
+</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+//类模版
+template&#x3C;class T1, class T2>
+class Data
+{
+public:
+	Data() {
+		cout &#x3C;&#x3C; "Data&#x3C;T1,T2>" &#x3C;&#x3C; endl;
+	}
+private:
+	T1 _d1;
+	T2 _d2;
+};
+//全特化:
+template&#x3C;>
+class Data&#x3C;int, char>
+{
+public:
+	Data() {
+		cout &#x3C;&#x3C; "Data&#x3C;int,char>" &#x3C;&#x3C; endl;
+	}
+private:
+	int _d1;
+	char _d2;
+};
+//偏特化1:部分特化
+template&#x3C;class T1>
+class Data&#x3C;int, T1>
+{
+public:
+	Data() {
+		cout &#x3C;&#x3C; "Data&#x3C;int,T1>" &#x3C;&#x3C; endl;
+	}
+private:
+	int _d1;
+	T1 _d2;
+};
+
+//偏特化2:添加限制
+//两个参数偏特化为指针类型
+template &#x3C;typename T1, typename T2>
+class Data &#x3C;T1*, T2*>
+{
+public:
+	Data() {
+		cout &#x3C;&#x3C; "Data&#x3C;T1*,T2*>" &#x3C;&#x3C; endl;
+	}
+private:
+	T1 _d1;
+	T2 _d2;
+};
+
+//两个参数偏特化为引用类型
+template&#x3C;class T1, class T2>
+class Data&#x3C;T1&#x26;, T2&#x26;> {
+	T1&#x26; _d1;
+	T2&#x26; _d2;
+public:
+	Data(T1&#x26; a, T2&#x26; b) :
+		_d1(a),
+		_d2(b)
+	{
+		cout &#x3C;&#x3C; "Data&#x3C;T1&#x26;,T2&#x26;>" &#x3C;&#x3C; endl;
+	}
+};
+
+
+int main()
+{
+	Data&#x3C;int, int> d1;	     // Data&#x3C;T1,T2>
+	Data&#x3C;string, string> d2; // Data&#x3C;T1,T2>
+	Data&#x3C;int, char> d3;	     // Data&#x3C;int,char>,其实部分特化也满足,但优先进行全特化
+	Data&#x3C;int, double> d4;    // Data&#x3C;int,T1>
+	Data&#x3C;int*, double*> d5;  // Data&#x3C;T1*,T2*> 
+	int i = 5;
+	int&#x26; pi = i;
+	double d = 6.5;
+	double&#x26; pd = d;
+	Data&#x3C;int&#x26;, double&#x26;> d6(pi,pd); //Data&#x3C;T1&#x26;,T2&#x26;>
+	return 0;
+}
+</code></pre></div>
+</li>
+</ul>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L1e",["$","h1",null,{"tabIndex":-1,"children":"c++类——模版(三)"}],["$","p",null,{"className":"article-deck","children":"通过代码介绍非类型模板参数、默认类型参数，以及针对特定类型的模板特化"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-04-14","children":"2023-04-14"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,506"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",10," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L1f","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$L1f","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$L1f","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]]}],["$","$L20",null,{"headings":[{"id":"section-一非类型模板参数通常不应用于函数模版中","text":"（一）非类型模板参数（通常不应用于函数模版中）：","level":3},{"id":"section-二默认模板类型形参","text":"（二）默认模板类型形参：","level":3},{"id":"section-三模版的特化","text":"（三）模版的特化：","level":3}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L21",null,{"html":"$22"}],"$L23","$L24","$L25"]}],"$L26"]}]]}]
+c:null
+12:[["$","title","0",{"children":"c++类——模版(三) | 07xiaohei"}],["$","meta","1",{"name":"description","content":"通过代码介绍非类型模板参数、默认类型参数，以及针对特定类型的模板特化。"}]]
+27:I[2708,["825","$14","953","$1c"],"FeedbackForm"]
+24:["$","$L27",null,{"contentId":"cpp-templates-3"}]
+25:["$","div",null,{"className":"related-note","children":[["$","$L1d",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+26:["$","$L20",null,{"headings":"$9:props:children:1:props:headings"}]
+23:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$L1d",null,{"href":"/blog/cpp-templates-2/","children":[["$","span",null,{"children":"上一篇"}],"c++类——模版(二)"]}],["$","$L1d",null,{"href":"/blog/cpp-polymorphism-1/","children":[["$","span",null,{"children":"下一篇"}],"c++类——多态(一)"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-2",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-polymorphism-1",{"children":[["$","$L1d",null,{"href":"/blog/cpp-polymorphism-1/","children":"c++类——多态(一)"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+1e:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1d",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1d",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$L1d",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L1f",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}]

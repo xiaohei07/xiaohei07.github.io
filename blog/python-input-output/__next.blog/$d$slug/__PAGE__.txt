@@ -1,0 +1,191 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","953","$c"],"default"]
+16:I[6279,["825","$2","953","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"python基础——输入和输出详解"}],["$","p",null,{"className":"article-deck","children":"围绕控制台输入输出，介绍多项输入的拆分、数值转换及文本格式化"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"slug","t":"d","k":"python-input-output","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"python基础——输入和输出详解 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"围绕控制台输入输出，介绍多项输入的拆分、数值转换及文本格式化。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","953","$c"],"ArticleToc"]
+26:I[4711,["825","$2","953","$c"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-18","children":"2023-03-18"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,866"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",7," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","python",{"href":"/blog/#tag=python","children":"python"}],["$","$L16","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-一概念","text":"(一)概念：","level":3},{"id":"section-二基于input函数的输入","text":"（二）基于input()函数的输入：","level":3},{"id":"section-1基本用法","text":"1.基本用法：","level":4},{"id":"section-2进阶用法","text":"2.进阶用法：","level":4},{"id":"section-3代码展示","text":"3.代码展示：","level":4},{"id":"section-三基于print函数的输出","text":"（三）基于print()函数的输出：","level":3},{"id":"section-1基本用法-1","text":"1.基本用法：","level":4},{"id":"section-2格式化输出","text":"2.格式化输出：","level":4},{"id":"section-3format函数","text":"3.format()函数：","level":4},{"id":"section-4join函数","text":"4.join()函数：","level":4}],"mobile":true}]
+27:T279f,<span id="一概念" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一概念">(一)概念：</h3>
+<p>此处说明的输入和输出是指控制台从键盘输入文本和输出在屏幕指定文字，暂不包括向文件的输入和输出。</p>
+<p>输入是基于input()的函数输入，输出是基于print()的函数输出。</p>
+<p>此外还将讲解print涉及的格式化输出。</p>
+<span id="二基于input函数的输入" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二基于input函数的输入">（二）基于input()函数的输入：</h3>
+<span id="1基本用法" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1基本用法">1.基本用法：</h4>
+<p>input()函数的作用是获得键盘的输入数据。</p>
+<p>一般格式： <em><strong>变量名=input(&#x3C;提示字符串>)</strong></em></p>
+<p>input()函数在接受输入前先输出提示字符串，等待用户的键盘输入。</p>
+<p>以用户输入回车符作为结束的标志，随后input()函数结束，返回用户输入的字符串（回车符被丢弃）。</p>
+<p>返回的字符串就是一行文本，且无论用户输入任何内容均被视为字符串，如需要其他类型，应对返回内容进行类型转化。</p>
+<p>返回值被用来给变量赋值，否则返回值被丢弃，不会保留。</p>
+<span id="2进阶用法" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2进阶用法">2.进阶用法：</h4>
+<ul>
+<li>在提示字符串处加入变量：因为提示字符串必须是字符串的形式输出到终端，所以，如果希望在提示字符串处输出变量值，需要对非字符型的变量进行强制的类型转换。</li>
+<li>input一次输入多个变量值：需要调用它所有的split()分割函数，这个函数的作用是一旦在输入中遇到它()中的内容就以其为分界符将输入内容分割开，对应的分割出的输入串数量我们也应该设置对应数量的变量来接收内容。另外，split后返回的是一个字符串列表，如要强制类型转换，需要在最外面再加一个map()对每个被分割的输入进行强制类型转换。（详见下方代码）</li>
+</ul>
+<span id="3代码展示" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3代码展示">3.代码展示：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>testinput1 = "请输入"
+name = input(testinput1+"名字\n")  #input()内有变量，\n是换行符
+number = int(input(testinput1+name+"他的序号数\n")) #对input结果进行强制类型转化
+subject1,subject2,subject3 = input(testinput1+str(number)+"号的三个学科名,以\",\"分割\n").split(",") #input()得到多个输入值
+score1,score2,score3 = map(float,input(testinput1+str(number)+"的三科成绩,以\",\"分割\n").split(",")) #对input的多个输入值分别进行强制类型转化
+print(subject1,subject2,subject3) #展示结果
+print(score1,score2,score3)
+</code></pre></div>
+<span id="三基于print函数的输出" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三基于print函数的输出">（三）基于print()函数的输出：</h3>
+<p>print()函数可以说是python中大家认识最多的一个函数了，本次将会进行详细介绍。</p>
+<h4 id="section-1基本用法-1">1.基本用法：</h4>
+<p>函数语法为：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(*objects, sep=' ', end='\n', file=sys.stdout)
+</code></pre></div>
+<p>其中objects对应复数，表示可以一次输出多个对象，用“,”进行分隔。</p>
+<p>sep -用于间隔多个对象，默认是一个空格。</p>
+<p>end -用于设定以什么为结尾，默认是换行符\n。</p>
+<p>file -要写入的文件对象。</p>
+<p>print()函数没有返回值。</p>
+<p>print()函数可以输出任何变量，包括但不限于数值型、布尔型、列表型、字典型等等。</p>
+<p>print()输出时end=的后面参数可以用条件语句来判断不同情况下输出的具体值。</p>
+<p>代码如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(1) #输出数值
+print("欧尼酱~") #输出字符串
+print(1,2,3,"面对疾风吧") #输出多个对象
+print("www","面对疾风吧","com",sep=".") #输出多个对象，并以"."分隔
+a=3.1415926
+b="abcdefg"
+print(a,b) #可以输出变量
+list = [1, 'a', 3,14]
+print(list)  #输出列表变量
+tuple = (1, 'a', 3,14)
+print(tuple)  #输出元组变量
+dict = {'a': 1, 'b': 2}
+print(dict)  # 输出字典变量
+
+l= [1, 2, 3, 4]
+for x in l:
+    print(x, end=' ' if x != l[-1] else '\n') #不同情况输出的分隔符不同。
+</code></pre></div>
+<span id="2格式化输出" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2格式化输出">2.格式化输出：</h4>
+<p>print中允许数据的格式化输出。其格式控制符和转换说明符用"%"分隔（C语言用逗号）</p>
+<p>%字符在字符串中，是格式控制符，在后面则是转换说明符，%是标记转换的开始。</p>
+<p>如：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>s = 'fxfILY'
+x = len(s)
+print('The length of %s is %d' % (s,x)) 
+</code></pre></div>
+<p>形式为<em><strong>‘ 其他+%格式化字符 +其他 ’ % exp</strong></em></p>
+<p>数据的格式化输出符号和描述：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>%c 格式化字符及其ASCII码
+%s 格式化字符串
+%d 格式化整数
+%u 格式化无符号整型
+%o 格式化无符号八进制数
+%x 格式化无符号十六进制数
+%X 格式化无符号十六进制数（大写）
+%f 格式化浮点数字，可指定小数点后的精度
+%e 用科学计数法格式化浮点数
+%E 作用同%e，用科学计数法格式化浮点数
+%g %f和%e的简写
+%G %f 和 %E 的简写
+%p 用十六进制数格式化变量的地址
+</code></pre></div>
+<p>格式化操作符辅助指令：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>*     定义宽度或者小数点精度
+-     用做左对齐
++     在正数前面显示加号( + )
+&#x3C;sp>  在正数前面显示空格
+#     在八进制数前面显示零('0')，在十六进制前面显示'0x'或者'0X'(取决于用的是'x'还是'X')
+0     显示的数字前面填充'0'而不是默认的空格
+%     '%%'输出一个单一的'%'
+(var) 映射变量(字典参数)
+m.n.  m是显示的最小总宽度,n 是小数点后的位数(如果可用的话)
+</code></pre></div>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>PI = 3.141592653
+print('%10.3f'%PI)  #字段宽10，精度3
+#输出结果:     3.142（左边5个空格，以保证指定宽度为10成立，3f表明精确到小数点后三位）
+
+PI=3.1415926
+print('%-10.3f' %PI) #-表示左对齐
+#输出结果:3.142     (左对齐，仍为10个字符，但空格在右边)
+
+PI=3.1415926
+print('%+f' % PI)  #+表示显式正负号
+#输出结果:+3.141593(显示正号,类型f的默认精度为6位小数)  
+
+PI=3.1415926
+print('%010.3f'%PI) #0表示转换值若位数不够则用0填充
+#输出结果:000003.142（字段宽度为10，精度为3，不足处用0填充空白）
+</code></pre></div>
+<span id="3format函数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3format函数">3.format()函数：</h4>
+<p>format()函数和%的格式化字符串功能类似，但更加强大。</p>
+<p>形式上，format()函数用{|}来代替%（"|"可以是数字，代表后面的参数位置，也可以是变量名称，参数传递时直接传递给该变量），可以用接收参数的方式对字符串进行格式化。</p>
+<p>参数位置可以不按显式顺序，参数也可以不用或者用多次。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print('Hello {0}! I am {1}'.format('python','zzh')) #按顺序
+# 输入结果：Hello python! I am zzh
+
+print('Hello {} I am {}'.format('python','zzh')) #默认顺序
+# 输入结果：Hello python! I am zzh
+
+print('Hello {1}! I am {0}. {0} is alaways smart!'.format('zzh','python')) #不按顺序+多次使用一个变量
+# 输出结果：Hello python! I am zzh. zzh is alaways smart!
+
+name = 'zzh'
+noname = '???'
+print('{a} love {b}'.format(a = name,b = noname)) #使用变量
+#输出结果：zzh love ???
+
+name= ['zzh', '???']
+print('{l[0]} love {l[1]}'.format(l =name )) #使用列表
+
+names={'name1':'zzh','name2':'???'}
+print('{name[name1]} love {name[name2]}'.format(name=names)) #用字典
+</code></pre></div>
+<span id="4join函数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4join函数">4.join()函数：</h4>
+<p>将一个包含多个字符串的可迭代对象，转为用分隔符s连接的字符。</p>
+<p>不是字符串的可以参考上面的map()函数，第一个参数设置为str，将每个可迭代对象转化过来即可。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>number=[0,1,2,3,4,5,6]
+print("?".join(map(str,(number))))
+#输出结果: 0?1?2?3?4?5?6
+</code></pre></div>
+<p>其他内容暂且不再详细介绍，暂时掌握这些基本够用了。</p>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],"$L28","$L29","$L2a"]}],"$L2b"]}]
+1b:["$","$L2c",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+2e:I[2708,["825","$2","953","$c"],"FeedbackForm"]
+f:300
+28:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/cpp-member-classes/","children":[["$","span",null,{"children":"上一篇"}],"c++类——成员类"]}],["$","$Ld",null,{"href":"/blog/cpp-const-members/","children":[["$","span",null,{"children":"下一篇"}],"c++类——常成员"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$Ld",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-class-decorators",{"children":[["$","$Ld",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$Ld",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+29:["$","$L2e",null,{"contentId":"python-input-output"}]
+2a:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+2b:["$","$L25",null,{"headings":"$19:props:headings"}]
+2d:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"

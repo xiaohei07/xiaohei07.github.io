@@ -1,0 +1,202 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"cpp-static-members","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","cpp-static-members",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+6:C
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+14:"static/chunks/825-1a8f209f3ada760f.js"
+15:"static/chunks/app/layout-b30e31df6c2e8735.js"
+16:I[6767,["825","$14","177","$15"],"DisplayProvider"]
+17:"NavigationFeedback"
+18:I[2842,["825","$14","177","$15"],"$17"]
+19:I[8587,["825","$14","177","$15"],"SiteHeader"]
+1a:I[5803,["825","$14","177","$15"],"SiteFrame"]
+1b:I[164,["825","$14","177","$15"],"ProfileSidebar"]
+1c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+1d:I[3498,["825","$14","953","$1c"],"default"]
+1f:I[6279,["825","$14","953","$1c"],"FilterLink"]
+20:I[4067,["825","$14","953","$1c"],"ArticleToc"]
+21:I[4711,["825","$14","953","$1c"],"ArticleBody"]
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L16",null,{"children":[["$","$L18",null,{}],["$","$L19",null,{"tags":["知识点","python","C++"]}],["$","$L1a",null,{"sidebar":["$","$L1b",null,{}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1d",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1d",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1d",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1d",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+22:T21cf,<span id="一概念" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一概念">（一）概念:</h3>
+<p>类成员冠以static声明时，称为静态成员。静态成员用于解决类内数据共享的问题，既能够避免使用全局变量，又能够让同类的多个对象数据共享。</p>
+<p>如果使用全局变量对封装的类来说并不安全，因为其他的类外函数能共享、修改全局变量，同时容易发生名字的冲突问题。</p>
+<p>静态成员包括静态数据成员和静态成员函数。</p>
+<p>下面分别介绍。</p>
+<span id="二静态数据成员" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二静态数据成员">（二）静态数据成员：</h3>
+<span id="1-概念" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-概念">1. 概念：</h4>
+<p>c++类中声明数据成员时, 加上static关键字声明的成员成为静态数据成员。</p>
+<p>普通非 <code>inline</code> 静态数据成员的形式：<em><strong>类内：static 数据类型 变量名;</strong></em> 声明</p>
+<p>​			<em><strong>类外：数据类型 类名::变量名=值;</strong></em>  / <em><strong>数据类型 类名::变量名;</strong></em> 定义和初始化</p>
+<span id="2-特点" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-特点">2. 特点：</h4>
+<ol>
+<li>静态数据成员遵守 <code>public</code>、<code>protected</code>、<code>private</code> 访问规则。普通非 <code>inline</code> 静态成员的类内声明通常不是定义，需要定义时写在命名空间作用域中。类外定义可以不写显式初值，例如 <code>int Point::pointcounter;</code>，静态存储期的整数会零初始化。非 <code>volatile</code> 的 <code>const</code> 整数或枚举静态成员可以在类内给出常量初值；如果发生 odr-use（例如取地址），仍需类外定义，并且不重复初值。从 C++17 起，<code>inline static int count = 0;</code> 可以直接在类内定义和初始化。</li>
+<li>本文未使用 <code>thread_local</code> 的静态数据成员只有一份存储，由同类对象共享。它具有静态存储期，独立于各个对象；即使尚未创建该类对象，也可以按访问权限使用。它仍是类的成员，具有类作用域和成员访问控制。</li>
+<li>可以通过对象访问静态数据成员，也可以通过<strong>类名::静态数据成员</strong>的方法去访问。</li>
+<li>静态数据成员可以作为成员函数的默认参数值，其类型可以是所属类的类型（普通数据成员均不可）。</li>
+<li>常成员函数可以修改非 <code>const</code> 静态数据成员，因为它们不属于 <code>this</code> 所指对象的子对象；声明为 <code>const</code> 的静态数据成员仍不能修改。</li>
+<li><code>sizeof</code> 计算对象大小时不会把静态数据成员算进去，但类对象大小也不等于非静态成员大小的简单求和，还需要考虑对齐、填充和基类等因素。</li>
+</ol>
+<p>静态成员的声明、定义和类内初始化条件见 <a href="https://eel.is/c++draft/class.static.data" rel="noopener noreferrer">C++ 标准草案</a>，C++17 的 <code>inline</code> 变量见 <a href="https://gcc.gnu.org/projects/cxx-status.html#cxx17" rel="noopener noreferrer">GCC 标准支持表</a>，对象大小规则见 <a href="https://eel.is/c++draft/expr.sizeof#2" rel="noopener noreferrer"><code>sizeof</code></a>。</p>
+<span id="3-代码实现" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-代码实现">3. 代码实现：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class Point
+{
+private:
+	double x, y;
+public:
+	static int pointcounter;//声明
+	Point()
+	{
+		x = 0;
+		y = 0;
+		pointcounter++;//可以使用，不是定义初始化
+	}
+	Point(double x, double y)
+	{
+		this->x = x;
+		this->y = y;
+		pointcounter++;//同上
+	}
+	void move(double x, double y)
+	{
+		this->x = x;
+		this->y = y;
+	}
+	double getX()
+	{
+		return x;
+	}
+	double getY()
+	{
+		return y;
+	}
+	~Point()
+	{
+		pointcounter--;//仍旧存在，不会销毁，可以访问。
+	}
+};
+int Point::pointcounter = 0;//在此处定义和初始化
+int main()
+{
+	cout &#x3C;&#x3C; "现存点数:" &#x3C;&#x3C; Point::pointcounter &#x3C;&#x3C; endl;//可以观察其变化情况是否独立于对象。
+	Point* p1 = new Point(1, 1);
+	Point* p2 = new Point(2, 2);
+	Point* p3 = new Point(3, 3);
+	cout &#x3C;&#x3C; "现存点数:" &#x3C;&#x3C; Point::pointcounter &#x3C;&#x3C; endl;
+	delete p1;
+	delete p2;
+	cout &#x3C;&#x3C; "现存点数:" &#x3C;&#x3C; Point::pointcounter &#x3C;&#x3C; endl;
+	delete p3;
+	cout &#x3C;&#x3C; "现存点数:" &#x3C;&#x3C; Point::pointcounter &#x3C;&#x3C; endl;
+	return 0;
+}
+</code></pre></div>
+<span id="三静态成员函数" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三静态成员函数">（三）静态成员函数：</h3>
+<h4 id="section-1-概念-1">1. 概念：</h4>
+<p>静态成员函数是指用static修饰的成员函数。</p>
+<p>静态成员函数可以组织与类相关、但不依赖某个特定对象的操作，例如处理静态数据成员。</p>
+<p>形式：<em><strong>static 返回类型 函数名( 参数表) { 函数体 }</strong></em></p>
+<span id="2特点" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2特点">2.特点：</h4>
+<ol>
+<li>静态成员函数没有 <code>this</code> 指针，不会隐式关联某个对象；它仍是类的成员函数，遵守类作用域和访问控制。</li>
+<li>静态成员函数可以直接使用可访问的静态成员。访问非静态成员时，需要明确给出对象、引用或指针，因为函数本身没有 <code>this</code>。</li>
+<li>静态成员函数的实现可以在类体内，也可以在类体外。</li>
+<li>静态成员函数的调用可以通过类，也可以通过对象，且<strong>无需对象就可以调用静态成员函数</strong>。</li>
+<li>例如，静态成员函数内部可以用 <code>obj.x</code> 或 <code>ptr->x</code> 访问对象的非静态成员；作为本类成员函数，它也可以这样访问本类对象的私有成员。</li>
+</ol>
+<p>以上 <code>this</code> 限制见 <a href="https://eel.is/c++draft/class.static.mfct" rel="noopener noreferrer">静态成员函数规则</a>。</p>
+<span id="3代码实现" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3代码实现">3.代码实现：</h4>
+<p>下面保留原文用于对比的代码，其中 <code>this->x = this->y = 0;</code> 是刻意展示的错误语句，整段照抄会编译失败。紧接着的 <code>p.x = p.y = 0;</code> 则通过明确的对象访问成员。这里还直接修改了计数器，后续数值仅用于观察静态变量的变化，不能再当作准确的存活对象数。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class Point
+{
+private:
+	double x, y;
+public:
+	static int pointcounter;
+	static void addpointconuter() //类内声明
+	{
+		pointcounter++;//允许对静态数据成员进行操作
+		//x++; //不允许直接调用默认成员。
+		return;
+	}//静态成员函数
+	static void delpointconuter();
+	Point()
+	{
+		x = 0;
+		y = 0;
+		pointcounter++;
+	}
+	Point(double x, double y)
+	{
+		this->x = x;
+		this->y = y;
+		pointcounter++;
+	}
+	void move(double x, double y)
+	{
+		this->x = x;
+		this->y = y;
+	}
+	double getX()
+	{
+		return x;
+	}
+	double getY()
+	{
+		return y;
+	}
+	~Point()
+	{
+		pointcounter--;
+	}
+} p;
+void Point::delpointconuter() //类外声明
+{
+	this->x = this->y = 0;//错误，根本没有this指针。
+	p.x = p.y = 0;
+	pointcounter = 0;
+}
+int Point::pointcounter = 0;
+int main()
+{
+	Point* p1 = new Point(1, 1);
+	Point* p2 = new Point(2, 2);
+	Point* p3 = new Point(3, 3);
+	cout &#x3C;&#x3C; "现存点数:" &#x3C;&#x3C; Point::pointcounter &#x3C;&#x3C; endl;
+	Point::addpointconuter();
+	cout &#x3C;&#x3C; "现存点数:" &#x3C;&#x3C; Point::pointcounter &#x3C;&#x3C; endl;
+	Point::delpointconuter();
+	cout &#x3C;&#x3C; "现存点数:" &#x3C;&#x3C; Point::pointcounter &#x3C;&#x3C; endl;
+	delete p1;
+	delete p2;
+	cout &#x3C;&#x3C; "现存点数:" &#x3C;&#x3C; Point::pointcounter &#x3C;&#x3C; endl;
+	delete p3;
+	cout &#x3C;&#x3C; "现存点数:" &#x3C;&#x3C; Point::pointcounter &#x3C;&#x3C; endl;
+	return 0;
+}
+</code></pre></div>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L1e",["$","h1",null,{"tabIndex":-1,"children":"c++类——静态成员"}],["$","p",null,{"className":"article-deck","children":"围绕同类对象的数据共享，介绍静态数据成员、静态成员函数及其访问方式"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-17","children":"2023-03-17"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-17","children":"2026-10-17"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,468"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L1f","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$L1f","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$L1f","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]]}],["$","$L20",null,{"headings":[{"id":"section-一概念","text":"（一）概念:","level":3},{"id":"section-二静态数据成员","text":"（二）静态数据成员：","level":3},{"id":"section-1-概念","text":"1. 概念：","level":4},{"id":"section-2-特点","text":"2. 特点：","level":4},{"id":"section-3-代码实现","text":"3. 代码实现：","level":4},{"id":"section-三静态成员函数","text":"（三）静态成员函数：","level":3},{"id":"section-1-概念-1","text":"1. 概念：","level":4},{"id":"section-2特点","text":"2.特点：","level":4},{"id":"section-3代码实现","text":"3.代码实现：","level":4}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L21",null,{"html":"$22"}],"$L23","$L24","$L25"]}],"$L26"]}]]}]
+c:null
+12:[["$","title","0",{"children":"c++类——静态成员 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"围绕同类对象的数据共享，介绍静态数据成员、静态成员函数及其访问方式。"}]]
+27:I[2708,["825","$14","953","$1c"],"FeedbackForm"]
+24:["$","$L27",null,{"contentId":"cpp-static-members"}]
+25:["$","div",null,{"className":"related-note","children":[["$","$L1d",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+26:["$","$L20",null,{"headings":"$9:props:children:1:props:headings"}]
+23:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$L1d",null,{"href":"/blog/cpp-friends/","children":[["$","span",null,{"children":"上一篇"}],"c++类——友元"]}],["$","$L1d",null,{"href":"/blog/cpp-constructors/","children":[["$","span",null,{"children":"下一篇"}],"c++类——构造函数"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-2",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-3",{"children":[["$","$L1d",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+1e:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1d",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1d",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$L1d",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L1f",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}]

@@ -1,0 +1,750 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","953","$c"],"default"]
+16:I[6279,["825","$2","953","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"c++类——模版(二)"}],["$","p",null,{"className":"article-deck","children":"展开函数模板重载和类模板用法，涉及函数参数、成员模板、继承、友元及静态成员"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"slug","t":"d","k":"cpp-templates-2","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"c++类——模版(二) | 07xiaohei"}],["$","meta","1",{"name":"description","content":"展开函数模板重载和类模板用法，涉及函数参数、成员模板、继承、友元及静态成员。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","953","$c"],"ArticleToc"]
+26:I[4711,["825","$2","953","$c"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-04-14","children":"2023-04-14"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"4,202"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",16," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$L16","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$L16","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-一函数模版","text":"（一）函数模版：","level":3},{"id":"section-1-格式与定义","text":"1. 格式与定义：","level":4},{"id":"section-2--重载函数模版","text":"2.  重载函数模版：","level":4},{"id":"section-二类模版","text":"（二）类模版：","level":3},{"id":"section-1-格式","text":"1. 格式：","level":4},{"id":"section-2-类模版作为函数参数","text":"2. 类模版作为函数参数：","level":4},{"id":"section-3-模板类和类模板","text":"3. 模板类和类模板：","level":4},{"id":"section-4-函数模板作为类模版成员","text":"4. 函数模板作为类模版成员：","level":4},{"id":"section-5-类层次中的类模版","text":"5. 类层次中的类模版：","level":4},{"id":"section-6-类模版和友元","text":"6. 类模版和友元：","level":4},{"id":"section-7-类模版和static成员","text":"7. 类模版和static成员：","level":4}],"mobile":true}]
+27:T6167,<span id="一函数模版" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一函数模版">（一）函数模版：</h3>
+<p>重载函数通常基于不同的数据类型实现类似的操作，对不同数据类型有完全相同的操作，用函数模版实现更为简介方便。</p>
+<span id="1-格式与定义" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-格式与定义">1. 格式与定义：</h4>
+<p>　<em><strong>template &#x3C;类型形式参数表></strong></em>
+　<em><strong>返回类型 函数名(参数列表) { 函数体 }</strong></em></p>
+<p>类型形式参数表= <em><strong>class T<sub>1</sub>, class T<sub>2</sub>, ... , class T<sub>n</sub></strong></em> or  <em><strong>typename T<sub>1</sub>, typename T<sub>2</sub>, ... , typename T<sub>n</sub></strong></em></p>
+<p>函数模版定义由模版说明和函数定义构成。</p>
+<p>模版说明的类属参数必须在函数定义中至少出现一次。</p>
+<p>函数参数表中可以使用类属类型参数，也可以使用一般类型参数。</p>
+<p>函数模板不允许自动类型转化。</p>
+<p>其他要点前文已有讲述，此处不再重复。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+template &#x3C;typename T>  
+bool IsEqual(const T&#x26; left, const T&#x26; right)
+{
+	return left == right;
+}
+
+template &#x3C;typename T1,typename T2>
+bool IsEqual2(const T1&#x26; left, const T2&#x26; right)
+{
+	return left == right;
+}
+
+int main()
+{
+	cout &#x3C;&#x3C; IsEqual(1, 1) &#x3C;&#x3C; endl;           // 隐式实例化
+	//cout&#x3C;&#x3C;IsEqual(1,1.2)&#x3C;&#x3C;endl;            // 模板参数不匹配,不知道是把int推断为double还是double推断为int
+	cout &#x3C;&#x3C; IsEqual&#x3C;int>(1, 1.2) &#x3C;&#x3C; endl;    // 显式实例化
+	cout &#x3C;&#x3C; IsEqual&#x3C;double>(1, 1.2) &#x3C;&#x3C; endl; // 显式实例化
+
+	cout &#x3C;&#x3C; IsEqual2(1, 1) &#x3C;&#x3C; endl;          //隐式实例化,表示IsEqual2&#x3C;int,int>
+	cout &#x3C;&#x3C; IsEqual2(1,1.2)&#x3C;&#x3C;endl;           //隐式实例化,表示IsEqual2&#x3C;int,double>
+	cout &#x3C;&#x3C; IsEqual2&#x3C;int,double>(1, 1.2) &#x3C;&#x3C; endl; // 显式实例化
+	cout &#x3C;&#x3C; IsEqual2&#x3C;double,int>(1, 1.2) &#x3C;&#x3C; endl; // 显式实例化,注意此处1.2转为int后为1,返回true
+	return 0;
+}
+//运行结果:
+//1
+//1
+//0
+//1
+//0
+//0
+//1
+</code></pre></div>
+<span id="2-重载函数模版" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2--重载函数模版">2.  重载函数模版：</h4>
+<p>当模版类型不能满足需要（不能提供类型的隐式转换）时，函数模版可以进行重载（效果和普通的函数重载一致），而且可以和普通重载函数并存。</p>
+<p>此时如果均存在匹配，涉及到了匹配的优先级关系，为此，c++的函数模版有匹配约定：</p>
+<ul>
+<li>寻找和使用最符合函数名和函数类型的普通函数，若找到则调用它。</li>
+<li>否则寻找一个函数模版，将其实例化产生一个匹配的函数参数，若找到则调用它。</li>
+<li>否则，寻找可以通过类型转换进行参数匹配的重载函数，若找到则调用它。</li>
+<li>如果前三次的寻找均为找到匹配函数，则调用错误；如果在三次的某次寻找中调用有多余一个的匹配选择，则调用匹配出现二义性。</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+bool IsEqual(const int&#x26; left,const int&#x26; right)//普通函数重载
+{
+	cout &#x3C;&#x3C; "重载普通函数1" &#x3C;&#x3C; endl;
+	return left == right;
+}
+
+bool IsEqual(const double&#x26; left, const double&#x26; right)//普通函数重载
+{
+	cout &#x3C;&#x3C; "重载普通函数2" &#x3C;&#x3C; endl;
+	return left == right;
+}
+
+template &#x3C;typename T>  
+bool IsEqual(const T&#x26; left, const T&#x26; right)
+{
+	cout &#x3C;&#x3C; "模版" &#x3C;&#x3C; endl;
+	return left == right;
+}
+
+template &#x3C;typename T1,typename T2>
+bool IsEqual(const T1&#x26; left, const T2&#x26; right)//重载,参数类型不同
+{
+	cout &#x3C;&#x3C; "重载模版1,参数类型不同" &#x3C;&#x3C; endl;
+	return left == right;
+}
+
+template &#x3C;typename T>
+bool IsEqual(const T&#x26; right) //重载,参数个数不同
+{
+	cout &#x3C;&#x3C; "重载模版2，参数个数不同" &#x3C;&#x3C; endl;
+	return 1 == right;
+}
+
+//当同时使用下面两个函数模版时,如果传入(double,int)类型的参数,将会导致二义性错误。
+//template &#x3C;typename T1>
+//bool IsEqual(const T1&#x26; left, const int&#x26; right)//重载,参数类型不同
+//{
+//	cout &#x3C;&#x3C; "重载模版3,参数类型不同" &#x3C;&#x3C; endl;
+//	return left == right;
+//}
+//
+//template &#x3C;typename T2>
+//bool IsEqual(const double&#x26; left, const T2&#x26; right)//重载,参数类型不同
+//{
+//	cout &#x3C;&#x3C; "重载模版3,参数类型不同" &#x3C;&#x3C; endl;
+//	return left == right;
+//}
+
+
+int main()
+{
+	cout &#x3C;&#x3C; IsEqual(1, 1) &#x3C;&#x3C; endl;//因为有最佳匹配的普通函数1,调用该函数
+	cout &#x3C;&#x3C; IsEqual(1,1.2)&#x3C;&#x3C;endl; //因为没有最佳匹配的普通函数,检查模版类,检查到有最佳的匹配重载模版1,调用该函数模版
+	cout &#x3C;&#x3C; IsEqual(1.2, 1.2) &#x3C;&#x3C; endl; //因为有最佳匹配的普通函数2,调用该函数
+	cout &#x3C;&#x3C; IsEqual(1.2, 1) &#x3C;&#x3C; endl;   //因为没有最佳匹配的普通函数,检查模版类,检查到有最佳的匹配重载模版1,调用该函数模版
+	cout &#x3C;&#x3C; IsEqual("1", "1") &#x3C;&#x3C; endl; //因为没有最佳匹配的普通函数,检查模版类,检查到有最佳的匹配重载模版,调用该函数模版
+	cout &#x3C;&#x3C; IsEqual&#x3C;int,double>(1, 1) &#x3C;&#x3C; endl;   //显式说明调用的是函数模版,寻找到最佳匹配调用
+	cout &#x3C;&#x3C; IsEqual&#x3C;double,int>(1, 1.2) &#x3C;&#x3C; endl; //显式说明调用的是函数模版,寻找到最佳匹配调用
+	cout &#x3C;&#x3C; IsEqual&#x3C;char>('1') &#x3C;&#x3C; endl;;         //显式说明调用的是函数模版,寻找到最佳匹配调用
+	return 0;
+}
+//运行结果:
+//重载普通函数1
+//1
+//重载模版1, 参数类型不同
+//0
+//重载普通函数2
+//1
+//重载模版1, 参数类型不同
+//0
+//模版
+//1
+//重载模版1, 参数类型不同
+//1
+//重载模版1, 参数类型不同
+//1
+//重载模版2，参数个数不同
+//0
+</code></pre></div>
+<span id="二类模版" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二类模版">（二）类模版：</h3>
+<p>类模版用于实现类所需数据的类型参数化。</p>
+<p>类模版在表示如数组、表、图等数据结构上显得特别重要，这些数据结构的表示和算法不受所包含的元素类型的影响。</p>
+<span id="1-格式" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-格式">1. 格式：</h4>
+<p><em><strong>template&#x3C;类型形式参数表></strong></em>
+<em><strong>class 类名{ ... };</strong></em></p>
+<p>类属参数可以用于声明类中的成员变量和成员函数，在类中使用内置雷类型的地方也都可以用类属参数来声明。</p>
+<p>另外，类模版中的成员函数放到类模版定义外面写时的语法有限制：</p>
+<p><em><strong>template&#x3C;类型形式参数表></strong></em></p>
+<p><em><strong>返回值类型 类模板名&#x3C;类型参数名列表>::成员函数名(参数表) { 函数体 }</strong></em></p>
+<p>创建对象的格式：</p>
+<p><em><strong>类模板名&#x3C;真实类型参数表> 对象名(构造函数实际参数表);</strong></em></p>
+<p>如果有无参构造函数，可以是：</p>
+<p><em><strong>类模板名&#x3C;真实类型参数表> 对象名;</strong></em></p>
+<p>注意：类模版形参不存在实参推演的问题，不能给真实类型参数表传递实参，只能传递类型。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+template&#x3C;class T>
+class Person {
+private:
+	T mAge;
+	T mID;
+public:
+	//类内定义类的成员函数
+	Person(const Person&#x3C;T>&#x26; a) 
+	{ 
+		this->mAge = a.mAge;
+		this->mID = a.mID;
+	}
+	Person() {}
+	//T在返回值中
+	T getage() 
+	{
+		return mAge;
+	}
+	T getmID() 
+	{
+		return mID;
+	}
+	//类外定义类的成员函数
+	//T在传入形参中
+	Person(T age, T id);
+	void Show();
+
+};
+//外部实现成员函数
+template&#x3C;class T>
+Person&#x3C;T>::Person(T age, T id) {
+	this->mID = id;
+	this->mAge = age;
+}
+template&#x3C;class T>
+void Person&#x3C;T>::Show() {
+	cout &#x3C;&#x3C; "Age:" &#x3C;&#x3C; mAge &#x3C;&#x3C; " ID:" &#x3C;&#x3C; mID &#x3C;&#x3C; endl;
+}
+int main()
+{
+	Person&#x3C;int> p1(10,20021111); //一般声明
+	Person&#x3C;string>p2("15", "20031111");
+	Person&#x3C;string>p3(p2);
+	Person&#x3C;char> p4; //无参构造的说明
+	//Person&#x3C;2> p5;  //错误,没有实参类型推导,不能这样操作,必须是类型说明符
+	p1.Show();
+	p2.Show();
+	p3.Show();
+	cout &#x3C;&#x3C; p1.getage() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; p2.getmID() &#x3C;&#x3C; endl;
+	return 0;
+}
+//运行结果:
+//Age:10 ID : 20021111
+//Age : 15 ID : 20031111
+//Age : 15 ID : 20031111
+//10
+//20031111
+</code></pre></div>
+<span id="2-类模版作为函数参数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-类模版作为函数参数">2. 类模版作为函数参数：</h4>
+<p>函数的形式参数类型可以是类模版或类模版的引用，对应的实际参数是该类模版实例化的模版类对象。</p>
+<p>因此，只有函数模版能够拥有模版类参数。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+template&#x3C;class T>
+class Array {
+public:
+	T n;
+};
+//声明函数模板
+template&#x3C;class T>
+T funtest(Array&#x3C;T> a) { cout &#x3C;&#x3C; a.n &#x3C;&#x3C; endl; return a.n; }
+
+int main() 
+{
+	Array&#x3C;int> a;
+	a.n = 1;
+	//函数模板调用类模板的实例化对象
+	cout &#x3C;&#x3C; funtest(a) &#x3C;&#x3C; endl;
+	return 0;
+}
+</code></pre></div>
+<span id="3-模板类和类模板" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-模板类和类模板">3. 模板类和类模板：</h4>
+<p>类模板是模板的一种，可以在使用确定类属参数。</p>
+<p>类模板不是一个类，不会生成对象，也不会占据空间。</p>
+<p>模板类是类模板的一个实例，是确定了类属参数的具体类，可以直接生成对象。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>//模板类:
+//template&#x3C;class T>
+//class Array {};
+//类模板:
+Array&#x3C;double> array;
+</code></pre></div>
+<span id="4-函数模板作为类模版成员" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-函数模板作为类模版成员">4. 函数模板作为类模版成员：</h4>
+<p>类模板中的成员函数还可以是一个函数模板成员，函数模板只有在被调用时才会被实例化。</p>
+<p>无论是原则还是声明，模板语法的优先级是最高的，不同模板的优先级先根据其声明顺序来判断，其次是函数修饰，然后是返回值。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+template &#x3C;class T>
+class A
+{
+public:
+	template &#x3C;class T2>
+	void Func(T2 t) { cout &#x3C;&#x3C; t &#x3C;&#x3C; endl; return; }  //成员函数模板
+	template &#x3C;class T3>
+	A&#x3C;T> Func2(T3 t); //类外定义：
+};
+template&#x3C;class T3> //最外层类模板对应的类属参数
+template&#x3C;class T>  //内层函数模板对应的类属参数
+A&#x3C;T3>              //返回值
+A&#x3C;T3>::Func2(T t)  //函数名和形参表 
+{ 
+	cout &#x3C;&#x3C; t &#x3C;&#x3C; endl; //函数体
+	return *this;
+}
+int main()
+{
+	A&#x3C;int> a;
+	a.Func&#x3C;int>('K');  //成员函数模板Func被实例化
+	a.Func("hello");
+	a.Func2("world");
+	return 0;
+}
+//运行结果:
+//75
+//hello
+//world
+</code></pre></div>
+<span id="5-类层次中的类模版" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-5-类层次中的类模版">5. 类层次中的类模版：</h4>
+<p>在类层次中，类模板可以是基类，也可以是派生类。</p>
+<p>类模板可以从类模板或普通类派生：</p>
+<ul>
+<li>当一个类模板从普通类派生时，意味着派生类增加了类属参数。</li>
+<li>当一个类模板从类模板派生时，可以添加新的类属参数，也可以保持，同时其他性质和一般的类之间的派生性质相同。</li>
+</ul>
+<p>普通类可以从模板类或普通类派生：</p>
+<ul>
+<li>当一个普通类从类模板派生时，意味着派生类继承基类时，需要提供实例化的类型参数使派生的普通类内没有类属参数，同时需要编译分配内存。</li>
+<li>普通类之间的派生不涉及模板。</li>
+</ul>
+<p>类模板之间允许有多继承关系（性质简单，此略）。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+
+//类模板派生普通类
+template&#x3C;class T>
+class Person {
+public:
+	T age;
+	Person() :age(5) {}
+	void print()
+	{
+		cout &#x3C;&#x3C; "age:" &#x3C;&#x3C; age &#x3C;&#x3C; endl;
+	}
+};
+//由类模板派生普通类时,提供实例化的类型参数,编译分配内容
+class SubPerson : public Person&#x3C;int> 
+{
+public:
+	double age;
+	//构造函数调用不需要指定Person后面的类型
+	SubPerson() :age(10), Person() {}
+	void print() 
+	{
+		cout &#x3C;&#x3C; "age:" &#x3C;&#x3C; age &#x3C;&#x3C; endl;
+	}
+};
+
+
+//类模板派生类模板
+template&#x3C;class T>
+class Animal {
+public:
+	T age;
+	Animal() :age(5) {}
+	void print() 
+	{
+		cout &#x3C;&#x3C; "age" &#x3C;&#x3C; age &#x3C;&#x3C; endl;
+	}
+};
+template&#x3C;class T, class T1>   //增加新的类属参数
+class Cat : public Animal&#x3C;T> 
+{
+public:
+	T1 age;
+	//构造函数调用需要指定Animal后面的类型
+	Cat() :Animal&#x3C;T>(), age(10) {}
+	void print() 
+	{
+		cout &#x3C;&#x3C; "age" &#x3C;&#x3C; age &#x3C;&#x3C; endl;
+	}
+};
+
+
+//普通类派生类模板,需要增加类属参数
+class Student 
+{
+public:
+	int age;
+	Student() :age(5) {}
+	void print() 
+	{
+		cout &#x3C;&#x3C; "age" &#x3C;&#x3C; age &#x3C;&#x3C; endl;
+	}
+};
+template&#x3C;class T>
+class GoodStudent:public Student
+{
+public:
+	T age;
+	GoodStudent() :Student(), age(10) {}
+	void print()
+	{
+		cout &#x3C;&#x3C; "age" &#x3C;&#x3C; age &#x3C;&#x3C; endl;
+	}
+};
+
+
+int main(void)
+{
+	Person&#x3C;double> p;
+	SubPerson pa;
+	Animal&#x3C;double> a;
+	Cat&#x3C;int,double> cat;
+	Student s;
+	GoodStudent&#x3C;double> gs;
+	p.print();
+	pa.print();
+	a.print();
+	cat.print();
+	s.print();
+	gs.print();
+	return 0;
+}
+//运行结果:
+//age:5
+//age:10
+//age5
+//age10
+//age5
+//age10
+</code></pre></div>
+<span id="6-类模版和友元" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-6-类模版和友元">6. 类模版和友元：</h4>
+<p>模板类的友元分三类：</p>
+<p>1，非模板友元。</p>
+<p>2，约束模板友元，即友元的类型取决于类被实例化时的类型。</p>
+<p>3，非约束模板友元，即友元的所有具体化都是类的每一个具体化的友元。</p>
+<ul>
+<li>一个函数或函数模板或函数模板的实例化（这个函数可以是某个类的成员函数）可以是类或类模板的友元——这会使其成为由该类模板实例化的每个类模板的友元函数。</li>
+<li>一个类或类模板或者一个类模板的实例化可以是类或类模板的友元类——逻辑同上。</li>
+</ul>
+<p>所有友元中的函数的参数或者返回值可以是该模板类的类属参数。</p>
+<p>友元的内容十分复杂，具体内容详见代码的讲解：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+
+//前置声明
+template&#x3C;class T>
+class base;
+
+//类/类模板作友元均需要提前声明
+class A1;
+
+template&#x3C;class TA2>
+class A2;
+
+template&#x3C;class TA3>
+class A3;
+
+template&#x3C;class TA4>
+class A4;
+
+//函数模板作友元需要提前声明;
+template&#x3C;class T>
+void externprint2();
+
+template&#x3C;class T>
+T getvalue2(const base&#x3C;T>&#x26; b);
+
+template&#x3C;class T>
+class base
+{             
+private:
+	T val;
+public:
+	base(T value) :val(value) {}
+	//非模板友元：
+	friend void externprint();              //普通函数友元,函数没有参数,只能对全局类变量操作
+	friend T getvalue(const base&#x3C;T>&#x26; b);    //普通函数友元(不是函数模板),函数有参数,可以操作对应类型
+	friend class A1;                        //类友元
+	friend class A2&#x3C;int>;                   //类模板实例化的友元,只有此一种是其所有实例化的友元
+	//约束模板友元
+	friend void externprint2&#x3C;T>();          //函数模板友元,且两者的实例化友元一一对相应
+	friend T getvalue2&#x3C;>(const base&#x3C;T>&#x26; b); //函数模板友元,且两者的实例化友元一一对相应
+	friend class A3&#x3C;T>;                     //类模板友元，且两者的实例化友元一一对应
+
+	//非约束模板友元
+	template&#x3C;class T1>
+	friend bool externprint3(T1 t);         //函数模板友元,两者的对应关系是自由的
+	template&#x3C;class TA2>
+	friend class A4;                        //类模板友元,两者的对应关系是自由的
+};
+base&#x3C;double> bd(3.14);
+base&#x3C;int> bi(5);
+
+void externprint()
+{
+	cout &#x3C;&#x3C; sizeof(bi.val) &#x3C;&#x3C; ",";
+	cout &#x3C;&#x3C; sizeof(bd.val) &#x3C;&#x3C; endl;
+	return;
+}
+
+//可以重载多个类型
+int getvalue(const base&#x3C;int>&#x26; b) 
+{
+	cout &#x3C;&#x3C; "int base:" &#x3C;&#x3C; b.val &#x3C;&#x3C; endl;
+	return b.val;
+}
+double getvalue(const base&#x3C;double>&#x26; b)
+{
+	cout &#x3C;&#x3C; "double base:" &#x3C;&#x3C; b.val &#x3C;&#x3C; endl;
+	return b.val;
+}
+
+template&#x3C;class T>
+void externprint2() 
+{
+	if(bd.val)//证明是友元函数
+	cout &#x3C;&#x3C; sizeof(base&#x3C;T>) &#x3C;&#x3C; endl;
+	return;
+}
+
+template&#x3C;class T>
+T getvalue2(const base&#x3C;T>&#x26; b) 
+{
+	cout &#x3C;&#x3C; typeid(base&#x3C;T>).id() &#x3C;&#x3C; " base:" &#x3C;&#x3C; b.val &#x3C;&#x3C; endl;
+	return b.val;
+}
+
+template&#x3C;class T1>
+bool externprint3(T1 t) 
+{
+	if (t == bd.val)return true;
+	else return false;
+}
+
+class A1
+{
+	base&#x3C;int> b1;
+	base&#x3C;double> b2;
+	base&#x3C;char> b3;
+	base&#x3C;string> b4;
+public:
+	A1() :b1(3), b2(3.14), b3('a'), b4("bbb") {}
+	void print() 
+	{ 
+		cout &#x3C;&#x3C; b1.val &#x3C;&#x3C; endl; 
+		cout &#x3C;&#x3C; b2.val &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; b3.val &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; b4.val &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; endl;
+	}
+};
+
+template&#x3C;class TA2>
+class A2
+{
+private:
+	base&#x3C;int> b1;
+	base&#x3C;double> b2;
+	base&#x3C;char> b3;
+	base&#x3C;string> b4;
+public:
+	TA2 bb;
+	A2() :b1(3), b2(3.14), b3('a'), b4("bbb") {}
+	void print()
+	{
+		cout &#x3C;&#x3C; b1.val &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; b2.val &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; b3.val &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; b4.val &#x3C;&#x3C; endl;
+		bb = b1.val;
+		cout &#x3C;&#x3C; bb &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; endl;
+	}
+};
+
+template&#x3C;class TA3>
+class A3 
+{
+	base&#x3C;int> b1;
+	base&#x3C;double> b2;
+	base&#x3C;char> b3;
+	base&#x3C;string> b4;
+public:
+	TA3 bb;
+	A3() :b1(3), b2(3.14), b3('a'), b4("bbb") {}
+	void print() 
+	{ 
+		cout &#x3C;&#x3C; b1.val &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; b2.val &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; b3.val &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; b4.val &#x3C;&#x3C; endl;
+		bb = b3.val;
+		cout &#x3C;&#x3C; bb &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; endl;
+	}
+	void print2()
+	{
+		cout &#x3C;&#x3C; b1.val &#x3C;&#x3C; endl;
+		bb = b1.val;
+		cout &#x3C;&#x3C; bb &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; endl;
+	}
+	void print3()
+	{
+		cout &#x3C;&#x3C; b3.val &#x3C;&#x3C; endl;
+		bb = b3.val;
+		cout &#x3C;&#x3C; bb &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; endl;
+	}
+};
+
+template&#x3C;class TA4>
+class A4 
+{
+	base&#x3C;int> b1;
+	base&#x3C;double> b2;
+	base&#x3C;char> b3;
+	base&#x3C;string> b4;
+public:
+	TA4 bb;
+	A4() :b1(3), b2(3.14), b3('a'), b4("bbb") {}
+	void print()
+	{
+		cout &#x3C;&#x3C; b1.val &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; b2.val &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; b3.val &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; b4.val &#x3C;&#x3C; endl;
+		bb = b4.val;
+		cout &#x3C;&#x3C; bb &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; endl;
+	}
+};
+
+int main() 
+{
+	
+	A1 a1;
+	A2&#x3C;int> a21;
+	A2&#x3C;double> a22;
+	A3&#x3C;int> a31;
+	A3&#x3C;char> a32;
+	A4&#x3C;string> a41;
+	A4&#x3C;char> a42;
+	externprint();              //访问全局base对象的数据成员
+	//externprint2&#x3C;int>();      //访问bd是base&#x3C;double>,由一一对应关系,此处无法访问bd.val
+	externprint2&#x3C;double>();     //bd与double均为T,是一一对应关系,可以访问
+ 	cout &#x3C;&#x3C; externprint3(3) &#x3C;&#x3C; endl;     //由于是自由对应关系,两个externprint3均可访问b.d
+	cout &#x3C;&#x3C; externprint3(3.14) &#x3C;&#x3C; endl; 
+	cout &#x3C;&#x3C; endl;
+	a1.print();
+	a21.print();
+	//a22.print();              //只有A2&#x3C;int>这个实例化是友元类,A2&#x3C;double>因此没有访问base私有数据的权限
+	//a31.print();              //print访问多种类型,由于A3和base是模板类型的一一对应关系,此处只能访问int
+	a31.print2();				//A3&#x3C;int>只能对base&#x3C;int>访问
+	a32.print3();               //A3&#x3C;char>只能对base&#x3C;char>访问
+	a41.print();                //由自由对应关系,可以访问任意base实例化的val
+	//a42.print();              //无法转换string为char
+	return 0;
+}
+//运行结果:
+//4, 8
+//8
+//0
+//1
+//
+//3
+//3.14
+//a
+//bbb
+//
+//3
+//3.14
+//a
+//bbb
+//3
+//
+//3
+//3
+//
+//a
+//a
+//
+//3
+//3.14
+//a
+//bbb
+//bbb
+</code></pre></div>
+<span id="7-类模版和static成员" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-7-类模版和static成员">7. 类模版和static成员：</h4>
+<p>从类模版实例化的每个模版类有自己的类模版数据成员，该模版类的所有对象共享一个static数据成员。</p>
+<p>每个模版类有自己的类模板的static数据成员副本，这之间不是直接共享的。</p>
+<p>和非模版类的static数据成员一样，模版类的static数据成员也应该在文件范围定义和初始化。</p>
+<p>static数据成员可以用类属参数对应的类型声明，在外部定义时无需赋值，但是需要在前面说明template和类属参数表，以对类模版的相关模版类进行定义，这些static成员在创建模版类时自动默认初始化（如int则初始化为0，等等）。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+template&#x3C;class T>
+class A
+{
+protected:
+	T val;
+	//int类型:
+	static int totalcount;
+	//抽象类型
+	static T totalval;
+public:
+
+	A(T v) :val(v) { totalcount += 1; totalval += val; }
+	static T gettotalval() { return totalval; }
+	static int gettotalcount() { return totalcount; }
+	T getval() { return val; }
+	~A() { totalcount -= 1; totalval -= val; }
+};
+//定义确定类型静态数据成员
+template&#x3C;class T>
+T A&#x3C;T>::totalval;
+//定义抽象类型静态数据成员
+template&#x3C;class T>
+int A&#x3C;T>::totalcount=0;
+int main()
+{
+	A&#x3C;double> a1(5.5), a2(4.5), a3(3);
+	A&#x3C;int> a4(5), a5(4);
+	//两个模版类的静态数据成员在模版类内共享,但互相间独立。
+	cout &#x3C;&#x3C; A&#x3C;double>::gettotalcount() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; A&#x3C;double>::gettotalval() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; A&#x3C;int>::gettotalcount() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; A&#x3C;int>::gettotalval() &#x3C;&#x3C; endl;
+	return 0;
+}
+//运行结果:
+//3
+//13
+//2
+//9
+</code></pre></div>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],"$L28","$L29","$L2a"]}],"$L2b"]}]
+1b:["$","$L2c",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+2e:I[2708,["825","$2","953","$c"],"FeedbackForm"]
+f:300
+28:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/cpp-templates-1/","children":[["$","span",null,{"children":"上一篇"}],"c++类——模版(一)"]}],["$","$Ld",null,{"href":"/blog/cpp-templates-3/","children":[["$","span",null,{"children":"下一篇"}],"c++类——模版(三)"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-3",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-polymorphism-1",{"children":[["$","$Ld",null,{"href":"/blog/cpp-polymorphism-1/","children":"c++类——多态(一)"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+29:["$","$L2e",null,{"contentId":"cpp-templates-2"}]
+2a:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+2b:["$","$L25",null,{"headings":"$19:props:headings"}]
+2d:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"

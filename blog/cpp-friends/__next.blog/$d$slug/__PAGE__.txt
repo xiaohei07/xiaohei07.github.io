@@ -1,0 +1,263 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","953","$c"],"default"]
+16:I[6279,["825","$2","953","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"c++类——友元"}],["$","p",null,{"className":"article-deck","children":"围绕私有成员的访问，分别展示普通函数、类和类成员函数作为友元的声明与用法"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"slug","t":"d","k":"cpp-friends","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"c++类——友元 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"围绕私有成员的访问，分别展示普通函数、类和类成员函数作为友元的声明与用法。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","953","$c"],"ArticleToc"]
+26:I[4711,["825","$2","953","$c"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-17","children":"2023-03-17"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,725"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",6," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$L16","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$L16","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-一引言","text":"（一）引言:","level":3},{"id":"section-二概念","text":"（二）概念：","level":3},{"id":"section-三特性","text":"（三）特性：","level":3},{"id":"section-四分类","text":"（四）分类：","level":3},{"id":"section-1普通函数做友元","text":"1.普通函数做友元：","level":4},{"id":"section-2类做友元","text":"2.类做友元：","level":4},{"id":"section-3类的成员函数做友元","text":"3.类的成员函数做友元：","level":4},{"id":"section-五代码实现","text":"（五）代码实现：","level":3},{"id":"section-1普通函数做友元-1","text":"1.普通函数做友元：","level":4},{"id":"section-2类做友元-1","text":"2.类做友元：","level":4},{"id":"section-3类的成员函数做友元-1","text":"3.类的成员函数做友元：","level":4}],"mobile":true}]
+27:T257e,<span id="一引言" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一引言">（一）引言:</h3>
+<p>类具有封装和信息隐藏的特性，只有类的成员函数能够访问类的私有成员，程序中其他的函数在一般情况下是无法访问私有成员的。</p>
+<p>然而，有些时候，类要求自己的成员可对部分外部函数/类可见，如果将其内部数据成员和成员函数均声明为公有的，会破坏类隐藏的特性。另外，对某些成员函数多次调用时，由于参数传递、类型检查和安全性检查等需要时间开销，定义过多的成员函数会影响程序的运行效率。</p>
+<p>因此，为了解决上述问题，需要在类中声明友元——为了让非成员函数/类即普通函数/类能够访问类的私有成员。</p>
+<span id="二概念" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二概念">（二）概念：</h3>
+<p>友元是一种定义在类外部的普通函数或类或类的成员函数，需要在类的体内进行声明。</p>
+<p>友元的关键字为 <strong>friend</strong>，在声明时加在需要设为友元的类/函数头前。</p>
+<p>友元本身不是成员函数，但可以访问类中的私有成员，与成员函数的特权相同。</p>
+<p>友元能够提高程序的运行效率，但是它破坏了类的封装性和隐蔽性，需要谨慎使用。</p>
+<span id="三特性" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三特性">（三）特性：</h3>
+<ol>
+<li>友元只能出现在类的定义中。</li>
+<li>友元只能通过其所在类的对象访问它所在类的成员。</li>
+<li>友元关系是单向的，不具有交换性，即A是B的友元，但B不一定是A的友元。</li>
+<li>友元关系不具有传递性，即A是B的友元，B是C的友元，但是C不一定是A的友元。（以声明为准）</li>
+<li>友元的声明位置在类中是任意的，不受类访问限定符限制。</li>
+<li>友元函数不能用const修饰，也没有this指针。</li>
+<li>一个函数/类可以是多个类的友元函数。</li>
+<li>友元的成立是由这个类来决定的。</li>
+</ol>
+<span id="四分类" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-四分类">（四）分类：</h3>
+<span id="1普通函数做友元" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1普通函数做友元">1.普通函数做友元：</h4>
+<p>多用于运算符重载(详见c++类——运算符重载)。</p>
+<p>形式为：类内  <em><strong>friend 返回类型 函数名(参数表) ;</strong></em></p>
+<p>​			   类外 <em><strong>返回类型 函数名(参数表) { 函数体}</strong></em></p>
+<p>参数表内一定有类的值传递/引用传递/地址传递（用于访问类的私有成员，要不然定义它为友元干嘛呢）。</p>
+<span id="2类做友元" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2类做友元">2.类做友元：</h4>
+<p>友元类中所有的成员函数均为友元函数。</p>
+<p>编译器对格式有严格要求：</p>
+<ol>
+<li>首先对友元类进行前置声明（有些编译器可以省略，会自动补全）。</li>
+<li>然后定义要声明友元类的一般类，此时在其中可以将友元类声明为友元。</li>
+<li>最后定义友元类本身，因为前面对声明友元类的一般类进行了定义，此时可以在其中访问一般类的私有数据成员。</li>
+</ol>
+<p>即按声明友元类——定义一般类——定义友元类的顺序进行，一般类要声明友元，友元类可以访问一般类的私有数据成员。</p>
+<span id="3类的成员函数做友元" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3类的成员函数做友元">3.类的成员函数做友元：</h4>
+<p>声明时要在函数名前加上类名::（是成员函数所在类）。</p>
+<p>编译器对其格式要求更加严格。</p>
+<ol>
+<li>首先对一般类进行前置声明（在成员函数做友元时此句绝对不可以省略）。</li>
+<li>然后对含友元函数的类进行定义。此时，要被用于作为友元函数的成员函数只进行声明，不进行定义。成员函数的参数表一定有一般类的值/引用/指针用于访问其私有成员。</li>
+<li>定义一般类，声明友元函数（做友元函数的成员函数所在类类名一定要加上）。</li>
+<li>定义做友元函数的成员函数（在其所在类的类外），因为前面的三步，此时才可以访问一般类的私有成员。</li>
+</ol>
+<span id="五代码实现" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-五代码实现">（五）代码实现：</h3>
+<h4 id="section-1普通函数做友元-1">1.普通函数做友元：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+#include&#x3C;cmath>
+using namespace std;
+class Point
+{
+	friend double Distance(Point&#x26; a, Point&#x26; b);//一般建议友元函数声明放在最前面
+private:
+	double x, y;
+public:
+	Point()
+	{
+		x = 0;
+		y = 0;
+	}
+	Point(double x, double y)
+	{
+		this->x = x;
+		this->y = y;
+	}
+	void move(double x, double y)
+	{
+		this->x = x;
+		this->y = y;
+	}
+	double getX()
+	{
+		return x;
+	}
+	double getY()
+	{
+		return y;
+	}
+	~Point()
+	{
+	}
+};
+double Distance(Point&#x26; a, Point&#x26; b) 
+{
+	double temp1 = a.x - b.x;//因友元可以访问a和b对象的私有数据成员
+	double temp2 = a.y - b.y;
+	return sqrt(temp1 * temp1 + temp2 * temp2);
+}
+double Distance2(Point&#x26; a, Point&#x26; b) 
+{
+	double temp1 = a.getX() - b.getX();//不是友元函数，通过类公有的成员函数获得私有数据成员值
+	double temp2 = a.getY() - b.getY();
+	return sqrt(temp1 * temp1 + temp2 * temp2);
+}
+int main()
+{
+	Point* p1 = new Point(1.0, 2.0);
+	Point* p2 = new Point(2.0, 3.0);
+	Point* p3 = new Point(2.0, 3.0);
+	double d1 = Distance(*p1, *p2);
+	double d2 = Distance(*p1, *p3);
+	cout &#x3C;&#x3C; d1 &#x3C;&#x3C; endl &#x3C;&#x3C; d2 &#x3C;&#x3C; endl;//均可成功
+	delete p1;
+	delete p2;
+	delete p3;
+	return 0;
+}
+</code></pre></div>
+<h4 id="section-2类做友元-1">2.类做友元：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class Date; //前置声明，部分编译器可省略。
+class Time
+{
+	friend class Date;//友元类声明
+private:
+	int hour;
+	int minute;
+	int second;
+public:
+	Time(int i1, int i2, int i3) :hour(i1), minute(i2), second(i3) {}
+	Time() { hour = minute = second = 0; }
+	void display() 
+	{
+		cout &#x3C;&#x3C; hour &#x3C;&#x3C; ":" &#x3C;&#x3C; minute &#x3C;&#x3C; ":" &#x3C;&#x3C; second &#x3C;&#x3C; endl;
+		return;
+	}
+};
+class Date//定义友元类
+{
+private:
+	int year;
+	int month;
+	int day;
+	Time t;
+public:
+	Date(){ year = month = day = 0; }
+	Date(int i1, int i2, int i3) :year(i1), month(i2), day(i3){}
+	void display()
+	{
+		cout &#x3C;&#x3C; year &#x3C;&#x3C; ":" &#x3C;&#x3C; month &#x3C;&#x3C; ":" &#x3C;&#x3C; day &#x3C;&#x3C; ":";
+		cout &#x3C;&#x3C; t.hour &#x3C;&#x3C; ":" &#x3C;&#x3C; t.minute &#x3C;&#x3C; ":" &#x3C;&#x3C; t.second &#x3C;&#x3C; endl;//友元类使用Time类私有数据成员
+		return;
+	}
+	void settime(int i1, int i2, int i3)
+	{
+		t.hour = i1, t.minute = i2, t.second = i3;//友元类修改Time类私有数据成员的值
+		return;
+	}
+};
+int main() 
+{
+	Date d;//可以调用Time类的构造函数
+	d.display();//可以使用上面创建的Time对象的值
+	d.settime(1, 2, 3); //可修改
+	d.display();
+	return 0;
+}
+</code></pre></div>
+<h4 id="section-3类的成员函数做友元-1">3.类的成员函数做友元：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class Time; //前置声明一般类
+class Date  //定义Date类，此类含有友元函数
+{
+private:
+	int year;
+	int month;
+	int day;
+public:
+	Date() { year = month = day = 0; }
+	Date(int i1, int i2, int i3) :year(i1), month(i2), day(i3) {}
+	void display(Time&#x26; t); //声明成员函数，此为Time类的友元函数
+	void settime(int i1, int i2, int i3, Time&#x26; t); //同上
+};
+class Time
+{
+	friend void Date::settime(int i1, int i2, int i3, Time&#x26; t);//Date类的成员函数做友元函数的声明
+	friend void Date::display(Time &#x26;t);//同上
+private:
+	int hour;
+	int minute;
+	int second;
+public:
+	Time(int i1, int i2, int i3) :hour(i1), minute(i2), second(i3) {}
+	Time() { hour = minute = second = 0; }
+	void display()
+	{
+		cout &#x3C;&#x3C; hour &#x3C;&#x3C; ":" &#x3C;&#x3C; minute &#x3C;&#x3C; ":" &#x3C;&#x3C; second &#x3C;&#x3C; endl;
+		return;
+	}
+};
+void Date::display(Time&#x26; t) //定义Date类要做友元函数的成员函数，此时可访问Time类私有成员 
+{
+	cout &#x3C;&#x3C; year &#x3C;&#x3C; ":" &#x3C;&#x3C; month &#x3C;&#x3C; ":" &#x3C;&#x3C; day &#x3C;&#x3C; ":";
+	cout &#x3C;&#x3C; t.hour &#x3C;&#x3C; ":" &#x3C;&#x3C; t.minute &#x3C;&#x3C; ":" &#x3C;&#x3C; t.second &#x3C;&#x3C; endl; //可以访问Time类的私有成员
+	return;
+}
+void Date::settime(int i1, int i2, int i3, Time&#x26; t) //同上
+{
+	t.hour = i1, t.minute = i2, t.second = i3;
+	return;
+}
+int main() 
+{
+	Date d;
+	Time t;
+	d.display(t);
+	d.settime(1, 2, 3,t);
+	d.display(t);
+	return 0;
+}
+</code></pre></div>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],"$L28","$L29","$L2a"]}],"$L2b"]}]
+1b:["$","$L2c",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+2e:I[2708,["825","$2","953","$c"],"FeedbackForm"]
+f:300
+28:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/cpp-destructors/","children":[["$","span",null,{"children":"上一篇"}],"c++类——析构函数"]}],["$","$Ld",null,{"href":"/blog/cpp-static-members/","children":[["$","span",null,{"children":"下一篇"}],"c++类——静态成员"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-2",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-3",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+29:["$","$L2e",null,{"contentId":"cpp-friends"}]
+2a:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+2b:["$","$L25",null,{"headings":"$19:props:headings"}]
+2d:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"

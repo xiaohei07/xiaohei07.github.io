@@ -1,0 +1,6 @@
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+3:[["children",{"s":"__PAGE__","h":160}]]
+2:[["children",{"s":{"n":"slug","t":"d","k":"divide-and-conquer-examples","s":["cpp-casts","merge-sort"]},"h":65632,"c":"$Q3"}]]
+1:[["children",{"s":"blog","h":131168,"c":"$Q2"}]]
+0:{"b":"jPv1KV9ToaFZ1LBtrTwmv","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}

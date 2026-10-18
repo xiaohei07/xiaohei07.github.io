@@ -1,0 +1,233 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","953","$c"],"default"]
+16:I[6279,["825","$2","953","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"c++类——运算符重载(三)"}],["$","p",null,{"className":"article-deck","children":"讨论类对象向其他类型的转换，结合转换函数说明二义性与 explicit 的使用"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"slug","t":"d","k":"cpp-operator-overloading-3","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"c++类——运算符重载(三) | 07xiaohei"}],["$","meta","1",{"name":"description","content":"讨论类对象向其他类型的转换，结合转换函数说明二义性与 explicit 的使用。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","953","$c"],"ArticleToc"]
+26:I[4711,["825","$2","953","$c"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-24","children":"2023-03-24"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,494"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$L16","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$L16","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-类的类型转换","text":"类的类型转换：","level":3},{"id":"section-一概述","text":"（一）概述","level":4},{"id":"section-二重载类型转换运算符","text":"（二）重载类型转换运算符","level":4},{"id":"section-三重载类型转换运算符的二义性和explicit","text":"（三）重载类型转换运算符的二义性和explicit","level":4},{"id":"section-四代码展示","text":"（四）代码展示","level":4}],"mobile":true}]
+27:T21c3,<span id="类的类型转换" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-类的类型转换">类的类型转换：</h3>
+<span id="一概述" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-一概述">（一）概述</h4>
+<p>数据类型转换在程序编译或者运行时实现，当使用基本类型的时候，如int和double之间可以直接进行灵活的类型转换，如果我们需要把一个类对象转换为其他类型类的对象或者基本类型呢？</p>
+<p>类对象的类型转换可由两种方式实现：构造函数和转换函数（即类型转换运算符重载函数）。</p>
+<p>前者是把其他类型转换为该类对象类型，后者是把该类对象类型转换为其他类型。</p>
+<p>本文只考虑后者（前者已经在其他文章说明过）。</p>
+<span id="二重载类型转换运算符" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-二重载类型转换运算符">（二）重载类型转换运算符</h4>
+<ul>
+<li>
+<p>类型转换运算符函数是一种特殊的成员函数（不可以是友元函数），提供类对象之间或者类对象到基本类型显示类型转换的机制。</p>
+</li>
+<li>
+<p>语法形式为： <em><strong>类名::operator type() { 函数体 }</strong></em></p>
+<p>type一般为用户定义的其他类类型或者内置的数据类型（可以是typedef定义的别名），不允许是void，一般也不允许是数组或者函数类型，但可以是指针或者引用类型。</p>
+<p>该函数无参数和返回类型，但是需要return语句，返回type类型的对象/数据。</p>
+</li>
+<li>
+<p>功能：将该类对象转换为type类型的对象/数据。</p>
+</li>
+<li>
+<p>一般情况下会用const修饰，因为其通常不会改变待转换对象的状态。、</p>
+</li>
+</ul>
+<span id="三重载类型转换运算符的二义性和explicit" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-三重载类型转换运算符的二义性和explicit">（三）重载类型转换运算符的二义性和explicit</h4>
+<ul>
+<li>
+<p>类型转换运算符可能产生意外结果：</p>
+<p>对于类向bool的类型转换，有一个需要注意的问题。</p>
+<p>我们以istream类对象cin为例：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>int a=10;
+cin&#x3C;&#x3C;a;
+</code></pre></div>
+<p>虽然istream未定义&#x3C;&#x3C;，代码应当产生错误，但是实际上此处istream的bool类型转换运算符将cin转换成了bool，而这个bool值再经过第二次类型转换提升为int作为了内置的左移运算符的左侧运算对象，这样会使得这个bool值（1或0）被左移了10个位置，虽然没有报错，但是结果与我们的预期完全不同。</p>
+<p>解决方法：</p>
+<p>IO类型中定义了向void*的转换规则来避免该问题。</p>
+<p>新c++11标准中，IO标准库定义了一个向bool的显示类型转换来避免问题。</p>
+<p>综上，在我们定义时，通常需要对operator bool用explicit关键字声明为显式的类型转换，避免隐式的。</p>
+</li>
+<li>
+<p>explicit关键字：在类型转换运算符上声明，每次的类型转换需要显式的强制类型转换，可以避免隐式类型转换。</p>
+<p>但是，如果表达式被用作条件，编译器会将显式的类型转换自动应用于它，即在以下场景时发生显式的类型转换被隐式地执行：</p>
+<ol>
+<li>if、while及do语句的条件部分。</li>
+<li>for语句头的条件表达式。</li>
+<li>作为逻辑非(!)/或(||)/与(&#x26;&#x26;)的运算对象。</li>
+<li>条件运算符（?:）的条件表达式。</li>
+</ol>
+</li>
+<li>
+<p>类型转换运算符的二义性：</p>
+<p>通常情况下，不要为类定义相同的类型转换，也不要在类中定义两个及两个以上转换源或转换目标是算术类型的转换来避免二义性转换。</p>
+<p>以下是二义性情况：</p>
+<ol>
+<li>
+<p>两个类提供了相同的类型转换。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>//相同的类型转换：
+//main外:
+class B;
+class A
+{
+public:
+	A() = default;
+	A(const B&#x26;){}
+};
+class B
+{
+public:
+	operator A()const { A temp; return temp; }
+};
+A f(const A&#x26; a) 
+{
+	return a;
+}
+//main内：
+	A a;
+	B b;
+	a = f(b); //b需要转化为a，此时发生错误：是调用A中的转换构造函数把对象b变成a，还是调用B中的重载类型转换运算符将b变成a？
+</code></pre></div>
+<p>解决方法：显式调用。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>//修改a = f(b);
+a = f(A(b);
+a = f(b.operator A());
+</code></pre></div>
+</li>
+<li>
+<p>类定义了多个转换规则，某些规则可以通过其他类型转换实现（多见于算术运算符）：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>//main外：
+class A
+{
+private:
+	double a;
+public:
+	A(int i = 0) :a(i) {}
+	A(double d) :a(d) {}
+	operator int() const { return int(a); }
+	operator double() const { return a; }
+};
+void f(long double){}
+//main()内：
+int main()
+{
+	A a;
+	f(a);     //二义性，是从double还是int的运算符重载提升为long double？
+	long d = a；//二义性，是从double还是int的运算符重载提升为long double？
+	return 0;
+}
+</code></pre></div>
+<p>如果有谁优于的原则不会产生此问题。（本题的两个提升地位相同）</p>
+</li>
+<li>
+<p>重载运算符和类型转换函数结合导致了二义性：</p>
+<p>一般是因为在某些情况下既可以是类对象转换为基本数据类型，或者基本数据类型转变为类类型。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>//main外：
+class A
+{
+	friend A operator+(const A&#x26; a1,const A&#x26; a2);
+private:
+	int a;
+public:
+	A(int i = 0) :a(i) {}
+	operator int()const { return a; }
+};
+A operator+(const A&#x26; a1, const A&#x26; a2) 
+{
+	return A(a1.a + a2.a);
+}
+//main()内：
+int main()
+{
+	A a1, a2;
+	A a3 = a1 + a2;  //此处无问题，可以使用重载的+运算符
+	a3 = 1 + a1;    //二义性错误，不知道是将1转为类对象还是将a1转为int类型。
+	a3 = a2 + 1;    //同上
+	return 0;
+}
+</code></pre></div>
+<p>解决方法：在构造函数上加explicit或者直接进行显式的强制类型转化。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>//可以是；
+explicit operator int()const { return a; }
+//或者是：
+a3 = A(1) + a1
+a3 = int(a2) + 1
+</code></pre></div>
+<p>注意：出现此种情况说明我们的代码设计不够好。</p>
+</li>
+</ol>
+</li>
+</ul>
+<span id="四代码展示" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-四代码展示">（四）代码展示</h4>
+<p>对上一章中的newvector2提供相关的类型转化（转化为vector2和转换成基本类型double）</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>//vector2.h
+//添加两个成员函数
+operator double();
+operator vector2();
+</code></pre></div>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>//vector2。cpp
+//定义两个成员函数
+double newvector2::operator()(double xx, double yy) 
+{
+	return sqrt(xx * xx + yy * yy);
+}
+
+newvector2::operator double() 
+{
+	return x;
+}
+newvector2::operator vector2() 
+{
+	return vector2(x, y);
+}
+</code></pre></div>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>//main.cpp
+#include"vector2.h"
+int main()
+{
+	newvector2 newv(11,13,"aaaa");
+	vector2 v = newv;
+	double x = newv;
+	cout &#x3C;&#x3C; "v:" &#x3C;&#x3C; v;
+	cout &#x3C;&#x3C; "x:" &#x3C;&#x3C; x &#x3C;&#x3C; endl;
+	return 0;
+}
+</code></pre></div>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],"$L28","$L29","$L2a"]}],"$L2b"]}]
+1b:["$","$L2c",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+2e:I[2708,["825","$2","953","$c"],"FeedbackForm"]
+f:300
+28:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/cpp-operator-overloading-2/","children":[["$","span",null,{"children":"上一篇"}],"c++类——运算符重载(二)"]}],["$","$Ld",null,{"href":"/blog/divide-and-conquer-examples/","children":[["$","span",null,{"children":"下一篇"}],"算法——分治算法(2)"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-2",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","cpp-templates-3",{"children":[["$","$Ld",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+29:["$","$L2e",null,{"contentId":"cpp-operator-overloading-3"}]
+2a:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+2b:["$","$L25",null,{"headings":"$19:props:headings"}]
+2d:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"

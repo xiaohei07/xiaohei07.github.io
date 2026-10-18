@@ -1,0 +1,302 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","953","$c"],"default"]
+16:I[6279,["825","$2","953","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"python基础——数据类型(二)数字型"}],["$","p",null,{"className":"article-deck","children":"介绍整数的进制表示、浮点数、布尔值和复数，并补充 None 的含义"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"slug","t":"d","k":"python-numbers","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"python基础——数据类型(二)数字型 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"介绍整数的进制表示、浮点数、布尔值和复数，并补充 None 的含义。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","953","$c"],"ArticleToc"]
+26:I[4711,["825","$2","953","$c"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-19","children":"2023-03-19"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,344"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",9," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","python",{"href":"/blog/#tag=python","children":"python"}],["$","$L16","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-1整型int","text":"1.整型：int","level":3},{"id":"section-2浮点型float","text":"2.浮点型：float","level":3},{"id":"section-3布尔型bool","text":"3.布尔型：bool","level":3},{"id":"section-特殊类型none","text":"特殊类型：None","level":4},{"id":"section-4复数类型complex","text":"4.复数类型：complex","level":3}],"mobile":true}]
+27:T33f0,<span id="1整型int" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-1整型int">1.整型：int</h3>
+<p>整数数据类型，简称整型，没有小数数字。</p>
+<p>数字中的正整数、0和负整数均为整型，但只有int一种整数类型，表示为长整型</p>
+<p>整型的长度范围不限，精度无限。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a=114514
+b=0
+c=-123456789000000
+print(a," ",type(a))
+print(b," ",type(b))
+print(c," ",type(c))
+#运行结果:
+# 114514   &#x3C;class 'int'>
+# 0   &#x3C;class 'int'>
+# -123456789000000   &#x3C;class 'int'>
+</code></pre></div>
+<p>另外可以用二进制、八进制或者十六进制来表示整型：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a=0x1111 #十六进制
+b=0Xffff #x可以大写，后面同
+c=0b01010 #二进制
+d=0B101111
+e=0o111 #八进制
+f=0O333
+print(a,b,c,d,e,f,sep="\n")
+#输出结果：
+# 4369 对应16^3+16^2+16^1+16^0
+# 65535
+# 10  对应2^3+2^1
+# 47
+# 73  对应8^2+8^2+8^0
+# 219
+</code></pre></div>
+<p>各进制之间允许转换：</p>
+<ul>
+<li>二进制：bin()</li>
+<li>八进制：oct()</li>
+<li>十六进制：hex()</li>
+<li>十进制：int()</li>
+</ul>
+<p>注意上面三个返回的是字符串，如要当整型使用请使用函数<em>int(对应进制字符串变量名，对应进制数)</em>来完成转换</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print('十进制数 63 转换为二进制数为：', bin(63))
+print('十进制数 63 转换为八进制数为：', oct(63))
+print('十进制数 63 转换为十六进制数为：', hex(63))
+# 输出结果：
+# 十进制数 63 转换为二进制数为： 0b111111
+# 十进制数 63 转换为八进制数为： 0o77
+# 十进制数 63 转换为十六进制数为： 0x3f
+
+a=0b111111 #a为二进制
+b=bin(63)  #b为从十进制63转化而得的而得的二进制0b111111
+c=int(0b111111) #c为从二进制0b111111转化得到的十进制数
+d=int(b,2) #注意b为字符串，字符串的转化为传入变量和需要转化成的进制数
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+#输出结果：
+# &#x3C;class 'int'>
+# &#x3C;class 'str'> 得到字符串
+# &#x3C;class 'int'> int转化就是整型
+# &#x3C;class 'int'> bin()转化后的二进制字符串通过int()转化为了10进制数字
+
+print('二进制数 0b111111 转换为十进制数为：', 0b111111)   # print() 函数输出整数默认为十进制
+print('二进制数 0b111111 转换为八进制数为：', oct(0b111111))
+print('二进制数 0b111111 转换为十六进制数为：', hex(0b111111))
+#输出结果：
+# 二进制数 0b111111 转换为十进制数为： 63
+# 二进制数 0b111111 转换为八进制数为： 0o77
+# 二进制数 0b111111 转换为十六进制数为： 0x3f
+# 其他进制转换请自行尝试
+</code></pre></div>
+<p>如果数字太长，可以使用数字分隔符”_“，从右往左每三位添加一个，不会影响结果，方便阅读。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>x=10_000_000_000_000_000
+print(x)
+#输出结果：
+# 10000000000000000
+</code></pre></div>
+<span id="2浮点型float" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-2浮点型float">2.浮点型：float</h3>
+<p>浮点数数据类型，简称为浮点型，专用于存储浮点小数。</p>
+<p>python中没有double浮点数类型，只有float，但是是双精度的。</p>
+<p>float的表示可以是十进制表示形式或者指数形式。</p>
+<p>十进制表示方法中，float类型里必须含有小数点，但可以没有整数部分或小数部分。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a = 3.14
+b = 3. #没有后面，默认为0
+c = .14 #没有前面，默认为0
+print(a," ",type(a))
+print(b," ",type(b))
+print(c," ",type(c))
+运行结果：
+3.14   &#x3C;class 'float'>
+3.0   &#x3C;class 'float'>
+0.14   &#x3C;class 'float'>
+</code></pre></div>
+<p>指数形式表示时，形式为<em><strong>aEn</strong></em>或者<em><strong>aen</strong></em> 等价于a x 10<sup>n</sup></p>
+<p>a为尾数部分，是十进制数；n为指数部分，同为10进制数，而E或e是固定字符，表示分割尾数部分和指数部分。</p>
+<p>值得一提的是，只要使用了指数形式来表示一个数，无论这个数的值如何，均为float类型。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a=314159.26e-5
+b=1.1e4
+c=3e9 #整数值，但是是浮点数
+d=9e0 #浮点数
+e=0e3 #0.0也是浮点数
+print(a," ",type(a))
+print(b," ",type(b))
+print(c," ",type(c))
+print(d," ",type(d))
+print(e," ",type(e))
+# 运行结果：
+# 3.1415926   &#x3C;class 'float'>
+# 11000.0   &#x3C;class 'float'>
+# 3000000000.0   &#x3C;class 'float'>
+# 9.0   &#x3C;class 'float'>
+# 0.0   &#x3C;class 'float'>
+</code></pre></div>
+<p>浮点数的范围极大，但是如果位数过多会导致输出可能舍去一部分数字，而数字值本身巨大时（不一定是位数多）直接采用科学计数法输出。</p>
+<p>当然也可以直接使用格式化输出（此处略，有兴趣的可以自行测试）。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a=1.234567891011121314151617181920
+b=12345678910111213141516.171819
+print(a)
+print(b)
+# 输出结果：
+# 1.2345678910111213  #舍去一部分数值输出
+# 1.2345678910111212e+22 #舍去的同时因为数值太大，采用科学计数法输出。
+</code></pre></div>
+<p>计算机以二进制存储小数部分，会导致误差。</p>
+<p>和十进制中1/3此类的无穷小数类似，如1.68，0.3等都是二进制中的无穷小数，所以在某些情况下，原本看似正确的小数（这个其实是计算机对原数值进行推测而显得正确的）输出实际上会产生问题：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a = 1 + 0.68
+b=0.1+0.1+0.1
+print(a)
+print(b)
+# 输出结果为
+# 1.6800000000000002
+# 0.30000000000000004
+</code></pre></div>
+<p>因此，如果需要判断两个浮点数是否相等/得到我们想要的正确值，往往需要进行取近似值的操作。</p>
+<p>对于python来说，浮点数是64位的，54位存位数，10位存指数。我们可以不选择在54的范围内比较其正确与否，而是缩小比较位数范围，比如在8位以内比较是否相等。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a = 1.68
+b = 1 + 0.68
+print("a={:.20}".format(a))  #格式化输出
+print("b={:.20}".format(b))
+eps = 0.00000001
+if abs(a - b) &#x3C; eps:    #看看精度在0.00000001范围内是否相等
+    print("a == b")
+# 输出结果：
+
+a=1.6799999999999999378
+b=1.6800000000000001599
+a == b
+</code></pre></div>
+<span id="3布尔型bool" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-3布尔型bool">3.布尔型：bool</h3>
+<p>布尔数据类型，简称布尔型，实际上是int类的一个子类。</p>
+<p>含有关键字<em><strong>True</strong></em> （表示真）和<em><strong>False</strong></em>（表示假）（注意要大写）</p>
+<p>布尔型主要用于判断对错（True=1=正确，False=0=错误），布尔运算，来判断某个条件是否成立。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(True)  # True 首字母要大写
+print(False)  # False 首字母要大写
+print(type(True))  # 查看 True 的类型
+print(type(False))  # 查看 False 的类型
+# 输出结果：
+# True
+# False
+# &#x3C;class 'bool'>
+# &#x3C;class 'bool'>
+</code></pre></div>
+<p>尽管bool类型只有True和False两个实例，但是任何对象都可以进行真假值的判断。</p>
+<p>下面举一些特殊的例子</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(bool(1)) #True
+print(bool(0)) #False 
+print(bool([])) #False
+print(bool(())) #False
+print(bool({})) #FALSE
+print(bool(-1)) #True
+print(bool('')) #False
+print(bool("False")) #True
+print(bool("True")) #True
+print(bool(0.0))  #False
+print(bool(1.0))  #True
+print(bool(-0.0)) #False
+</code></pre></div>
+<p>实际上，各种空的内容被判断为False，而非空内容被判断为True</p>
+<p>数值类型中，只有0.0, -0.0和0是False</p>
+<p>另外range(0) ,0j , None等也是False</p>
+<p>布尔型参与的布尔运算中，使用的关联词是 and or not ，逻辑和一般逻辑运算相同。（不再详细介绍）</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>print(True and True)
+print(True and False)
+print(False and True)
+print(False and False)
+print(True or True)
+print(True or False)
+print(False or True)
+print(False or False)
+print(not True)
+print(not False)
+# 输出结果：
+# True
+# False
+# False
+# False
+# True
+# True
+# True
+# False
+# False
+# True
+</code></pre></div>
+<span id="特殊类型none" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-特殊类型none">特殊类型：None</h4>
+<p>之所以放在这里，是因为None类型和布尔型的关系比较紧密。</p>
+<p>None表示空，但是并不是空字符串、空列表等等，也不等于False（当然在条件判断中if None被认为是False），而是一个特殊的值，表示的是没有值，也就是空值，属于特殊类型NoneType，而且None是这个类型的唯一值。</p>
+<p>None作用和其他语言中的Null，nil或者undefined类似，不过None可以赋给任何一个变量。</p>
+<p>None实际上就是无返回值的实际返回值。</p>
+<p>不管变量是什么值（包括空列表、空字符串等等），除非变量就是None，否则和None作相等的布尔运算时始终为False。</p>
+<p>对于not 变量，如果变量就是None，not None被认为是True。因此，判定变量空操作时，比较建议写<em>if not 变量</em></p>
+<p>此时不论是None还是其他空值，均返回True。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a=None
+b = False
+c = []
+d=""
+print(type(a)) #输出类型
+print(bool(None)) #判断None的布尔类型
+if a==b or a==c or a==d:
+    print("Y")
+else:
+    print("N")
+if b is None or c is None or d is None:
+    print("Y")
+else:
+    print("N")
+# 判断None和空列表、空字符串和False是否相等
+# 输出结果:
+# &#x3C;class 'NoneType'>
+# False
+# N
+# N
+</code></pre></div>
+<span id="4复数类型complex" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-4复数类型complex">4.复数类型：complex</h3>
+<p>复数数据类型，简称复数类型，和其他语言不同，python中复数类型是内置类型，是数字类型的一部分，支持直接书写，不依赖其他库。</p>
+<p>复数由实部和虚部组成，虚部带有后缀<strong>J/j</strong>，且实部和虚部的数值均为浮点数。</p>
+<p>具体形式为 <em><strong>a+bj / a+bJ</strong></em>，a为实部，b为虚部。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>complex1=10+5j
+complex2=10-5j #可以是-号
+print(complex1," ",type(complex1))
+# 运行结果
+# (10+5j)   &#x3C;class 'complex'>
+</code></pre></div>
+<p>python支持从复数中提取实部和虚部：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>complex1=123+321j
+r=complex1.real
+i=complex1.imag
+print(r," ",type(r))
+print(i," ",type(i))
+# 输出结果为：
+# 123.0   &#x3C;class 'float'> #实部内的数为浮点数，即使在复数中看起来是整数
+# 321.0   &#x3C;class 'float'> #虚部内的数为浮点数，即使在复数中看起来是整数
+</code></pre></div>
+<p>复数的计算：相信能看到这篇博客的你应该不能不会复数的计算😉，我就不写啦，自己去试试呗~</p>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],"$L28","$L29","$L2a"]}],"$L2b"]}]
+1b:["$","$L2c",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+2e:I[2708,["825","$2","953","$c"],"FeedbackForm"]
+f:300
+28:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/python-data-types/","children":[["$","span",null,{"children":"上一篇"}],"python基础——数据类型（一）简介"]}],["$","$Ld",null,{"href":"/blog/python-strings/","children":[["$","span",null,{"children":"下一篇"}],"python基础——数据类型(三)字符串"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$Ld",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-class-decorators",{"children":[["$","$Ld",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$Ld",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+29:["$","$L2e",null,{"contentId":"python-numbers"}]
+2a:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+2b:["$","$L25",null,{"headings":"$19:props:headings"}]
+2d:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"

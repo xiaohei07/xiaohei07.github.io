@@ -1,0 +1,417 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","953","$c"],"default"]
+16:I[6279,["825","$2","953","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"python进阶——类(五)类装饰器"}],["$","p",null,{"className":"article-deck","children":"介绍类参与装饰器的几种方式，并示例说明属性、静态方法和类方法等装饰器"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"slug","t":"d","k":"python-class-decorators","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"python进阶——类(五)类装饰器 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"介绍类参与装饰器的几种方式，并示例说明属性、静态方法和类方法等装饰器。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","953","$c"],"ArticleToc"]
+26:I[4711,["825","$2","953","$c"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-07-23","children":"2023-07-23"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,671"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",10," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","python",{"href":"/blog/#tag=python","children":"python"}],["$","$L16","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-八类装饰器","text":"（八）类装饰器","level":3},{"id":"section-1-把装饰器写在类里","text":"1. 把装饰器写在类里：","level":4},{"id":"section-2-类作为装饰器使用","text":"2. 类作为装饰器使用：","level":4},{"id":"section-3-为类增加装饰器","text":"3. 为类增加装饰器：","level":4},{"id":"section-4-python内置常用装饰器","text":"4. Python内置常用装饰器：","level":4},{"id":"section-1abstractmethod","text":"（1）@abstractmethod：","level":5},{"id":"section-2property","text":"（2）@property：","level":5},{"id":"section-3staticmethod","text":"（3）@staticmethod：","level":5},{"id":"section-4classmethod","text":"（4）@classmethod：","level":5},{"id":"section-5wraps","text":"（5）@wraps：","level":5}],"mobile":true}]
+27:T416a,<span id="八类装饰器" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-八类装饰器">（八）类装饰器</h3>
+<p>在阅读本篇博客之前，需要对装饰器有一个基础的了解，请先阅读<a href="/blog/python-functions-3/">python进阶——函数(三) - ZZHの个人博客 (07xiaohei.com)</a>中关于函数的装饰器内容。</p>
+<span id="1-把装饰器写在类里" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-把装饰器写在类里">1. 把装饰器写在类里：</h4>
+<p>严格来说是函数装饰器的内容，只是作为装饰器的函数被写在了类中，同时用于修饰其他函数。</p>
+<p>简单的例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class test:
+    def debbug(self,function):
+        def get_para(*args,**kwargs):
+            print("start debbug")
+            function(*args,**kwargs)
+            print("finish debbug")
+        return get_para
+t=test()
+@t.debbug
+def add_test(a,b):
+    print("add result:",a+b)
+add_test(3,4)
+# 运行结果:
+# start debbug
+# add result: 7
+# finish debbug
+</code></pre></div>
+<p>注意，此时的实例方法因为没有实例化无法使用，所以必须先创建一个实例再将该实例的对应装饰器方法绑定给被装饰的函数。</p>
+<p>实际上可以直接创建类方法跳过实例化步骤完成绑定，稍后会讲解。</p>
+<p>除了装饰类外的函数，也可以装饰同一个类内的函数：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class test:
+    def __init__(self):
+        self.i1=10
+        self.i2=12
+    def info(func):
+        def get_para(self,*args,**kwargs):
+            print("start info")
+            result =func(self, *args, **kwargs)
+            self.i1 += 10
+            print(result)
+            print("end info")
+            return result
+        return get_para
+    @info
+    def func(self):
+        return self.i1+self.i2
+t=test()
+print(t.i1)
+print(t.func())
+print(t.i1)
+# 运行结果:
+# 10
+# start info
+# 22
+# end info
+# 22
+# 20
+</code></pre></div>
+<span id="2-类作为装饰器使用" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-类作为装饰器使用">2. 类作为装饰器使用：</h4>
+<p>类作为装饰器，需要保证已经定义了__call__方法，这样类才可以作为装饰器，并在装饰函数时运行__call__方法的内容——也就是把类中的__call__方法作为一个装饰器函数来使用了。</p>
+<p>简单的例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class test:
+    def __init__(self,func):
+        self.rate=0.8
+        self.func=func
+    def __call__(self,*args,**kwargs):
+        print("class decorator:")
+        print("class rate:",self.rate)
+        result =self.func(self.rate,*args,**kwargs)
+        return result
+@test
+def mulfunc(r,a,b):
+    return r*a*b
+res=mulfunc(2,3)
+print(res)
+# 运行结果:
+# class decorator:
+# class rate: 0.8
+# 4.800000000000001
+</code></pre></div>
+<p>__init__方法将函数进行了实例化，此时可以在任意位置使用self.func调用函数，但是只有在__call__中定义的方法会被装饰到函数中，同时也可以为其传入相关的参数。</p>
+<p>除了装饰一般的函数，也可以用于装饰另一个类的方法——此时要将__call__方法修改为__get__方法，这相当于把另一个类的实例方法变成了属性，调用时不需要加()。</p>
+<p>__get__方法涉及到了Python中的描述器机制，其机制比较复杂，这里不进行介绍，只是使用，如有兴趣可以自行了解，如果之后使用频繁也可能单开一篇博客讲解。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class test:
+    def __init__(self,func):
+        self.rate=0.8
+        self.func=func
+    def __get__(self,otherself,owner,*args,**kwargs):
+        print(otherself)
+        print(owner)
+        print("class decorator:")
+        print("class rate:", self.rate)
+        result = self.func(otherself,self.rate,*args,**kwargs)
+        return result
+class use_test:
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+    @test
+    def use(self,r):
+        return r*self.a*self.b
+ut=use_test(3,4)
+print(ut.use)
+# 运行结果:
+# &#x3C;__main__.use_test object at 0x0000014AD8A188D0>
+# &#x3C;class '__main__.use_test'>
+# class decorator:
+# class rate: 0.8
+# 9.600000000000001
+</code></pre></div>
+<p>可以看到，另一个类的实例方法作为对象被传给了test，__get__方法的第一个参数是类自身，第二个otherself参数代表着实例化的对象，第三个owner代表实例的类本身，use方法被作为属性调用和输出了。</p>
+<span id="3-为类增加装饰器" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-为类增加装饰器">3. 为类增加装饰器：</h4>
+<p>类本身也可以增加装饰器，相当于在实例化开始进行了额外的操作。</p>
+<p>可以用一个类或者函数作为装饰器。</p>
+<p>函数作为装饰器，可以输出信息，可以为被装饰的类增加属性或者方法，甚至直接重写类。</p>
+<p>类也可以直接作为装饰器修饰另一个类，注意要定义__call__方法。</p>
+<p>简单的例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def function_add(func):
+    def create_use(class_obj):
+        print(class_obj)
+        class_obj.add_val=10
+        class_obj.add_func=func
+        return class_obj
+    return create_use
+def add_print(self,a,b):
+    print("a+b=",a+b)
+@function_add(add_print)
+class test:
+    pass
+t=test()
+print(t.add_val)
+t.add_val+=10
+print(t.add_val)
+t.add_func(3,4)
+tt=test()
+print(tt.add_val)
+# 运行结果：
+# &#x3C;class '__main__.test'>
+# 10
+# 20
+# a+b= 7
+# 10
+
+def change_class(class_obj):
+    class newclass:
+        i=10
+    return newclass
+@change_class
+class test:
+    i=5
+t=test()
+print(t.i)
+# 运行结果：
+# 10
+</code></pre></div>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class animal:
+    def __init__(self,class_obj):
+        print(class_obj)
+        self.class_obj=class_obj
+    def __call__(self, *args, **kwargs):
+        print("传入args=",args)
+        print("create an animal!")
+        res =self.class_obj(*args, **kwargs)
+        return  res
+@animal
+class cat:
+    def __init__(self,name):
+        self.name=name
+    def eat(self):
+        print(self.name+" is eating!")
+c=cat("小喵")
+c.eat()
+# 运行结果：
+# &#x3C;class '__main__.cat'>
+# 传入args= ('小喵',)
+# create an animal!
+# 小喵 is eating!
+</code></pre></div>
+<span id="4-python内置常用装饰器" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-python内置常用装饰器">4. Python内置常用装饰器：</h4>
+<p>内置的装饰器和普通装饰器的原理是一样的，但返回的不是函数，而是类对象。</p>
+<p>下面对最常用的五个装饰器分别进行阐述。</p>
+<span id="1abstractmethod" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-1abstractmethod">（1）@abstractmethod：</h5>
+<p>如果学习过c++语言的话，会知道一个叫做"抽象类"的概念，这种类不能被直接创建对象，必须被继承且实现了对应的虚函数才能创建，Python中实现这一机制就是通过@abstractmethod这个装饰器完成的。</p>
+<p>@abstractmethod用于对程序接口的控制，含有@abstractmethod的基类不能实例化，继承的派生类必须实现@abstractmethod装饰的方法。</p>
+<p>使用@abstractmethod需要内置库abc，abc提供了抽象类ABC和@abstractmethod装饰器，想要使用抽象类必须直接或者间接继承ABC才能定义。</p>
+<p>简单的例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>from abc import ABC,abstractmethod
+class abs_class(ABC):
+    def __init__(self,i):
+        self.i=i
+    @abstractmethod
+    def test(self):
+        pass
+class son1(abs_class):
+    def test(self):
+        print("test")
+class son2(abs_class):
+    def testt(self):
+        print("testt")
+</code></pre></div>
+<p>定义的abs_class为抽象基类，son1和son2是抽象类的派生类，son1完成了test方法的覆盖，son2则没有。</p>
+<p>因此，实例化abc_class和son2均会报错。</p>
+<p>错误如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a =abs_class()
+# Traceback (most recent call last):
+#   File "D:\pycharmwork\blog_use.py", line 3799, in &#x3C;module>
+#     a =abs_class()
+#        ^^^^^^^^^^^
+# TypeError: Can't instantiate abstract class abs_class with abstract method test
+
+s2=son2()
+# Traceback (most recent call last):
+#   File "D:\pycharmwork\blog_use.py", line 3805, in &#x3C;module>
+#     s2=son2()
+#        ^^^^^^
+# TypeError: Can't instantiate abstract class son2 with abstract method test
+
+s1=son1(5)
+s1.test()
+# 运行结果：
+# test
+</code></pre></div>
+<p>​</p>
+<span id="2property" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-2property">（2）@property：</h5>
+<p>property用于装饰方法，被装饰的方法不可在类被实例化后被调用，只能通过访问与函数同名的属性进行调用——相当于把方法伪装成了一个属性。</p>
+<p>伪装的属性和普通属性不同，需要自行实现一个实例属性的get、set和delete的内部逻辑，此实现是通过属性的装饰器setter、getter和deleter完成的。</p>
+<p>getter装饰器和不带getter的属性装饰器效果一致，所以可以不定义getter装饰器。</p>
+<p>而没有实现setter或者deleter的话，是一个只读属性，可以用于Python的安全访问。</p>
+<p>@property将返回的函数变味了一个property对象。</p>
+<p>被装饰的方法内部可以实现处理逻辑，对外又提供统一的调用方式。</p>
+<p>简单的例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class test:
+    def __init__(self,i):
+        self.number1=i
+        self.number2=i*i
+    @property
+    def num(self):
+        return self.number1
+    @property
+    def num2(self):
+        return self.number2
+    @num2.setter
+    def num2(self,temp):
+        self.number2=temp
+    @num2.deleter
+    def num2(self):
+        del self.number2
+
+t=test(5)
+print(t.num)
+print(t.num2)
+t.num2+=20
+print(t.num2)
+print(t.__dict__)
+del t.num2
+print(t.__dict__)
+# 运行结果：
+# 5
+# 25
+# 45
+# {'number1': 5, 'number2': 45}
+# {'number1': 5}
+</code></pre></div>
+<p>上述代码中，num方法伪装成了属性，对应的是number1属性，此时没有定义setter和deleter的装饰器，所以不能修改和删除该属性，只读；而num2方法伪装成属性时定义了两个装饰器，这导致了number2属性的值可以被修改或者删除。</p>
+<span id="3staticmethod" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-3staticmethod">（3）@staticmethod：</h5>
+<p>是把函数嵌入到类中的一种方式，增加@staticmethod的类函数被声明为类的静态函数，静态函数是独立于类的，不需要类的实例化就可以直接被调用，也因此被装饰的函数不需要代表对象实例的self参数。</p>
+<p>可以把这种函数看作是寄存在类名下的普通函数。</p>
+<p>类似于c++中的静态成员函数。</p>
+<p>简单的例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class test:
+    j=100
+    def __init__(self):
+        self.i=100
+    @staticmethod
+    def outertest(class_obj):
+        print(class_obj.j)
+class test2:
+    j=200
+t=test()
+t2=test2()
+t.outertest(t)
+t.outertest(t2)
+test.outertest(t)
+# 运行结果：
+# 100
+# 200
+# 100
+</code></pre></div>
+<p>可以看到，outertest函数的可以不通过实例，也可以利用实例，不能直接调用和使用类内的属性，仍然需要传入类实例对象才可以完成对属性的操作，而且没有self参数，也可以传入其他类实例对象完成操作。</p>
+<p>如果想要完成不实例化就操作类的类属性（实例属性一定要实例化），需要配合类方法完成。</p>
+<p>下面介绍类方法。</p>
+<span id="4classmethod" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-4classmethod">（4）@classmethod：</h5>
+<p>被@classmethod装饰的方法是类方法，类方法的调用可以通过类，也可以通过实例。</p>
+<p>类方法只是用于类的，只能访问类属性，并完成一定的处理，不能访问实例属性。</p>
+<p>这种方法必须有一个参数，一般用cls命名，代表类本身，调用时第一个参数隐性传递该参数，不需要主动传入。</p>
+<p>同样类似于c++中的静态成员函数。</p>
+<p>@classmethod和@staticmethod区别主要在于，前者主要用于该类的静态属性的操作，而后者则是与实例无关但与类的封装功能有关的函数。</p>
+<p>简单的例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class test:
+    i=10
+    @classmethod
+    def square_i(cls):
+        cls.i=cls.i**2
+        return cls.i
+print(test().square_i())
+t=test()
+print(t.square_i())
+# 运行结果：
+# 100
+# 10000
+</code></pre></div>
+<p>可以把@classmethod的方法和@staticmethod的函数联合使用完成一些特定功能。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class test:
+    i=10
+    def __init__(self):
+        self.j=100
+    @classmethod
+    def square_i(cls):
+        cls.i=cls.i**2
+        return cls.i
+    @staticmethod
+    def test_use(class_name):
+        return test.square_i()*class_name.j
+class test2:
+    j=200
+t=test()
+t2=test2()
+print(test.test_use(t))
+print(test.test_use(t2))
+# 运行结果：
+# 10000
+# 2000000
+</code></pre></div>
+<span id="5wraps" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-5wraps">（5）@wraps：</h5>
+<p>先来看一段简单的代码：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def debbug(func):
+   def get_para(*args,**kwargs):
+       print("start debbug")
+       result =func(*args,**kwargs)
+       print("end debbug")
+       return result
+   return get_para
+@debbug
+def use_de():
+    print(use_de.__name__)
+use_de()
+# 运行结果：
+# start debbug
+# get_para
+# end debbug
+</code></pre></div>
+<p>装饰器在修饰函数时，可以看到，use_de的__name__名称并不是use_de，而是get_para，说明装饰器"污染"了被装饰函数的属性，被装饰函数的函数名和属性是属于新函数的。</p>
+<p>因此，为了保证被装饰器修饰后的函数还有原来的属性，需要使用functools.wraps装饰器来保证被装饰函数的函数名和属性不会发生改变。</p>
+<p>修改的例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>from functools import wraps
+def debbug(func):
+    def get_para(*args,**kwargs):
+       print("start debbug")
+       result =func(*args,**kwargs)
+       print("end debbug")
+       return result
+    return get_para
+@debbug
+def use_de():
+    print(use_de.__name__)
+use_de()
+# 运行结果：
+# start debbug
+# get_para
+# end debbug
+</code></pre></div>
+<p>可以看到，结果发生了改变。</p>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],"$L28","$L29","$L2a"]}],"$L2b"]}]
+1b:["$","$L2c",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+2e:I[2708,["825","$2","953","$c"],"FeedbackForm"]
+f:300
+28:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/python-os/","children":[["$","span",null,{"children":"上一篇"}],"python标准库——os模块常用方法"]}],["$","$Ld",null,{"href":"/blog/python-method-reuse-polymorphism/","children":[["$","span",null,{"children":"下一篇"}],"python进阶——类(三)方法重写、多态"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$Ld",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$Ld",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-special-methods",{"children":[["$","$Ld",null,{"href":"/blog/python-special-methods/","children":"python进阶——类(四)常用内置方法"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+29:["$","$L2e",null,{"contentId":"python-class-decorators"}]
+2a:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+2b:["$","$L25",null,{"headings":"$19:props:headings"}]
+2d:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"

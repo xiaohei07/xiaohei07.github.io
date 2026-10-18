@@ -1,0 +1,648 @@
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-b30e31df6c2e8735.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
+c:"static/chunks/app/blog/%5Bslug%5D/page-3d40087eea745d39.js"
+d:I[3498,["825","$2","953","$c"],"default"]
+16:I[6279,["825","$2","953","$c"],"FilterLink"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+:HL["/_next/static/css/1157a8e5089bb8f3.css","style"]
+:HL["/_next/static/css/5c106c1d1e48f95b.css","style"]
+f:X
+12:X
+12:C
+15:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Ld",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Ld",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":57}]]}],["$","$Ld",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":52}]]}],["$","$L16",null,{"className":"trail-current","href":"/blog/#foundations","children":["基础知识",["$","span",null,{"children":48}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"python基础——数据类型(四)列表"}],["$","p",null,{"className":"article-deck","children":"围绕列表的创建、索引、切片和增删改查，列举嵌套列表及常用操作"}],"$L17","$L18"]}],"$L19","$L1a"]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$f"}}]]
+13:[["children",{"s":{"n":"slug","t":"d","k":"python-lists","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@14","v":"$12","s":"$f"},"c":"$Q15"}]]
+10:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@11","v":"$12","s":"$f"},"c":"$Q13"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["知识点","python","C++"]}],["$","$L8",null,{"sidebar":["$","$L9",null,{}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Ld",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Ld",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Ld",null,{"href":"/about/","children":"关于这个站点"}],["$","$Ld",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@e","v":null,"s":"$f"},"c":"$Q10"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"python基础——数据类型(四)列表 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"围绕列表的创建、索引、切片和增删改查，列举嵌套列表及常用操作。"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$f"}},"a":"$@23","u":"$@24","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+25:I[4067,["825","$2","953","$c"],"ArticleToc"]
+26:I[4711,["825","$2","953","$c"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+17:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-20","children":"2023-03-20"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"4,464"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",17," 分钟"]}]]}]
+18:["$","div",null,{"className":"tag-list","children":[["$","$L16","python",{"href":"/blog/#tag=python","children":"python"}],["$","$L16","知识点",{"href":"/blog/#tag=%E7%9F%A5%E8%AF%86%E7%82%B9","children":"知识点"}]]}]
+19:["$","$L25",null,{"headings":[{"id":"section-一概述","text":"（一）概述：","level":3},{"id":"section-二创建与形式","text":"（二）创建与形式：","level":3},{"id":"section-三列表的特性","text":"（三）列表的特性：","level":3},{"id":"section-1-访问","text":"1. 访问：","level":3},{"id":"section-2-删除列表","text":"2. 删除列表：","level":4},{"id":"section-3多维列表","text":"3.多维列表:","level":4},{"id":"section-4-列表的主要操作增删改查","text":"4. 列表的主要操作（增删改查）：","level":4},{"id":"section-5-列表的其他操作","text":"5. 列表的其他操作：","level":4}],"mobile":true}]
+27:T6bb2,<span id="一概述" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一概述">（一）概述：</h3>
+<p>list列表的本质是一种有序的集合，是可变的序列（具有先后顺序），是python最基本的数据结构，。</p>
+<p>列表元素的个数没有限制，元素的类型是任意的（只要python支持），不同类型的元素也可以存储在同一列表中。</p>
+<p>列表的长度是系统内置的，可以调用len()函数获得列表长度。</p>
+<p>本章将会讲述所有列表相关操作，包括创建，索引访问，切片访问，增删改查、以及各类操作。</p>
+<span id="二创建与形式" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二创建与形式">（二）创建与形式：</h3>
+<p>python中用[]方括号表示列表，并用逗号分割其中的元素。</p>
+<p>形式为： <em><strong>列表名 = [元素1,元素2......]</strong></em>  / <em><strong>列表名=[]</strong></em>（空列表）</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>list1 = []     #空列表
+list2 = list() #格式化，空列表
+list3 = [10, 20, 30, 3.14, 6.28, "aaa", "bbb", [1,2,3,4], True, False, 3+7j, {"a":1}, "\n"]
+print(list3)
+#运算结果:
+# [10, 20, 30, 3.14, 6.28, 'aaa', 'bbb', [1, 2, 3, 4], True, False, (3+7j), {'a': 1}, '\n']
+</code></pre></div>
+<span id="三列表的特性" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三列表的特性">（三）列表的特性：</h3>
+<span id="1-访问" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-1-访问">1. 访问：</h3>
+<ol>
+<li>
+<p>索引访问：</p>
+<p>格式：<em><strong>listname[index]</strong></em>，listname是列表名字，index是索引值。</p>
+<p>index的取值范围为<strong>[0，列表长度-1]</strong></p>
+<p>索引值有正负之分。</p>
+<p>正索引值从0开始对应第一个元素，并以此类推。</p>
+<p>负索引值从-1开始对应最后一个元素，是反向访问。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listprint = [1,2,3,4,5,6,7,8,9,10,"11","12","13"]
+for i in range (0,13):
+    print(listprint[i],end="  ")
+print("")
+for i in range(0, 13):
+    print(listprint[-i-1],end="  ")
+print('')
+# 运算结果：
+# 1  2  3  4  5  6  7  8  9  10  11  12  13
+# 13  12  11  10  9  8  7  6  5  4  3  2  1
+</code></pre></div>
+</li>
+<li>
+<p>切片访问：</p>
+<p>格式：<em><strong>listname[start: end: step]</strong></em>，listname是列表名字，start是开始索引，默认为1，end是结束索引，默认为列表末尾，step是步长，默认为1。</p>
+<p>开始索引到结束索引是一个左闭右开区间，表示截取此部分列表内容进行访问。步长是从开始索引开始每次访问相邻元素的距离。</p>
+<p>三者均可以是负值，也可以不同时为正或负，两个索引为负代表反向索引，步长为负代表从结束索引向开始索引移动。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listprint = [1,2,3,4,5,6,7,8,9,10,"11","12","13"]
+print(listprint[::])     #相当于正向遍历
+
+print(listprint[::-1])   #相当于反向遍历
+
+print(listprint[2:6])    #相对于访问第3-6个元素
+
+print(listprint[6:2])    #但结束索引小于开始索引，直接结束、
+
+print(listprint[-2:-6])  #同上
+
+print(listprint[-6:-2])  #相当于访问倒数第6-3个元素
+
+print(listprint[1:8:2])  #相当于访问1，3，5，7索引元素
+
+print(listprint[8:1:2])  #直接结束
+
+print(listprint[1:8:-2]) #要反向访问，开始索引应大于结束索引，否则直接结束
+
+print(listprint[8:1:-2]) #相当于访问8，6，4，1索引元素
+
+print(listprint[-1:-8:2])#直接结束
+
+print(listprint[-8:-1:2])#相当于访问-8，-6，-4，-2元素
+
+print(listprint[-1:-8:-2])#相当于访问-1，-3，-5，-7元素
+
+print(listprint[-8:-1:-2])#直接结束
+
+# 运算结果：
+#1  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, '11', '12', '13']
+#2  ['13', '12', '11', 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+#3  [3, 4, 5, 6]
+#4  []
+#5  []
+#6  [8, 9, 10, '11']
+#7  [2, 4, 6, 8]
+#8  []
+#9  []
+#10 [9, 7, 5, 3]
+#11 []
+#12 [6, 8, 10, '12']
+#13 ['13', '11', 9, 7]
+#14 []
+</code></pre></div>
+</li>
+</ol>
+<span id="2-删除列表" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-删除列表">2. 删除列表：</h4>
+<p>python自带垃圾回收机制，已创建的列表如不再使用，将会被编译器自动回收，不会产生内存垃圾。</p>
+<p>如果需要可以手动删除，使用del 关键字手动删除列表。</p>
+<p>形式为： <em><strong>del listname</strong></em></p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a=[1,2,3,4,5]
+del a
+print(a) #此句无法输出，因为a已经被删除了，a变量处于未定义状态
+</code></pre></div>
+<span id="3多维列表" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3多维列表">3.多维列表:</h4>
+<p>多维列表是将其他列表当做列表的元素放在一个列表当中，也就是列表的嵌套，一般我们常用的是二位列表，这里以二维列表为例。</p>
+<p>二维列表形式为：</p>
+<p><em><strong>listname = [ sublistname1, sublistname2 , sublistname3, ....... , sublistnamen ]</strong></em></p>
+<p>访问形式为：</p>
+<p><em><strong>listname[ index1] [index2]</strong></em></p>
+<p>index1代表索引中的行，代表二维列表中第index1-1个列表；</p>
+<p>index2代表索引中的列，代表二维列表中第index1-1个列表的第index2-1个元素。</p>
+<p>如果是多维列表，逻辑同一维列表转变为二维列表。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a=[[1,2,3],[4,5,6],[7,8,9]]
+print(a[0],a[1],a[2],sep=" ",end="\n")
+print(a[0][0],a[1][0],a[2][0],sep=" ",end="\n")
+print(a[0][1],a[1][1],a[2][1],sep=" ",end="\n")
+print(a[0][2],a[1][2],a[2][2],sep=" ",end="\n")
+# 输出结果
+# [1, 2, 3] [4, 5, 6] [7, 8, 9]
+# 1 4 7
+# 2 5 8
+# 3 6 9
+</code></pre></div>
+<span id="4-列表的主要操作增删改查" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-列表的主要操作增删改查">4. 列表的主要操作（增删改查）：</h4>
+<ul>
+<li>
+<p>修改列表元素：</p>
+<ul>
+<li>
+<p>单个元素的修改：</p>
+<p>形式：<em><strong>list1[index] = value</strong></em>，就可以修改列表中对应索引的内容为value。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>a = [1,2,3]
+a[1]=4
+print(a)
+# 输出结果：
+# [1, 4, 3]
+</code></pre></div>
+</li>
+<li>
+<p>一组元素的修改：</p>
+<p>实际上是使用切片的形式给一组元素赋值。此方法不能给单个数字赋值，也会把字符串自动转换为列表，每个字符对应一个元素。</p>
+<p>如果不指定步长，新赋值的元素个数可以和要修改的列表元素个数不相同（实际上，这种方法可以为列表删除/添加元素）。</p>
+<p>如果指定步长，要求新赋值的元素个数和要修改的列表元素个数相同。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay = [1,2,3,4,5,6,7,8]
+print("修改前:",listdisplay)
+listdisplay[0: 2] = ["a","b"]
+print("修改后:",listdisplay)
+
+# listdisplay = [1,2,3,4,5,6,7,8]
+# print("修改前:",listdisplay)
+# listdisplay[0: 0] = 9  #此句话错误，不能用切片方式对数字单独赋值。
+
+listdisplay = ["1","2","3","4"]
+print("修改前:",listdisplay)
+listdisplay[0: 0] = "5678"  #此句话错误，不能用切片方式对数字单独赋值。
+print("修改后:",listdisplay)  #可以用切片方式对数字单独赋值，而且会改变元素个数
+
+listdisplay = []
+print("修改前:",listdisplay)
+listdisplay[0: 0] = ["1","2","3","4"]  # 对空切片赋值
+print("修改后:",listdisplay)
+
+listdisplay = ["1","2","3","4"]
+print("修改前:",listdisplay)
+listdisplay[:] = ["5","6","7","8","9"]  # 新赋值的元素个数与原来的元素个数可以不相同。并且元素个数增加了。
+print('修改后:', listdisplay)
+
+listdisplay = ["1","2","3","4"]
+print("修改前:",listdisplay)
+listdisplay[:] = ["5","6","7","8","9"]  # 新赋值的元素个数与原来的元素个数可以不相同。并且元素个数减少了。
+print('修改后:', listdisplay)
+
+listdisplay = ["1","2","3","4","5","6"]
+print("修改前:",listdisplay)
+listdisplay[1: 6: 2] = ['a', 'b', 'c']  # 从索引 1 开始每隔两个添加一个新元素，到索引 6 ，不包括 索引 6
+print('修改后:', listdisplay)
+
+# 运行结果：
+# 修改前: [1, 2, 3, 4, 5, 6, 7, 8]
+# 修改后: ['a', 'b', 3, 4, 5, 6, 7, 8]
+# 修改前: ['1', '2', '3', '4']
+# 修改后: ['5', '6', '7', '8', '1', '2', '3', '4']
+# 修改前: []
+# 修改后: ['1', '2', '3', '4']
+# 修改前: ['1', '2', '3', '4']
+# 修改后: ['5', '6', '7', '8', '9']
+# 修改前: ['1', '2', '3', '4']
+# 修改后: ['5', '6', '7', '8', '9']
+# 修改前: ['1', '2', '3', '4', '5', '6']
+# 修改后: ['1', 'a', '3', 'b', '5', 'c']
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>查询列表元素：</p>
+<ul>
+<li>
+<p>使用 in 和 not in判断元素是否在列表内：</p>
+<p>格式： <em><strong>value in listname</strong></em> / <em><strong>value not in listname</strong></em></p>
+<p>可以判断value值是否在listname中，整体为布尔值。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay = [1,2,3,4,5,6,7]
+print(1 in listdisplay)
+print(3 not in listdisplay)
+print(8 in listdisplay)
+print(10 not in listdisplay)
+# 输出结果:
+# True
+# False
+# False
+# True
+</code></pre></div>
+<p>此方法配合下面的index方法食用更佳（先判断在不在列表内部，再用index方法，以免index没查到而报错）。</p>
+</li>
+<li>
+<p>使用列表的index()方法查找元素：</p>
+<p>格式：<em><strong>listname.index(obj, start, end)</strong></em></p>
+<p>返回值为查找到的元素第一次在列表中出现的索引值。</p>
+<p>obj表示要查找的元素；</p>
+<p>start表示起始索引，默认为列表初始元素；</p>
+<p>end表示结束索引，默认为列表末尾元素；（检查不包括end元素本身）</p>
+<p>start和end均可不写，此时检索全列表。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+getindex1 = listdisplay.index(3)  # 整个列表中检索元素3的位置
+print(getindex1)
+
+getindex2 = listdisplay.index(10,0,len(listdisplay)+1) #和上面查询范围等价
+print(getindex2)
+
+getindex3 = listdisplay.index(5,0,5)  # 检索元素5在列表索引0-4中的位置
+print(getindex3)
+
+# getindex4 = listdisplay.index(6, 0, 5)  #检查元素6在列表索引中0-4的位置，但是不在其中，报错
+# 输出结果：
+# 2
+# 9
+# 4
+</code></pre></div>
+</li>
+<li>
+<p>使用列表的count()方法查找元素：</p>
+<p>格式：<em><strong>listname.count(obj)</strong></em></p>
+<p>返回值为查找元素在列表中出现的次数，返回0意味着列表中未出现此元素。</p>
+<p>obj为要统计的元素。</p>
+<p>不能指定查询列表的某个范围，只能全局查找。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 3, 3, 3]
+getcount1 = listdisplay.count(3)  # 整个列表中检索元素3的数量
+print(getcount1)
+getcount2 = listdisplay.count(12)  # 整个列表中检索元素12的数量,返回0,即未出现
+print(getcount2)
+# 输出结果：
+# 4
+# 0
+
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>添加列表元素：</p>
+<ul>
+<li>
+<p>列表的组合（使用"+"符号）：</p>
+<p>格式：<em><strong>listname = listname1+listname2+...+listnamen</strong></em></p>
+<p>"+"运算符在操作多个列表时，可以将列表拼接到一起，生成一个新的列表，新列表按所加的顺序生成所有元素。</p>
+<p>此方法虽然简便直观，但是执行效率低，不建议经常使用。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay1 = [1, 2, 3, 4, 5]
+listdisplay2 = [6, 7, 8, 9, 10]
+listdisplay3 = listdisplay1+listdisplay2
+print(listdisplay1)
+print(listdisplay2)
+print(listdisplay3)
+# 运行结果：
+# [1, 2, 3, 4, 5]
+# [6, 7, 8, 9, 10]
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</code></pre></div>
+</li>
+<li>
+<p>列表的重复（使用"*"符号）：</p>
+<p>格式：<em><strong>listname= listname1</strong></em> ***** <em><strong>n</strong></em></p>
+<p>"*"运算符对单个列表操作时，将被操作列表复制n遍合成一个列表，相当于用当前元素生成长度为原长度n倍的列表。</p>
+<p>同样，此方法执行效率不高。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay = [1, 2, 3, 4, 5]
+listdisplaynew = listdisplay*3
+print(listdisplay)
+print(listdisplaynew)
+# 输出结果：
+# [1, 2, 3, 4, 5]
+# [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+</code></pre></div>
+</li>
+<li>
+<p>append()方法添加元素：</p>
+<p>格式：<em><strong>listname.append(obj)</strong></em></p>
+<p>append()函数添加元素至列表末尾，obj可以是一个列表/元组等等，但是obj会作为一个整体被添加进入listname这个列表中，也就是只添加一个元素，形成一个新列表（但地址不变，只是长度和元素更新了）。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay=[1,2,3,4]
+listdisplay.append(5)
+print(listdisplay)
+listdisplay.append("12345")
+print(listdisplay)
+listdisplay.append([6,7,8,9,10])
+print(listdisplay)
+listdisplay.append({11,12,13,14,15})
+print(listdisplay)
+# 输出结果：
+# [1, 2, 3, 4, 5]
+# [1, 2, 3, 4, 5, '12345']
+# [1, 2, 3, 4, 5, '12345', [6, 7, 8, 9, 10]]
+# [1, 2, 3, 4, 5, '12345', [6, 7, 8, 9, 10], {11, 12, 13, 14, 15}]
+</code></pre></div>
+</li>
+<li>
+<p>extend()方法添加元素：</p>
+<p>格式：<em><strong>listname.extend(obj)</strong></em></p>
+<p>extend()函数添加元素至列表末尾，obj可以是一个字符串/列表/元组，但是不能是单个数据，必须是这种序列形式，哪怕里面只有一个元素。</p>
+<p>extend()函数会将obj包含的所有元素逐个提取加入listname列表中，也就是被添加的数据不止一个，形成一个新列表（地址不变，只是长度和元素更新了）。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay=[1,2,3,4]
+listdisplay.extend([5])
+print(listdisplay)
+listdisplay.extend("12345")
+print(listdisplay)
+listdisplay.extend([6,7,8,9,10])
+print(listdisplay)
+listdisplay.extend({11,12,13,14,15})
+print(listdisplay)
+# # 输出结果：
+# [1, 2, 3, 4, 5]
+# [1, 2, 3, 4, 5, '1', '2', '3', '4', '5']
+# [1, 2, 3, 4, 5, '1', '2', '3', '4', '5', 6, 7, 8, 9, 10]
+# [1, 2, 3, 4, 5, '1', '2', '3', '4', '5', 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+</code></pre></div>
+</li>
+<li>
+<p>insert()方法添加元素：</p>
+<p>格式：<em><strong>listname.insert(index , obj)</strong></em></p>
+<p>insert()函数可以在列表的指定位置插入元素，通过index索引值确定插入位置，在此位置的原来的元素默认后移为新插入元素空出空间。</p>
+<p>obj的插入和append的情况相同。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay=[1,2,3,4]
+listdisplay.insert(1,[1.5])
+print(listdisplay)
+listdisplay.insert(0,"12345")
+print(listdisplay)
+listdisplay.insert(4,[6,7,8,9,10])
+print(listdisplay)
+listdisplay.insert(3,{11,12,13,14,15})
+print(listdisplay)
+# # 输出结果：
+# [1, [1.5], 2, 3, 4]
+# ['12345', 1, [1.5], 2, 3, 4]
+# ['12345', 1, [1.5], 2, [6, 7, 8, 9, 10], 3, 4]
+# ['12345', 1, [1.5], {11, 12, 13, 14, 15}, 2, [6, 7, 8, 9, 10], 3, 4]
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>删除列表元素：</p>
+<ul>
+<li>
+<p>del关键字进行删除：</p>
+<p>格式：<em><strong>del listname[index]</strong></em></p>
+<p>​		    <em><strong>del listname[start : end]</strong></em></p>
+<p>del关键字可以根据列表的索引值进行指定值/范围删除，也可以直接删除整个列表（见上），可以指定超过范围的索引值，但不建议。</p>
+<p>删除后列表的长度和元素均进行更新。</p>
+<p>end本身不会被删除。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay=[1,2,3,4,5,6,7,8,9,10]
+del listdisplay[1]   #删一个
+print(listdisplay)
+del listdisplay[1:5] #删四个
+print(listdisplay)
+del listdisplay[6:7] #无效操作
+print(listdisplay)
+del listdisplay[-2:-1] #删除倒数第二个
+print(listdisplay)
+# # 输出结果：
+# [1, 3, 4, 5, 6, 7, 8, 9, 10]
+# [1, 7, 8, 9, 10]
+# [1, 7, 8, 9, 10]
+# [1, 7, 8, 10]
+</code></pre></div>
+</li>
+<li>
+<p>pop方法进行删除：</p>
+<p>格式：<em><strong>listname.pop(index)</strong></em></p>
+<p>pop()函数同样根据列表的索引值进行指定值删除，不能指定范围，不能整个列表删除。</p>
+<p>index的默认值为列表最后一个元素，其值不能超过范围。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay=[1,2,3,4,5,6,7,8,9,10]
+listdisplay.pop(1)   #删位置为1的元素
+print(listdisplay)
+listdisplay.pop()  #删除最后一个元素
+print(listdisplay)
+listdisplay.pop(-2) #删除倒数第二个
+print(listdisplay)
+# 输出结果：
+# [1, 3, 4, 5, 6, 7, 8, 9, 10]
+# [1, 3, 4, 5, 6, 7, 8, 9]
+# [1, 3, 4, 5, 6, 7, 9]
+</code></pre></div>
+</li>
+<li>
+<p>remove方法进行删除：</p>
+<p>格式：<em><strong>listname.remove(element)</strong></em></p>
+<p>remove()函数根据元素本身的值（element）进行删除，且只删除第一个指定元素值，随后结束函数，不会删除其他相同元素。</p>
+<p>被删除元素必须在列表中存在，否则会报错。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay=[1,2,3,4,5,6,7,2,8,9,10]
+listdisplay.remove(2) #删除第一个值为2的元素，第二个不删除
+print(listdisplay)
+listdisplay.remove(2) #删除值为2的元素
+print(listdisplay)
+# listdisplay.remove(-2)   #-2不存在，报错
+# 输出结果：
+# [1, 3, 4, 5, 6, 7, 2, 8, 9, 10]
+# [1, 3, 4, 5, 6, 7, 8, 9, 10]
+</code></pre></div>
+</li>
+<li>
+<p>clear方法进行删除：</p>
+<p>格式：<em><strong>listname.clear()</strong></em></p>
+<p>clear()函数删除所有元素，但变量名还存在（区别于上面del 删除列表操作）。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay=[1,2,3,4,5,6,7,2,8,9,10]
+print(listdisplay)
+listdisplay.clear()
+print(listdisplay)
+# 输出结果：
+# [1, 2, 3, 4, 5, 6, 7, 2, 8, 9, 10]
+# []
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<span id="5-列表的其他操作" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-5-列表的其他操作">5. 列表的其他操作：</h4>
+<ul>
+<li>
+<p>获得最大，最小值：</p>
+<p>格式：<em><strong>max(listname) / min(listname)</strong></em></p>
+<p>获得列表最大值/最小值。（只限于可比较类型比较而出的最大/最小值）。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay = ["ayz","bcd","jkl","w"] #按首字母的ASCII码比较
+print(max(listdisplay))
+# 输出结果：
+# w  
+</code></pre></div>
+</li>
+<li>
+<p>排序：</p>
+<ul>
+<li>
+<p>列表的sort方法排序：</p>
+<p>格式：<em><strong>listname.sort(</strong></em> ***** <em><strong>, key=None, reverse=False)</strong></em></p>
+<p>key：指定带有一个参数的函数，用于从每个序列元素中提取比较键。对应于序列中的每一项的键会被计算一次，然后在整个排序过程中使用，默认值None代表直接对序列项排序，不计算单独的键值。</p>
+<p>reverse：为一个布尔值，默认False，表示升序排序，如果指定了True，则表示降序排序</p>
+<p>sort方法对原列表进行修改。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay = [8,6,4,6,8,1,9]
+listdisplay.sort(reverse=True)
+print(listdisplay)
+listdisplay.sort()
+print(listdisplay)
+listdisplay2= ["abc","qwe","jkl","zxc"]
+listdisplay2.sort(reverse=False)
+print(listdisplay2)
+# 输出结果:
+# [9, 8, 8, 6, 6, 4, 1]
+# [1, 4, 6, 6, 8, 8, 9]
+# ['abc', 'jkl', 'qwe', 'zxc']
+</code></pre></div>
+</li>
+<li>
+<p>内置的sorted()函数排序：</p>
+<p>格式：<em><strong>sorted(iterable,</strong></em> ***** <em><strong>,key=None, reverse=False)</strong></em></p>
+<p>sorted()函数从一个可迭代对象根据iterable的项返回一个新的排序列表</p>
+<p>key和reverse同上。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay = [8,6,4,6,8,1,9]
+listdisplay2=sorted(listdisplay,reverse=True)
+print(listdisplay)
+print(listdisplay2)
+listdisplay3=sorted(listdisplay)
+print(listdisplay)
+print(listdisplay3)
+listdisplay2= ["abc","qwe","jkl","zxc"]
+listdisplay4=sorted(listdisplay2,reverse=False)
+print(listdisplay4)
+# 输出结果:
+# [8, 6, 4, 6, 8, 1, 9]
+# [9, 8, 8, 6, 6, 4, 1]
+# [8, 6, 4, 6, 8, 1, 9]
+# [1, 4, 6, 6, 8, 8, 9]
+# ['abc', 'jkl', 'qwe', 'zxc']
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>复制：</p>
+<ul>
+<li>
+<p>直接赋值：</p>
+<p>= 直接赋值是非拷贝方法。</p>
+<p>两个列表是等价的，修改其中任何一个列表都会影响另一个列表。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay = [8,6,4,6,8,1,9]
+listdisplay1= listdisplay
+listdisplay1[1]=0
+print(listdisplay)
+print(listdisplay1)
+# 输出结果：
+# [8, 0, 4, 6, 8, 1, 9]
+# [8, 0, 4, 6, 8, 1, 9]
+</code></pre></div>
+</li>
+<li>
+<p>copy方法（浅拷贝）：</p>
+<p>格式：<em><strong>listnewname = listname.copy()</strong></em></p>
+<p>python中浅拷贝是指list保存的地址同样被复制过去，而不是创建新的地址复制值过去。</p>
+<p>copy方法对嵌套的list只能对第一层实现深拷贝，而其内嵌套的list仍是浅拷贝。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay = [1,2,3,[1,2,3]]
+listdisplay1=listdisplay.copy()
+listdisplay[0]=3
+listdisplay[3][1]=3
+print(listdisplay)
+print(listdisplay1)
+# 输出结果：
+# [3, 2, 3, [1, 3, 3]]
+# [1, 2, 3, [1, 3, 3]]
+</code></pre></div>
+</li>
+<li>
+<p>使用切片：</p>
+<p>格式：<em><strong>listnewname= listname[:]</strong></em></p>
+<p>同为浅拷贝。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay = [1,2,3,[1,2,3]]
+listdisplay1=listdisplay[:]
+listdisplay[0]=3
+listdisplay[3][1]=3
+print(listdisplay)
+print(listdisplay1)
+# 输出结果：
+# [3, 2, 3, [1, 3, 3]]
+# [1, 2, 3, [1, 3, 3]]
+</code></pre></div>
+</li>
+<li>
+<p>for循环遍历：</p>
+<p>无具体格式，是一个操作流程。</p>
+<p>同为浅拷贝。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay = [1,2,3,[1,2,3]]
+listdisplay1=[]
+for i in range(len(listdisplay)):
+    listdisplay1.append(listdisplay[i])
+listdisplay[0]=3
+listdisplay[3][1]=3
+print(listdisplay)
+print(listdisplay1)
+# 输出结果：
+# [3, 2, 3, [1, 3, 3]]
+# [1, 2, 3, [1, 3, 3]]
+</code></pre></div>
+</li>
+<li>
+<p>列表生成式：</p>
+<p>格式：<em><strong>listnewname = [i for i in listname ]</strong></em></p>
+<p>同为浅拷贝。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay = [1,2,3,[1,2,3]]
+listdisplay1=[i for i in listdisplay]
+listdisplay[0]=3
+listdisplay[3][1]=3
+print(listdisplay)
+print(listdisplay1)
+# 输出结果：
+# [3, 2, 3, [1, 3, 3]]
+# [1, 2, 3, [1, 3, 3]]
+</code></pre></div>
+</li>
+<li>
+<p>deepcopy方法：</p>
+<p>格式：<em><strong>listnewname= copy.deepcopy(listname)</strong></em></p>
+<p>是深拷贝，原来的列表和新列表完全无关。</p>
+<p>需要import copy库</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>import copy
+listdisplay = [1,2,3,[1,2,3]]
+listdisplay1 = copy.deepcopy(listdisplay)
+listdisplay[0]=3
+listdisplay[3][1]=3
+print(listdisplay)
+print(listdisplay1)
+# 输出结果：
+# [3, 2, 3, [1, 3, 3]]
+# [1, 2, 3, [1, 2, 3]] #唯一未随之改变的
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>翻转：</p>
+<p>格式： <em><strong>listname.reverse()</strong></em></p>
+<p>将列表元素倒叙，对原列表操作，不返回新列表。</p>
+<p>不会翻转里面的内嵌套列表/字符串/元组，只是更换元素位置。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>listdisplay = [1,2,3,[1,2,3]]
+listdisplay.reverse()
+print((listdisplay))
+# 输出结果：
+# [[1, 2, 3], 3, 2, 1]
+</code></pre></div>
+</li>
+</ul>1a:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L26",null,{"html":"$27"}],"$L28","$L29","$L2a"]}],"$L2b"]}]
+1b:["$","$L2c",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+2e:I[2708,["825","$2","953","$c"],"FeedbackForm"]
+f:300
+28:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Ld",null,{"href":"/blog/divide-and-conquer-theory/","children":[["$","span",null,{"children":"上一篇"}],"算法——分治算法(1)"]}],["$","$Ld",null,{"href":"/blog/python-data-types/","children":[["$","span",null,{"children":"下一篇"}],"python基础——数据类型（一）简介"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$Ld",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-class-decorators",{"children":[["$","$Ld",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"基础知识"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$Ld",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"基础知识"}]]}]]}]]}]]}]
+29:["$","$L2e",null,{"contentId":"python-lists"}]
+2a:["$","div",null,{"className":"related-note","children":[["$","$Ld",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+2b:["$","$L25",null,{"headings":"$19:props:headings"}]
+2d:null
+24:true
+f:C
+23:0
+14:"$undefined"
+11:"$undefined"
+e:"$undefined"
+22:"$undefined"
+1c:"$undefined"
