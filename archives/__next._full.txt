@@ -13,13 +13,13 @@ f:"MetadataBoundary"
 6:X
 7:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L8",null,["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]]}],"p":false,"v":null}}]]
 3:[["children",{"s":"archives","h":512,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
-0:{"P":null,"c":["","archives",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Ld",null,{"children":"$Le"}],["$","$L10",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$a",null,{"name":"Next.Metadata","children":"$L11"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$12",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"jPv1KV9ToaFZ1LBtrTwmv"}
+0:{"P":null,"c":["","archives",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1157a8e5089bb8f3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/5c106c1d1e48f95b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Ld",null,{"children":"$Le"}],["$","$L10",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$a",null,{"name":"Next.Metadata","children":"$L11"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$12",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"0Pjy4ta1UNM8vrQCSv5xl"}
 6:C
 e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 b:null
 11:[["$","title","0",{"children":"归档 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"按时间浏览文章、研究与项目"}]]
 13:"static/chunks/825-1a8f209f3ada760f.js"
-14:"static/chunks/app/layout-b30e31df6c2e8735.js"
+14:"static/chunks/app/layout-7147551fb5adb424.js"
 15:I[6767,["825","$13","177","$14"],"DisplayProvider"]
 16:"NavigationFeedback"
 17:I[2842,["825","$13","177","$14"],"$16"]
