@@ -1,0 +1,121 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1a5e690335e7d9fc.css","style"]
+:HL["/_next/static/css/99458caadf388351.css","style"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"react-state-effects","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","react-state-effects",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1a5e690335e7d9fc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/99458caadf388351.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"E-M2wxgR09X62ofy5DhPV"}
+15:"static/chunks/825-1a8f209f3ada760f.js"
+16:"static/chunks/491-13729696a55105fe.js"
+17:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+18:I[6279,["825","$15","491","$16","953","$17"],"FilterLink"]
+19:I[4067,["825","$15","491","$16","953","$17"],"ArticleToc"]
+1b:I[4711,["825","$15","491","$16","953","$17"],"ArticleBody"]
+6:C
+1c:T1ffa,<p>在组件中定义一个普通变量，点击后修改它，React并不会因此自动重新渲染界面。需要让React记录、并参与后续渲染的数据，可以用state保存。输入框的内容、当前标签、请求是否进行中，都属于这样的数据。</p>
+<h2 id="section-usestate保存的是哪一轮状态">useState保存的是哪一轮状态</h2>
+<div class="code-block"><div class="code-toolbar"><span>tsx</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-tsx"><span class="hljs-string">"use client"</span>;
+<span class="hljs-keyword">import</span> { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Counter</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> [count, setCount] = <span class="hljs-title function_">useState</span>(<span class="hljs-number">0</span>);
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =></span> setCount(count + 1)}>{count}<span class="hljs-tag">&#x3C;/<span class="hljs-name">button</span>></span></span>;
+}
+</code></pre></div>
+<p><code>count</code>是本轮渲染读取到的值，<code>setCount</code>安排新的状态。调用它之后，当前函数里的<code>count</code>不会立刻变成新值；React后续渲染时才会把更新后的状态交给组件。<a href="https://react.dev/learn/state-as-a-snapshot" rel="noopener noreferrer">状态快照</a>说明了事件处理函数为何会保留某一轮的值。</p>
+<p>例如同一个点击处理里连续执行三次<code>setCount(count + 1)</code>，三次计算用的可能都是同一份<code>count</code>。如果目标是基于前一次待处理值累加三次，可以写三次<code>setCount(value => value + 1)</code>。更新函数接收队列中的前一个值，不能简单把两种写法看成完全等价。<a href="https://react.dev/learn/queueing-a-series-of-state-updates" rel="noopener noreferrer">状态更新队列</a>有对应过程。</p>
+<h2 id="section-输入框怎样保持值与界面一致">输入框怎样保持值与界面一致</h2>
+<div class="code-block"><div class="code-toolbar"><span>tsx</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-tsx"><span class="hljs-keyword">const</span> [message, setMessage] = <span class="hljs-title function_">useState</span>(<span class="hljs-string">""</span>);
+
+<span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">textarea</span>
+  <span class="hljs-attr">value</span>=<span class="hljs-string">{message}</span>
+  <span class="hljs-attr">onChange</span>=<span class="hljs-string">{event</span> =></span> setMessage(event.target.value)}
+/></span>
+</code></pre></div>
+<p>输入触发<code>onChange</code>，把新的字符串存入state；下一轮渲染再把这个字符串传给<code>value</code>。这种输入由组件状态管理，通常称为受控输入。</p>
+<p>本站反馈表单在等待期间禁用输入与按钮，成功后清空字符串，失败则保留。因此处理成功与失败时需要分别更新对应状态，不能在提交函数末尾无条件清空。</p>
+<p>数组和对象也应产生新值，例如<code>setTags(tags => [...tags, "React"])</code>，而不是直接对原数组<code>push</code>后继续复用原引用。这样更容易保持每轮状态清楚，也能避免修改其他地方仍在使用的对象。</p>
+<h2 id="section-effect何时需要何时不需要">Effect何时需要，何时不需要</h2>
+<p><code>useEffect</code>适合将组件状态与React外部系统同步，例如事件监听、计时器、浏览器存储和观察器。若只是根据已有props筛选列表，通常可以直接在渲染时计算，不必额外存一份state再用Effect同步。</p>
+<div class="code-block"><div class="code-toolbar"><span>tsx</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-tsx"><span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =></span> {
+  <span class="hljs-keyword">const</span> <span class="hljs-title function_">onVisibility</span> = (<span class="hljs-params"></span>) => <span class="hljs-title function_">setVisible</span>(!<span class="hljs-variable language_">document</span>.<span class="hljs-property">hidden</span>);
+  <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">"visibilitychange"</span>, onVisibility);
+  <span class="hljs-title function_">onVisibility</span>();
+  <span class="hljs-keyword">return</span> <span class="hljs-function">() =></span> <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">removeEventListener</span>(<span class="hljs-string">"visibilitychange"</span>, onVisibility);
+}, []);
+</code></pre></div>
+<p>这个教学示例订阅浏览器事件，并在清理函数里取消订阅。依赖数组为空，表示没有随组件渲染变化、需要重新同步的响应式依赖；并不适合概括成“任何环境都保证只执行一次”。开发阶段的Strict Mode会额外进行建立与清理检查，组件重新挂载也会重新执行。<a href="https://react.dev/learn/synchronizing-with-effects" rel="noopener noreferrer">Effect说明</a>解释了同步、依赖与清理的关系。</p>
+<p>如果Effect使用了变化中的值，就应正确声明依赖。为了消掉重复执行而随意删依赖，可能让计时器一直读取旧值。遇到这类问题，先确认Effect究竟要同步什么，再考虑重组代码。</p>
+<h2 id="section-横幅切换为什么要保留上一张图">横幅切换为什么要保留上一张图</h2>
+<p>本站横幅维护<code>current</code>、<code>previous</code>和<code>ready</code>。切换时先保存上一张图，再请求下一张；新图成功加载后才进入过渡，过渡结束再释放旧图。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>事件</th><th>当前目标</th><th>旧图</th><th>下一步</th></tr></thead><tbody><tr><td>已显示A</td><td>A</td><td>无</td><td>等待切换</td></tr><tr><td>请求B</td><td>B</td><td>A</td><td>A继续可见，等待B加载</td></tr><tr><td>B加载成功</td><td>B</td><td>A</td><td>过渡后移除A</td></tr><tr><td>B加载失败</td><td>恢复A</td><td>失败处理清理过渡状态</td><td>继续显示成功加载过的A</td></tr></tbody></table>
+<p>工程曾记录<code>onError</code>与<code>onLoad</code>共用成功处理，导致失败也被当作“可以结束旧图保留”。修正后将失败回调分开。这个问题要看的是状态转移条件：触发了图片事件，并不一定意味着图片成功显示。</p>
+<p>轮播还需要考虑页面是否可见、横幅是否在视口内、用户是否选择减少动态效果。本站通过这些条件决定是否继续计时，并在依赖变化时清理计时器，避免离开页面后仍积累后台任务。</p>
+<h2 id="section-useref与state怎样选择">useRef与state怎样选择</h2>
+<p><code>useRef</code>可以保存DOM引用或跨渲染保留的可变值，修改<code>ref.current</code>本身不会触发渲染。需要立刻反映到界面的数据用state；计时器ID、观察器目标等不直接显示的引用，可以考虑ref。选择依据是数据变化后是否需要让界面重新计算，不能把ref当成绕过状态更新规则的捷径。</p>
+<p>还可以继续追问：如果连续从A切B再切C，B的加载事件很晚才到，是否会误处理C的状态？应结合组件key、请求身份和回调归属检查。本文状态表先解释单次切换；更复杂的竞态需要单独构造输入验证，不能因为A→B通过就推断所有切图顺序都正确。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"React入门（二）：状态快照、Effect与横幅切换过程"}],["$","p",null,{"className":"article-deck","children":"通过输入框和图片切换理解state、更新队列、Effect清理、ref与异步状态边界"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,283"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",4," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L18","React",{"href":"/blog/#tag=React","children":"React"}],["$","$L18","状态管理",{"href":"/blog/#tag=%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86","children":"状态管理"}],["$","$L18","Effect",{"href":"/blog/#tag=Effect","children":"Effect"}]]}]]}],["$","$L19",null,{"headings":[{"id":"section-usestate保存的是哪一轮状态","text":"useState保存的是哪一轮状态","level":2},{"id":"section-输入框怎样保持值与界面一致","text":"输入框怎样保持值与界面一致","level":2},{"id":"section-effect何时需要何时不需要","text":"Effect何时需要，何时不需要","level":2},{"id":"section-横幅切换为什么要保留上一张图","text":"横幅切换为什么要保留上一张图","level":2},{"id":"section-useref与state怎样选择","text":"useRef与state怎样选择","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1a",["$","$L1b",null,{"html":"$1c"}],false,"$L1d","$L1e","$L1f"]}],"$L20"]}]]}]
+21:I[2708,["825","$15","491","$16","953","$17"],"FeedbackForm"]
+22:I[3498,["825","$15","491","$16","953","$17"],"default"]
+1e:["$","$L21",null,{"contentId":"react-state-effects"}]
+1f:["$","div",null,{"className":"related-note","children":[["$","$L22",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+20:["$","$L19",null,{"headings":["$9:props:children:1:props:headings:0","$9:props:children:1:props:headings:1","$9:props:children:1:props:headings:2","$9:props:children:1:props:headings:3","$9:props:children:1:props:headings:4"]}]
+1d:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$L22",null,{"href":"/blog/react-components-props/","children":[["$","span",null,{"children":"上一篇"}],"React入门（一）：组件、JSX、props与列表身份"]}],["$","$L22",null,{"href":"/blog/css-responsive-images/","children":[["$","span",null,{"children":"下一篇"}],"响应式页面基础：CSS布局、图片候选与动画呈现"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","nextjs-position-toolchain",{"children":[["$","$L22",null,{"href":"/blog/nextjs-position-toolchain/","children":"Next.js入门（一）：框架定位、技术关系与工程工具链"}],["$","span",null,{"children":"前端开发"}]]}],["$","li","react-components-props",{"children":[["$","$L22",null,{"href":"/blog/react-components-props/","children":"React入门（一）：组件、JSX、props与列表身份"}],["$","span",null,{"children":"前端开发"}]]}],["$","li","site-images-performance",{"children":[["$","$L22",null,{"href":"/blog/site-images-performance/","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}],["$","span",null,{"children":"项目建设"}]]}]]}]]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+12:[["$","title","0",{"children":"React入门（二）：状态快照、Effect与横幅切换过程 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"通过输入框和图片切换理解state、更新队列、Effect清理、ref与异步状态边界。"}]]
+23:"static/chunks/app/layout-f6895f86611bc12f.js"
+24:I[6767,["825","$15","177","$23"],"DisplayProvider"]
+25:"NavigationFeedback"
+26:I[2842,["825","$15","177","$23"],"$25"]
+27:I[8587,["825","$15","177","$23"],"SiteHeader"]
+28:I[5803,["825","$15","177","$23"],"SiteFrame"]
+29:I[164,["825","$15","177","$23"],"ProfileSidebar"]
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L24",null,{"children":[["$","$L26",null,{}],["$","$L27",null,{"tags":["编程语言知识点","python","C++"],"categoryIds":["foundations","frontend","backend","agent","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L28",null,{"sidebar":["$","$L29",null,{"categoryIds":"$2:props:children:1:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L22",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L22",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L22",null,{"href":"/about/","children":"关于这个站点"}],["$","$L22",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+1a:["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$L22",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[4," / ",5," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["JavaScript、TypeScript与React基础",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","javascript-async-fetch",{"children":["$","$L22",null,{"href":"/blog/javascript-async-fetch/","aria-current":"$undefined","children":"JavaScript异步请求：从Promise、await到表单失败处理"}]}],["$","li","typescript-types-boundaries",{"children":["$","$L22",null,{"href":"/blog/typescript-types-boundaries/","aria-current":"$undefined","children":"TypeScript入门：对象类型、联合类型与网络数据边界"}]}],["$","li","react-components-props",{"children":["$","$L22",null,{"href":"/blog/react-components-props/","aria-current":"$undefined","children":"React入门（一）：组件、JSX、props与列表身份"}]}],["$","li","react-state-effects",{"children":["$","$L22",null,{"href":"/blog/react-state-effects/","aria-current":"page","children":"React入门（二）：状态快照、Effect与横幅切换过程"}]}],["$","li","css-responsive-images",{"children":["$","$L22",null,{"href":"/blog/css-responsive-images/","aria-current":"$undefined","children":"响应式页面基础：CSS布局、图片候选与动画呈现"}]}]]}]]}]]}]
+14:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L22",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L22",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$L22",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$L18",null,{"className":"trail-current","href":"/blog/#frontend","children":["前端开发",["$","span",null,{"children":7}]]}],"$undefined"]}]

@@ -1,0 +1,69 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+1b:"ViewportBoundary"
+1c:I[887,[],"$1b"]
+1d:"MetadataBoundary"
+1e:I[887,[],"$1d"]
+1f:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#project-log","children":["项目建设",["$","span",null,{"children":9}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"个人主页建设（七）：Nginx部署、版本切换与数据恢复"}],["$","p",null,{"className":"article-deck","children":"按实际部署记录解释静态发布、旧资源保留、API兼容和数据库恢复，明确各自回退边界"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,546"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","Nginx",{"href":"/blog/#tag=Nginx","children":"Nginx"}],["$","$Lf","Docker",{"href":"/blog/#tag=Docker","children":"Docker"}],["$","$Lf","部署",{"href":"/blog/#tag=%E9%83%A8%E7%BD%B2","children":"部署"}],["$","$Lf","备份恢复",{"href":"/blog/#tag=%E5%A4%87%E4%BB%BD%E6%81%A2%E5%A4%8D","children":"备份恢复"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-已部署结构与服务器条件","text":"已部署结构与服务器条件","level":2},{"id":"section-从本地产物到一个完整版本","text":"从本地产物到一个完整版本","level":2},{"id":"section-缓存策略怎样影响更新","text":"缓存策略怎样影响更新","level":2},{"id":"section-api兼容与数据库迁移怎样安排","text":"API兼容与数据库迁移怎样安排","level":2},{"id":"section-回滚代码与恢复数据分别意味着什么","text":"回滚代码与恢复数据分别意味着什么","level":2},{"id":"section-一次发布完成后该看哪些证据","text":"一次发布完成后该看哪些证据","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[8," / ",9," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["个人主页与博客建设",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","personal-site-overview",{"children":["$","$Le",null,{"href":"/blog/personal-site-overview/","children":"个人主页与博客建设：项目系列与前后端知识阅读指南"}]}],["$","li","site-upgrade-architecture",{"children":["$","$Le",null,{"href":"/blog/site-upgrade-architecture/","children":"个人主页建设（一）：升级动机、框架选择与系统分工"}]}],["$","li","site-setup-migration",{"children":["$","$Le",null,{"href":"/blog/site-setup-migration/","children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}]}],["$","li","site-content-search-flow",{"children":["$","$Le",null,{"href":"/blog/site-content-search-flow/","children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}]}],["$","li","site-feedback-data-flow",{"children":["$","$Le",null,{"href":"/blog/site-feedback-data-flow/","children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}]}],["$","li","site-auth-review-concurrency",{"children":["$","$Le",null,{"href":"/blog/site-auth-review-concurrency/","children":"个人主页建设（五）：作者登录、反馈审核与并发控制"}]}],["$","li","site-images-performance",{"children":["$","$Le",null,{"href":"/blog/site-images-performance/","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}]}],["$","li","site-deployment-recovery",{"children":"$L11"}],"$L12"]}]]}]]}],"$L13",false,"$L14","$L15","$L16"]}],"$L17"]}]]}],["$L18"],"$L19"]}],"p":"$@1a","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"site-deployment-recovery","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1c",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1e",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"个人主页建设（七）：Nginx部署、版本切换与数据恢复 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"按实际部署记录解释静态发布、旧资源保留、API兼容和数据库恢复，明确各自回退边界。"}]]}]}],null]}],null]}],"p":"$@20","v":null,"s":"$7"}},"a":"$@21","u":"$@22","b":"E-M2wxgR09X62ofy5DhPV"}
+23:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+25:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+26:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+11:["$","$Le",null,{"href":"/blog/site-deployment-recovery/","aria-current":"page","children":"个人主页建设（七）：Nginx部署、版本切换与数据恢复"}]
+12:["$","li","site-interview-design",{"children":["$","$Le",null,{"href":"/blog/site-interview-design/","children":"个人主页建设（八）：从真实实现继续追问设计与故障处理"}]}]
+24:T1881,<p>网站部署时，前端静态文件、API程序和数据库数据有不同的更新方式。只改横幅时，不需要重建业务数据；修改数据库字段时，也不能只替换一份HTML就结束。本站将这些对象分开管理，为局部发布和回退保留空间。</p>
+<p>以下按2026年10月18日工程记录说明已完成的部署过程，本轮新系列仍只在本地接入。文中的配置片段用于解释，不是可以直接覆盖其他服务器的完整操作单。</p>
+<h2 id="section-已部署结构与服务器条件">已部署结构与服务器条件</h2>
+<p>公共入口是博客子域名，原主域上的其他项目继续保留。ECS记录为2核、总内存3559MiB（标称4GB），当时已有其他服务，所以资源安排需要考虑共享环境。</p>
+<p>Nginx提供静态文件并代理API；API与PostgreSQL由Compose组织。API映射到宿主机回环端口，数据库不公开宿主机端口。API内存限制256MiB、数据库384MiB是配置上限，不是实际占用或容量测试结果。</p>
+<p>20261018-2是记录中的静态发布版本，API/Compose/数据库仍沿用20261018-1。前端修正可以单独发布，业务进程与数据不必因此重启或迁移。</p>
+<h2 id="section-从本地产物到一个完整版本">从本地产物到一个完整版本</h2>
+<p>发布前先运行公开构建和必要检查，确认允许的页面、图片、搜索与旧URL映射。打包后记录SHA256，远端核对同一文件，再解包到新版本目录。最后以原子方式切换<code>current</code>，让Nginx根目录指向新版本。</p>
+<p><a href="/images/website-series/release.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：静态发布、健康检查与回退流程，数据库迁移和恢复单独处理"><img src="/images/website-series/release.svg" alt="静态发布、健康检查与回退流程，数据库迁移和恢复单独处理" width="1100" height="500" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><a href="/images/website-series/release.svg">查看图中细节</a></p>
+<p>原子切换减少读者读取到半套文件的机会，但它不消除所有版本混用：用户可能已经缓存旧HTML，或者已经打开页面，稍后才请求旧JS chunk。工程这次保留了上一版本3个带哈希的静态资源，避免对应旧页面失去依赖。</p>
+<p>长期方案还要规定保留窗口、磁盘空间和清理条件。本次保留3个文件是具体发布处理，不能写成通用多版本资源管理系统已经完善。</p>
+<h2 id="section-缓存策略怎样影响更新">缓存策略怎样影响更新</h2>
+<p>HTML使用需要重新验证的策略，带内容哈希的Next静态资源长期缓存，API与管理页不存储；图片使用较短缓存。新HTML引用新hash文件时，可以让资源版本关系明确；同名覆盖的图片则要考虑缓存仍未过期。</p>
+<p>no-cache与no-store的机制在<a href="/blog/cloud-docker-nginx/">云服务器与Nginx基础</a>中已经解释。排查旧内容时，应查看实际响应头、资源URL与current版本，不要只凭浏览器里“刷新了一次”判断发布失败。</p>
+<p>GitHub公开仓库只放允许发布的静态产物，不包含API源码、私密稿件和凭据。工程还曾发现通过文本读取构造发布树会归一化部分CRLF，后来改按原字节核对。哈希验证针对的是字节一致性，换行变化也属于差异。</p>
+<h2 id="section-api兼容与数据库迁移怎样安排">API兼容与数据库迁移怎样安排</h2>
+<p>前端小改只要继续满足原接口契约，就可以与旧API共存。若新增必填字段、修改响应形状或改变状态语义，就要同时考虑旧页面、已打开客户端和回滚版本。</p>
+<p>新增数据库字段通常先采用兼容扩展：新旧代码都能使用的结构先上线，必要时回填数据，确认稳定后再移除旧字段。迁移需要看锁表、数据量和可逆性；不能因为Alembic有downgrade入口，就认为删除的数据能自动恢复。</p>
+<p>当前站点没有为APP1.0/2.0建立完整版本兼容平台，但可以用这套方法回答类似追问：先固定旧客户端依赖的契约，再设计兼容窗口和切换条件。不要直接重命名字段，让仍在使用旧页面的用户承担全部失败。</p>
+<h2 id="section-回滚代码与恢复数据分别意味着什么">回滚代码与恢复数据分别意味着什么</h2>
+<p>静态回滚可以将current切回上一份完整产物，API和数据库通常继续保持。API回滚要确认旧代码能理解当前Schema。数据库恢复则可能覆盖备份时间之后的新数据，需要明确目标、影响和验证，不能作为普通前端回滚的附带动作。</p>
+<p>工程已经实际执行过一次custom格式dump/restore，并核对六张表的指纹；其中包含迁移版本表，业务模型本身是五张。这个记录证明那次备份在验证环境中可以恢复，不代表已经部署定时、离机或持续恢复方案。<a href="https://www.postgresql.org/docs/current/backup-dump.html" rel="noopener noreferrer">PostgreSQL备份文档</a>介绍了dump与还原工具。</p>
+<p>恢复计划还要明确RPO（可接受的数据丢失时间）和RTO（可接受的恢复时间）。只在同一台主机上保存副本，不能覆盖整机和磁盘丢失；备份是否可读、权限是否齐全、应用能否连接，也都需要恢复时确认。</p>
+<h2 id="section-一次发布完成后该看哪些证据">一次发布完成后该看哪些证据</h2>
+<p>只读检查包括主要页面、资源、必要301和API ready；有业务改动时，再在受控范围验证相应业务。此次历史发布记录中，页面和旧URL检查、真实Linux API/数据库测试及恢复演练都有各自范围，不能把这些数量合并成一个没有意义的“总测试数”。</p>
+<p>live能回应、ready能查询数据库，都不代表生产容量已经验证。真实手机、长期负载、自动离机备份和完整无障碍仍有未验证部分。后续继续修改时，应保存当前版本与检查条件，再根据改动范围决定需要重测哪一层。</p>13:["$","$L23",null,{"html":"$24"}]
+14:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Le",null,{"href":"/blog/site-images-performance/","children":[["$","span",null,{"children":"上一篇"}],"个人主页建设（六）：横幅加载、动画状态与性能问题排查"]}],["$","$Le",null,{"href":"/blog/site-interview-design/","children":[["$","span",null,{"children":"下一篇"}],"个人主页建设（八）：从真实实现继续追问设计与故障处理"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","cloud-docker-nginx",{"children":[["$","$Le",null,{"href":"/blog/cloud-docker-nginx/","children":"部署基础：云服务器、Docker、Nginx与HTTP缓存"}],["$","span",null,{"children":"部署与运维"}]]}]]}]]}]]}]
+15:["$","$L25",null,{"contentId":"site-deployment-recovery"}]
+16:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+17:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5"]}]
+18:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+19:["$","$L26",null,{"children":["$","$1f",null,{"name":"Next.MetadataOutlet","children":"$@27"}]}]
+22:true
+7:300
+27:null
+7:C
+21:0
+9:"$undefined"
+5:"$undefined"
+20:"$undefined"
+1a:"$undefined"

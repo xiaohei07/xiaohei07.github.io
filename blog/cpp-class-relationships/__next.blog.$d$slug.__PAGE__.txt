@@ -1,0 +1,341 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T2593,<span id="一依赖" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一依赖">（一）依赖：</h3>
+<span id="1-概念" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-概念">1. 概念：</h4>
+<p>是一种使用关系，耦合度最弱。
+类A使用类B的一部分属性和方法，不会主动改变类B的内容，但是类B的变化会影响到A。
+具有偶然性、临时性。</p>
+<span id="2-体现" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-体现">2. 体现：</h4>
+<ul>
+<li>类B作为类A的成员函数参数。</li>
+<li>类B作为A的成员函数的局部变量</li>
+<li>类A的成员函数调用的类B的静态方法</li>
+</ul>
+<span id="3-代码" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-代码">3. 代码：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class B
+{
+public:
+	static void showB()
+	{
+		cout &#x3C;&#x3C; "showB" &#x3C;&#x3C; endl;
+	}
+};
+class A
+{
+public:
+	void CallB1() 
+	{
+		B::showB();
+		return;
+	}
+	void CallB2(B b) 
+	{
+		b.showB();
+		return;
+	}
+	void CallB3() 
+	{
+		B b;
+		b.showB();
+		return;
+	}
+};
+
+int main() 
+{
+	B b;
+	A a;
+	a.CallB1();
+	a.CallB2(b);
+	a.CallB3();
+	return 0;
+}
+//运行结果：
+//showB
+//showB
+//showB
+</code></pre></div>
+<span id="二关联" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二关联">（二）关联：</h3>
+<h4 id="section-1-概念-1">1. 概念：</h4>
+<p>关联是对象之间的一种引用关系，用于表示一类对象与另一类对象的联系。</p>
+<p>关连也是一种弱从属关系，是可以有方向的，可以是单向也可以是双向的。</p>
+<p>关联体现的是两个类之间的一种强依赖关系，不存在偶然性和临时性，一般是长期性的、平等的。</p>
+<p>依赖和关联都是一个类用乐另一个类，但是前者是使用，后者是拥有。</p>
+<h4 id="section-2-体现-1">2. 体现：</h4>
+<ul>
+<li>被关联类B以类的属性形式出来在关联类A中。</li>
+<li>关联类A引用了一个类型为被关联类B的全局变量。</li>
+</ul>
+<h4 id="section-3-代码-1">3. 代码：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+//A和B是关联关系：
+class Me;
+class You
+{
+private: 
+	Me* pm;
+public:
+	void printMe();
+	void printYou();
+};
+class Me
+{
+private:
+	You* py;
+public:
+	void printme();
+	void printyou();
+};
+void You::printMe()
+{
+	cout &#x3C;&#x3C; "You:" &#x3C;&#x3C; endl;
+	pm->printme();
+	return;
+}
+void You::printYou()
+{
+	cout &#x3C;&#x3C; "我中有你" &#x3C;&#x3C; endl;
+	return;
+}
+void Me::printyou()
+{
+	cout &#x3C;&#x3C; "Me:" &#x3C;&#x3C; endl;
+	py->printYou();
+	return;
+}
+void Me::printme()
+{
+	cout &#x3C;&#x3C; "你中有我" &#x3C;&#x3C; endl;
+	return;
+}
+int main() 
+{
+	Me zzh;
+	zzh.printyou();
+	zzh.printme();
+	You xxx;
+	xxx.printMe();
+	xxx.printYou();
+	return 0;
+}
+
+//
+//Me:
+//我中有你
+//你中有我
+//You :
+//你中有我
+//我中有你
+</code></pre></div>
+<span id="三聚合" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三聚合">（三）聚合：</h3>
+<h4 id="section-1-概念-2">1. 概念：</h4>
+<p>聚合关系又名委托关系，聚合关系是关联关系的一种，是一种强关联关系，是整体和部分之间的关系，是has-a的关系。</p>
+<p>聚合关系也是一种弱所属关系，整体和部分之间是可分离的，具有各自的生命周期，部分可以属于多个整体的对象，也可以为多个整体对象共享。</p>
+<p>聚合和关联的区别主要是语义，关联的两个对象一般是平等的，而聚合一般不是平等的。</p>
+<h4 id="section-2-体现-2">2. 体现：</h4>
+<p>聚合通过成员对象来实现的。</p>
+<p>聚合需要配合语义，结合上下文才能判断出是否为聚合，无法直接判断。</p>
+<h4 id="section-3-代码-2">3. 代码：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class Husband;
+class Wife;
+class House
+{
+private:
+	string name;
+public:
+	House(string s="家"):name(s){}
+	void showname()
+	{
+		cout &#x3C;&#x3C; "家:" &#x3C;&#x3C; name &#x3C;&#x3C; endl;
+	}
+};
+class Husband 
+{
+private:
+	House h;
+	string name;
+public:
+	Husband(string s1, string s2="zzh") :h(s1),name(s2) 
+	{
+	}
+	void showHouse() 
+	{
+		h.showname();
+		cout &#x3C;&#x3C; "丈夫" &#x3C;&#x3C; name &#x3C;&#x3C; endl;
+	}
+};
+class Wife
+{
+private:
+	House h;
+	string name;
+public:
+	Wife(string s1, string s2 = "xxx") :h(s1), name(s2)
+	{
+	}
+	void showHouse()
+	{
+		h.showname();
+		cout &#x3C;&#x3C; "妻子:"&#x3C;&#x3C;name &#x3C;&#x3C; endl;
+	}
+};
+int main() 
+{
+	Husband me("home");
+	Wife who("Home");
+	me.showHouse();
+	who.showHouse();
+	return 0;
+}
+//运行结果：
+//家:home
+//丈夫zzh
+//家 : Home
+//妻子 : xxx
+</code></pre></div>
+<span id="四组合" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-四组合">（四）组合：</h3>
+<h4 id="section-1-概念-3">1. 概念：</h4>
+<p>也是关联关系的一种特例，是整体和部分的关系，一个对象（是部分）被放到另一个对象中（是整体），是contains-a的关系。</p>
+<p>是一种强所属关系（比聚合更强），和聚合不同的是，整体和部分是不可分的，具有相同的生命周期，整体（组合类）可以控制部分（被组合类）的生命周期，整体的对象不存在，则部分的对象也不存在，也就是部分对象不能独立存在。</p>
+<p>相比聚合，组合的两个对象的不平等性进一步加大。</p>
+<h4 id="section-2-体现-3">2. 体现：</h4>
+<p>同聚合关系，组合也是通过成员对象来实现的。</p>
+<p>组合也需要配合语义，结合上下文才能判断出是否为聚合，无法直接判断。</p>
+<p>聚合和组合的最关键区别是两个对象的生命周期是否一致，而不是出现的形式。</p>
+<h4 id="section-3-代码-3">3. 代码：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class eye
+{
+private:
+	double lefteyesight;
+	double righteyesight;
+public:
+	eye(double d1, double d2) :lefteyesight(d1), righteyesight(d2) 
+	{
+	}
+	void printeyesight() 
+	{
+		cout &#x3C;&#x3C; "左眼:" &#x3C;&#x3C; lefteyesight &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; "右眼:" &#x3C;&#x3C; righteyesight &#x3C;&#x3C; endl;
+		return;
+	}
+};
+class person
+{
+private:
+	eye e;
+	int sex;
+public:
+	person(int x=0, double d1 = 1.0, double d2 = 1.0) :e(d1, d2), sex(x){}
+	void printperson() 
+	{
+		cout &#x3C;&#x3C; "性别:" &#x3C;&#x3C; sex &#x3C;&#x3C; endl;
+		e.printeyesight();
+		return;
+	}
+};
+int main() 
+{
+	person p;
+	p.printperson();
+	return 0;
+}
+//运行结果:
+//性别:0
+//左眼 : 1
+//右眼 : 1
+</code></pre></div>
+<span id="五实现" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-五实现">（五）实现：</h3>
+<h4 id="section-1-概念-4">1. 概念：</h4>
+<p>是接口与实现类之间的关系，在此关系中，类实现接口，类中的操作实现了接口中所声明的所有的抽象操作。</p>
+<h4 id="section-2-体现-4">2. 体现：</h4>
+<p>接口通过纯虚函数来实现，多态就是通过虚函数来实现的。</p>
+<h4 id="section-3-代码-4">3. 代码：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class person
+{
+public:
+	virtual void printperson() = 0;
+};
+class student:public person
+{
+private:
+	string name;
+public:
+	student(string s="zzh") :name(s) {}
+	void printperson()
+	{
+		cout &#x3C;&#x3C; "这是一个人" &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; "是学生,名字是:" &#x3C;&#x3C; name &#x3C;&#x3C; endl;
+	}
+};
+
+int main() 
+{
+	student s;
+	s.printperson();
+	return 0;
+}
+//运行结果：
+//这是一个人
+//是学生, 名字是:zzh
+</code></pre></div>
+<span id="六继承" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-六继承">（六）继承：</h3>
+<h4 id="section-1-概念-5">1. 概念：</h4>
+<p>继承关系又名泛化关系，是面向对象的三大特征之一，是对象之间耦合度最大的一种关系，表示一般与特殊的关系，是is-a关系。</p>
+<p>继承表达的是一种上下级关系。</p>
+<p>更多内容详见c++类——继承关系。</p>
+<h4 id="section-2-体现-5">2. 体现：</h4>
+<p>通过面向对象的继承机制实现继承关系。</p>
+<h4 id="section-3-代码-5">3. 代码：</h4>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class person {};
+class student :public person {};
+</code></pre></div>
+<span id="七不同类之间关系的强弱比较" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-七不同类之间关系的强弱比较">（七）不同类之间关系的强弱比较：</h3>
+<p>继承=实现>组合>聚合>关联>依赖</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#foundations","children":["编程语言知识点",["$","span",null,{"children":50}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"c++类——类与类之间的关系"}],["$","p",null,{"className":"article-deck","children":"结合代码区分类之间的依赖、关联、聚合、组合、实现和继承，比较这些关系"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-31","children":"2023-03-31"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,397"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$Lf","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$Lf","编程语言知识点",{"href":"/blog/#tag=%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9F%A5%E8%AF%86%E7%82%B9","children":"编程语言知识点"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-一依赖","text":"（一）依赖：","level":3},{"id":"section-1-概念","text":"1. 概念：","level":4},{"id":"section-2-体现","text":"2. 体现：","level":4},{"id":"section-3-代码","text":"3. 代码：","level":4},{"id":"section-二关联","text":"（二）关联：","level":3},{"id":"section-1-概念-1","text":"1. 概念：","level":4},{"id":"section-2-体现-1","text":"2. 体现：","level":4},{"id":"section-3-代码-1","text":"3. 代码：","level":4},{"id":"section-三聚合","text":"（三）聚合：","level":3},{"id":"section-1-概念-2","text":"1. 概念：","level":4},{"id":"section-2-体现-2","text":"2. 体现：","level":4},{"id":"section-3-代码-2","text":"3. 代码：","level":4},{"id":"section-四组合","text":"（四）组合：","level":3},{"id":"section-1-概念-3","text":"1. 概念：","level":4},{"id":"section-2-体现-3","text":"2. 体现：","level":4},{"id":"section-3-代码-3","text":"3. 代码：","level":4},{"id":"section-五实现","text":"（五）实现：","level":3},{"id":"section-1-概念-4","text":"1. 概念：","level":4},{"id":"section-2-体现-4","text":"2. 体现：","level":4},{"id":"section-3-代码-4","text":"3. 代码：","level":4},{"id":"section-六继承","text":"（六）继承：","level":3},{"id":"section-1-概念-5","text":"1. 概念：","level":4},{"id":"section-2-体现-5","text":"2. 体现：","level":4},{"id":"section-3-代码-5","text":"3. 代码：","level":4},{"id":"section-七不同类之间关系的强弱比较","text":"（七）不同类之间关系的强弱比较：","level":3}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[null,["$","$L11",null,{"html":"$12"}],"$undefined","$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"cpp-class-relationships","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"c++类——类与类之间的关系 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"结合代码区分类之间的依赖、关联、聚合、组合、实现和继承，比较这些关系。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"E-M2wxgR09X62ofy5DhPV"}
+22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+23:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Le",null,{"href":"/blog/cpp-inheritance-2/","children":[["$","span",null,{"children":"上一篇"}],"c++类——继承(二)"]}],["$","$Le",null,{"href":"/blog/cpp-inheritance-1/","children":[["$","span",null,{"children":"下一篇"}],"c++类——继承(一)"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$Le",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","cpp-templates-2",{"children":[["$","$Le",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","cpp-templates-3",{"children":[["$","$Le",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"编程语言知识点"}]]}]]}]]}]]}]
+14:["$","$L22",null,{"contentId":"cpp-class-relationships"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6","$a:0:1:d:r:props:children:0:props:children:1:props:headings:7","$a:0:1:d:r:props:children:0:props:children:1:props:headings:8","$a:0:1:d:r:props:children:0:props:children:1:props:headings:9","$a:0:1:d:r:props:children:0:props:children:1:props:headings:10","$a:0:1:d:r:props:children:0:props:children:1:props:headings:11","$a:0:1:d:r:props:children:0:props:children:1:props:headings:12","$a:0:1:d:r:props:children:0:props:children:1:props:headings:13","$a:0:1:d:r:props:children:0:props:children:1:props:headings:14","$a:0:1:d:r:props:children:0:props:children:1:props:headings:15","$a:0:1:d:r:props:children:0:props:children:1:props:headings:16","$a:0:1:d:r:props:children:0:props:children:1:props:headings:17","$a:0:1:d:r:props:children:0:props:children:1:props:headings:18","$a:0:1:d:r:props:children:0:props:children:1:props:headings:19","$a:0:1:d:r:props:children:0:props:children:1:props:headings:20","$a:0:1:d:r:props:children:0:props:children:1:props:headings:21","$a:0:1:d:r:props:children:0:props:children:1:props:headings:22","$a:0:1:d:r:props:children:0:props:children:1:props:headings:23","$a:0:1:d:r:props:children:0:props:children:1:props:headings:24"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+21:true
+7:300
+24:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

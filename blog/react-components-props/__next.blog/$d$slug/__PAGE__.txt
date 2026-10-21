@@ -1,0 +1,91 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T1ffd,<p>普通HTML可以写出一张文章卡片。如果文章有几十篇，每张卡片的结构都类似，就适合把这部分界面组织成组件。React组件接收数据，再描述这些数据应该显示成什么样。</p>
+<p>有一点Vue经验的话，可以先把组件与props的关系对应起来看。两者都有组件化思想，不过模板语法、响应式机制和状态更新方式并不完全相同，后面要按React的规则来写。</p>
+<h2 id="section-从js函数到页面组件">从JS函数到页面组件</h2>
+<div class="code-block"><div class="code-toolbar"><span>tsx</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-tsx"><span class="hljs-keyword">type</span> <span class="hljs-title class_">ArticleCardProps</span> = {
+  <span class="hljs-attr">title</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">href</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">tags</span>: <span class="hljs-built_in">string</span>[];
+};
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">ArticleCard</span>(<span class="hljs-params">{ title, href, tags }: <span class="hljs-title class_">ArticleCardProps</span></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">article</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">h2</span>></span><span class="hljs-tag">&#x3C;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">{href}</span>></span>{title}<span class="hljs-tag">&#x3C;/<span class="hljs-name">a</span>></span><span class="hljs-tag">&#x3C;/<span class="hljs-name">h2</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">p</span>></span>{tags.join("、")}<span class="hljs-tag">&#x3C;/<span class="hljs-name">p</span>></span>
+    <span class="hljs-tag">&#x3C;/<span class="hljs-name">article</span>></span></span>
+  );
+}
+</code></pre></div>
+<p>这个函数的输入是一个props对象，参数中的<code>{ title, href, tags }</code>是JS解构，作用是从对象中取出三个属性。返回的JSX描述界面结构，<code>{title}</code>表示在这个位置放入JS表达式的结果。</p>
+<p>JSX看起来像HTML，但最终要经过工具处理。组件名使用大写开头，让React区分自定义组件和<code>article</code>这类原生标签。属性用<code>className</code>设置CSS类，标签需要正确闭合。基础规则可以参考<a href="https://react.dev/learn/your-first-component" rel="noopener noreferrer">React组件入门</a>。</p>
+<h2 id="section-props怎样从父组件传到子组件">props怎样从父组件传到子组件</h2>
+<div class="code-block"><div class="code-toolbar"><span>tsx</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-tsx">&#x3C;<span class="hljs-title class_">ArticleCard</span>
+  title=<span class="hljs-string">"理解列表切片"</span>
+  href=<span class="hljs-string">"/blog/python-slices/"</span>
+  tags={[<span class="hljs-string">"Python"</span>, <span class="hljs-string">"切片"</span>]}
+/>
+</code></pre></div>
+<p>父组件决定传入什么，子组件按约定读取。props在一次渲染中应当按只读数据处理；如果文章标题发生变化，应由管理这份数据的位置产生新值，再传给子组件，避免子组件直接修改父级对象。</p>
+<p><code>children</code>也是一种props，用来承接标签之间的内容。例如文章布局可以接收任意正文，让标题、侧栏和正文的组织分开。它并不意味着必须把所有内容都抽成组件；只使用一次、逻辑很简单的几行结构，直接放在页面里也可以。<a href="https://react.dev/learn/passing-props-to-a-component" rel="noopener noreferrer">props说明</a>介绍了这类输入关系。</p>
+<h2 id="section-列表渲染为什么需要稳定的key">列表渲染为什么需要稳定的key</h2>
+<div class="code-block"><div class="code-toolbar"><span>tsx</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-tsx"><span class="hljs-keyword">function</span> <span class="hljs-title function_">ArticleList</span>(<span class="hljs-params">{ articles }: { articles: ArticleCardProps[] }</span>) {
+  <span class="hljs-keyword">return</span> articles.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">article</span> =></span> (
+    <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">ArticleCard</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{article.href}</span> {<span class="hljs-attr">...article</span>} /></span></span>
+  ));
+}
+</code></pre></div>
+<p><code>map</code>为每个数据项生成对应元素；<code>{...article}</code>把对象里的属性展开传入。<code>key</code>让React在列表变化后对应前后的条目，因此应使用这个列表中稳定且唯一的标识。</p>
+<p>假设列表从A、B变成B、A，使用稳定ID可以继续识别原来的A和B。如果用当前下标作为key，位置虽然仍是0和1，但位置上的对象已经交换；有输入状态的子组件可能因此和错误的数据对应。本站内容一直保留稳定ID，也有助于解决这类身份问题。<a href="https://react.dev/learn/rendering-lists" rel="noopener noreferrer">列表与key</a>进一步说明了适用条件。</p>
+<h2 id="section-事件处理怎样接回数据">事件处理怎样接回数据</h2>
+<div class="code-block"><div class="code-toolbar"><span>tsx</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-tsx"><span class="hljs-keyword">function</span> <span class="hljs-title function_">TagButton</span>(<span class="hljs-params">{ tag, onSelect }: {
+  tag: <span class="hljs-built_in">string</span>;
+  onSelect: (tag: <span class="hljs-built_in">string</span>) => <span class="hljs-built_in">void</span>;
+}</span>) {
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =></span> onSelect(tag)}>{tag}<span class="hljs-tag">&#x3C;/<span class="hljs-name">button</span>></span></span>;
+}
+</code></pre></div>
+<p>点击后调用父组件传来的函数，父组件再更新筛选条件。<code>onClick={() => onSelect(tag)}</code>传的是函数；如果直接写<code>onClick={onSelect(tag)}</code>，通常会在渲染时调用它，把返回值交给<code>onClick</code>，执行时机就不对了。</p>
+<p>React按状态和props描述UI，后续更新由React协调到DOM。开发时仍要知道最终生成了哪些原生元素：可点击动作优先使用<code>button</code>，跳转使用链接，输入框应有label。组件封装不会自动补齐键盘操作和可访问名称。</p>
+<h2 id="section-在本站哪些位置可以看到组件分工">在本站哪些位置可以看到组件分工</h2>
+<p>文章元数据进入文章卡片，完整正文进入详情页；FeedbackForm接收<code>contentId</code>，提交时把它一起发给API；横幅组件接收当前路径，根据栏目选图。它们分别围绕展示、写入、视觉状态组织，组件之间通过具体参数和回调衔接。</p>
+<p>并不是所有React组件都需要浏览器状态。读取Markdown并返回文章结构的部分可以在构建时完成；按钮、表单和主题设置则需要客户端能力。Next.js用Server Component和Client Component区分这些边界，详见<a href="/blog/nextjs-rendering-hydration/">Next.js渲染与交互接管</a>。</p>
+<p>如果准备自己练习，可以先做两张数据不同、结构相同的卡片，再增加标签点击回调。先把输入和显示结果对应清楚，再继续学习状态，就不会一下子同时面对路由、接口和数据库了。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#frontend","children":["前端开发",["$","span",null,{"children":7}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"React入门（一）：组件、JSX、props与列表身份"}],["$","p",null,{"className":"article-deck","children":"从可复用文章卡片开始，说明组件输入、事件回调和稳定key怎样连接数据与界面"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,130"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",4," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","React",{"href":"/blog/#tag=React","children":"React"}],["$","$Lf","JSX",{"href":"/blog/#tag=JSX","children":"JSX"}],["$","$Lf","组件",{"href":"/blog/#tag=%E7%BB%84%E4%BB%B6","children":"组件"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-从js函数到页面组件","text":"从JS函数到页面组件","level":2},{"id":"section-props怎样从父组件传到子组件","text":"props怎样从父组件传到子组件","level":2},{"id":"section-列表渲染为什么需要稳定的key","text":"列表渲染为什么需要稳定的key","level":2},{"id":"section-事件处理怎样接回数据","text":"事件处理怎样接回数据","level":2},{"id":"section-在本站哪些位置可以看到组件分工","text":"在本站哪些位置可以看到组件分工","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[3," / ",5," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["JavaScript、TypeScript与React基础",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","javascript-async-fetch",{"children":["$","$Le",null,{"href":"/blog/javascript-async-fetch/","children":"JavaScript异步请求：从Promise、await到表单失败处理"}]}],["$","li","typescript-types-boundaries",{"children":["$","$Le",null,{"href":"/blog/typescript-types-boundaries/","children":"TypeScript入门：对象类型、联合类型与网络数据边界"}]}],["$","li","react-components-props",{"children":["$","$Le",null,{"href":"/blog/react-components-props/","aria-current":"page","children":"React入门（一）：组件、JSX、props与列表身份"}]}],["$","li","react-state-effects",{"children":["$","$Le",null,{"href":"/blog/react-state-effects/","children":"React入门（二）：状态快照、Effect与横幅切换过程"}]}],["$","li","css-responsive-images",{"children":["$","$Le",null,{"href":"/blog/css-responsive-images/","children":"响应式页面基础：CSS布局、图片候选与动画呈现"}]}]]}]]}]]}],["$","$L11",null,{"html":"$12"}],false,"$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"react-components-props","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"React入门（一）：组件、JSX、props与列表身份 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从可复用文章卡片开始，说明组件输入、事件回调和稳定key怎样连接数据与界面。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"E-M2wxgR09X62ofy5DhPV"}
+22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+23:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Le",null,{"href":"/blog/typescript-types-boundaries/","children":[["$","span",null,{"children":"上一篇"}],"TypeScript入门：对象类型、联合类型与网络数据边界"]}],["$","$Le",null,{"href":"/blog/react-state-effects/","children":[["$","span",null,{"children":"下一篇"}],"React入门（二）：状态快照、Effect与横幅切换过程"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","nextjs-rendering-hydration",{"children":[["$","$Le",null,{"href":"/blog/nextjs-rendering-hydration/","children":"Next.js入门（三）：SSG、SSR、组件边界与交互接管"}],["$","span",null,{"children":"前端开发"}]]}]]}]]}]]}]
+14:["$","$L22",null,{"contentId":"react-components-props"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+21:true
+7:300
+24:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

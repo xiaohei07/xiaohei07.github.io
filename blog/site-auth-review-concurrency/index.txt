@@ -1,0 +1,98 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1a5e690335e7d9fc.css","style"]
+:HL["/_next/static/css/99458caadf388351.css","style"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"site-auth-review-concurrency","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","site-auth-review-concurrency",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1a5e690335e7d9fc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/99458caadf388351.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"E-M2wxgR09X62ofy5DhPV"}
+6:C
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+15:"static/chunks/825-1a8f209f3ada760f.js"
+16:"static/chunks/491-13729696a55105fe.js"
+17:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+18:I[6279,["825","$15","491","$16","953","$17"],"FilterLink"]
+19:I[4067,["825","$15","491","$16","953","$17"],"ArticleToc"]
+1b:I[4711,["825","$15","491","$16","953","$17"],"ArticleBody"]
+1c:T19da,<p>反馈提交之后，需要作者登录才能查看和审核。这里要解决两类问题：请求是否来自有效作者会话，以及同一条反馈被重复处理时，数据库应该保留哪一种结果。</p>
+<p>这篇继续沿本站实现说明。当前只有作者管理范围，没有普通用户与多角色权限系统；界面外壳可以静态访问，管理数据由API保护。</p>
+<h2 id="section-登录时怎样从密码得到会话">登录时怎样从密码得到会话</h2>
+<p>浏览器提交用户名和密码，API先按登录动作限流，查询账号，用Argon2验证密码。不存在的用户名也会经过预设的不可用密码哈希校验路径，减少明显不同的处理分支；这不能进一步证明所有时间侧信道都被消除。</p>
+<p>验证成功后，代码生成随机会话令牌与CSRF令牌，在数据库保存摘要和过期时间，同时写登录审计。提交之后，响应设置HttpOnly Cookie，并把CSRF令牌返回给管理客户端。密码、会话令牌与CSRF令牌的用途不同，不应在日志里原样记录。</p>
+<p><a href="/images/website-series/author-review.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：作者请求依次满足来源、会话、防伪和目标状态条件，才能在事务中完成审核"><img src="/images/website-series/author-review.svg" alt="作者请求依次满足来源、会话、防伪和目标状态条件，才能在事务中完成审核" width="1000" height="650" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><a href="/images/website-series/author-review.svg">查看图中细节</a></p>
+<p>管理读取从Cookie取得令牌，先检查格式，再查询未过期会话和启用账号。一个格式正确的43字符字符串，只是可能的令牌输入，是否有效仍由数据库记录决定。</p>
+<h2 id="section-审核写入多了哪些检查">审核写入多了哪些检查</h2>
+<p>审核请求使用PATCH，路径指定反馈UUID，请求体只接受resolved或rejected。接口检查Origin，加载作者会话，再验证<code>X-CSRF-Token</code>是否与当前会话对应。</p>
+<p>通过身份与防伪检查后，才读取待处理反馈并取得行锁。记录不存在返回404；已不是pending返回409；允许处理时同时设置状态、审核时间与审核人，并写入审核审计。最后一次commit将这些变化一起提交。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>检查</th><th>解决的问题</th></tr></thead><tbody><tr><td>Cookie格式与会话查询</td><td>请求是否持有有效作者会话</td></tr><tr><td>Origin与CSRF令牌</td><td>敏感写操作是否满足浏览器防伪条件</td></tr><tr><td>反馈ID与状态</td><td>目标存在且仍可按当前工作流处理</td></tr><tr><td>行锁与事务</td><td>并发审核及状态、审计的一致提交</td></tr></tbody></table>
+<p>CORS允许浏览器读取接口，与作者具有审核权限并不相同。完整概念见<a href="/blog/browser-cookie-cors-csrf/">Cookie、CORS与CSRF</a>。</p>
+<h2 id="section-两个标签页审核同一条反馈">两个标签页审核同一条反馈</h2>
+<p>作者在两个标签页中都看到了pending，标签页A先标记resolved，标签页B稍后仍尝试rejected。B的页面数据虽然旧，服务端不会直接相信它，而是在取得行锁之后再次检查数据库状态。</p>
+<p>在默认Read Committed条件下，B若与A同时竞争，会等待A结束；A提交后，B读到已处理状态并返回409。前端应刷新列表，向作者说明目标已经变化。行锁不是锁住浏览器，也不会让两个标签页的显示自动同步。</p>
+<p><a href="/images/website-series/review-sequence.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：两次审核请求竞争同一反馈行，状态更新与审计同事务提交"><img src="/images/website-series/review-sequence.svg" alt="两次审核请求竞争同一反馈行，状态更新与审计同事务提交" width="1100" height="510" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><a href="/images/website-series/review-sequence.svg">查看图中细节</a></p>
+<p>这里使用悲观行锁，是因为事务需要读取目标、检查状态并写审计，整个过程较短。备选的条件更新也能设计，但必须继续处理更新0行和审计一致性。具体比较见<a href="/blog/postgresql-transactions-locks/">事务与锁</a>。</p>
+<h2 id="section-审计和普通日志怎样分工">审计和普通日志怎样分工</h2>
+<p>审计记录“谁对哪个对象做了哪种状态变更”，与业务结果存在关联，适合和审核一起提交。普通运行日志帮助排查请求异常和耗时，不应在事务成功与否之间充当唯一业务凭据。</p>
+<p>当前审计也记录登录和退出。它还不是不可篡改的独立合规审计系统；如果未来需要更强防篡改、异地留存或长期保留，就需要另外定义权限、存储与检查机制。</p>
+<h2 id="section-退出与过期怎样影响后续请求">退出与过期怎样影响后续请求</h2>
+<p>退出接口同样验证会话和CSRF，在事务中删除当前会话并写审计，之后清除Cookie。会话到期后，即使浏览器还保留某段旧数据，后端查询也不会继续认可它。</p>
+<p>当前实现没有把所有作者会话一键撤销作为单独功能。若以后增加修改密码、账号异常或多设备会话管理，应明确是否撤销全部会话、怎样记录操作，以及前端如何响应401。</p>
+<p>密码校验本身有计算成本，登录限流与反馈限流都不能无限扩大。当前默认5次/60秒是配置值，实际运行环境可覆盖；限流采用单进程内存，增加worker之后需要重新考虑一致计数。</p>
+<h2 id="section-新增角色时应该从权限模型开始">新增角色时应该从权限模型开始</h2>
+<p>假设以后允许编辑者处理文章反馈、管理员管理账号，可以先列出资源与动作：反馈读取、反馈审核、文章编辑、账号禁用等，再定义角色拥有哪些动作。资源级限制也要加入，例如编辑者是否只能处理自己负责的项目。</p>
+<p>这些检查最终在服务端执行，菜单只表达可用入口。旧接口的行为需要兼容，数据库迁移要允许旧代码过渡，测试则覆盖直接调用API的越权情形。当前系列只讨论这一扩展路径，不把它加入已完成的功能清单。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"个人主页建设（五）：作者登录、反馈审核与并发控制"}],["$","p",null,{"className":"article-deck","children":"解释会话、CSRF、行锁和审计如何配合，再推演两个标签页同时审核同一条反馈"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,472"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L18","鉴权",{"href":"/blog/#tag=%E9%89%B4%E6%9D%83","children":"鉴权"}],["$","$L18","CSRF",{"href":"/blog/#tag=CSRF","children":"CSRF"}],["$","$L18","PostgreSQL",{"href":"/blog/#tag=PostgreSQL","children":"PostgreSQL"}],["$","$L18","并发",{"href":"/blog/#tag=%E5%B9%B6%E5%8F%91","children":"并发"}]]}]]}],["$","$L19",null,{"headings":[{"id":"section-登录时怎样从密码得到会话","text":"登录时怎样从密码得到会话","level":2},{"id":"section-审核写入多了哪些检查","text":"审核写入多了哪些检查","level":2},{"id":"section-两个标签页审核同一条反馈","text":"两个标签页审核同一条反馈","level":2},{"id":"section-审计和普通日志怎样分工","text":"审计和普通日志怎样分工","level":2},{"id":"section-退出与过期怎样影响后续请求","text":"退出与过期怎样影响后续请求","level":2},{"id":"section-新增角色时应该从权限模型开始","text":"新增角色时应该从权限模型开始","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1a",["$","$L1b",null,{"html":"$1c"}],false,"$L1d","$L1e","$L1f"]}],"$L20"]}]]}]
+c:null
+12:[["$","title","0",{"children":"个人主页建设（五）：作者登录、反馈审核与并发控制 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"解释会话、CSRF、行锁和审计如何配合，再推演两个标签页同时审核同一条反馈。"}]]
+21:I[2708,["825","$15","491","$16","953","$17"],"FeedbackForm"]
+22:I[3498,["825","$15","491","$16","953","$17"],"default"]
+1e:["$","$L21",null,{"contentId":"site-auth-review-concurrency"}]
+1f:["$","div",null,{"className":"related-note","children":[["$","$L22",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+20:["$","$L19",null,{"headings":["$9:props:children:1:props:headings:0","$9:props:children:1:props:headings:1","$9:props:children:1:props:headings:2","$9:props:children:1:props:headings:3","$9:props:children:1:props:headings:4","$9:props:children:1:props:headings:5"]}]
+1d:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$L22",null,{"href":"/blog/site-feedback-data-flow/","children":[["$","span",null,{"children":"上一篇"}],"个人主页建设（四）：反馈提交的数据流、事务与超时处理"]}],["$","$L22",null,{"href":"/blog/site-images-performance/","children":[["$","span",null,{"children":"下一篇"}],"个人主页建设（六）：横幅加载、动画状态与性能问题排查"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","browser-cookie-cors-csrf",{"children":[["$","$L22",null,{"href":"/blog/browser-cookie-cors-csrf/","children":"浏览器与API安全：Cookie、会话、CORS和CSRF"}],["$","span",null,{"children":"后端与数据库"}]]}],["$","li","postgresql-transactions-locks",{"children":[["$","$L22",null,{"href":"/blog/postgresql-transactions-locks/","children":"PostgreSQL入门（二）：事务、行锁与Schema迁移"}],["$","span",null,{"children":"后端与数据库"}]]}]]}]]}]]}]
+23:"static/chunks/app/layout-f6895f86611bc12f.js"
+24:I[6767,["825","$15","177","$23"],"DisplayProvider"]
+25:"NavigationFeedback"
+26:I[2842,["825","$15","177","$23"],"$25"]
+27:I[8587,["825","$15","177","$23"],"SiteHeader"]
+28:I[5803,["825","$15","177","$23"],"SiteFrame"]
+29:I[164,["825","$15","177","$23"],"ProfileSidebar"]
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L24",null,{"children":[["$","$L26",null,{}],["$","$L27",null,{"tags":["编程语言知识点","python","C++"],"categoryIds":["foundations","frontend","backend","agent","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L28",null,{"sidebar":["$","$L29",null,{"categoryIds":"$2:props:children:1:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L22",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L22",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L22",null,{"href":"/about/","children":"关于这个站点"}],["$","$L22",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+1a:["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$L22",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[6," / ",9," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["个人主页与博客建设",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","personal-site-overview",{"children":["$","$L22",null,{"href":"/blog/personal-site-overview/","aria-current":"$undefined","children":"个人主页与博客建设：项目系列与前后端知识阅读指南"}]}],["$","li","site-upgrade-architecture",{"children":["$","$L22",null,{"href":"/blog/site-upgrade-architecture/","aria-current":"$undefined","children":"个人主页建设（一）：升级动机、框架选择与系统分工"}]}],["$","li","site-setup-migration",{"children":["$","$L22",null,{"href":"/blog/site-setup-migration/","aria-current":"$undefined","children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}]}],["$","li","site-content-search-flow",{"children":["$","$L22",null,{"href":"/blog/site-content-search-flow/","aria-current":"$undefined","children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}]}],["$","li","site-feedback-data-flow",{"children":["$","$L22",null,{"href":"/blog/site-feedback-data-flow/","aria-current":"$undefined","children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}]}],["$","li","site-auth-review-concurrency",{"children":["$","$L22",null,{"href":"/blog/site-auth-review-concurrency/","aria-current":"page","children":"个人主页建设（五）：作者登录、反馈审核与并发控制"}]}],["$","li","site-images-performance",{"children":["$","$L22",null,{"href":"/blog/site-images-performance/","aria-current":"$undefined","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}]}],["$","li","site-deployment-recovery",{"children":["$","$L22",null,{"href":"/blog/site-deployment-recovery/","aria-current":"$undefined","children":"个人主页建设（七）：Nginx部署、版本切换与数据恢复"}]}],["$","li","site-interview-design",{"children":["$","$L22",null,{"href":"/blog/site-interview-design/","aria-current":"$undefined","children":"个人主页建设（八）：从真实实现继续追问设计与故障处理"}]}]]}]]}]]}]
+14:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L22",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L22",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$L22",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$L18",null,{"className":"trail-current","href":"/blog/#project-log","children":["项目建设",["$","span",null,{"children":9}]]}],"$undefined"]}]

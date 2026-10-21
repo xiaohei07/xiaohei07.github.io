@@ -1,0 +1,165 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1a5e690335e7d9fc.css","style"]
+:HL["/_next/static/css/99458caadf388351.css","style"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"hash-table-introduction","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","hash-table-introduction",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1a5e690335e7d9fc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/99458caadf388351.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"E-M2wxgR09X62ofy5DhPV"}
+6:C
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+15:"static/chunks/825-1a8f209f3ada760f.js"
+16:"static/chunks/491-13729696a55105fe.js"
+17:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+18:I[6279,["825","$15","491","$16","953","$17"],"FilterLink"]
+19:I[4067,["825","$15","491","$16","953","$17"],"ArticleToc"]
+1b:I[4711,["825","$15","491","$16","953","$17"],"ArticleBody"]
+1c:T2378,<p>在<a href="/blog/two-sum/">两数之和</a>中，需要反复查找补数以及它的位置，因此用字典保存<code>seen[数值] = 原下标</code>。要理解这一步为什么能加速，先需要分清<strong>“已知下标访问数组”和“已知数值寻找位置”</strong>。</p>
+<h2 id="section-哈希表的用途通过键找到关联的值">哈希表的用途：通过键找到关联的值</h2>
+<p>数组有了下标，就可以通过<code>nums[4]</code>直接读取第5个位置。底层按照<strong>起始地址＋下标×单元大小</strong>计算地址，通常可以按O(1)分析。可是，如果已知的只有“要找7”，普通数组并没有同时保存7的位置，仍需要逐个检查，或提前建立查询结构。</p>
+<p>字典保存的是<strong>键（key）→值（value）</strong>的对应关系。键用来查询，值保存需要取回的信息。在两数之和中，键是数组里的数，值是它的原下标；换成成绩表，键可以是学号，值可以是成绩。</p>
+<p><strong>哈希表是实现这种映射的一种数据结构。</strong>它借助哈希函数缩小查找范围，再核对键，找到对应的值。Python的字典在CPython（常见的Python解释器实现）中就采用了哈希表。</p>
+<h2 id="section-键怎样变成查找位置哈希值槽位与冲突">键怎样变成查找位置：哈希值、槽位与冲突</h2>
+<p>哈希函数会把键转换成一个整数，叫作<strong>哈希值</strong>。表的容量有限，还需要把这个整数映射到表内的位置，这个位置叫作<strong>槽位</strong>。例如一张8槽的小表，可以先按下面的规则确定查找起点：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>h</mi><mo>=</mo><mi mathvariant="normal">hash</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>k</mi><mi>e</mi><mi>y</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mspace width="2em"></mspace><mi>s</mi><mo>=</mo><mi>h</mi><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><mn>8</mn></mrow><annotation encoding="application/x-tex">h=\operatorname{hash}(key),\qquad s=h\bmod 8</annotation></semantics></math></span>
+<p><strong>哈希值是计算结果，槽位号是表内位置，两者含义不同。</strong>表扩容后容量改变，同一个哈希值也可能对应另一个槽位。</p>
+<p>假设7、15、23的哈希值分别等于自身，它们对8取余都得到7。这种不同键选中同一个起点的情况叫作<strong>冲突</strong>。因此，<strong>定位到槽位后，还要核对键是否相等</strong>，不能只看槽位或哈希值。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>冲突处理方法</th><th>查找怎样继续</th></tr></thead><tbody><tr><td><strong>链地址法</strong></td><td>同一个桶保存多条记录，再在桶内比较键；桶可以由链表等结构实现</td></tr><tr><td><strong>开放寻址法</strong></td><td>按确定的探测规则，继续检查表内其他槽位；CPython字典采用这一类方法</td></tr></tbody></table>
+<p>可以把槽位理解成资料格的编号，哈希函数决定先去哪个格子找；发生冲突后，仍需要按规则寻找并核对完整编号。<strong>查找和插入使用相同的探测规则</strong>，才能再次找到存进去的键。两种方法的进一步说明可见<a href="https://opendatastructures.org/ods-python/5_1_ChainedHashTable_Hashin.html" rel="noopener noreferrer">链地址法</a>和<a href="https://opendatastructures.org/ods-python/5_2_LinearHashTable_Linear_.html" rel="noopener noreferrer">线性探测</a>。</p>
+<h2 id="section-indices与entries槽位怎样指向字典条目">indices与entries：槽位怎样指向字典条目</h2>
+<p>下面以<strong>CPython3.12.0的整数键合并表（combined table）</strong>为例。这种布局把存储分成两部分：<strong>indices保存条目下标，entries保存条目的哈希信息以及键和值</strong>。</p>
+<p>下面取数组<code>nums = [15, 8, 23, 9, 7]</code>，手动按7、15、23的顺序记录三个数的位置，得到<code>{7: 4, 15: 0, 23: 2}</code>。这个写入顺序用于说明位置关系，不是两数之和从左到右扫描的顺序。</p>
+<figure class="static-figure address-figure" aria-label="查询键7，定位槽7，读取条目下标0，再从条目0取出原数组下标4">
+<figcaption><strong>查询key=7：槽位号7 → 条目下标0 → 原数组下标4</strong></figcaption>
+<div class="query-line"><span class="key-token">key = 7</span><span>hash(7) = 7</span><span>7 mod 8 = <b>7</b></span></div>
+<div class="address-label"><b>indices · 索引槽数组</b><span>槽里保存的是条目下标</span></div>
+<div class="slot-grid"><div><small>槽0</small><b>空</b></div><div><small>槽1</small><b>空</b></div><div><small>槽2</small><b>空</b></div><div><small>槽3</small><b>空</b></div><div><small>槽4</small><b>1</b></div><div><small>槽5</small><b>2</b></div><div><small>槽6</small><b>空</b></div><div class="slot-focus"><small>槽7</small><b>0</b></div></div>
+<div class="connector"><svg viewBox="0 0 24 32" aria-hidden="true"><path d="M12 1v27M5 21l7 8 7-8"></path></svg><span><code>indices[7] = 0</code>，访问条目0</span></div>
+<div class="address-label"><b>entries · 条目数组</b><span>核对key，再取出value</span></div>
+<table class="address-table"><thead><tr><th>条目下标</th><th>key</th><th>value</th></tr></thead><tbody><tr class="entry-focus"><td>0</td><td>7 ✓</td><td class="saved-value">4</td></tr><tr><td>1</td><td>15</td><td>0</td></tr><tr><td>2</td><td>23</td><td>2</td></tr></tbody></table>
+<div class="connector"><svg viewBox="0 0 24 32" aria-hidden="true"><path d="M12 1v27M5 21l7 8 7-8"></path></svg><span>取出value=<b>4</b>，它保存的是下面的原下标</span></div>
+<div class="address-label"><b>nums · 原数组</b><span>数值7位于下标4</span></div>
+<div class="original-array"><div><small>下标0</small><b>15</b></div><div><small>下标1</small><b>8</b></div><div><small>下标2</small><b>23</b></div><div><small>下标3</small><b>9</b></div><div class="value-focus"><small>下标4</small><b>7</b></div></div>
+<p class="figure-note">为简洁，条目图只展示key和value；这类整数键条目还保存哈希值。原数组下标是主动存入的value。</p>
+</figure>
+<p>查询7时，先算出槽位7，读到<code>indices[7] = 0</code>；再访问<code>entries[0]</code>，核对键为7，取出value为4。<strong>槽位号7、条目下标0、原数组下标4，分别属于三个位置。</strong>其中4是主动存入的值，字典不会自动计算这个原下标。</p>
+<p>从槽位到条目的过程，可以理解为<strong>把indices里保存的整数，当作entries的下标使用</strong>。两次按已知下标访问数组，不需要重新在entries中搜索。实际字段见<a href="https://github.com/python/cpython/blob/v3.12.0/Include/internal/pycore_dict.h" rel="noopener noreferrer">CPython条目结构</a>。</p>
+<h3 id="section-冲突与删除为什么查23要经过槽745">冲突与删除：为什么查23要经过槽7、4、5</h3>
+<p>23的起点也是槽7，但那里对应的键是7；继续探测槽4，读到键15；再到槽5，才找到键23。这个例子采用CPython3.12的扰动探测规则，具体计算放在下方补充中。</p>
+<figure class="static-figure probe-figure" aria-label="查询23的探测顺序：槽7的键7不匹配，槽4的键15不匹配，槽5的键23匹配；删除15后仍继续查找">
+<figcaption><strong>查询key=23时，沿探测规则寻找</strong></figcaption>
+<div class="probe-route"><div><b>槽7</b><span>key=7</span><small>不匹配</small></div><svg viewBox="0 0 36 24" aria-hidden="true"><path d="M1 12h31M25 5l8 7-8 7"></path></svg><div><b>槽4</b><span>key=15</span><small>不匹配</small></div><svg viewBox="0 0 36 24" aria-hidden="true"><path d="M1 12h31M25 5l8 7-8 7"></path></svg><div class="probe-hit"><b>槽5</b><span>key=23</span><small>匹配，返回value=2</small></div></div>
+<p class="deletion-note"><b>删除15以后：</b>槽4变为DUMMY，意思是“这里删除过元素，继续探测”；仍会到槽5找到23。</p>
+</figure>
+<p>如果删除15，<strong>槽4会留下DUMMY标记，对应条目可以留下空洞</strong>。查询23经过槽4时，仍需继续到槽5。若把槽4直接当成从未使用的空槽<code>EMPTY</code>，查找就会提前停止，后面的23也就找不到了。</p>
+<p><strong>EMPTY表示可以结束查找，DUMMY表示需要继续。</strong>普通删除不会每次都把末尾条目搬过来填洞，重新建表时才可以整理有效条目并重建索引。<a href="https://github.com/python/cpython/blob/v3.12.0/Objects/dictobject.c" rel="noopener noreferrer">CPython字典源码</a>包含这些状态和查找步骤。</p>
+<h2 id="section-交互演示字典查找">交互演示：字典查找</h2>
+9:["$","div",null,{"className":"shell reading-page algorithm-reading","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"哈希表：从键值对应到Python字典的查找过程"}],["$","p",null,{"className":"article-deck","children":"通过两数之和理解哈希表的键值对应、冲突处理与查询成本，再用CPython字典的槽位和条目解释查找过程"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-21","children":"2026-10-21"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,568"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",8," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L18","数据结构",{"href":"/blog/#tag=%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84","children":"数据结构"}],["$","$L18","哈希表",{"href":"/blog/#tag=%E5%93%88%E5%B8%8C%E8%A1%A8","children":"哈希表"}],["$","$L18","Python",{"href":"/blog/#tag=Python","children":"Python"}]]}]]}],["$","$L19",null,{"headings":[{"id":"section-哈希表的用途通过键找到关联的值","text":"哈希表的用途：通过键找到关联的值","level":2},{"id":"section-键怎样变成查找位置哈希值槽位与冲突","text":"键怎样变成查找位置：哈希值、槽位与冲突","level":2},{"id":"section-indices与entries槽位怎样指向字典条目","text":"indices与entries：槽位怎样指向字典条目","level":2},{"id":"section-冲突与删除为什么查23要经过槽745","text":"冲突与删除：为什么查23要经过槽7、4、5","level":3},{"id":"section-交互演示字典查找","text":"交互演示：字典查找","level":2},{"id":"section-平均o1的条件散列分布与扩容","text":"平均O(1)的条件：散列分布与扩容","level":2},{"id":"section-好的哈希函数不一定复杂","text":"好的哈希函数不一定复杂","level":3},{"id":"section-python字典的常用操作与使用条件","text":"Python字典的常用操作与使用条件","level":2},{"id":"section-选择数据结构先明确需要怎样查找和修改","text":"选择数据结构：先明确需要怎样查找和修改","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1a",[["$","$L1b","0",{"html":"$1c"}],"$L1d","$L1e"],false,"$L1f","$L20","$L21"]}],"$L22"]}]]}]
+c:null
+12:[["$","title","0",{"children":"哈希表：从键值对应到Python字典的查找过程 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"通过两数之和理解哈希表的键值对应、冲突处理与查询成本，再用CPython字典的槽位和条目解释查找过程。"}]]
+23:"AlgorithmDemoLoader"
+24:I[7223,["825","$15","491","$16","953","$17"],"$23"]
+26:I[2708,["825","$15","491","$16","953","$17"],"FeedbackForm"]
+27:I[3498,["825","$15","491","$16","953","$17"],"default"]
+1d:["$","$L24","1",{"id":"dict-index"}]
+25:T1fd9,
+<details>
+<summary>CPython3.12的探测公式与7→4→5的计算</summary>
+<p>CPython3.12.0的槽位数是2的幂，令<code>mask = 容量 - 1</code>，初始槽位为<code>hash &#x26; mask</code>。<code>perturb</code>从转换为无符号整数的哈希值开始，每次继续探测时执行：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-text">perturb >>= 5
+s = (5 * s + perturb + 1) &#x26; mask
+</code></pre></div>
+<p>本例固定8槽，查询23时<code>mask = 7</code>，初始槽为<code>23 &#x26; 7 = 7</code>。第一次右移后<code>perturb = 0</code>，后续槽位为：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>=</mo><mo stretchy="false">(</mo><mn>5</mn><mo>×</mo><mn>7</mn><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><mn>8</mn><mo>=</mo><mn>4</mn><mo separator="true">,</mo><mspace width="2em"></mspace><msub><mi>s</mi><mn>2</mn></msub><mo>=</mo><mo stretchy="false">(</mo><mn>5</mn><mo>×</mo><mn>4</mn><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><mn>8</mn><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">s_1=(5\times7+1)\bmod8=4,\qquad
+s_2=(5\times4+1)\bmod8=5</annotation></semantics></math></span>
+<p>所以访问顺序是<strong>7→4→5</strong>。这只是选定小正整数和容量后的教学推演，实际解释器还有不同键类型与布局的处理，具体可看<a href="https://github.com/python/cpython/blob/v3.12.0/Objects/dictobject.c#L895-L938" rel="noopener noreferrer">查找源码</a>。</p>
+</details>
+<h2 id="section-平均o1的条件散列分布与扩容">平均O(1)的条件：散列分布与扩容</h2>
+<p>哈希表的一次查找包含<strong>计算哈希、访问槽位、比较键</strong>。平均O(1)表示平均工作量不会随元素数量持续增长，并不要求只做一次操作。</p>
+<p>以链地址法说明，设元素数量为<code>n</code>、桶数量为<code>m</code>，负载因子为：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>α</mi><mo>=</mo><mfrac><mi>n</mi><mi>m</mi></mfrac><mo separator="true">,</mo><mspace width="2em"></mspace><mi mathvariant="double-struck">E</mi><mo stretchy="false">[</mo><msub><mi>T</mi><mrow><mi>l</mi><mi>o</mi><mi>o</mi><mi>k</mi><mi>u</mi><mi>p</mi></mrow></msub><mo stretchy="false">]</mo><mo>=</mo><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>α</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\alpha=\frac{n}{m},\qquad \mathbb{E}[T_{lookup}]=O(1+\alpha)</annotation></semantics></math></span>
+<p>在键分布较均匀、哈希和比较按常数成本计算的条件下，让桶数量随元素数量增长，把α控制在常数范围内，就能保持<strong>期望O(1)查找</strong>。开放寻址还需要保留足够空槽，具体成本取决于探测规则。</p>
+<p>表装得越来越满时，需要扩容并重新安排有效条目。一次扩容可能花O(n)时间；以容量翻倍为例，多次搬迁的总量是<code>1 + 2 + 4 + …</code>，仍与最终元素数量同阶，分摊到整个插入序列上就是<strong>O(1)均摊扩容成本</strong>。</p>
+<p><strong>“期望”对应散列分布，“均摊”对应一串操作的成本分担。</strong>两者结合，才得到常说的期望均摊O(1)插入。大量冲突可能让查找退化为O(n)，长字符串首次计算哈希也需要计入长度成本。</p>
+<h3 id="section-好的哈希函数不一定复杂">好的哈希函数不一定复杂</h3>
+<p>判断哈希函数时，需要关注<strong>结果是否稳定、计算是否足够快、常见输入是否分布合理</strong>。相等的键必须有相同的哈希值，但哈希值相同不保证键相等。</p>
+<p>CPython中7、15、23这类小正整数的哈希值就是自身，连续整数也可以分散到不同槽位。函数复杂并不自动带来好效果，<strong>需要结合输入和槽位映射来看分布</strong>。字符串等类型还采用进程级随机化，因此不能把<code>hash()</code>结果当作跨进程稳定编号（<a href="https://docs.python.org/3.12/reference/datamodel.html#object.__hash__" rel="noopener noreferrer">Python哈希约定</a>）。</p>
+<h2 id="section-python字典的常用操作与使用条件">Python字典的常用操作与使用条件</h2>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python">positions = {<span class="hljs-number">7</span>: <span class="hljs-number">4</span>, <span class="hljs-number">15</span>: <span class="hljs-number">0</span>}  <span class="hljs-comment"># 数值 -> 原数组下标</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> <span class="hljs-keyword">in</span> positions)     <span class="hljs-comment"># True：检查键7是否存在</span>
+<span class="hljs-built_in">print</span>(positions[<span class="hljs-number">7</span>])       <span class="hljs-comment"># 4：读取键7对应的值</span>
+positions[<span class="hljs-number">23</span>] = <span class="hljs-number">2</span>         <span class="hljs-comment"># 新增一个键值对</span>
+positions[<span class="hljs-number">7</span>] = <span class="hljs-number">1</span>          <span class="hljs-comment"># 已有键7，更新它的值</span>
+<span class="hljs-keyword">del</span> positions[<span class="hljs-number">15</span>]        <span class="hljs-comment"># 删除键15及对应的值</span>
+</code></pre></div>
+<p><strong>键必须可哈希</strong>：哈希值在使用期间保持稳定，相等的键有相同哈希值。整数、字符串是常见键，列表不能直接作键；元组需要其中每个元素也可哈希（<a href="https://docs.python.org/3.12/glossary.html#term-hashable" rel="noopener noreferrer">可哈希的定义</a>）。</p>
+<p><strong><code>d[key]</code>在键不存在时会抛出KeyError</strong>，需要先用<code>key in d</code>判断，或用<code>d.get(key, 默认值)</code>。Python3.7起保证字典按插入顺序迭代：更新已有键不改变位置，删除后重新插入会排到末尾。<strong>插入顺序与键的大小顺序不同</strong>，有序范围查询仍需其他结构。<a href="https://docs.python.org/3.12/library/stdtypes.html#mapping-types-dict" rel="noopener noreferrer">字典文档</a>列出了完整操作。</p>
+<h2 id="section-选择数据结构先明确需要怎样查找和修改">选择数据结构：先明确需要怎样查找和修改</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>需要完成的操作</th><th>可以考虑的结构</th></tr></thead><tbody><tr><td><strong>按确定的键查询、计数或记录位置</strong></td><td>哈希表；两数之和属于“数值→位置”</td></tr><tr><td>按键大小查询范围、寻找前驱后继</td><td>排序数组或平衡搜索树</td></tr><tr><td>已知节点及必要链接，频繁移动或删除节点</td><td>链表；LRU缓存可结合字典定位与双向链表调整顺序</td></tr><tr><td>已知连续下标，读取或遍历数据</td><td>数组</td></tr></tbody></table>
+<p>两数之和适合用字典，是因为每一步都需要<strong>精确查询补数，并取出已经保存的原下标</strong>。把这两个需求写清楚，再回看<a href="/blog/two-sum/#section-完整代码先查询补数再写入当前元素">先查询、后写入的代码</a>，记录的含义和更新顺序就比较容易对应起来了。</p>1e:["$","$L1b","2",{"html":"$25"}]
+20:["$","$L26",null,{"contentId":"hash-table-introduction"}]
+21:["$","div",null,{"className":"related-note","children":[["$","$L27",null,{"href":"/blog/","children":"返回技术笔记"}],["$","$L27",null,{"href":"/blog/merge-sort/","children":"体验归并排序"}]]}]
+22:["$","$L19",null,{"headings":["$9:props:children:1:props:headings:0","$9:props:children:1:props:headings:1","$9:props:children:1:props:headings:2","$9:props:children:1:props:headings:3","$9:props:children:1:props:headings:4","$9:props:children:1:props:headings:5","$9:props:children:1:props:headings:6","$9:props:children:1:props:headings:7","$9:props:children:1:props:headings:8"]}]
+1a:null
+1f:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","span",null,{}],["$","$L27",null,{"href":"/blog/two-sum/","children":[["$","span",null,{"children":"下一篇"}],"两数之和：从暴力枚举到哈希表的一次遍历"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","two-sum",{"children":[["$","$L27",null,{"href":"/blog/two-sum/","children":"两数之和：从暴力枚举到哈希表的一次遍历"}],["$","span",null,{"children":"算法与数据结构"}]]}]]}]]}]]}]
+28:"static/chunks/app/layout-f6895f86611bc12f.js"
+29:I[6767,["825","$15","177","$28"],"DisplayProvider"]
+2a:"NavigationFeedback"
+2b:I[2842,["825","$15","177","$28"],"$2a"]
+2c:I[8587,["825","$15","177","$28"],"SiteHeader"]
+2d:I[5803,["825","$15","177","$28"],"SiteFrame"]
+2e:I[164,["825","$15","177","$28"],"ProfileSidebar"]
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L29",null,{"children":[["$","$L2b",null,{}],["$","$L2c",null,{"tags":["编程语言知识点","python","C++"],"categoryIds":["foundations","frontend","backend","agent","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L2d",null,{"sidebar":["$","$L2e",null,{"categoryIds":"$2:props:children:1:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L27",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L27",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L27",null,{"href":"/about/","children":"关于这个站点"}],["$","$L27",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+14:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L27",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L27",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$L27",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$L18",null,{"className":"trail-current","href":"/blog/#algorithms","children":["算法与数据结构",["$","span",null,{"children":5}]]}],"$undefined"]}]

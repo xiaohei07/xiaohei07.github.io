@@ -1,0 +1,145 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T2205,<span id="一引言" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一引言">（一）引言:</h3>
+<p>在c++中，我们在类中创建成员函数，在创建类的对象后，在类的对象上使用类的成员函数可以访问类的此对象的数据。</p>
+<p>那么这个成员函数是怎么知道要访问的是此对象的数据成员，而不是其他对象的呢？</p>
+<p>调用本文这种非静态成员函数时，<code>this</code> 指向发起调用的对象。成员函数通过这个指针访问该对象的数据成员。</p>
+<p>下面对this指针进行详细介绍。</p>
+<span id="二概念" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二概念">（二）概念:</h3>
+<p>本文讨论使用隐式对象参数的非静态成员函数。在类 <code>X</code> 的普通成员函数中，<code>this</code> 是类型为 <code>X*</code> 的指针纯右值；在 <code>const</code> 成员函数中，它的类型为 <code>const X*</code>，其他 cv 限定同样作用于所指类型。</p>
+<p><code>this</code> 不能作为赋值的左操作数。它表示当前对象的地址，成员函数中可以用 <code>this->成员</code> 访问当前对象。</p>
+<p>调用 <code>s.resetXY(2, 3)</code> 时，调用对象是 <code>s</code>，函数内的 <code>this</code> 指向 <code>s</code>。这个关联由成员函数调用规则确定；函数声明中的参数仍然只有 <code>a</code> 和 <code>b</code>。</p>
+<p>例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>c++</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&#x3C;iostream></span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Simple</span>
+{
+<span class="hljs-keyword">private</span>:
+	<span class="hljs-type">int</span> x;
+	<span class="hljs-type">int</span> y;
+<span class="hljs-keyword">public</span>:
+	<span class="hljs-built_in">Simple</span>() = <span class="hljs-keyword">default</span>;
+	<span class="hljs-built_in">Simple</span> (<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b) : <span class="hljs-built_in">x</span>(a), <span class="hljs-built_in">y</span>(b)
+	{
+		cout &#x3C;&#x3C; <span class="hljs-string">"Finish the constructed function"</span> &#x3C;&#x3C; endl;
+	}
+	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">resetXY</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> 
+	</span>{
+		x = a,y = b;
+		<span class="hljs-keyword">return</span> ;
+	}
+	~<span class="hljs-built_in">Simple</span>()
+	{
+		cout &#x3C;&#x3C; <span class="hljs-string">"Finish deconstructor"</span> &#x3C;&#x3C; endl;
+	}
+};
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+	<span class="hljs-function">Simple <span class="hljs-title">s</span><span class="hljs-params">(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)</span></span>;
+	s.<span class="hljs-built_in">resetXY</span>(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//此时 resetXY 内的 this 指向 s</span>
+	                 <span class="hljs-comment">//成员 x、y 分别属于当前对象 s</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre></div>
+<span id="三this指针的注意要点" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三this指针的注意要点">（三）this指针的注意要点:</h3>
+<ol>
+<li>
+<p><code>this</code> 是指针纯右值，不能给 <code>this</code> 本身赋值。</p>
+</li>
+<li>
+<p><code>this</code> 可以用于本文这种成员函数的函数体，也可以用于标准允许的声明位置和非静态数据成员的默认初始化器。</p>
+</li>
+<li>
+<p>多个对象调用同一成员函数时，函数中的 <code>this</code> 分别指向各自的调用对象。</p>
+</li>
+<li>
+<p>静态成员函数以及采用显式对象参数的成员函数不能使用 <code>this</code>。普通非成员友元函数也没有当前对象的 <code>this</code>。</p>
+<p>静态成员函数的对象关系详见 <a href="/blog/cpp-static-members/">c++类——静态成员</a>。</p>
+</li>
+<li>
+<p><code>this</code> 可以显式使用，例如 <code>this</code>、<code>(*this).x</code>、<code>this->x</code>；其中 <code>x</code> 是当前对象的数据成员。</p>
+</li>
+<li>
+<p><code>this</code> 表达式不会为每个对象增加一个指针数据成员，因此不会增加该类对象的 <code>sizeof</code>。</p>
+</li>
+</ol>
+<span id="四this指针的显式使用样例" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-四this指针的显式使用样例">（四）this指针的显式使用样例:</h3>
+<div class="code-block"><div class="code-toolbar"><span>c++</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&#x3C;iostream></span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Simple</span>
+{
+<span class="hljs-keyword">private</span>:
+	<span class="hljs-type">int</span> x;
+	<span class="hljs-type">int</span> y;
+<span class="hljs-keyword">public</span>:
+	<span class="hljs-built_in">Simple</span>() = <span class="hljs-keyword">default</span>;
+	<span class="hljs-built_in">Simple</span> (<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b) : <span class="hljs-built_in">x</span>(a), <span class="hljs-built_in">y</span>(b)
+	{
+		cout &#x3C;&#x3C; <span class="hljs-string">"Finish the constructed function"</span> &#x3C;&#x3C; endl;
+	}
+	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">resetXY</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> 
+	</span>{
+		x = a, y = b;
+		<span class="hljs-keyword">return</span> ;
+	}
+	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Simple_thisuse</span><span class="hljs-params">(<span class="hljs-type">int</span> a,<span class="hljs-type">int</span> b)</span>
+	</span>{
+		cout &#x3C;&#x3C; <span class="hljs-keyword">this</span>->x &#x3C;&#x3C; <span class="hljs-string">" "</span> &#x3C;&#x3C; <span class="hljs-keyword">this</span>->y &#x3C;&#x3C; endl;
+		(*<span class="hljs-keyword">this</span>).x += a;
+		(*<span class="hljs-keyword">this</span>).y += b;
+		cout &#x3C;&#x3C; <span class="hljs-keyword">this</span>->x &#x3C;&#x3C; <span class="hljs-string">" "</span> &#x3C;&#x3C; <span class="hljs-keyword">this</span>->y &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; <span class="hljs-keyword">this</span> &#x3C;&#x3C; endl;
+		<span class="hljs-keyword">return</span>;
+	}
+	~<span class="hljs-built_in">Simple</span>()
+	{
+		cout &#x3C;&#x3C; <span class="hljs-string">"Finish deconstructor"</span> &#x3C;&#x3C; endl;
+	}
+};
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+	<span class="hljs-function">Simple <span class="hljs-title">s</span><span class="hljs-params">(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)</span></span>;
+	s.<span class="hljs-built_in">resetXY</span>(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>);
+	s.<span class="hljs-built_in">Simple_thisuse</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre></div>
+<p>原文结果截图：<a href="https://imgse.com/i/pp8l0u8" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2023/03/16/pp8l0u8.png" alt="pp8l0u8.png" width="380" height="127" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p>本次修订依据 C++ 工作草案的 <a href="https://eel.is/c++draft/expr.prim.this" rel="noopener noreferrer">this 表达式</a>与<a href="https://eel.is/c++draft/expr.assign" rel="noopener noreferrer">赋值运算符</a>规则。示例未重新运行，截图保留为历史记录。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#foundations","children":["编程语言知识点",["$","span",null,{"children":50}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"c++类——this指针"}],["$","p",null,{"className":"article-deck","children":"从成员函数如何定位调用对象的问题出发，介绍 this 指针及显式使用它的代码"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-15","children":"2023-03-15"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-17","children":"2026-10-17"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"761"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",3," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$Lf","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$Lf","编程语言知识点",{"href":"/blog/#tag=%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9F%A5%E8%AF%86%E7%82%B9","children":"编程语言知识点"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-一引言","text":"（一）引言:","level":3},{"id":"section-二概念","text":"（二）概念:","level":3},{"id":"section-三this指针的注意要点","text":"（三）this指针的注意要点:","level":3},{"id":"section-四this指针的显式使用样例","text":"（四）this指针的显式使用样例:","level":3}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[null,["$","$L11",null,{"html":"$12"}],"$undefined","$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"cpp-this","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"c++类——this指针 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从成员函数如何定位调用对象的问题出发，介绍 this 指针及显式使用它的代码。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"E-M2wxgR09X62ofy5DhPV"}
+22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+23:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Le",null,{"href":"/blog/cpp-constructors/","children":[["$","span",null,{"children":"上一篇"}],"c++类——构造函数"]}],["$","$Le",null,{"href":"/blog/merge-sort/","children":[["$","span",null,{"children":"下一篇"}],"看见归并排序的每一步"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$Le",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","cpp-templates-2",{"children":[["$","$Le",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","cpp-templates-3",{"children":[["$","$Le",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"编程语言知识点"}]]}]]}]]}]]}]
+14:["$","$L22",null,{"contentId":"cpp-this"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+21:true
+7:300
+24:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

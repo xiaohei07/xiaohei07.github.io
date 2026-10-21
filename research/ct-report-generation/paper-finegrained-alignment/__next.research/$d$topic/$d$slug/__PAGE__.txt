@@ -1,0 +1,165 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+d:"static/chunks/825-1a8f209f3ada760f.js"
+e:"static/chunks/491-13729696a55105fe.js"
+f:"static/chunks/app/research/%5Btopic%5D/%5Bslug%5D/page-2c6457ecdf34d249.js"
+10:I[3498,["825","$d","491","$e","154","$f"],"default"]
+11:I[6279,["825","$d","491","$e","154","$f"],"FilterLink"]
+1f:"ViewportBoundary"
+20:I[887,[],"$1f"]
+21:"MetadataBoundary"
+22:I[887,[],"$21"]
+23:"$Sreact.suspense"
+6:X
+6:C
+7:X
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page research-detail","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L10",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L10",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$L10",null,{"href":"/research/","children":["研究",["$","span",null,{"children":26}]]}],["$","$L11",null,{"className":"trail-current","href":"/research/#direction-medical-imaging","children":["医学影像处理",["$","span",null,{"children":26}]]}],["$","$L10",null,{"className":"trail-parent","href":"/research/ct-report-generation/","children":"基于细粒度临床事实建模的三维胸部 CT 报告生成"}]]}],["$","h1",null,{"tabIndex":-1,"children":"细粒度视觉对齐：projector有没有把局部视觉信息交给LLM"}],["$","p",null,{"className":"article-deck","children":"结合表示熵、局部探针和patch级监督，区分信息压缩、局部语义对应与下游能力；实验来自2D自然图像，CT应用仍需验证"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"className":"status-tag","children":"论文笔记"}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","论文阅读",{"children":"论文阅读"}],["$","span","视觉连接器",{"children":"视觉连接器"}],["$","span","细粒度对齐",{"children":"细粒度对齐"}],["$","span","2D方法延伸",{"children":"2D方法延伸"}]]}]]}],false,["$","nav",null,{"className":"paper-reading-navigation","aria-label":"论文阅读系列","children":[["$","$L10",null,{"href":"/research/ct-report-generation/paper-reading/","children":"3D胸部CT论文阅读"}],["$","span",null,{"children":["第 ",17," / ",21," 篇"]}],["$","details",null,{"children":[["$","summary",null,{"children":"系列目录"}],["$","ol",null,{"children":[["$","li","ct-paper-ct-chat",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-ct-chat/","children":"CT-RATE、CT-CLIP与CT-CHAT：从3D胸部CT数据到报告生成"}]}],["$","li","ct-paper-radgenome-chestct",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-radgenome-chestct/","children":"RadGenome-ChestCT：CT中的解剖区域怎样对应到报告句子"}]}],["$","li","ct-paper-merlin",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-merlin/","children":"Merlin：怎样用报告和诊断码训练可迁移的3D CT表征"}]}],["$","li","ct-paper-fvlm",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-fvlm/","children":"fVLM：器官级图文对齐为什么还需要处理假负样本"}]}],["$","li","ct-paper-reg2rg",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-reg2rg/","children":"Reg2RG：怎样把区域纹理、几何位置与CT报告对应起来"}]}],["$","li","ct-paper-ct-graph",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-ct-graph/","children":"CT-GRAPH：局部解剖特征怎样沿分层图传给报告生成模型"}]}],["$","li","ct-paper-medregion-ct",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-medregion-ct/","children":"MedRegion-CT：区域视觉信息与病灶属性怎样共同生成报告"}]}],["$","li","ct-paper-ct-agrg",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-ct-agrg/","children":"CT-AGRG：先识别异常，再逐项生成CT报告描述"}]}],["$","li","ct-paper-dcp-pd",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-dcp-pd/","children":"DCP-PD：分类提示能帮多少，CT图像又贡献了什么"}]}],["$","li","ct-paper-argus",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-argus/","children":"Argus：3D报告生成中的视觉预训练、token压缩与训练配置"}]}],["$","li","ct-paper-designspace-3d-mllm",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-designspace-3d-mllm/","children":"3D-MLLM Design Space：模型规模、视觉输入与报告补全改变了什么"}]}],["$","li","ct-paper-astra",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-astra/","children":"Astra：统一报告监督之后，怎样训练和评价跨机构CT生成模型"}]}],["$","li","ct-paper-clargen",{"children":"$L12"}],"$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a"]}]]}]]}],"$L1b","$L1c"]}],null,"$L1d"]}],"p":"$@1e","v":null,"s":"$7"}}]]
+a:[["children",{"s":{"n":"slug","t":"d","k":"paper-finegrained-alignment","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
+8:[["children",{"s":{"n":"topic","t":"d","k":"ct-report-generation","s":[]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"research","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L20",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L22",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$23",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"细粒度视觉对齐：projector有没有把局部视觉信息交给LLM | 07xiaohei"}],["$","meta","1",{"name":"description","content":"07xiaohei 的学习笔记、医学影像研究记录与交互式技术实践。"}]]}]}],null]}],null]}],"p":"$@24","v":null,"s":"$7"}},"a":"$@25","u":"$@26","b":"E-M2wxgR09X62ofy5DhPV"}
+27:I[4067,["825","$d","491","$e","154","$f"],"ArticleToc"]
+28:I[4711,["825","$d","491","$e","154","$f"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+12:["$","$L10",null,{"href":"/research/ct-report-generation/paper-clargen/","children":"CLarGen：怎样检查CT报告生成中的模板重复和异常遗漏"}]
+13:["$","li","ct-paper-cpr-rag",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-cpr-rag/","children":"CPR-RAG：器官检索与共现先验怎样影响CT报告的完整性"}]}]
+14:["$","li","ct-paper-monteret",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-monteret/","children":"MonteRET：区域检索怎样参与CT报告修订，结果还有哪些疑问"}]}]
+15:["$","li","ct-paper-btb3d",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-btb3d/","children":"BTB3D：从短体积重建中学习长CT可以使用的视觉token"}]}]
+16:["$","li","ct-paper-finegrained-alignment",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-finegrained-alignment/","aria-current":"page","children":"细粒度视觉对齐：projector有没有把局部视觉信息交给LLM"}]}]
+17:["$","li","ct-paper-sea",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-sea/","children":"SEA：怎样让视觉token提前对齐到LLM的输入语义空间"}]}]
+18:["$","li","ct-paper-visualtoken-sparsity",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-visualtoken-sparsity/","children":"Visual Token Sparsity：怎样区分视觉语义、注意力与计算冗余"}]}]
+19:["$","li","ct-paper-internvl-x",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-internvl-x/","children":"InternVL-X：视觉token在输入、投影和LLM层间怎样压缩"}]}]
+1a:["$","li","ct-paper-multilayer-fusion",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-multilayer-fusion/","children":"多层视觉特征融合：从选层、注入位置到长视觉序列的计算"}]}]
+1b:["$","$L27",null,{"headings":[{"id":"section-投影器压缩了特征但熵下降不是充分证据","text":"投影器压缩了特征，但熵下降不是充分证据","level":2},{"id":"section-怎样测量patch和词语的对齐","text":"怎样测量patch和词语的对齐","level":2},{"id":"section-一个patch可能包含不止一个语义","text":"一个patch可能包含不止一个语义","level":2},{"id":"section-用mask标签直接约束投影器","text":"用mask标签直接约束投影器","level":2},{"id":"section-对齐改善主要体现在哪里","text":"对齐改善主要体现在哪里","level":2},{"id":"section-对医学多模态的启发要停在哪一步","text":"对医学多模态的启发要停在哪一步","level":2}],"mobile":true}]
+29:T317d,<p>视觉特征经过projector以后，会进入LLM的输入空间。但这个过程保留了哪些局部信息、这些信息能否对应到正确词语，还需要进一步检查。这篇论文从表示分析和局部探针出发，再加入patch级监督观察结果。</p>
+<p>我对整体方法的评价是一般，分析问题的角度比较值得参考。它使用的是2D自然图像与LLaVA等模型；放在CT阅读系列中，主要是为了理解视觉连接器的作用，不能直接把实验结论当作3D病灶定位的证据。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">资料</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">内容</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">原文</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><em>Analyzing Fine-Grained Alignment and Enhancing Vision Understanding in Multimodal Language Models</em></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">作者／版本</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Jiachen Jiang、Jinxin Zhou、Bo Peng等；<a href="https://arxiv.org/abs/2505.17316v1" rel="noopener noreferrer">arXiv:2505.17316v1</a>，2025-05-22</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">基础设置</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">LLaVA-1.5，视觉编码器—projector—LLM</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">数据</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">在LLaVA 558K预训练数据上补充物体标签、框和mask，构成PAD</td></tr></tbody></table>
+<h2 id="section-投影器压缩了特征但熵下降不是充分证据">投影器压缩了特征，但熵下降不是充分证据</h2>
+<p>作者用Von Neumann entropy观察视觉特征的有效维度。以MLP投影器为例，预训练后特征熵由4.8353降至2.0362，随机投影后则为4.8245。这个对比表明训练改变了表示结构，压缩了特征分布。（Table 1）</p>
+<p>不过，“压缩发生了”与“只删除了无关信息”是两件事。熵本身不能判断被删掉的是背景冗余还是小物体细节，更不能单独证明LLM理解了图像。论文随后用局部定位和多语义分析补充证据，这比仅看全局熵更重要。</p>
+<h2 id="section-怎样测量patch和词语的对齐">怎样测量patch和词语的对齐</h2>
+<p>给定一个物体标签，把它分成LLM子token，并平均对应词嵌入。再计算这个文本向量与各视觉patch的余弦相似度，通过阈值选择候选patch，与真实mask计算IoU，最后对物体平均。</p>
+<p>随机MLP的Align为0.065，LLaVA预训练后为0.142，SFT后为0.152。caption训练确实改善了局部对齐，但幅度有限。这个量衡量的是定义好的词嵌入—视觉特征相似度定位能力，不等于LLM全部视觉理解能力。（Table 2）</p>
+<p><a href="/images/ct-paper-notes/finegrained-alignment-figure-1.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：局部定位与多语义对齐对比"><img src="/images/ct-paper-notes/finegrained-alignment-figure-1.jpg" alt="局部定位与多语义对齐对比" width="776" height="668" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>原文Fig.1。左侧检查词语能否定位对应patch，右侧用匹配追踪观察视觉表示中的多种语义。</em></p>
+<h2 id="section-一个patch可能包含不止一个语义">一个patch可能包含不止一个语义</h2>
+<p>作者提出一个假设：单个视觉patch可近似为少量词嵌入的线性组合。例如同一区域可能同时涉及物体名称、颜色或材料。</p>
+<p>为观察这些语义，使用matching pursuit：找出与当前残差最接近的词向量，扣除其投影，再继续寻找下一个词。它提供了一种可视化解释，但论文缺少完整的多语义真值标签，因此主要给出定性证据。<strong>这是待检验的表示假设，不是证明每个视觉token都有唯一、稳定的词语分解。</strong></p>
+<h2 id="section-用mask标签直接约束投影器">用mask标签直接约束投影器</h2>
+<p>PAD的自动标注流程是RAM产生物体标签，Grounding DINO生成框，过滤重复框后，SAM产生mask。在原有图文数据上补上局部语义监督。（Mask-Label Annotation Pipeline）</p>
+<p><a href="/images/ct-paper-notes/finegrained-alignment-figure-2.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：PAD标注流程与patch级对齐损失"><img src="/images/ct-paper-notes/finegrained-alignment-figure-2.jpg" alt="PAD标注流程与patch级对齐损失" width="970" height="422" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>原文Fig.2–3。自动mask标签用于局部对齐，caption损失继续提供全局文本监督。</em></p>
+<p>训练时，对每个物体选择至少一半面积被mask覆盖的patch，将这些视觉向量平均；标签的子token嵌入同样平均。patch损失推动二者余弦相似度增大，同时保留原有caption损失：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="script">L</mi><mo>=</mo><msub><mi mathvariant="script">L</mi><mrow><mi>c</mi><mi>a</mi><mi>p</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi></mrow></msub><mo>+</mo><mi>β</mi><msub><mi mathvariant="script">L</mi><mrow><mi>p</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mathcal{L}=\mathcal{L}_{caption}+\beta\mathcal{L}_{patch}</annotation></semantics></math></span>
+<p>这里是<strong>mask所选patch的平均表示</strong>与标签对齐，并不逐个强制所有patch等于同一个词向量。局部损失可以直接使用LLM词嵌入矩阵，不需要额外调用完整语言模型前向；整体caption分支仍然需要语言模型计算。</p>
+<p><a href="/images/ct-paper-notes/finegrained-alignment-method-flow.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：自动标注、局部对齐和下游SFT的关系"><img src="/images/ct-paper-notes/finegrained-alignment-method-flow.svg" alt="自动标注、局部对齐和下游SFT的关系" width="850" height="551" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p>新增损失只用于第一阶段训练projector，β从0线性增加到5；之后沿用相同SFT设置比较下游效果。这样方法变量相对集中，不是把更多下游指令数据混进来一起提高分数。</p>
+<h2 id="section-对齐改善主要体现在哪里">对齐改善主要体现在哪里</h2>
+<p>预训练后的局部对齐结果如下，各列越高越好。粗体最佳，下划线次佳。（Table 3）</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">投影器</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Align（mIoU）</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">图文余弦相似度</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">随机MLP</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.065</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.06</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">LLaVA预训练</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.142</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.07</u></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Patch-Aligned</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.279</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.56</strong></td></tr></tbody></table>
+<p>Patch-Aligned的熵下降也更大，但这里仍不把“更压缩”直接等同于“更好”；局部定位、caption和下游任务的共同变化才支持方法有效。</p>
+<p>下表只保留相同Vicuna-7B、336分辨率的LLaVA-1.5对照，避免把不同尺寸、不同骨干一起排名。RefCOCO系列使用Acc@0.5，其他列使用各自基准分数。（Table 5–6）</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">模型</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RefCOCO val</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RefCOCO+ val</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RefCOCOg test</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">GQA</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">SciQA</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">VizWiz</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">OKVQA</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">LLaVA-1.5</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>56.22</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>50.00</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>48.4</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>62.0</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>66.8</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>50.0</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>53.4</u></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Patch-Aligned</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>65.97</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>58.49</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>56.24</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>63.0</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>68.7</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>52.3</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>58.3</strong></td></tr></tbody></table>
+<p>定位任务提升较明显，问答也有所改善。但不是所有通用指令指标都升高：MMBench由64.00降至63.14，MMMU从35.30升至36.56。换成Llama-3.1-8B或C-Abstractor后，定位结果仍有提升，说明不完全依赖一种MLP与语言骨干组合。（Table 7–8）</p>
+<h2 id="section-对医学多模态的启发要停在哪一步">对医学多模态的启发要停在哪一步</h2>
+<p>这篇提供的可迁移想法，是在全局报告或caption之外，为局部视觉表示增加可检查的语义约束。对CT，可以想到器官或病灶mask与区域描述，但这只是研究方向，<strong>本文没有验证3D CT、病灶定位或医学报告生成</strong>。</p>
+<p>迁移时还会遇到自然图像没有完全覆盖的问题：病灶标签不一定是一个物体名，否定、程度、侧别和多发病灶很难由一个平均词向量表达；伪mask有噪声，区域平均也可能稀释小病灶。因此我会把它当作分析projector和设计局部监督的参考，而不是直接照搬一套已证明有效的医学方案。</p>1c:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[[["$","$L28","0",{"html":"$29","focusTables":true}]],false,false,"$L2a"]}],"$L2b"]}]
+1d:["$","$L2c",null,{"children":["$","$23",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+26:true
+7:300
+2a:["$","section",null,{"className":"article-continuation","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列阅读顺序","children":[["$","$L10",null,{"href":"/research/ct-report-generation/paper-btb3d/","children":[["$","span",null,{"children":"上一篇"}],"BTB3D：从短体积重建中学习长CT可以使用的视觉token"]}],["$","$L10",null,{"href":"/research/ct-report-generation/paper-sea/","children":[["$","span",null,{"children":"下一篇"}],"SEA：怎样让视觉token提前对齐到LLM的输入语义空间"]}]]}],["$","$L10",null,{"className":"text-link","href":"/research/ct-report-generation/paper-reading/","children":"返回论文阅读导读"}],["$","$L10",null,{"className":"text-link","href":"/research/ct-report-generation/","children":"返回主题与完整系列"}]]}]
+2b:["$","$L27",null,{"headings":"$1b:props:headings"}]
+2d:null
+7:C
+25:0
+b:"$undefined"
+9:"$undefined"
+5:"$undefined"
+24:"$undefined"
+1e:"$undefined"

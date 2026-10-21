@@ -1,0 +1,756 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+b:I[887,[],"OutletBoundary"]
+c:"$Sreact.suspense"
+e:"ViewportBoundary"
+f:I[887,[],"$e"]
+11:"MetadataBoundary"
+12:I[887,[],"$11"]
+14:I[5718,[],"default",1]
+:HL["/_next/static/css/1a5e690335e7d9fc.css","style"]
+:HL["/_next/static/css/99458caadf388351.css","style"]
+6:X
+9:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]]}],"p":false,"v":null}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"paper-ct-chat","s":[]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q9"}]]
+7:[["children",{"s":{"n":"topic","t":"d","k":"ct-report-generation","s":[]},"h":197120,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"research","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","research","ct-report-generation","paper-ct-chat",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1a5e690335e7d9fc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/99458caadf388351.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":"$L13"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$14",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"E-M2wxgR09X62ofy5DhPV"}
+6:C
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+15:"static/chunks/825-1a8f209f3ada760f.js"
+16:"static/chunks/app/layout-f6895f86611bc12f.js"
+17:I[6767,["825","$15","177","$16"],"DisplayProvider"]
+18:"NavigationFeedback"
+19:I[2842,["825","$15","177","$16"],"$18"]
+1a:I[8587,["825","$15","177","$16"],"SiteHeader"]
+1b:I[5803,["825","$15","177","$16"],"SiteFrame"]
+1c:I[164,["825","$15","177","$16"],"ProfileSidebar"]
+1d:"static/chunks/491-13729696a55105fe.js"
+1e:"static/chunks/app/research/%5Btopic%5D/%5Bslug%5D/page-2c6457ecdf34d249.js"
+1f:I[3498,["825","$15","491","$1d","154","$1e"],"default"]
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L17",null,{"children":[["$","$L19",null,{}],["$","$L1a",null,{"tags":["编程语言知识点","python","C++"],"categoryIds":["foundations","frontend","backend","agent","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L1b",null,{"sidebar":["$","$L1c",null,{"categoryIds":"$2:props:children:1:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1f",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1f",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1f",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1f",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+d:null
+13:[["$","title","0",{"children":"CT-RATE、CT-CLIP与CT-CHAT：从3D胸部CT数据到报告生成 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"07xiaohei 的学习笔记、医学影像研究记录与交互式技术实践。"}]]
+a:["$","article",null,{"className":"shell reading-page research-detail","children":[["$","header",null,{"className":"article-heading","children":["$L20",["$","h1",null,{"tabIndex":-1,"children":"CT-RATE、CT-CLIP与CT-CHAT：从3D胸部CT数据到报告生成"}],["$","p",null,{"className":"article-deck","children":"沿CT-RATE的数据构成、CT-CLIP的图文对齐和CT-CHAT的生成流程展开，重点看分类微调为什么会改变检索能力，以及报告生成结果应该怎样评价"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"className":"status-tag","children":"论文笔记"}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","论文阅读",{"children":"论文阅读"}],["$","span","3D胸部CT",{"children":"3D胸部CT"}],["$","span","CT-RATE",{"children":"CT-RATE"}],["$","span","CT-CLIP",{"children":"CT-CLIP"}],["$","span","CT-CHAT",{"children":"CT-CHAT"}],["$","span","对比学习",{"children":"对比学习"}]]}]]}],false,["$","nav",null,{"className":"paper-reading-navigation","aria-label":"论文阅读系列","children":[["$","$L1f",null,{"href":"/research/ct-report-generation/paper-reading/","children":"3D胸部CT论文阅读"}],["$","span",null,{"children":["第 ",1," / ",21," 篇"]}],["$","details",null,{"children":[["$","summary",null,{"children":"系列目录"}],["$","ol",null,{"children":[["$","li","ct-paper-ct-chat",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-ct-chat/","aria-current":"page","children":"CT-RATE、CT-CLIP与CT-CHAT：从3D胸部CT数据到报告生成"}]}],["$","li","ct-paper-radgenome-chestct",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-radgenome-chestct/","aria-current":"$undefined","children":"RadGenome-ChestCT：CT中的解剖区域怎样对应到报告句子"}]}],["$","li","ct-paper-merlin",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-merlin/","aria-current":"$undefined","children":"Merlin：怎样用报告和诊断码训练可迁移的3D CT表征"}]}],["$","li","ct-paper-fvlm",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-fvlm/","aria-current":"$undefined","children":"fVLM：器官级图文对齐为什么还需要处理假负样本"}]}],["$","li","ct-paper-reg2rg",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-reg2rg/","aria-current":"$undefined","children":"Reg2RG：怎样把区域纹理、几何位置与CT报告对应起来"}]}],["$","li","ct-paper-ct-graph",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-ct-graph/","aria-current":"$undefined","children":"CT-GRAPH：局部解剖特征怎样沿分层图传给报告生成模型"}]}],["$","li","ct-paper-medregion-ct",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-medregion-ct/","aria-current":"$undefined","children":"MedRegion-CT：区域视觉信息与病灶属性怎样共同生成报告"}]}],["$","li","ct-paper-ct-agrg",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-ct-agrg/","aria-current":"$undefined","children":"CT-AGRG：先识别异常，再逐项生成CT报告描述"}]}],["$","li","ct-paper-dcp-pd",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-dcp-pd/","aria-current":"$undefined","children":"DCP-PD：分类提示能帮多少，CT图像又贡献了什么"}]}],["$","li","ct-paper-argus",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-argus/","aria-current":"$undefined","children":"Argus：3D报告生成中的视觉预训练、token压缩与训练配置"}]}],["$","li","ct-paper-designspace-3d-mllm",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-designspace-3d-mllm/","aria-current":"$undefined","children":"3D-MLLM Design Space：模型规模、视觉输入与报告补全改变了什么"}]}],["$","li","ct-paper-astra",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-astra/","aria-current":"$undefined","children":"Astra：统一报告监督之后，怎样训练和评价跨机构CT生成模型"}]}],["$","li","ct-paper-clargen",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-clargen/","aria-current":"$undefined","children":"CLarGen：怎样检查CT报告生成中的模板重复和异常遗漏"}]}],["$","li","ct-paper-cpr-rag",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-cpr-rag/","aria-current":"$undefined","children":"CPR-RAG：器官检索与共现先验怎样影响CT报告的完整性"}]}],["$","li","ct-paper-monteret",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-monteret/","aria-current":"$undefined","children":"MonteRET：区域检索怎样参与CT报告修订，结果还有哪些疑问"}]}],["$","li","ct-paper-btb3d",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-btb3d/","aria-current":"$undefined","children":"BTB3D：从短体积重建中学习长CT可以使用的视觉token"}]}],["$","li","ct-paper-finegrained-alignment",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-finegrained-alignment/","aria-current":"$undefined","children":"细粒度视觉对齐：projector有没有把局部视觉信息交给LLM"}]}],"$L21","$L22","$L23","$L24"]}]]}]]}],"$L25","$L26"]}]
+27:I[4067,["825","$15","491","$1d","154","$1e"],"ArticleToc"]
+28:I[4711,["825","$15","491","$1d","154","$1e"],"ArticleBody"]
+21:["$","li","ct-paper-sea",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-sea/","aria-current":"$undefined","children":"SEA：怎样让视觉token提前对齐到LLM的输入语义空间"}]}]
+22:["$","li","ct-paper-visualtoken-sparsity",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-visualtoken-sparsity/","aria-current":"$undefined","children":"Visual Token Sparsity：怎样区分视觉语义、注意力与计算冗余"}]}]
+23:["$","li","ct-paper-internvl-x",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-internvl-x/","aria-current":"$undefined","children":"InternVL-X：视觉token在输入、投影和LLM层间怎样压缩"}]}]
+24:["$","li","ct-paper-multilayer-fusion",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-multilayer-fusion/","aria-current":"$undefined","children":"多层视觉特征融合：从选层、注入位置到长视觉序列的计算"}]}]
+25:["$","$L27",null,{"headings":[{"id":"section-ct-rate的数据到底包含什么","text":"CT-RATE的数据到底包含什么","level":2},{"id":"section-先分清患者扫描和重建体积","text":"先分清患者、扫描和重建体积","level":3},{"id":"section-报告的四个部分以及两种不同用途","text":"报告的四个部分，以及两种不同用途","level":3},{"id":"section-单中心数据也有异构性","text":"单中心数据也有异构性","level":3},{"id":"section-ct-clip怎样把ct与报告配对","text":"CT-CLIP怎样把CT与报告配对","level":2},{"id":"section-两个编码器进入同一个表征空间","text":"两个编码器进入同一个表征空间","level":3},{"id":"section-对比学习矩阵中的每个元素是什么意思","text":"对比学习矩阵中的每个元素是什么意思","level":3},{"id":"user-content-demo-ct-chat-pairing-matrix","text":"CT与报告的配对矩阵","level":2},{"id":"section-零样本检测与两种微调方法","text":"零样本检测与两种微调方法","level":2},{"id":"section-每种异常分别准备阳性与阴性提示","text":"每种异常分别准备阳性与阴性提示","level":3},{"id":"section-classfine限定分类输出vocabfine保留提示接口","text":"ClassFine限定分类输出，VocabFine保留提示接口","level":3},{"id":"section-检测效果要把数据集和指标分开看","text":"检测效果：要把数据集和指标分开看","level":2},{"id":"section-内部验证外部验证和真实世界验证","text":"内部验证、外部验证和真实世界验证","level":3},{"id":"section-检测提升明确但没有一种方法包揽所有指标","text":"检测提升明确，但没有一种方法包揽所有指标","level":3},{"id":"user-content-demo-ct-chat-classification","text":"CT-CLIP分类结果对照","level":2},{"id":"section-数据量提示词和潜在空间","text":"数据量、提示词和潜在空间","level":3},{"id":"section-检索结果分类微调会影响哪些能力","text":"检索结果：分类微调会影响哪些能力","level":2},{"id":"section-图像检索图像与报告检索图像","text":"图像检索图像与报告检索图像","level":3},{"id":"section-vocabfine的分类收益没有延续到报告检索","text":"VocabFine的分类收益没有延续到报告检索","level":3},{"id":"section-ct-chat怎样生成回答与报告","text":"CT-CHAT怎样生成回答与报告","level":2},{"id":"section-从ct-tokens到llm输入","text":"从CT tokens到LLM输入","level":3},{"id":"section-概念对齐与指令微调分两步完成","text":"概念对齐与指令微调分两步完成","level":3},{"id":"section-270万余问答对怎样形成","text":"270万余问答对怎样形成","level":3},{"id":"section-报告生成效果与结构化信息补充","text":"报告生成效果与结构化信息补充","level":2},{"id":"section-文本指标医师评分和异常指标各看什么","text":"文本指标、医师评分和异常指标各看什么","level":3},{"id":"section-相比旧工作有提升指标仍需要谨慎解读","text":"相比旧工作有提升，指标仍需要谨慎解读","level":3},{"id":"section-分割信息怎样帮助报告生成","text":"分割信息怎样帮助报告生成","level":3},{"id":"section-读完之后哪些内容值得继续跟进","text":"读完之后，哪些内容值得继续跟进","level":2},{"id":"section-相关论文与资料","text":"相关论文与资料","level":2},{"id":"section-附表完整分类与图像检索结果","text":"附表：完整分类与图像检索结果","level":2},{"id":"section-多异常检测","text":"多异常检测","level":3},{"id":"section-图像-图像检索","text":"图像-图像检索","level":3}],"mobile":true}]
+29:T3ca0,<p>CT-RATE这篇论文适合放在3D胸部CT相关工作的前面读。它提供了较大规模的CT与报告配对数据，在此基础上训练CT-CLIP，再把视觉编码器接入大语言模型（LLM），得到能够回答问题和生成报告的CT-CHAT。数据、表征学习和下游任务之间的关系比较完整，后续读区域报告生成、检索或者视觉token相关论文时，都可以回过头来对照。</p>
+<p>我在笔记里把它记为“基石论文”，主要看重的也是这套数据与方法基础。至于模型效果，需要分任务看：异常检测表现不错，分类微调却会影响文本检索；CT-CHAT比文中较早的报告生成模型更好，临床指标仍然不算理想。下面先把数据和训练过程说明白，再来看这些结果。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">论文信息</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">内容</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">题目</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><em>Generalist foundation models from a multimodal dataset for 3D computed tomography</em></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">作者与期刊</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Ibrahim Ethem Hamamci等；Nature Biomedical Engineering</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">阅读版本</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">所提供的期刊排版稿；相关预印本v5于2026年2月8日修订</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">原文</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><a href="https://doi.org/10.1038/s41551-025-01599-y" rel="noopener noreferrer">期刊DOI</a> · <a href="https://arxiv.org/abs/2403.17834v5" rel="noopener noreferrer">arXiv v5</a></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">开源资料</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><a href="https://huggingface.co/datasets/ibrahimhamamci/CT-RATE" rel="noopener noreferrer">CT-RATE数据集</a> · <a href="https://github.com/ibrahimethemhamamci/CT-CLIP" rel="noopener noreferrer">CT-CLIP代码</a> · <a href="https://github.com/ibrahimethemhamamci/CT-CHAT" rel="noopener noreferrer">CT-CHAT代码</a></td></tr></tbody></table>
+<p><a href="/images/ct-paper-notes/ct-chat-research-map.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：CT-RATE提供配对数据，CT-CLIP学习图文表征，CT-CHAT结合视觉编码器与LLM开展问答和报告生成"><img src="/images/ct-paper-notes/ct-chat-research-map.svg" alt="CT-RATE提供配对数据，CT-CLIP学习图文表征，CT-CHAT结合视觉编码器与LLM开展问答和报告生成" width="1000" height="390" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>实线表示数据或模型的传递，分支表示同一表征支持的不同任务。示意图根据论文重画，图中的流程与结果来自论文，本篇没有运行训练或复现实验。</em></p>
+<h2 id="section-ct-rate的数据到底包含什么">CT-RATE的数据到底包含什么</h2>
+<h3 id="section-先分清患者扫描和重建体积">先分清患者、扫描和重建体积</h3>
+<p>3D胸部CT由在空间上连续排列的切片组成，模型处理的是一个CT体积（volume）。同一次扫描可以采用不同设置重建出多个volume，因此，患者数、扫描数和重建后的volume数需要分开统计。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">统计对象</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE规模</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">应怎样理解</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">患者</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">21,304人</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">独立患者数量</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">扫描</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">25,692次</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">非增强胸部CT扫描</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">重建体积</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">50,188个</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">不同重建设置扩展后的CT volume</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">二维切片</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">超过1,430万张</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">构成上述3D体积的切片</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">异常标签</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">18类</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">用于监督基线、微调和评估的全局异常标签</td></tr></tbody></table>
+<p>CT-RATE提供18类异常标签，用于监督和评估；同时保留配对的报告文本，记录具体的影像发现与诊断描述。因此，固定类别之外的描述也有机会参与图文学习。</p>
+<p>训练集和内部验证集按患者划分：20,000名患者、24,128次扫描用于训练；1,304名患者、1,564次扫描用于内部验证。这样可以避免同一患者的数据同时进入这两个集合。（原文Fig.3e及数据集构建方法）</p>
+<h3 id="section-报告的四个部分以及两种不同用途">报告的四个部分，以及两种不同用途</h3>
+<p>CT报告包括临床信息（Clinical information）、扫描技术（Technique）、影像所见（Findings）和诊断印象（Impression）。先把它们分开，后面的文本处理就比较容易理解。</p>
+<ul>
+<li><strong>临床信息</strong>记录症状、病史等背景。</li>
+<li><strong>扫描技术</strong>说明采集协议等信息。</li>
+<li><strong>Findings</strong>记录医生从影像中观察到的解剖和病理表现。</li>
+<li><strong>Impression</strong>根据这些发现给出诊断性概括。</li>
+</ul>
+<p>CT-CLIP训练使用的是Findings与Impression的组合。论文的消融显示，两者一起使用更好；只使用一个部分时，Findings比Impression更有效，说明详细的影像描述对训练有作用。</p>
+<p>报告还有另一个用途：<strong>提取用于监督和评估的异常标签</strong>。研究者人工标注了1,000份报告中的18类异常，再微调RadBERT，使它能够对其余报告自动分类。因此，“1,000”指报告数量；CT-RATE的标签也包含自动提取的结果。（原文Methods：数据与编码器设置）</p>
+<p><a href="/images/ct-paper-notes/ct-chat-fig1-data-labels.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：论文Fig.1a–b：CT采集、放射科报告与基于文本模型的异常标签提取"><img src="/images/ct-paper-notes/ct-chat-fig1-data-labels.jpg" alt="论文Fig.1a–b：CT采集、放射科报告与基于文本模型的异常标签提取" width="1137" height="336" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>原论文Fig.1a–b。RadBERT负责从报告提取异常标签；后面CT-CLIP中的CXR-BERT负责文本表征，两者用途不同。</em></p>
+<h3 id="section-单中心数据也有异构性">单中心数据也有异构性</h3>
+<p>CT-RATE来自单中心，但扫描仪、采集协议和重建设置并不完全一致。原图把各年龄分布、异常分布、报告长度、切片数量、切片厚度和各轴间距放在一起展示，各轴间距也因体积而异。</p>
+<p>原始切片分辨率包括512²、768²和1024²；每个volume的切片数在100–600之间，均值约304.7，最常见的是255张。</p>
+<p><a href="/images/ct-paper-notes/ct-chat-fig2-distributions.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：论文Fig.2：CT-RATE与RAD-ChestCT在各年龄、异常、报告长度、切片数量及空间分辨率上的分布"><img src="/images/ct-paper-notes/ct-chat-fig2-distributions.jpg" alt="论文Fig.2：CT-RATE与RAD-ChestCT在各年龄、异常、报告长度、切片数量及空间分辨率上的分布" width="1137" height="1082" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>原论文Fig.2。尤其可以对照内部数据与RAD-ChestCT的切片数和间距分布。单中心内部的差异和跨数据集的分布变化，是两个相关但不同的层次。</em></p>
+<p>训练前，CT体积经过以下预处理：（原文Methods：数据与编码器设置）</p>
+<p><a href="/images/ct-paper-notes/ct-chat-preprocessing.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：CT预处理：统一空间间距，中心裁剪或填充到固定体积，转换并截断HU，归一化"><img src="/images/ct-paper-notes/ct-chat-preprocessing.svg" alt="CT预处理：统一空间间距，中心裁剪或填充到固定体积，转换并截断HU，归一化" width="1000" height="205" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<ol>
+<li>将x、y轴间距统一到0.75mm，z轴间距统一到1.5mm。</li>
+<li>中心裁剪或填充到480 × 480 × 240。</li>
+<li>依据元数据中的slope和intercept转换为HU，截断到[-1000, 1000]。</li>
+<li>训练时归一化到[-1, 1]。</li>
+</ol>
+<p>CT-RATE公开的是原始数据和预处理脚本。标准化使模型输入具有一致的尺寸和空间间距，但原始病例、设备与成像条件之间的差异仍需要通过外部验证来考察。</p>
+<h2 id="section-ct-clip怎样把ct与报告配对">CT-CLIP怎样把CT与报告配对</h2>
+<h3 id="section-两个编码器进入同一个表征空间">两个编码器进入同一个表征空间</h3>
+<p>CT-CLIP使用视觉编码器和文本编码器，分别把CT与报告转换为嵌入向量（embedding），再通过配对关系训练。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">分支</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">输入</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">主要处理</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">用于对齐的输出</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">视觉分支</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">3D CT volume</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-ViT中的Spatial transformer与Causal transformer，随后聚合、展平并投影</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">512维向量</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">文本分支</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Findings + Impression</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CXR-BERT编码、聚合并投影</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">512维向量</td></tr></tbody></table>
+<p>视觉编码器来自<a href="https://arxiv.org/abs/2305.16037" rel="noopener noreferrer">GenerateCT</a>使用的CT-ViT。CT-CLIP采用其中的编码部分，把体积划分成20 × 20 × 10的patch，再生成CT tokens。文本侧的CXR-BERT最多处理512个tokens；“512个tokens”是输入长度，“512维向量”是最后用于对齐的表示维度，这两个512的含义不同。（原文Methods：数据与编码器设置）</p>
+<p><a href="/images/ct-paper-notes/ct-chat-fig1-clip.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：论文Fig.1c–e：CT-CLIP双编码器、配对训练及零样本异常检测"><img src="/images/ct-paper-notes/ct-chat-fig1-clip.jpg" alt="论文Fig.1c–e：CT-CLIP双编码器、配对训练及零样本异常检测" width="1137" height="955" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>原论文Fig.1c–e。上方是训练时的两个编码分支；左下展示配对样本逐渐靠近；右下展示阳性／阴性提示如何参与推理。</em></p>
+<h3 id="section-对比学习矩阵中的每个元素是什么意思">对比学习矩阵中的每个元素是什么意思</h3>
+<p>假设一个batch有N组CT与报告，图像向量记为v，报告向量记为r。矩阵元素Sᵢⱼ表示第i个CT与第j份报告的相似程度，可用归一化向量的内积，也就是余弦相似度表示：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mfrac><mrow><msubsup><mi>v</mi><mi>i</mi><mi mathvariant="sans-serif">T</mi></msubsup><msub><mi>r</mi><mi>j</mi></msub></mrow><mrow><mo stretchy="false">∥</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">∥</mo><mtext> </mtext><mo stretchy="false">∥</mo><msub><mi>r</mi><mi>j</mi></msub><mo stretchy="false">∥</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">S_{ij}=\frac{v_i^{\mathsf T}r_j}{\lVert v_i\rVert\,\lVert r_j\rVert}</annotation></semantics></math></span>
+<p>按相同次序排列CT与报告后，对角线是原始配对，非对角线是batch内的非配对组合。训练希望提高配对样本之间的相似度，同时降低非配对组合的相似度，使数据中的对应关系体现在向量空间中。</p>
+<p><a href="/images/ct-paper-notes/ct-chat-pairing-matrix.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：3组CT与报告构成3×3配对矩阵，对角线为原始配对，非对角线为非配对"><img src="/images/ct-paper-notes/ct-chat-pairing-matrix.svg" alt="3组CT与报告构成3×3配对矩阵，对角线为原始配对，非对角线为非配对" width="1000" height="415" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>矩阵示意不包含真实模型分数。下面可以选择任意单元格，查看它对应哪一组CT与报告；静态图也保留了全部配对关系。</em></p>
+<span id="demo-ct-chat-pairing-matrix" class="legacy-anchor" aria-hidden="true"></span><h2 id="user-content-demo-ct-chat-pairing-matrix">CT与报告的配对矩阵</h2>
+26:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[[["$","$L28","0",{"html":"$29","focusTables":true}],"$L2a","$L2b","$L2c","$L2d"],false,false,"$L2e"]}],"$L2f"]}]
+30:"PaperInteractiveLoader"
+31:I[9667,["825","$15","491","$1d","154","$1e"],"$30"]
+2a:["$","$L31","ct-chat-pairing-matrix",{"demo":{"id":"ct-chat-pairing-matrix","title":"CT与报告的配对矩阵","description":"选择一个格子，查看这组CT与报告在对比学习中的关系。","anchor":"demo-ct-chat-pairing-matrix","component":"ct-pairing-matrix","data":"$undefined"}}]
+32:T2a37,
+<p>这里的“非配对”只说明两者不是数据中对应的那一对，并不保证患者没有相似异常。这是理解对比学习目标时需要保留的区别，不能把每个非对角元素都理解成“疾病类别完全不同”。</p>
+<h2 id="section-零样本检测与两种微调方法">零样本检测与两种微调方法</h2>
+<h3 id="section-每种异常分别准备阳性与阴性提示">每种异常分别准备阳性与阴性提示</h3>
+<p>CT-CLIP做零样本多异常检测时，将CT与每种异常的两条提示分别编码。例如判断是否存在实变，可以使用：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-text">Consolidation is present.
+Consolidation is not present.
+</code></pre></div>
+<p>将阳性、阴性提示与CT比较得到两个logits，再在这两个分数之间做softmax，得到该异常存在与不存在的归一化概率：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mi>p</mi><mi>k</mi><mo lspace="0em" rspace="0em">+</mo></msubsup><mo>=</mo><mfrac><mrow><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><msubsup><mi>z</mi><mi>k</mi><mo lspace="0em" rspace="0em">+</mo></msubsup><mo stretchy="false">)</mo></mrow><mrow><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><msubsup><mi>z</mi><mi>k</mi><mo lspace="0em" rspace="0em">+</mo></msubsup><mo stretchy="false">)</mo><mo>+</mo><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><msubsup><mi>z</mi><mi>k</mi><mo lspace="0em" rspace="0em">−</mo></msubsup><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">p_k^{+}=\frac{\exp(z_k^{+})}{\exp(z_k^{+})+\exp(z_k^{-})}</annotation></semantics></math></span>
+<p>其中k表示某一类异常，z⁺和z⁻分别为阳性与阴性提示对应的logit。<strong>归一化发生在每个异常的阳性／阴性对内部</strong>，不是让18种异常互相竞争一个类别；一份CT可以同时出现多种异常。</p>
+<p>论文比较了7组提示模板，最终选择<code>{Abnormality} is {∅/not} present.</code>。零样本模型不需要为这些检测类别单独训练分类头，但推理仍然需要提示。这个思路允许用文本描述待检测的异常；是否能可靠识别一个新异常，还需要该异常上的验证。（原文Fig.4b、Methods）</p>
+<h3 id="section-classfine限定分类输出vocabfine保留提示接口">ClassFine限定分类输出，VocabFine保留提示接口</h3>
+<p>为了提高检测效果，论文又比较了两种微调方法。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">方法</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">怎样训练</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">推理时怎样使用</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">需要注意的限制</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-CLIP零样本</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT与报告配对的对比预训练</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT与阳性／阴性提示比较</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">不为检测标签单独训练分类头</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">ClassFine</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">在视觉编码器后增加线性分类层，使用异常标签监督</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">直接输出预定义类别的预测</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">输出类别受微调标签限制</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">VocabFine</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">用阳性／阴性提示产生logits，与标签计算二元交叉熵</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">仍使用图像和文本提示</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">保留开放词汇接口，但不等于已验证任意新异常</td></tr></tbody></table>
+<p>ClassFine可以只训练新增分类层，采用线性探测的方式；论文也比较了更新更多层的效果，因此需要区分具体的微调配置。</p>
+<p>VocabFine受<a href="https://arxiv.org/abs/2109.01903" rel="noopener noreferrer">WiSE-FT</a>启发。这里具体使用18类异常的阳性／阴性提示，形成36个logits，再与标签对齐：异常存在时对应<code>[1, 0]</code>，不存在时对应<code>[0, 1]</code>。<strong>微调之后仍需提示</strong>，推理方式与零样本CT-CLIP保持一致。（原文Methods：CT-CLIP微调）</p>
+<p><a href="/images/ct-paper-notes/ct-chat-fig3-finetuning.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：论文Fig.3a–e：ClassFine的分类层、VocabFine的提示驱动微调与验证队列"><img src="/images/ct-paper-notes/ct-chat-fig3-finetuning.jpg" alt="论文Fig.3a–e：ClassFine的分类层、VocabFine的提示驱动微调与验证队列" width="1137" height="962" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>原论文Fig.3a–e，保留原图布局。VocabFine右侧从报告提取的标签提供监督，左侧CT与提示产生预测；下方展示微调后的推理与验证队列。</em></p>
+<h2 id="section-检测效果要把数据集和指标分开看">检测效果：要把数据集和指标分开看</h2>
+<h3 id="section-内部验证外部验证和真实世界验证">内部验证、外部验证和真实世界验证</h3>
+<p>论文将CT-Net作为监督学习基线，与零样本CT-CLIP、VocabFine和ClassFine比较。CT-Net在CT-RATE上重新训练，再进行评估；这与后面报告生成部分直接使用已有模型权重的设置不同。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">验证数据</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">扫描数</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">主要作用</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE内部验证</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">1,564</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">检查同一数据来源上的性能</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RAD-ChestCT</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">3,630</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">检查外部公开数据上的泛化</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">UPMC</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">1,024</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">检查另一外部队列；由独立团队使用自己的本地数据验证</td></tr></tbody></table>
+<p>RAD-ChestCT与CT-RATE的标签并不完全一样。论文处理了缺失的mosaic attenuation标签，并在外部评估中合并两类动脉钙化预测。因此，跨队列比较时，标签口径也需要一起看。（原文Fig.3e–f、Methods）</p>
+<h3 id="section-检测提升明确但没有一种方法包揽所有指标">检测提升明确，但没有一种方法包揽所有指标</h3>
+<p><strong>表格标记：最优值加粗，次优值加下划线；按同一队列、同一指标比较，并列值同样标注。</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">数据集</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-Net AUROC</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">零样本CT-CLIP</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">VocabFine</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">ClassFine</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.629</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.731</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.756</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.756</strong></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RAD-ChestCT</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.544</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.629</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.650</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.643</u></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">UPMC</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.480</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.567</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.561</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.580</strong></td></tr></tbody></table>
+<p><em>数据来自论文Fig.4a。下面可以切换队列和指标，查看同一实验设置下各方法的结果；完整表格保留在文末附表中。</em></p>
+<span id="demo-ct-chat-classification" class="legacy-anchor" aria-hidden="true"></span><h2 id="user-content-demo-ct-chat-classification">CT-CLIP分类结果对照</h2>
+2b:["$","$L28","2",{"html":"$32","focusTables":true}]
+2c:["$","$L31","ct-chat-classification",{"demo":{"id":"ct-chat-classification","title":"CT-CLIP分类结果对照","description":"F1按论文的加权口径统计，分类阈值在各队列验证集的10%子集上选取。完整数据保留在下方表格中。","anchor":"demo-ct-chat-classification","component":"ct-classification","data":{"CT-RATE":{"AUROC":[0.629,0.731,0.756,0.756,0.505],"F1":[0.657,0.707,0.738,0.724,0.57],"Accuracy":[0.617,0.668,0.705,0.689,0.502],"Precision":[0.263,0.323,0.353,0.339,0.18]},"RAD-ChestCT":{"AUROC":[0.544,0.629,0.65,0.643,0.496],"F1":[0.564,0.637,0.677,0.644,0.555],"Accuracy":[0.517,0.592,0.636,0.599,0.5],"Precision":[0.282,0.335,0.346,0.346,0.265]},"UPMC":{"AUROC":[0.48,0.567,0.561,0.58,0.499],"F1":[0.613,0.65,0.636,0.698,0.565],"Accuracy":[0.701,0.704,0.68,0.773,0.512],"Precision":[0.243,0.234,0.284,0.195,0.24]}}}}]
+33:Ta0b8,
+<p>从AUROC看，CT-CLIP及两种微调方法在这三个队列上都高于CT-Net。内部验证和RAD-ChestCT上，VocabFine的多项指标也较好。不过，UPMC的排序发生了变化：ClassFine的AUROC、F1和Accuracy更高，VocabFine的Precision更高。</p>
+<p>具体到单项指标，UPMC上的VocabFine Accuracy为0.680，低于CT-Net的0.701；零样本CT-CLIP和ClassFine的Precision分别为0.234、0.195，也低于CT-Net的0.243。<strong>微调效果与评估队列、指标有关，VocabFine并非始终最好。</strong></p>
+<p>读这些分数还需要注意两个评估细节：（原文Methods：检测评估）</p>
+<ul>
+<li>图中的F1先在每个异常内部计算兼顾阳性、阴性的weighted F1，再对异常取平均。它与只关注阳性类别的F1不是同一个统计口径。</li>
+<li>分类阈值利用各验证集的10%数据确定。AUROC不依赖这个单一阈值；F1、Accuracy和Precision则与阈值有关。所以，模型称为“零样本”不表示所有评估步骤都完全没有使用验证集信息。</li>
+</ul>
+<h3 id="section-数据量提示词和潜在空间">数据量、提示词和潜在空间</h3>
+<p><a href="/images/ct-paper-notes/ct-chat-fig4-analysis.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：论文Fig.4b–e：提示词、训练数据量及图像和文本潜在空间的评估"><img src="/images/ct-paper-notes/ct-chat-fig4-analysis.jpg" alt="论文Fig.4b–e：提示词、训练数据量及图像和文本潜在空间的评估" width="1137" height="753" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>原论文Fig.4b–e。图中的误差范围来自bootstrap；散点图按异常数量和年龄着色。</em></p>
+<p>这部分可以沿三条线看。</p>
+<ul>
+<li><strong>提示词</strong>：不同表述会改变检测结果，论文据此选择后续使用的模板。</li>
+<li><strong>数据量</strong>：训练比例包括9.8%、20%、40%、60%、80%和100%。9.8%用于对齐当时公开RAD-ChestCT数据的规模；随着CT-RATE训练数据增加，整体分数提高。</li>
+<li><strong>表征分布</strong>：t-SNE分别展示图像与文本的潜在表示。黑色是零异常，橙色是异常较多的一组；另一组图按各年龄段着色。它帮助观察表征中是否出现与这些属性有关的结构，但二维可视化本身不能代替任务指标。</li>
+</ul>
+<p>CT-RATE的价值在这里比较直观：同一模型在更多配对数据上训练后获得更好的表现。数据规模带来的收益、模型结构的收益，以及微调带来的收益，最好分别讨论。</p>
+<h2 id="section-检索结果分类微调会影响哪些能力">检索结果：分类微调会影响哪些能力</h2>
+<h3 id="section-图像检索图像与报告检索图像">图像检索图像与报告检索图像</h3>
+<p>CT-CLIP已经把CT与文本映射到可比较的空间，因此也可以用来找相关病例。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">查询入口</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">比较什么</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">可用方法</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">论文指标</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">一个CT volume</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">查询CT与候选CT的向量余弦相似度</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-Net、CT-CLIP、VocabFine、ClassFine四种方法均可</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">MAP@K</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">一份报告</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">报告与候选CT的向量余弦相似度</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-CLIP、VocabFine</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Recall@K</td></tr></tbody></table>
+<p><a href="/images/ct-paper-notes/ct-chat-fig5-retrieval.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：论文Fig.5a–b：以CT或报告作为输入的两种检索方式"><img src="/images/ct-paper-notes/ct-chat-fig5-retrieval.jpg" alt="论文Fig.5a–b：以CT或报告作为输入的两种检索方式" width="1137" height="386" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>原论文Fig.5a–b。图像检索比较视觉表征；报告检索需要同时保留文本与视觉表征。箭头汇入的方框表示相似度分数。</em></p>
+<p>图像检索使用异常标签的重合情况衡量检索相关性，再计算MAP@K。因此，它考察的是相关病例的排序。报告检索则检查其配对的CT是否出现在前K个结果中，用Recall@K评估。两者衡量的目标不同，分数不能直接放在一起比较。（原文Methods：检索评估）</p>
+<h3 id="section-vocabfine的分类收益没有延续到报告检索">VocabFine的分类收益没有延续到报告检索</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE内部验证</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">零样本CT-CLIP</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">VocabFine</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">随机检索</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Recall@5</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.029</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.001</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.001</u></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Recall@10</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.050</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.006</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.004</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Recall@50</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.180</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.023</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.020</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Recall@100</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.287</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.020†</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.034</td></tr></tbody></table>
+<p><em>同一行内最优加粗、次优加下划线；†所在行不作排名强调。数值照录论文Fig.5d。†VocabFine的Recall@100低于Recall@50；按固定查询、候选集合与排序下的通常定义，Recall@K应随K不减。这是原图中需要进一步核对的数值，不能自行改成另一个数。本文不以该单元格推导结论。</em></p>
+<p>只看Recall@5、@10和@50，微调后的报告检索已经明显下降。图像-图像检索中，几个CT-CLIP版本却较为接近。例如，内部验证的MAP@10分别为0.572、0.572和0.568，都高于CT-Net的0.481。（原文Fig.5c–d）</p>
+<p><strong>分类更准确，不代表报告级的图文对应关系也更好。</strong> VocabFine围绕异常提示和标签优化，任务更具体；完整报告包含的细节更多。前者与后者对表征的要求不同，是理解这组结果的一种解释，具体机制还需要进一步实验。</p>
+<p>开放词汇接口可以保留下来，但能否识别新异常、能否找到完整报告对应的CT，以及图像之间能否保持有用的相似性，仍然是需要分别验证的能力。</p>
+<h2 id="section-ct-chat怎样生成回答与报告">CT-CHAT怎样生成回答与报告</h2>
+<h3 id="section-从ct-tokens到llm输入">从CT tokens到LLM输入</h3>
+<p>CT-CHAT基于LLaVA框架，将冻结的CT-CLIP视觉编码器、多模态投影器与LLM结合。主配置使用Llama 3.1 70B，论文同时比较了8B版本以及Vicuna 13B、Mistral 7B配置。</p>
+<p>视觉编码器先输出CT特征。投影器中的attention pooling使用256个可学习查询，将这些特征压缩成固定长度的视觉token序列，再经过两层MLP转换到LLM的embedding维度。这样既能对接LLM，也能控制视觉输入占用的序列长度。（原文Methods：CT-CHAT）</p>
+<p><a href="/images/ct-paper-notes/ct-chat-fig6-chat-example.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：论文Fig.6a–b：CT-CHAT的视觉输入、文本输入与示例回答"><img src="/images/ct-paper-notes/ct-chat-fig6-chat-example.jpg" alt="论文Fig.6a–b：CT-CHAT的视觉输入、文本输入与示例回答" width="1027" height="270" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>原论文Fig.6a–b。图中的示例询问肺实质表现，CT-CHAT回答包含双肺磨玻璃密度影、融合趋势及下叶更明显等信息。单个示例展示回答形式，整体能力仍需看后面的系统评估。</em></p>
+<h3 id="section-概念对齐与指令微调分两步完成">概念对齐与指令微调分两步完成</h3>
+<p><a href="/images/ct-paper-notes/ct-chat-chat-training.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：CT-CHAT训练阶段：先训练投影器对齐医学概念，再训练投影器及LLM的LoRA，视觉编码器保持冻结"><img src="/images/ct-paper-notes/ct-chat-chat-training.svg" alt="CT-CHAT训练阶段：先训练投影器对齐医学概念，再训练投影器及LLM的LoRA，视觉编码器保持冻结" width="1000" height="390" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">阶段</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">训练内容</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">冻结／更新关系</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">医学概念对齐</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">输入CT，要求生成对应报告，使投影器学习医学图文关系</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">冻结视觉编码器与LLM，只训练投影器</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">医学指令微调</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">使用问答、选择和报告任务，学习不同指令下的回答方式</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">视觉编码器继续冻结，更新投影器和LLM的LoRA参数</td></tr></tbody></table>
+<p>指令微调中的LoRA设置为rank 128、α = 256。四种输出模式通过特殊token区分：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-text">&#x3C;long_answer>        长回答
+&#x3C;short_answer>       短回答
+&#x3C;multiple_choice>    多选
+&#x3C;report_generation>  报告生成
+</code></pre></div>
+<p>同一模型根据任务提示生成不同形式的输出，任务token在训练和推理时都使用。</p>
+<h3 id="section-270万余问答对怎样形成">270万余问答对怎样形成</h3>
+<p>CT-CHAT使用基于CT-RATE构建的VQA数据，训练与验证沿用相应的数据划分。数据包含长回答、短回答、多选与报告生成。（原文Methods：CT-CHAT数据构建）</p>
+<ul>
+<li>长回答中的对话、描述和自由回答主要由报告生成；其中还有基于胸部CT相关文章构建的纯文本问答。</li>
+<li>长回答和多选中的模型生成部分使用<strong>Llama 3.1 8B</strong>，此处采用Methods中的型号说明。</li>
+<li>短回答采用规则生成，涉及位置、存在性、异常和疾病等问题。</li>
+<li>报告生成任务把预定义的问题与相应报告组织成对话。</li>
+</ul>
+<p>因此，不能将270万余问答对都理解成医生逐条手工撰写，也不能将全部构建流程概括为一个LLM直接生成。这套数据提供了多任务训练材料，其内容质量仍与报告来源和数据生成方式有关。</p>
+<h2 id="section-报告生成效果与结构化信息补充">报告生成效果与结构化信息补充</h2>
+<h3 id="section-文本指标医师评分和异常指标各看什么">文本指标、医师评分和异常指标各看什么</h3>
+<p>CT-CHAT的评估包含BLEU-1、METEOR、ROUGE-L、CIDEr和Llama score。前四项考察生成文本与参考文本的匹配，Llama score使用LLM评价临床准确性；此外还有放射科医师对报告质量的评分，以及从报告抽取异常后计算的临床相关指标。</p>
+<p><a href="/images/ct-paper-notes/ct-chat-fig6-evaluation.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：论文Fig.6c–d：多任务文本指标与三位放射科医师对报告的评分"><img src="/images/ct-paper-notes/ct-chat-fig6-evaluation.jpg" alt="论文Fig.6c–d：多任务文本指标与三位放射科医师对报告的评分" width="1027" height="811" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>原论文Fig.6c–d。下方三组Radiologist指三位评分医师，评估对象是不同验证病例的模型报告；“患者／病例”和“评分医师”需要分开理解。</em></p>
+<p>多模态问答部分的比较对象包括LLaVA 1.6、LLaVA-Med和CXR-LLaVA。为了给这些2D模型提供图像输入，论文使用从CT得到的数字重建放射影像（DRR）；CT-CHAT则直接利用3D CT表征。因此，这组实验比较的是不同完整系统，输入表示也存在差异。</p>
+<p>报告生成部分与CT2Rep、RadFM比较。研究者使用其已有预训练权重，没有在这里重新训练两者。医师评估采用150个验证病例，按CT-CHAT的Llama score分成低、中、高三组各50例，由三位医师分别评价匿名化的模型报告。这个抽样方式有助于覆盖不同难度，但不能直接当作随机临床病例总体。（原文Methods：模型评估）</p>
+<h3 id="section-相比旧工作有提升指标仍需要谨慎解读">相比旧工作有提升，指标仍需要谨慎解读</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">队列／模型</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Precision</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Recall</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">F1</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CRG</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">内部 · RadFM</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.170</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.038</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.059</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.335</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">内部 · CT2Rep</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.435</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.128</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.160</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.359</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">内部 · CT-CHAT</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.450</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.158</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.184</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.368</u></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">内部 · CT-CHAT + 结节属性</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.382</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.268</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.305</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.396</strong></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RAD · RadFM</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.283</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.044</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.069</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.295</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RAD · CT2Rep</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.299</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.139</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.133</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.309</u></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RAD · CT-CHAT</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.382</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.171</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.182</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.350</strong></td></tr></tbody></table>
+<p><em>按同一队列、同一指标比较，最优加粗、次优加下划线。数据来自论文Fig.6e。这组临床指标实验中的CT-CHAT使用Llama 3.1 8B配置，包括结节属性增强版本，应与前面的70B主配置区分。CRG按异常的流行程度与严重性加权；这些指标基于报告中提取的异常信息，不能直接视作真实诊疗中的准确率。</em></p>
+<p>我的评价仍然是：<strong>CT-CHAT的临床指标不太好，但比这里比较的旧工作更好。</strong> CT2Rep和RadFM是较早的论文，仅高于这两个比较对象，还不足以说明它已经达到临床部署要求。若要进一步判断它在近年工作中的位置，需要统一数据集、模型训练条件和评估口径后再比较。</p>
+<h3 id="section-分割信息怎样帮助报告生成">分割信息怎样帮助报告生成</h3>
+<p>论文还尝试提供更具体的结节信息。它用TotalSegmentator处理CT，从肺结节掩膜中提取肺叶位置、质心、三个正交方向的直径及体积，再将这些字段作为结构化信息输入模型。（原文Methods：CT-CHAT）</p>
+<p><a href="/images/ct-paper-notes/ct-chat-nodule-report-flow.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：同一CT的视觉tokens与结节结构化字段汇入LLM，结合报告生成指令输出报告"><img src="/images/ct-paper-notes/ct-chat-nodule-report-flow.svg" alt="同一CT的视觉tokens与结节结构化字段汇入LLM，结合报告生成指令输出报告" width="1000" height="635" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>两条路径提供互补信息：视觉编码器保留CT表征，结节分割提供可描述的属性；两者与报告生成指令共同输入LLM。</em></p>
+<p>在内部验证中，加入结节属性并进一步微调后，Recall和F1提高，同时Precision从0.450降到0.382。补充具体的结节信息有助于模型覆盖更多异常，但也伴随着准确性与覆盖率之间的取舍。这项实验评估的是“结构化输入+相应微调”这一整套方案，效果不能直接归因于某一个字段，也不能直接外推到70B配置。</p>
+<h2 id="section-读完之后哪些内容值得继续跟进">读完之后，哪些内容值得继续跟进</h2>
+<p>我会继续把CT-RATE放在3D CT多模态学习的基础阅读里。它把数据集、图文表征和对话模型连在了一起，几种下游任务又揭示了同一个模型的不同侧面。</p>
+<ul>
+<li><strong>报告文本提供了固定标签以外的信息。</strong> Findings与Impression共同参与训练，原始报告的细节才有机会进入表征；18类异常标签主要服务于监督和评估。</li>
+<li><strong>微调需要同时检查各类任务。</strong> VocabFine提升了部分分类指标，却降低了报告检索表现。后续工作如果也使用这种视觉或文本编码器，不能只用分类结果概括表征质量。</li>
+<li><strong>报告生成需要更具体的视觉信息。</strong> 结节属性实验给出了一条补充信息的路径。位置、数量、尺寸和否定关系等内容是否正确，需要在生成结果中逐项检查。</li>
+<li><strong>数据基础和临床可用性应分别评价。</strong> 开放数据与可复用模型有很高的研究价值；模型能否可靠用于临床，还需要更充分的验证。本文结果支持前者，也留下了后者的明显问题。</li>
+</ul>
+<h2 id="section-相关论文与资料">相关论文与资料</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">资料</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">与本文的关系</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><a href="https://arxiv.org/abs/2403.17834v5" rel="noopener noreferrer">CT-RATE / CT-CLIP / CT-CHAT论文</a></td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">本文主体来源；预印本与期刊排版稿可能有版本差异，数字按所提供期刊稿照录</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><a href="https://arxiv.org/abs/2305.16037" rel="noopener noreferrer">GenerateCT</a></td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-ViT视觉编码器的来源；可继续了解CT tokens如何构建</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><a href="https://arxiv.org/abs/2002.04752" rel="noopener noreferrer">CT-Net / RAD-ChestCT相关工作</a></td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">多异常检测监督基线与外部数据背景</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><a href="https://arxiv.org/abs/2109.01903" rel="noopener noreferrer">Robust fine-tuning of zero-shot models（WiSE-FT）</a></td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">VocabFine在论文中引用的微调思路来源，具体实现以CT-CLIP的Methods为准</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><a href="https://arxiv.org/abs/2403.06801" rel="noopener noreferrer">CT2Rep</a></td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">3D CT报告生成的较早工作，也是报告评估比较对象</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><a href="https://arxiv.org/abs/2308.02463" rel="noopener noreferrer">RadFM</a></td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">放射影像通用模型，也是报告评估比较对象</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><a href="https://github.com/ibrahimethemhamamci/CT-CLIP" rel="noopener noreferrer">CT-CLIP代码</a> · <a href="https://github.com/ibrahimethemhamamci/CT-CHAT" rel="noopener noreferrer">CT-CHAT代码</a></td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">继续核对预处理、模型和评估实现的入口；本文未运行这些代码</td></tr></tbody></table>
+<h2 id="section-附表完整分类与图像检索结果">附表：完整分类与图像检索结果</h2>
+<p>以下数值来自论文Fig.4a与Fig.5c；每行最优值加粗，次优值加下划线（并列同样标注）。分类表用于核对前面的交互图，图像检索表则对应另一项任务，两类结果分别比较。</p>
+<h3 id="section-多异常检测">多异常检测</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">队列／指标</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-Net</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">零样本</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">VocabFine</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">ClassFine</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Random</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE · AUROC</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.629</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.731</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.756</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.756</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.505</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE · F1</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.657</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.707</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.738</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.724</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.570</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE · Accuracy</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.617</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.668</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.705</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.689</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.502</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE · Precision</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.263</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.323</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.353</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.339</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.180</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RAD-ChestCT · AUROC</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.544</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.629</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.650</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.643</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.496</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RAD-ChestCT · F1</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.564</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.637</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.677</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.644</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.555</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RAD-ChestCT · Accuracy</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.517</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.592</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.636</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.599</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.500</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RAD-ChestCT · Precision</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.282</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.335</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.346</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.346</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.265</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">UPMC · AUROC</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.480</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.567</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.561</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.580</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.499</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">UPMC · F1</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.613</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.650</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.636</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.698</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.565</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">UPMC · Accuracy</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.701</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.704</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.680</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.773</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.512</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">UPMC · Precision</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.243</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.234</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.284</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.195</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.240</td></tr></tbody></table>
+<h3 id="section-图像-图像检索">图像-图像检索</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">队列／指标</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-Net</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">零样本</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">VocabFine</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">ClassFine</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Random</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE · MAP@1</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.852</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.886</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.886</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.886</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.1561</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE · MAP@5</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.594</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.683</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.683</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.679</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.1574</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE · MAP@10</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.481</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.572</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.572</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.568</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.1575</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE · MAP@50</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.407</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.489</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.488</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.485</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.1571</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RAD-ChestCT · MAP@1</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.989</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.993</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.993</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.993</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.3237</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RAD-ChestCT · MAP@5</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.712</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.723</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.738</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.738</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.3246</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RAD-ChestCT · MAP@10</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.589</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.609</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.631</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.631</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.3257</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RAD-ChestCT · MAP@50</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.524</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.538</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.564</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.563</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.3262</td></tr></tbody></table>2d:["$","$L28","4",{"html":"$33","focusTables":true}]
+2e:["$","section",null,{"className":"article-continuation","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列阅读顺序","children":[["$","span",null,{}],["$","$L1f",null,{"href":"/research/ct-report-generation/paper-radgenome-chestct/","children":[["$","span",null,{"children":"下一篇"}],"RadGenome-ChestCT：CT中的解剖区域怎样对应到报告句子"]}]]}],["$","$L1f",null,{"className":"text-link","href":"/research/ct-report-generation/paper-reading/","children":"返回论文阅读导读"}],["$","$L1f",null,{"className":"text-link","href":"/research/ct-report-generation/","children":"返回主题与完整系列"}]]}]
+2f:["$","$L27",null,{"headings":"$25:props:headings"}]
+34:I[6279,["825","$15","491","$1d","154","$1e"],"FilterLink"]
+20:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1f",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1f",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$L1f",null,{"href":"/research/","children":["研究",["$","span",null,{"children":26}]]}],["$","$L34",null,{"className":"trail-current","href":"/research/#direction-medical-imaging","children":["医学影像处理",["$","span",null,{"children":26}]]}],["$","$L1f",null,{"className":"trail-parent","href":"/research/ct-report-generation/","children":"基于细粒度临床事实建模的三维胸部 CT 报告生成"}]]}]

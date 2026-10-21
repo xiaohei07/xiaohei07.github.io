@@ -1,0 +1,105 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1a5e690335e7d9fc.css","style"]
+:HL["/_next/static/css/99458caadf388351.css","style"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"postgresql-transactions-locks","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","postgresql-transactions-locks",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1a5e690335e7d9fc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/99458caadf388351.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"E-M2wxgR09X62ofy5DhPV"}
+15:"static/chunks/825-1a8f209f3ada760f.js"
+16:"static/chunks/491-13729696a55105fe.js"
+17:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+18:I[6279,["825","$15","491","$16","953","$17"],"FilterLink"]
+19:I[4067,["825","$15","491","$16","953","$17"],"ArticleToc"]
+1b:I[4711,["825","$15","491","$16","953","$17"],"ArticleBody"]
+6:C
+1c:T1896,<p>作者审核一条反馈时，至少要更新状态、记录审核时间与审核人，再写一条审计事件。如果只完成其中一部分，之后就难以判断这次处理究竟发生了什么。事务将这些相关操作组织为一个提交单位。</p>
+<h2 id="section-commit与rollback分别改变什么">commit与rollback分别改变什么</h2>
+<div class="code-block"><div class="code-toolbar"><span>sql</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-sql"><span class="hljs-keyword">BEGIN</span>;
+<span class="hljs-comment">-- 修改反馈状态、审核信息</span>
+<span class="hljs-comment">-- 插入同一次审核的审计记录</span>
+<span class="hljs-keyword">COMMIT</span>;
+</code></pre></div>
+<p>提交成功后，这些更改一起成为已提交数据；失败并回滚时，这次事务未提交的更改撤销。事务原子性解决的是这一组数据库操作的整体完成关系，不能把已经发送出去的邮件或HTTP响应也自动撤回。<a href="https://www.postgresql.org/docs/current/tutorial-transactions.html" rel="noopener noreferrer">事务入门</a>说明了提交、回滚与中间状态。</p>
+<p>事务还涉及一致性、隔离性和持久性。业务约束与数据库规则共同维护一致性；隔离性控制并发事务怎样观察和影响数据；持久性取决于数据库的提交与存储保证，不能进一步推成“服务器和磁盘损坏也永不丢数据”。备份仍然需要。</p>
+<h2 id="section-两个审核请求同时到达会怎样">两个审核请求同时到达会怎样</h2>
+<p>假设反馈F初始为pending，请求A要标记resolved，请求B要标记rejected。如果两者分别读取pending，再无条件更新，后写入者可能覆盖前者。</p>
+<p>本站使用<code>SELECT ... FOR UPDATE</code>取得反馈行，再检查状态。按默认Read Committed隔离级别推演：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>顺序</th><th>请求A</th><th>请求B</th></tr></thead><tbody><tr><td>1</td><td>锁住F，读取pending</td><td>尝试锁F，等待</td></tr><tr><td>2</td><td>修改状态并新增审计</td><td>等待</td></tr><tr><td>3</td><td>提交，释放锁</td><td>继续取得当前行</td></tr><tr><td>4</td><td>返回成功</td><td>看到已处理状态，返回409</td></tr></tbody></table>
+<p>行锁协调的是数据库事务对对应行的竞争，普通读取仍有MVCC等规则，不是把整张表的所有访问都停住。锁通常保留到事务结束，因此不要在持锁期间等待用户操作或慢速外部请求。<a href="https://www.postgresql.org/docs/current/explicit-locking.html" rel="noopener noreferrer">显式锁说明</a>列出了冲突和等待行为。</p>
+<p>当前接口状态只允许pending转到resolved或rejected。再次审核会报冲突。表里存在某个状态值，与接口允许从任何状态任意转换，是两套规则。</p>
+<h2 id="section-乐观更新能怎样改写这个例子">乐观更新能怎样改写这个例子</h2>
+<p>一种备选是带条件更新：</p>
+<div class="code-block"><div class="code-toolbar"><span>sql</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-sql"><span class="hljs-keyword">UPDATE</span> feedback
+<span class="hljs-keyword">SET</span> status <span class="hljs-operator">=</span> <span class="hljs-string">'resolved'</span>
+<span class="hljs-keyword">WHERE</span> id <span class="hljs-operator">=</span> :feedback_id <span class="hljs-keyword">AND</span> status <span class="hljs-operator">=</span> <span class="hljs-string">'pending'</span>
+RETURNING id;
+</code></pre></div>
+<p>冒号参数是这里的抽象占位，实际语法取决于使用的驱动或SQLAlchemy接口。更新到0行时，再按业务判断是不存在还是已处理；更新成功时，把审计写入同一事务。这里是备选设计，本站当前采用显式行锁。</p>
+<p>选择依据包括冲突频率、事务内需要读取多少信息、是否需要明确等待，以及实现是否容易验证。使用数据库行锁已经能协调本数据库中的审核竞争，增加Redis分布式锁反而需要处理锁过期、续期和数据库提交之间的关系，没有现成理由就不用增加这一层。</p>
+<h2 id="section-隔离级别不能用开了事务一笔带过">隔离级别不能用“开了事务”一笔带过</h2>
+<p>PostgreSQL默认Read Committed下，不同语句可能看到不同的已提交快照。先COUNT再读取一页列表，并不天然保证两次查询之间没有新反馈进入。对作者收件箱，这可能是可接受的实时变化；若要求严格一致的快照，就要重新评估事务隔离和分页契约。<a href="https://www.postgresql.org/docs/current/transaction-iso.html" rel="noopener noreferrer">隔离级别文档</a>解释了允许出现的现象与序列化失败。</p>
+<p>更高隔离级别可能带来重试要求，锁也可能形成死锁。统一锁顺序、缩短事务和有边界的重试，比笼统说“加锁就安全”更准确。本文没有在生产环境制造锁等待或死锁。</p>
+<h2 id="section-数据库迁移为什么与改模型不同">数据库迁移为什么与改模型不同</h2>
+<p>修改Python里的字段定义，不会让已经存在的数据库表自动获得相同结构。Alembic记录版本迁移并执行对应DDL，模型文件与迁移文件要一起核对。<a href="https://alembic.sqlalchemy.org/en/latest/tutorial.html" rel="noopener noreferrer">Alembic教程</a>介绍了版本链和升级流程。</p>
+<p>如果以后给反馈增加字段，兼容方式可以是先增加允许旧代码工作的字段，再部署新代码、回填并验证，最后收紧约束。删除旧列之后，旧代码可能无法运行；执行downgrade也不保证找回被删除的值。因此代码回滚、Schema回退和备份恢复应分别设计。</p>
+<p>最值得继续追问的失败位置是“提交成功后连接断了”。数据库可能已有结果，客户端却不确定。事务并不能替代请求幂等，这部分会在<a href="/blog/site-feedback-data-flow/">项目反馈链</a>中继续讨论。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"PostgreSQL入门（二）：事务、行锁与Schema迁移"}],["$","p",null,{"className":"article-deck","children":"通过并发审核说明提交、回滚、隔离与锁，再比较条件更新和兼容迁移"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,255"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",4," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L18","PostgreSQL",{"href":"/blog/#tag=PostgreSQL","children":"PostgreSQL"}],["$","$L18","事务",{"href":"/blog/#tag=%E4%BA%8B%E5%8A%A1","children":"事务"}],["$","$L18","锁",{"href":"/blog/#tag=%E9%94%81","children":"锁"}],["$","$L18","Alembic",{"href":"/blog/#tag=Alembic","children":"Alembic"}]]}]]}],["$","$L19",null,{"headings":[{"id":"section-commit与rollback分别改变什么","text":"commit与rollback分别改变什么","level":2},{"id":"section-两个审核请求同时到达会怎样","text":"两个审核请求同时到达会怎样","level":2},{"id":"section-乐观更新能怎样改写这个例子","text":"乐观更新能怎样改写这个例子","level":2},{"id":"section-隔离级别不能用开了事务一笔带过","text":"隔离级别不能用“开了事务”一笔带过","level":2},{"id":"section-数据库迁移为什么与改模型不同","text":"数据库迁移为什么与改模型不同","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1a",["$","$L1b",null,{"html":"$1c"}],false,"$L1d","$L1e","$L1f"]}],"$L20"]}]]}]
+21:I[2708,["825","$15","491","$16","953","$17"],"FeedbackForm"]
+22:I[3498,["825","$15","491","$16","953","$17"],"default"]
+1e:["$","$L21",null,{"contentId":"postgresql-transactions-locks"}]
+1f:["$","div",null,{"className":"related-note","children":[["$","$L22",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+20:["$","$L19",null,{"headings":["$9:props:children:1:props:headings:0","$9:props:children:1:props:headings:1","$9:props:children:1:props:headings:2","$9:props:children:1:props:headings:3","$9:props:children:1:props:headings:4"]}]
+1d:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$L22",null,{"href":"/blog/postgresql-tables-queries/","children":[["$","span",null,{"children":"上一篇"}],"PostgreSQL入门（一）：表、SQL、约束与索引"]}],["$","$L22",null,{"href":"/blog/sqlalchemy-session-pool/","children":[["$","span",null,{"children":"下一篇"}],"SQLAlchemy入门：ORM、Session、提交与连接池"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","site-feedback-data-flow",{"children":[["$","$L22",null,{"href":"/blog/site-feedback-data-flow/","children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}],["$","span",null,{"children":"项目建设"}]]}]]}]]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+12:[["$","title","0",{"children":"PostgreSQL入门（二）：事务、行锁与Schema迁移 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"通过并发审核说明提交、回滚、隔离与锁，再比较条件更新和兼容迁移。"}]]
+23:"static/chunks/app/layout-f6895f86611bc12f.js"
+24:I[6767,["825","$15","177","$23"],"DisplayProvider"]
+25:"NavigationFeedback"
+26:I[2842,["825","$15","177","$23"],"$25"]
+27:I[8587,["825","$15","177","$23"],"SiteHeader"]
+28:I[5803,["825","$15","177","$23"],"SiteFrame"]
+29:I[164,["825","$15","177","$23"],"ProfileSidebar"]
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L24",null,{"children":[["$","$L26",null,{}],["$","$L27",null,{"tags":["编程语言知识点","python","C++"],"categoryIds":["foundations","frontend","backend","agent","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L28",null,{"sidebar":["$","$L29",null,{"categoryIds":"$2:props:children:1:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L22",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L22",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L22",null,{"href":"/about/","children":"关于这个站点"}],["$","$L22",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+1a:["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$L22",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[2," / ",4," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["PostgreSQL与Python数据访问",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","postgresql-tables-queries",{"children":["$","$L22",null,{"href":"/blog/postgresql-tables-queries/","aria-current":"$undefined","children":"PostgreSQL入门（一）：表、SQL、约束与索引"}]}],["$","li","postgresql-transactions-locks",{"children":["$","$L22",null,{"href":"/blog/postgresql-transactions-locks/","aria-current":"page","children":"PostgreSQL入门（二）：事务、行锁与Schema迁移"}]}],["$","li","sqlalchemy-session-pool",{"children":["$","$L22",null,{"href":"/blog/sqlalchemy-session-pool/","aria-current":"$undefined","children":"SQLAlchemy入门：ORM、Session、提交与连接池"}]}],["$","li","psycopg-driver-parameters",{"children":["$","$L22",null,{"href":"/blog/psycopg-driver-parameters/","aria-current":"$undefined","children":"psycopg入门：数据库驱动、参数绑定与类型适配"}]}]]}]]}]]}]
+14:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L22",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L22",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$L22",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$L18",null,{"className":"trail-current","href":"/blog/#backend","children":["后端与数据库",["$","span",null,{"children":8}]]}],"$undefined"]}]

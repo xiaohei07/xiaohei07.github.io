@@ -1,0 +1,235 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+d:"static/chunks/825-1a8f209f3ada760f.js"
+e:"static/chunks/491-13729696a55105fe.js"
+f:"static/chunks/app/research/%5Btopic%5D/%5Bslug%5D/page-2c6457ecdf34d249.js"
+10:I[3498,["825","$d","491","$e","154","$f"],"default"]
+11:I[6279,["825","$d","491","$e","154","$f"],"FilterLink"]
+1f:"ViewportBoundary"
+20:I[887,[],"$1f"]
+21:"MetadataBoundary"
+22:I[887,[],"$21"]
+23:"$Sreact.suspense"
+6:X
+6:C
+7:X
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page research-detail","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L10",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L10",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$L10",null,{"href":"/research/","children":["研究",["$","span",null,{"children":26}]]}],["$","$L11",null,{"className":"trail-current","href":"/research/#direction-medical-imaging","children":["医学影像处理",["$","span",null,{"children":26}]]}],["$","$L10",null,{"className":"trail-parent","href":"/research/ct-report-generation/","children":"基于细粒度临床事实建模的三维胸部 CT 报告生成"}]]}],["$","h1",null,{"tabIndex":-1,"children":"DCP-PD：分类提示能帮多少，CT图像又贡献了什么"}],["$","p",null,{"className":"article-deck","children":"说明判别提示与提示dropout的训练方式，结合无图像消融和侧别、肺叶评价，检查生成模型是否真正利用了CT中的空间信息"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"className":"status-tag","children":"论文笔记"}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","论文阅读",{"children":"论文阅读"}],["$","span","3D胸部CT",{"children":"3D胸部CT"}],["$","span","DCP-PD",{"children":"DCP-PD"}],["$","span","提示学习",{"children":"提示学习"}],["$","span","细粒度评价",{"children":"细粒度评价"}]]}]]}],false,["$","nav",null,{"className":"paper-reading-navigation","aria-label":"论文阅读系列","children":[["$","$L10",null,{"href":"/research/ct-report-generation/paper-reading/","children":"3D胸部CT论文阅读"}],["$","span",null,{"children":["第 ",9," / ",21," 篇"]}],["$","details",null,{"children":[["$","summary",null,{"children":"系列目录"}],["$","ol",null,{"children":[["$","li","ct-paper-ct-chat",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-ct-chat/","children":"CT-RATE、CT-CLIP与CT-CHAT：从3D胸部CT数据到报告生成"}]}],["$","li","ct-paper-radgenome-chestct",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-radgenome-chestct/","children":"RadGenome-ChestCT：CT中的解剖区域怎样对应到报告句子"}]}],["$","li","ct-paper-merlin",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-merlin/","children":"Merlin：怎样用报告和诊断码训练可迁移的3D CT表征"}]}],["$","li","ct-paper-fvlm",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-fvlm/","children":"fVLM：器官级图文对齐为什么还需要处理假负样本"}]}],["$","li","ct-paper-reg2rg",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-reg2rg/","children":"Reg2RG：怎样把区域纹理、几何位置与CT报告对应起来"}]}],["$","li","ct-paper-ct-graph",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-ct-graph/","children":"CT-GRAPH：局部解剖特征怎样沿分层图传给报告生成模型"}]}],["$","li","ct-paper-medregion-ct",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-medregion-ct/","children":"MedRegion-CT：区域视觉信息与病灶属性怎样共同生成报告"}]}],["$","li","ct-paper-ct-agrg",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-ct-agrg/","children":"CT-AGRG：先识别异常，再逐项生成CT报告描述"}]}],["$","li","ct-paper-dcp-pd",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-dcp-pd/","aria-current":"page","children":"DCP-PD：分类提示能帮多少，CT图像又贡献了什么"}]}],["$","li","ct-paper-argus",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-argus/","children":"Argus：3D报告生成中的视觉预训练、token压缩与训练配置"}]}],["$","li","ct-paper-designspace-3d-mllm",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-designspace-3d-mllm/","children":"3D-MLLM Design Space：模型规模、视觉输入与报告补全改变了什么"}]}],["$","li","ct-paper-astra",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-astra/","children":"Astra：统一报告监督之后，怎样训练和评价跨机构CT生成模型"}]}],"$L12","$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a"]}]]}]]}],"$L1b","$L1c"]}],null,"$L1d"]}],"p":"$@1e","v":null,"s":"$7"}}]]
+a:[["children",{"s":{"n":"slug","t":"d","k":"paper-dcp-pd","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
+8:[["children",{"s":{"n":"topic","t":"d","k":"ct-report-generation","s":[]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"research","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L20",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L22",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$23",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"DCP-PD：分类提示能帮多少，CT图像又贡献了什么 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"07xiaohei 的学习笔记、医学影像研究记录与交互式技术实践。"}]]}]}],null]}],null]}],"p":"$@24","v":null,"s":"$7"}},"a":"$@25","u":"$@26","b":"E-M2wxgR09X62ofy5DhPV"}
+27:I[4067,["825","$d","491","$e","154","$f"],"ArticleToc"]
+28:I[4711,["825","$d","491","$e","154","$f"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+12:["$","li","ct-paper-clargen",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-clargen/","children":"CLarGen：怎样检查CT报告生成中的模板重复和异常遗漏"}]}]
+13:["$","li","ct-paper-cpr-rag",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-cpr-rag/","children":"CPR-RAG：器官检索与共现先验怎样影响CT报告的完整性"}]}]
+14:["$","li","ct-paper-monteret",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-monteret/","children":"MonteRET：区域检索怎样参与CT报告修订，结果还有哪些疑问"}]}]
+15:["$","li","ct-paper-btb3d",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-btb3d/","children":"BTB3D：从短体积重建中学习长CT可以使用的视觉token"}]}]
+16:["$","li","ct-paper-finegrained-alignment",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-finegrained-alignment/","children":"细粒度视觉对齐：projector有没有把局部视觉信息交给LLM"}]}]
+17:["$","li","ct-paper-sea",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-sea/","children":"SEA：怎样让视觉token提前对齐到LLM的输入语义空间"}]}]
+18:["$","li","ct-paper-visualtoken-sparsity",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-visualtoken-sparsity/","children":"Visual Token Sparsity：怎样区分视觉语义、注意力与计算冗余"}]}]
+19:["$","li","ct-paper-internvl-x",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-internvl-x/","children":"InternVL-X：视觉token在输入、投影和LLM层间怎样压缩"}]}]
+1a:["$","li","ct-paper-multilayer-fusion",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-multilayer-fusion/","children":"多层视觉特征融合：从选层、注入位置到长视觉序列的计算"}]}]
+1b:["$","$L27",null,{"headings":[{"id":"section-分类器擅长判断生成器负责组织报告","text":"分类器擅长判断，生成器负责组织报告","level":2},{"id":"section-数据处理与三级问题集","text":"数据处理与三级问题集","level":2},{"id":"section-atlas特征如何进入两条分支","text":"Atlas特征如何进入两条分支","level":2},{"id":"section-prompt-dropout避免什么捷径","text":"Prompt Dropout避免什么捷径","level":2},{"id":"section-主实验收益主要体现在召回与f1","text":"主实验：收益主要体现在召回与F1","level":2},{"id":"section-没有提示时会发生什么","text":"没有提示时会发生什么","level":2},{"id":"section-为什么只看报告级f1不够","text":"为什么只看报告级F1不够","level":2},{"id":"section-其他消融与复用边界","text":"其他消融与复用边界","level":2}],"mobile":true}]
+29:T461d,<p>DCP-PD把分类模型的判断变成自然语言提示，交给报告生成模型使用；训练时再随机丢掉一部分提示，减少生成模型对完整标签的依赖。这个思路比较值得参考，尤其是怎样把判别与生成分开，又检查它们各自提供了什么信息。</p>
+<p>论文中有一个很有用的对照：只给提示、不提供图像时，部分整体指标与完整模型已经很接近。需要继续看侧别和肺叶等细粒度结果，才能知道图像对定位描述还有哪些作用。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">资料</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">内容</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">原文</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><em>Enhancing Fine-Grained Spatial Grounding in 3D CT Report Generation via Discriminative Guidance</em></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">版本</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><a href="https://arxiv.org/abs/2604.10437v1" rel="noopener noreferrer">arXiv:2604.10437v1</a>，2026年4月</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">方法</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Discriminative Cue Prompting with Prompt Dropout（DCP-PD）</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">评价范围</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE内部测试、Rad-ChestCT外部测试；异常存在性、左右侧和肺叶位置</td></tr></tbody></table>
+<h2 id="section-分类器擅长判断生成器负责组织报告">分类器擅长判断，生成器负责组织报告</h2>
+<p>报告生成损失要求模型预测整段文字，却未必充分约束每一种异常是否存在、位于哪侧或哪个肺叶。本文先从报告中抽取结构化问题的答案，用它们训练判别模型，再把预测结果转为统一格式的文本提示。</p>
+<p>生成器接收三类token：<strong>视觉token、判别提示token、报告生成指令token</strong>。提示接口与分类器结构解耦，因而可以替换提供提示的分类模型。论文用DCP-1和更强的DCP-2验证这一点；“可替换”是接口能力，并不表示任意分类器都能无损接入。</p>
+<p><a href="/images/ct-paper-notes/dcp-pd-figure-1.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：DCP-PD的数据准备、两阶段训练与推理"><img src="/images/ct-paper-notes/dcp-pd-figure-1.jpg" alt="DCP-PD的数据准备、两阶段训练与推理" width="833" height="503" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>原文Fig.1。训练提示来自报告抽取标签；推理提示来自判别模型。随机丢弃实体发生在提示文本生成之前。</em></p>
+<h2 id="section-数据处理与三级问题集">数据处理与三级问题集</h2>
+<p>RadExtract配合Gemini-2.5-Flash，将原始报告中的元信息、所见和印象分离，并按解剖区域组织临床内容。再用问题驱动的抽取方式得到监督标签，避免把所有内容压成一个整报告向量。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">问题集</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">粒度</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">示例与范围</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">QAS1</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">异常是否存在</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">18种异常，如是否存在肺结节</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">QAS2</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">左右侧</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">8个问题；结合异常类型与左／右侧</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">QAS3</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">肺叶</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">15个问题；结节、实变、磨玻璃影与5个肺叶组合</td></tr></tbody></table>
+<p>标签是<strong>从报告抽取的监督</strong>，不是逐体素人工定位真值。生成结果也用同一套问题抽取协议转成答案后评价。整体18类异常采用RadBERT协议，细粒度问题使用Qwen-30B解析；两种标签抽取方式在验证集上的整体一致率为0.957，但不能因此视为完全等价。（实验设置与附录C）</p>
+<p>CT按1.25 mm各向同性重采样，中心裁剪或补齐至256³。原始通道加10种组织窗形成11通道输入。它们是同一CT的不同强度映射，不是11种独立成像模态。</p>
+<h2 id="section-atlas特征如何进入两条分支">Atlas特征如何进入两条分支</h2>
+<p>视觉骨干使用Pillar-0的Atlas，通过多尺度注意力处理长体积，并在阶段之间逐步减少尺度。模型保持视觉骨干冻结。</p>
+<p>生成分支选择中间尺度表示，展开为1,024个384维token，经过256个可学习query的注意力池化，再投影到语言模型的输入空间。分类分支将三个尺度的池化特征拼接成1,152维向量，训练轻量多标签线性分类器，使用按类别加权的二元交叉熵。</p>
+<p>DCP-1来自这套多尺度特征分类器；DCP-2使用AnyMC3D。报告生成器为LLaMA-3 Instruct 8B。附录对投影输出维度的数字与所述语言模型配置存在需要进一步核对之处，本文不将它写成可直接照搬的实现参数。</p>
+<h2 id="section-prompt-dropout避免什么捷径">Prompt Dropout避免什么捷径</h2>
+<p>训练先做图文适配，再加入判别提示：第一阶段冻结语言模型，仅训练投影器；第二阶段联合训练投影器与语言模型LoRA。</p>
+<p>关键在于第二阶段的提示来自报告抽取的GT标签。提示过于可靠时，生成器可以直接把标签改写成流畅报告，几乎不需要图像。DCP-PD以概率p独立删除每个异常／属性实体，再把剩余实体填入文本模板，迫使模型处理提示缺失的情况。主实验p=0.3。</p>
+<p><a href="/images/ct-paper-notes/dcp-pd-method-flow.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：训练提示和推理提示的来源"><img src="/images/ct-paper-notes/dcp-pd-method-flow.svg" alt="训练提示和推理提示的来源" width="850" height="551" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p>这里随机丢弃的是<strong>提示实体</strong>，不是图像块，也不是把某个疾病的真值改成相反标签。推理时则以分类器预测填充同一个模板，不需要测试报告真值。</p>
+<h2 id="section-主实验收益主要体现在召回与f1">主实验：收益主要体现在召回与F1</h2>
+<p>同一指标内最优加粗、次优加下划线；按各列标明的方向比较，排名不代表统计显著性。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE推理配置</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Precision</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Recall</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">宏F1</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CRG</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">BLEU均值</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">无DCP的基础VLM</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.520</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.423</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.440</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.457</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.293</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">DCP-PD＋DCP-1</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.466</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.681</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.530</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.504</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.305</u></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">DCP-PD＋DCP-2</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.540</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.700</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.603</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.555</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.306</strong></td></tr></tbody></table>
+<p>与相同基础VLM比较，DCP-PD＋DCP-2的宏F1从0.440升到0.603，绝对提高0.163，约相对提高37%。较弱DCP-1也带来增益，但Precision由0.520降至0.466，说明提示引入仍有误报代价。BLEU列是BLEU-1至4的均值，不能当作BLEU-4。（Table 1）</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Rad-ChestCT</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Precision</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Recall</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">宏F1</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">基础VLM</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.443</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.418</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.395</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">DCP-PD＋DCP-1</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.409</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.704</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.477</u></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">DCP-PD＋DCP-2</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.448</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.694</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.503</strong></td></tr></tbody></table>
+<p>外部Rad-ChestCT上，F1由基础VLM的0.395升至0.503。原文跨方法排行榜中还包含文献报告的其他系统；这里优先保留自己的基础模型与两种提示配置，便于判断DCP的实际贡献，不将不同训练和评价条件下的值简单混排。（Table 5）</p>
+<h2 id="section-没有提示时会发生什么">没有提示时会发生什么</h2>
+<p>只用GT提示训练、不做dropout，测试时拿掉提示后，F1只剩0.094；加入dropout后为0.366。它说明随机缺失提示能缓解依赖，但0.366仍低于完全无DCP训练的基础VLM0.440，不能写成已经完全摆脱提示依赖。（Table 2）</p>
+<p>原文还计算了解码时对提示与图像token的平均注意力：先对头和层取平均，再按各区域token数量归一化，最后将两个区域的均值归一化成和为1的比例。在500个验证样本上，提示占比由0.441±0.054降到0.316±0.036，图像占比由0.559±0.054升到0.684±0.036；这里报告的是均值±标准差。（Table 3）</p>
+<p><strong>这不是“68.4%的判断由图像决定”。</strong> 注意力比例是一个观察指标，不能直接等同于因果贡献；提示移除、无图像消融以及定位评价才提供了更具体的行为证据。</p>
+<h2 id="section-为什么只看报告级f1不够">为什么只看报告级F1不够</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE消融</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Precision</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Recall</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">宏F1</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CRG</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">仅提示DCP-LLM，无图像token</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.531</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.708</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.600</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.560</strong></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">完整DCP-PD VLM</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.540</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.700</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.603</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.555</u></td></tr></tbody></table>
+<p>只有提示、没有图像token的DCP-LLM，宏F1仍达到0.600，接近完整模型0.603，CRG甚至略高。仅凭这些指标，很难证明生成器利用了图像中的空间细节。（Table 8）</p>
+<p><a href="/images/ct-paper-notes/dcp-pd-figure-2.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：加入图像token后的肺叶级描述收益"><img src="/images/ct-paper-notes/dcp-pd-figure-2.jpg" alt="加入图像token后的肺叶级描述收益" width="832" height="255" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>原文Fig.7。肺结节、实变和磨玻璃影在不同肺叶上的F1比较。完整模型在这些肺叶级问题上优于仅提示模型，图中标注了绝对增量。</em></p>
+<p>这组结果才是本文对我最有价值的部分：分类提示可以支撑“有什么异常”，图像token的价值要进一步通过“异常在哪里”来检查。即使如此，报告中的位置标签仍是文字层面的评价，不应直接称为通过了体素级定位验证。</p>
+<h2 id="section-其他消融与复用边界">其他消融与复用边界</h2>
+<ul>
+<li><strong>结构化报告训练。</strong> CT-RATE基础模型的F1由0.427升至0.440，外部由0.381升至0.395；但CT-RATE的BLEU均值由0.323降至0.293、METEOR由0.240降至0.214。临床与措辞指标不一定同向变化。（Table 6）</li>
+<li><strong>dropout率。</strong> 增大p通常增强无提示时的稳健性，但过强会降低有提示时的性能。0.3是作者在多种条件下的取舍，并非所有指标的统一最优点。（Table 7）</li>
+<li><strong>训练提示来源。</strong> 直接使用DCP-1预测训练，报告F1为0.438，接近基础模型0.440；使用GT提示训练后再用DCP-1推理，可达0.538。这一组是不含相同dropout配置的消融，不能和主表0.530视为数据冲突，也不能忽略GT提示引起的捷径。（Table 9）</li>
+</ul>
+<p>文中训练资源为4张H200：图文适配约1小时，后续SFT约7小时。复用时值得优先验证的是统一提示接口、实体级随机丢弃和层级问题集；完整训练成本与数据清洗依赖仍需单独评估。</p>
+<p>对于自己的报告生成实验，可以把“有无图像”“有无提示”“提示错误或缺失”分别设为控制条件，再按异常存在性、左右侧、肺叶逐级评价。这样更容易回答：模型究竟补充了图像证据，还是只把另一模型的标签写成了报告。</p>1c:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[[["$","$L28","0",{"html":"$29","focusTables":true}]],false,false,"$L2a"]}],"$L2b"]}]
+1d:["$","$L2c",null,{"children":["$","$23",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+26:true
+7:300
+2a:["$","section",null,{"className":"article-continuation","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列阅读顺序","children":[["$","$L10",null,{"href":"/research/ct-report-generation/paper-ct-agrg/","children":[["$","span",null,{"children":"上一篇"}],"CT-AGRG：先识别异常，再逐项生成CT报告描述"]}],["$","$L10",null,{"href":"/research/ct-report-generation/paper-argus/","children":[["$","span",null,{"children":"下一篇"}],"Argus：3D报告生成中的视觉预训练、token压缩与训练配置"]}]]}],["$","$L10",null,{"className":"text-link","href":"/research/ct-report-generation/paper-reading/","children":"返回论文阅读导读"}],["$","$L10",null,{"className":"text-link","href":"/research/ct-report-generation/","children":"返回主题与完整系列"}]]}]
+2b:["$","$L27",null,{"headings":"$1b:props:headings"}]
+2d:null
+7:C
+25:0
+b:"$undefined"
+9:"$undefined"
+5:"$undefined"
+24:"$undefined"
+1e:"$undefined"

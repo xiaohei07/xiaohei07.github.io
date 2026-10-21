@@ -1,0 +1,7 @@
+:HL["/_next/static/css/1a5e690335e7d9fc.css","style"]
+:HL["/_next/static/css/99458caadf388351.css","style"]
+4:[["children",{"s":"__PAGE__","h":160}]]
+3:[["children",{"s":{"n":"slug","t":"d","k":"paper-medregion-ct","s":[]},"h":65632,"c":"$Q4"}]]
+2:[["children",{"s":{"n":"topic","t":"d","k":"ct-report-generation","s":[]},"h":196704,"c":"$Q3"}]]
+1:[["children",{"s":"research","h":131136,"c":"$Q2"}]]
+0:{"b":"E-M2wxgR09X62ofy5DhPV","t":{"t":{"s":"","h":131088,"c":"$Q1"}}}

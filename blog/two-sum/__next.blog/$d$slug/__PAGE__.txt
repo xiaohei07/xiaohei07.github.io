@@ -1,0 +1,249 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1c:"ViewportBoundary"
+1d:I[887,[],"$1c"]
+1e:"MetadataBoundary"
+1f:I[887,[],"$1e"]
+20:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T28ad,<h2 id="section-力扣1两数之和题目与输入要求">力扣1.两数之和：题目与输入要求</h2>
+<section class="problem-panel" aria-label="力扣两数之和题目原文">
+<div class="problem-heading"><strong>1. 两数之和</strong><a href="https://leetcode.cn/problems/two-sum/" rel="noopener noreferrer">力扣原题 ↗</a></div>
+<div class="problem-text">
+<p>给定一个整数数组 <code>nums</code> 和一个整数目标值 <code>target</code>，请你在该数组中找出 <strong>和为目标值 <code>target</code></strong> 的那 <strong>两个</strong> 整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。</p>
+<p>你可以按任意顺序返回答案。</p>
+<p><strong>示例 1：</strong></p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>输入：nums = [2,7,11,15], target = 9
+输出：[0,1]
+解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。</code></pre></div>
+<p><strong>示例 2：</strong></p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>输入：nums = [3,2,4], target = 6
+输出：[1,2]</code></pre></div>
+<p><strong>示例 3：</strong></p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>输入：nums = [3,3], target = 6
+输出：[0,1]</code></pre></div>
+<p><strong>提示：</strong></p>
+<ul><li><code>2 &#x3C;= nums.length &#x3C;= 10<sup>4</sup></code></li><li><code>-10<sup>9</sup> &#x3C;= nums[i] &#x3C;= 10<sup>9</sup></code></li><li><code>-10<sup>9</sup> &#x3C;= target &#x3C;= 10<sup>9</sup></code></li><li>只会存在一个有效答案</li></ul>
+<p><strong>进阶：</strong>你可以想出一个时间复杂度小于 <code>O(n<sup>2</sup>)</code> 的算法吗？</p>
+</div>
+</section>
+<p>读完题目，我首先注意到了两个要求：<strong>返回的是原数组下标，而且两个下标必须不同。</strong>数值相同没有关系，例如<code>[3, 3]</code>中的两个3来自不同位置，就可以组成答案。</p>
+<p>下面先用已有的循环知识把题目做出来，再沿着查找过程寻找优化的位置。哈希表用到的知识会在需要它时补上（如果你还不熟悉，可以配合<a href="/blog/hash-table-introduction/">哈希表介绍</a>一起看）。</p>
+<h2 id="section-暴力枚举固定一个下标检查后面的所有元素">暴力枚举：固定一个下标，检查后面的所有元素</h2>
+<p>先固定第一个数，再把它后面的数依次拿来相加。外层下标是<code>i</code>，内层下标是<code>j</code>，检查条件就是<code>nums[i] + nums[j] == target</code>。</p>
+<p><strong>让j从i+1开始</strong>，就能保证两个位置不同，也不会在检查完<code>(i, j)</code>后再检查一次<code>(j, i)</code>。</p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">two_sum_brute</span>(<span class="hljs-params">nums, target</span>):
+    n = <span class="hljs-built_in">len</span>(nums)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):
+        <span class="hljs-comment"># 只检查i后面的元素：不使用自身，也不重复检查同一对位置</span>
+        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(i + <span class="hljs-number">1</span>, n):
+            <span class="hljs-keyword">if</span> nums[i] + nums[j] == target:
+                <span class="hljs-keyword">return</span> [i, j]  <span class="hljs-comment"># 返回原数组下标</span>
+    <span class="hljs-keyword">return</span> []
+</code></pre></div>
+<p>例如<code>[3, 2, 4]</code>、<code>target = 6</code>，会依次检查<code>3 + 2</code>、<code>3 + 4</code>和<code>2 + 4</code>，最后得到<code>[1, 2]</code>。</p>
+<p>这个方法能够找到答案，但第一个数最多比较<code>n - 1</code>次，第二个最多比较<code>n - 2</code>次，最坏情况下总共需要：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mo>+</mo><mo>⋯</mo><mo>+</mo><mn>1</mn><mo>=</mo><mfrac><mrow><mi>n</mi><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">(n-1)+(n-2)+\cdots+1=\frac{n(n-1)}{2}</annotation></semantics></math></span>
+<p>所以，<strong>暴力枚举的时间复杂度是O(n²)，辅助空间是O(1)</strong>。接下来可以从内层反复查找的过程入手，看看怎样减少这部分工作。</p>
+<h2 id="section-优化的切入点固定当前数后另一个数已经确定">优化的切入点：固定当前数后，另一个数已经确定</h2>
+<p>假设当前数是<code>x</code>，目标值是<code>target</code>，另一个数必须满足：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>x</mi><mo>+</mo><mtext>need</mtext><mo>=</mo><mtext>target</mtext><mspace width="1em"></mspace><mo>⟹</mo><mspace width="1em"></mspace><mtext>need</mtext><mo>=</mo><mtext>target</mtext><mo>−</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">x+\text{need}=\text{target}
+\quad\Longrightarrow\quad
+\text{need}=\text{target}-x</annotation></semantics></math></span>
+<p>这个需要基于当前数x寻找的数，记为<strong>补数need</strong>。比如当前数是4、目标是6，那么接下来只需要找2，并不需要重新计算4与所有数的和。</p>
+<p>不过，算出补数还没有解决查找的开销。<strong>如果仍然用<code>need in nums</code>在列表中寻找，每次查询还可能遍历整个列表，总时间依然是O(n²)。</strong>因此，还需要一种能够按数值快速查询、同时取出它的位置的结构。</p>
+<p>这一步就需要补充哈希表的知识了。只用已有的循环和列表知识，可以得到暴力解，也可以把问题改写成寻找补数；要继续优化，还需要知道<strong>“按一个确定的值查询信息”可以交给哈希表来做</strong>。</p>
+<h2 id="section-引入字典保存已经出现的数值原数组下标">引入字典：保存“已经出现的数值→原数组下标”</h2>
+<p>Python的字典<code>dict</code>可以保存一组对应关系。用于查询的内容叫<strong>键（key）</strong>，与它关联的内容叫<strong>值（value）</strong>。CPython（常见的Python解释器实现）用哈希表实现字典，在正常散列分布下，按键查询的平均成本可以按O(1)分析。</p>
+<p>本题需要用数值寻找原下标，因此可以把记录写成：</p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python">seen = {<span class="hljs-number">3</span>: <span class="hljs-number">0</span>, <span class="hljs-number">2</span>: <span class="hljs-number">1</span>}
+<span class="hljs-comment"># 键3对应值0：数值3出现在原数组下标0</span>
+<span class="hljs-comment"># 键2对应值1：数值2出现在原数组下标1</span>
+</code></pre></div>
+<p><strong>字典的value保存的是主动写入的原数组下标。</strong>字典本身负责维护键值对应关系，并不会根据数值自动知道它在<code>nums</code>中的位置。</p>
+<p>为了只遍历一次数组，<code>seen</code>只保存前面已经遇到的数。每读到当前数<code>x</code>，先查它的补数；找到了就返回两个位置，还没找到就把<code>x</code>的位置记下来，供后面的数查询。</p>
+<figure class="static-figure trace-figure" aria-label="两数之和三步示意：先查询，再写入，最后返回下标1和2">
+<figcaption><strong>从左到右处理[3, 2, 4]，目标值为6</strong></figcaption>
+<div class="trace-array"><span>原数组</span><div class="mini-number"><small>下标0</small><b>3</b></div><div class="mini-number match"><small>下标1</small><b>2</b></div><div class="mini-number match"><small>下标2</small><b>4</b></div></div>
+<ol class="trace-stages">
+<li><div class="trace-current"><span class="step-dot">1</span><div><b>读到3</b><small>i=0，need=3</small></div></div><div class="trace-action"><code>seen = {}</code><span class="action-label">查询3：未找到</span><div class="flow-line"><span>写入</span><code>3: 0</code></div></div></li>
+<li><div class="trace-current"><span class="step-dot">2</span><div><b>读到2</b><small>i=1，need=4</small></div></div><div class="trace-action"><code>seen = {3: 0}</code><span class="action-label">查询4：未找到</span><div class="flow-line"><span>写入</span><code>2: 1</code></div></div></li>
+<li class="trace-found"><div class="trace-current"><span class="step-dot">3</span><div><b>读到4</b><small>i=2，need=2</small></div></div><div class="trace-action"><code>seen = {3: 0, 2: 1}</code><span class="action-label">查询2：找到原下标1</span><div class="answer-pair"><span>之前的位置<b>1</b></span><span class="pair-plus">，</span><span>当前的位置<b>2</b></span><span class="pair-result">返回[1, 2]</span></div></div></li>
+</ol><p class="figure-note">每一行先读取已有记录；只有补数不存在时，才把当前数写进去。图中的数字1、2是返回的下标。</p>
+</figure>
+<p>处理到4时，<code>need = 6 - 4 = 2</code>，字典中已经有<code>2: 1</code>。取出下标1，再配上当前下标2，得到的就是答案<code>[1, 2]</code>。</p>
+<h2 id="section-交互演示两数之和">交互演示：两数之和</h2>
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page algorithm-reading","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#algorithms","children":["算法与数据结构",["$","span",null,{"children":5}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"两数之和：从暴力枚举到哈希表的一次遍历"}],["$","p",null,{"className":"article-deck","children":"从暴力枚举和寻找补数出发，理解字典怎样把两数之和优化为期望O(n)，并说明边界、正确性与纯数组方案"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-21","children":"2026-10-21"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"3,177"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",11," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","算法",{"href":"/blog/#tag=%E7%AE%97%E6%B3%95","children":"算法"}],["$","$Lf","数组",{"href":"/blog/#tag=%E6%95%B0%E7%BB%84","children":"数组"}],["$","$Lf","哈希表",{"href":"/blog/#tag=%E5%93%88%E5%B8%8C%E8%A1%A8","children":"哈希表"}],["$","$Lf","Python",{"href":"/blog/#tag=Python","children":"Python"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-力扣1两数之和题目与输入要求","text":"力扣1.两数之和：题目与输入要求","level":2},{"id":"section-暴力枚举固定一个下标检查后面的所有元素","text":"暴力枚举：固定一个下标，检查后面的所有元素","level":2},{"id":"section-优化的切入点固定当前数后另一个数已经确定","text":"优化的切入点：固定当前数后，另一个数已经确定","level":2},{"id":"section-引入字典保存已经出现的数值原数组下标","text":"引入字典：保存“已经出现的数值→原数组下标”","level":2},{"id":"section-交互演示两数之和","text":"交互演示：两数之和","level":2},{"id":"section-完整代码先查询补数再写入当前元素","text":"完整代码：先查询补数，再写入当前元素","level":2},{"id":"section-为什么查询必须放在写入前面","text":"为什么查询必须放在写入前面","level":3},{"id":"section-为什么只查前面的元素也不会漏掉答案","text":"为什么只查前面的元素也不会漏掉答案","level":3},{"id":"section-边界情况重复值0负数与原下标","text":"边界情况：重复值、0、负数与原下标","level":2},{"id":"section-时间与空间复杂度期望on辅助空间on","text":"时间与空间复杂度：期望O(n)，辅助空间O(n)","level":2},{"id":"section-进一步的问题只用数组时还能怎样优化","text":"进一步的问题：只用数组时，还能怎样优化","level":2},{"id":"section-排序双指针保留原下标再排序","text":"排序＋双指针：保留原下标再排序","level":3},{"id":"section-直接寻址值域小时用数值计算记录数组下标","text":"直接寻址：值域小时，用数值计算记录数组下标","level":3}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[null,[["$","$L11","0",{"html":"$12"}],"$L13","$L14"],false,"$L15","$L16","$L17"]}],"$L18"]}]]}],["$L19"],"$L1a"]}],"p":"$@1b","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"two-sum","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1d",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1f",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$20",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"两数之和：从暴力枚举到哈希表的一次遍历 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从暴力枚举和寻找补数出发，理解字典怎样把两数之和优化为期望O(n)，并说明边界、正确性与纯数组方案。"}]]}]}],null]}],null]}],"p":"$@21","v":null,"s":"$7"}},"a":"$@22","u":"$@23","b":"E-M2wxgR09X62ofy5DhPV"}
+24:"AlgorithmDemoLoader"
+25:I[7223,["825","$b","491","$c","953","$d"],"$24"]
+27:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+28:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+13:["$","$L25","1",{"id":"two-sum"}]
+26:T3181,
+<h2 id="section-完整代码先查询补数再写入当前元素">完整代码：先查询补数，再写入当前元素</h2>
+<p>下面是可以直接在本地调用的函数。<code>enumerate(nums)</code>会同时给出当前下标<code>i</code>和该位置的数<code>x</code>；<code>need in seen</code>检查的是<strong>字典中有没有这个键</strong>。</p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">two_sum</span>(<span class="hljs-params">nums, target</span>):
+    seen = {}  <span class="hljs-comment"># 已经出现的数值 -> 它在nums中的一个原下标</span>
+
+    <span class="hljs-keyword">for</span> i, x <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(nums):
+        need = target - x
+
+        <span class="hljs-comment"># 查询时，seen里只保存i之前的位置</span>
+        <span class="hljs-keyword">if</span> need <span class="hljs-keyword">in</span> seen:
+            <span class="hljs-keyword">return</span> [seen[need], i]
+
+        <span class="hljs-comment"># 当前数留给后面的元素使用；同一个键再次出现时更新下标</span>
+        seen[x] = i
+
+    <span class="hljs-keyword">return</span> []  <span class="hljs-comment"># 本地调用时约定无解返回[]；原题保证有解</span>
+</code></pre></div>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-built_in">print</span>(two_sum([<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>], <span class="hljs-number">6</span>))  <span class="hljs-comment"># [1, 2]</span>
+<span class="hljs-built_in">print</span>(two_sum([<span class="hljs-number">3</span>, <span class="hljs-number">3</span>], <span class="hljs-number">6</span>))     <span class="hljs-comment"># [0, 1]</span>
+</code></pre></div>
+<p>在力扣的Python模板中，把函数放进<code>class Solution</code>，改成<code>def twoSum(self, nums, target):</code>即可，函数主体不需要改变。</p>
+<h3 id="section-为什么查询必须放在写入前面">为什么查询必须放在写入前面</h3>
+<p><strong>先查后存保证补数来自之前的位置。</strong>以<code>[3, 3]</code>、<code>target = 6</code>为例，第一个3查询时字典为空，随后写入<code>3: 0</code>；第二个3查询时才能取出下标0，返回<code>[0, 1]</code>。</p>
+<p>如果交换这两步，第一个3会先写入<code>seen[3] = 0</code>，接着又通过查询3取出刚写入的0，返回<code>[0, 0]</code>。这就违反了不能重复使用同一元素的要求。</p>
+<h3 id="section-为什么只查前面的元素也不会漏掉答案">为什么只查前面的元素也不会漏掉答案</h3>
+<p>进入下标<code>i</code>这一轮时，<strong>seen中保存的下标都小于i，并且前面出现过的每种数值都有一条记录</strong>。<strong>这个每轮开始时都成立的条件，叫作循环不变量。</strong></p>
+<p>设答案对应<code>p &#x3C; q</code>。处理到<code>q</code>时，<code>nums[p]</code>已经出现，而当前需要的补数恰好是<code>nums[p]</code>，所以一定能查到。重复数值可能更新记录中的下标，但留下的位置仍在<code>q</code>之前，且数值相同，仍然能组成有效答案。</p>
+<p>本题只要求返回一组答案，因此不需要保存同一数值的所有位置。<strong>如果改成返回全部配对，记录方式和返回时机就需要一起调整。</strong></p>
+<h2 id="section-边界情况重复值0负数与原下标">边界情况：重复值、0、负数与原下标</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>输入与目标值</th><th>有效结果</th><th>需要检查的地方</th></tr></thead><tbody><tr><td><code>[3, 3]</code>，6</td><td><code>[0, 1]</code></td><td><strong>数值可以相同，下标必须不同</strong></td></tr><tr><td><code>[0, 4, 3, 0]</code>，0</td><td><code>[0, 3]</code></td><td>下标0是有效位置；用<code>in</code>检查键是否存在</td></tr><tr><td><code>[-3, 4, 3, 90]</code>，0</td><td><code>[0, 2]</code></td><td>负数照常作为键，不影响补数计算</td></tr><tr><td><code>[2, 7]</code>，9</td><td><code>[0, 1]</code></td><td>长度为2时，第二轮也可以找到答案</td></tr><tr><td><code>[1, 2]</code>，9</td><td><code>[]</code></td><td>不属于原题保证有解的输入，用来核对本地函数的无解约定</td></tr></tbody></table>
+<p>这份哈希解法<strong>不会排序或改写nums，返回的始终是原数组下标</strong>。Python整数也没有固定32位整数溢出的问题；换用其他语言时，需要结合输入范围选择整数类型。</p>
+<h2 id="section-时间与空间复杂度期望on辅助空间on">时间与空间复杂度：期望O(n)，辅助空间O(n)</h2>
+<p>每个元素只会触发常数次字典查询和至多一次写入。在有界整数按固定字长成本分析、散列分布合理的条件下，查找为期望O(1)，插入为期望均摊O(1)，因此：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="double-struck">E</mi><mo stretchy="false">[</mo><mi>T</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mo>=</mo><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mspace width="2em"></mspace><mi>S</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathbb{E}[T(n)]=O(n),\qquad S(n)=O(n)</annotation></semantics></math></span>
+<p><strong>优化的代价是多保存一张字典，最多记录O(n)项。</strong>这也是本题“用空间换时间”的具体位置。</p>
+<p>对于没有排序等额外结构的输入，要保证找到答案，最坏情况下需要读取线性数量的元素。因此，哈希解法的<strong>期望O(n)已经达到了这个读取量级</strong>。这里的期望仍依赖哈希性能；严重冲突时单次查询可能退化，整段算法的最坏时间仍可能达到O(n²)。<a href="/blog/hash-table-introduction/#section-平均o1的条件散列分布与扩容">哈希表的复杂度说明</a>会继续解释“期望”和“均摊”。</p>
+<h2 id="section-进一步的问题只用数组时还能怎样优化">进一步的问题：只用数组时，还能怎样优化</h2>
+<p>当时我还不知道有哈希表，所以一直在考虑怎样只用数组求解。后来经过分析和AI讨论，整理出了下面两种方法，可以根据值域和空间要求选择。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方法</th><th>时间复杂度</th><th>本文实现的辅助空间</th><th>适用条件</th></tr></thead><tbody><tr><td>排序＋双指针</td><td>O(n log n)</td><td>O(n)</td><td>保存<code>(数值, 原下标)</code>，排序后仍能返回原位置</td></tr><tr><td>直接寻址数组</td><td>O(n+V)</td><td>O(V)</td><td><strong>值域V足够小</strong>，可以用<code>x - lo</code>作为记录数组下标</td></tr></tbody></table>
+<p><strong>“只能用数组”还不足以确定唯一的最快方法。</strong>数组也能实现哈希表，直接寻址又依赖值域；这些条件说明清楚后，复杂度才有比较的依据。</p>
+<details>
+<summary>排序与直接寻址的推导、代码和复杂度</summary>
+<h3 id="section-排序双指针保留原下标再排序">排序＋双指针：保留原下标再排序</h3>
+<p>先把元素保存成<code>(数值, 原下标)</code>并按数值排序，再用两个位置分别指向最小值和最大值。和偏小时提高左侧值，和偏大时降低右侧值。</p>
+<p><strong>和偏小时，左侧这个数与当前范围内最大的数相加都不够，与更小的数配对也不会够</strong>，所以可以排除当前左端。右端的排除理由同理。</p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">two_sum_sorted</span>(<span class="hljs-params">nums, target</span>):
+    <span class="hljs-comment"># 排序改变的是配对数组，原下标跟着数值一起保留</span>
+    pairs = <span class="hljs-built_in">sorted</span>((x, i) <span class="hljs-keyword">for</span> i, x <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(nums))
+    left, right = <span class="hljs-number">0</span>, <span class="hljs-built_in">len</span>(pairs) - <span class="hljs-number">1</span>
+    <span class="hljs-keyword">while</span> left &#x3C; right:
+        total = pairs[left][<span class="hljs-number">0</span>] + pairs[right][<span class="hljs-number">0</span>]
+        <span class="hljs-keyword">if</span> total == target:
+            <span class="hljs-keyword">return</span> [pairs[left][<span class="hljs-number">1</span>], pairs[right][<span class="hljs-number">1</span>]]
+        <span class="hljs-keyword">if</span> total &#x3C; target:
+            left += <span class="hljs-number">1</span>
+        <span class="hljs-keyword">else</span>:
+            right -= <span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> []
+</code></pre></div>
+<p>排序需要O(n log n)时间，指针移动需要O(n)时间，配对数组占O(n)空间。Python排序也可能使用O(n)临时空间，不能只根据“在原列表上排序”判断为O(1)辅助空间。</p>
+<h3 id="section-直接寻址值域小时用数值计算记录数组下标">直接寻址：值域小时，用数值计算记录数组下标</h3>
+<p>如果所有数都在<code>lo</code>到<code>hi</code>之间，可以建立长度为<code>V = hi - lo + 1</code>的数组，用<code>x - lo</code>作为记录位置。<strong>减去lo既能让下标从0开始，也能处理负数。</strong></p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">two_sum_direct</span>(<span class="hljs-params">nums, target</span>):
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(nums) &#x3C; <span class="hljs-number">2</span>:
+        <span class="hljs-keyword">return</span> []
+    lo, hi = <span class="hljs-built_in">min</span>(nums), <span class="hljs-built_in">max</span>(nums)
+    <span class="hljs-comment"># 仅适用于值域hi-lo+1足够小的输入</span>
+    positions = [-<span class="hljs-number">1</span>] * (hi - lo + <span class="hljs-number">1</span>)
+    <span class="hljs-keyword">for</span> i, x <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(nums):
+        need = target - x
+        <span class="hljs-comment"># 先检查值域，避免need-lo超出记录数组范围</span>
+        <span class="hljs-keyword">if</span> lo &#x3C;= need &#x3C;= hi <span class="hljs-keyword">and</span> positions[need - lo] != -<span class="hljs-number">1</span>:
+            <span class="hljs-keyword">return</span> [positions[need - lo], i]
+        positions[x - lo] = i
+    <span class="hljs-keyword">return</span> []
+</code></pre></div>
+<p><strong>用-1表示尚未出现，0要留给有效的原数组下标。</strong>初始化需要O(V)，遍历需要O(n)，总时间O(n+V)、空间O(V)。原题的数值范围很大，不适合按整个范围分配这张数组；这里只用于值域较小的输入。</p>
+</details>
+<p>我以后再遇到类似问题，可以先明确每一步要查询什么。两数之和需要查询“某个数是否出现、出现在哪”，所以保存<strong>数值→位置</strong>；统计频率可以保存<strong>数值→次数</strong>；只关心是否出现过，则可以用集合。至于键经过哈希计算后怎样取出对应的值，接着看<a href="/blog/hash-table-introduction/">哈希表：从键值对应到Python字典的查找过程</a>。</p>14:["$","$L11","2",{"html":"$26"}]
+15:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Le",null,{"href":"/blog/hash-table-introduction/","children":[["$","span",null,{"children":"上一篇"}],"哈希表：从键值对应到Python字典的查找过程"]}],["$","$Le",null,{"href":"/blog/browser-cookie-cors-csrf/","children":[["$","span",null,{"children":"下一篇"}],"浏览器与API安全：Cookie、会话、CORS和CSRF"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","hash-table-introduction",{"children":[["$","$Le",null,{"href":"/blog/hash-table-introduction/","children":"哈希表：从键值对应到Python字典的查找过程"}],["$","span",null,{"children":"算法与数据结构"}]]}]]}]]}]]}]
+16:["$","$L27",null,{"contentId":"two-sum"}]
+17:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],["$","$Le",null,{"href":"/blog/merge-sort/","children":"体验归并排序"}]]}]
+18:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6","$a:0:1:d:r:props:children:0:props:children:1:props:headings:7","$a:0:1:d:r:props:children:0:props:children:1:props:headings:8","$a:0:1:d:r:props:children:0:props:children:1:props:headings:9","$a:0:1:d:r:props:children:0:props:children:1:props:headings:10","$a:0:1:d:r:props:children:0:props:children:1:props:headings:11","$a:0:1:d:r:props:children:0:props:children:1:props:headings:12"]}]
+19:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+1a:["$","$L28",null,{"children":["$","$20",null,{"name":"Next.MetadataOutlet","children":"$@29"}]}]
+23:true
+7:300
+29:null
+7:C
+22:0
+9:"$undefined"
+5:"$undefined"
+21:"$undefined"
+1b:"$undefined"

@@ -1,0 +1,136 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T2f44,<span id="问题说明" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-问题说明">问题说明</h3>
+<p>在使用hexo部署博客时，使用了<a href="https://hexo.fluid-dev.com/" rel="noopener noreferrer">fluid主题</a>，该主题可以使用<a href="https://github.com/tscanlin/tocbot" rel="noopener noreferrer">tocbot</a>在右侧生成一个跳转的目录，如下：</p>
+<p><img src="https://s21.ax1x.com/2024/07/16/pkIezKH.png" alt="image-20240716091527332" width="383" height="286" loading="lazy" decoding="async" referrerpolicy="no-referrer"></p>
+<p>为了使用更强的markdown渲染器，选择将hexo默认markdown渲染器的hexo-renderer-marked卸载，转而安装 <a href="https://github.com/hexojs/hexo-renderer-markdown-it" rel="noopener noreferrer">hexo-renderer-markdown-it</a>，该渲染器支持在<code>&#x3C;hi></code>标签上<strong>自动生成标题锚点，并自动生成标题id</strong>，该标题id即可用于tocbot自动扫描，并为右侧的目录生成跳转链接，保证右侧目录的正确跳转</p>
+<p>但为了在文章正文中插入目录（一般是开头），需要其他的插件的支持，考虑到<a href="https://github.com/medfreeman/markdown-it-toc-and-anchor" rel="noopener noreferrer">markdown-it-toc-and-anchor</a>现在已不再维护，其使用的markdown-it版本太低，故添加插件<a href="https://github.com/bubkoo/hexo-toc" rel="noopener noreferrer"><strong>hexo-toc</strong></a>用于<strong>生成标题锚点和文章目录</strong>（标题锚点请在hexo-renderer-markdown-it和hexo-toc中二选一），该插件只需要在markdown文章中任意位置添加<code>&#x3C;!-- toc --></code>即可生成目录</p>
+<p>但是，同时使用二者导致了一个特殊的bug，<strong>即右侧的tocbot目录的跳转只能回到文章页面的顶部，无法正确跳转到标题位置</strong>，通过浏览器的F12检查得知了其原因：</p>
+<img src="https://s21.ax1x.com/2024/07/16/pkIm1iV.png" alt="image-20240716092938088" width="982" height="116" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+<p><img src="https://s21.ax1x.com/2024/07/16/pkImwIx.png" alt="image-20240716092903108" width="536" height="84" loading="lazy" decoding="async" referrerpolicy="no-referrer"></p>
+<p>这里可以看到，&#x3C;h3>目录并未像预期的那样生成id，而是添加了一个<code>&#x3C;span></code>标签，并在其中生成了标题id，这使得tocbot的扫描结果变成了如下的情况：</p>
+<p><img src="https://s21.ax1x.com/2024/07/16/pkImGzF.png" alt="image-20240716093158727" width="1009" height="349" loading="lazy" decoding="async" referrerpolicy="no-referrer"></p>
+<p>通过<strong>标题跳转的超链接标签&#x3C;a title>中的href=“#”可知，tocbot生成的标题超链接只能回滚到页面顶部，无法跳转到指定的目录标题位置，而这正是因为标题id位于&#x3C;span>标签，无法被tocbot获得所导致的</strong>，此时，只能通过tocbot中的标题锚点，即“¶”完成正确跳转</p>
+<p><span id="correct_html" class="legacy-anchor" aria-hidden="true"></span><span id="user-content-correct_html"> </span><strong>如果需要tocbot正常工作，标题处的html结构和tocbot的html结构应如下</strong>：</p>
+<img src="https://s21.ax1x.com/2024/07/16/pkImDJK.png" alt="image-20240716094617125" width="528" height="112" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+<p><img src="https://s21.ax1x.com/2024/07/16/pkIm6Qe.png" alt="image-20240716094654457" width="951" height="259" loading="lazy" decoding="async" referrerpolicy="no-referrer"></p>
+<p>观察可知，<strong>在&#x3C;h3>标签中生成了标题的id，而不是在一个span标签中，进而tocbot在扫描后可以在自动目录中正确生成对应的href链接，指向该标题id，此时的点击应能正确跳转</strong></p>
+<span id="问题解决" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-问题解决">问题解决</h3>
+<p>在本人尝试了多种方法后，最终在github的issue区<a href="https://github.com/YenYuHsuan/hexo-theme-beantech/issues/11" rel="noopener noreferrer">Content's link show 'undefine' · Issue #11 · YenYuHsuan/hexo-theme-beantech (github.com)</a>中，看到了 <a href="https://github.com/fawks96" rel="noopener noreferrer">fawks96</a> 这位大佬的回复，并以此解决了问题：</p>
+<p><img src="https://s21.ax1x.com/2024/07/16/pkImNL9.png" alt="image-20240716094108934" width="973" height="919" loading="lazy" decoding="async" referrerpolicy="no-referrer"></p>
+<p>这里的代码位于博客目录下的<code>node_modules\hexo-toc\lib\filter.js</code>文件内，打开后如下：</p>
+<p><img src="https://s21.ax1x.com/2024/07/16/pkImdd1.png" alt="image-20240716094343221" width="981" height="629" loading="lazy" decoding="async" referrerpolicy="no-referrer"></p>
+<p>代码说明如下</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>// 为$title元素设置一个id属性，属性值为变量id的值。
+$title.attr('id', id);
+
+// 移除标题元素$title下的所有直接子元素中的&#x3C;a>标签，即：如果标题元素$title的子元素中包含&#x3C;a>标签，这些&#x3C;a>标签会被从html结构中移除
+$title.children('a').remove();
+// 将标题元素$title 的HTML内容包裹在一个&#x3C;span>元素内，并设置这个 &#x3C;span> 元素的 id 属性为变量id的值
+$title.html( '&#x3C;span id="' + id + '">' + $title.html() + '&#x3C;/span>' );
+// 移除标题元素$title上的id属性
+$title.removeAttr('id');
+</code></pre></div>
+<p>从这里可以看出，<strong>hexo-toc在更新后直接移除了标题中的id和子元素中的超链接，改为添加&#x3C;span>标签，这里没有考虑其他插件的工作过程和效果，因此最终导致了问题的发生</strong></p>
+<p>解决方法也很简单，直接修改源码(回滚版本)，即可：</p>
+<p><img src="https://s21.ax1x.com/2024/07/16/pkIMYfx.png" alt="image-20240716100825645" width="781" height="185" loading="lazy" decoding="async" referrerpolicy="no-referrer"></p>
+<p>重新部署，可以看到其效果如<a href="/blog/hexo-tocbot-anchor-conflict/#correct_html">上面的正确结构</a>所示，且所有跳转均恢复正常</p>
+<p>最后，附上我个人Blog中的<code>_config.yml</code>的<code>hexo-renderer-markdown-it</code>和<code>hexo-toc</code>配置：</p>
+<div class="code-block"><div class="code-toolbar"><span>yml</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-yml"><span class="hljs-comment"># hexo-toc config—— by &#x3C;!-- toc --> to insert toc</span>
+<span class="hljs-attr">toc:</span>
+  <span class="hljs-attr">maxdepth:</span> <span class="hljs-number">6</span>
+  <span class="hljs-attr">class:</span> <span class="hljs-string">toc</span>
+  <span class="hljs-attr">slugify:</span> <span class="hljs-string">usluq</span>
+  <span class="hljs-attr">decodeEntities:</span> <span class="hljs-literal">false</span>
+  <span class="hljs-attr">anchor:</span>
+    <span class="hljs-attr">position:</span> <span class="hljs-string">before</span>
+    <span class="hljs-attr">symbol:</span> <span class="hljs-string">'¶'</span>
+    <span class="hljs-attr">style:</span> <span class="hljs-string">header-anchor</span>
+
+<span class="hljs-comment"># Markdown renderer config —— using hexo-renderer-markdown-it-plus</span>
+<span class="hljs-attr">markdown:</span>
+  <span class="hljs-attr">preset:</span> <span class="hljs-string">"default"</span>
+  <span class="hljs-attr">render:</span>
+    <span class="hljs-attr">html:</span> <span class="hljs-literal">true</span>						
+    <span class="hljs-attr">xhtmlOut:</span> <span class="hljs-literal">false</span>
+    <span class="hljs-attr">langPrefix:</span> <span class="hljs-string">"language-"</span>
+    <span class="hljs-attr">breaks:</span> <span class="hljs-literal">false</span>
+    <span class="hljs-attr">linkify:</span> <span class="hljs-literal">true</span>
+    <span class="hljs-attr">typographer:</span> <span class="hljs-literal">false</span>
+    <span class="hljs-attr">quotes:</span> <span class="hljs-string">'“”‘’'</span>
+  <span class="hljs-attr">enable_rules:</span>
+  <span class="hljs-attr">disable_rules:</span>
+  <span class="hljs-attr">plugins:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-emoji</span>     <span class="hljs-comment"># 表情</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-footnote</span>  <span class="hljs-comment"># 脚注(参考文献)</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-abbr</span>      <span class="hljs-comment"># 支持&#x3C;abbr>标签缩写</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-cjk-breaks</span>  <span class="hljs-comment"># 移除不符合规范的单换行</span>
+    <span class="hljs-comment"># - markdown-it-deflist   # 支持将markdown定义列表</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-sup</span>       <span class="hljs-comment"># 上标</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-sub</span>       <span class="hljs-comment"># 下标</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-ins</span>       <span class="hljs-comment"># 下划线和中划线(就是划掉指定内容的线)</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-mark</span>      <span class="hljs-comment"># 高亮文本</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-checkbox</span>  <span class="hljs-comment"># 复选框</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-imsize</span>    <span class="hljs-comment"># 自定义图片宽高</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-expandable</span>  <span class="hljs-comment"># 折叠/展开内容</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-task-lists</span>  <span class="hljs-comment"># 处理任务列表语法(GFM可使用Todo list)</span>
+  <span class="hljs-attr">anchors:</span>
+    <span class="hljs-attr">level:</span> <span class="hljs-number">1</span>	<span class="hljs-comment"># 用2时一级标题无法跳转，建议打开</span>
+    <span class="hljs-attr">collisionSuffix:</span> <span class="hljs-string">''</span>
+    <span class="hljs-attr">permalink:</span> <span class="hljs-literal">false</span>	<span class="hljs-comment"># 取消permalink，使用toc即可，或者也可以toc后不添加任何内容，使用permalink: true</span>
+    <span class="hljs-attr">permalinkClass:</span> <span class="hljs-string">'header-anchor'</span>
+    <span class="hljs-attr">permalinkSide:</span> <span class="hljs-string">'left'</span>
+    <span class="hljs-attr">permalinkSymbol:</span> <span class="hljs-string">'¶'</span>
+    <span class="hljs-attr">case:</span> <span class="hljs-number">0</span>
+    <span class="hljs-attr">separator:</span> <span class="hljs-string">'-'</span>
+</code></pre></div>
+<p>如果同样使用fluid主题的话，注意主题配置文件<code>_config.yml</code>的<code>anchorjs</code>需要关闭：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>  # 为文章内容中的标题添加锚图标，此处需要关系
+  # Add an anchor icon to the title on the post page
+  anchorjs:
+    enable: false
+    element: h1,h2,h3,h4,h5,h6
+    # Options: left | right
+    placement: left
+    # Options: hover | always | touch
+    visible: always
+    # Options: § | # | ❡
+    icon: "❡"
+</code></pre></div>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#bugs","children":["Bug解决",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"bug解决——hexo插件冲突导致tocbot生成目录跳转异常"}],["$","p",null,{"className":"article-deck","children":"记录 Hexo 目录跳转回页首的问题，沿 DOM 和插件源码排查标题 ID，并保留解法来源"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2024-07-16","children":"2024-07-16"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-17","children":"2026-10-17"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,261"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","个人博客",{"href":"/blog/#tag=%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2","children":"个人博客"}],["$","$Lf","bug",{"href":"/blog/#tag=bug","children":"bug"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-问题说明","text":"问题说明","level":3},{"id":"section-问题解决","text":"问题解决","level":3}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[null,["$","$L11",null,{"html":"$12"}],"$undefined","$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"hexo-tocbot-anchor-conflict","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"bug解决——hexo插件冲突导致tocbot生成目录跳转异常 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"记录 Hexo 目录跳转回页首的问题，沿 DOM 和插件源码排查标题 ID，并保留解法来源。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"E-M2wxgR09X62ofy5DhPV"}
+22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+23:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Le",null,{"href":"/blog/web-testing-observability/","children":[["$","span",null,{"children":"上一篇"}],"Web测试与观测：验证数据流、性能指标与故障边界"]}],["$","$Le",null,{"href":"/blog/python-os/","children":[["$","span",null,{"children":"下一篇"}],"python标准库——os模块常用方法"]}]]}],false]}]
+14:["$","$L22",null,{"contentId":"hexo-tocbot-anchor-conflict"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+21:true
+7:300
+24:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

@@ -1,0 +1,246 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T3f8f,<p>本文的核心内容是命名空间、作用域、模块、包。</p>
+<span id="一前言" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一前言">（一）前言</h3>
+<span id="1-概述" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-概述">1. 概述</h4>
+<p>为了便于开发和维护代码，有逻辑地阻止和处理代码段，经常需要把大量的工程代码通过模块化的方式将其分解成小的子任务和子模块。</p>
+<p>之前提及的函数，之后要说明的类，都是模块化编程的一种，但是如果这些都堆在一个文件中，往往会导致文件过大，难以阅读，理解和维护，所以，需要提供更好的方式进行模块化编程。</p>
+<p>Python中提供了模块(Module)，包(Package)来完成这些工作。</p>
+<p>为了更好地在划分这些层次时命名不出现错误，保证访问的变量不出现问题，Python引入了命名空间阻止命名冲突，引入了作用域规定变量的访问范围。</p>
+<span id="2-优点" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-优点">2. 优点：</h4>
+<ul>
+<li>简化编程，对于一个大工程的众多内容，可以有效聚焦工作重点，处理项目的核心问题。</li>
+<li>便于维护，在产生问题时便于排查问题的来源，解决错误。</li>
+<li>容易理解，相关代码均在一个模块或包中，前后密切相关，使整个工程的组织清晰有条理，而且这种模块式的存储方式很多时候可以隐藏代码细节，简化程序逻辑。</li>
+<li>复用性高，可以将一个模块或包多次导入和调用，对于已经完成的功能不必重新编写，而且便于个性化拓展功能而不影响原来的代码——在Python特别是可以使用大量的第三方依赖库。</li>
+<li>避免冲突，模块和包均具备独立的命名空间，也就是即使两个模块或者包之间有相同名字的函数/类/变量等，也不会在彼此之间产生冲突，命名是独立的。</li>
+</ul>
+<span id="二命名空间和作用域" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二命名空间和作用域">（二）命名空间和作用域：</h3>
+<span id="1-命名" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-命名">1. 命名：</h4>
+<p>在Python中一切皆对象，所以，对引用的对象赋予一个称谓就是命名。</p>
+<p>命名包括对变量，对函数，对类等的命名，必须遵守一定的规范。</p>
+<p>此处不介绍命名的基本原则和一般的规范，如有需要可以自行查阅。</p>
+<span id="2-命名空间" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-命名空间">2. 命名空间：</h4>
+<span id="1概念" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-1概念">（1）概念：</h5>
+<p>命名空间是从名称到对象的映射，需要引用的对象名称需要在命名空间中寻找。</p>
+<p>命名空间是名称到对象的映射，多数命名空间用字典实现。不同名称可以引用同一个对象；通过名称查找对象时，会按照当前代码位置适用的作用域规则进行。</p>
+<p>同一个命名空间内，一个名称在当前时刻对应一个绑定；再次赋值可以改变这个绑定。不同命名空间可以使用相同名称，例如两个模块都可以定义名为 <code>count</code> 的变量。</p>
+<span id="2分类" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-2分类">（2）分类：</h5>
+<p>下面按内置、模块全局和函数局部介绍常见命名空间。命名空间保存名称绑定，作用域规定哪些代码位置能够直接查找这些名称。</p>
+<p>命名空间在Python中被分为三类：</p>
+<ul>
+<li>
+<p>内置命名空间：存储的是Python语言的内置名称，包括各种异常名称以及内置函数，如len()、type()或者类型转换函数等等，在任何位置均可访问。</p>
+<p>可以通过导入builtins库，利用dir函数获得全部内置命名空间的名称，全部的内置命名如下（不分析每个名字的具体内容了......）：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>import builtins
+builtin_names = dir(builtins)
+i=0
+for name in builtin_names:
+    print(name,end=" ")
+    i+=1
+    if i==10:
+        print()
+        i=0
+#运行结果：
+# ArithmeticError AssertionError AttributeError BaseException BaseExceptionGroup BlockingIOError BrokenPipeError BufferError BytesWarning ChildProcessError 
+# ConnectionAbortedError ConnectionError ConnectionRefusedError ConnectionResetError DeprecationWarning EOFError Ellipsis EncodingWarning EnvironmentError Exception 
+# ExceptionGroup False FileExistsError FileNotFoundError FloatingPointError FutureWarning GeneratorExit IOError ImportError ImportWarning 
+# IndentationError IndexError InterruptedError IsADirectoryError KeyError KeyboardInterrupt LookupError MemoryError ModuleNotFoundError NameError 
+# None NotADirectoryError NotImplemented NotImplementedError OSError OverflowError PendingDeprecationWarning PermissionError ProcessLookupError RecursionError 
+# ReferenceError ResourceWarning RuntimeError RuntimeWarning StopAsyncIteration StopIteration SyntaxError SyntaxWarning SystemError SystemExit 
+# TabError TimeoutError True TypeError UnboundLocalError UnicodeDecodeError UnicodeEncodeError UnicodeError UnicodeTranslateError UnicodeWarning 
+# UserWarning ValueError Warning WindowsError ZeroDivisionError __build_class__ __debug__ __doc__ __import__ __loader__ 
+# __name__ __package__ __spec__ abs aiter all anext any ascii bin 
+# bool breakpoint bytearray bytes callable chr classmethod compile complex copyright 
+# credits delattr dict dir divmod enumerate eval exec exit filter 
+# float format frozenset getattr globals hasattr hash help hex id 
+# input int isinstance issubclass iter len license list locals map 
+# max memoryview min next object oct open ord pow print 
+# property quit range repr reversed round set setattr slice sorted 
+# staticmethod str sum super tuple type vars zip 
+</code></pre></div>
+</li>
+<li>
+<p>全局命名空间：是在模块中定义的名称，在加载模块时被创建，记录模块的变量，包括了函数、类、其他导入模块、模块级的变量和常量，在当前模块内均可访问。</p>
+<p>在模块顶层调用 <code>locals()</code> 时，得到的是模块的全局命名空间。</p>
+<p>也可以直接用globals()在任意位置获得全局命名空间。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>i=0
+global_names = list(globals().items()) #或者 locals().items()
+for name in global_names:
+    print(name,end=" ")
+    i+=1
+    if i==3:
+        print()
+        i=0
+#运行结果：
+# ('__name__', '__main__') ('__doc__', None) ('__package__', None)
+# ('__loader__', &#x3C;_frozen_importlib_external.SourceFileLoader object at 0x000001ED1BD45610>) ('__spec__', None) ('__annotations__', {})
+# ('__builtins__', &#x3C;module 'builtins' (built-in)>) ('__file__', 'D:\\pycharmwork\\blog_use.py') ('__cached__', None)
+# ('sys', &#x3C;module 'sys' (built-in)>) ('i', 0)
+</code></pre></div>
+</li>
+<li>
+<p>局部命名空间：是函数中定义的名称，记录了函数的变量，包括函数的参数和局部定义的变量，（即使函数在类中也是如此）只能在函数代码块内访问。</p>
+<p>只有在函数作用域中使用locals()函数可以获得局部命名空间。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def fun():
+    i = 0
+    j=1
+    k="abc"
+    print(locals())
+fun()
+# 运行结果：
+# {'i': 0, 'j': 1, 'k': 'abc'}
+</code></pre></div>
+</li>
+</ul>
+<span id="3生存周期" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-3生存周期">（3）生存周期：</h5>
+<p>指命名空间从被创建到被销毁的时间。</p>
+<p>不同命名空间在不同时间创建，存续时间也不同。函数调用、类定义和模块加载需要分别说明。</p>
+<ul>
+<li>内置命名空间在解释器启动时创建。</li>
+<li>模块的全局命名空间在读取模块定义时创建，通常持续到解释器退出。</li>
+<li>每次函数调用都有自己的局部命名空间，方法调用同样如此；函数返回或抛出未处理的异常后，这次调用结束。</li>
+<li>执行类定义时会建立类命名空间，随后用它创建类对象；它和方法每次调用产生的局部命名空间需要分别理解。</li>
+</ul>
+<span id="4查找名称的顺序" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-4查找名称的顺序">（4）查找名称的顺序</h5>
+<p>因为需要在命名空间中查找，所以实际的查找顺序就是命名空间的查找顺序。</p>
+<p>普通函数中的非限定名称通常按局部、外层函数、模块全局、内置的顺序查找。<code>global</code>、<code>nonlocal</code> 和特定语法上下文会影响查找规则；名称找不到时会产生相应的名称错误。</p>
+<span id="3-作用域" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-作用域">3. 作用域：</h4>
+<h5 id="section-1概念-1">（1）概念：</h5>
+<p>和命名空间不同的是，作用域实际上是一个虚拟概念，没有实际对象，作用域的核心是变量的访问范围和规则。</p>
+<p>作用域规定了Python解释器如何查找变量，确定执行代码对变量的访问权限——访问权限和访问顺序决定了程序访问的变量是否有效以及该赋何值。</p>
+<p>因为python基础详细说明了全局和局部变量，这里不再介绍，可以结合之前的<a href="/blog/python-functions-1/">python基础——函数(一)</a>了解其原理。</p>
+<h5 id="section-2分类-1">（2）分类：</h5>
+<ul>
+<li>
+<p>局部作用域Local，简写为L：</p>
+<p>是最内层的作用域，对应了函数部分，函数的参数和函数内定义的变量、对象均属于局部作用域。</p>
+</li>
+<li>
+<p>嵌套作用域Enclosing，简写为E：</p>
+<p>也可以理解为外部作用域，外部是针对多层函数定义的。</p>
+<p>对应了嵌套函数的作用范围，包括了非局部和非全局的变量，这一作用域主要是为了实现闭包。</p>
+<p>内层函数引用外层函数的局部名称时，相关绑定可以保存在闭包单元中。函数对象的 <code>__closure__</code> 属性保存包含这些自由变量绑定的单元，未使用闭包时为 <code>None</code>。</p>
+<p>可以结合<a href="/blog/python-functions-3/">python进阶——函数(三)</a>中的装饰器部分进行更进一步的了解。</p>
+<p>了解以上内容后，可以重点解释一下闭包的主要逻辑：</p>
+<p>闭包使内层函数能够继续访问其引用的外层绑定。返回内层函数是常见用法，但形成闭包并不以返回内层函数为前提；下面分别展示返回函数和直接调用的情况。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def outer():
+    a = 1
+    b = 1
+    print(locals())
+    def inter():
+        c=1
+        print(locals())
+        return a + c
+    return inter
+temp_fun =outer()
+print(temp_fun())
+# # 运行结果：
+# {'b': 1, 'a': 1}
+# {'c': 1, 'a': 1}
+# 2
+</code></pre></div>
+<p>执行 <code>temp_fun()</code> 时，<code>inter()</code> 通过闭包访问外层的 a，c 则来自本次调用的局部命名空间。输出中没有 b，只能说明这里没有使用 b 的绑定；这个例子不能证明 b 曾引用的整数对象已被销毁。</p>
+<p>如果不返回内函数对象，实际上也会发生此过程。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def outer():
+    a = 1
+    b = 1
+    print(locals())
+    def inter():
+        c=1
+        print(locals())
+        return a + c
+    inter()
+    return 1
+temp_fun =outer()
+print(temp_fun)
+# # 运行结果：
+# {'b': 1, 'a': 1}
+# {'c': 1, 'a': 1}
+# 1
+</code></pre></div>
+<p>每次调用 <code>outer()</code> 并执行内部的 <code>def inter</code> 都会创建新的函数对象，参数是否相同不改变这一点。下面的 <code>id(temp_fun1())</code> 取得的是调用结果的身份标识；要比较函数对象本身，应观察 <code>id(temp_fun1)</code> 与 <code>id(temp_fun2)</code>。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def outer(a):
+    b = 1
+    print(id(a),id(b))
+    def inter():
+        c=1
+        print(id(c))
+        return a + c
+    return inter
+temp_fun1 =outer(3)
+print(id(temp_fun1()))
+temp_fun2 =outer(4)
+print(id(temp_fun2()))
+# 运行结果：
+# 140729683866472 140729683866408
+# 140729683866408
+# 140729683866504
+# 140729683866504 140729683866408
+# 140729683866408
+# 140729683866536
+</code></pre></div>
+</li>
+<li>
+<p>全局作用域Global，简写为G：</p>
+<p>范围是当前模块的任何位置，模块中的顶层位置所导入的其他模块、定义的全局变量、函数和类都属于全局作用域。</p>
+</li>
+<li>
+<p>内置作用域Built-in，简写为B：</p>
+<p>范围是所有模块的任何位置，所有内置命名空间的名称均属于内置作用域，也是最外层的作用域。</p>
+</li>
+</ul>
+<span id="3访问权限" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-3访问权限">（3）访问权限：</h5>
+<ul>
+<li>在内层作用域能访问该层及外层所有作用域的变量。</li>
+<li>外层作用域不能访问其内层的作用域的变量。</li>
+<li>除了内置作用域，其他作用域不能访问另一个同层级级别的作用域的变量。</li>
+</ul>
+<span id="4查找规则" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-4查找规则">（4）查找规则：</h5>
+<p>这里继续讨论普通函数中未限定名称的查找。</p>
+<p>具体的查找顺序为LEGB——即局部作用域—>嵌套作用域—>全局作用域—>内置作用域，均不存在抛出NameError的异常。</p>
+<p>注意没有E作用域时可以直接跳过。</p>
+<span id="4-作用域和命名空间的详细关系" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-作用域和命名空间的详细关系">4. 作用域和命名空间的详细关系：</h4>
+<p>作用域是建立在命名空间上的虚拟概念，变量实际存储在命名空间内，由作用域决定变量的可访问范围。</p>
+<p>命名空间记录名称绑定，作用域描述代码在什么位置能够直接使用这些名称。一个名称可见，并不意味着相应对象只属于某一个作用域。</p>
+<p>变量的定义需要在逻辑上加入到当前的最内层作用域范围，物理上保存到当前对应的命名空间内。</p>
+<p>Python中，命名空间及作用域的创建是由模块、类、函数和列表推导完成的，其他的代码块均不会创建。</p>
+<p>此处多为概念关系，另外此处逻辑其实也和其他语言的定义十分类似，可以根据自己的理解尝试编写代码并判断自己的理解是否正确，个人就不举例了。</p>
+<p>本次修订依据 <a href="https://docs.python.org/3.13/tutorial/classes.html#python-scopes-and-namespaces" rel="noopener noreferrer">Python 3.13 命名空间与作用域教程</a>、<a href="https://docs.python.org/3.13/reference/executionmodel.html#resolution-of-names" rel="noopener noreferrer">名称解析规则</a>和<a href="https://docs.python.org/3.13/reference/compound_stmts.html#function-definitions" rel="noopener noreferrer">函数定义说明</a>。代码及输出沿用原文，输出中的对象标识不保证跨次运行相同。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#foundations","children":["编程语言知识点",["$","span",null,{"children":50}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"“python进阶——模块化(一)命名空间和作用域”"}],["$","p",null,{"className":"article-deck","children":"梳理命名空间与作用域的分类、生命周期和名称查找顺序，解释变量的访问范围"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-07-15","children":"2023-07-15"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-17","children":"2026-10-17"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,993"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",10," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","python",{"href":"/blog/#tag=python","children":"python"}],["$","$Lf","编程语言知识点",{"href":"/blog/#tag=%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9F%A5%E8%AF%86%E7%82%B9","children":"编程语言知识点"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-一前言","text":"（一）前言","level":3},{"id":"section-1-概述","text":"1. 概述","level":4},{"id":"section-2-优点","text":"2. 优点：","level":4},{"id":"section-二命名空间和作用域","text":"（二）命名空间和作用域：","level":3},{"id":"section-1-命名","text":"1. 命名：","level":4},{"id":"section-2-命名空间","text":"2. 命名空间：","level":4},{"id":"section-1概念","text":"（1）概念：","level":5},{"id":"section-2分类","text":"（2）分类：","level":5},{"id":"section-3生存周期","text":"（3）生存周期：","level":5},{"id":"section-4查找名称的顺序","text":"（4）查找名称的顺序","level":5},{"id":"section-3-作用域","text":"3. 作用域：","level":4},{"id":"section-1概念-1","text":"（1）概念：","level":5},{"id":"section-2分类-1","text":"（2）分类：","level":5},{"id":"section-3访问权限","text":"（3）访问权限：","level":5},{"id":"section-4查找规则","text":"（4）查找规则：","level":5},{"id":"section-4-作用域和命名空间的详细关系","text":"4. 作用域和命名空间的详细关系：","level":4}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[null,["$","$L11",null,{"html":"$12"}],"$undefined","$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"python-namespaces","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"“python进阶——模块化(一)命名空间和作用域” | 07xiaohei"}],["$","meta","1",{"name":"description","content":"梳理命名空间与作用域的分类、生命周期和名称查找顺序，解释变量的访问范围。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"E-M2wxgR09X62ofy5DhPV"}
+22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+23:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Le",null,{"href":"/blog/python-modules-packages/","children":[["$","span",null,{"children":"上一篇"}],"python进阶——模块化(二)模块和包"]}],["$","$Le",null,{"href":"/blog/python-access-inheritance/","children":[["$","span",null,{"children":"下一篇"}],"python进阶——类(二)访问限制、继承"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$Le",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","python-class-decorators",{"children":[["$","$Le",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$Le",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"编程语言知识点"}]]}]]}]]}]]}]
+14:["$","$L22",null,{"contentId":"python-namespaces"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6","$a:0:1:d:r:props:children:0:props:children:1:props:headings:7","$a:0:1:d:r:props:children:0:props:children:1:props:headings:8","$a:0:1:d:r:props:children:0:props:children:1:props:headings:9","$a:0:1:d:r:props:children:0:props:children:1:props:headings:10","$a:0:1:d:r:props:children:0:props:children:1:props:headings:11","$a:0:1:d:r:props:children:0:props:children:1:props:headings:12","$a:0:1:d:r:props:children:0:props:children:1:props:headings:13","$a:0:1:d:r:props:children:0:props:children:1:props:headings:14","$a:0:1:d:r:props:children:0:props:children:1:props:headings:15"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+21:true
+7:300
+24:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

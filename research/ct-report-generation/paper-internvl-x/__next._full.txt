@@ -1,0 +1,231 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+b:I[887,[],"OutletBoundary"]
+c:"$Sreact.suspense"
+e:"ViewportBoundary"
+f:I[887,[],"$e"]
+11:"MetadataBoundary"
+12:I[887,[],"$11"]
+14:I[5718,[],"default",1]
+:HL["/_next/static/css/1a5e690335e7d9fc.css","style"]
+:HL["/_next/static/css/99458caadf388351.css","style"]
+6:X
+9:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]]}],"p":false,"v":null}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"paper-internvl-x","s":[]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q9"}]]
+7:[["children",{"s":{"n":"topic","t":"d","k":"ct-report-generation","s":[]},"h":197120,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"research","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","research","ct-report-generation","paper-internvl-x",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1a5e690335e7d9fc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/99458caadf388351.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":"$L13"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$14",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"E-M2wxgR09X62ofy5DhPV"}
+6:C
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+15:"static/chunks/825-1a8f209f3ada760f.js"
+16:"static/chunks/app/layout-f6895f86611bc12f.js"
+17:I[6767,["825","$15","177","$16"],"DisplayProvider"]
+18:"NavigationFeedback"
+19:I[2842,["825","$15","177","$16"],"$18"]
+1a:I[8587,["825","$15","177","$16"],"SiteHeader"]
+1b:I[5803,["825","$15","177","$16"],"SiteFrame"]
+1c:I[164,["825","$15","177","$16"],"ProfileSidebar"]
+1d:"static/chunks/491-13729696a55105fe.js"
+1e:"static/chunks/app/research/%5Btopic%5D/%5Bslug%5D/page-2c6457ecdf34d249.js"
+1f:I[3498,["825","$15","491","$1d","154","$1e"],"default"]
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L17",null,{"children":[["$","$L19",null,{}],["$","$L1a",null,{"tags":["编程语言知识点","python","C++"],"categoryIds":["foundations","frontend","backend","agent","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L1b",null,{"sidebar":["$","$L1c",null,{"categoryIds":"$2:props:children:1:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1f",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1f",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1f",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1f",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+d:null
+13:[["$","title","0",{"children":"InternVL-X：视觉token在输入、投影和LLM层间怎样压缩 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"07xiaohei 的学习笔记、医学影像研究记录与交互式技术实践。"}]]
+a:["$","article",null,{"className":"shell reading-page research-detail","children":[["$","header",null,{"className":"article-heading","children":["$L20",["$","h1",null,{"tabIndex":-1,"children":"InternVL-X：视觉token在输入、投影和LLM层间怎样压缩"}],["$","p",null,{"className":"article-deck","children":"按RVTC、PVTC和LVTC所在位置拆解压缩方式，解释深层扩展为什么仍需补入原始视觉特征，并保留实际时间与精度的取舍"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"className":"status-tag","children":"论文笔记"}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","论文阅读",{"children":"论文阅读"}],["$","span","InternVL-X",{"children":"InternVL-X"}],["$","span","视觉token",{"children":"视觉token"}],["$","span","层间注入",{"children":"层间注入"}],["$","span","2D方法延伸",{"children":"2D方法延伸"}]]}]]}],false,["$","nav",null,{"className":"paper-reading-navigation","aria-label":"论文阅读系列","children":[["$","$L1f",null,{"href":"/research/ct-report-generation/paper-reading/","children":"3D胸部CT论文阅读"}],["$","span",null,{"children":["第 ",20," / ",21," 篇"]}],["$","details",null,{"children":[["$","summary",null,{"children":"系列目录"}],["$","ol",null,{"children":[["$","li","ct-paper-ct-chat",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-ct-chat/","aria-current":"$undefined","children":"CT-RATE、CT-CLIP与CT-CHAT：从3D胸部CT数据到报告生成"}]}],["$","li","ct-paper-radgenome-chestct",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-radgenome-chestct/","aria-current":"$undefined","children":"RadGenome-ChestCT：CT中的解剖区域怎样对应到报告句子"}]}],["$","li","ct-paper-merlin",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-merlin/","aria-current":"$undefined","children":"Merlin：怎样用报告和诊断码训练可迁移的3D CT表征"}]}],["$","li","ct-paper-fvlm",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-fvlm/","aria-current":"$undefined","children":"fVLM：器官级图文对齐为什么还需要处理假负样本"}]}],["$","li","ct-paper-reg2rg",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-reg2rg/","aria-current":"$undefined","children":"Reg2RG：怎样把区域纹理、几何位置与CT报告对应起来"}]}],["$","li","ct-paper-ct-graph",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-ct-graph/","aria-current":"$undefined","children":"CT-GRAPH：局部解剖特征怎样沿分层图传给报告生成模型"}]}],["$","li","ct-paper-medregion-ct",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-medregion-ct/","aria-current":"$undefined","children":"MedRegion-CT：区域视觉信息与病灶属性怎样共同生成报告"}]}],["$","li","ct-paper-ct-agrg",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-ct-agrg/","aria-current":"$undefined","children":"CT-AGRG：先识别异常，再逐项生成CT报告描述"}]}],["$","li","ct-paper-dcp-pd",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-dcp-pd/","aria-current":"$undefined","children":"DCP-PD：分类提示能帮多少，CT图像又贡献了什么"}]}],["$","li","ct-paper-argus",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-argus/","aria-current":"$undefined","children":"Argus：3D报告生成中的视觉预训练、token压缩与训练配置"}]}],["$","li","ct-paper-designspace-3d-mllm",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-designspace-3d-mllm/","aria-current":"$undefined","children":"3D-MLLM Design Space：模型规模、视觉输入与报告补全改变了什么"}]}],["$","li","ct-paper-astra",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-astra/","aria-current":"$undefined","children":"Astra：统一报告监督之后，怎样训练和评价跨机构CT生成模型"}]}],["$","li","ct-paper-clargen",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-clargen/","aria-current":"$undefined","children":"CLarGen：怎样检查CT报告生成中的模板重复和异常遗漏"}]}],["$","li","ct-paper-cpr-rag",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-cpr-rag/","aria-current":"$undefined","children":"CPR-RAG：器官检索与共现先验怎样影响CT报告的完整性"}]}],["$","li","ct-paper-monteret",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-monteret/","aria-current":"$undefined","children":"MonteRET：区域检索怎样参与CT报告修订，结果还有哪些疑问"}]}],["$","li","ct-paper-btb3d",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-btb3d/","aria-current":"$undefined","children":"BTB3D：从短体积重建中学习长CT可以使用的视觉token"}]}],["$","li","ct-paper-finegrained-alignment",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-finegrained-alignment/","aria-current":"$undefined","children":"细粒度视觉对齐：projector有没有把局部视觉信息交给LLM"}]}],["$","li","ct-paper-sea",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-sea/","aria-current":"$undefined","children":"SEA：怎样让视觉token提前对齐到LLM的输入语义空间"}]}],"$L21","$L22","$L23"]}]]}]]}],"$L24","$L25"]}]
+26:I[4067,["825","$15","491","$1d","154","$1e"],"ArticleToc"]
+27:I[4711,["825","$15","491","$1d","154","$1e"],"ArticleBody"]
+21:["$","li","ct-paper-visualtoken-sparsity",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-visualtoken-sparsity/","aria-current":"$undefined","children":"Visual Token Sparsity：怎样区分视觉语义、注意力与计算冗余"}]}]
+22:["$","li","ct-paper-internvl-x",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-internvl-x/","aria-current":"page","children":"InternVL-X：视觉token在输入、投影和LLM层间怎样压缩"}]}]
+23:["$","li","ct-paper-multilayer-fusion",{"children":["$","$L1f",null,{"href":"/research/ct-report-generation/paper-multilayer-fusion/","aria-current":"$undefined","children":"多层视觉特征融合：从选层、注入位置到长视觉序列的计算"}]}]
+24:["$","$L26",null,{"headings":[{"id":"section-三个模块作用在不同位置","text":"三个模块作用在不同位置","level":2},{"id":"section-pvtc局部信息和全局query一起压缩","text":"PVTC：局部信息和全局query一起压缩","level":2},{"id":"section-lvtc浅层先省深层再补细节","text":"LVTC：浅层先省，深层再补细节","level":2},{"id":"section-rvtc长宽比不该单独决定切图数量","text":"RVTC：长宽比不该单独决定切图数量","level":2},{"id":"section-总体结果与实现成本要分开","text":"总体结果与实现成本要分开","level":2},{"id":"section-我会带走的设计原则","text":"我会带走的设计原则","level":2}],"mobile":true}]
+28:T3cdf,<p>InternVL-X从三个位置减少视觉token开销：输入高分辨率图像时控制切图数量，在projector中压缩表示，以及让LLM浅层先处理较少的视觉token、深层再补充细节。</p>
+<p>我对这篇的评价较高，尤其关注“先少后多”的层间设计。把少量token上采样成更多位置，并不会自动恢复图像细节，因此还要看原始高分辨率特征从哪里补进来。效率结果也需要结合实际时间看，token减少与训练加速并不总是同步。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">资料</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">内容</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">原文</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><em>InternVL-X: Advancing and Accelerating InternVL Series with Efficient Visual Token Compression</em></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">作者／版本</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Dongchen Lu等；<a href="https://arxiv.org/abs/2503.21307v1" rel="noopener noreferrer">arXiv:2503.21307v1</a>，2025-03-27</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">代码</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><a href="https://github.com/ludc506/InternVL-X" rel="noopener noreferrer">ludc506/InternVL-X</a></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">三个模块</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">PVTC：投影压缩；LVTC：层间压缩；RVTC：分辨率与切图控制</td></tr></tbody></table>
+<h2 id="section-三个模块作用在不同位置">三个模块作用在不同位置</h2>
+<p><a href="/images/ct-paper-notes/internvl-x-figure-1.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：InternVL-X的PVTC、LVTC与RVTC结构"><img src="/images/ct-paper-notes/internvl-x-figure-1.jpg" alt="InternVL-X的PVTC、LVTC与RVTC结构" width="1197" height="526" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>原文Fig.2。三者可以分别使用，也可以组合；效率收益需要按组合实测。</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">模块</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">所在位置</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">主要动作</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RVTC</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">视觉编码前的切图策略</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">按原图面积或边长限制切片数</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">PVTC</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">视觉编码器与LLM之间</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">局部query和全局query共同压缩窗口内token</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">LVTC</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">LLM不同深度</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">浅层用少量token，深层扩展并补入高分辨率特征</td></tr></tbody></table>
+<h2 id="section-pvtc局部信息和全局query一起压缩">PVTC：局部信息和全局query一起压缩</h2>
+<p>先把视觉token恢复成二维网格，再分成不重叠窗口。每个窗口的相邻token经pixel shuffle与MLP组成局部query；视觉编码器的CLS token经MLP映射，再为各位置引入可学习scale，组成不同的全局query。</p>
+<p>两类query分别与窗口内原始特征做point-to-region cross-attention，最后把局部和全局结果逐元素相加，得到压缩token。所谓“全局query”来自CLS，但它查询的Key／Value仍受局部窗口约束，不是简单增加一次全图自注意力。（PVTC）</p>
+<p>把几种压缩器放在一起看，区别会更明确：pixel shuffle主要重排并压缩邻域；TokenPacker强调局部查询；PVTC额外引入全局语义条件。这个区别比只比较token数量更有用。</p>
+<h2 id="section-lvtc浅层先省深层再补细节">LVTC：浅层先省，深层再补细节</h2>
+<p>作者观察到所研究InternVL在浅层主要关注相邻位置，深层注意力范围才逐渐扩大。因此先用低分辨率projector得到较少的视觉token，在前k层处理；到指定深度后，把token按二维布局上采样，扩大序列。</p>
+<p><strong>上采样只改变表示的空间数量，不会凭空带来新的图像信息。</strong> 本文另设高分辨率projector，从原始视觉特征获得更密集表示，与上采样结果残差相加。还通过多个低分辨率projector在中间层逐次注入特征，缓解视觉信息遗失。（LVTC）</p>
+<p><a href="/images/ct-paper-notes/internvl-x-method-flow.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：浅层压缩、层间补充与深层扩展的关系"><img src="/images/ct-paper-notes/internvl-x-method-flow.svg" alt="浅层压缩、层间补充与深层扩展的关系" width="850" height="551" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p>这一模式与“先保留全部token、越往深层删得越多”方向不同。两者不能只按经验选一个，必须观察目标模型的层间行为。它也可与<a href="/research/ct-report-generation/paper-visualtoken-sparsity/">EmbedLens</a>提出的浅层视觉冗余问题联系起来，但两篇模型、训练与干预方式并不相同。</p>
+<h2 id="section-rvtc长宽比不该单独决定切图数量">RVTC：长宽比不该单独决定切图数量</h2>
+<p>只匹配长宽比时，一张很小的长条图也可能被切成多块，再全部放大输入。RVTC进一步限制最大块数：area matching根据原始像素总量估计预算，edge matching根据宽高分别需要多少448尺寸块估计预算，再进行匹配。</p>
+<p>下面是InternVL2-2B的切图实验。此表是成本—精度取舍，平均token、时间越小越好，Accuracy越大越好，因此不把整行统一标成“最佳”。（Table 5）</p>
+<p>同一指标内最优加粗、次优加下划线；按各列标明的方向比较，排名不代表统计显著性。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">切图方式</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">平均patch数 ↓</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">平均token数 ↓</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">训练时间 ↓</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Accuracy ↑</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">原始比例匹配</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">5.009</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">1282</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">13.5h</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>58.77</strong></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RVTC-area</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>1.559</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>399</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>6.7h</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">57.46</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">RVTC-edge</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>2.033</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>520</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>7.9h</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>58.21</u></td></tr></tbody></table>
+<p>面积策略更省，边长策略保留了更多精度。这一组结果需要同时保留成本与精度：约60%的token减少对应怎样的准确率变化，才是选择切图策略时要比较的内容。</p>
+<h2 id="section-总体结果与实现成本要分开">总体结果与实现成本要分开</h2>
+<p>相同基础数据设置下，InternLM2-1.8B版本的12任务平均分由45.47到48.32，InternLM2.5-7B版本由50.83到53.85。这里的基线是作者重新训练的InternVL版本，原文用#标记，不能当作官方checkpoint的直接评测。（Table 1）</p>
+<p>组件消融还有一个重要条件：带星号的配置没有使用Flash Attention。下面保留这一标记，推理时间是<strong>每个生成token的平均延迟</strong>，不是整份回答耗时。（Table 2）</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">配置</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">视觉token</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Accuracy</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">训练时间</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">每生成token延迟</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Base</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">256</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">47.78</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">4.1h</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">39.9ms</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">＋PVTC</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">256</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">50.03</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">4.3h</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">42.7ms</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">＋LVTC*</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">256</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">50.26</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">7.0h</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">40.3ms</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">＋PVTC＋LVTC*</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">256</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">50.90</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">7.3h</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">41.6ms</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Base-HD</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">约1282</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">58.77</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">13.5h</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">46.7ms</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">＋RVTC</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">约520</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">58.21</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">8.6h</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">43.3ms</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">＋PVTC＋RVTC</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">约520</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">60.85</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">9.1h</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">44.5ms</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">全模块*</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">约520</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">61.56</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">18.7h</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">45.2ms</td></tr></tbody></table>
+<p>全模块的Accuracy最高，但训练时间长于Base-HD，不能概括成“全部模块一起用，训练也最快”。Table 2与单独切图表的RVTC训练时间口径也不完全一致，分别保留原值。</p>
+<h2 id="section-我会带走的设计原则">我会带走的设计原则</h2>
+<ul>
+<li>token压缩应考虑局部细节与全局语义，不只是把网格缩小。</li>
+<li>省计算的位置可以放在LLM浅层，但恢复细节需要额外特征来源，上采样不够。</li>
+<li>输入端按真实像素量分配切图预算，避免小图因长宽比而被过度展开。</li>
+<li>最终用实际延迟、训练成本和任务分数共同判断；token数量只是其中一个代理量。</li>
+</ul>
+<p>这些思想对3D CT有参考价值，但论文没有验证病灶保真或体积连续性。若把RVTC式预算分配或LVTC式压缩迁移到CT，需要特别检查小病灶、跨切片结构和精细定位，不能只看通用问答平均分。</p>25:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[[["$","$L27","0",{"html":"$28","focusTables":true}]],false,false,"$L29"]}],"$L2a"]}]
+29:["$","section",null,{"className":"article-continuation","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列阅读顺序","children":[["$","$L1f",null,{"href":"/research/ct-report-generation/paper-visualtoken-sparsity/","children":[["$","span",null,{"children":"上一篇"}],"Visual Token Sparsity：怎样区分视觉语义、注意力与计算冗余"]}],["$","$L1f",null,{"href":"/research/ct-report-generation/paper-multilayer-fusion/","children":[["$","span",null,{"children":"下一篇"}],"多层视觉特征融合：从选层、注入位置到长视觉序列的计算"]}]]}],["$","$L1f",null,{"className":"text-link","href":"/research/ct-report-generation/paper-reading/","children":"返回论文阅读导读"}],["$","$L1f",null,{"className":"text-link","href":"/research/ct-report-generation/","children":"返回主题与完整系列"}]]}]
+2a:["$","$L26",null,{"headings":"$24:props:headings"}]
+2b:I[6279,["825","$15","491","$1d","154","$1e"],"FilterLink"]
+20:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1f",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1f",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$L1f",null,{"href":"/research/","children":["研究",["$","span",null,{"children":26}]]}],["$","$L2b",null,{"className":"trail-current","href":"/research/#direction-medical-imaging","children":["医学影像处理",["$","span",null,{"children":26}]]}],["$","$L1f",null,{"className":"trail-parent","href":"/research/ct-report-generation/","children":"基于细粒度临床事实建模的三维胸部 CT 报告生成"}]]}]

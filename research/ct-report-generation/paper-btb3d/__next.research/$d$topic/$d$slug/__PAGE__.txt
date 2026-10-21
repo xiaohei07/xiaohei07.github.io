@@ -1,0 +1,230 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+d:"static/chunks/825-1a8f209f3ada760f.js"
+e:"static/chunks/491-13729696a55105fe.js"
+f:"static/chunks/app/research/%5Btopic%5D/%5Bslug%5D/page-2c6457ecdf34d249.js"
+10:I[3498,["825","$d","491","$e","154","$f"],"default"]
+11:I[6279,["825","$d","491","$e","154","$f"],"FilterLink"]
+1f:"ViewportBoundary"
+20:I[887,[],"$1f"]
+21:"MetadataBoundary"
+22:I[887,[],"$21"]
+23:"$Sreact.suspense"
+6:X
+6:C
+7:X
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page research-detail","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L10",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L10",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$L10",null,{"href":"/research/","children":["研究",["$","span",null,{"children":26}]]}],["$","$L11",null,{"className":"trail-current","href":"/research/#direction-medical-imaging","children":["医学影像处理",["$","span",null,{"children":26}]]}],["$","$L10",null,{"className":"trail-parent","href":"/research/ct-report-generation/","children":"基于细粒度临床事实建模的三维胸部 CT 报告生成"}]]}],["$","h1",null,{"tabIndex":-1,"children":"BTB3D：从短体积重建中学习长CT可以使用的视觉token"}],["$","p",null,{"className":"article-deck","children":"介绍3D小波变换、因果轴向编码和离散量化，说明短体积训练怎样接到长CT，并比较不同压缩率在报告生成与CT合成中的表现"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"className":"status-tag","children":"论文笔记"}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","论文阅读",{"children":"论文阅读"}],["$","span","3D CT",{"children":"3D CT"}],["$","span","BTB3D",{"children":"BTB3D"}],["$","span","视觉token",{"children":"视觉token"}],["$","span","体积重建",{"children":"体积重建"}]]}]]}],false,["$","nav",null,{"className":"paper-reading-navigation","aria-label":"论文阅读系列","children":[["$","$L10",null,{"href":"/research/ct-report-generation/paper-reading/","children":"3D胸部CT论文阅读"}],["$","span",null,{"children":["第 ",16," / ",21," 篇"]}],["$","details",null,{"children":[["$","summary",null,{"children":"系列目录"}],["$","ol",null,{"children":[["$","li","ct-paper-ct-chat",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-ct-chat/","children":"CT-RATE、CT-CLIP与CT-CHAT：从3D胸部CT数据到报告生成"}]}],["$","li","ct-paper-radgenome-chestct",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-radgenome-chestct/","children":"RadGenome-ChestCT：CT中的解剖区域怎样对应到报告句子"}]}],["$","li","ct-paper-merlin",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-merlin/","children":"Merlin：怎样用报告和诊断码训练可迁移的3D CT表征"}]}],["$","li","ct-paper-fvlm",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-fvlm/","children":"fVLM：器官级图文对齐为什么还需要处理假负样本"}]}],["$","li","ct-paper-reg2rg",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-reg2rg/","children":"Reg2RG：怎样把区域纹理、几何位置与CT报告对应起来"}]}],["$","li","ct-paper-ct-graph",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-ct-graph/","children":"CT-GRAPH：局部解剖特征怎样沿分层图传给报告生成模型"}]}],["$","li","ct-paper-medregion-ct",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-medregion-ct/","children":"MedRegion-CT：区域视觉信息与病灶属性怎样共同生成报告"}]}],["$","li","ct-paper-ct-agrg",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-ct-agrg/","children":"CT-AGRG：先识别异常，再逐项生成CT报告描述"}]}],["$","li","ct-paper-dcp-pd",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-dcp-pd/","children":"DCP-PD：分类提示能帮多少，CT图像又贡献了什么"}]}],["$","li","ct-paper-argus",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-argus/","children":"Argus：3D报告生成中的视觉预训练、token压缩与训练配置"}]}],["$","li","ct-paper-designspace-3d-mllm",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-designspace-3d-mllm/","children":"3D-MLLM Design Space：模型规模、视觉输入与报告补全改变了什么"}]}],["$","li","ct-paper-astra",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-astra/","children":"Astra：统一报告监督之后，怎样训练和评价跨机构CT生成模型"}]}],["$","li","ct-paper-clargen",{"children":"$L12"}],"$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a"]}]]}]]}],"$L1b","$L1c"]}],null,"$L1d"]}],"p":"$@1e","v":null,"s":"$7"}}]]
+a:[["children",{"s":{"n":"slug","t":"d","k":"paper-btb3d","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
+8:[["children",{"s":{"n":"topic","t":"d","k":"ct-report-generation","s":[]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"research","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L20",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L22",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$23",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"BTB3D：从短体积重建中学习长CT可以使用的视觉token | 07xiaohei"}],["$","meta","1",{"name":"description","content":"07xiaohei 的学习笔记、医学影像研究记录与交互式技术实践。"}]]}]}],null]}],null]}],"p":"$@24","v":null,"s":"$7"}},"a":"$@25","u":"$@26","b":"E-M2wxgR09X62ofy5DhPV"}
+27:I[4067,["825","$d","491","$e","154","$f"],"ArticleToc"]
+28:I[4711,["825","$d","491","$e","154","$f"],"ArticleBody"]
+2c:I[887,[],"OutletBoundary"]
+12:["$","$L10",null,{"href":"/research/ct-report-generation/paper-clargen/","children":"CLarGen：怎样检查CT报告生成中的模板重复和异常遗漏"}]
+13:["$","li","ct-paper-cpr-rag",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-cpr-rag/","children":"CPR-RAG：器官检索与共现先验怎样影响CT报告的完整性"}]}]
+14:["$","li","ct-paper-monteret",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-monteret/","children":"MonteRET：区域检索怎样参与CT报告修订，结果还有哪些疑问"}]}]
+15:["$","li","ct-paper-btb3d",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-btb3d/","aria-current":"page","children":"BTB3D：从短体积重建中学习长CT可以使用的视觉token"}]}]
+16:["$","li","ct-paper-finegrained-alignment",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-finegrained-alignment/","children":"细粒度视觉对齐：projector有没有把局部视觉信息交给LLM"}]}]
+17:["$","li","ct-paper-sea",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-sea/","children":"SEA：怎样让视觉token提前对齐到LLM的输入语义空间"}]}]
+18:["$","li","ct-paper-visualtoken-sparsity",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-visualtoken-sparsity/","children":"Visual Token Sparsity：怎样区分视觉语义、注意力与计算冗余"}]}]
+19:["$","li","ct-paper-internvl-x",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-internvl-x/","children":"InternVL-X：视觉token在输入、投影和LLM层间怎样压缩"}]}]
+1a:["$","li","ct-paper-multilayer-fusion",{"children":["$","$L10",null,{"href":"/research/ct-report-generation/paper-multilayer-fusion/","children":"多层视觉特征融合：从选层、注入位置到长视觉序列的计算"}]}]
+1b:["$","$L27",null,{"headings":[{"id":"section-为什么先做重建式tokenizer","text":"为什么先做重建式tokenizer","level":2},{"id":"section-haar变换减少空间尺寸保留频率子带","text":"Haar变换：减少空间尺寸，保留频率子带","level":2},{"id":"section-因果卷积与lfq各解决什么","text":"因果卷积与LFQ各解决什么","level":2},{"id":"section-三阶段训练窗口拼接是关键","text":"三阶段训练：窗口拼接是关键","level":2},{"id":"section-报告生成压缩更强的版本反而更好","text":"报告生成：压缩更强的版本反而更好","level":2},{"id":"section-文本生成ct与报告生成的偏好不同","text":"文本生成CT与报告生成的偏好不同","level":2},{"id":"section-我会借鉴什么暂不照搬什么","text":"我会借鉴什么，暂不照搬什么","level":2}],"mobile":true}]
+29:T420c,<p>BTB3D从视觉表示本身入手：先训练能够重建CT体积的编码器与解码器，得到紧凑的3D token，再将它们用于报告生成和根据文本生成CT。这样可以从重建能力和下游任务两个角度检查压缩后的表示。</p>
+<p>我在阅读时给它的评价是较高，但不适合直接照搬完整训练。结构和训练方法值得研究，算力开销也确实很大。因此更适合先弄清它怎样连接短体积与长CT，以及不同压缩率分别保留了什么。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">资料</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">内容</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">原文</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><em>Better Tokens for Better 3D: Advancing Vision-Language Modeling in 3D Medical Imaging</em></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">版本</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">NeurIPS 2025；<a href="https://arxiv.org/abs/2510.20639v1" rel="noopener noreferrer">arXiv:2510.20639v1</a></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">代码</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><a href="https://github.com/ibrahimethemhamamci/BTB3D" rel="noopener noreferrer">ibrahimethemhamamci/BTB3D</a></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">两种配置</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">8×8×8与16×16×8，表示两个空间维度和轴向维度的压缩倍率</td></tr></tbody></table>
+<h2 id="section-为什么先做重建式tokenizer">为什么先做重建式tokenizer</h2>
+<p>整份CT报告通常覆盖完整扫描，随机截取少量切片后，文本内容未必都能在可见范围中找到。直接做图文对比可能引入错位；相似病情的非配对报告还可能被当成负样本推开。</p>
+<p>BTB3D因此先用重建任务学习局部结构和空间连续性。编码器需要保留的信息由重建约束提供，后续再适配图文任务。这并不能证明对比学习普遍不适合CT，但提供了不同的视觉预训练路线。</p>
+<h2 id="section-haar变换减少空间尺寸保留频率子带">Haar变换：减少空间尺寸，保留频率子带</h2>
+<p>每个2×2×2体素块通过3D Haar变换得到8个系数：一个低频、七个高频。三个空间轴各减半，同时通道数从1变成8，使粗结构和局部变化以不同子带进入网络。</p>
+<p>这里要分清“空间分辨率降低”和“元素总数减少”：<strong>Haar重排前后的系数总数并不会仅因这一步减少八倍</strong>。后续网络计算如何变化，还取决于通道配置与实现。不能把文中空间压缩的描述直接写成总存储量八分之一。</p>
+<p><a href="/images/ct-paper-notes/btb3d-figure-1.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：BTB3D的因果编码、量化与重叠窗口训练"><img src="/images/ct-paper-notes/btb3d-figure-1.jpg" alt="BTB3D的因果编码、量化与重叠窗口训练" width="954" height="733" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>原文Fig.1。上部展示短体积编码与解码，下部展示相邻窗口重叠并选择token的规则。</em></p>
+<h2 id="section-因果卷积与lfq各解决什么">因果卷积与LFQ各解决什么</h2>
+<p>残差块把3D卷积分解为空间卷积和轴向卷积，轴向仅在“过去”补零，不访问后续切片。这里的因果是<strong>序列计算约束</strong>，不涉及医学因果推断。单张切片和多个切片可沿用同一结构；对较长CT则按轴向顺序组织表示。</p>
+<p>编码器输出经过lookup-free quantization（LFQ）：每个维度取符号，成为−1或＋1，再将二进制组合打包为离散token编号。d维可以表示2的d次方种编码；文中d=18，对应262,144种组合。它避免了对可学习大码本逐项搜索，而不意味着潜在空间没有离散编码集合。</p>
+<p>解码器还原小波域表示，再经逆Haar变换恢复CT。损失由以下部分组成：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">约束</th><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">作用</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">L1重建损失</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">限制重建体素与输入的偏差</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">对抗损失</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">在CT域约束外观与结构的真实性</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">量化／commitment约束</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">减少连续编码与离散表示的不一致；stop-gradient控制更新流向</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">编码熵正则</td><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">鼓励使用更多编码，缓解少数token被反复占用的坍塌</td></tr></tbody></table>
+<p>原文总损失展示了前三项，并另述熵正则。没有采用自然RGB图像的VGG感知损失，理由是它与灰度医学影像存在域差异；这是一项具体设计选择，不能推成所有感知损失都无效。</p>
+<h2 id="section-三阶段训练窗口拼接是关键">三阶段训练：窗口拼接是关键</h2>
+<p>第一阶段在单张切片或9张切片的短体积上联合训练编码器、量化器和解码器，先学局部结构。</p>
+<p>第二阶段继续训练编码器与解码器，但把长体积分成重叠的9切片窗口：1–9、9–17、17–25……第一个窗口保留两个轴向token，后续窗口丢掉只覆盖起始切片的第一个token，仅保留第二个。最后把保留的序列送入解码器。</p>
+<p>第三阶段冻结编码器与量化表示，只微调解码器，适应更长序列的重建。下游使用与训练一致的tiled inference。<strong>分块降低编码端峰值负担，不意味着总计算、输出大小或整套系统的显存永远不随序列长度增加。</strong></p>
+<p><a href="/images/ct-paper-notes/btb3d-method-flow.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：BTB3D三阶段训练及参数更新范围"><img src="/images/ct-paper-notes/btb3d-method-flow.svg" alt="BTB3D三阶段训练及参数更新范围" width="850" height="551" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><a href="/images/ct-paper-notes/btb3d-figure-2.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：三阶段训练后的轴位、冠状位和矢状位重建"><img src="/images/ct-paper-notes/btb3d-figure-2.jpg" alt="三阶段训练后的轴位、冠状位和矢状位重建" width="953" height="724" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><em>原文Fig.2。短序列训练直接用于整幅CT时伪影明显，重叠窗口训练带来主要改善。</em></p>
+<p>8×8×8配置的整卷重建PSNR从阶段1的9.350升到阶段2的23.980，再到阶段3的28.166；SSIM对应0.206、0.697、0.760。重建改善说明体积信息保存得更好，但是否保留病灶诊断细节，还需要下游任务来检查。（Table 1）</p>
+<h2 id="section-报告生成压缩更强的版本反而更好">报告生成：压缩更强的版本反而更好</h2>
+<p>视觉token经线性层送入LLaMA 3.1-8B。16×16×8配置使用18维token；8×8×8原本拥有四倍空间token，文中进一步合并为72维表示，以控制送入语言模型的序列。两个变体的LoRA配置也不同，因此不能把所有结果差异只归因于压缩率。</p>
+<p>下面沿用原表数值，均越高越好；同一测试集内最佳加粗、次佳下划线。（Table 2、Table 3）</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-RATE</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">F1</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Precision</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Recall</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CRG</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">BLEU-4</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT2Rep</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.160</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.435</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.128</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.359</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.213</u></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Merlin（原文重训）</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.160</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.295</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.112</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.352</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.099</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-CHAT</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.184</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.450</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.158</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.368</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.198</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">BTB3D-8</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.187</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.260</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.150</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.357</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.215</strong></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">BTB3D-16</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.258</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.260</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.260</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.370</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.213</u></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Rad-ChestCT</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">F1</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Precision</th><th align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Recall</th></tr></thead><tbody><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT2Rep</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.133</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.299</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.139</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">Merlin（原文重训）</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.182</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.271</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.149</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">CT-CHAT</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.182</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.382</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.171</u></td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">BTB3D-8</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><u>0.192</u></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.269</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.165</td></tr><tr><td tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">BTB3D-16</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.266</strong></td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除">0.272</td><td align="right" tabindex="0" title="点击或按回车聚焦行列，按 Escape 清除"><strong>0.329</strong></td></tr></tbody></table>
+<p>BTB3D-16在CT-RATE的F1为0.258，相对CT-CHAT的0.184提高约40.2%，对应绝对增加0.074。它的Precision仍低于CT-CHAT，BLEU-4也不是最高。外部Rad-ChestCT只有标签，没有可比的自由文本参考报告，所以这里不列BLEU。</p>
+<p>因此，视觉token更细以后，下游任务是否一定更好，还需要单独比较。更强压缩可能更适合当前语言模型与训练预算，但这不是小病灶信息不重要的证据。</p>
+<h2 id="section-文本生成ct与报告生成的偏好不同">文本生成CT与报告生成的偏好不同</h2>
+<p>在文本条件CT生成中，较低压缩的BTB3D-8表现更好：平均FID为2.236，对照GenerateCT为9.512；基于CT-Net的FVD为3.955，对照为7.659。这里FID、FVD越低越好。（Table 4）</p>
+<p>生成模型采用带文本交叉注意力的transformer，训练目标是flow matching，输出经过解码器还原为512×512×241的CT。它不是把报告生成流程倒过来就自然得到影像。</p>
+<p>原文称BTB3D-16在所有生成指标都优于对照，但表中Text-Image CLIP Score为23.322，低于GenerateCT的23.625与MedSyn的23.571。正文按表保留这一例外，不沿用“全部领先”。</p>
+<h2 id="section-我会借鉴什么暂不照搬什么">我会借鉴什么，暂不照搬什么</h2>
+<p>可以借鉴的是短体积训练与长体积推理之间的衔接，以及用重建检查token是否丢失结构。完整训练则用到64张H100，报告适配阶段用40张H100，文本生成CT阶段用16张H100。这与“低成本就能训练完整系统”差距很大。</p>
+<p>若只研究报告生成，可以先把它作为视觉表征的对照，与<a href="/research/ct-report-generation/paper-argus/">Argus</a>的预训练配置、<a href="/research/ct-report-generation/paper-visualtoken-sparsity/">Visual Token Sparsity</a>的token分析方法一起看。一个研究怎样得到token，一个研究哪些token在任务中真正起作用。</p>1c:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[[["$","$L28","0",{"html":"$29","focusTables":true}]],false,false,"$L2a"]}],"$L2b"]}]
+1d:["$","$L2c",null,{"children":["$","$23",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]
+26:true
+7:300
+2a:["$","section",null,{"className":"article-continuation","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列阅读顺序","children":[["$","$L10",null,{"href":"/research/ct-report-generation/paper-monteret/","children":[["$","span",null,{"children":"上一篇"}],"MonteRET：区域检索怎样参与CT报告修订，结果还有哪些疑问"]}],["$","$L10",null,{"href":"/research/ct-report-generation/paper-finegrained-alignment/","children":[["$","span",null,{"children":"下一篇"}],"细粒度视觉对齐：projector有没有把局部视觉信息交给LLM"]}]]}],["$","$L10",null,{"className":"text-link","href":"/research/ct-report-generation/paper-reading/","children":"返回论文阅读导读"}],["$","$L10",null,{"className":"text-link","href":"/research/ct-report-generation/","children":"返回主题与完整系列"}]]}]
+2b:["$","$L27",null,{"headings":"$1b:props:headings"}]
+2d:null
+7:C
+25:0
+b:"$undefined"
+9:"$undefined"
+5:"$undefined"
+24:"$undefined"
+1e:"$undefined"

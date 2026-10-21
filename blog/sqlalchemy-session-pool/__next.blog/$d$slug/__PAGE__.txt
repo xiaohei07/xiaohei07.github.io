@@ -1,0 +1,84 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T1986,<p>已经能看懂基本SQL后，再看SQLAlchemy就有了对应关系：它帮助Python组织数据库操作，其中ORM（对象关系映射）把类与数据库表联系起来。数据库仍然执行SQL，SQLAlchemy没有替代PostgreSQL。</p>
+<h2 id="section-模型engine与session分别是什么">模型、Engine与Session分别是什么</h2>
+<p>模型声明类与列的映射，例如<code>Feedback.message</code>对应反馈表的消息列。Engine管理数据库方言、驱动调用和连接池；Session负责一段工作中的ORM对象与事务。它们处在不同层次，不应把Session直接理解成数据库本身。</p>
+<p>本站的<code>Database</code>对象懒创建Engine，并用锁避免同进程首次访问时重复创建。<code>create_engine</code>建立Engine对象，不会立刻把3个数据库连接全部打开；连接通常在真正需要时借出或建立。<a href="https://docs.sqlalchemy.org/en/20/orm/quickstart.html" rel="noopener noreferrer">ORM入门</a>与<a href="https://docs.sqlalchemy.org/en/20/core/pooling.html" rel="noopener noreferrer">连接池说明</a>可以对应阅读。</p>
+<h2 id="section-添加对象到返回回执的过程">添加对象到返回回执的过程</h2>
+<p>本站提交反馈的核心关系可以缩小为：</p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">with</span> database.session() <span class="hljs-keyword">as</span> db:
+    feedback = Feedback(
+        content_id=payload.content_id,
+        kind=payload.kind,
+        message=payload.message,
+    )
+    db.add(feedback)
+    db.commit()
+    <span class="hljs-keyword">return</span> FeedbackCreated(<span class="hljs-built_in">id</span>=feedback.<span class="hljs-built_in">id</span>, status=<span class="hljs-string">"pending"</span>)
+</code></pre></div>
+<p>这里省略了内容登记检查，只用于解释会话和事务。<code>add</code>将对象交给Session管理；flush把待执行变更发送给数据库；commit会在需要时先flush，再提交事务。因此<code>add</code>之后还不能向用户承诺已经持久保存。</p>
+<p>普通<code>with Session(...)</code>主要负责结束时关闭Session，不会自动将所有变更提交。<code>with Session.begin()</code>等事务上下文则有不同语义，需要看具体写法。本站明确调用<code>commit()</code>。<a href="https://docs.sqlalchemy.org/en/20/orm/session_basics.html" rel="noopener noreferrer">Session基础</a>说明了flush、提交、回滚与关闭之间的关系。</p>
+<p>若flush失败并准备继续使用同一个Session，需要先正确rollback；本站请求直接结束时，也应确保上下文释放资源。不能捕获异常后继续用一个处于失败事务状态的会话查询，再把后续报错当成新根因。</p>
+<h2 id="section-expire_on_commitfalse为什么出现在本站">expire_on_commit=False为什么出现在本站</h2>
+<p>默认情况下，提交后ORM对象属性可能被标记过期，之后访问需要重新加载。本站Session设置<code>expire_on_commit=False</code>，方便提交后读取本次对象的ID等属性组成响应。</p>
+<p>这不会让对象永远与数据库同步。另一个事务修改数据后，内存对象可能仍是旧值；需要新查询或刷新才能按目标一致性要求取得更新。Session的身份映射避免同一工作范围里无序制造同身份对象，也不能当成跨请求缓存使用。</p>
+<p>Session应按请求或明确工作单元管理，不给多个并发线程共享一个可变会话。Engine可以长期复用，Session的生命周期通常短得多。</p>
+<h2 id="section-三个连接池参数怎样影响等待">三个连接池参数怎样影响等待</h2>
+<p>本站配置如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python">pool_size=<span class="hljs-number">3</span>
+max_overflow=<span class="hljs-number">0</span>
+pool_timeout=<span class="hljs-number">3</span>
+pool_pre_ping=<span class="hljs-literal">True</span>
+connect_args={<span class="hljs-string">"connect_timeout"</span>: <span class="hljs-number">3</span>}
+</code></pre></div>
+<p><code>pool_size</code>与<code>max_overflow</code>共同限制同时使用的连接数量；<code>pool_timeout</code>限制等池中空位的时间；<code>connect_timeout</code>限制建立连接的等待，二者不是同一个计时。<code>pool_pre_ping</code>在连接借出前检查存活，帮助发现数据库重启后遗留的失效连接。</p>
+<p>pre-ping不能挽救事务执行到一半突然断开的连接，也不会自动安全重放业务写入。池超时、连接建立失败、SQL慢和锁等待虽然都可能表现为“数据库请求慢”，需要分别观察。</p>
+<p>如果事务里顺手做一个慢网络调用，连接会被占用更久。增加连接数可能暂时降低排队，也可能让数据库同时处理更多工作而更慢，应该先检查事务持有时间和数据库压力。</p>
+<h2 id="section-orm怎样形成查询哪里还需要懂sql">ORM怎样形成查询，哪里还需要懂SQL</h2>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python">statement = (
+    select(Feedback)
+    .where(Feedback.status == <span class="hljs-string">"pending"</span>)
+    .order_by(Feedback.created_at.desc(), Feedback.<span class="hljs-built_in">id</span>.desc())
+    .limit(<span class="hljs-number">20</span>)
+)
+items = db.scalars(statement).<span class="hljs-built_in">all</span>()
+</code></pre></div>
+<p>这是本站列表查询结构的缩小版。ORM表达式最终被编译成数据库能够执行的语句；<code>scalars</code>取结果中的映射对象，分页与索引是否有效仍要回到SQL和执行计划。</p>
+<p>以后如果模型增加关联并逐条懒加载，就可能出现一次列表后又发很多查询的N+1问题。当前本站没有因此宣称已经出现或解决N+1；这里说明的是引入关系加载后应该检查的点。需要理解参数怎样送入数据库，可以继续看<a href="/blog/psycopg-driver-parameters/">psycopg驱动与参数绑定</a>。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#backend","children":["后端与数据库",["$","span",null,{"children":8}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"SQLAlchemy入门：ORM、Session、提交与连接池"}],["$","p",null,{"className":"article-deck","children":"将Python对象对应到SQL和数据库事务，解释add、flush、commit及每进程连接池的限制"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,159"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",4," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","SQLAlchemy",{"href":"/blog/#tag=SQLAlchemy","children":"SQLAlchemy"}],["$","$Lf","ORM",{"href":"/blog/#tag=ORM","children":"ORM"}],["$","$Lf","事务",{"href":"/blog/#tag=%E4%BA%8B%E5%8A%A1","children":"事务"}],["$","$Lf","连接池",{"href":"/blog/#tag=%E8%BF%9E%E6%8E%A5%E6%B1%A0","children":"连接池"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-模型engine与session分别是什么","text":"模型、Engine与Session分别是什么","level":2},{"id":"section-添加对象到返回回执的过程","text":"添加对象到返回回执的过程","level":2},{"id":"section-expire_on_commitfalse为什么出现在本站","text":"expire_on_commit=False为什么出现在本站","level":2},{"id":"section-三个连接池参数怎样影响等待","text":"三个连接池参数怎样影响等待","level":2},{"id":"section-orm怎样形成查询哪里还需要懂sql","text":"ORM怎样形成查询，哪里还需要懂SQL","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[3," / ",4," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["PostgreSQL与Python数据访问",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","postgresql-tables-queries",{"children":["$","$Le",null,{"href":"/blog/postgresql-tables-queries/","children":"PostgreSQL入门（一）：表、SQL、约束与索引"}]}],["$","li","postgresql-transactions-locks",{"children":["$","$Le",null,{"href":"/blog/postgresql-transactions-locks/","children":"PostgreSQL入门（二）：事务、行锁与Schema迁移"}]}],["$","li","sqlalchemy-session-pool",{"children":["$","$Le",null,{"href":"/blog/sqlalchemy-session-pool/","aria-current":"page","children":"SQLAlchemy入门：ORM、Session、提交与连接池"}]}],["$","li","psycopg-driver-parameters",{"children":["$","$Le",null,{"href":"/blog/psycopg-driver-parameters/","children":"psycopg入门：数据库驱动、参数绑定与类型适配"}]}]]}]]}]]}],["$","$L11",null,{"html":"$12"}],false,"$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"sqlalchemy-session-pool","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"SQLAlchemy入门：ORM、Session、提交与连接池 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"将Python对象对应到SQL和数据库事务，解释add、flush、commit及每进程连接池的限制。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"E-M2wxgR09X62ofy5DhPV"}
+22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+23:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Le",null,{"href":"/blog/postgresql-transactions-locks/","children":[["$","span",null,{"children":"上一篇"}],"PostgreSQL入门（二）：事务、行锁与Schema迁移"]}],["$","$Le",null,{"href":"/blog/psycopg-driver-parameters/","children":[["$","span",null,{"children":"下一篇"}],"psycopg入门：数据库驱动、参数绑定与类型适配"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","psycopg-driver-parameters",{"children":[["$","$Le",null,{"href":"/blog/psycopg-driver-parameters/","children":"psycopg入门：数据库驱动、参数绑定与类型适配"}],["$","span",null,{"children":"后端与数据库"}]]}]]}]]}]]}]
+14:["$","$L22",null,{"contentId":"sqlalchemy-session-pool"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+21:true
+7:300
+24:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

@@ -1,0 +1,115 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+1b:"ViewportBoundary"
+1c:I[887,[],"$1b"]
+1d:"MetadataBoundary"
+1e:I[887,[],"$1d"]
+1f:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#project-log","children":["项目建设",["$","span",null,{"children":9}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"个人主页建设（一）：升级动机、框架选择与系统分工"}],["$","p",null,{"className":"article-deck","children":"从旧Hexo博客的保留需求出发，解释Next.js、Python API和数据库的选择，以及静态正文与动态业务的分工"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,537"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","架构设计",{"href":"/blog/#tag=%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1","children":"架构设计"}],["$","$Lf","Next.js",{"href":"/blog/#tag=Next.js","children":"Next.js"}],["$","$Lf","FastAPI",{"href":"/blog/#tag=FastAPI","children":"FastAPI"}],["$","$Lf","PostgreSQL",{"href":"/blog/#tag=PostgreSQL","children":"PostgreSQL"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-升级需要保留什么又增加什么","text":"升级需要保留什么，又增加什么","level":2},{"id":"section-技术栈按职责放在哪里","text":"技术栈按职责放在哪里","level":2},{"id":"section-为什么公共文章采用静态导出","text":"为什么公共文章采用静态导出","level":2},{"id":"section-当时比较过哪些替代方案","text":"当时比较过哪些替代方案","level":2},{"id":"section-数据库中为什么不保存全文","text":"数据库中为什么不保存全文","level":2},{"id":"section-架构带来的限制怎样说明","text":"架构带来的限制怎样说明","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[2," / ",9," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["个人主页与博客建设",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","personal-site-overview",{"children":["$","$Le",null,{"href":"/blog/personal-site-overview/","children":"个人主页与博客建设：项目系列与前后端知识阅读指南"}]}],["$","li","site-upgrade-architecture",{"children":["$","$Le",null,{"href":"/blog/site-upgrade-architecture/","aria-current":"page","children":"个人主页建设（一）：升级动机、框架选择与系统分工"}]}],["$","li","site-setup-migration",{"children":["$","$Le",null,{"href":"/blog/site-setup-migration/","children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}]}],["$","li","site-content-search-flow",{"children":["$","$Le",null,{"href":"/blog/site-content-search-flow/","children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}]}],["$","li","site-feedback-data-flow",{"children":["$","$Le",null,{"href":"/blog/site-feedback-data-flow/","children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}]}],["$","li","site-auth-review-concurrency",{"children":["$","$Le",null,{"href":"/blog/site-auth-review-concurrency/","children":"个人主页建设（五）：作者登录、反馈审核与并发控制"}]}],["$","li","site-images-performance",{"children":["$","$Le",null,{"href":"/blog/site-images-performance/","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}]}],"$L11","$L12"]}]]}]]}],"$L13",false,"$L14","$L15","$L16"]}],"$L17"]}]]}],["$L18"],"$L19"]}],"p":"$@1a","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"site-upgrade-architecture","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1c",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1e",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"个人主页建设（一）：升级动机、框架选择与系统分工 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从旧Hexo博客的保留需求出发，解释Next.js、Python API和数据库的选择，以及静态正文与动态业务的分工。"}]]}]}],null]}],null]}],"p":"$@20","v":null,"s":"$7"}},"a":"$@21","u":"$@22","b":"E-M2wxgR09X62ofy5DhPV"}
+23:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+25:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+26:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+11:["$","li","site-deployment-recovery",{"children":["$","$Le",null,{"href":"/blog/site-deployment-recovery/","children":"个人主页建设（七）：Nginx部署、版本切换与数据恢复"}]}]
+12:["$","li","site-interview-design",{"children":["$","$Le",null,{"href":"/blog/site-interview-design/","children":"个人主页建设（八）：从真实实现继续追问设计与故障处理"}]}]
+24:T1888,<p>旧博客使用Hexo和Fluid主题，已经积累了Python、C++、算法和问题解决笔记。继续发布这些内容本身没有要求必须换框架。这次升级还希望加入研究主题、项目介绍、局部交互，以及真正经过接口和数据库的动态功能，所以需要重新整理内容与工程的关系。</p>
+<p>我选择Python后端，也考虑了它与后续科研和其他Python项目的衔接。前端则使用Next.js与TypeScript，借这次建设逐步理解组件、状态、构建和部署。这个选择同时包含学习目标与网站需求，不能用一项未经测量的性能排名来解释。</p>
+<h2 id="section-升级需要保留什么又增加什么">升级需要保留什么，又增加什么</h2>
+<p>原有文章、代码、图片引用和旧URL都需要处理。迁移如果只保留正文文字，却丢失目录定位、跨文链接和图片，读者得到的文章仍是不完整的。部分历史教程只归档，私人草稿也不因为进入新目录就自动公开。</p>
+<p>新的内容结构围绕文章、研究、项目和关于组织。研究可以继续分方向、主题和系列；项目概览连接具体建设过程；知识文章保留独立入口。这样一篇讲Next.js路由的文章既能服务本项目，也能被单独搜索到，无需在两个栏目保存重复正文。</p>
+<p>动态业务先采用私密反馈与作者审核。它的范围足够小，但包含了输入校验、持久化、登录、防伪、事务、状态转换和失败恢复，能够形成一个真实的前后端过程。</p>
+<h2 id="section-技术栈按职责放在哪里">技术栈按职责放在哪里</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>技术</th><th>本站使用位置</th><th>主要输入与输出</th></tr></thead><tbody><tr><td>Next.js/React</td><td>构建页面，组织组件和客户端交互</td><td>内容数据→页面；事件→界面状态</td></tr><tr><td>TypeScript</td><td>前端开发检查</td><td>类型约定→开发阶段错误提示</td></tr><tr><td>FastAPI/Uvicorn</td><td>HTTP服务与业务入口</td><td>请求→校验后的业务处理→响应</td></tr><tr><td>Pydantic</td><td>输入与输出模型</td><td>外部数据→满足模型约束的对象</td></tr><tr><td>SQLAlchemy</td><td>查询、ORM和事务组织</td><td>Python表达式/对象→数据库操作</td></tr><tr><td>psycopg</td><td>PostgreSQL驱动</td><td>语句与参数→数据库协议交互</td></tr><tr><td>PostgreSQL</td><td>动态业务持久化</td><td>事务操作→记录、约束与查询结果</td></tr><tr><td>Nginx/Docker/ECS</td><td>外部入口与运行环境</td><td>网络请求、服务配置→可访问系统</td></tr></tbody></table>
+<p>TypeScript不在浏览器到数据库的网络调用链里；Pydantic也不会把请求直接“转发”给SQLAlchemy。表中的位置先理清，后面再展开调用顺序，就不会把所有技术名串成一条看似完整、实际含义模糊的箭头。</p>
+<h2 id="section-为什么公共文章采用静态导出">为什么公共文章采用静态导出</h2>
+<p>公共文章主要在写作和发布时变化，读者每次打开同一版本，正文通常相同。提前生成HTML之后，Nginx直接返回文件，阅读不必等待Python和数据库查询。原生正文也方便目录、检索与页面初次展示。</p>
+<p>Next仍负责构建和组件组织，浏览器仍可以运行React交互。需要反馈时再访问API。当前没有常驻Next服务为每次文章访问做SSR，也没有运行时ISR；具体机制见<a href="/blog/nextjs-rendering-hydration/">Next.js生成与接管</a>。</p>
+<p>代价是内容修改需要经过导入、构建和发布，不能期待改完数据库就自动更新全文。若以后新增必须按登录用户生成的受限内容，应重新评估服务端能力与缓存隔离，而不是继续把全文放进公共静态文件。</p>
+<h2 id="section-当时比较过哪些替代方案">当时比较过哪些替代方案</h2>
+<p>规划记录比较过Next.js配Python、NestJS或Spring Boot，以及Astro配React局部交互。Python方案符合已确认的科研衔接方向；TypeScript全栈可以减少语言切换，但仍需明确Next和Nest的职责；Java方案适合相应后端学习方向，同时需要评估当前服务器资源和运维成本。</p>
+<p>Astro和继续使用Hexo也都能服务内容站点，不能写成它们“做不了个人主页”。本次选型没有进行覆盖各方案的本站性能实验，因此仅能讨论需求匹配和维护代价。框架性质见<a href="/blog/nextjs-position-toolchain/">Next.js定位与比较</a>。</p>
+<h2 id="section-数据库中为什么不保存全文">数据库中为什么不保存全文</h2>
+<p>Markdown已经是主要写作格式，正文可以在构建管线里保留代码、图与版本记录。数据库里的<code>content_entries</code>用于登记稳定ID、slug和标题，让反馈能够关联有效内容；模型有<code>content_hash</code>字段，但当前种子同步未填入它，不能把字段存在当成完整内容版本跟踪已经实现。</p>
+<p>反馈、会话和审计会随请求变化，适合放进数据库。文件与数据库的边界由更新方式和业务需求决定，而不是“既然用了数据库，就把所有内容都塞进去”。</p>
+<h2 id="section-架构带来的限制怎样说明">架构带来的限制怎样说明</h2>
+<p>当前单机仍有共同故障点，Nginx或整台ECS不可用时，静态阅读也会受影响。API使用单进程内存限流，没有分布式计数；连接池规模也较小。已有真实部署和局部恢复验证，但没有全场景高可用或容量证明。</p>
+<p>如果被继续问“为什么不加Redis和消息队列”，可以先说明反馈提交是一个短数据库事务，目前没有需要异步编排的已实现业务。之后若增加邮件通知、批处理或多实例限制，再按实际需求评估队列与共享状态。系统的复杂度应该能对应到具体问题。</p>
+<p>下一篇把这个结构落实到<a href="/blog/site-setup-migration/">环境、目录和旧文迁移</a>，再沿一次内容修改与一次反馈提交，看数据实际经过哪些位置。</p>13:["$","$L23",null,{"html":"$24"}]
+14:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Le",null,{"href":"/blog/personal-site-overview/","children":[["$","span",null,{"children":"上一篇"}],"个人主页与博客建设：项目系列与前后端知识阅读指南"]}],["$","$Le",null,{"href":"/blog/site-setup-migration/","children":[["$","span",null,{"children":"下一篇"}],"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","nextjs-rendering-hydration",{"children":[["$","$Le",null,{"href":"/blog/nextjs-rendering-hydration/","children":"Next.js入门（三）：SSG、SSR、组件边界与交互接管"}],["$","span",null,{"children":"前端开发"}]]}],["$","li","nextjs-position-toolchain",{"children":[["$","$Le",null,{"href":"/blog/nextjs-position-toolchain/","children":"Next.js入门（一）：框架定位、技术关系与工程工具链"}],["$","span",null,{"children":"前端开发"}]]}],["$","li","site-setup-migration",{"children":[["$","$Le",null,{"href":"/blog/site-setup-migration/","children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}],["$","span",null,{"children":"项目建设"}]]}]]}]]}]]}]
+15:["$","$L25",null,{"contentId":"site-upgrade-architecture"}]
+16:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+17:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5"]}]
+18:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+19:["$","$L26",null,{"children":["$","$1f",null,{"name":"Next.MetadataOutlet","children":"$@27"}]}]
+22:true
+7:300
+27:null
+7:C
+21:0
+9:"$undefined"
+5:"$undefined"
+20:"$undefined"
+1a:"$undefined"

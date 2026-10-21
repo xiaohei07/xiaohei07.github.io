@@ -1,0 +1,73 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T1966,<p>以前运行Python脚本，通常是给它一个输入，执行完就退出。Web后端需要持续等待请求：读者发来数据，程序检查并处理，再返回结果。FastAPI负责组织接口，Uvicorn负责运行这个Web应用，两者需要配合使用。</p>
+<h2 id="section-先把解释器与依赖环境确定下来">先把解释器与依赖环境确定下来</h2>
+<p>Python解释器执行代码，虚拟环境隔离项目依赖。本站使用独立<code>.venv</code>，避免为了升级某个库改变其他Python项目。<code>requirements.txt</code>描述允许的依赖范围，<code>requirements.lock.txt</code>则记录这次核验使用的精确版本。</p>
+<p>下面是在Windows练习目录中的示意命令。<code>&#x3C;已有Python解释器路径></code>需要换成自己已经安装且可用的解释器，不能照抄尖括号：</p>
+<div class="code-block"><div class="code-toolbar"><span>powershell</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-powershell">&#x26; '&#x3C;已有Python解释器路径>' -m venv .venv
+&#x26; .\.venv\Scripts\python.exe -m pip install -r requirements.lock.txt
+</code></pre></div>
+<p><code>python -m pip</code>明确让该解释器运行pip，有助于避免“包装到了另一个环境，当前程序仍导入失败”。已有本站环境不需要再次创建。虚拟环境并不隔离操作系统权限，也不是安全沙箱，基本机制见<a href="https://docs.python.org/3/library/venv.html" rel="noopener noreferrer">Python venv文档</a>。</p>
+<h2 id="section-最小接口怎样写">最小接口怎样写</h2>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-comment"># lesson_api.py：独立教学示例</span>
+<span class="hljs-keyword">from</span> fastapi <span class="hljs-keyword">import</span> FastAPI
+
+app = FastAPI()
+
+<span class="hljs-meta">@app.get(<span class="hljs-params"><span class="hljs-string">"/hello"</span></span>)</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">hello</span>(<span class="hljs-params">name: <span class="hljs-built_in">str</span> = <span class="hljs-string">"读者"</span></span>):
+    <span class="hljs-keyword">return</span> {<span class="hljs-string">"message"</span>: <span class="hljs-string">f"你好，<span class="hljs-subst">{name}</span>"</span>}
+</code></pre></div>
+<p><code>FastAPI()</code>创建应用对象；装饰器把GET方法和<code>/hello</code>路径登记到应用；请求到达后，框架按规则读取参数并调用函数。返回的字典会被转换成JSON响应，不需要手工拼一段JSON字符串。</p>
+<p>在保存该文件的练习目录中，可以用自己的项目解释器运行：</p>
+<div class="code-block"><div class="code-toolbar"><span>powershell</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-powershell">&#x26; .\.venv\Scripts\python.exe -m uvicorn lesson_api:app --host 127.0.0.1 --port 8010
+</code></pre></div>
+<p><code>lesson_api:app</code>表示从模块<code>lesson_api</code>取得变量<code>app</code>，8010只是本地教学端口。浏览器访问<code>http://127.0.0.1:8010/hello?name=小黑</code>，按代码预期得到包含问候文字的JSON。本文命令用于理解独立练习，不会替换本站已经运行的8000端口服务。<a href="https://fastapi.tiangolo.com/tutorial/first-steps/" rel="noopener noreferrer">FastAPI入门</a>介绍了路径操作与自动接口文档。</p>
+<h2 id="section-路径参数查询参数与请求体怎样选择">路径参数、查询参数与请求体怎样选择</h2>
+<p>路径通常定位资源，例如<code>/feedback/&#x3C;id></code>；查询参数表达筛选和分页，例如<code>?status=pending&#x26;page=2</code>；请求体承载提交的数据，例如反馈消息。它们最终都需要解析，但用途和编码位置不同。</p>
+<p>本站的提交接口通过<code>payload: FeedbackCreate</code>声明JSON请求体，管理列表通过参数声明读取状态和页码。Pydantic模型会检查字段，FastAPI据此形成接口schema。请求体与模型的对应规则见<a href="https://fastapi.tiangolo.com/tutorial/body/" rel="noopener noreferrer">Request Body</a>。</p>
+<p>HTTP方法也表达操作语义：GET用于读取，POST用于创建或执行相应动作，PATCH用于部分更新，DELETE用于删除。方法名不会自动保证权限与幂等，实际行为仍由接口实现。</p>
+<h2 id="section-uvicornasgi与fastapi怎样衔接">Uvicorn、ASGI与FastAPI怎样衔接</h2>
+<p>Uvicorn接受网络连接，按ASGI约定把请求信息交给应用。ASGI是服务器与Python异步Web应用之间的接口规范；FastAPI构建在Starlette等组件之上，处理路由、参数、依赖和响应。本站Nginx还位于Uvicorn之前，负责外部入口与代理。接口规范可参考<a href="https://asgi.readthedocs.io/en/latest/introduction.html" rel="noopener noreferrer">ASGI介绍</a>。</p>
+<p>可以顺着链条理解：浏览器发HTTP → Nginx转发 → Uvicorn交给应用 → FastAPI找到路由 → 执行业务函数。SQLAlchemy和数据库驱动是在业务确实需要持久数据时才加入，不是每个hello接口都必须访问数据库。</p>
+<h2 id="section-配置与代码为什么要分开">配置与代码为什么要分开</h2>
+<p>端口、允许来源、数据库地址和Cookie安全选项会随环境变化，适合通过配置读取。数据库密码与作者凭据不能进入公开源码，也不能使用<code>NEXT_PUBLIC_</code>这类会进入客户端产物的前缀保存。</p>
+<p>本站<code>Settings</code>与<code>.env</code>/环境配置承担这个角色，代码读取配置后再创建应用。讲解时可以展示字段用途，但不应把真实连接串复制进文章。启动失败后先检查使用哪个解释器、模块路径是否正确、配置是否缺失，再看数据库连通性，通常比直接重新安装所有依赖更有针对性。</p>
+<p>下一篇继续看<a href="/blog/fastapi-dependencies-concurrency/">依赖、错误处理与并发</a>，解释为何本站很多数据库接口使用普通<code>def</code>，以及连接池中的3个连接究竟限制了什么。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#backend","children":["后端与数据库",["$","span",null,{"children":8}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"Python Web入门（一）：环境、FastAPI接口与ASGI服务"}],["$","p",null,{"className":"article-deck","children":"从脚本运行过渡到持续服务，解释虚拟环境、路径参数、请求体、Uvicorn和配置边界"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,149"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",4," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","Python",{"href":"/blog/#tag=Python","children":"Python"}],["$","$Lf","FastAPI",{"href":"/blog/#tag=FastAPI","children":"FastAPI"}],["$","$Lf","Uvicorn",{"href":"/blog/#tag=Uvicorn","children":"Uvicorn"}],["$","$Lf","ASGI",{"href":"/blog/#tag=ASGI","children":"ASGI"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-先把解释器与依赖环境确定下来","text":"先把解释器与依赖环境确定下来","level":2},{"id":"section-最小接口怎样写","text":"最小接口怎样写","level":2},{"id":"section-路径参数查询参数与请求体怎样选择","text":"路径参数、查询参数与请求体怎样选择","level":2},{"id":"section-uvicornasgi与fastapi怎样衔接","text":"Uvicorn、ASGI与FastAPI怎样衔接","level":2},{"id":"section-配置与代码为什么要分开","text":"配置与代码为什么要分开","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[1," / ",4," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["Python Web接口与安全",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","python-api-environment",{"children":["$","$Le",null,{"href":"/blog/python-api-environment/","aria-current":"page","children":"Python Web入门（一）：环境、FastAPI接口与ASGI服务"}]}],["$","li","fastapi-dependencies-concurrency",{"children":["$","$Le",null,{"href":"/blog/fastapi-dependencies-concurrency/","children":"Python Web入门（二）：FastAPI依赖、错误与并发等待"}]}],["$","li","pydantic-validation",{"children":["$","$Le",null,{"href":"/blog/pydantic-validation/","children":"Pydantic输入校验：字段、validator与模型边界"}]}],["$","li","browser-cookie-cors-csrf",{"children":["$","$Le",null,{"href":"/blog/browser-cookie-cors-csrf/","children":"浏览器与API安全：Cookie、会话、CORS和CSRF"}]}]]}]]}]]}],["$","$L11",null,{"html":"$12"}],false,"$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"python-api-environment","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Python Web入门（一）：环境、FastAPI接口与ASGI服务 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从脚本运行过渡到持续服务，解释虚拟环境、路径参数、请求体、Uvicorn和配置边界。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"E-M2wxgR09X62ofy5DhPV"}
+22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+23:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","span",null,{}],["$","$Le",null,{"href":"/blog/fastapi-dependencies-concurrency/","children":[["$","span",null,{"children":"下一篇"}],"Python Web入门（二）：FastAPI依赖、错误与并发等待"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","fastapi-dependencies-concurrency",{"children":[["$","$Le",null,{"href":"/blog/fastapi-dependencies-concurrency/","children":"Python Web入门（二）：FastAPI依赖、错误与并发等待"}],["$","span",null,{"children":"后端与数据库"}]]}]]}]]}]]}]
+14:["$","$L22",null,{"contentId":"python-api-environment"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+21:true
+7:300
+24:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

@@ -1,0 +1,102 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T15a0,<p>知道React可以写组件后，还会遇到几个网站层面的问题：不同URL怎样对应页面，导航和侧栏放在哪里复用，文章怎样提前生成，开发时怎样预览，最后又要把哪些文件交给服务器。</p>
+<p>Next.js为React项目提供了这一层组织方式。官方将它定位为构建全栈Web应用的React框架；本站主要使用其中的页面组织、构建和静态导出能力，动态业务仍交给Python后端。<a href="https://nextjs.org/docs" rel="noopener noreferrer">Next.js文档入口</a>说明了框架定位及两套路由体系。</p>
+<h2 id="section-htmlreactnextjs与nodejs各是什么关系">HTML、React、Next.js与Node.js各是什么关系</h2>
+<p>HTML描述网页结构，CSS控制呈现，JS负责逻辑。React让开发者通过组件、props和state描述界面；Next.js在React之上组织路由、布局、构建和多种渲染方式；Node.js提供在浏览器外执行JS的运行环境。</p>
+<p>例如构建本站时，Node.js运行Next工具，读取Markdown并生成HTML。读者打开线上文章时，Nginx直接提供这些文件，并不需要为这篇文章启动一次Node程序。浏览器中的React代码负责后续交互。几个名字都与前端有关，但执行位置和职责不同。</p>
+<p>TypeScript则是代码语言层面的工具。它可以用于React与Next，也可以用于与它们无关的程序。不能把“用了TypeScript”直接理解成“用了Next.js”。</p>
+<h2 id="section-与vuehexoastro怎样比较">与Vue、Hexo、Astro怎样比较</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方案</th><th>重点解决的问题</th><th>对本项目的影响</th></tr></thead><tbody><tr><td>React配合构建工具</td><td>组件与客户端应用，其他能力自行组合</td><td>路由、内容管线等需要继续选择和搭建</td></tr><tr><td>Next.js</td><td>在React基础上组织页面、布局、构建与服务端能力</td><td>适合将内容页和交互组件放在同一工程里，但要理解渲染边界</td></tr><tr><td>Vue及其生态</td><td>以另一套组件和响应式方式组织界面</td><td>已有Vue经验可迁移部分组件思想，具体语法与机制需要区分</td></tr><tr><td>Hexo</td><td>根据文章和主题生成静态博客</td><td>适合继续发布笔记；复杂交互与独立业务仍需额外集成</td></tr><tr><td>Astro</td><td>以内容站点和按需交互为重点</td><td>对大部分是正文、局部需要交互的网站有参考价值</td></tr></tbody></table>
+<p>Vue本身与Next.js不是完全对应的一层：如果比较完整应用框架，还应考虑Vue生态中的Nuxt；如果比较界面组件机制，则更适合把Vue与React放在一起。<a href="https://vuejs.org/guide/introduction.html" rel="noopener noreferrer">Vue定位</a>与<a href="https://docs.astro.build/en/concepts/why-astro/" rel="noopener noreferrer">Astro设计目标</a>可以帮助理解各自关注点。</p>
+<p>本站没有测出Next比这些方案“更快”的通用结论。选择Next的价值主要在于它符合已确认的组件化和项目学习方向，同时仍允许公共正文静态交付。代价也很具体：需要学习React状态、构建产物及客户端脚本成本，并维护Node和Python两套依赖。</p>
+<h2 id="section-一个最小next项目由什么组成">一个最小Next项目由什么组成</h2>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-text">app/
+  layout.tsx
+  page.tsx
+  blog/
+    page.tsx
+public/
+  example.webp
+package.json
+next.config.ts
+tsconfig.json
+</code></pre></div>
+<p><code>app</code>组织App Router页面，<code>public</code>中的资源按站点根路径引用；<code>package.json</code>声明依赖与命令；<code>next.config.ts</code>保存框架配置；<code>tsconfig.json</code>配置TypeScript。本站使用monorepo目录，将Web放在<code>site-next/apps/web</code>，因此实际工程根还多了一层工作区组织。</p>
+<p>全新练习项目可以参考<a href="https://nextjs.org/docs/app/getting-started/installation" rel="noopener noreferrer">官方安装步骤</a>创建。已有本站工程则应按锁文件恢复依赖，不能重新生成一套脚手架覆盖它。本站锁定的前端主要版本为Next.js16.4.2、React19.3.1与TypeScript5.9.3，这些数字描述本次记录，不代表读者必须追着版本号升级。</p>
+<h2 id="section-开发构建与部署有什么区别">开发、构建与部署有什么区别</h2>
+<p>开发服务方便改代码和查看变化；生产构建将代码和内容转换成可交付产物；部署把经过检查的产物放到访问入口，并设置域名、HTTPS和缓存。启动开发服务，只能证明开发入口可用，不能替代生产构建检查。</p>
+<p>本站选择<code>output: "export"</code>，生产构建交付<code>out</code>目录。前端框架本身提供的功能比这个部署模式多，教程中看到的Server Actions、请求时动态渲染和ISR，不能直接假定当前静态目录也能执行。</p>
+<p>下一篇从<a href="/blog/nextjs-routing-layouts/">路由、布局与页面参数</a>开始看文件怎样对应URL，再解释<a href="/blog/nextjs-rendering-hydration/">页面生成与交互接管</a>。如果先把这两个关系看懂，后面新增文章时就能判断应该改内容、改路由，还是改部署模式。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#frontend","children":["前端开发",["$","span",null,{"children":7}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"Next.js入门（一）：框架定位、技术关系与工程工具链"}],["$","p",null,{"className":"article-deck","children":"区分HTML、React、Next.js、Node.js和TypeScript，并比较内容站点方案的职责与维护代价"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,211"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",4," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","Next.js",{"href":"/blog/#tag=Next.js","children":"Next.js"}],["$","$Lf","React",{"href":"/blog/#tag=React","children":"React"}],["$","$Lf","Node.js",{"href":"/blog/#tag=Node.js","children":"Node.js"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-htmlreactnextjs与nodejs各是什么关系","text":"HTML、React、Next.js与Node.js各是什么关系","level":2},{"id":"section-与vuehexoastro怎样比较","text":"与Vue、Hexo、Astro怎样比较","level":2},{"id":"section-一个最小next项目由什么组成","text":"一个最小Next项目由什么组成","level":2},{"id":"section-开发构建与部署有什么区别","text":"开发、构建与部署有什么区别","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[1," / ",4," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["Next.js从入门到本站应用",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","nextjs-position-toolchain",{"children":["$","$Le",null,{"href":"/blog/nextjs-position-toolchain/","aria-current":"page","children":"Next.js入门（一）：框架定位、技术关系与工程工具链"}]}],["$","li","nextjs-routing-layouts",{"children":["$","$Le",null,{"href":"/blog/nextjs-routing-layouts/","children":"Next.js入门（二）：路由目录、公共布局与文章参数"}]}],["$","li","nextjs-rendering-hydration",{"children":["$","$Le",null,{"href":"/blog/nextjs-rendering-hydration/","children":"Next.js入门（三）：SSG、SSR、组件边界与交互接管"}]}],["$","li","nextjs-content-cache",{"children":["$","$Le",null,{"href":"/blog/nextjs-content-cache/","children":"Next.js入门（四）：Markdown内容管线与多层缓存"}]}]]}]]}]]}],["$","$L11",null,{"html":"$12"}],false,"$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"nextjs-position-toolchain","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Next.js入门（一）：框架定位、技术关系与工程工具链 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"区分HTML、React、Next.js、Node.js和TypeScript，并比较内容站点方案的职责与维护代价。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"E-M2wxgR09X62ofy5DhPV"}
+22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+23:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","span",null,{}],["$","$Le",null,{"href":"/blog/nextjs-routing-layouts/","children":[["$","span",null,{"children":"下一篇"}],"Next.js入门（二）：路由目录、公共布局与文章参数"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","nextjs-routing-layouts",{"children":[["$","$Le",null,{"href":"/blog/nextjs-routing-layouts/","children":"Next.js入门（二）：路由目录、公共布局与文章参数"}],["$","span",null,{"children":"前端开发"}]]}],["$","li","nextjs-rendering-hydration",{"children":[["$","$Le",null,{"href":"/blog/nextjs-rendering-hydration/","children":"Next.js入门（三）：SSG、SSR、组件边界与交互接管"}],["$","span",null,{"children":"前端开发"}]]}]]}]]}]]}]
+14:["$","$L22",null,{"contentId":"nextjs-position-toolchain"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+21:true
+7:300
+24:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

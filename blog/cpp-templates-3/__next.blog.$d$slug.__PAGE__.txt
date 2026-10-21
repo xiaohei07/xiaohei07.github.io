@@ -1,0 +1,421 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T3768,<p>本文介绍模版的各种特殊情况：</p>
+<span id="一非类型模板参数通常不应用于函数模版中" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一非类型模板参数通常不应用于函数模版中">（一）非类型模板参数（通常不应用于函数模版中）：</h3>
+<ul>
+<li>
+<p>模板的非类型形参是内置类型形参，模板参数不是一个类型而是一个具体的值，且值是常量表达式，因此调用非类型模板形参的实参必须是一个常量表达式（因此模板代码不能修改参数的值，也不能使用参数的地址）。</p>
+<p>例如template&#x3C;class T, int a> class B{}; 其中int a就是非类型的模板形参。</p>
+<p>通常能被传入的常量表达式包括全局变量的地址或引用，全局对象的地址或引用const类型变量，sizeof的表达式的结果以及const int 整型变量。</p>
+</li>
+<li>
+<p>形参只能是整型，枚举，指针和引用，如double，string等是不可以的，但是可以使用double&#x26;或者string*等类型是允许的。</p>
+</li>
+<li>
+<p>当一个模板被实例化时，非类型参数被一个用户提供的或者编译器推断出的值所代替。正因为模板在编译阶段编译器为我们生成一个对应的版本，所以其值应该能够编译时确定，那么他应该是一个常量或者常量表达式。</p>
+</li>
+<li>
+<p>非类型模板形参的形参和实参间所允许的转换</p>
+<ul>
+<li>允许从数组到指针，从函数到指针的转换。如：template &#x3C;int *a> class A{}; int b[1]; A&#x3C;b> m;即数组到指针的转换。</li>
+<li>const修饰符的转换。如：template&#x3C;const int *a> class A{}; int b; A&#x3C;&#x26;b> m; 即从int *到const int *的转换。</li>
+<li>提升转换。如：template&#x3C;int a> class A{}; const short b=2; A&#x3C;b> m; 即从short到int的提升转换。</li>
+<li>整值转换。如：template&#x3C;unsigned int a> class A{}; A&#x3C;3> m; 即从int 到unsigned int的转换。</li>
+<li>常规转换。略。</li>
+</ul>
+</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+
+//定义一个栈,用数组实现,MAXSIZE为非类型模版类参数,其类型确定
+template&#x3C;typename T, int MAXSIZE>
+class Stack
+{
+private:
+	int REALSIZE;
+	//这个非类型模版类参数可以在类中使用其名称
+	T elems[MAXSIZE];
+public:
+	Stack() :REALSIZE(0) {}
+	bool empty() const { return REALSIZE == 0; }
+	bool full() const { return REALSIZE == MAXSIZE; }
+	void push(const T&#x26;);
+	void pop();
+	T&#x26; top();
+	const T&#x26; top() const;
+
+};
+template&#x3C;typename T, int MAXSIZE>
+void Stack&#x3C;T, MAXSIZE>::push(const T&#x26; elem)
+{
+	if (full())
+		throw std::out_of_range("Stack&#x3C;>::push(): full stack");
+	elems[REALSIZE++] = elem;
+}
+template&#x3C;typename T, int MAXSIZE>
+void Stack&#x3C;T, MAXSIZE>::pop()
+{
+	if (!empty())
+		REALSIZE--;
+	else
+		throw std::out_of_range("Stack&#x3C;>::pop(): empty stack");
+}
+template&#x3C;typename T, int MAXSIZE>
+T&#x26; Stack&#x3C;T, MAXSIZE>::top()
+{
+	if (empty())
+		throw std::out_of_range("Stack&#x3C;>::top(): empty stack");
+	return elems[REALSIZE - 1];
+}
+template&#x3C;typename T, int MAXSIZE>
+const T&#x26; Stack&#x3C;T, MAXSIZE>::top() const
+{
+	if (empty())
+		throw std::out_of_range("Stack&#x3C;>::top(): empty stack");
+	return elems[REALSIZE - 1];
+}
+//double类型,类类型不允许作为非类型模版类参数使用
+//template&#x3C;typename T, double MAXSIZE,string name>
+//class A{};
+
+//double引用类型,类指针类型允许作为非类型模版类参数使用
+//枚举也可以，但不再演示
+template&#x3C;typename T,double&#x26; MAXSIZE,string*name>
+class A
+{
+private:
+	double REALSIZE;
+	T elems[MAXSIZE];
+	string names;
+public:
+	A(double d):REALSIZE(d) { names = *name; }
+};
+
+template&#x3C;typename T, const string* p>
+class B {};
+template&#x3C;typename T, unsigned int ui>
+class C {};
+
+double alld = 10.0;
+double&#x26; alldd = alld;
+string alls = "帅";
+string* allss = &#x26;alls;
+string s[3] = { "aaaaaa","bbbbbb","cccccc" };
+int main()
+{
+	//传入常量表达式
+	const int i = 5;
+	Stack&#x3C;int, 10> s1;
+	Stack&#x3C;string, i> s3;
+
+	//sizeof也可以
+	Stack&#x3C;double, sizeof(double)> s2;
+
+	//int ii = 5;
+	//Stack&#x3C;string, ii> s4; //错误,不能传入非常量变量
+
+	//double d = 10.0;
+	//double&#x26; dd = d;
+	//string s = "帅";
+	//string* ss = &#x26;s;
+	//A&#x3C;int, dd, ss>;   //错误,不能传入局部变量,非常量变量
+
+	//可以使用全局引用和全局变量的局部地址传入
+	A&#x3C;int, alld, &#x26;alls> a1(10);
+	//A&#x3C;int, alld, allss>; //错误,不能传入全局指针变量
+
+	//可以传入全局数组,会将其转换为指针传入
+	A&#x3C;double, alld, s> a2(3.14);
+
+	//可以将string*提升为const string*
+	B&#x3C;int, &#x26;alls> b; 
+
+	//可以将short int提升为int
+	const short bbb = 2;
+	Stack&#x3C;char, bbb>;
+
+	//可以将int提升为unsigned int
+	const int n = 9;
+	C&#x3C;int, n>;
+	return 0;
+}
+</code></pre></div>
+<span id="二默认模板类型形参" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二默认模板类型形参">（二）默认模板类型形参：</h3>
+<p>在c++11新规则中，可以为类模板或者函数模版的类型形参提供默认值。</p>
+<p>形式为：<em><strong>template&#x3C;class T1, class T2, ... , class Tk=默认类型 , ... , class Tn=默认类型 > class 类名{ 类体 };</strong></em></p>
+<p><em><strong>or template&#x3C;class T1 =默认类型 , class T2, ... , class Tk=默认类型 , ... , class Tn> 返回类型 类型名(形参列表){函数体}</strong></em></p>
+<p>类模版为多个默认模版参数声明指定默认值时，必须遵照“从右往左”的规则进行指定。</p>
+<p>函数模版不需要遵循此规则，可以任意指定默认值。</p>
+<p>函数模板的参数推导规则简单来说就是：能够从函数实参中推导出类型的话，那么默认模版参数就不会被使用，否则使用默认模版参数。</p>
+<p>因此，函数模版如果需要提供默认类型，因为其形参列表是从右往左给出默认值的，所以只有其默认类型也是从右往左给出且与值的类型匹配（也就是不会出现不匹配情况）、值的个数匹配，才是有效的默认类型。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+template &#x3C;typename T1, typename T2 = int, typename T3=double>
+class A {
+public:
+	T1 Aval1;
+	T2 Aval2;
+	T3 Aval3;
+};
+//template &#x3C;typename T1 = int, typename T2>
+//class DefClass2 {};  // 错误:模板参数的默认值没有遵循“由右往左”的规则
+//
+//template &#x3C;typename T, int i = 0>
+//class DefClass3 {};
+//
+//template &#x3C;int i = 0, typename T>
+//class DefClass4 {};  // 错误:即使是非类型模版参数,模板参数的默认值也必须遵循“由右往左”的规则
+
+//尽管可以进行下面这样的声明,但几乎不会用上这个默认类型参数,可以直接无视
+template &#x3C;typename T1 = int, typename T2>
+void B1(T1 a, T2 b) {
+	cout &#x3C;&#x3C; a &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(T1).name() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; b &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(T2).name() &#x3C;&#x3C; endl;
+	return;
+}; // 函数模板不用遵循“由右往左”的规则
+
+//允许进行这样的声明,当未提供第二个参数时,自动默认b为int类型且值为0
+template &#x3C;typename T1, typename T2= int>
+void B2(T1 a, T2 b=0) {
+	cout &#x3C;&#x3C; a &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(T1).name() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; b &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(T2).name() &#x3C;&#x3C; endl;
+	return;
+}; // 函数模板不用遵循“由右往左”的规则
+
+
+template &#x3C;int i = 0, typename T>
+void B3(T a) {
+	cout &#x3C;&#x3C; i &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(i).name() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; a &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(T).name() &#x3C;&#x3C; endl;
+	return;
+};  // 非类型模版参数也不用遵循“由右往左”的规则
+
+
+int main() 
+{
+	A&#x3C;string> a1;
+	cout &#x3C;&#x3C; typeid(a1.Aval1).name() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(a1.Aval2).name() &#x3C;&#x3C; endl; //为默认的int
+	cout &#x3C;&#x3C; typeid(a1.Aval3).name() &#x3C;&#x3C; endl; //为默认的double
+	A&#x3C;char, unsigned int> a2;
+	cout &#x3C;&#x3C; typeid(a2.Aval1).name() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(a2.Aval2).name() &#x3C;&#x3C; endl; //unsigned int覆盖默认的int
+	cout &#x3C;&#x3C; typeid(a2.Aval3).name() &#x3C;&#x3C; endl; //为默认的double
+	A&#x3C;char, unsigned int,float> a3;
+	cout &#x3C;&#x3C; typeid(a3.Aval1).name() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; typeid(a3.Aval2).name() &#x3C;&#x3C; endl; //unsigned int覆盖默认的int
+	cout &#x3C;&#x3C; typeid(a3.Aval3).name() &#x3C;&#x3C; endl; //float覆盖默认的double
+	
+	B1(3, 4.1); //推导出int,double类型,和默认类型无关
+	B1(3.1, 4); //推导出double,int类型,覆盖默认类型
+	B2("s");    //前者推导出const char[2],后者为默认的int且值为0
+	return 0;
+}
+//运行结果:
+//  class std::basic_string&#x3C;char, struct std::char_traits&#x3C;char>, class std::allocator&#x3C;char> >
+//	int
+//	double
+//	char
+//	unsigned int
+//	double
+//	char
+//	unsigned int
+//	float
+//	3
+//	int
+//	4.1
+//	double
+//	3.1
+//	double
+//	4
+//	int
+//	s
+//	char const* __ptr64
+//	0
+//	int
+</code></pre></div>
+<span id="三模版的特化" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三模版的特化">（三）模版的特化：</h3>
+<p>模版的特化是模版参数在某种特定类型下的具体实现，是对单一模版提供的一个特殊实例，它将一个或多个模版参数绑定到特定的类型或值上。</p>
+<p>通常情况下，使用模板可以实现一些与类型无关的代码，但对于一些特殊类型的可能会得到一些错误的结果，比如字符串不能进行比较，此时就需要特化出一个专门用于字符串的模版参数。</p>
+<p>特化分为函数模版特化和类模版特化：</p>
+<ul>
+<li>
+<p>函数模板特化：</p>
+<p>必须要先有一个基础的函数模板，且使用特换模板函数时格式有要求：</p>
+<ol>
+<li>关键字template后面接一对空的尖括号&#x3C;>。</li>
+<li>函数名&#x3C;特化类型>（特化类型 参数1， 特化类型 参数2 , …） 在函数名后跟&#x3C;>其中写要特化的类型。</li>
+</ol>
+<p>函数形参表必须要和模板函数的基础参数类型完全相同，如果不同编译器可能会报一些奇怪的错误。</p>
+<p>（实际上，此为全特化，c++11中，函数模版也可以进行偏特化的部分特化相似操作，但实际上这是一种重载，会导致函数有多个匹配，此时无法区分；不能进行偏特化的部分限制）</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include &#x3C;iostream>
+using namespace std;
+
+template&#x3C; typename T >
+int compare(const T&#x26; a, const T&#x26; b)
+{
+	if (a > b)return 1;
+	else if (a == b)return 0;
+	else return -1;
+}
+
+template&#x3C;>
+int compare(const char* const &#x26; a, const char* const &#x26; b)
+{
+	return strcmp(a, b);
+}
+int main()
+{
+	cout &#x3C;&#x3C; compare(3, 4) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; compare(4.2, 2.3) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; compare((const char*)"vvv", (const char*)"ttt") &#x3C;&#x3C; endl;
+	return 0;
+}
+</code></pre></div>
+</li>
+<li>
+<p>类模版特化：</p>
+<p>分为全特化和偏特化：</p>
+<ul>
+<li>
+<p>全特化：将模版参数类型中所有的参数都确定化。</p>
+<p>全特化的优先级比偏特化要高。</p>
+</li>
+<li>
+<p>偏特化：对于模版的类型进行限制。</p>
+<p>偏特化有两种表现方式：</p>
+<ul>
+<li>部分特化：将模版参数表中的一部分参数特化。</li>
+<li>对于模版类型进行进一步的限制。（如必须特化为指针类型、引用类型）</li>
+</ul>
+</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+//类模版
+template&#x3C;class T1, class T2>
+class Data
+{
+public:
+	Data() {
+		cout &#x3C;&#x3C; "Data&#x3C;T1,T2>" &#x3C;&#x3C; endl;
+	}
+private:
+	T1 _d1;
+	T2 _d2;
+};
+//全特化:
+template&#x3C;>
+class Data&#x3C;int, char>
+{
+public:
+	Data() {
+		cout &#x3C;&#x3C; "Data&#x3C;int,char>" &#x3C;&#x3C; endl;
+	}
+private:
+	int _d1;
+	char _d2;
+};
+//偏特化1:部分特化
+template&#x3C;class T1>
+class Data&#x3C;int, T1>
+{
+public:
+	Data() {
+		cout &#x3C;&#x3C; "Data&#x3C;int,T1>" &#x3C;&#x3C; endl;
+	}
+private:
+	int _d1;
+	T1 _d2;
+};
+
+//偏特化2:添加限制
+//两个参数偏特化为指针类型
+template &#x3C;typename T1, typename T2>
+class Data &#x3C;T1*, T2*>
+{
+public:
+	Data() {
+		cout &#x3C;&#x3C; "Data&#x3C;T1*,T2*>" &#x3C;&#x3C; endl;
+	}
+private:
+	T1 _d1;
+	T2 _d2;
+};
+
+//两个参数偏特化为引用类型
+template&#x3C;class T1, class T2>
+class Data&#x3C;T1&#x26;, T2&#x26;> {
+	T1&#x26; _d1;
+	T2&#x26; _d2;
+public:
+	Data(T1&#x26; a, T2&#x26; b) :
+		_d1(a),
+		_d2(b)
+	{
+		cout &#x3C;&#x3C; "Data&#x3C;T1&#x26;,T2&#x26;>" &#x3C;&#x3C; endl;
+	}
+};
+
+
+int main()
+{
+	Data&#x3C;int, int> d1;	     // Data&#x3C;T1,T2>
+	Data&#x3C;string, string> d2; // Data&#x3C;T1,T2>
+	Data&#x3C;int, char> d3;	     // Data&#x3C;int,char>,其实部分特化也满足,但优先进行全特化
+	Data&#x3C;int, double> d4;    // Data&#x3C;int,T1>
+	Data&#x3C;int*, double*> d5;  // Data&#x3C;T1*,T2*> 
+	int i = 5;
+	int&#x26; pi = i;
+	double d = 6.5;
+	double&#x26; pd = d;
+	Data&#x3C;int&#x26;, double&#x26;> d6(pi,pd); //Data&#x3C;T1&#x26;,T2&#x26;>
+	return 0;
+}
+</code></pre></div>
+</li>
+</ul>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#foundations","children":["编程语言知识点",["$","span",null,{"children":50}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"c++类——模版(三)"}],["$","p",null,{"className":"article-deck","children":"通过代码介绍非类型模板参数、默认类型参数，以及针对特定类型的模板特化"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-04-14","children":"2023-04-14"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,506"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",10," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$Lf","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$Lf","编程语言知识点",{"href":"/blog/#tag=%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9F%A5%E8%AF%86%E7%82%B9","children":"编程语言知识点"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-一非类型模板参数通常不应用于函数模版中","text":"（一）非类型模板参数（通常不应用于函数模版中）：","level":3},{"id":"section-二默认模板类型形参","text":"（二）默认模板类型形参：","level":3},{"id":"section-三模版的特化","text":"（三）模版的特化：","level":3}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[null,["$","$L11",null,{"html":"$12"}],"$undefined","$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"cpp-templates-3","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"c++类——模版(三) | 07xiaohei"}],["$","meta","1",{"name":"description","content":"通过代码介绍非类型模板参数、默认类型参数，以及针对特定类型的模板特化。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"E-M2wxgR09X62ofy5DhPV"}
+22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+23:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Le",null,{"href":"/blog/cpp-templates-2/","children":[["$","span",null,{"children":"上一篇"}],"c++类——模版(二)"]}],["$","$Le",null,{"href":"/blog/cpp-polymorphism-1/","children":[["$","span",null,{"children":"下一篇"}],"c++类——多态(一)"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$Le",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","cpp-templates-2",{"children":[["$","$Le",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","cpp-polymorphism-1",{"children":[["$","$Le",null,{"href":"/blog/cpp-polymorphism-1/","children":"c++类——多态(一)"}],["$","span",null,{"children":"编程语言知识点"}]]}]]}]]}]]}]
+14:["$","$L22",null,{"contentId":"cpp-templates-3"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+21:true
+7:300
+24:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

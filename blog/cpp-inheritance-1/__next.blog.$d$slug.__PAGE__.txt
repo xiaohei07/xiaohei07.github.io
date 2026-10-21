@@ -1,0 +1,286 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T2ec3,<span id="一概念" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一概念">（一）概念：</h3>
+<p>继承机制是面向对象程序设计中最重要的一个概念，也是使代码可以复用的最重要的手段。</p>
+<p>继承机制允许我们依据一个类来定义另一个类，在原有类的基础上扩展功能，复用已有实现。使用继承本身不保证程序运行得更快。</p>
+<p>被继承的类，也就是已有的类，被称为基类(父类)，而发生继承的类，也就是新建的类，被称为派生类(子类)。</p>
+<p>派生类可以复用基类成员，但能否使用还受访问权限、名称隐藏和二义性影响。普通成员运算符也可以继承；基类的赋值运算符会被派生类相应的赋值运算符隐藏。</p>
+<p>从 C++11 起，可以用 <code>using Base::Base;</code> 显式继承基类构造函数。派生类自己的复制、移动、赋值和析构函数仍按各自的特殊成员规则处理。友元函数不是类的成员，友元关系也不会随继承传递。<a href="https://eel.is/c++draft/class.derived.general" rel="noopener noreferrer">成员继承规则</a>、<a href="https://eel.is/c++draft/class.copy.assign#8" rel="noopener noreferrer">赋值运算符隐藏</a>和<a href="https://eel.is/c++draft/class.friend#9" rel="noopener noreferrer">友元规则</a>对此分别作了规定。</p>
+<p>一个基类可以派生出多个派生类，一个派生类也可以从多个基类中继承数据成员和成员函数。</p>
+<p>派生类成员不能仅凭继承关系直接访问基类的私有成员；可以通过基类提供的可访问接口操作它们。</p>
+<span id="二继承的语法形式" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二继承的语法形式">（二）继承的语法形式：</h3>
+<p><em><strong>class 派生类名:基类名表</strong></em></p>
+<p><em><strong>{</strong></em></p>
+<p><em><strong>数据成员和成员函数声明</strong></em></p>
+<p><em><strong>};</strong></em></p>
+<p>其中，基类和一般情况下声明的类基本相同。</p>
+<p>基类名表的组成为：</p>
+<p><em><strong>访问控制 基类名<sub>1</sub> , 访问控制 基类名2 , .......</strong></em></p>
+<p>访问控制是关键字，表示派生类对基类的继承方式。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class person
+{
+};
+class animal
+{
+};
+class knowledge{};
+class student :public animal,protected person,private knowledge
+{
+};
+class teacher:public animal, protected person, private knowledge
+{
+};
+</code></pre></div>
+<span id="三继承的三种方式" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-三继承的三种方式">（三）继承的三种方式：</h3>
+<p>访问控制的关键字共有三个，分别为public、private和protected。</p>
+<p>如果未直接指定访问控制关键字，用 <code>class</code> 定义派生类时默认是 <code>private</code> 继承，用 <code>struct</code> 时默认是 <code>public</code> 继承。</p>
+<p>访问控制决定了不同的访问权限和访问类型，详细情况见下表。</p>
+<p><img src="https://s1.ax1x.com/2023/04/02/ppfs4QH.png" alt="" width="749" height="97" loading="lazy" decoding="async" referrerpolicy="no-referrer"></p>
+<p>可以看到，对于基类成员，派生类的继承如下：</p>
+<p>- 基类的私有成员仍属于基类子对象，派生类成员不能仅凭继承关系直接访问。</p>
+<p>- 基类的保护成员，在 <code>public</code> 或 <code>protected</code> 继承后仍按保护成员访问，在 <code>private</code> 继承后按私有成员访问。派生类成员可以访问它们，普通类外代码不能直接访问。</p>
+<p>- 基类的公有成员，在 <code>public</code>、<code>protected</code>、<code>private</code> 继承后分别按公有、保护、私有成员访问。只有公有继承后的公有成员，普通类外代码才能直接通过派生类对象访问。</p>
+<p>以上访问权限变化见 <a href="https://eel.is/c++draft/class.access.base" rel="noopener noreferrer">C++ 标准草案的基类访问控制规则</a>。</p>
+<p><strong>注意：通过派生类可以初始化基类的私有数据成员，方式是通过调用基类的构造函数来实现对私有数据成员的初始化。</strong></p>
+<p>派生类对象包含基类子对象，基类的私有数据成员也在其中。访问权限不会让这些成员消失；对象的实际大小还取决于成员类型、对齐和填充等因素。下面保留原文的运行结果，其中 <code>sizeof</code> 数值是当时的记录，会随编译器、标准库和目标平台变化。<a href="https://eel.is/c++draft/expr.sizeof#2" rel="noopener noreferrer"><code>sizeof</code> 规则</a>说明了类对象大小包含填充。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class Axy //基类
+{
+private:
+	string Aname;
+protected:
+	double x;
+	double y;
+public:
+	Axy(double d1 = 0, double d2 = 0,string s = "pointA" ):Aname(s),x(d1),y(d2){ }
+	double getx() { return x; }
+	double gety() { return y; }
+	string getAname() { return Aname; }
+};
+class Bxy :public Axy //公有继承Axy；Aname仍在基类子对象中，但Bxy不能直接访问。本例自行定义构造函数。
+{
+private:
+	string Bname;
+public:
+	//对基类的一种初始化方式
+	Bxy(double d1 = 0, double d2 = 0, string s1 = "pointB",string s2 ="pointA") :Bname(s1), Axy(d1, d2, s2) {}
+};
+class Cxy:protected Axy //保护继承Axy；Aname不可直接访问，原公有和保护成员按protected访问。
+{
+private:
+	string Cname;
+public:
+	Cxy(double d1 = 0, double d2 = 0, string s1 = "pointC") :Cname(s1)
+	{
+		//继承可以直接使用基类的非私有数据成员
+		x = d1;
+		y = d2;
+	}
+	void use_A_function()
+	{
+		//继承可以使用基类的非私有成员函数
+		cout &#x3C;&#x3C; getx() &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; gety() &#x3C;&#x3C; endl;
+		return;
+	}
+	void use_A_function2()
+	{
+		cout &#x3C;&#x3C; x &#x3C;&#x3C; endl;
+		cout &#x3C;&#x3C; y &#x3C;&#x3C; endl;
+		return;
+	}
+};
+class Dxy:private Cxy //私有继承Cxy；Cname不可直接访问，原公有和保护成员按private访问。
+{
+private:
+	string Dname;
+public:
+	Dxy(double d1 = 0, double d2 = 0, string s = "pointD") :Dname(s), Cxy(d1, d2) {}
+};
+class Exy :public Dxy //公有继承Dxy；Dxy子对象仍存在，但经Dxy私有继承的Cxy成员不能在Exy中直接访问。
+{
+private:
+	string Dname;
+public:
+	Exy(double d1 = 0, double d2 = 0, string s = "pointD") :Dname(s), Dxy(d1, d2) {}
+};
+int main() 
+{
+	Bxy b(1,1,"bbb","aaa");
+	cout &#x3C;&#x3C; "b:" &#x3C;&#x3C; b.getx() &#x3C;&#x3C; "," &#x3C;&#x3C; b.gety() &#x3C;&#x3C; endl; //调用A的成员函数处理B的数据成员
+	cout &#x3C;&#x3C; "Aname:" &#x3C;&#x3C; b.getAname() &#x3C;&#x3C; endl;
+	Cxy c; //c为保护继承，类外均不能调用原有的成员函数
+	c.use_A_function();  //通过调用C的成员函数调用A的成员函数处理C的数据成员
+	c.use_A_function2(); //调用C的成员函数对C的数据成员操作
+	Dxy d; //d为私有继承，类外均不能调用原有的成员函数
+	Exy e; //e仍包含完整的基类子对象；本例不能通过e直接调用那些经Dxy私有继承的Cxy成员函数。
+	cout &#x3C;&#x3C; sizeof(Axy) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; sizeof(Bxy) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; sizeof(Cxy) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; sizeof(Dxy) &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; sizeof(Exy) &#x3C;&#x3C; endl;
+	return 0;
+}
+//运行结果：
+//b:1, 1
+//Aname : aaa
+//0
+//0
+//0
+//0
+//56
+//96
+//96
+//136
+//176
+</code></pre></div>
+<span id="四重名成员" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-四重名成员">（四）重名成员：</h3>
+<ul>
+<li>同名也称为隐藏，派生类定义了与基类同名的成员时，派生类的同名成员会屏蔽掉基类的同名成员——子类优先。</li>
+<li>如果要使用基类的同名成员，需要显式地使用类名限定符。</li>
+<li>对于成员函数，同名的要求是函数名相同，对参数列表没有要求。</li>
+<li>基类和派生类各有类作用域。在派生类中查找成员名时，如果本类没有找到相应声明，还会查找基类；本类找到的同名声明会隐藏基类声明。这是名称查找规则，不能用“各有自己的 this 指针”解释。<a href="https://eel.is/c++draft/class.member.lookup" rel="noopener noreferrer">规则依据</a></li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class Axy
+{
+private:
+	string Aname;
+protected:
+	double x;
+	double y;
+public:
+	Axy(double d1 = 0, double d2 = 0,string s = "pointA" ):Aname(s),x(d1),y(d2){ }
+	double getx() { return x; }
+	double gety() { return y; }
+	string getAname() { return Aname; }
+};
+class Bxy :public Axy
+{
+private:
+	string Bname;
+protected:
+	double x;
+	double y;
+public:
+	Bxy(double d1 = 0, double d2 = 0, double d3=0,double d4=0,string s1 = "pointB",string s2 ="pointA"):x(d1),y(d2),Bname(s1), Axy(d3, d4, s2) {}
+	double getx() { return x; } //访问默认的子类的同名变量x
+	double gety() { return y; } //访问默认的子类的同名变量y
+	double getAx() { return Axy::x; } //访问基类的同名变量x
+	double getAy() { return Axy::y; } //访问基类的同名变量y
+	string getAname() { return Axy::getAname(); } //调用基类的成员函数getAname，这里绝对不能不加作用域，否则会陷入死循环。
+	string getBname() { return Bname; }
+};
+
+int main()
+{
+	Bxy b;
+	cout &#x3C;&#x3C; "b:" &#x3C;&#x3C; b.getx() &#x3C;&#x3C; "," &#x3C;&#x3C; b.gety() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "a:" &#x3C;&#x3C; b.getAx() &#x3C;&#x3C; "," &#x3C;&#x3C; b.getAy() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "a:" &#x3C;&#x3C; b.Axy::getx() &#x3C;&#x3C; "," &#x3C;&#x3C; b.Axy::gety() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "bname:" &#x3C;&#x3C; b.getBname() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "aname:" &#x3C;&#x3C; b.getAname() &#x3C;&#x3C; endl;
+	cout &#x3C;&#x3C; "aname:" &#x3C;&#x3C; b.Axy::getAname() &#x3C;&#x3C; endl;
+	return 0;
+}
+//运行结果：
+//b:0, 0
+//a : 0, 0
+//a : 0, 0
+//bname : pointB
+//aname : pointA
+//aname : pointA
+</code></pre></div>
+<span id="五派生类访问静态成员" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-五派生类访问静态成员">（五）派生类访问静态成员：</h3>
+<ul>
+<li>基类定义的静态成员将被所有派生类共享。</li>
+<li>根据静态成员自身的访问特性和派生类的继承方式，类层次体系中有不同的访问性质。</li>
+<li>派生类中访问静态成员，用以下形式显式说明：
+<ul>
+<li><em><strong>类名::成员</strong></em></li>
+<li><em><strong>对象名.成员</strong></em></li>
+</ul>
+</li>
+</ul>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>#include&#x3C;iostream>
+using namespace std;
+class A
+{
+public:
+	static int i;
+	static void add_i()
+	{
+		i++;
+		return;
+	}
+	void print() { cout &#x3C;&#x3C; "i:" &#x3C;&#x3C; i &#x3C;&#x3C; endl; }
+};
+int A::i = 0;
+class B:protected A
+{
+public:
+	void add_i2() 
+	{
+		i++;
+		return;
+	}
+};
+
+int main()
+{
+	A a;
+	B b;
+	a.i++;
+	a.add_i();
+	b.add_i2();
+	//b.A::add_i(); protect继承不能在类外访问A的成员
+	//B::A::add_i(); 这样也不行
+	A::i++;
+	A::add_i();
+	a.print();
+	return 0;
+}
+//运行结果：
+//i:5
+</code></pre></div>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#foundations","children":["编程语言知识点",["$","span",null,{"children":50}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"c++类——继承(一)"}],["$","p",null,{"className":"article-deck","children":"介绍继承声明和三种继承方式，并讨论重名成员与派生类访问静态成员的写法"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-03-31","children":"2023-03-31"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-17","children":"2026-10-17"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,076"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",8," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}],["$","$Lf","类",{"href":"/blog/#tag=%E7%B1%BB","children":"类"}],["$","$Lf","编程语言知识点",{"href":"/blog/#tag=%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9F%A5%E8%AF%86%E7%82%B9","children":"编程语言知识点"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-一概念","text":"（一）概念：","level":3},{"id":"section-二继承的语法形式","text":"（二）继承的语法形式：","level":3},{"id":"section-三继承的三种方式","text":"（三）继承的三种方式：","level":3},{"id":"section-四重名成员","text":"（四）重名成员：","level":3},{"id":"section-五派生类访问静态成员","text":"（五）派生类访问静态成员：","level":3}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[null,["$","$L11",null,{"html":"$12"}],"$undefined","$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"cpp-inheritance-1","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"c++类——继承(一) | 07xiaohei"}],["$","meta","1",{"name":"description","content":"介绍继承声明和三种继承方式，并讨论重名成员与派生类访问静态成员的写法。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"E-M2wxgR09X62ofy5DhPV"}
+22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+23:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Le",null,{"href":"/blog/cpp-class-relationships/","children":[["$","span",null,{"children":"上一篇"}],"c++类——类与类之间的关系"]}],["$","$Le",null,{"href":"/blog/python-character-encoding/","children":[["$","span",null,{"children":"下一篇"}],"python基础——字符编码"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-templates-1",{"children":[["$","$Le",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","cpp-templates-2",{"children":[["$","$Le",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","cpp-templates-3",{"children":[["$","$Le",null,{"href":"/blog/cpp-templates-3/","children":"c++类——模版(三)"}],["$","span",null,{"children":"编程语言知识点"}]]}]]}]]}]]}]
+14:["$","$L22",null,{"contentId":"cpp-inheritance-1"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+21:true
+7:300
+24:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

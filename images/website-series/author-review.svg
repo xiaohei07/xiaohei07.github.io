@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+<title id="title">作者审核需要哪些条件</title><desc id="desc">来源与会话负责请求身份和环境，CSRF令牌补充敏感写操作检查，行锁与事务维护目标状态及审计。概念分组不表示所有错误的执行优先级。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#526980"/></marker></defs>
+<rect width="1000" height="650" rx="12" fill="#f8faff"/>
+<g font-family="Microsoft YaHei,PingFang SC,sans-serif" fill="#172b45">
+<text x="36" y="48" font-size="29" font-weight="700">一次审核，分别检查请求与目标</text>
+<text x="36" y="81" font-size="18" fill="#50627a">界面可访问不代表拥有管理数据与操作权限。</text>
+<rect x="36" y="118" width="928" height="90" rx="9" fill="#eaf1ff" stroke="#175fc5"/>
+<text x="60" y="153" font-size="23" font-weight="650">浏览器发出PATCH审核请求</text>
+<text x="60" y="184" font-size="19">Cookie会话令牌 · Origin · X-CSRF-Token · 反馈ID与目标状态</text>
+<path d="M500 208V232H256V255" fill="none" stroke="#526980" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="36" y="255" width="440" height="130" rx="9" fill="#e4f5f1" stroke="#087f79"/>
+<text x="60" y="291" font-size="23" font-weight="650">请求条件</text>
+<text x="60" y="324" font-size="19">来源允许；会话存在、未过期</text>
+<text x="60" y="355" font-size="19">账号启用；CSRF摘要与会话匹配</text>
+<rect x="524" y="255" width="440" height="130" rx="9" fill="#fff1dc" stroke="#a75c08"/>
+<text x="548" y="291" font-size="23" font-weight="650">目标条件</text>
+<text x="548" y="324" font-size="19">锁定反馈行；记录存在</text>
+<text x="548" y="355" font-size="19">状态仍为pending，才允许处理</text>
+<path d="M476 320H524" fill="none" stroke="#526980" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M744 385V425H500V458" fill="none" stroke="#526980" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="150" y="458" width="700" height="115" rx="9" fill="#f1ebfb" stroke="#7052ae"/>
+<text x="175" y="497" font-size="23" font-weight="650">同一数据库事务</text>
+<text x="175" y="531" font-size="20">状态、审核人、时间＋审计记录 → commit → 返回结果</text>
+<text x="36" y="613" font-size="18" fill="#50627a">不满足条件时拒绝；并发请求在锁后重新检查状态。图中箭头不表示耗时。</text>
+</g></svg>

@@ -1,0 +1,532 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T4370,<span id="七常用内置方法" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-七常用内置方法">（七）常用内置方法</h3>
+<span id="1-简介" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-简介">1. 简介：</h4>
+<p>这里介绍的常用内置方法主要是对类的一些相关用法的补充，便于解决创建类遇到的一些常见问题，同时对其进行简单演示来表示其具体的应用场景。</p>
+<p>__init__方法不再介绍，前面的使用和介绍已经非常详细了。</p>
+<ul>
+<li>
+<p>__str__()和__repr__()：</p>
+<p>这两个方法的目的使为了显式的显示对象的必要信息，方便查看和调试。</p>
+<p>__str__()被print默认调用，控制用户的展示；而__repr__被控制台输出默认调用,控制调试的展示。</p>
+<ul>
+<li>
+<p>__str__用于表示对象代表的含义，返回一个字符串，可以根据需要返回一个实例转化成字符串之后的结果。</p>
+<p>具体用法如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class exmp:
+    def __init__(self):
+        self.x=1
+        self.y=2
+    def __str__(self):
+        return f'{self.__class__}:x={self.x},y={self.y}'
+class exmp2:
+    def __init__(self):
+        self.x=1
+        self.y=2
+e=exmp()
+e2=exmp2()
+print(e)
+print(e2)
+# 运行结果:
+# &#x3C;class '__main__.exmp'>:x=1,y=2
+# &#x3C;__main__.exmp2 object at 0x0000017336228210>
+</code></pre></div>
+<p>能够看出输出实例时的内容发生了改变。</p>
+</li>
+<li>
+<p>__repr__的用途和用法都与__str__类似，所以一般直接使用__repr__= __str__将其返回字符串复制给__repr__</p>
+<p>如果为使用者和开发者提供的信息不一致，再单独定义__repr__即可。</p>
+<p>简单例子如下（）此为控制台的输入和输出。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class exmp3:
+    def __init__(self):
+        self.x=1
+        self.y=2
+    def __str__(self):
+        return f'{self.__class__}:x={self.x},y={self.y}'
+    def __repr__(self):
+        return f'{self.__class__}:x={self.x},y={self.y}'+'——repr'
+    
+e=exmp3()
+e
+&#x3C;class '__main__.exmp3'>:x=1,y=2——repr
+
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>__call__()：</p>
+<p>不管是内置函数还是自定以函数，函数实际上是实现了__call__方法的对象，这是可调用对象的一种——调用函数时，"名称()"实际上等价于"名称.__call__()"的写法。</p>
+<p>其他的可调用对象还包括Python的实例对象和实例方法。</p>
+<p>__call__方法除了函数以外，也可以给实例对象提供被执行的能力，也就是将实例对象转变为一个可调用对象，其实际功能效果类似于在类中重载了()运算符，使得类的实例对象可以以"对象名()"的形式使用。</p>
+<p>实现了__call__方法的类实例，可以传入参数也可以返回值。</p>
+<p>具体例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class exmp:
+    def __init__(self,a):
+        self.a=a
+    def __call__(self,b):
+        print("a=",self.a)
+        print("b=",b)
+        print("a+b=",self.a+b)
+        return self.a+b
+e=exmp(10)
+result=e(20)
+print(result)
+def fun(i):
+    print("fun",i)
+fun(10)
+fun.__call__(20)
+# 运行结果:
+# a= 10
+# b= 20
+# a+b= 30
+# 30
+# fun 10
+# fun 20
+</code></pre></div>
+</li>
+<li>
+<p>__iter__()和__next__()：</p>
+<p>这两个方法的具体内容在<a href="/blog/python-iteration-iterators/">python进阶——高级特性(二)迭代、迭代器 - ZZHの个人博客 (07xiaohei.com)</a>种已经进行了详细的介绍，这里只进行简要介绍。</p>
+<p>这两个方法用于将一个对象模拟成序列，内部类型如列表、元组等都可以迭代，重写这两个方法就可以实现自定义的迭代对象。
+__iter__方法向系统说明了这是一个可迭代对象，__next__方法向系统说明了该可迭代对象的迭代算法。</p>
+<p>__iter__方法需要返回self，__next__方法需要返回对应的元素。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class Myfib:
+    def __iter__(self):
+        self.i1=0
+        self.i2=1
+        return self
+    def __next__(self):
+        result=self.i1+self.i2
+        self.i1=self.i2
+        self.i2=result
+        return result
+use_fib=Myfib()
+j = 1
+for i in use_fib:
+    if i&#x3C;100000:
+        print(i,end=" ")
+        j+=1
+    else:
+        break
+    if j==10:
+        print()
+        j=1
+# 运行结果:
+# 1 2 3 5 8 13 21 34 55
+# 89 144 233 377 610 987 1597 2584 4181
+# 6765 10946 17711 28657 46368 75025
+</code></pre></div>
+<p>再举一个例子，写一个首项为10，公差为5的等差数列：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class Mysequence:
+    def __iter__(self):
+        self.i=10
+        return self
+    def __next__(self):
+        self.i+=5
+        return self.i
+se=Mysequence()
+for i in se:
+    if i&#x3C;=100:
+        print(i,end=" ")
+    else:
+        break
+# 运行结果:
+# 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100
+</code></pre></div>
+</li>
+<li>
+<p>__getitem__()，__setitem__()，__delitem__()：</p>
+<p>__getitem__()方法把类中的属性定义为序列或者字典，并且可以用此方法输出其中的某个元素，其效果类似于重载[]运算符给类，可以通过"实例名[索引]/[切片]"的方式来访问实例对象的某个元素。</p>
+<p>对于传入的是索引还是切片，可以通过isinstance函数判断。</p>
+<p>判断是索引，使用ininstance(item,int)判断item是否为int类型，确定其是否为数字索引；使用ininstance(item,slice)判断其是否为切片；使用ininstance(item,str)等判断其是否为key。</p>
+<p>具体的例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class mynumlist:
+    def __init__(self):
+        self.list_use=[]
+    def __iter__(self):
+        self.i=10
+        self.list_use.append(self.i)
+        return self
+    def __next__(self):
+        self.i+=5
+        self.list_use.append(self.i)
+        return self.i
+    def __getitem__(self, item):
+        if isinstance(item,int):
+            return self.list_use[item]
+        elif isinstance(item,slice):
+            start=item.start
+            stop=item.stop
+            return self.list_use[start:stop]
+        else:
+            return "error"
+mn=mynumlist()
+y=0
+for i in mn:
+    if y!=30:
+        y+=1
+        print(i,end=" ")
+    else:
+        break
+print()
+print(mn[10])
+print(mn[:])
+print(mn[2:10])
+print(mn[-8:-2])
+print(mn["1"])
+# 运行结果:
+# 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160
+# 60
+# [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 155, 160, 165]
+# [20, 25, 30, 35, 40, 45, 50, 55]
+# [130, 135, 140, 145, 150, 155]
+# error
+</code></pre></div>
+<p>除了上面的列表，还可以是字典：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class mydic:
+    def __init__(self):
+        self.dirc_use={}
+        self.index=1
+    def __iter__(self):
+        self.i=10
+        self.dirc_use[str(self.index)]=self.i
+        return self
+    def __next__(self):
+        self.index+=1
+        self.i+=5
+        self.dirc_use[str(self.index)] = self.i
+        return self.i
+    def __getitem__(self, item):
+        if isinstance(item,str):
+            return self.dirc_use.get(item)
+        else:
+            return "error"
+md=mydic()
+y=0
+for i in md:
+    if y!=30:
+        y+=1
+        print(i,end=" ")
+    else:
+        break
+print()
+print(md["1"])
+print(md["10"])
+print(md[8])
+print(md["1000"])
+# 运行结果:
+# 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160
+# 10
+# 55
+# error
+# None
+</code></pre></div>
+<p>可以自行定义更具体的判断条件和处理方法。</p>
+<p>__setitem__方法则是对上面某个使用索引内值的修改，可以让类按照一定的方法存储和映射key对应的value，该方法的赋值是通过类实例名直接完成的。</p>
+<p>具体例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class mynumlist:
+    def __init__(self):
+        self.list_use=[]
+    def __iter__(self):
+        self.i=10
+        self.list_use.append(self.i)
+        return self
+    def __next__(self):
+        self.i+=5
+        self.list_use.append(self.i)
+        return self.i
+    def __getitem__(self, item):
+        if isinstance(item,int):
+            return self.list_use[item]
+        elif isinstance(item,slice):
+            start=item.start
+            stop=item.stop
+            return self.list_use[start:stop]
+        else:
+            return "error"
+    def __setitem__(self, key, value):
+        if isinstance(key, int):
+            self.list_use[key]=value
+        else:
+            return "error"
+mn=mynumlist()
+y=0
+for i in mn:
+    if y!=30:
+        y+=1
+        print(i,end=" ")
+    else:
+        break
+print()
+print(mn[10])
+mn[10]=114514
+print(mn[8:11])
+# 运行结果:
+# 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160
+# 60
+# [50, 55, 114514]
+</code></pre></div>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class mydic:
+    def __init__(self):
+        self.dirc_use={}
+        self.index=1
+    def __iter__(self):
+        self.i=10
+        self.dirc_use[str(self.index)]=self.i
+        return self
+    def __next__(self):
+        self.index+=1
+        self.i+=5
+        self.dirc_use[str(self.index)] = self.i
+        return self.i
+    def __getitem__(self, item):
+        if isinstance(item,str):
+            return self.dirc_use.get(item)
+        else:
+            return "error"
+    def __setitem__(self, key, value):
+        if isinstance(key,str):
+            self.dirc_use[key]=value
+        else:
+            print("error")
+md=mydic()
+y=0
+for i in md:
+    if y!=30:
+        y+=1
+        print(i,end=" ")
+    else:
+        break
+print()
+print(md["1"])
+print(md[8])
+print(md["1000"])
+md["3"]="123456789"
+print(md["3"])
+# 运行结果:
+# 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160
+# 10
+# error
+# None
+# 123456789
+</code></pre></div>
+<p>__delitem__方法在对对象的组成部分使用__del__语句的时候被调用，需删除与key相关联的值。</p>
+<p>举例如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class mynumlist:
+    def __init__(self):
+        self.list_use=[]
+    def __iter__(self):
+        self.i=10
+        self.list_use.append(self.i)
+        return self
+    def __next__(self):
+        self.i+=5
+        self.list_use.append(self.i)
+        return self.i
+    def __getitem__(self, item):
+        if isinstance(item,int):
+            return self.list_use[item]
+        elif isinstance(item,slice):
+            start=item.start
+            stop=item.stop
+            return self.list_use[start:stop]
+        else:
+            return "error"
+    def __setitem__(self, key, value):
+        if isinstance(key, int):
+            self.list_use[key]=value
+        else:
+             print("error")
+    def __delitem__(self, key):
+        if isinstance(key, int):
+            del self.list_use[key]
+        else:
+            print("error")
+mn=mynumlist()
+y=0
+for i in mn:
+    if y!=30:
+        y+=1
+        print(i,end=" ")
+    else:
+        break
+print()
+print(mn[10])
+mn[10]=114514
+print(mn[8:11])
+del mn[10]
+print(mn[8:11])
+# 运行结果:
+# 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160
+# 60
+# [50, 55, 114514]
+# [50, 55, 65]
+</code></pre></div>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class mydic:
+    def __init__(self):
+        self.dirc_use={}
+        self.index=1
+    def __iter__(self):
+        self.i=10
+        self.dirc_use[str(self.index)]=self.i
+        return self
+    def __next__(self):
+        self.index+=1
+        self.i+=5
+        self.dirc_use[str(self.index)] = self.i
+        return self.i
+    def __getitem__(self, item):
+        if isinstance(item,str):
+            return self.dirc_use.get(item)
+        else:
+            return "error"
+    def __setitem__(self, key, value):
+        if isinstance(key,str):
+            self.dirc_use[key]=value
+        else:
+            print("error")
+    def __delitem__(self, key):
+        if isinstance(key, str):
+            del self.dirc_use[key]
+        else:
+            print("error")
+md=mydic()
+y=0
+for i in md:
+    if y!=30:
+        y+=1
+        print(i,end=" ")
+    else:
+        break
+print()
+print(md["1"])
+print(md[8])
+print(md["1000"])
+md["3"]="123456789"
+print(md["3"])
+del md["3"]
+print(md["3"])
+# 运行结果:
+# 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160
+# 10
+# error
+# None
+# 123456789
+# None
+</code></pre></div>
+</li>
+<li>
+<p>__slots__：</p>
+<p>__slots__是一个类属性，可以赋值为字符串、可迭代对象或由实例使用的变量名构成的字符串序列。</p>
+<p>__slots__允许显式声明数据成员，为已声明的变量保留空间，限制能够添加的属性名（也就是禁止为每个实例创建__dict__和__weakref__）。</p>
+<p>通过阻止每个实例创建自己的__dict__而使用__slots__，在大量创建实例时，可以显著地节省内存空间并提升属性的查找速度。</p>
+<p>——本质上，__dict__是哈希表结构，动态占用内存，开销大，而__slots__能够在编译时期使解释器确定属性，分配固定的空间存储已知的属性。</p>
+<p>__slots__仅对当前类实例起作用，不会对继承的派生类起作用，需要派生类定义自己的__slots__。</p>
+<p>例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class test:
+    __slots__ = ("a","b","c")
+    def __init__(self):
+        self.a=1
+        self.b=2
+        self.c=3
+        self.d=10
+t=test()
+# 运行结果:
+# Traceback (most recent call last):
+#   File "D:\pycharmwork\blog_use.py", line 3587, in &#x3C;module>
+#     t=test()
+#       ^^^^^^
+#   File "D:\pycharmwork\blog_use.py", line 3586, in __init__
+#     self.d=10
+#     ^^^^^^
+# AttributeError: 'test' object has no attribute 'd'
+</code></pre></div>
+<p>可以看到，只有abc的属性名可以使用，其他的属性名使用均错误。</p>
+</li>
+<li>
+<p>__getattr__()，__setattr__()，__delattr__()：</p>
+<p>__getattr__方法用于处理访问不存在属性的方法，可以输出相关的异常信息。</p>
+<p>__setattr__方法用于设置属性值的时候，每设置一次属性的值都要进入一次该方法，注意该方法不要递归调用，也不要在该方法种再次直接设置属性值，否则可能会造成死循环。</p>
+<p>__delattr__方法用于删除属性值的时候，也要注意避开死循环。</p>
+<p>使用的举例如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>class test:
+    def __init__(self):
+        self.i=1
+    def __getattr__(self, item):
+        print("Don't get!")
+        return False
+    def __setattr__(self, key, value):
+        print("Setting...")
+        self.__dict__[key]=value
+        print("Finish!")
+    def __delattr__(self, item):
+        print("Deling...")
+        if self.__dict__.get(item):
+            del self.__dict__[item]
+            print("Successful!")
+        else:
+            print("Failed!")
+t=test()
+t.i=5
+print(t.i)
+t.j=10
+print(t.j)
+print(t.z)
+del t.i
+del t.z
+# 运行结果:
+# Setting...
+# Finish!
+# Setting...
+# Finish!
+# 5
+# Setting...
+# Finish!
+# 10
+# Don't get!
+# False
+# Deling...
+# Successful!
+# Deling...
+# Failed!
+</code></pre></div>
+</li>
+</ul>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#foundations","children":["编程语言知识点",["$","span",null,{"children":50}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"python进阶——类(四)常用内置方法"}],["$","p",null,{"className":"article-deck","children":"用对象显示、调用、迭代和下标访问等场景，介绍特殊方法及属性管理"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-07-23","children":"2023-07-23"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,758"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",11," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","python",{"href":"/blog/#tag=python","children":"python"}],["$","$Lf","编程语言知识点",{"href":"/blog/#tag=%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9F%A5%E8%AF%86%E7%82%B9","children":"编程语言知识点"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-七常用内置方法","text":"（七）常用内置方法","level":3},{"id":"section-1-简介","text":"1. 简介：","level":4}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[null,["$","$L11",null,{"html":"$12"}],"$undefined","$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"python-special-methods","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"python进阶——类(四)常用内置方法 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"用对象显示、调用、迭代和下标访问等场景，介绍特殊方法及属性管理。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"E-M2wxgR09X62ofy5DhPV"}
+22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+23:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Le",null,{"href":"/blog/python-method-reuse-polymorphism/","children":[["$","span",null,{"children":"上一篇"}],"python进阶——类(三)方法重写、多态"]}],["$","$Le",null,{"href":"/blog/python-modules-packages/","children":[["$","span",null,{"children":"下一篇"}],"python进阶——模块化(二)模块和包"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$Le",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","python-class-decorators",{"children":[["$","$Le",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$Le",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"编程语言知识点"}]]}]]}]]}]]}]
+14:["$","$L22",null,{"contentId":"python-special-methods"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+21:true
+7:300
+24:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

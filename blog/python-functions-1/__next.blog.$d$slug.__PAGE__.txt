@@ -1,0 +1,226 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T3318,<span id="一概述" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一概述">（一）概述</h3>
+<p>函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段，能提高应用的模块性，和代码的重复利用率。</p>
+<span id="1-基本概念" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-基本概念">1. 基本概念：</h4>
+<p>函数用于在程序中分离不同的任务，主要目的是代码的复用，也就是同一块代码的执行特定功能的重复使用，定义和使用函数是Python程序设计的重要组成部分。</p>
+<p>函数允许自己调用自己，此过程称为递归调用。</p>
+<span id="2-函数功能" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-函数功能">2. 函数功能：</h4>
+<ul>
+<li>实现特定功能：通过函数完成特定功能的设计，可以实现各种复杂算法。</li>
+<li>结构化程序设计：通过把程序分割为不同的功能模块可以实现自顶向下的结构化设计。</li>
+<li>减少程序的复杂度：简化程序的结构，提高程序的可阅读性。</li>
+<li>实现代码复用：一次定义多次调用,实现代码的可重用性。</li>
+<li>提高代码的质量：实现分割后子任务的代码相对简单，易于开发、调试、修改和维护。</li>
+<li>协作开发：在将大型项目分割成不同的子任务后，团队多人可以分工合作，同时进行协作开发。</li>
+</ul>
+<span id="3-函数分类" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-函数分类">3. 函数分类：</h4>
+<ul>
+<li>内置函数：Python语言的内置函数，在程序中可以直接使用，是一些常用的函数。</li>
+<li>标准库函数：Python语言中有一些标准库，是特定功能/程序的集合，通过import导入标准库后可以使用标准库的函数简化程序实现。</li>
+<li>第三方库函数：Python语言中的社区开发的其他库，由用户开发，功能繁多，可以根据需要下载、安装、导入再使用其定义的函数。</li>
+<li>用户自定义的函数，如何利用Python语言定义、使用自己的函数。</li>
+</ul>
+<p>下面分别说明函数的定义、调用和函数式编程。</p>
+<span id="二定义" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-二定义">（二）定义</h3>
+<span id="1-格式及语法" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-格式及语法">1. 格式及语法：</h4>
+<p><em><strong>def functionname( parameters ):</strong></em></p>
+<p>​	<em><strong>"函数_文档字符串"</strong></em></p>
+<p>​	<em><strong>function_suite</strong></em></p>
+<p>​	<em><strong>return [expression]</strong></em></p>
+<ul>
+<li>
+<p>def：定义函数的关键词，必须包含。</p>
+</li>
+<li>
+<p>functionname：函数标识符，也就是函数名，是我们调用函数时的使用依据。</p>
+</li>
+<li>
+<p>(parameters)：形参列表，在<strong>”()“</strong>内定义函数需要使用的参数，多个参数用<strong>”,“</strong>分割，允许使用空形参列表定义函数，但是不能省略<strong>“()”</strong>和后面的<strong>”:“</strong></p>
+<p>形参列表用于接收调用传入的各种参数，形参数量和使用/传入类型必须一一匹配，但注意形参列表中是不需要说明参数类型的，主要是使用时进行检查</p>
+</li>
+<li>
+<p>"函数_文档字符串"：函数的第一行语句可以选择性地使用文档字符串—用于存放函数说明。</p>
+<p>现在不建议直接使用此格式，用注释即可完成说明。</p>
+<p>如果要使用，可以通过调用Python的help()内置函数或者_doc_属性来查看某个函数的使用说明文档</p>
+</li>
+<li>
+<p>function_suite：执行语句代码块，利用传入的函数和内部的代码完成函数要执行的功能，是函数的主体，允许没有此代码块。</p>
+<p>函数的执行会引入一个用于函数局部变量的新符号表，此局部符号表存储了所有新定义的变量和传入的参数变量，而如果是变量引用，会首先在最内层的局部符号表中查找，然后是外层函数的局部符号表，再然后是全局符号表，最后是内置名称的符号表。</p>
+<p>在函数被调用时，实际参数(实参)会被引入被调用函数的本地符号表中——<strong>实参是通过按值调用传递的，值是对象引用而不是对象的值)</strong>。</p>
+<p>函数调用另一个函数，会为其创建一个新的本地符号表，新局部符号表被视为内部的符号表。</p>
+<p>实质：变量作用域从内向外递归查找。</p>
+<p>重命名机制：函数定义会把函数名也引入到符号表中，其类型为用户定义函数类型，此值因此可以<strong>分配给一个新的名称，新名称即可作为函数使用</strong>。</p>
+</li>
+<li>
+<p>return [expression]：返回值，函数执行命令的处理结果被返回，如果不需要返回值可以不写return，但是实际上还是有函数默认返回值None。</p>
+<p>一般情况下需要设置指定返回值，返回值可以返回多个对象，对象间用”,“进行分割，当为多个返回类型时，返回类型被视为一个元组，因此其返回值的保存需要按照元组的赋值来进行。</p>
+</li>
+</ul>
+<span id="2-定义的四个基本类型" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-2-定义的四个基本类型">2. 定义的四个基本类型：</h4>
+<span id="1无参数无返回值通常是执行一些固定的内容" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-1无参数无返回值通常是执行一些固定的内容">（1）无参数无返回值，通常是执行一些固定的内容。</h5>
+<p>例子：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def my_print_defalut():
+    print("你干嘛，哎呦~")
+def my_sleep_onetime():
+    print("运行中")
+    i=0
+    while i&#x3C;100000000:
+        i=i+1
+my_sleep_onetime()
+my_print_defalut()
+# 运行结果：
+# 运行中
+# 你干嘛，哎呦~
+</code></pre></div>
+<span id="2无参数有返回值用于获得一些需要的固定内容" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-2无参数有返回值用于获得一些需要的固定内容">（2）无参数有返回值，用于获得一些需要的固定内容：</h5>
+<p>多个return语句也只会返回第一个执行的return结果</p>
+<p>例子：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def my_input_number():
+    print("请只输入数字")
+    temp = input()
+    if temp.isdigit():
+        return temp
+    else:
+        return None
+result = my_input_number()
+print(result)
+# 运行结果：
+# 请只输入数字
+# abc
+# None
+# 请只输入数字
+# 1234
+# 1234
+</code></pre></div>
+<span id="3有参数无返回值可以用于参数的输出或者参数的一些操作等等" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-3有参数无返回值可以用于参数的输出或者参数的一些操作等等">（3）有参数无返回值，可以用于参数的输出或者参数的一些操作等等。</h5>
+<p>例子：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def add_twonum(a,b):
+    c = a + b
+    print(a+b)
+add_twonum(2,3)
+def get_str_index3(str):
+    print(str[2])
+get_str_index3("abcd")
+# 运行结果：
+# 5
+# c
+</code></pre></div>
+<span id="4有参数有返回值最常用" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-4有参数有返回值最常用">（4）有参数有返回值，最常用。</h5>
+<p>例子：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>def get_abs(n):
+    if n&#x3C;0:
+        n=-n
+    return n
+print(get_abs(-2))
+def abs_to_num(n):
+    if n>0:
+        return n,-n
+    else:
+        return None
+print(abs_to_num(3))
+print(abs_to_num(-3))
+# 运行结果：
+# 2
+# (3, -3)
+# None
+</code></pre></div>
+<span id="3-全局和局部变量" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-3-全局和局部变量">3. 全局和局部变量：</h4>
+<p>变量声明的位置不同,其可以被访问的范围也不同。变量的可被访问范围称为变量的作用域。变量按其作用域大致可以分为全局变量、局部变量和类成员变量。</p>
+<span id="1全局变量" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-1全局变量">（1）全局变量：</h5>
+<p>在函数和类定义之外声明的变量称为全局变量，其作用域只在定义的模块之内，从其定义的位置开始，直到模块结束的位置。</p>
+<p>单个模块的变量可以通过import引入访问。</p>
+<p>不同引入模块都可以使用全局变量，多语句对其的修改可能会导致全局变量的管理混乱，降低模块之间的通用性和可读性，应当尽量避免使用去全局变量反复修改，而是作为常量使用。</p>
+<span id="2局部变量" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-2局部变量">（2）局部变量：</h5>
+<p>在函数中定义的变量和参数变量都是局部变量，作用域范围只在函数体内，一旦脱离作用域，不允许被使用。</p>
+<p>全局代码不能用局部变量，不同函数之间的局部变量也不可以互相使用。</p>
+<p>重名的局部变量会覆盖全局变量。</p>
+<span id="3global语句和nonlocal语句" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-3global语句和nonlocal语句">（3）global语句和nonlocal语句：</h5>
+<p>如果想要在函数中直接使用全局变量，需要在函数内对变量增加global声明，此时是显式说明不使用局部变量，而是使用全局变量。</p>
+<p>同样的，对于多个函数的嵌套，可以用nonlocal完成相对应的功能。</p>
+<p>例子如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>n = 10
+def add_use(a):
+    i=5
+    global n
+    print(i+a)
+    print(n+a)
+    def add_use_2(b):
+        j=1
+        nonlocal i
+        print(j+b)
+        print(i+b)
+    add_use_2(a)
+add_use(20)
+#运行结果：
+# 25
+# 30
+# 21
+# 25
+</code></pre></div>
+<span id="4-进阶匿名函数" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-4-进阶匿名函数">4. 进阶：匿名函数</h4>
+<p>python 使用 <strong>lambda 来创建匿名函数</strong>。（lambda是一个关键字）</p>
+<p>匿名是指不适用def的标准形式来定义函数。</p>
+<p>匿名函数可以省略定义函数的过程，主要目的是精简代码，减少函数命名，便于理解代码和避免只用一次的函数被定义而增大工作量。</p>
+<span id="1语法" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-1语法">（1）语法：</h5>
+<p>lambda函数的语法只包含一个语句：</p>
+<p><em><strong>&#x3C;variable>=lambda [arg1 [,arg2,.....argn]]:expression</strong></em></p>
+<p>实际上，等价于：</p>
+<p><em><strong>&#x3C;变量>=lambda 参数列表：return [表达式] 变量</strong></em></p>
+<p>variable表示对lambda的封装，也就是实际上让这个变量作为了一个函数名，很多时候可以省略，省略时就是真正的匿名函数。</p>
+<p>arg1,2......n表示的是参数，对应参数列表，expression则是表达式，对应的是返回值的表达式变量。</p>
+<span id="2说明" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-2说明">（2）说明：</h5>
+<ul>
+<li>lambda返回的是函数对象（构建的是一个函数对象），所以需要定义一个变量去接收</li>
+<li>lambda 只是一个表达式，函数体比 def 简单很多。</li>
+<li>lambda的主体是一个表达式，而不是一个代码块，所以仅仅能在lambda表达式中封装有限的逻辑</li>
+<li>lambda 函数拥有自己的命名空间，且不能访问自己参数列表之外或全局命名空间里的参数</li>
+</ul>
+<span id="3例子" class="legacy-anchor" aria-hidden="true"></span><h5 id="section-3例子">（3）例子：</h5>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code>fun = lambda x,y:x*y
+fun2 =lambda x:len(x)
+print("add result:",(lambda a, b:a+b)(1,2))
+print(fun(3,4))
+print(fun2("我的心总是不安"))
+#运行结果：
+# add result: 3
+# 12
+# 7
+</code></pre></div>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#foundations","children":["编程语言知识点",["$","span",null,{"children":50}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"python基础——函数(一)"}],["$","p",null,{"className":"article-deck","children":"从函数定义、参数和返回值入手，介绍变量作用域与匿名函数的写法"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-07-11","children":"2023-07-11"}]]}],null,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,301"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",8," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","python",{"href":"/blog/#tag=python","children":"python"}],["$","$Lf","编程语言知识点",{"href":"/blog/#tag=%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9F%A5%E8%AF%86%E7%82%B9","children":"编程语言知识点"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-一概述","text":"（一）概述","level":3},{"id":"section-1-基本概念","text":"1. 基本概念：","level":4},{"id":"section-2-函数功能","text":"2. 函数功能：","level":4},{"id":"section-3-函数分类","text":"3. 函数分类：","level":4},{"id":"section-二定义","text":"（二）定义","level":3},{"id":"section-1-格式及语法","text":"1. 格式及语法：","level":4},{"id":"section-2-定义的四个基本类型","text":"2. 定义的四个基本类型：","level":4},{"id":"section-1无参数无返回值通常是执行一些固定的内容","text":"（1）无参数无返回值，通常是执行一些固定的内容。","level":5},{"id":"section-2无参数有返回值用于获得一些需要的固定内容","text":"（2）无参数有返回值，用于获得一些需要的固定内容：","level":5},{"id":"section-3有参数无返回值可以用于参数的输出或者参数的一些操作等等","text":"（3）有参数无返回值，可以用于参数的输出或者参数的一些操作等等。","level":5},{"id":"section-4有参数有返回值最常用","text":"（4）有参数有返回值，最常用。","level":5},{"id":"section-3-全局和局部变量","text":"3. 全局和局部变量：","level":4},{"id":"section-1全局变量","text":"（1）全局变量：","level":5},{"id":"section-2局部变量","text":"（2）局部变量：","level":5},{"id":"section-3global语句和nonlocal语句","text":"（3）global语句和nonlocal语句：","level":5},{"id":"section-4-进阶匿名函数","text":"4. 进阶：匿名函数","level":4},{"id":"section-1语法","text":"（1）语法：","level":5},{"id":"section-2说明","text":"（2）说明：","level":5},{"id":"section-3例子","text":"（3）例子：","level":5}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[null,["$","$L11",null,{"html":"$12"}],"$undefined","$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"python-functions-1","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"python基础——函数(一) | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从函数定义、参数和返回值入手，介绍变量作用域与匿名函数的写法。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"E-M2wxgR09X62ofy5DhPV"}
+22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+23:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Le",null,{"href":"/blog/python-conditionals/","children":[["$","span",null,{"children":"上一篇"}],"python基础——条件判断"]}],["$","$Le",null,{"href":"/blog/python-functions-2/","children":[["$","span",null,{"children":"下一篇"}],"python基础——函数(二)"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$Le",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","python-class-decorators",{"children":[["$","$Le",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$Le",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"编程语言知识点"}]]}]]}]]}]]}]
+14:["$","$L22",null,{"contentId":"python-functions-1"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6","$a:0:1:d:r:props:children:0:props:children:1:props:headings:7","$a:0:1:d:r:props:children:0:props:children:1:props:headings:8","$a:0:1:d:r:props:children:0:props:children:1:props:headings:9","$a:0:1:d:r:props:children:0:props:children:1:props:headings:10","$a:0:1:d:r:props:children:0:props:children:1:props:headings:11","$a:0:1:d:r:props:children:0:props:children:1:props:headings:12","$a:0:1:d:r:props:children:0:props:children:1:props:headings:13","$a:0:1:d:r:props:children:0:props:children:1:props:headings:14","$a:0:1:d:r:props:children:0:props:children:1:props:headings:15","$a:0:1:d:r:props:children:0:props:children:1:props:headings:16","$a:0:1:d:r:props:children:0:props:children:1:props:headings:17","$a:0:1:d:r:props:children:0:props:children:1:props:headings:18"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+21:true
+7:300
+24:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

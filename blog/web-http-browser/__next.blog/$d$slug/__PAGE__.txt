@@ -1,0 +1,114 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1b:"ViewportBoundary"
+1c:I[887,[],"$1b"]
+1d:"MetadataBoundary"
+1e:I[887,[],"$1d"]
+1f:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T1c4f,<p>在浏览器里打开一篇文章，看起来只做了一件事：输入网址，然后等页面出来。不过网页里的HTML、样式、脚本和图片通常要分别获取。后面点击“发送反馈”，浏览器又会发出新的请求，这次服务器返回的是JSON数据。</p>
+<p>先把这两个过程分清，后面再看Next.js和FastAPI的分工就会容易一些。下面用本站的文章与反馈举例，请求中的内容是教学数据。</p>
+<h2 id="section-url怎样确定要访问的资源">URL怎样确定要访问的资源</h2>
+<p>例如<code>https://blog.07xiaohei.com/blog/python-slices/</code>，<code>https</code>指定协议，<code>blog.07xiaohei.com</code>是主机名，<code>/blog/python-slices/</code>是路径。HTTPS默认使用443端口，所以网址里通常不用再写<code>:443</code>。查询参数放在<code>?</code>后面；<code>#</code>后面的片段用于定位页面内部位置，一般不会随HTTP请求发给服务器。</p>
+<p>浏览器需要先确定域名对应的地址。DNS负责域名解析；连接建立后，再按协议交换数据。HTTPS还要建立经过身份验证的加密连接，浏览器会检查证书是否适用于访问的域名。DNS、连接、TLS、HTTP属于不同层次，排错时也应分别确认。</p>
+<p>连接不一定每次重新建立，DNS结果也可能被缓存。因此，“打开网页必定从头做一遍全部步骤”只是简化模型。HTTP/1.1和HTTP/2通常使用TCP；HTTP/3使用基于UDP的QUIC。本文用HTTP/1.1的文本形式展示报文，便于阅读，不代表实际线上协议一定是这个版本。</p>
+<h2 id="section-请求和响应各自包含什么">请求和响应各自包含什么</h2>
+<p>读取文章的简化请求如下：</p>
+<div class="code-block"><div class="code-toolbar"><span>http</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-http">GET /blog/python-slices/ HTTP/1.1
+Host: blog.07xiaohei.com
+Accept: text/html
+</code></pre></div>
+<p><code>GET</code>是方法，说明当前要取得资源；路径指定资源；<code>Host</code>让服务器知道要处理哪个站点。响应可以写成：</p>
+<div class="code-block"><div class="code-toolbar"><span>http</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-http">HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache
+
+&#x3C;!doctype html>
+&#x3C;html>...&#x3C;/html>
+</code></pre></div>
+<p>状态码描述请求结果，响应头补充内容类型、缓存等信息，空行之后是响应体。<code>Content-Type</code>帮助浏览器解释这些字节；同一个服务器可以返回HTML、JSON、图片或其他格式。<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview" rel="noopener noreferrer">MDN的HTTP说明</a>介绍了这套请求与响应模型。</p>
+<p>读取HTML后，浏览器构建DOM，解析CSS并计算布局，再进行绘制；脚本还可能修改页面或继续获取数据。这些工作会交错进行，图片和脚本也可能并行下载。把所有资源下载时间相加，并不能直接得到页面总加载时间。</p>
+<h2 id="section-从读文章到提交反馈数据在哪里变了">从读文章到提交反馈，数据在哪里变了</h2>
+<p>假设给文章提交一条“切片例子建议补充边界说明”的反馈，浏览器把输入组织成JSON：</p>
+<div class="code-block"><div class="code-toolbar"><span>http</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-http">POST /api/v1/feedback HTTP/1.1
+Content-Type: application/json
+Origin: https://blog.07xiaohei.com
+
+{"content_id":"python-slices","kind":"question","message":"切片例子建议补充边界说明"}
+</code></pre></div>
+<p>JSON是文本格式，里面的字段还需要后端检查。服务器不会因为字段名叫<code>content_id</code>就自动知道它是一篇已发布文章；也不会因为请求带了<code>Origin</code>就知道发送者是谁。</p>
+<p>本站中，Nginx把<code>/api/</code>请求转给FastAPI。通过校验并成功提交数据库事务后，API返回201，以及新反馈的ID和<code>pending</code>状态。前端读取回执，再把页面上的提示改成发送成功。正文页面早已存在，这次更新不需要重新构建文章HTML。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>观察位置</th><th>能看到的内容</th><th>不能直接推出的结论</th></tr></thead><tbody><tr><td>输入框</td><td>用户当前填写的字符串</td><td>数据已经保存</td></tr><tr><td>Network请求体</td><td>浏览器尝试发送的JSON</td><td>API已经收到或提交</td></tr><tr><td>201响应</td><td>API按接口约定返回创建成功</td><td>作者已经阅读或审核</td></tr><tr><td>数据库记录</td><td>对应反馈及其状态</td><td>浏览器一定收到回执</td></tr></tbody></table>
+<p>最后一行尤其值得留意：数据库提交之后，响应仍可能在网络中丢失。客户端超时与服务器没有写入，并不是同一个事实。</p>
+<h2 id="section-http状态码怎样帮助排查">HTTP状态码怎样帮助排查</h2>
+<p>本站反馈链里，422可能表示输入字段不符合要求，也可能表示内容ID不存在；429表示触发频率限制；503表示依赖暂时不可用。网关联系不到API时还可能返回502，等待上游超时可能返回504。具体原因要结合响应来自哪一层和对应日志判断。</p>
+<p><code>fetch</code>收到404、422或500时，通常仍会取得一个Response对象。只有请求层面的失败等情况才会进入拒绝分支，所以代码要主动检查<code>response.ok</code>。这一点会在<a href="/blog/javascript-async-fetch/">异步JS与Fetch</a>中继续展开。</p>
+<p>HTTP无状态，指协议本身不会自动把两次请求归为同一个登录用户。网站可以通过Cookie和服务端会话保存这种关联。HTTP缓存也不等于登录状态：缓存复用资源，会话识别身份，这两者要分别设计。</p>
+<h2 id="section-https解决了什么还有什么要靠应用检查">HTTPS解决了什么，还有什么要靠应用检查</h2>
+<p>HTTPS保护浏览器与TLS终止点之间传输的机密性、完整性，并帮助验证服务器身份。在本站，外部HTTPS由入口服务器处理，内部代理链仍要控制可访问范围。</p>
+<p>加密不会替应用检查“这篇文章是否存在”“当前用户能否审核”“SQL有没有拼接用户输入”。同样，页面上出现小锁图标，也不能证明页面引用的所有逻辑都正确。浏览器安全和API权限会在<a href="/blog/browser-cookie-cors-csrf/">Cookie、CORS与CSRF</a>中分开说明。</p>
+<p>可以在开发者工具的Network中做一个只读观察：打开文章，筛选Document看首个文档响应，再筛选Img和JS观察资源；打开站内搜索，查看是否新增JSON请求。不要为了验证流程随意向生产反馈接口提交测试数据。本系列提供的交互推演会直接展示这两条路线。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#deployment","children":["部署与运维",["$","span",null,{"children":3}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"HTTP与浏览器基础：从打开文章到提交一条反馈"}],["$","p",null,{"className":"article-deck","children":"拆开URL、DNS、HTTPS、请求响应和页面资源，再追踪一次JSON提交中的数据变化"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,553"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","HTTP",{"href":"/blog/#tag=HTTP","children":"HTTP"}],["$","$Lf","HTTPS",{"href":"/blog/#tag=HTTPS","children":"HTTPS"}],["$","$Lf","浏览器",{"href":"/blog/#tag=%E6%B5%8F%E8%A7%88%E5%99%A8","children":"浏览器"}],["$","$Lf","数据流",{"href":"/blog/#tag=%E6%95%B0%E6%8D%AE%E6%B5%81","children":"数据流"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-url怎样确定要访问的资源","text":"URL怎样确定要访问的资源","level":2},{"id":"section-请求和响应各自包含什么","text":"请求和响应各自包含什么","level":2},{"id":"section-从读文章到提交反馈数据在哪里变了","text":"从读文章到提交反馈，数据在哪里变了","level":2},{"id":"section-http状态码怎样帮助排查","text":"HTTP状态码怎样帮助排查","level":2},{"id":"section-https解决了什么还有什么要靠应用检查","text":"HTTPS解决了什么，还有什么要靠应用检查","level":2},{"id":"request-flow","text":"跟着一次请求走","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[1," / ",3," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["HTTP、部署与测试观测",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","web-http-browser",{"children":["$","$Le",null,{"href":"/blog/web-http-browser/","aria-current":"page","children":"HTTP与浏览器基础：从打开文章到提交一条反馈"}]}],["$","li","cloud-docker-nginx",{"children":["$","$Le",null,{"href":"/blog/cloud-docker-nginx/","children":"部署基础：云服务器、Docker、Nginx与HTTP缓存"}]}],["$","li","web-testing-observability",{"children":["$","$Le",null,{"href":"/blog/web-testing-observability/","children":"Web测试与观测：验证数据流、性能指标与故障边界"}]}]]}]]}]]}],["$","$L11",null,{"html":"$12"}],"$L13","$L14","$L15","$L16"]}],"$L17"]}]]}],["$L18"],"$L19"]}],"p":"$@1a","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"web-http-browser","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1c",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1e",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"HTTP与浏览器基础：从打开文章到提交一条反馈 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"拆开URL、DNS、HTTPS、请求响应和页面资源，再追踪一次JSON提交中的数据变化。"}]]}]}],null]}],null]}],"p":"$@20","v":null,"s":"$7"}},"a":"$@21","u":"$@22","b":"E-M2wxgR09X62ofy5DhPV"}
+23:"RequestFlowLoader"
+24:I[3236,["825","$b","491","$c","953","$d"],"$23"]
+25:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+26:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+13:["$","$L24",null,{}]
+14:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","span",null,{}],["$","$Le",null,{"href":"/blog/cloud-docker-nginx/","children":[["$","span",null,{"children":"下一篇"}],"部署基础：云服务器、Docker、Nginx与HTTP缓存"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","javascript-async-fetch",{"children":[["$","$Le",null,{"href":"/blog/javascript-async-fetch/","children":"JavaScript异步请求：从Promise、await到表单失败处理"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","browser-cookie-cors-csrf",{"children":[["$","$Le",null,{"href":"/blog/browser-cookie-cors-csrf/","children":"浏览器与API安全：Cookie、会话、CORS和CSRF"}],["$","span",null,{"children":"后端与数据库"}]]}]]}]]}]]}]
+15:["$","$L25",null,{"contentId":"web-http-browser"}]
+16:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+17:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4",{"id":"request-flow","text":"跟着一次请求走","level":2}]}]
+18:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+19:["$","$L26",null,{"children":["$","$1f",null,{"name":"Next.MetadataOutlet","children":"$@27"}]}]
+22:true
+7:300
+27:null
+7:C
+21:0
+9:"$undefined"
+5:"$undefined"
+20:"$undefined"
+1a:"$undefined"

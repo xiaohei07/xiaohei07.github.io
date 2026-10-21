@@ -1,0 +1,72 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
+c:"static/chunks/491-13729696a55105fe.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T1555,<p>本地网页能打开后，还要让其他人的浏览器找到它。云服务器提供持续运行的计算环境，域名与DNS帮助找到入口，Nginx处理外部HTTP请求，容器组织API和数据库运行。先看清它们的位置，再写配置会更容易。</p>
+<h2 id="section-ecs操作系统进程和容器分别在哪一层">ECS、操作系统、进程和容器分别在哪一层</h2>
+<p>ECS是本项目使用的云服务器产品，提供虚拟机资源。Linux运行在虚拟机中，Nginx与Docker等程序运行在Linux上。API容器中运行Uvicorn与Python应用，数据库容器运行PostgreSQL。</p>
+<p>镜像描述启动容器所需的文件和配置，容器是运行实例。容器通常共享宿主机内核，不等同于再启动一台完整虚拟机。数据若只留在容器可写层，重建时容易失去，因此数据库目录需要挂载持久存储。<a href="https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/" rel="noopener noreferrer">Docker容器说明</a>介绍了这一层关系。</p>
+<h2 id="section-为什么会同时出现800018000和443">为什么会同时出现8000、18000和443</h2>
+<p>本站API在容器内部监听8000，映射到宿主机回环地址<code>127.0.0.1:18000</code>；Nginx接收外部HTTPS请求，再把<code>/api/</code>转到这个本机端口。PostgreSQL在Compose网络中被API访问，没有向宿主机公开数据库端口。</p>
+<p>容器里的<code>127.0.0.1</code>指该容器自身，宿主机的<code>127.0.0.1</code>指宿主机，两者不能混淆。Compose服务之间可按服务名发现彼此，具体网络规则见<a href="https://docs.docker.com/compose/how-tos/networking/" rel="noopener noreferrer">Compose网络说明</a>。</p>
+<p>把服务绑定到回环地址与配置云安全组分别在不同层控制访问。应用还需要认证和授权；某个端口不直接公开，不表示内部任何请求都可以不检查。</p>
+<h2 id="section-nginx怎样分发静态文件与api">Nginx怎样分发静态文件与API</h2>
+<p>本站配置可以按用途缩小为：</p>
+<div class="code-block"><div class="code-toolbar"><span>nginx</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-nginx">root /opt/personal-site/current/web;
+index index.html;
+
+location / {
+    try_files $uri $uri/ =404;
+}
+location /api/ {
+    proxy_pass http://127.0.0.1:18000;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-For $remote_addr;
+}
+</code></pre></div>
+<p>这是从实际配置中缩小的片段，省略了TLS所在的server块、缓存和其他位置规则，不能当完整上线配置。<code>root</code>与URI共同确定文件路径，<code>try_files</code>依次尝试文件和目录，找不到就404；<code>proxy_pass</code>把对应请求交给上游。<a href="https://nginx.org/en/docs/beginners_guide.html" rel="noopener noreferrer">Nginx入门</a>解释了静态与代理两种用途。</p>
+<p><code>proxy_pass</code>是否带URI会影响路径替换。这里地址后面没有附加<code>/</code>路径，所以需要保留的<code>/api/v1/...</code>继续传给API。更改时应拿一个确定URL推演，并实测上游收到的路径，详见<a href="https://nginx.org/en/docs/http/ngx_http_proxy_module.html" rel="noopener noreferrer">proxy模块参考</a>。</p>
+<p>转发头也需要信任边界。当前Nginx用实际<code>remote_addr</code>覆盖X-Forwarded-For，API仅信任配置的代理来源，避免任意外部头直接成为限流依据。以后添加CDN或其他代理，需要重新定义可信链。</p>
+<h2 id="section-缓存怎样与资源版本配合">缓存怎样与资源版本配合</h2>
+<p>HTML更新频繁，本站要求重新验证；带内容哈希的JS/CSS资源可以长期缓存；API和管理页使用no-store。<code>no-cache</code>允许保存响应，但使用前要按规则验证；<code>no-store</code>要求不存储响应。304通常让客户端继续使用已保存的响应体。<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching" rel="noopener noreferrer">HTTP缓存参考</a>解释了这些差别。</p>
+<p>若一直覆盖同名图片，缓存未过期的用户可能看到旧图。改变资源URL更容易表达新版本。反过来，用户已经打开的旧页面可能稍后还请求旧hash文件，所以发布新文件时也要考虑旧资源保留窗口。</p>
+<h2 id="section-compose里的健康检查与重启策略能做什么">Compose里的健康检查与重启策略能做什么</h2>
+<p>本站API和数据库配置restart策略，数据库有持久目录，API有ready检查；API与数据库还有内存限制和日志轮转。资源限制表达上限，不是实测占用，更不是保证相应配置能承受多少并发。</p>
+<p>容器进程异常退出后可以按策略拉起，主机或磁盘故障仍需要其他恢复安排。容器显示healthy也只说明检查项通过，不等于每条业务路径和所有数据都正常。</p>
+<p>本项目已有一次数据库dump/restore核验，尚未据此建立自动离机备份。发布与恢复的具体工程过程见<a href="/blog/site-deployment-recovery/">本站部署与回滚</a>。读者自己搭建时，应使用独立域名和测试数据先完成检查，不把文章里的目录或端口原样覆盖已有服务。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#deployment","children":["部署与运维",["$","span",null,{"children":3}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"部署基础：云服务器、Docker、Nginx与HTTP缓存"}],["$","p",null,{"className":"article-deck","children":"理解主机、容器、端口、反向代理与静态文件，再看缓存和持久化各自负责什么"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,151"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",4," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","云服务器",{"href":"/blog/#tag=%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8","children":"云服务器"}],["$","$Lf","Docker",{"href":"/blog/#tag=Docker","children":"Docker"}],["$","$Lf","Nginx",{"href":"/blog/#tag=Nginx","children":"Nginx"}],["$","$Lf","缓存",{"href":"/blog/#tag=%E7%BC%93%E5%AD%98","children":"缓存"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-ecs操作系统进程和容器分别在哪一层","text":"ECS、操作系统、进程和容器分别在哪一层","level":2},{"id":"section-为什么会同时出现800018000和443","text":"为什么会同时出现8000、18000和443","level":2},{"id":"section-nginx怎样分发静态文件与api","text":"Nginx怎样分发静态文件与API","level":2},{"id":"section-缓存怎样与资源版本配合","text":"缓存怎样与资源版本配合","level":2},{"id":"section-compose里的健康检查与重启策略能做什么","text":"Compose里的健康检查与重启策略能做什么","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[2," / ",3," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["HTTP、部署与测试观测",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","web-http-browser",{"children":["$","$Le",null,{"href":"/blog/web-http-browser/","children":"HTTP与浏览器基础：从打开文章到提交一条反馈"}]}],["$","li","cloud-docker-nginx",{"children":["$","$Le",null,{"href":"/blog/cloud-docker-nginx/","aria-current":"page","children":"部署基础：云服务器、Docker、Nginx与HTTP缓存"}]}],["$","li","web-testing-observability",{"children":["$","$Le",null,{"href":"/blog/web-testing-observability/","children":"Web测试与观测：验证数据流、性能指标与故障边界"}]}]]}]]}]]}],["$","$L11",null,{"html":"$12"}],false,"$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"cloud-docker-nginx","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"部署基础：云服务器、Docker、Nginx与HTTP缓存 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"理解主机、容器、端口、反向代理与静态文件，再看缓存和持久化各自负责什么。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"E-M2wxgR09X62ofy5DhPV"}
+22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+23:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Le",null,{"href":"/blog/web-http-browser/","children":[["$","span",null,{"children":"上一篇"}],"HTTP与浏览器基础：从打开文章到提交一条反馈"]}],["$","$Le",null,{"href":"/blog/web-testing-observability/","children":[["$","span",null,{"children":"下一篇"}],"Web测试与观测：验证数据流、性能指标与故障边界"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","site-deployment-recovery",{"children":[["$","$Le",null,{"href":"/blog/site-deployment-recovery/","children":"个人主页建设（七）：Nginx部署、版本切换与数据恢复"}],["$","span",null,{"children":"项目建设"}]]}]]}]]}]]}]
+14:["$","$L22",null,{"contentId":"cloud-docker-nginx"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next"}]
+18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+21:true
+7:300
+24:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

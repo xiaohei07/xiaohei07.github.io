@@ -1,0 +1,89 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1a5e690335e7d9fc.css","style"]
+:HL["/_next/static/css/99458caadf388351.css","style"]
+:HL["/_next/static/css/d98e228e62eb3686.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d98e228e62eb3686.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"css-responsive-images","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","css-responsive-images",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1a5e690335e7d9fc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/99458caadf388351.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"E-M2wxgR09X62ofy5DhPV"}
+15:"static/chunks/825-1a8f209f3ada760f.js"
+16:"static/chunks/491-13729696a55105fe.js"
+17:"static/chunks/app/blog/%5Bslug%5D/page-32198272c82957b8.js"
+18:I[6279,["825","$15","491","$16","953","$17"],"FilterLink"]
+19:I[4067,["825","$15","491","$16","953","$17"],"ArticleToc"]
+1b:I[4711,["825","$15","491","$16","953","$17"],"ArticleBody"]
+6:C
+1c:T1cf0,<p>个人主页同时有文章、侧栏、横幅和代码块。桌面宽屏能放下三列，手机却可能只有一列；图片需要铺满横幅，正文图片又应尽量完整显示。只给所有元素加上<code>width: 100%</code>，还不足以解决这些差别。</p>
+<h2 id="section-先确定容器能分到多少宽度">先确定容器能分到多少宽度</h2>
+<p>可以用Grid描述文章与目录的两列关系：</p>
+<div class="code-block"><div class="code-toolbar"><span>css</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-css"><span class="hljs-selector-class">.reading-layout</span> {
+  <span class="hljs-attribute">display</span>: grid;
+  <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">minmax</span>(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>fr) <span class="hljs-number">15rem</span>;
+  <span class="hljs-attribute">gap</span>: <span class="hljs-number">1.5rem</span>;
+}
+<span class="hljs-selector-class">.article</span> { <span class="hljs-attribute">min-width</span>: <span class="hljs-number">0</span>; }
+<span class="hljs-selector-class">.article</span> pre { <span class="hljs-attribute">overflow-x</span>: auto; }
+<span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">60rem</span>) {
+  <span class="hljs-selector-class">.reading-layout</span> { <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">minmax</span>(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>fr); }
+}
+</code></pre></div>
+<p>这是布局教学示例，不是本站完整样式。<code>1fr</code>分配剩余空间，<code>minmax(0, 1fr)</code>允许正文列继续收缩；代码块在自身容器内横向滚动，避免长代码把整个页面撑宽。Flex/Grid子项的自动最小尺寸可能保留内容宽度，因此遇到溢出时，<code>min-width: 0</code>是值得检查的条件，具体行为见<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/min-width" rel="noopener noreferrer">MDN min-width</a>。</p>
+<p>断点根据内容放不下的位置确定，比直接背“手机等于某个像素”更可靠。浏览器缩放、长标题、侧栏文字增大都会改变空间需求。</p>
+<h2 id="section-图片文件尺寸与显示尺寸怎样对应">图片文件尺寸与显示尺寸怎样对应</h2>
+<p>一张2560像素宽的图片，可以在CSS中只显示640px宽。前者决定图片包含多少像素，后者是布局尺寸；高像素密度屏幕还会影响需要的清晰度。</p>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-html"><span class="hljs-tag">&#x3C;<span class="hljs-name">img</span>
+  <span class="hljs-attr">src</span>=<span class="hljs-string">"/images/banner-1280.webp"</span>
+  <span class="hljs-attr">srcset</span>=<span class="hljs-string">"/images/banner-640.webp 640w,
+          /images/banner-1280.webp 1280w,
+          /images/banner-1920.webp 1920w"</span>
+  <span class="hljs-attr">sizes</span>=<span class="hljs-string">"(max-width: 700px) 100vw, 80vw"</span>
+  <span class="hljs-attr">width</span>=<span class="hljs-string">"1920"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"800"</span>
+  <span class="hljs-attr">alt</span>=<span class="hljs-string">"横幅示例"</span>
+></span>
+</code></pre></div>
+<p>这些文件名是教学示意。<code>srcset</code>提供候选实际宽度，<code>sizes</code>告诉浏览器预计占用的布局宽度，浏览器再结合DPR等条件选资源。390px视口、DPR2并不保证选择640宽图片；本项目历史测量中实际选中了1280候选。<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images" rel="noopener noreferrer">响应式图片说明</a>解释了候选选择与不同裁切需求。</p>
+<p><code>width</code>和<code>height</code>还能提供固有比例，让浏览器在图片到达前预留空间。缺少尺寸时，图片加载后可能把正文向下推，增加布局位移。<code>alt</code>应说明有信息意义的图；纯装饰图可以使用空alt，并避免把装饰描述反复读给辅助技术用户。<a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images" rel="noopener noreferrer">HTML图片参考</a>包含这些基础属性。</p>
+<h2 id="section-cover为什么会裁掉一部分图片">cover为什么会裁掉一部分图片</h2>
+<p><code>object-fit: cover</code>保持比例并填满容器，多出的部分会被裁切；<code>contain</code>保持完整图片，但容器可能留出空白。横幅通常优先铺满，技术图和结果截图更需要完整显示。</p>
+<p>裁切位置由<code>object-position</code>影响。人物脸部如果靠近边缘，桌面与手机应分别选取合适位置。本项目曾调整首页横幅的宽度限制和宽窄屏裁切，修的是容器与图片呈现关系，不能仅通过重新压缩文件解决。</p>
+<p>不同构图需要不同裁切时，可以用<code>picture</code>按媒体条件提供来源。相同构图只需要不同分辨率时，则可以优先使用<code>srcset</code>。正文中的架构图不能为了铺满卡片把节点裁掉。</p>
+<h2 id="section-动画为什么需要看布局绘制与合成">动画为什么需要看布局、绘制与合成</h2>
+<p>浏览器更新样式后，可能重新计算布局、绘制内容，再完成合成。修改宽高和位置可能影响布局；<code>transform</code>与<code>opacity</code>在适合的条件下更容易由合成阶段处理，但是否独立成层仍由浏览器决定，不能保证任何transform动画都没有开销。</p>
+<p>大量透明层、模糊、阴影和大图也可能增加绘制或内存成本。优化时应查看实际轨迹，先确认慢在下载、解码、布局还是脚本，再决定减少哪部分工作。</p>
+<p>用户选择减少动态效果时，应降低或关闭不必要动画，同时保留功能状态变化：</p>
+<div class="code-block"><div class="code-toolbar"><span>css</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-css"><span class="hljs-keyword">@media</span> (<span class="hljs-attribute">prefers-reduced-motion</span>: reduce) {
+  <span class="hljs-selector-class">.banner-layer</span> { <span class="hljs-attribute">transition</span>: none; }
+  <span class="hljs-selector-class">.decorative-petal</span> { <span class="hljs-attribute">animation</span>: none; }
+}
+</code></pre></div>
+<p>这项偏好由系统与浏览器暴露，见<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion" rel="noopener noreferrer">prefers-reduced-motion</a>。本站还在JS层判断页面可见性，避免只隐藏元素却继续运行轮播计时。</p>
+<p>检查阅读页时，可以依次放入长标题、长代码、宽表格和技术图，再缩小视口。允许代码块内部滚动，与整页出现横向滚动是不同情况；不能只看首页好看，就认为正文也没有布局问题。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"响应式页面基础：CSS布局、图片候选与动画呈现"}],["$","p",null,{"className":"article-deck","children":"从阅读页空间分配讲到srcset、DPR、cover裁切和减少动态效果，解释宽窄屏检查的依据"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,140"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",4," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L18","CSS",{"href":"/blog/#tag=CSS","children":"CSS"}],["$","$L18","HTML",{"href":"/blog/#tag=HTML","children":"HTML"}],["$","$L18","响应式图片",{"href":"/blog/#tag=%E5%93%8D%E5%BA%94%E5%BC%8F%E5%9B%BE%E7%89%87","children":"响应式图片"}],["$","$L18","动画",{"href":"/blog/#tag=%E5%8A%A8%E7%94%BB","children":"动画"}]]}]]}],["$","$L19",null,{"headings":[{"id":"section-先确定容器能分到多少宽度","text":"先确定容器能分到多少宽度","level":2},{"id":"section-图片文件尺寸与显示尺寸怎样对应","text":"图片文件尺寸与显示尺寸怎样对应","level":2},{"id":"section-cover为什么会裁掉一部分图片","text":"cover为什么会裁掉一部分图片","level":2},{"id":"section-动画为什么需要看布局绘制与合成","text":"动画为什么需要看布局、绘制与合成","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1a",["$","$L1b",null,{"html":"$1c"}],false,"$L1d","$L1e","$L1f"]}],"$L20"]}]]}]
+21:I[2708,["825","$15","491","$16","953","$17"],"FeedbackForm"]
+22:I[3498,["825","$15","491","$16","953","$17"],"default"]
+1e:["$","$L21",null,{"contentId":"css-responsive-images"}]
+1f:["$","div",null,{"className":"related-note","children":[["$","$L22",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+20:["$","$L19",null,{"headings":["$9:props:children:1:props:headings:0","$9:props:children:1:props:headings:1","$9:props:children:1:props:headings:2","$9:props:children:1:props:headings:3"]}]
+1d:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$L22",null,{"href":"/blog/react-state-effects/","children":[["$","span",null,{"children":"上一篇"}],"React入门（二）：状态快照、Effect与横幅切换过程"]}],"$undefined"]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","site-images-performance",{"children":[["$","$L22",null,{"href":"/blog/site-images-performance/","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","nextjs-content-cache",{"children":[["$","$L22",null,{"href":"/blog/nextjs-content-cache/","children":"Next.js入门（四）：Markdown内容管线与多层缓存"}],["$","span",null,{"children":"前端开发"}]]}],["$","li","nextjs-position-toolchain",{"children":[["$","$L22",null,{"href":"/blog/nextjs-position-toolchain/","children":"Next.js入门（一）：框架定位、技术关系与工程工具链"}],["$","span",null,{"children":"前端开发"}]]}]]}]]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+12:[["$","title","0",{"children":"响应式页面基础：CSS布局、图片候选与动画呈现 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从阅读页空间分配讲到srcset、DPR、cover裁切和减少动态效果，解释宽窄屏检查的依据。"}]]
+23:"static/chunks/app/layout-f6895f86611bc12f.js"
+24:I[6767,["825","$15","177","$23"],"DisplayProvider"]
+25:"NavigationFeedback"
+26:I[2842,["825","$15","177","$23"],"$25"]
+27:I[8587,["825","$15","177","$23"],"SiteHeader"]
+28:I[5803,["825","$15","177","$23"],"SiteFrame"]
+29:I[164,["825","$15","177","$23"],"ProfileSidebar"]
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L24",null,{"children":[["$","$L26",null,{}],["$","$L27",null,{"tags":["编程语言知识点","python","C++"],"categoryIds":["foundations","frontend","backend","agent","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L28",null,{"sidebar":["$","$L29",null,{"categoryIds":"$2:props:children:1:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L22",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L22",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L22",null,{"href":"/about/","children":"关于这个站点"}],["$","$L22",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+1a:["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$L22",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[5," / ",5," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["JavaScript、TypeScript与React基础",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","javascript-async-fetch",{"children":["$","$L22",null,{"href":"/blog/javascript-async-fetch/","aria-current":"$undefined","children":"JavaScript异步请求：从Promise、await到表单失败处理"}]}],["$","li","typescript-types-boundaries",{"children":["$","$L22",null,{"href":"/blog/typescript-types-boundaries/","aria-current":"$undefined","children":"TypeScript入门：对象类型、联合类型与网络数据边界"}]}],["$","li","react-components-props",{"children":["$","$L22",null,{"href":"/blog/react-components-props/","aria-current":"$undefined","children":"React入门（一）：组件、JSX、props与列表身份"}]}],["$","li","react-state-effects",{"children":["$","$L22",null,{"href":"/blog/react-state-effects/","aria-current":"$undefined","children":"React入门（二）：状态快照、Effect与横幅切换过程"}]}],["$","li","css-responsive-images",{"children":["$","$L22",null,{"href":"/blog/css-responsive-images/","aria-current":"page","children":"响应式页面基础：CSS布局、图片候选与动画呈现"}]}]]}]]}]]}]
+14:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L22",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L22",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":111}]]}],["$","$L22",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":83}]]}],["$","$L18",null,{"className":"trail-current","href":"/blog/#frontend","children":["前端开发",["$","span",null,{"children":7}]]}],"$undefined"]}]
