@@ -1,44 +1,22 @@
-1:"$Sreact.fragment"
-2:"static/chunks/825-1a8f209f3ada760f.js"
-3:"static/chunks/app/layout-f6895f86611bc12f.js"
-4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
-5:"NavigationFeedback"
-6:I[2842,["825","$2","177","$3"],"$5"]
-7:I[8587,["825","$2","177","$3"],"SiteHeader"]
-8:I[5803,["825","$2","177","$3"],"SiteFrame"]
-9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
-a:I[9630,[],""]
-b:I[1380,[],""]
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
 c:"static/chunks/491-13729696a55105fe.js"
 d:"static/chunks/app/blog/%5Bslug%5D/page-7e06e4a07db3c778.js"
-e:I[3498,["825","$2","491","$c","953","$d"],"default"]
-22:"ViewportBoundary"
-23:I[887,[],"$22"]
-24:"MetadataBoundary"
-25:I[887,[],"$24"]
-26:"$Sreact.suspense"
-:HL["/_next/static/css/1a5e690335e7d9fc.css","style"]
-:HL["/_next/static/css/99458caadf388351.css","style"]
-10:X
-13:X
-13:C
-16:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":116}]]}],["$","$Le",null,{"href":"/blog/","children":["文章","$L17"]}],"$L18","$undefined"]}],"$L19","$L1a","$L1b","$L1c"]}],"$L1d","$L1e"]}],["$L1f"],"$L20"]}],"p":"$@21","v":null,"s":"$10"}}]]
-14:[["children",{"s":{"n":"slug","t":"d","k":"javascript-async-fetch","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@15","v":"$13","s":"$10"},"c":"$Q16"}]]
-11:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@12","v":"$13","s":"$10"},"c":"$Q14"}]]
-0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1a5e690335e7d9fc.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/99458caadf388351.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["编程语言知识点","python","C++"],"categoryIds":["foundations","frontend","backend","agent","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L8",null,{"sidebar":["$","$L9",null,{"categoryIds":"$0:t:t:d:r:props:children:1:props:children:1:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Le",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Le",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Le",null,{"href":"/about/","children":"关于这个站点"}],["$","$Le",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@f","v":null,"s":"$10"},"c":"$Q11"},"h":{"r":["$","$1","h",{"children":[null,["$","$L23",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L25",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$26",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"JavaScript异步请求：从Promise、await到表单失败处理 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"用一个请求过程解释模块、Promise、JSON、Fetch错误与超时，说明请求顺序和过时结果。"}]]}]}],null]}],null]}],"p":"$@27","v":null,"s":"$10"}},"a":"$@28","u":"$@29","b":"kLI0_oHd0HuMRgafghDd2"}
-2a:I[6279,["825","$2","491","$c","953","$d"],"FilterLink"]
-2b:I[4067,["825","$2","491","$c","953","$d"],"ArticleToc"]
-2c:I[4711,["825","$2","491","$c","953","$d"],"ArticleBody"]
-32:I[887,[],"OutletBoundary"]
-:HL["/_next/static/css/2f2300ea426b880f.css","style"]
-17:["$","span",null,{"children":88}]
-18:["$","$L2a",null,{"className":"trail-current","href":"/blog/#foundations","children":["编程语言知识点",["$","span",null,{"children":50}]]}]
-19:["$","h1",null,{"tabIndex":-1,"children":"JavaScript异步请求：从Promise、await到表单失败处理"}]
-1a:["$","p",null,{"className":"article-deck","children":"用一个请求过程解释模块、Promise、JSON、Fetch错误与超时，说明请求顺序和过时结果"}]
-1b:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,313"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}]
-1c:["$","div",null,{"className":"tag-list","children":[["$","$L2a","JavaScript",{"href":"/blog/#tag=JavaScript","children":"JavaScript"}],["$","$L2a","异步",{"href":"/blog/#tag=%E5%BC%82%E6%AD%A5","children":"异步"}],["$","$L2a","Fetch",{"href":"/blog/#tag=Fetch","children":"Fetch"}]]}]
-1d:["$","$L2b",null,{"headings":[{"id":"section-模块怎样把代码组织起来","text":"模块怎样把代码组织起来","level":2},{"id":"section-promise表示尚未确定的异步结果","text":"Promise表示尚未确定的异步结果","level":2},{"id":"section-将成功http失败和网络失败分开","text":"将成功、HTTP失败和网络失败分开","level":2},{"id":"section-表单等待期间应该保留哪些状态","text":"表单等待期间应该保留哪些状态","level":2},{"id":"section-两个请求怎样安排顺序","text":"两个请求怎样安排顺序","level":2}],"mobile":true}]
-2d:T26a8,<p>写过简单JS后，应该已经接触过函数、对象和事件。做前后端交互时，还需要补上Promise、<code>async/await</code>、模块和错误处理。这几个内容可以用一个完整过程串起来：点击按钮，等待接口返回，然后更新页面。</p>
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T26a8,<p>写过简单JS后，应该已经接触过函数、对象和事件。做前后端交互时，还需要补上Promise、<code>async/await</code>、模块和错误处理。这几个内容可以用一个完整过程串起来：点击按钮，等待接口返回，然后更新页面。</p>
 <h2 id="section-模块怎样把代码组织起来">模块怎样把代码组织起来</h2>
 <p>本站把HTTP请求放在<code>src/lib/api.ts</code>，表单组件再导入其中的函数。简化成JS，结构如下：</p>
 <div class="code-block"><div class="code-toolbar"><span>js</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-js"><span class="hljs-comment">// api.js</span>
@@ -99,21 +77,25 @@ e:I[3498,["825","$2","491","$c","953","$d"],"default"]
 <h2 id="section-两个请求怎样安排顺序">两个请求怎样安排顺序</h2>
 <p>如果请求B需要请求A返回的ID，就应该先等A，再发B。两个互不依赖的只读请求可以用<code>Promise.all</code>一起等待，但其中一个拒绝后，其他已经发出的请求不会自动取消；需要全部结果时，可以考虑<code>Promise.allSettled</code>。</p>
 <p>搜索还有一种常见问题：用户先输入<code>react</code>，很快改成<code>next</code>，前一个请求却更晚返回。如果直接用每次返回的数据覆盖结果，就会显示过时内容。可以中止旧请求，也可以给请求标记序号，只接受当前序号的结果。本站站内搜索先加载静态索引，再在本地匹配，并没有为每次输入访问服务器搜索接口，因此不要把这个教学场景写成本站现有缺陷。</p>
-<p>继续追问时，可以把“异步”落实成三个问题：等待的是什么、谁能在等待期间继续工作、结果回来时还是否属于当前操作。比起只记住<code>async/await</code>的语法，这三个问题更有助于检查真实代码。</p>1e:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[1," / ",5," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["JavaScript、TypeScript与React基础",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","javascript-async-fetch",{"children":["$","$Le",null,{"href":"/blog/javascript-async-fetch/","aria-current":"page","children":"JavaScript异步请求：从Promise、await到表单失败处理"}]}],["$","li","typescript-types-boundaries",{"children":["$","$Le",null,{"href":"/blog/typescript-types-boundaries/","children":"TypeScript入门：对象类型、联合类型与网络数据边界"}]}],["$","li","react-components-props",{"children":["$","$Le",null,{"href":"/blog/react-components-props/","children":"React入门（一）：组件、JSX、props与列表身份"}]}],["$","li","react-state-effects",{"children":["$","$Le",null,{"href":"/blog/react-state-effects/","children":"React入门（二）：状态快照、Effect与横幅切换过程"}]}],["$","li","css-responsive-images",{"children":["$","$Le",null,{"href":"/blog/css-responsive-images/","children":"响应式页面基础：CSS布局、图片候选与动画呈现"}]}]]}]]}]]}],["$","$L2c",null,{"html":"$2d"}],false,"$L2e","$L2f","$L30"]}],"$L31"]}]
-1f:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2f2300ea426b880f.css","precedence":"next"}]
-20:["$","$L32",null,{"children":["$","$26",null,{"name":"Next.MetadataOutlet","children":"$@33"}]}]
-34:I[2708,["825","$2","491","$c","953","$d"],"FeedbackForm"]
-10:300
-2e:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","span",null,{}],["$","$Le",null,{"href":"/blog/typescript-types-boundaries/","children":[["$","span",null,{"children":"下一篇"}],"TypeScript入门：对象类型、联合类型与网络数据边界"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","react-state-effects",{"children":[["$","$Le",null,{"href":"/blog/react-state-effects/","children":"React入门（二）：状态快照、Effect与横幅切换过程"}],["$","span",null,{"children":"前端开发"}]]}]]}]]}]]}]
-2f:["$","$L34",null,{"contentId":"javascript-async-fetch"}]
-30:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
-31:["$","$L2b",null,{"headings":["$1d:props:headings:0","$1d:props:headings:1","$1d:props:headings:2","$1d:props:headings:3","$1d:props:headings:4"]}]
-33:null
-29:true
-10:C
-28:0
-15:"$undefined"
-12:"$undefined"
-f:"$undefined"
-27:"$undefined"
-21:"$undefined"
+<p>继续追问时，可以把“异步”落实成三个问题：等待的是什么、谁能在等待期间继续工作、结果回来时还是否属于当前操作。比起只记住<code>async/await</code>的语法，这三个问题更有助于检查真实代码。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":116}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":88}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#foundations","children":["编程语言知识点",["$","span",null,{"children":50}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"JavaScript异步请求：从Promise、await到表单失败处理"}],["$","p",null,{"className":"article-deck","children":"用一个请求过程解释模块、Promise、JSON、Fetch错误与超时，说明请求顺序和过时结果"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,313"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","JavaScript",{"href":"/blog/#tag=JavaScript","children":"JavaScript"}],["$","$Lf","异步",{"href":"/blog/#tag=%E5%BC%82%E6%AD%A5","children":"异步"}],["$","$Lf","Fetch",{"href":"/blog/#tag=Fetch","children":"Fetch"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-模块怎样把代码组织起来","text":"模块怎样把代码组织起来","level":2},{"id":"section-promise表示尚未确定的异步结果","text":"Promise表示尚未确定的异步结果","level":2},{"id":"section-将成功http失败和网络失败分开","text":"将成功、HTTP失败和网络失败分开","level":2},{"id":"section-表单等待期间应该保留哪些状态","text":"表单等待期间应该保留哪些状态","level":2},{"id":"section-两个请求怎样安排顺序","text":"两个请求怎样安排顺序","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[1," / ",5," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["JavaScript、TypeScript与React基础",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","javascript-async-fetch",{"children":["$","$Le",null,{"href":"/blog/javascript-async-fetch/","aria-current":"page","children":"JavaScript异步请求：从Promise、await到表单失败处理"}]}],["$","li","typescript-types-boundaries",{"children":["$","$Le",null,{"href":"/blog/typescript-types-boundaries/","children":"TypeScript入门：对象类型、联合类型与网络数据边界"}]}],["$","li","react-components-props",{"children":["$","$Le",null,{"href":"/blog/react-components-props/","children":"React入门（一）：组件、JSX、props与列表身份"}]}],["$","li","react-state-effects",{"children":["$","$Le",null,{"href":"/blog/react-state-effects/","children":"React入门（二）：状态快照、Effect与横幅切换过程"}]}],["$","li","css-responsive-images",{"children":["$","$Le",null,{"href":"/blog/css-responsive-images/","children":"响应式页面基础：CSS布局、图片候选与动画呈现"}]}]]}]]}]]}],["$","$L11",null,{"html":"$12"}],false,"$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"javascript-async-fetch","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"JavaScript异步请求：从Promise、await到表单失败处理 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"用一个请求过程解释模块、Promise、JSON、Fetch错误与超时，说明请求顺序和过时结果。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"vLBe5xy2g9wqj_vQfSWuV"}
+22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+23:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/2f2300ea426b880f.css","style"]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","span",null,{}],["$","$Le",null,{"href":"/blog/typescript-types-boundaries/","children":[["$","span",null,{"children":"下一篇"}],"TypeScript入门：对象类型、联合类型与网络数据边界"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","react-state-effects",{"children":[["$","$Le",null,{"href":"/blog/react-state-effects/","children":"React入门（二）：状态快照、Effect与横幅切换过程"}],["$","span",null,{"children":"前端开发"}]]}]]}]]}]]}]
+14:["$","$L22",null,{"contentId":"javascript-async-fetch"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2f2300ea426b880f.css","precedence":"next"}]
+18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+21:true
+7:300
+24:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"
