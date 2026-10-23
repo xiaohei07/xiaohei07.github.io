@@ -1,44 +1,22 @@
-1:"$Sreact.fragment"
-2:"static/chunks/825-1a8f209f3ada760f.js"
-3:"static/chunks/app/layout-f6895f86611bc12f.js"
-4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
-5:"NavigationFeedback"
-6:I[2842,["825","$2","177","$3"],"$5"]
-7:I[8587,["825","$2","177","$3"],"SiteHeader"]
-8:I[5803,["825","$2","177","$3"],"SiteFrame"]
-9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
-a:I[9630,[],""]
-b:I[1380,[],""]
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/825-1a8f209f3ada760f.js"
 c:"static/chunks/491-13729696a55105fe.js"
-d:"static/chunks/app/blog/%5Bslug%5D/page-1dcca6e20a57b371.js"
-e:I[3498,["825","$2","491","$c","953","$d"],"default"]
-22:"ViewportBoundary"
-23:I[887,[],"$22"]
-24:"MetadataBoundary"
-25:I[887,[],"$24"]
-26:"$Sreact.suspense"
-:HL["/_next/static/css/1a5e690335e7d9fc.css","style"]
-:HL["/_next/static/css/99458caadf388351.css","style"]
-10:X
-13:X
-13:C
-16:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":112}]]}],["$","$Le",null,{"href":"/blog/","children":["文章","$L17"]}],"$L18","$undefined"]}],"$L19","$L1a","$L1b","$L1c"]}],"$L1d","$L1e"]}],["$L1f"],"$L20"]}],"p":"$@21","v":null,"s":"$10"}}]]
-14:[["children",{"s":{"n":"slug","t":"d","k":"python-namespaces","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@15","v":"$13","s":"$10"},"c":"$Q16"}]]
-11:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@12","v":"$13","s":"$10"},"c":"$Q14"}]]
-0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1a5e690335e7d9fc.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/99458caadf388351.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["编程语言知识点","python","C++"],"categoryIds":["foundations","frontend","backend","agent","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L8",null,{"sidebar":["$","$L9",null,{"categoryIds":"$0:t:t:d:r:props:children:1:props:children:1:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Le",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Le",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Le",null,{"href":"/about/","children":"关于这个站点"}],["$","$Le",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@f","v":null,"s":"$10"},"c":"$Q11"},"h":{"r":["$","$1","h",{"children":[null,["$","$L23",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L25",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$26",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"“python进阶——模块化(一)命名空间和作用域” | 07xiaohei"}],["$","meta","1",{"name":"description","content":"梳理命名空间与作用域的分类、生命周期和名称查找顺序，解释变量的访问范围。"}]]}]}],null]}],null]}],"p":"$@27","v":null,"s":"$10"}},"a":"$@28","u":"$@29","b":"XfycjbEvUDmMsl6nefn00"}
-2a:I[6279,["825","$2","491","$c","953","$d"],"FilterLink"]
-2b:I[4067,["825","$2","491","$c","953","$d"],"ArticleToc"]
-2c:I[4711,["825","$2","491","$c","953","$d"],"ArticleBody"]
-32:I[887,[],"OutletBoundary"]
-:HL["/_next/static/css/032d590df0bd982d.css","style"]
-17:["$","span",null,{"children":84}]
-18:["$","$L2a",null,{"className":"trail-current","href":"/blog/#foundations","children":["编程语言知识点",["$","span",null,{"children":50}]]}]
-19:["$","h1",null,{"tabIndex":-1,"children":"“python进阶——模块化(一)命名空间和作用域”"}]
-1a:["$","p",null,{"className":"article-deck","children":"梳理命名空间与作用域的分类、生命周期和名称查找顺序，解释变量的访问范围"}]
-1b:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-07-15","children":"2023-07-15"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-17","children":"2026-10-17"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,993"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",10," 分钟"]}]]}]
-1c:["$","div",null,{"className":"tag-list","children":[["$","$L2a","python",{"href":"/blog/#tag=python","children":"python"}],["$","$L2a","编程语言知识点",{"href":"/blog/#tag=%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9F%A5%E8%AF%86%E7%82%B9","children":"编程语言知识点"}]]}]
-1d:["$","$L2b",null,{"headings":[{"id":"section-一前言","text":"（一）前言","level":3},{"id":"section-1-概述","text":"1. 概述","level":4},{"id":"section-2-优点","text":"2. 优点：","level":4},{"id":"section-二命名空间和作用域","text":"（二）命名空间和作用域：","level":3},{"id":"section-1-命名","text":"1. 命名：","level":4},{"id":"section-2-命名空间","text":"2. 命名空间：","level":4},{"id":"section-1概念","text":"（1）概念：","level":5},{"id":"section-2分类","text":"（2）分类：","level":5},{"id":"section-3生存周期","text":"（3）生存周期：","level":5},{"id":"section-4查找名称的顺序","text":"（4）查找名称的顺序","level":5},{"id":"section-3-作用域","text":"3. 作用域：","level":4},{"id":"section-1概念-1","text":"（1）概念：","level":5},{"id":"section-2分类-1","text":"（2）分类：","level":5},{"id":"section-3访问权限","text":"（3）访问权限：","level":5},{"id":"section-4查找规则","text":"（4）查找规则：","level":5},{"id":"section-4-作用域和命名空间的详细关系","text":"4. 作用域和命名空间的详细关系：","level":4}],"mobile":true}]
-2d:T3f8f,<p>本文的核心内容是命名空间、作用域、模块、包。</p>
+d:"static/chunks/app/blog/%5Bslug%5D/page-7e06e4a07db3c778.js"
+e:I[3498,["825","$b","491","$c","953","$d"],"default"]
+f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
+10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
+11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+12:T3f8f,<p>本文的核心内容是命名空间、作用域、模块、包。</p>
 <span id="一前言" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-一前言">（一）前言</h3>
 <span id="1-概述" class="legacy-anchor" aria-hidden="true"></span><h4 id="section-1-概述">1. 概述</h4>
 <p>为了便于开发和维护代码，有逻辑地阻止和处理代码段，经常需要把大量的工程代码通过模块化的方式将其分解成小的子任务和子模块。</p>
@@ -244,21 +222,25 @@ print(id(temp_fun2()))
 <p>变量的定义需要在逻辑上加入到当前的最内层作用域范围，物理上保存到当前对应的命名空间内。</p>
 <p>Python中，命名空间及作用域的创建是由模块、类、函数和列表推导完成的，其他的代码块均不会创建。</p>
 <p>此处多为概念关系，另外此处逻辑其实也和其他语言的定义十分类似，可以根据自己的理解尝试编写代码并判断自己的理解是否正确，个人就不举例了。</p>
-<p>本次修订依据 <a href="https://docs.python.org/3.13/tutorial/classes.html#python-scopes-and-namespaces" rel="noopener noreferrer">Python 3.13 命名空间与作用域教程</a>、<a href="https://docs.python.org/3.13/reference/executionmodel.html#resolution-of-names" rel="noopener noreferrer">名称解析规则</a>和<a href="https://docs.python.org/3.13/reference/compound_stmts.html#function-definitions" rel="noopener noreferrer">函数定义说明</a>。代码及输出沿用原文，输出中的对象标识不保证跨次运行相同。</p>1e:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[null,["$","$L2c",null,{"html":"$2d"}],"$undefined","$L2e","$L2f","$L30"]}],"$L31"]}]
-1f:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/032d590df0bd982d.css","precedence":"next"}]
-20:["$","$L32",null,{"children":["$","$26",null,{"name":"Next.MetadataOutlet","children":"$@33"}]}]
-34:I[2708,["825","$2","491","$c","953","$d"],"FeedbackForm"]
-10:300
-2e:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Le",null,{"href":"/blog/python-modules-packages/","children":[["$","span",null,{"children":"上一篇"}],"python进阶——模块化(二)模块和包"]}],["$","$Le",null,{"href":"/blog/python-access-inheritance/","children":[["$","span",null,{"children":"下一篇"}],"python进阶——类(二)访问限制、继承"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$Le",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","python-class-decorators",{"children":[["$","$Le",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$Le",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"编程语言知识点"}]]}]]}]]}]]}]
-2f:["$","$L34",null,{"contentId":"python-namespaces"}]
-30:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
-31:["$","$L2b",null,{"headings":["$1d:props:headings:0","$1d:props:headings:1","$1d:props:headings:2","$1d:props:headings:3","$1d:props:headings:4","$1d:props:headings:5","$1d:props:headings:6","$1d:props:headings:7","$1d:props:headings:8","$1d:props:headings:9","$1d:props:headings:10","$1d:props:headings:11","$1d:props:headings:12","$1d:props:headings:13","$1d:props:headings:14","$1d:props:headings:15"]}]
-33:null
-29:true
-10:C
-28:0
-15:"$undefined"
-12:"$undefined"
-f:"$undefined"
-27:"$undefined"
-21:"$undefined"
+<p>本次修订依据 <a href="https://docs.python.org/3.13/tutorial/classes.html#python-scopes-and-namespaces" rel="noopener noreferrer">Python 3.13 命名空间与作用域教程</a>、<a href="https://docs.python.org/3.13/reference/executionmodel.html#resolution-of-names" rel="noopener noreferrer">名称解析规则</a>和<a href="https://docs.python.org/3.13/reference/compound_stmts.html#function-definitions" rel="noopener noreferrer">函数定义说明</a>。代码及输出沿用原文，输出中的对象标识不保证跨次运行相同。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":116}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":88}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#foundations","children":["编程语言知识点",["$","span",null,{"children":50}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"“python进阶——模块化(一)命名空间和作用域”"}],["$","p",null,{"className":"article-deck","children":"梳理命名空间与作用域的分类、生命周期和名称查找顺序，解释变量的访问范围"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2023-07-15","children":"2023-07-15"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-17","children":"2026-10-17"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,993"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",10," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","python",{"href":"/blog/#tag=python","children":"python"}],["$","$Lf","编程语言知识点",{"href":"/blog/#tag=%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9F%A5%E8%AF%86%E7%82%B9","children":"编程语言知识点"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-一前言","text":"（一）前言","level":3},{"id":"section-1-概述","text":"1. 概述","level":4},{"id":"section-2-优点","text":"2. 优点：","level":4},{"id":"section-二命名空间和作用域","text":"（二）命名空间和作用域：","level":3},{"id":"section-1-命名","text":"1. 命名：","level":4},{"id":"section-2-命名空间","text":"2. 命名空间：","level":4},{"id":"section-1概念","text":"（1）概念：","level":5},{"id":"section-2分类","text":"（2）分类：","level":5},{"id":"section-3生存周期","text":"（3）生存周期：","level":5},{"id":"section-4查找名称的顺序","text":"（4）查找名称的顺序","level":5},{"id":"section-3-作用域","text":"3. 作用域：","level":4},{"id":"section-1概念-1","text":"（1）概念：","level":5},{"id":"section-2分类-1","text":"（2）分类：","level":5},{"id":"section-3访问权限","text":"（3）访问权限：","level":5},{"id":"section-4查找规则","text":"（4）查找规则：","level":5},{"id":"section-4-作用域和命名空间的详细关系","text":"4. 作用域和命名空间的详细关系：","level":4}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[null,["$","$L11",null,{"html":"$12"}],"$undefined","$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"python-namespaces","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"“python进阶——模块化(一)命名空间和作用域” | 07xiaohei"}],["$","meta","1",{"name":"description","content":"梳理命名空间与作用域的分类、生命周期和名称查找顺序，解释变量的访问范围。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"AzzEjE9NiBoJiD2zdoTrD"}
+22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+23:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/2f2300ea426b880f.css","style"]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$Le",null,{"href":"/blog/python-modules-packages/","children":[["$","span",null,{"children":"上一篇"}],"python进阶——模块化(二)模块和包"]}],["$","$Le",null,{"href":"/blog/python-access-inheritance/","children":[["$","span",null,{"children":"下一篇"}],"python进阶——类(二)访问限制、继承"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","python-os",{"children":[["$","$Le",null,{"href":"/blog/python-os/","children":"python标准库——os模块常用方法"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","python-class-decorators",{"children":[["$","$Le",null,{"href":"/blog/python-class-decorators/","children":"python进阶——类(五)类装饰器"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","python-method-reuse-polymorphism",{"children":[["$","$Le",null,{"href":"/blog/python-method-reuse-polymorphism/","children":"python进阶——类(三)方法重写、多态"}],["$","span",null,{"children":"编程语言知识点"}]]}]]}]]}]]}]
+14:["$","$L22",null,{"contentId":"python-namespaces"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6","$a:0:1:d:r:props:children:0:props:children:1:props:headings:7","$a:0:1:d:r:props:children:0:props:children:1:props:headings:8","$a:0:1:d:r:props:children:0:props:children:1:props:headings:9","$a:0:1:d:r:props:children:0:props:children:1:props:headings:10","$a:0:1:d:r:props:children:0:props:children:1:props:headings:11","$a:0:1:d:r:props:children:0:props:children:1:props:headings:12","$a:0:1:d:r:props:children:0:props:children:1:props:headings:13","$a:0:1:d:r:props:children:0:props:children:1:props:headings:14","$a:0:1:d:r:props:children:0:props:children:1:props:headings:15"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2f2300ea426b880f.css","precedence":"next"}]
+18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+21:true
+7:300
+24:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

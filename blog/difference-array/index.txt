@@ -1,0 +1,230 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/1a5e690335e7d9fc.css","style"]
+:HL["/_next/static/css/99458caadf388351.css","style"]
+:HL["/_next/static/css/2f2300ea426b880f.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2f2300ea426b880f.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"difference-array","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","difference-array",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1a5e690335e7d9fc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/99458caadf388351.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"AzzEjE9NiBoJiD2zdoTrD"}
+6:C
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+15:"static/chunks/825-1a8f209f3ada760f.js"
+16:"static/chunks/491-13729696a55105fe.js"
+17:"static/chunks/app/blog/%5Bslug%5D/page-7e06e4a07db3c778.js"
+18:I[6279,["825","$15","491","$16","953","$17"],"FilterLink"]
+19:I[4067,["825","$15","491","$16","953","$17"],"ArticleToc"]
+1b:I[4711,["825","$15","491","$16","953","$17"],"ArticleBody"]
+1c:T2320,<h2 id="section-差分存的是相邻变化累加后恢复原数组">差分存的是相邻变化，累加后恢复原数组</h2>
+<p>如果要把数组中一整段元素都加上v，直接写法需要遍历这一段。多次更新的区间互相重叠时，同一个位置就可能被修改很多次。</p>
+<p><strong>差分数组把相邻两个元素的差保存下来，用边界变化表示整段更新。</strong>对于原数组a，定义：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo><mo>=</mo><mi>a</mi><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo><mo separator="true">,</mo><mspace width="2em"></mspace><mi>d</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo>=</mo><mi>a</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo>−</mo><mi>a</mi><mo stretchy="false">[</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo stretchy="false">]</mo><mspace width="1em"></mspace><mo stretchy="false">(</mo><mi>i</mi><mo>≥</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">d[0]=a[0],\qquad d[i]=a[i]-a[i-1]\quad(i\ge1)</annotation></semantics></math></span>
+<p>例如<code>a=[2,2,5,5,1]</code>，对应<code>d=[2,0,3,0,-4]</code>。第一个2表示初始值，3表示从2升到5，−4表示从5降到1；连续不变的位置差值为0。</p>
+<p>从左到右累加这些变化，就能恢复原值：</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mi>i</mi></msubsup><mi>d</mi><mo stretchy="false">[</mo><mi>j</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">a[i]=\sum_{j=0}^{i}d[j]</annotation></semantics></math></span></p>
+<figure class="explain-figure"><figcaption>原值→相邻差值→累加恢复</figcaption><div class="lane"><b>原数组a</b><div class="cells"><div class="cell"><small>下标0</small><b>2</b></div><div class="cell"><small>下标1</small><b>2</b></div><div class="cell"><small>下标2</small><b>5</b></div><div class="cell"><small>下标3</small><b>5</b></div><div class="cell"><small>下标4</small><b>1</b></div></div></div><div class="lane"><b>相邻差分d</b><div class="cells"><div class="cell"><small>下标0</small><b>2</b></div><div class="cell"><small>下标1</small><b>0</b></div><div class="cell"><small>下标2</small><b>3</b></div><div class="cell"><small>下标3</small><b>0</b></div><div class="cell"><small>下标4</small><b>-4</b></div></div></div><div class="equation-strip">2 → 2＋0＝2 → 2＋3＝5 → 5＋0＝5 → 5−4＝1</div><p>只在0、2、4处发生变化；累加时仍逐位置恢复，不能跳过值不变的位置。</p></figure>
+<details class="extra">
+<summary>展开差分数组的构造</summary>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">make_diff</span>(<span class="hljs-params">nums: <span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]</span>) -> <span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]:
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> nums:
+        <span class="hljs-keyword">return</span> []
+    <span class="hljs-keyword">return</span> [nums[<span class="hljs-number">0</span>]] + [nums[i] - nums[i - <span class="hljs-number">1</span>] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-built_in">len</span>(nums))]
+</code></pre></div>
+</details>
+<details class="extra">
+<summary>展开差分数组的恢复</summary>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">restore</span>(<span class="hljs-params">diff: <span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]</span>) -> <span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]:
+    total, answer = <span class="hljs-number">0</span>, []
+    <span class="hljs-keyword">for</span> delta <span class="hljs-keyword">in</span> diff:
+        total += delta
+        answer.append(total)
+    <span class="hljs-keyword">return</span> answer
+</code></pre></div>
+</details>
+<h2 id="section-区间加法的两个边界l处增加r1处撤销">区间加法的两个边界：l处增加、r＋1处撤销</h2>
+<p>对从0开始的闭区间<code>[l,r]</code>整体加v，只需要：</p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python">diff[l] += v       <span class="hljs-comment"># 从l开始增加v</span>
+diff[r + <span class="hljs-number">1</span>] -= v   <span class="hljs-comment"># 从r之后取消这次增加</span>
+</code></pre></div>
+<p><strong>区间内部的相邻两项都加了v，作差时两个v互相抵消，因此内部差分不变。</strong>只有进入区间时增加、离开区间时撤销，这两个位置需要修改。</p>
+<p>如果r已经是末尾，可以跳过范围外的撤销；也可以预先多开一个<strong>哨兵位置</strong>，统一保存<code>r+1</code>的撤销事件，恢复时只输出原数组的n项。哨兵是额外存储位置，不是新增的数据元素。</p>
+<p>单次更新只记两个边界是O(1)，但<strong>获得所有修改后的值，还需要一次O(n)累加恢复</strong>。差分适合先批量更新、最后统一取结果；如果更新与查询频繁交错，就不能把两种操作都算作O(1)。</p>
+<h2 id="section-1109航班预订统计从编号转换到差分下标">1109航班预订统计：从编号转换到差分下标</h2>
+<section class="problem"><div class="problem-heading"><strong>1109. 航班预订统计</strong><a href="https://leetcode.cn/problems/corporate-flight-bookings/" rel="noopener noreferrer">完整力扣题面 ↗</a></div><p class="excerpt-label">题面原文节选</p><blockquote>这里有 n 个航班，它们分别从 1 到 n 进行编号。</blockquote><div class="examples"><b>示例输入与输出</b><code>bookings=[[1,2,10],[2,3,20],[2,5,25]], n=5 → [10,55,45,25,25]</code></div><p><b>任务与约束：</b>每条[first,last,seats]为包含两端的航班范围增加seats个座位，求所有航班最终预订座位数。n与预订数为1～2×10⁴，1≤first≤last≤n，seats为1～10⁴。</p></section>
+<p>每条预订<code>[first,last,seats]</code>表示这一段航班都增加seats个座位，正好是一段相同增量。</p>
+<p>航班编号从1开始，数组下标从0开始，闭区间应转换为<code>[first-1,last-1]</code>。因此<strong>增加的位置是first−1，撤销的位置是last</strong>，不是在两个位置上都减1。</p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">flight_bookings</span>(<span class="hljs-params">bookings: <span class="hljs-built_in">list</span>[<span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]], n: <span class="hljs-built_in">int</span></span>) -> <span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]:
+    diff = [<span class="hljs-number">0</span>] * (n + <span class="hljs-number">1</span>)  <span class="hljs-comment"># 最后一格为撤销更新的哨兵，不输出。</span>
+    <span class="hljs-keyword">for</span> first, last, seats <span class="hljs-keyword">in</span> bookings:
+        diff[first - <span class="hljs-number">1</span>] += seats  <span class="hljs-comment"># 1-based航班first映射到0-based first-1。</span>
+        diff[last] -= seats       <span class="hljs-comment"># last之后的0-based位置正好是last。</span>
+    answer, running = [], <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):
+        running += diff[i]
+        answer.append(running)
+    <span class="hljs-keyword">return</span> answer
+</code></pre></div>
+<h2 id="section-交互演示航班预订统计">交互演示：航班预订统计</h2>
+9:["$","div",null,{"className":"shell reading-page algorithm-reading","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"差分数组（一）：航班预订统计与合并区间"}],["$","p",null,{"className":"article-deck","children":"从差分与恢复出发，用航班预订统计说明区间更新，再区分合并区间中的坐标事件和离散下标"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-23","children":"2026-10-23"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,939"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",10," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L18","差分数组",{"href":"/blog/#tag=%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84","children":"差分数组"}],["$","$L18","扫描线",{"href":"/blog/#tag=%E6%89%AB%E6%8F%8F%E7%BA%BF","children":"扫描线"}],["$","$L18","编程语言知识点",{"href":"/blog/#tag=%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9F%A5%E8%AF%86%E7%82%B9","children":"编程语言知识点"}],["$","$L18","Python",{"href":"/blog/#tag=Python","children":"Python"}]]}]]}],["$","$L19",null,{"headings":[{"id":"section-差分存的是相邻变化累加后恢复原数组","text":"差分存的是相邻变化，累加后恢复原数组","level":2},{"id":"section-区间加法的两个边界l处增加r1处撤销","text":"区间加法的两个边界：l处增加、r＋1处撤销","level":2},{"id":"section-1109航班预订统计从编号转换到差分下标","text":"1109航班预订统计：从编号转换到差分下标","level":2},{"id":"section-交互演示航班预订统计","text":"交互演示：航班预订统计","level":2},{"id":"section-56合并区间边界思想可以复用区间含义需要区分","text":"56合并区间：边界思想可以复用，区间含义需要区分","level":2},{"id":"section-分开保存开始和结束同一坐标先开始再结束","text":"分开保存开始和结束，同一坐标先开始、再结束","level":3},{"id":"section-密集数组的成本取决于区间数和坐标跨度","text":"密集数组的成本取决于区间数和坐标跨度","level":3},{"id":"section-差分与前缀和的更新查询分工","text":"差分与前缀和的更新、查询分工","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1a",[["$","$L1b","0",{"html":"$1c"}],"$L1d","$L1e"],false,"$L1f","$L20","$L21"]}],"$L22"]}]]}]
+c:null
+12:[["$","title","0",{"children":"差分数组（一）：航班预订统计与合并区间 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从差分与恢复出发，用航班预订统计说明区间更新，再区分合并区间中的坐标事件和离散下标。"}]]
+23:"AlgorithmDemoLoader"
+24:I[7223,["825","$15","491","$16","953","$17"],"$23"]
+26:I[2708,["825","$15","491","$16","953","$17"],"FeedbackForm"]
+27:I[3498,["825","$15","491","$16","953","$17"],"default"]
+1d:["$","$L24","1",{"id":"flights-1109","fallback":["$","figure",null,{"className":"explain-figure wp-demo","children":[["$","figcaption",null,{"children":"1109：记录三次预订，再累加恢复"}],["$","div",null,{"dangerouslySetInnerHTML":{"__html":"<div class=\"table-scroll\" tabindex=\"0\"><table><thead><tr><th scope=\"col\">diff下标</th><th scope=\"col\">0</th><th scope=\"col\">1</th><th scope=\"col\">2</th><th scope=\"col\">3</th><th scope=\"col\">4</th><th scope=\"col\">5（哨兵）</th></tr></thead><tbody><tr><td>差分</td><td>10</td><td>45</td><td>-10</td><td>-20</td><td>0</td><td>-25</td></tr><tr><td>航班编号</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>不输出</td></tr><tr><td>累计恢复</td><td>10</td><td>55</td><td>45</td><td>25</td><td>25</td><td>不输出</td></tr></tbody></table></div><div class=\"state-msg\">恢复航班5：累计差分后得到25个座位。</div>"}}],["$","p",null,{"className":"figure-note","children":"diff下标从0开始；航班编号从1开始；diff[5]是哨兵，不输出为航班。"}]]}]}]
+25:T3e35,
+<p>三条预订叠加后，差分为<code>[10,45,-10,-20,0,-25]</code>。累加前五项得到<code>[10,55,45,25,25]</code>。最后一格−25使累计量归零，表示更新全部结束，不对应第6个航班。</p>
+<p>设m为预订数、n为航班数，记录m次更新花O(m)，恢复n项花O(n)，所以<strong>总时间为O(m+n)，额外差分空间为O(n)</strong>；结果数组还需要O(n)输出空间。直接逐条修改区间最坏需要O(mn)。这里消除的是重叠预订带来的重复逐项修改，最后输出n项的工作仍然保留。</p>
+<h2 id="section-56合并区间边界思想可以复用区间含义需要区分">56合并区间：边界思想可以复用，区间含义需要区分</h2>
+<section class="problem"><div class="problem-heading"><strong>56. 合并区间</strong><a href="https://leetcode.cn/problems/merge-intervals/" rel="noopener noreferrer">完整力扣题面 ↗</a></div><p class="excerpt-label">题面原文节选</p><blockquote>请你合并所有重叠的区间，并返回 一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间 。</blockquote><div class="examples"><b>示例输入与输出</b><code>[[1,3],[2,6],[8,10],[15,18]] → [[1,6],[8,10],[15,18]]；[[1,4],[4,5]] → [[1,5]]</code></div><p><b>任务与约束：</b>合并重叠区间，输出覆盖相同范围且互不重叠的区间集合。区间数为1～10⁴，0≤start≤end≤10⁴；区间包含端点。</p></section>
+<p>做完航班预订统计后，再看到合并区间，我首先想到的也是记录开始和结束的位置。排序合并当然也能做，不过当时更想弄清楚的是：如果直接按坐标把这些事件存入数组，能否省去排序，让处理成本更低一些？</p>
+<p>因此这里继续保留开始、结束事件的思路，并把坐标跨度也算进复杂度。不过，航班是<strong>离散的数组位置</strong>，56处理的是<strong>数轴上的闭区间</strong>。这一区别会影响撤销事件放在哪里。</p>
+<p><code>[1,2]</code>与<code>[2,4]</code>共享端点2，应合成<code>[1,4]</code>；<code>[1,2]</code>与<code>[3,4]</code>之间还有空隙，必须保留为两段。没有未覆盖的整数点，并不等于数轴上没有间隙。</p>
+<figure class="explain-figure"><figcaption>闭区间相接与相邻整数点之间的空隙</figcaption><div class="interval-plot"><img src="/media/algorithm-window-prefix/intervals.svg" alt="第一组[1,2]与[2,4]共享端点，第二组[1,2]与[3,4]中间有空隙" width="580" height="230" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><p>实心端点表示端点包含在区间内；第二组的(2,3)虽然没有整数点，仍是未覆盖的数轴区间。</p></figure>
+<p>如果直接按整数格使用<code>diff[l]+=1、diff[r+1]-=1</code>，再把连续正值格子输出成一个区间，那么<code>[1,2]</code>在3处撤销，<code>[3,4]</code>也在3处开始，两件事会抵消，错误地得到<code>[1,4]</code>。这是把离散覆盖规则搬到数轴区间时产生的语义问题。</p>
+<h3 id="section-分开保存开始和结束同一坐标先开始再结束">分开保存开始和结束，同一坐标先开始、再结束</h3>
+<p>用<code>starts[x]</code>记录在x开始的区间数量，用<code>ends[x]</code>记录在x结束的区间数量。<strong>扫描线就是按坐标顺序处理这些事件，同时维护当前仍覆盖着的区间数量count。</strong></p>
+<p>处理坐标x时，先加入开始事件，再移除结束事件：</p>
+<ol>
+<li>原先count为0且这里有开始事件，记录一段新的起点。</li>
+<li>加入<code>starts[x]</code>，再减去<code>ends[x]</code>。</li>
+<li>结束处理后count回到0，就在x关闭这一段。</li>
+</ol>
+<p>对<code>[1,2]</code>与<code>[2,4]</code>，到2之前count为1，在2先加1再减1，仍为1，覆盖继续。对单点<code>[2,2]</code>，同一坐标也先打开、再关闭，能正确保留这个点。</p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">merge_dense_events</span>(<span class="hljs-params">intervals: <span class="hljs-built_in">list</span>[<span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]]</span>) -> <span class="hljs-built_in">list</span>[<span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]]:
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> intervals:
+        <span class="hljs-keyword">return</span> []
+    low = <span class="hljs-built_in">min</span>(left <span class="hljs-keyword">for</span> left, _ <span class="hljs-keyword">in</span> intervals)
+    high = <span class="hljs-built_in">max</span>(right <span class="hljs-keyword">for</span> _, right <span class="hljs-keyword">in</span> intervals)
+    starts, ends = [<span class="hljs-number">0</span>] * (high - low + <span class="hljs-number">1</span>), [<span class="hljs-number">0</span>] * (high - low + <span class="hljs-number">1</span>)
+    <span class="hljs-keyword">for</span> left, right <span class="hljs-keyword">in</span> intervals:
+        starts[left - low] += <span class="hljs-number">1</span>
+        ends[right - low] += <span class="hljs-number">1</span>  <span class="hljs-comment"># 保留两种事件，不能提前净额抵消。</span>
+    count, begin, result = <span class="hljs-number">0</span>, <span class="hljs-literal">None</span>, []
+    <span class="hljs-keyword">for</span> offset <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(starts)):
+        x = low + offset
+        <span class="hljs-keyword">if</span> count == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> starts[offset] > <span class="hljs-number">0</span>:
+            begin = x
+        count += starts[offset]  <span class="hljs-comment"># 闭区间：同坐标先处理开始。</span>
+        count -= ends[offset]    <span class="hljs-comment"># 再处理结束，接触点会保持连通。</span>
+        <span class="hljs-keyword">if</span> count == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> ends[offset] > <span class="hljs-number">0</span>:
+            result.append([begin, x])  <span class="hljs-comment"># [x,x]单点也能正确开启并关闭。</span>
+    <span class="hljs-keyword">return</span> result
+</code></pre></div>
+<p>如果只存一张净变化表<code>diff[l]+=1、diff[r]-=1</code>，单点区间的两个事件会直接抵消，无法再看出这个点曾被覆盖。<strong>分开保存starts和ends，是为了保留同一坐标内的事件顺序。</strong>这属于边界增量思想的应用，但不等于前面的相邻差分定义。</p>
+<h3 id="section-密集数组的成本取决于区间数和坐标跨度">密集数组的成本取决于区间数和坐标跨度</h3>
+<p>设区间数为n，实际扫描的坐标跨度为<code>U=max(end)-min(start)+1</code>。按下标放事件不需要排序，记录事件O(n)，扫描坐标O(U)，所以<strong>密集事件数组为O(n+U)时间、O(U)辅助空间</strong>，另计至多O(n)的输出。</p>
+<p>本题坐标限制在0到10⁴之间，确实可以尝试密集数组。当推广到跨度很大、实际端点很少的数据时，可以改为只记录2n个事件，再排序扫描。</p>
+<details class="extra">
+<summary>展开稀疏事件排序扫描</summary>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">merge_sparse_events</span>(<span class="hljs-params">intervals: <span class="hljs-built_in">list</span>[<span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]]</span>) -> <span class="hljs-built_in">list</span>[<span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]]:
+    events = [(left, <span class="hljs-number">1</span>) <span class="hljs-keyword">for</span> left, _ <span class="hljs-keyword">in</span> intervals]
+    events += [(right, -<span class="hljs-number">1</span>) <span class="hljs-keyword">for</span> _, right <span class="hljs-keyword">in</span> intervals]
+    events.sort(key=<span class="hljs-keyword">lambda</span> event: (event[<span class="hljs-number">0</span>], -event[<span class="hljs-number">1</span>]))  <span class="hljs-comment"># 同坐标+在-之前。</span>
+    count, begin, result = <span class="hljs-number">0</span>, <span class="hljs-literal">None</span>, []
+    <span class="hljs-keyword">for</span> x, delta <span class="hljs-keyword">in</span> events:
+        <span class="hljs-keyword">if</span> delta == <span class="hljs-number">1</span>:
+            <span class="hljs-keyword">if</span> count == <span class="hljs-number">0</span>:
+                begin = x
+            count += <span class="hljs-number">1</span>
+        <span class="hljs-keyword">else</span>:
+            count -= <span class="hljs-number">1</span>
+            <span class="hljs-keyword">if</span> count == <span class="hljs-number">0</span>:
+                result.append([begin, x])
+    <span class="hljs-keyword">return</span> result
+</code></pre></div>
+</details>
+<p>同坐标的开始事件排在结束事件前，继续保留闭区间语义。这种写法节约了跨度U对应的空间，但排序需要O(n log n)时间。Python字典虽然保留插入顺序，<strong>并不会按坐标大小自动排序</strong>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方案</th><th>时间</th><th>空间口径</th><th>适用条件</th></tr></thead><tbody><tr><td>密集开始/结束数组</td><td>O(n+U)</td><td>O(U)辅助，O(n)输出</td><td>值域较小，能接受扫描所有坐标</td></tr><tr><td>稀疏事件排序</td><td>O(n log n)</td><td>O(n)</td><td>只处理端点，不承担大跨度成本</td></tr><tr><td>区间按左端排序后合并</td><td>O(n log n)</td><td>本文Python实现O(n)</td><td>不依赖整数小值域，代码更简短</td></tr></tbody></table>
+<details class="extra">
+<summary>对照：按左端排序合并区间</summary>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">merge_sorted</span>(<span class="hljs-params">intervals: <span class="hljs-built_in">list</span>[<span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]]</span>) -> <span class="hljs-built_in">list</span>[<span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]]:
+    result = []
+    <span class="hljs-keyword">for</span> left, right <span class="hljs-keyword">in</span> <span class="hljs-built_in">sorted</span>(intervals):
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> result <span class="hljs-keyword">or</span> left > result[-<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]:
+            result.append([left, right])
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-comment"># 相等端点也重叠，不能用>=判为分离。</span>
+            result[-<span class="hljs-number">1</span>][<span class="hljs-number">1</span>] = <span class="hljs-built_in">max</span>(result[-<span class="hljs-number">1</span>][<span class="hljs-number">1</span>], right)
+    <span class="hljs-keyword">return</span> result
+</code></pre></div>
+</details>
+<p>已经按左端排序的输入可以直接O(n)合并；上表讨论的是需要排序的输入。哪种方法更合适，要同时看n与U，不能给密集数组凭空加上排序成本，也不能省略它扫描坐标的成本。</p>
+<details class="extra"><summary>补充：如果仍想用单张净差分表，怎样保留间隙</summary>
+<p>可以用偶数位置表示原坐标、奇数位置表示相邻整数之间的空隙，把闭区间<code>[l,r]</code>覆盖到<code>[2l,2r]</code>，在<code>2r+1</code>撤销。这样<code>[1,2]</code>和<code>[3,4]</code>之间留有未覆盖的间隙，而共享端点仍会连在一起。关键是<strong>同时定义坐标、间隙和撤销位置</strong>，仅把两个端点乘2还不够。</p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">merge_scaled_diff</span>(<span class="hljs-params">intervals: <span class="hljs-built_in">list</span>[<span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]]</span>) -> <span class="hljs-built_in">list</span>[<span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]]:
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> intervals:
+        <span class="hljs-keyword">return</span> []
+    low = <span class="hljs-built_in">min</span>(left <span class="hljs-keyword">for</span> left, _ <span class="hljs-keyword">in</span> intervals)
+    high = <span class="hljs-built_in">max</span>(right <span class="hljs-keyword">for</span> _, right <span class="hljs-keyword">in</span> intervals)
+    diff = [<span class="hljs-number">0</span>] * (<span class="hljs-number">2</span> * (high - low) + <span class="hljs-number">2</span>)
+    <span class="hljs-keyword">for</span> left, right <span class="hljs-keyword">in</span> intervals:
+        diff[<span class="hljs-number">2</span> * (left - low)] += <span class="hljs-number">1</span>
+        diff[<span class="hljs-number">2</span> * (right - low) + <span class="hljs-number">1</span>] -= <span class="hljs-number">1</span>  <span class="hljs-comment"># 必须有+1，只将两端乘2无效。</span>
+    running, begin, result = <span class="hljs-number">0</span>, <span class="hljs-literal">None</span>, []
+    <span class="hljs-keyword">for</span> i, delta <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(diff):
+        old = running
+        running += delta
+        <span class="hljs-keyword">if</span> old == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> running > <span class="hljs-number">0</span>:
+            begin = low + i // <span class="hljs-number">2</span>
+        <span class="hljs-keyword">if</span> old > <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> running == <span class="hljs-number">0</span>:
+            result.append([begin, low + (i - <span class="hljs-number">1</span>) // <span class="hljs-number">2</span>])
+    <span class="hljs-keyword">return</span> result
+</code></pre></div>
+</details>
+<h2 id="section-差分与前缀和的更新查询分工">差分与前缀和的更新、查询分工</h2>
+<p>差分保存变化量，通过两个边界修改表示整段增加；<a href="/blog/prefix-sum/">前缀和</a>保存累计量，通过两个累计值相减查询区间和。<strong>对差分进行前缀累加可以恢复原数组</strong>，但两种操作的用途不同：1109是在批量更新，303是在重复查询。</p>
+<p>另外，<a href="/blog/sliding-window-209-438/">438中的字符频次</a>也可以比较两张表的差，但那是字符计数之间的差，不是相邻数组元素的差。判断一个变量是否属于本篇的差分数组，要看它保存的含义，不能只看它是否叫diff。</p>1e:["$","$L1b","2",{"html":"$25"}]
+20:["$","$L26",null,{"contentId":"difference-array"}]
+21:["$","div",null,{"className":"related-note","children":[["$","$L27",null,{"href":"/blog/","children":"返回技术笔记"}],["$","$L27",null,{"href":"/blog/merge-sort/","children":"体验归并排序"}]]}]
+22:["$","$L19",null,{"headings":["$9:props:children:1:props:headings:0","$9:props:children:1:props:headings:1","$9:props:children:1:props:headings:2","$9:props:children:1:props:headings:3","$9:props:children:1:props:headings:4","$9:props:children:1:props:headings:5","$9:props:children:1:props:headings:6","$9:props:children:1:props:headings:7"]}]
+1a:["$","nav",null,{"className":"series-reading algorithm-series-reading","aria-label":"算法系列阅读顺序","children":[["$","div",null,{"children":[["$","$L27",null,{"href":"/blog/#category=algorithms","children":"算法与数据结构"}],["$","span",null,{"children":[6," / ",7," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["算法学习系列",["$","span",null,{"children":"差分数组"}]]}],[["$","section","hash-table",{"className":"algorithm-topic-group","aria-label":"哈希表","children":[["$","h2",null,{"children":"哈希表"}],["$","ol",null,{"children":[["$","li","two-sum",{"children":["$","$L27",null,{"href":"/blog/two-sum/","aria-current":"$undefined","children":["哈希表（一）：两数之和的补数查询",["$","small",null,{"children":"题解"}]]}]}],["$","li","hash-table-introduction",{"children":["$","$L27",null,{"href":"/blog/hash-table-introduction/","aria-current":"$undefined","children":["哈希表（二）：键值映射与Python字典查找",["$","small",null,{"children":"知识点"}]]}]}]]}]]}],["$","section","sliding-window",{"className":"algorithm-topic-group","aria-label":"滑动窗口","children":[["$","h2",null,{"children":"滑动窗口"}],["$","ol",null,{"children":[["$","li","longest-substring-without-repeating-characters",{"children":["$","$L27",null,{"href":"/blog/longest-substring-without-repeating-characters/","aria-current":"$undefined","children":["滑动窗口（一）：无重复字符的最长子串",["$","small",null,{"children":"题解"}]]}]}],["$","li","sliding-window-209-438",{"children":["$","$L27",null,{"href":"/blog/sliding-window-209-438/","aria-current":"$undefined","children":["滑动窗口（二）：长度最小的子数组与找到字符串中所有字母异位词",["$","small",null,{"children":"题解"}]]}]}]]}]]}],["$","section","opposing-pointers",{"className":"algorithm-topic-group","aria-label":"相向双指针","children":[["$","h2",null,{"children":"相向双指针"}],["$","ol",null,{"children":[["$","li","two-pointers-42-167",{"children":["$","$L27",null,{"href":"/blog/two-pointers-42-167/","aria-current":"$undefined","children":["相向双指针（一）：接雨水与两数之和II",["$","small",null,{"children":"题解"}]]}]}]]}]]}],["$","section","difference-array",{"className":"algorithm-topic-group","aria-label":"差分数组","children":[["$","h2",null,{"children":"差分数组"}],["$","ol",null,{"children":[["$","li","difference-array",{"children":["$","$L27",null,{"href":"/blog/difference-array/","aria-current":"page","children":["差分数组（一）：航班预订统计与合并区间",["$","small",null,{"children":"知识点"}]]}]}]]}]]}],["$","section","prefix-sum",{"className":"algorithm-topic-group","aria-label":"前缀和","children":[["$","h2",null,{"children":"前缀和"}],["$","ol",null,{"children":[["$","li","prefix-sum",{"children":["$","$L27",null,{"href":"/blog/prefix-sum/","aria-current":"$undefined","children":["前缀和（一）：区域和检索与和为K的子数组",["$","small",null,{"children":"知识点"}]]}]}]]}]]}]]]}]]}]
+1f:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$L27",null,{"href":"/blog/two-pointers-42-167/","children":[["$","span",null,{"children":"上一篇"}],"相向双指针（一）：接雨水与两数之和II"]}],["$","$L27",null,{"href":"/blog/prefix-sum/","children":[["$","span",null,{"children":"下一篇"}],"前缀和（一）：区域和检索与和为K的子数组"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","two-sum",{"children":[["$","$L27",null,{"href":"/blog/two-sum/","children":"哈希表（一）：两数之和的补数查询"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","hash-table-introduction",{"children":[["$","$L27",null,{"href":"/blog/hash-table-introduction/","children":"哈希表（二）：键值映射与Python字典查找"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","longest-substring-without-repeating-characters",{"children":[["$","$L27",null,{"href":"/blog/longest-substring-without-repeating-characters/","children":"滑动窗口（一）：无重复字符的最长子串"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","sliding-window-209-438",{"children":[["$","$L27",null,{"href":"/blog/sliding-window-209-438/","children":"滑动窗口（二）：长度最小的子数组与找到字符串中所有字母异位词"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","two-pointers-42-167",{"children":[["$","$L27",null,{"href":"/blog/two-pointers-42-167/","children":"相向双指针（一）：接雨水与两数之和II"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","prefix-sum",{"children":[["$","$L27",null,{"href":"/blog/prefix-sum/","children":"前缀和（一）：区域和检索与和为K的子数组"}],["$","span",null,{"children":"算法与数据结构"}]]}]]}]]}]]}]
+28:"static/chunks/app/layout-f6895f86611bc12f.js"
+29:I[6767,["825","$15","177","$28"],"DisplayProvider"]
+2a:"NavigationFeedback"
+2b:I[2842,["825","$15","177","$28"],"$2a"]
+2c:I[8587,["825","$15","177","$28"],"SiteHeader"]
+2d:I[5803,["825","$15","177","$28"],"SiteFrame"]
+2e:I[164,["825","$15","177","$28"],"ProfileSidebar"]
+2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L29",null,{"children":[["$","$L2b",null,{}],["$","$L2c",null,{"tags":["编程语言知识点","python","C++"],"categoryIds":["foundations","frontend","backend","agent","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L2d",null,{"sidebar":["$","$L2e",null,{"categoryIds":"$2:props:children:1:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L27",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L27",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L27",null,{"href":"/about/","children":"关于这个站点"}],["$","$L27",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]
+14:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L27",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L27",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":116}]]}],["$","$L27",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":88}]]}],["$","$L18",null,{"className":"trail-current","href":"/blog/#algorithms","children":["算法与数据结构",["$","span",null,{"children":10}]]}],"$undefined"]}]
