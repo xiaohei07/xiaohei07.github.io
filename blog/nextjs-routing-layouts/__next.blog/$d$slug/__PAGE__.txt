@@ -1,22 +1,44 @@
-2:"$Sreact.fragment"
-3:I[9630,[],""]
-4:I[1380,[],""]
-b:"static/chunks/825-1a8f209f3ada760f.js"
+1:"$Sreact.fragment"
+2:"static/chunks/825-1a8f209f3ada760f.js"
+3:"static/chunks/app/layout-f6895f86611bc12f.js"
+4:I[6767,["825","$2","177","$3"],"DisplayProvider"]
+5:"NavigationFeedback"
+6:I[2842,["825","$2","177","$3"],"$5"]
+7:I[8587,["825","$2","177","$3"],"SiteHeader"]
+8:I[5803,["825","$2","177","$3"],"SiteFrame"]
+9:I[164,["825","$2","177","$3"],"ProfileSidebar"]
+a:I[9630,[],""]
+b:I[1380,[],""]
 c:"static/chunks/491-13729696a55105fe.js"
 d:"static/chunks/app/blog/%5Bslug%5D/page-7e06e4a07db3c778.js"
-e:I[3498,["825","$b","491","$c","953","$d"],"default"]
-f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
-10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
-11:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
-1a:"ViewportBoundary"
-1b:I[887,[],"$1a"]
-1c:"MetadataBoundary"
-1d:I[887,[],"$1c"]
-1e:"$Sreact.suspense"
-6:X
-6:C
-7:X
-12:T1d8b,<p>在本站打开<code>/blog/</code>会看到文章列表，打开<code>/blog/python-slices/</code>会看到切片文章。这两个URL对应不同页面，但共用导航、主题与部分布局。App Router通过目录和约定文件名组织这种关系。</p>
+e:I[3498,["825","$2","491","$c","953","$d"],"default"]
+22:"ViewportBoundary"
+23:I[887,[],"$22"]
+24:"MetadataBoundary"
+25:I[887,[],"$24"]
+26:"$Sreact.suspense"
+:HL["/_next/static/css/1a5e690335e7d9fc.css","style"]
+:HL["/_next/static/css/99458caadf388351.css","style"]
+10:X
+13:X
+13:C
+16:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":116}]]}],["$","$Le",null,{"href":"/blog/","children":["文章","$L17"]}],"$L18","$undefined"]}],"$L19","$L1a","$L1b","$L1c"]}],"$L1d","$L1e"]}],["$L1f"],"$L20"]}],"p":"$@21","v":null,"s":"$10"}}]]
+14:[["children",{"s":{"n":"slug","t":"d","k":"nextjs-routing-layouts","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@15","v":"$13","s":"$10"},"c":"$Q16"}]]
+11:[["children",{"s":"blog","h":131168,"d":{"r":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"p":"$@12","v":"$13","s":"$10"},"c":"$Q14"}]]
+0:{"t":{"t":{"s":"","h":131152,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1a5e690335e7d9fc.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/99458caadf388351.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{const d={\"wallpaper\":\"banner\",\"layout\":\"list\",\"cardStyle\":\"soft\",\"textSize\":\"normal\",\"hero\":true,\"carousel\":false,\"waves\":false,\"fade\":true,\"motion\":true,\"typewriter\":true,\"progress\":true,\"petals\":false,\"dim\":28,\"blur\":0,\"cardOpacity\":78},enums={\"wallpaper\":[\"banner\",\"fullscreen\",\"overlay\",\"none\"],\"layout\":[\"list\",\"grid\"],\"cardStyle\":[\"soft\",\"flat\"],\"textSize\":[\"normal\",\"large\"]},bools=[\"hero\",\"carousel\",\"waves\",\"fade\",\"motion\",\"typewriter\",\"progress\",\"petals\"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]))})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L4",null,{"children":[["$","$L6",null,{}],["$","$L7",null,{"tags":["编程语言知识点","python","C++"],"categoryIds":["foundations","frontend","backend","agent","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L8",null,{"sidebar":["$","$L9",null,{"categoryIds":"$0:t:t:d:r:props:children:1:props:children:1:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$Le",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$Le",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$Le",null,{"href":"/about/","children":"关于这个站点"}],["$","$Le",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]]}]]}],"p":"$@f","v":null,"s":"$10"},"c":"$Q11"},"h":{"r":["$","$1","h",{"children":[null,["$","$L23",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L25",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$26",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Next.js入门（二）：路由目录、公共布局与文章参数 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"把page、layout和slug对应到实际URL，说明静态参数、客户端导航、404与稳定内容ID。"}]]}]}],null]}],null]}],"p":"$@27","v":null,"s":"$10"}},"a":"$@28","u":"$@29","b":"kLI0_oHd0HuMRgafghDd2"}
+2a:I[6279,["825","$2","491","$c","953","$d"],"FilterLink"]
+2b:I[4067,["825","$2","491","$c","953","$d"],"ArticleToc"]
+2c:I[4711,["825","$2","491","$c","953","$d"],"ArticleBody"]
+32:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/2f2300ea426b880f.css","style"]
+17:["$","span",null,{"children":88}]
+18:["$","$L2a",null,{"className":"trail-current","href":"/blog/#frontend","children":["前端开发",["$","span",null,{"children":7}]]}]
+19:["$","h1",null,{"tabIndex":-1,"children":"Next.js入门（二）：路由目录、公共布局与文章参数"}]
+1a:["$","p",null,{"className":"article-deck","children":"把page、layout和slug对应到实际URL，说明静态参数、客户端导航、404与稳定内容ID"}]
+1b:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,070"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",4," 分钟"]}]]}]
+1c:["$","div",null,{"className":"tag-list","children":[["$","$L2a","Next.js",{"href":"/blog/#tag=Next.js","children":"Next.js"}],["$","$L2a","路由",{"href":"/blog/#tag=%E8%B7%AF%E7%94%B1","children":"路由"}],["$","$L2a","App Router",{"href":"/blog/#tag=App%20Router","children":"App Router"}]]}]
+1d:["$","$L2b",null,{"headings":[{"id":"section-page与layout分别负责什么","text":"page与layout分别负责什么","level":2},{"id":"section-动态路径参数怎样找到文章","text":"动态路径参数怎样找到文章","level":2},{"id":"section-导航刷新与404应该分别检查","text":"导航、刷新与404应该分别检查","level":2},{"id":"section-stable-id标题分类与系列为何分开","text":"stable ID、标题、分类与系列为何分开","level":2}],"mobile":true}]
+2d:T1d8b,<p>在本站打开<code>/blog/</code>会看到文章列表，打开<code>/blog/python-slices/</code>会看到切片文章。这两个URL对应不同页面，但共用导航、主题与部分布局。App Router通过目录和约定文件名组织这种关系。</p>
 <h2 id="section-page与layout分别负责什么">page与layout分别负责什么</h2>
 <div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-text">app/
   layout.tsx
@@ -60,25 +82,21 @@ f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
 <h2 id="section-stable-id标题分类与系列为何分开">stable ID、标题、分类与系列为何分开</h2>
 <p>文章标题可能随着修改更准确，ID应尽量保持稳定。分类说明文章主要解决哪类问题，标签补充技术主题，系列则说明阅读顺序。比如Next.js文章可以属于“前端开发”，同时属于“Next.js入门”系列，并关联“个人主页网站建设”项目。</p>
 <p>这些关系不要求复制正文。文章只有一个规范URL，项目页和系列导航都指向它。旧URL通过经过核验的alias映射承接；修改标题不应顺手生成一套新URL，避免既有链接失效。</p>
-<p>如果要新增一个页面，可以先列出四个值：稳定ID、规范路径、所属系列、数据来源。之后再判断是否需要新增路由文件。本站多数普通文章只要进入受控内容清单，就能由现有动态路由模板生成；为每篇文章手写一个<code>page.tsx</code>会增加没有必要的重复维护。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":116}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":88}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#frontend","children":["前端开发",["$","span",null,{"children":7}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"Next.js入门（二）：路由目录、公共布局与文章参数"}],["$","p",null,{"className":"article-deck","children":"把page、layout和slug对应到实际URL，说明静态参数、客户端导航、404与稳定内容ID"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,070"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",4," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","Next.js",{"href":"/blog/#tag=Next.js","children":"Next.js"}],["$","$Lf","路由",{"href":"/blog/#tag=%E8%B7%AF%E7%94%B1","children":"路由"}],["$","$Lf","App Router",{"href":"/blog/#tag=App%20Router","children":"App Router"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-page与layout分别负责什么","text":"page与layout分别负责什么","level":2},{"id":"section-动态路径参数怎样找到文章","text":"动态路径参数怎样找到文章","level":2},{"id":"section-导航刷新与404应该分别检查","text":"导航、刷新与404应该分别检查","level":2},{"id":"section-stable-id标题分类与系列为何分开","text":"stable ID、标题、分类与系列为何分开","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[2," / ",4," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["Next.js从入门到本站应用",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","nextjs-position-toolchain",{"children":["$","$Le",null,{"href":"/blog/nextjs-position-toolchain/","children":"Next.js入门（一）：框架定位、技术关系与工程工具链"}]}],["$","li","nextjs-routing-layouts",{"children":["$","$Le",null,{"href":"/blog/nextjs-routing-layouts/","aria-current":"page","children":"Next.js入门（二）：路由目录、公共布局与文章参数"}]}],["$","li","nextjs-rendering-hydration",{"children":["$","$Le",null,{"href":"/blog/nextjs-rendering-hydration/","children":"Next.js入门（三）：SSG、SSR、组件边界与交互接管"}]}],["$","li","nextjs-content-cache",{"children":["$","$Le",null,{"href":"/blog/nextjs-content-cache/","children":"Next.js入门（四）：Markdown内容管线与多层缓存"}]}]]}]]}]]}],["$","$L11",null,{"html":"$12"}],false,"$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
-8:[["children",{"s":{"n":"slug","t":"d","k":"nextjs-routing-layouts","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
-1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
-0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Next.js入门（二）：路由目录、公共布局与文章参数 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"把page、layout和slug对应到实际URL，说明静态参数、客户端导航、404与稳定内容ID。"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"AzzEjE9NiBoJiD2zdoTrD"}
-22:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
-23:I[887,[],"OutletBoundary"]
-:HL["/_next/static/css/2f2300ea426b880f.css","style"]
-13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Le",null,{"href":"/blog/nextjs-position-toolchain/","children":[["$","span",null,{"children":"上一篇"}],"Next.js入门（一）：框架定位、技术关系与工程工具链"]}],["$","$Le",null,{"href":"/blog/nextjs-rendering-hydration/","children":[["$","span",null,{"children":"下一篇"}],"Next.js入门（三）：SSG、SSR、组件边界与交互接管"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","nextjs-content-cache",{"children":[["$","$Le",null,{"href":"/blog/nextjs-content-cache/","children":"Next.js入门（四）：Markdown内容管线与多层缓存"}],["$","span",null,{"children":"前端开发"}]]}],["$","li","nextjs-position-toolchain",{"children":[["$","$Le",null,{"href":"/blog/nextjs-position-toolchain/","children":"Next.js入门（一）：框架定位、技术关系与工程工具链"}],["$","span",null,{"children":"前端开发"}]]}],["$","li","nextjs-rendering-hydration",{"children":[["$","$Le",null,{"href":"/blog/nextjs-rendering-hydration/","children":"Next.js入门（三）：SSG、SSR、组件边界与交互接管"}],["$","span",null,{"children":"前端开发"}]]}]]}]]}]]}]
-14:["$","$L22",null,{"contentId":"nextjs-routing-layouts"}]
-15:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
-16:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3"]}]
-17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2f2300ea426b880f.css","precedence":"next"}]
-18:["$","$L23",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
-21:true
-7:300
-24:null
-7:C
-20:0
-9:"$undefined"
-5:"$undefined"
-1f:"$undefined"
-19:"$undefined"
+<p>如果要新增一个页面，可以先列出四个值：稳定ID、规范路径、所属系列、数据来源。之后再判断是否需要新增路由文件。本站多数普通文章只要进入受控内容清单，就能由现有动态路由模板生成；为每篇文章手写一个<code>page.tsx</code>会增加没有必要的重复维护。</p>1e:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[2," / ",4," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["Next.js从入门到本站应用",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","nextjs-position-toolchain",{"children":["$","$Le",null,{"href":"/blog/nextjs-position-toolchain/","children":"Next.js入门（一）：框架定位、技术关系与工程工具链"}]}],["$","li","nextjs-routing-layouts",{"children":["$","$Le",null,{"href":"/blog/nextjs-routing-layouts/","aria-current":"page","children":"Next.js入门（二）：路由目录、公共布局与文章参数"}]}],["$","li","nextjs-rendering-hydration",{"children":["$","$Le",null,{"href":"/blog/nextjs-rendering-hydration/","children":"Next.js入门（三）：SSG、SSR、组件边界与交互接管"}]}],["$","li","nextjs-content-cache",{"children":["$","$Le",null,{"href":"/blog/nextjs-content-cache/","children":"Next.js入门（四）：Markdown内容管线与多层缓存"}]}]]}]]}]]}],["$","$L2c",null,{"html":"$2d"}],false,"$L2e","$L2f","$L30"]}],"$L31"]}]
+1f:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2f2300ea426b880f.css","precedence":"next"}]
+20:["$","$L32",null,{"children":["$","$26",null,{"name":"Next.MetadataOutlet","children":"$@33"}]}]
+34:I[2708,["825","$2","491","$c","953","$d"],"FeedbackForm"]
+10:300
+2e:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Le",null,{"href":"/blog/nextjs-position-toolchain/","children":[["$","span",null,{"children":"上一篇"}],"Next.js入门（一）：框架定位、技术关系与工程工具链"]}],["$","$Le",null,{"href":"/blog/nextjs-rendering-hydration/","children":[["$","span",null,{"children":"下一篇"}],"Next.js入门（三）：SSG、SSR、组件边界与交互接管"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","nextjs-content-cache",{"children":[["$","$Le",null,{"href":"/blog/nextjs-content-cache/","children":"Next.js入门（四）：Markdown内容管线与多层缓存"}],["$","span",null,{"children":"前端开发"}]]}],["$","li","nextjs-position-toolchain",{"children":[["$","$Le",null,{"href":"/blog/nextjs-position-toolchain/","children":"Next.js入门（一）：框架定位、技术关系与工程工具链"}],["$","span",null,{"children":"前端开发"}]]}],["$","li","nextjs-rendering-hydration",{"children":[["$","$Le",null,{"href":"/blog/nextjs-rendering-hydration/","children":"Next.js入门（三）：SSG、SSR、组件边界与交互接管"}],["$","span",null,{"children":"前端开发"}]]}]]}]]}]]}]
+2f:["$","$L34",null,{"contentId":"nextjs-routing-layouts"}]
+30:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+31:["$","$L2b",null,{"headings":["$1d:props:headings:0","$1d:props:headings:1","$1d:props:headings:2","$1d:props:headings:3"]}]
+33:null
+29:true
+10:C
+28:0
+15:"$undefined"
+12:"$undefined"
+f:"$undefined"
+27:"$undefined"
+21:"$undefined"
