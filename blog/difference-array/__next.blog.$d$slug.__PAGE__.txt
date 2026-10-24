@@ -15,28 +15,34 @@ f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
 6:X
 6:C
 7:X
-a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page algorithm-reading","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":116}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":88}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#algorithms","children":["算法与数据结构",["$","span",null,{"children":10}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"差分数组（一）：航班预订统计与合并区间"}],["$","p",null,{"className":"article-deck","children":"从差分与恢复出发，用航班预订统计说明区间更新，再区分合并区间中的坐标事件和离散下标"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-23","children":"2026-10-23"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,939"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",10," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","差分数组",{"href":"/blog/#tag=%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84","children":"差分数组"}],["$","$Lf","扫描线",{"href":"/blog/#tag=%E6%89%AB%E6%8F%8F%E7%BA%BF","children":"扫描线"}],["$","$Lf","编程语言知识点",{"href":"/blog/#tag=%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9F%A5%E8%AF%86%E7%82%B9","children":"编程语言知识点"}],["$","$Lf","Python",{"href":"/blog/#tag=Python","children":"Python"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-差分存的是相邻变化累加后恢复原数组","text":"差分存的是相邻变化，累加后恢复原数组","level":2},{"id":"section-区间加法的两个边界l处增加r1处撤销","text":"区间加法的两个边界：l处增加、r＋1处撤销","level":2},{"id":"section-1109航班预订统计从编号转换到差分下标","text":"1109航班预订统计：从编号转换到差分下标","level":2},{"id":"section-交互演示航班预订统计","text":"交互演示：航班预订统计","level":2},{"id":"section-56合并区间边界思想可以复用区间含义需要区分","text":"56合并区间：边界思想可以复用，区间含义需要区分","level":2},{"id":"section-分开保存开始和结束同一坐标先开始再结束","text":"分开保存开始和结束，同一坐标先开始、再结束","level":3},{"id":"section-密集数组的成本取决于区间数和坐标跨度","text":"密集数组的成本取决于区间数和坐标跨度","level":3},{"id":"section-差分与前缀和的更新查询分工","text":"差分与前缀和的更新、查询分工","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading algorithm-series-reading","aria-label":"算法系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/blog/#category=algorithms","children":"算法与数据结构"}],["$","span",null,{"children":[6," / ",7," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["算法学习系列",["$","span",null,{"children":"差分数组"}]]}],[["$","section","hash-table",{"className":"algorithm-topic-group","aria-label":"哈希表","children":[["$","h2",null,{"children":"哈希表"}],["$","ol",null,{"children":[["$","li","two-sum",{"children":["$","$Le",null,{"href":"/blog/two-sum/","children":["哈希表（一）：两数之和的补数查询",["$","small",null,{"children":"题解"}]]}]}],["$","li","hash-table-introduction",{"children":["$","$Le",null,{"href":"/blog/hash-table-introduction/","children":["哈希表（二）：键值映射与Python字典查找",["$","small",null,{"children":"知识点"}]]}]}]]}]]}],["$","section","sliding-window",{"className":"algorithm-topic-group","aria-label":"滑动窗口","children":[["$","h2",null,{"children":"滑动窗口"}],["$","ol",null,{"children":[["$","li","longest-substring-without-repeating-characters",{"children":["$","$Le",null,{"href":"/blog/longest-substring-without-repeating-characters/","children":["滑动窗口（一）：无重复字符的最长子串","$L11"]}]}],"$L12"]}]]}],"$L13","$L14","$L15"]]}]]}],["$L16","$L17","$L18"],false,"$L19","$L1a","$L1b"]}],"$L1c"]}]]}],["$L1d"],"$L1e"]}],"p":"$@1f","v":null,"s":"$7"}}]]
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page algorithm-reading","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":116}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":88}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#algorithms","children":["算法与数据结构",["$","span",null,{"children":10}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"差分数组（一）：航班预订统计与合并区间"}],["$","p",null,{"className":"article-deck","children":"从差分与恢复出发，用航班预订统计说明区间更新，再区分合并区间中的坐标事件和离散下标"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-23","children":"2026-10-23"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-24","children":"2026-10-24"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"6,124"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",21," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","差分数组",{"href":"/blog/#tag=%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84","children":"差分数组"}],["$","$Lf","扫描线",{"href":"/blog/#tag=%E6%89%AB%E6%8F%8F%E7%BA%BF","children":"扫描线"}],["$","$Lf","编程语言知识点",{"href":"/blog/#tag=%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9F%A5%E8%AF%86%E7%82%B9","children":"编程语言知识点"}],["$","$Lf","Python",{"href":"/blog/#tag=Python","children":"Python"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-航班预订统计题目与重复区间更新","text":"航班预订统计：题目与重复区间更新","level":2},{"id":"section-差分存的是相邻变化累加后恢复原数组","text":"差分存的是相邻变化，累加后恢复原数组","level":2},{"id":"section-区间加法的两个边界l处增加r1处撤销","text":"区间加法的两个边界：l处增加、r＋1处撤销","level":2},{"id":"section-用差分处理航班预订编号转换与增量叠加","text":"用差分处理航班预订：编号转换与增量叠加","level":2},{"id":"section-交互演示航班预订统计","text":"交互演示：航班预订统计","level":2},{"id":"section-56合并区间边界思想可以复用区间含义需要区分","text":"56合并区间：边界思想可以复用，区间含义需要区分","level":2},{"id":"section-原坐标r1的净差分与区间间隙","text":"原坐标r＋1的净差分与区间间隙","level":3},{"id":"section-分开保存开始和结束同一坐标先开始再结束","text":"分开保存开始和结束，同一坐标先开始、再结束","level":3},{"id":"section-密集数组的成本取决于区间数和坐标跨度","text":"密集数组的成本取决于区间数和坐标跨度","level":3},{"id":"section-差分与前缀和的更新查询分工","text":"差分与前缀和的更新、查询分工","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading algorithm-series-reading","aria-label":"算法系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/blog/#category=algorithms","children":"算法与数据结构"}],["$","span",null,{"children":[6," / ",7," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["算法学习系列",["$","span",null,{"children":"差分数组"}]]}],[["$","section","hash-table",{"className":"algorithm-topic-group","aria-label":"哈希表","children":[["$","h2",null,{"children":"哈希表"}],["$","ol",null,{"children":[["$","li","two-sum",{"children":["$","$Le",null,{"href":"/blog/two-sum/","children":["哈希表（一）：两数之和的补数查询",["$","small",null,{"children":"题解"}]]}]}],["$","li","hash-table-introduction",{"children":["$","$Le",null,{"href":"/blog/hash-table-introduction/","children":["哈希表（二）：键值映射与Python字典查找",["$","small",null,{"children":"知识点"}]]}]}]]}]]}],["$","section","sliding-window",{"className":"algorithm-topic-group","aria-label":"滑动窗口","children":["$L11","$L12"]}],"$L13","$L14","$L15"]]}]]}],["$L16","$L17","$L18"],false,"$L19","$L1a","$L1b"]}],"$L1c"]}]]}],["$L1d"],"$L1e"]}],"p":"$@1f","v":null,"s":"$7"}}]]
 8:[["children",{"s":{"n":"slug","t":"d","k":"difference-array","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
 1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
-0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L21",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L23",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$24",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"差分数组（一）：航班预订统计与合并区间 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从差分与恢复出发，用航班预订统计说明区间更新，再区分合并区间中的坐标事件和离散下标。"}]]}]}],null]}],null]}],"p":"$@25","v":null,"s":"$7"}},"a":"$@26","u":"$@27","b":"9VFVQ7CG9WH4AYw79yP7s"}
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L21",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L23",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$24",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"差分数组（一）：航班预订统计与合并区间 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从差分与恢复出发，用航班预订统计说明区间更新，再区分合并区间中的坐标事件和离散下标。"}]]}]}],null]}],null]}],"p":"$@25","v":null,"s":"$7"}},"a":"$@26","u":"$@27","b":"XMGdpd-naL3yqEgnLU6oE"}
 28:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
 2a:"AlgorithmDemoLoader"
 2b:I[7223,["825","$b","491","$c","953","$d"],"$2a"]
-2d:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
-2e:I[887,[],"OutletBoundary"]
+2e:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+2f:I[887,[],"OutletBoundary"]
 :HL["/_next/static/css/2f2300ea426b880f.css","style"]
-11:["$","small",null,{"children":"题解"}]
-12:["$","li","sliding-window-209-438",{"children":["$","$Le",null,{"href":"/blog/sliding-window-209-438/","children":["滑动窗口（二）：长度最小的子数组与找到字符串中所有字母异位词",["$","small",null,{"children":"题解"}]]}]}]
+11:["$","h2",null,{"children":"滑动窗口"}]
+12:["$","ol",null,{"children":[["$","li","longest-substring-without-repeating-characters",{"children":["$","$Le",null,{"href":"/blog/longest-substring-without-repeating-characters/","children":["滑动窗口（一）：无重复字符的最长子串",["$","small",null,{"children":"题解"}]]}]}],["$","li","sliding-window-209-438",{"children":["$","$Le",null,{"href":"/blog/sliding-window-209-438/","children":["滑动窗口（二）：长度最小的子数组与找到字符串中所有字母异位词",["$","small",null,{"children":"题解"}]]}]}]]}]
 13:["$","section","opposing-pointers",{"className":"algorithm-topic-group","aria-label":"相向双指针","children":[["$","h2",null,{"children":"相向双指针"}],["$","ol",null,{"children":[["$","li","two-pointers-42-167",{"children":["$","$Le",null,{"href":"/blog/two-pointers-42-167/","children":["相向双指针（一）：接雨水与两数之和II",["$","small",null,{"children":"题解"}]]}]}]]}]]}]
 14:["$","section","difference-array",{"className":"algorithm-topic-group","aria-label":"差分数组","children":[["$","h2",null,{"children":"差分数组"}],["$","ol",null,{"children":[["$","li","difference-array",{"children":["$","$Le",null,{"href":"/blog/difference-array/","aria-current":"page","children":["差分数组（一）：航班预订统计与合并区间",["$","small",null,{"children":"知识点"}]]}]}]]}]]}]
 15:["$","section","prefix-sum",{"className":"algorithm-topic-group","aria-label":"前缀和","children":[["$","h2",null,{"children":"前缀和"}],["$","ol",null,{"children":[["$","li","prefix-sum",{"children":["$","$Le",null,{"href":"/blog/prefix-sum/","children":["前缀和（一）：区域和检索与和为K的子数组",["$","small",null,{"children":"知识点"}]]}]}]]}]]}]
-29:T2320,<h2 id="section-差分存的是相邻变化累加后恢复原数组">差分存的是相邻变化，累加后恢复原数组</h2>
+29:T38a6,<h2 id="section-航班预订统计题目与重复区间更新">航班预订统计：题目与重复区间更新</h2>
+<section class="problem"><div class="problem-heading"><strong>1109. 航班预订统计</strong><a href="https://leetcode.cn/problems/corporate-flight-bookings/" rel="noopener noreferrer">力扣原题 ↗</a></div><p><strong>题目要求</strong></p><p>有n个航班，编号依次为1到n。预订记录bookings[i]=[firstᵢ,lastᵢ,seatsᵢ]表示：从firstᵢ到lastᵢ的每个航班都预订了seatsᵢ个座位，范围包含两端。不同预订需要累加。</p><p>返回长度为n的数组answer，其中answer[i]对应编号为i+1的航班，记录该航班最终预订的座位总数。</p><div class="examples"><p><strong>示例1</strong></p><p>输入：<code>bookings = [[1,2,10],[2,3,20],[2,5,25]], n = 5</code></p><p>输出：<code>[10,55,45,25,25]</code></p><p>三条记录分别贡献[10,10,0,0,0]、[0,20,20,0,0]和[0,25,25,25,25]，按航班相加得到输出。</p></div><div class="examples"><p><strong>示例2</strong></p><p>输入：<code>bookings = [[1,2,10],[2,2,15]], n = 2</code></p><p>输出：<code>[10,25]</code></p><p>第1个航班只得到10；第2个航班同时得到10和15。</p></div><p><strong>约束条件</strong></p><ul><li>1 ≤ n ≤ 2 × 10⁴</li><li>1 ≤ bookings.length ≤ 2 × 10⁴</li><li>每条bookings[i]恰好包含3个整数。</li><li>1 ≤ firstᵢ ≤ lastᵢ ≤ n</li><li>1 ≤ seatsᵢ ≤ 10⁴</li></ul></section>
+<p>先看怎样直接处理一条预订。<code>[2,5,25]</code>表示第2到第5个航班各增加25个座位，所以可以准备一个长度为n、初始全为0的数组，再把这四个位置分别加25。多条预订也逐条这样处理，最后得到的就是答案。</p>
+<p>这个方法很直观，重复工作也很明确：如果很多预订都覆盖了同一大段航班，那一段就会被来回遍历。最坏情况下m条预订都覆盖全部n个航班，需要进行mn次逐项加法。题目只要求最终结果，中途不需要每处理一条预订就查询座位数，因此可以考虑<strong>先记下每条预订从哪里开始生效、到哪里结束，再统一算出各航班的总数</strong>。</p>
+<p>要做到这一点，需要换一种保存数组信息的方式。直接保存每个位置的最终值时，一整段增加就要修改一整段；如果保存的是位置之间的变化，连续增加相同数值的一段，就只会改变两处边界。</p>
+<h2 id="section-差分存的是相邻变化累加后恢复原数组">差分存的是相邻变化，累加后恢复原数组</h2>
 <p>如果要把数组中一整段元素都加上v，直接写法需要遍历这一段。多次更新的区间互相重叠时，同一个位置就可能被修改很多次。</p>
 <p><strong>差分数组把相邻两个元素的差保存下来，用边界变化表示整段更新。</strong>对于原数组a，定义：</p>
 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo><mo>=</mo><mi>a</mi><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo><mo separator="true">,</mo><mspace width="2em"></mspace><mi>d</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo>=</mo><mi>a</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo>−</mo><mi>a</mi><mo stretchy="false">[</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo stretchy="false">]</mo><mspace width="1em"></mspace><mo stretchy="false">(</mo><mi>i</mi><mo>≥</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">d[0]=a[0],\qquad d[i]=a[i]-a[i-1]\quad(i\ge1)</annotation></semantics></math></span>
 <p>例如<code>a=[2,2,5,5,1]</code>，对应<code>d=[2,0,3,0,-4]</code>。第一个2表示初始值，3表示从2升到5，−4表示从5降到1；连续不变的位置差值为0。</p>
 <p>从左到右累加这些变化，就能恢复原值：</p>
 <p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mi>i</mi></msubsup><mi>d</mi><mo stretchy="false">[</mo><mi>j</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">a[i]=\sum_{j=0}^{i}d[j]</annotation></semantics></math></span></p>
+<p>比如走到下标2时，累计值为<code>2+0+3=5</code>；走到下标3时只加0，所以仍为5；最后加上−4，变为1。每个差分项表示“走到这里时，值相对前一个位置改变了多少”。<strong>差分为0表示数值没有变化，并不表示原数组这个位置的值为0。</strong></p>
 <figure class="explain-figure"><figcaption>原值→相邻差值→累加恢复</figcaption><div class="lane"><b>原数组a</b><div class="cells"><div class="cell"><small>下标0</small><b>2</b></div><div class="cell"><small>下标1</small><b>2</b></div><div class="cell"><small>下标2</small><b>5</b></div><div class="cell"><small>下标3</small><b>5</b></div><div class="cell"><small>下标4</small><b>1</b></div></div></div><div class="lane"><b>相邻差分d</b><div class="cells"><div class="cell"><small>下标0</small><b>2</b></div><div class="cell"><small>下标1</small><b>0</b></div><div class="cell"><small>下标2</small><b>3</b></div><div class="cell"><small>下标3</small><b>0</b></div><div class="cell"><small>下标4</small><b>-4</b></div></div></div><div class="equation-strip">2 → 2＋0＝2 → 2＋3＝5 → 5＋0＝5 → 5−4＝1</div><p>只在0、2、4处发生变化；累加时仍逐位置恢复，不能跳过值不变的位置。</p></figure>
 <details class="extra">
 <summary>展开差分数组的构造</summary>
@@ -62,12 +68,105 @@ a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$",
 diff[r + <span class="hljs-number">1</span>] -= v   <span class="hljs-comment"># 从r之后取消这次增加</span>
 </code></pre></div>
 <p><strong>区间内部的相邻两项都加了v，作差时两个v互相抵消，因此内部差分不变。</strong>只有进入区间时增加、离开区间时撤销，这两个位置需要修改。</p>
+<p>还是用<code>a=[2,2,5,5,1]</code>，现在给下标1到3都加2，结果应为<code>[2,4,7,7,1]</code>。对照修改前后的差分，可以直接看到哪些位置发生了变化：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>位置</th><th>0</th><th>1：进入区间</th><th>2</th><th>3</th><th>4：离开区间</th></tr></thead><tbody><tr><td>原数组a</td><td>2</td><td>2</td><td>5</td><td>5</td><td>1</td></tr><tr><td>修改后的a</td><td>2</td><td>4</td><td>7</td><td>7</td><td>1</td></tr><tr><td>原差分d</td><td>2</td><td>0</td><td>3</td><td>0</td><td>−4</td></tr><tr><td>修改后的d</td><td>2</td><td>2</td><td>3</td><td>0</td><td>−6</td></tr></tbody></table>
+<p>下标1只修改了相邻两项中的后一项，所以差分多了2；下标2和3的前后两项都加了2，差分保持不变；下标4的自身没有增加，而前一项加了2，所以差分要再减2。这就对应<code>diff[1]+=2、diff[4]-=2</code>。</p>
+<p>还可以从恢复过程理解撤销的位置：累加走到l时，多加进去的v会一直留在累计值中，继续影响后面的每个位置。必须等到r之后再减去v，才能让r本身仍然受到更新，而r+1及后面不再受到这条更新影响。<strong>r+1处的减法取消的是这次更新继续向后传播的增量，不是在原数组的r+1位置凭空扣掉v。</strong></p>
 <p>如果r已经是末尾，可以跳过范围外的撤销；也可以预先多开一个<strong>哨兵位置</strong>，统一保存<code>r+1</code>的撤销事件，恢复时只输出原数组的n项。哨兵是额外存储位置，不是新增的数据元素。</p>
 <p>单次更新只记两个边界是O(1)，但<strong>获得所有修改后的值，还需要一次O(n)累加恢复</strong>。差分适合先批量更新、最后统一取结果；如果更新与查询频繁交错，就不能把两种操作都算作O(1)。</p>
-<h2 id="section-1109航班预订统计从编号转换到差分下标">1109航班预订统计：从编号转换到差分下标</h2>
-<section class="problem"><div class="problem-heading"><strong>1109. 航班预订统计</strong><a href="https://leetcode.cn/problems/corporate-flight-bookings/" rel="noopener noreferrer">完整力扣题面 ↗</a></div><p class="excerpt-label">题面原文节选</p><blockquote>这里有 n 个航班，它们分别从 1 到 n 进行编号。</blockquote><div class="examples"><b>示例输入与输出</b><code>bookings=[[1,2,10],[2,3,20],[2,5,25]], n=5 → [10,55,45,25,25]</code></div><p><b>任务与约束：</b>每条[first,last,seats]为包含两端的航班范围增加seats个座位，求所有航班最终预订座位数。n与预订数为1～2×10⁴，1≤first≤last≤n，seats为1～10⁴。</p></section>
+<h2 id="section-用差分处理航班预订编号转换与增量叠加">用差分处理航班预订：编号转换与增量叠加</h2>
 <p>每条预订<code>[first,last,seats]</code>表示这一段航班都增加seats个座位，正好是一段相同增量。</p>
 <p>航班编号从1开始，数组下标从0开始，闭区间应转换为<code>[first-1,last-1]</code>。因此<strong>增加的位置是first−1，撤销的位置是last</strong>，不是在两个位置上都减1。</p>
+<p>例如第2到第5个航班对应下标1到4，增加事件放在下标1，撤销事件就应放在下标5。这个5已经超出了真正的航班数组，但额外准备的哨兵格可以接住它。这样无论预订是否覆盖最后一个航班，都可以使用同样的两次修改。</p>
+<p>多条预订重叠时，也不需要额外判断它们之间的关系。每条记录都把自己的增加与撤销累加到差分数组里；恢复时，某个位置的累计值自然包含所有仍然生效的预订。也就是说，<strong>记录更新时逐条处理边界，读取答案时逐位置叠加影响</strong>，重叠区间会在这次累加中自动合并。</p>
+<p>把题目中的三条预订逐次写下来，差分数组最初为<code>[0,0,0,0,0,0]</code>。每条预订都要完整执行下面的两次修改，再处理下一条：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>预订及对应下标</th><th>当前操作</th><th>修改后的完整diff</th></tr></thead><tbody><tr><td>[1,2,10]，覆盖下标[0,1]</td><td>diff[0]：0＋10＝10，记录开始</td><td>[10,0,0,0,0,0]</td></tr><tr><td>同一条预订</td><td>diff[2]：0−10＝−10，从航班3起撤销</td><td>[10,0,−10,0,0,0]</td></tr><tr><td>[2,3,20]，覆盖下标[1,2]</td><td>diff[1]：0＋20＝20，记录开始</td><td>[10,20,−10,0,0,0]</td></tr><tr><td>同一条预订</td><td>diff[3]：0−20＝−20，从航班4起撤销</td><td>[10,20,−10,−20,0,0]</td></tr><tr><td>[2,5,25]，覆盖下标[1,4]</td><td>diff[1]：20＋25＝45，叠加新的开始</td><td>[10,45,−10,−20,0,0]</td></tr><tr><td>同一条预订</td><td>diff[5]：0−25＝−25，在哨兵处撤销</td><td>[10,45,−10,−20,0,−25]</td></tr></tbody></table>
+<p>注意diff[1]里的45表示“从航班1走到航班2时，累计座位数增加45”，它来自后两条预订同时在航班2开始。<strong>这个45是变化量，还不是航班2的最终座位数。</strong>实际座位数需要接着进行累加恢复。</p>
 <div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">flight_bookings</span>(<span class="hljs-params">bookings: <span class="hljs-built_in">list</span>[<span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]], n: <span class="hljs-built_in">int</span></span>) -> <span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]:
     diff = [<span class="hljs-number">0</span>] * (n + <span class="hljs-number">1</span>)  <span class="hljs-comment"># 最后一格为撤销更新的哨兵，不输出。</span>
     <span class="hljs-keyword">for</span> first, last, seats <span class="hljs-keyword">in</span> bookings:
@@ -81,19 +180,121 @@ diff[r + <span class="hljs-number">1</span>] -= v   <span class="hljs-comment">#
 </code></pre></div>
 <h2 id="section-交互演示航班预订统计">交互演示：航班预订统计</h2>
 16:["$","$L28","0",{"html":"$29"}]
-17:["$","$L2b","1",{"id":"flights-1109","fallback":["$","figure",null,{"className":"explain-figure wp-demo","children":[["$","figcaption",null,{"children":"1109：记录三次预订，再累加恢复"}],["$","div",null,{"dangerouslySetInnerHTML":{"__html":"<div class=\"table-scroll\" tabindex=\"0\"><table><thead><tr><th scope=\"col\">diff下标</th><th scope=\"col\">0</th><th scope=\"col\">1</th><th scope=\"col\">2</th><th scope=\"col\">3</th><th scope=\"col\">4</th><th scope=\"col\">5（哨兵）</th></tr></thead><tbody><tr><td>差分</td><td>10</td><td>45</td><td>-10</td><td>-20</td><td>0</td><td>-25</td></tr><tr><td>航班编号</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>不输出</td></tr><tr><td>累计恢复</td><td>10</td><td>55</td><td>45</td><td>25</td><td>25</td><td>不输出</td></tr></tbody></table></div><div class=\"state-msg\">恢复航班5：累计差分后得到25个座位。</div>"}}],["$","p",null,{"className":"figure-note","children":"diff下标从0开始；航班编号从1开始；diff[5]是哨兵，不输出为航班。"}]]}]}]
-2c:T3e35,
-<p>三条预订叠加后，差分为<code>[10,45,-10,-20,0,-25]</code>。累加前五项得到<code>[10,55,45,25,25]</code>。最后一格−25使累计量归零，表示更新全部结束，不对应第6个航班。</p>
+2c:T5a4,<p><strong>恢复完成</strong></p><div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col">预订</th><th scope="col">覆盖的航班</th><th scope="col">每班增加</th><th scope="col">记录状态</th></tr></thead><tbody><tr><td>1</td><td>1～2</td><td>10</td><td>两端已记录</td></tr><tr><td>2</td><td>2～3</td><td>20</td><td>两端已记录</td></tr><tr><td>3</td><td>2～5</td><td>25</td><td>两端已记录</td></tr></tbody></table></div><div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col">diff下标</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5（哨兵）</th></tr></thead><tbody><tr><td>航班编号</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>不输出</td></tr><tr><td>差分</td><td>10</td><td>45</td><td>-10</td><td>-20</td><td>0</td><td>-25</td></tr><tr><td>本步位置</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>答案</td><td>10</td><td>55</td><td>45</td><td>25</td><td>25</td><td>不输出</td></tr></tbody></table></div><p><strong>已记录3/3条预订；已输出5/5个航班。</strong>当前累计值running=25。</p><div class="state-msg">完整结果为[10, 55, 45, 25, 25]，依次对应航班1到5。每条预订分别记录开始与撤销，每个真实航班读取一次差分并写入一次结果，哨兵不输出。</div>17:["$","$L2b","1",{"id":"flights-1109","fallback":["$","figure",null,{"className":"explain-figure wp-demo","children":[["$","figcaption",null,{"children":"1109：逐条记录两个边界，再逐航班恢复"}],["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$2c"}}],["$","p",null,{"className":"figure-note","children":"先看预订范围，再看每次差分修改，最后逐项累加。表中的“本步”标出正在修改或读取的位置；diff下标从0开始，航班编号从1开始，哨兵不输出。"}]]}]}]
+2d:T5cd0,
+<p>演示把确定范围、记录开始和记录撤销分别展示，恢复时也把读取差分与写入结果分开。<strong>每一步都能看到本步修改或读取的位置，以及修改前后的数值。</strong>不操作演示时，也可以按下面的表逐项还原结果：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>正在恢复的航班</th><th>此前累计值</th><th>读取的差分</th><th>本步计算</th><th>写入结果</th></tr></thead><tbody><tr><td>航班1，对应下标0</td><td>0</td><td>10</td><td>0＋10＝10</td><td>answer[0]=10</td></tr><tr><td>航班2，对应下标1</td><td>10</td><td>45</td><td>10＋45＝55</td><td>answer[1]=55</td></tr><tr><td>航班3，对应下标2</td><td>55</td><td>−10</td><td>55−10＝45</td><td>answer[2]=45</td></tr><tr><td>航班4，对应下标3</td><td>45</td><td>−20</td><td>45−20＝25</td><td>answer[3]=25</td></tr><tr><td>航班5，对应下标4</td><td>25</td><td>0</td><td>25＋0＝25</td><td>answer[4]=25</td></tr></tbody></table>
+<p>最终结果为<code>[10,55,45,25,25]</code>。恢复到航班3时减去10，是因为第一条预订只覆盖航班1和2，它到这里已经结束；恢复到航班4时减去20，是因为第二条预订也结束了；航班5的差分为0，说明仍然沿用上一航班的25个座位，并不是座位数变为0。</p>
+<p>最后还剩哨兵diff[5]=−25。若仅为理解而继续累加，会得到<code>25−25=0</code>，表示第三条预订的影响也在全部航班范围之外结束。<strong>正式代码只恢复前五项，不会把这个0当成第6个航班输出。</strong>演示额外展示哨兵检查，是为了把撤销的含义说明完整。</p>
 <p>设m为预订数、n为航班数，记录m次更新花O(m)，恢复n项花O(n)，所以<strong>总时间为O(m+n)，额外差分空间为O(n)</strong>；结果数组还需要O(n)输出空间。直接逐条修改区间最坏需要O(mn)。这里消除的是重叠预订带来的重复逐项修改，最后输出n项的工作仍然保留。</p>
 <h2 id="section-56合并区间边界思想可以复用区间含义需要区分">56合并区间：边界思想可以复用，区间含义需要区分</h2>
-<section class="problem"><div class="problem-heading"><strong>56. 合并区间</strong><a href="https://leetcode.cn/problems/merge-intervals/" rel="noopener noreferrer">完整力扣题面 ↗</a></div><p class="excerpt-label">题面原文节选</p><blockquote>请你合并所有重叠的区间，并返回 一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间 。</blockquote><div class="examples"><b>示例输入与输出</b><code>[[1,3],[2,6],[8,10],[15,18]] → [[1,6],[8,10],[15,18]]；[[1,4],[4,5]] → [[1,5]]</code></div><p><b>任务与约束：</b>合并重叠区间，输出覆盖相同范围且互不重叠的区间集合。区间数为1～10⁴，0≤start≤end≤10⁴；区间包含端点。</p></section>
+<section class="problem"><div class="problem-heading"><strong>56. 合并区间</strong><a href="https://leetcode.cn/problems/merge-intervals/" rel="noopener noreferrer">力扣原题 ↗</a></div><p><strong>题目要求</strong></p><p>输入区间数组intervals，每一项[startᵢ,endᵢ]都是包含两端的闭区间。把有交集的区间合并，直到输出中的区间彼此不再重叠。</p><p>输出覆盖的范围必须与全部输入区间的并集完全相同。共享端点也算有交集；输入区间不保证有序。</p><div class="examples"><p><strong>示例1</strong></p><p>输入：<code>intervals = [[1,3],[2,6],[8,10],[15,18]]</code></p><p>输出：<code>[[1,6],[8,10],[15,18]]</code></p><p>前两段有重叠，合为[1,6]；其余两段互相分离。</p></div><div class="examples"><p><strong>示例2</strong></p><p>输入：<code>intervals = [[1,4],[4,5]]</code></p><p>输出：<code>[[1,5]]</code></p><p>两个闭区间都包含4，因此连成一段。</p></div><div class="examples"><p><strong>示例3</strong></p><p>输入：<code>intervals = [[4,7],[1,4]]</code></p><p>输出：<code>[[1,7]]</code></p><p>输入顺序与坐标顺序相反，但共享端点4，仍需合并。</p></div><p><strong>约束条件</strong></p><ul><li>1 ≤ intervals.length ≤ 10⁴</li><li>每个intervals[i]恰好包含2个整数。</li><li>0 ≤ startᵢ ≤ endᵢ ≤ 10⁴</li></ul></section>
 <p>做完航班预订统计后，再看到合并区间，我首先想到的也是记录开始和结束的位置。排序合并当然也能做，不过当时更想弄清楚的是：如果直接按坐标把这些事件存入数组，能否省去排序，让处理成本更低一些？</p>
 <p>因此这里继续保留开始、结束事件的思路，并把坐标跨度也算进复杂度。不过，航班是<strong>离散的数组位置</strong>，56处理的是<strong>数轴上的闭区间</strong>。这一区别会影响撤销事件放在哪里。</p>
 <p><code>[1,2]</code>与<code>[2,4]</code>共享端点2，应合成<code>[1,4]</code>；<code>[1,2]</code>与<code>[3,4]</code>之间还有空隙，必须保留为两段。没有未覆盖的整数点，并不等于数轴上没有间隙。</p>
 <figure class="explain-figure"><figcaption>闭区间相接与相邻整数点之间的空隙</figcaption><div class="interval-plot"><img src="/media/algorithm-window-prefix/intervals.svg" alt="第一组[1,2]与[2,4]共享端点，第二组[1,2]与[3,4]中间有空隙" width="580" height="230" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><p>实心端点表示端点包含在区间内；第二组的(2,3)虽然没有整数点，仍是未覆盖的数轴区间。</p></figure>
-<p>如果直接按整数格使用<code>diff[l]+=1、diff[r+1]-=1</code>，再把连续正值格子输出成一个区间，那么<code>[1,2]</code>在3处撤销，<code>[3,4]</code>也在3处开始，两件事会抵消，错误地得到<code>[1,4]</code>。这是把离散覆盖规则搬到数轴区间时产生的语义问题。</p>
+<h3 id="section-原坐标r1的净差分与区间间隙">原坐标r＋1的净差分与区间间隙</h3>
+<p>闭区间在r+1处撤销，这个规则在航班题里没有问题，那么合并区间是否也能直接照搬？先明确这里的存储方式：<strong>每个格子代表一个原整数坐标，只保存该坐标所有增加与减少相加后的净值。</strong>按<code>diff[l]+=1、diff[r+1]-=1</code>记录，再累加，就能得到每个整数点被多少个区间覆盖，这个计数本身是正确的。</p>
+<p>接着看输入<code>[[1,2],[3,4]]</code>。第一段在1处加1、3处减1；第二段在3处加1、5处减1。每一个事件都符合“从左端开始、到右端之后结束”的规则，合并到一张净差分表后是：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>原坐标</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr><td>[1,2]的边界事件</td><td>+1</td><td>0</td><td>−1</td><td>0</td><td>0</td></tr><tr><td>[3,4]的边界事件</td><td>0</td><td>0</td><td>+1</td><td>0</td><td>−1</td></tr><tr><td>相加后的净diff</td><td>1</td><td>0</td><td>0</td><td>0</td><td>−1</td></tr><tr><td>累加得到整数点覆盖数</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td></tr></tbody></table>
+<p>整数点1、2、3、4确实都被覆盖，所以恢复出来的计数没有算错。但是，区间2到3之间还有未覆盖的部分，例如2.5不属于任何输入区间。<strong>这张表只保存了整数点的覆盖情况，没有保存相邻整数点之间是否连通。</strong>如果把连续为正的格子直接当成一整段，就会输出<code>[1,4]</code>，把原先没有覆盖的(2,3)也包含进去。</p>
+<p>还可以用另一份输入<code>[[1,4]]</code>验证信息是否足够。它同样在1处加1、5处减1，得到的净diff与上面完全相同，但它真正的答案就是<code>[[1,4]]</code>。<strong>两份需要不同答案的输入，已经变成同一份净差分记录，仅凭这份记录就无法再判断中间有没有空隙。</strong>因此，r+1对于离散闭区间计数成立；直接用原坐标净差分恢复56的合并区间，还需要额外保留边界或间隙信息。</p>
+<p>这也是下面继续采用分开保存开始与结束事件的原因。原来的边界思路可以保留，只要让存储内容足以区分共享端点与中间有间隙这两种情况。</p>
 <h3 id="section-分开保存开始和结束同一坐标先开始再结束">分开保存开始和结束，同一坐标先开始、再结束</h3>
 <p>用<code>starts[x]</code>记录在x开始的区间数量，用<code>ends[x]</code>记录在x结束的区间数量。<strong>扫描线就是按坐标顺序处理这些事件，同时维护当前仍覆盖着的区间数量count。</strong></p>
+<p>这里的<code>ends[r]</code>表示“区间在坐标r结束”，扫描到r时仍要包含这个端点，因此要先处理该坐标所有开始事件，再处理结束事件。航班差分里的<code>diff[r+1]-=v</code>则表示“从下一个离散位置起取消增量”。<strong>一个保存实际端点事件，一个保存下一格的净变化；它们需要配合各自的扫描顺序使用。</strong>因此，判断写法是否成立时，需要把事件位置、保存的信息和扫描顺序一起对应起来。</p>
 <p>处理坐标x时，先加入开始事件，再移除结束事件：</p>
 <ol>
 <li>原先count为0且这里有开始事件，记录一段新的起点。</li>
@@ -101,6 +302,46 @@ diff[r + <span class="hljs-number">1</span>] -= v   <span class="hljs-comment">#
 <li>结束处理后count回到0，就在x关闭这一段。</li>
 </ol>
 <p>对<code>[1,2]</code>与<code>[2,4]</code>，到2之前count为1，在2先加1再减1，仍为1，覆盖继续。对单点<code>[2,2]</code>，同一坐标也先打开、再关闭，能正确保留这个点。</p>
+<p>把共享端点的例子展开一次，就能看清事件顺序为什么会影响合并：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>当前坐标</th><th>开始数</th><th>结束数</th><th>处理前count</th><th>先开始、后结束</th><th>是否输出区间</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>0</td><td>0</td><td>0→1→1，记录起点1</td><td>否</td></tr><tr><td>2</td><td>1</td><td>1</td><td>1</td><td>1→2→1，覆盖仍连续</td><td>否</td></tr><tr><td>4</td><td>0</td><td>1</td><td>1</td><td>1→1→0，当前段结束</td><td>输出[1,4]</td></tr></tbody></table>
+<p>如果在坐标2先结束旧区间并立刻输出，之后才处理新开始的区间，就会把本来共享端点的两段拆开。相反，先处理开始事件，相当于先确认这个坐标上还有哪些区间加入覆盖，再判断全部结束事件处理完后是否已经没有覆盖。这个顺序正好符合闭区间包含端点的含义。</p>
 <div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">merge_dense_events</span>(<span class="hljs-params">intervals: <span class="hljs-built_in">list</span>[<span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]]</span>) -> <span class="hljs-built_in">list</span>[<span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]]:
     <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> intervals:
         <span class="hljs-keyword">return</span> []
@@ -121,10 +362,13 @@ diff[r + <span class="hljs-number">1</span>] -= v   <span class="hljs-comment">#
             result.append([begin, x])  <span class="hljs-comment"># [x,x]单点也能正确开启并关闭。</span>
     <span class="hljs-keyword">return</span> result
 </code></pre></div>
-<p>如果只存一张净变化表<code>diff[l]+=1、diff[r]-=1</code>，单点区间的两个事件会直接抵消，无法再看出这个点曾被覆盖。<strong>分开保存starts和ends，是为了保留同一坐标内的事件顺序。</strong>这属于边界增量思想的应用，但不等于前面的相邻差分定义。</p>
+<p>开始与结束分开保存还有一个作用：即使两者发生在同一坐标，也可以保留“先开始、后结束”的过程。例如单点区间<code>[2,2]</code>，starts[2]与ends[2]各为1，扫描时count先从0变为1，再从1变回0，便能输出这个点。如果为了省一张表，直接把实际端点事件写成<code>diff[2]+=1、diff[2]-=1</code>并预先相加，结果为0，单点就从记录里消失了。</p>
+<p>这是<strong>把实际端点事件提前合成净值</strong>造成的信息损失，与上一小节“在原坐标r+1撤销后缺少间隙信息”是两个不同问题。本文采用的starts、ends方案同时保留了事件位置和处理顺序，不存在这两个问题；它属于边界增量思想的应用，但存储含义与相邻差分数组需要分别说明。</p>
 <h3 id="section-密集数组的成本取决于区间数和坐标跨度">密集数组的成本取决于区间数和坐标跨度</h3>
 <p>设区间数为n，实际扫描的坐标跨度为<code>U=max(end)-min(start)+1</code>。按下标放事件不需要排序，记录事件O(n)，扫描坐标O(U)，所以<strong>密集事件数组为O(n+U)时间、O(U)辅助空间</strong>，另计至多O(n)的输出。</p>
 <p>本题坐标限制在0到10⁴之间，确实可以尝试密集数组。当推广到跨度很大、实际端点很少的数据时，可以改为只记录2n个事件，再排序扫描。</p>
+<p>我当时关心的“能否省去排序”，在这份密集数组方案里是可以做到的：数组下标本身就给出了坐标顺序。不过，这个顺序并非没有成本，程序需要为跨度内的坐标分配空间，并逐个扫描，即使很多位置没有事件，也仍然会经过它们。所以这里必须同时保留n和U两个量，才能说明省下排序后又花了什么。</p>
+<p>例如泛化到只有两三个区间、端点却相距10⁹的情况，逐坐标扫描会做大量无用工作；只保存出现过的端点再排序，就更合适。这是一般数据上的取舍，不是本题的小值域方案有误。本题U最多10001，密集数组的时间和空间都可以根据这个上限直接估算。</p>
 <details class="extra">
 <summary>展开稀疏事件排序扫描</summary>
 <div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">merge_sparse_events</span>(<span class="hljs-params">intervals: <span class="hljs-built_in">list</span>[<span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]]</span>) -> <span class="hljs-built_in">list</span>[<span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>]]:
@@ -188,6 +432,8 @@ diff[r + <span class="hljs-number">1</span>] -= v   <span class="hljs-comment">#
     <span class="hljs-keyword">return</span> result
 </code></pre></div>
 </details>
+<p>排序合并也可以用相同的“维护当前覆盖段”来理解。把区间按左端排好后，如果下一段的起点没有超过当前终点，两段就有交集，只需把终点更新为两者较大值；如果起点已经超过当前终点，当前段才可以输出，再开启下一段。这里取较大值是为了保留包含关系，例如当前为<code>[1,10]</code>，读到<code>[2,3]</code>后仍应保持<code>[1,10]</code>，不能把终点缩成3。</p>
+<p>因此，密集事件法主要利用<strong>整数坐标范围较小</strong>这一条件，排序合并则只依赖端点能比较大小，推广到跨度很大或非整数端点时也方便使用。两个方法都值得保留，选择时看输入条件与需要维护的状态，而不是只看有没有一层排序。</p>
 <p>已经按左端排序的输入可以直接O(n)合并；上表讨论的是需要排序的输入。哪种方法更合适，要同时看n与U，不能给密集数组凭空加上排序成本，也不能省略它扫描坐标的成本。</p>
 <details class="extra"><summary>补充：如果仍想用单张净差分表，怎样保留间隙</summary>
 <p>可以用偶数位置表示原坐标、奇数位置表示相邻整数之间的空隙，把闭区间<code>[l,r]</code>覆盖到<code>[2l,2r]</code>，在<code>2r+1</code>撤销。这样<code>[1,2]</code>和<code>[3,4]</code>之间留有未覆盖的间隙，而共享端点仍会连在一起。关键是<strong>同时定义坐标、间隙和撤销位置</strong>，仅把两个端点乘2还不够。</p>
@@ -213,16 +459,16 @@ diff[r + <span class="hljs-number">1</span>] -= v   <span class="hljs-comment">#
 </details>
 <h2 id="section-差分与前缀和的更新查询分工">差分与前缀和的更新、查询分工</h2>
 <p>差分保存变化量，通过两个边界修改表示整段增加；<a href="/blog/prefix-sum/">前缀和</a>保存累计量，通过两个累计值相减查询区间和。<strong>对差分进行前缀累加可以恢复原数组</strong>，但两种操作的用途不同：1109是在批量更新，303是在重复查询。</p>
-<p>另外，<a href="/blog/sliding-window-209-438/">438中的字符频次</a>也可以比较两张表的差，但那是字符计数之间的差，不是相邻数组元素的差。判断一个变量是否属于本篇的差分数组，要看它保存的含义，不能只看它是否叫diff。</p>18:["$","$L28","2",{"html":"$2c"}]
+<p>另外，<a href="/blog/sliding-window-209-438/">438中的字符频次</a>也可以比较两张表的差，但那是字符计数之间的差，不是相邻数组元素的差。判断一个变量是否属于本篇的差分数组，要看它保存的含义，不能只看它是否叫diff。</p>18:["$","$L28","2",{"html":"$2d"}]
 19:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Le",null,{"href":"/blog/two-pointers-42-167/","children":[["$","span",null,{"children":"上一篇"}],"相向双指针（一）：接雨水与两数之和II"]}],["$","$Le",null,{"href":"/blog/prefix-sum/","children":[["$","span",null,{"children":"下一篇"}],"前缀和（一）：区域和检索与和为K的子数组"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","two-sum",{"children":[["$","$Le",null,{"href":"/blog/two-sum/","children":"哈希表（一）：两数之和的补数查询"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","hash-table-introduction",{"children":[["$","$Le",null,{"href":"/blog/hash-table-introduction/","children":"哈希表（二）：键值映射与Python字典查找"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","longest-substring-without-repeating-characters",{"children":[["$","$Le",null,{"href":"/blog/longest-substring-without-repeating-characters/","children":"滑动窗口（一）：无重复字符的最长子串"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","sliding-window-209-438",{"children":[["$","$Le",null,{"href":"/blog/sliding-window-209-438/","children":"滑动窗口（二）：长度最小的子数组与找到字符串中所有字母异位词"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","two-pointers-42-167",{"children":[["$","$Le",null,{"href":"/blog/two-pointers-42-167/","children":"相向双指针（一）：接雨水与两数之和II"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","prefix-sum",{"children":[["$","$Le",null,{"href":"/blog/prefix-sum/","children":"前缀和（一）：区域和检索与和为K的子数组"}],["$","span",null,{"children":"算法与数据结构"}]]}]]}]]}]]}]
-1a:["$","$L2d",null,{"contentId":"difference-array"}]
+1a:["$","$L2e",null,{"contentId":"difference-array"}]
 1b:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],["$","$Le",null,{"href":"/blog/merge-sort/","children":"体验归并排序"}]]}]
-1c:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6","$a:0:1:d:r:props:children:0:props:children:1:props:headings:7"]}]
+1c:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6","$a:0:1:d:r:props:children:0:props:children:1:props:headings:7","$a:0:1:d:r:props:children:0:props:children:1:props:headings:8","$a:0:1:d:r:props:children:0:props:children:1:props:headings:9"]}]
 1d:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2f2300ea426b880f.css","precedence":"next"}]
-1e:["$","$L2e",null,{"children":["$","$24",null,{"name":"Next.MetadataOutlet","children":"$@2f"}]}]
+1e:["$","$L2f",null,{"children":["$","$24",null,{"name":"Next.MetadataOutlet","children":"$@30"}]}]
 27:true
 7:300
-2f:null
+30:null
 7:C
 26:0
 9:"$undefined"

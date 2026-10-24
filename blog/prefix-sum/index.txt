@@ -15,7 +15,7 @@ e:I[887,[],"$d"]
 8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2f2300ea426b880f.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
 7:[["children",{"s":{"n":"slug","t":"d","k":"prefix-sum","s":["cpp-casts","merge-sort"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
 3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
-0:{"P":null,"c":["","blog","prefix-sum",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/387fa47b4140f794.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/264b285ce2a862e0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"9VFVQ7CG9WH4AYw79yP7s"}
+0:{"P":null,"c":["","blog","prefix-sum",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/387fa47b4140f794.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/264b285ce2a862e0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"XMGdpd-naL3yqEgnLU6oE"}
 6:C
 f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 15:"static/chunks/825-1a8f209f3ada760f.js"
@@ -24,17 +24,52 @@ f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","cont
 18:I[6279,["825","$15","491","$16","953","$17"],"FilterLink"]
 19:I[4067,["825","$15","491","$16","953","$17"],"ArticleToc"]
 1b:I[4711,["825","$15","491","$16","953","$17"],"ArticleBody"]
-1c:T2eec,<h2 id="section-区域和检索用累计结果消除重复求和">区域和检索：用累计结果消除重复求和</h2>
-<section class="problem"><div class="problem-heading"><strong>303. 区域和检索—数组不可变</strong><a href="https://leetcode.cn/problems/range-sum-query-immutable/" rel="noopener noreferrer">完整力扣题面 ↗</a></div><p class="excerpt-label">题面原文节选</p><blockquote>给定一个整数数组 nums，处理以下类型的多个查询:</blockquote><div class="examples"><b>示例输入与输出</b><code>nums=[-2,0,3,-5,2,-1]；sumRange(0,2) → 1，sumRange(2,5) → -1，sumRange(0,5) → -3</code></div><p><b>任务与约束：</b>实现NumArray(nums)与sumRange(left,right)，查询含两端的区间和。n为1～10⁴，元素为−10⁵～10⁵，最多10⁴次查询，0≤left≤right&#x3C;n。</p></section>
-<p>数组不变，却需要多次查询不同区间的和。如果每次都重新遍历区间，重叠部分就会被反复累加。<strong>前缀和保存从数组开头累加到各个位置的结果，让区间求和变成两个累计值相减。</strong></p>
+1c:T402a,<h2 id="section-区域和检索用累计结果消除重复求和">区域和检索：用累计结果消除重复求和</h2>
+<section class="problem"><div class="problem-heading"><strong>303. 区域和检索—数组不可变</strong><a href="https://leetcode.cn/problems/range-sum-query-immutable/" rel="noopener noreferrer">力扣原题 ↗</a></div><p><strong>题目要求</strong></p><p>输入整数数组nums，此后数组内容保持不变，需要多次回答指定区间的元素总和。</p><p>实现NumArray类：NumArray(nums)接收并初始化数组；sumRange(left,right)返回nums[left]到nums[right]的和，包含两个端点，下标从0开始。</p><div class="examples"><p><strong>示例1</strong></p><p>输入：<code>操作 = ["NumArray","sumRange","sumRange","sumRange"]
+参数 = [[[-2,0,3,-5,2,-1]],[0,2],[2,5],[0,5]]</code></p><p>输出：<code>[null,1,-1,-3]</code></p><p>先创建对象，构造步骤在输出序列中记为null。随后三次查询分别计算-2+0+3=1、3-5+2-1=-1，以及整个数组的和-3。</p></div><p><strong>约束条件</strong></p><ul><li>1 ≤ nums.length ≤ 10⁴</li><li>−10⁵ ≤ nums[i] ≤ 10⁵</li><li>0 ≤ left ≤ right &#x3C; nums.length</li><li>sumRange最多被调用10⁴次。</li></ul></section>
+<p>数组不变，却需要多次查询不同区间的和。如果只查一次，直接循环相加就可以；但题目允许多次查询，重叠部分就会被反复累加。例如先查询下标0到2，再查询0到5，前面三个元素又会完整加一次。若还要查询2到5，其中一些元素还会继续重复参与计算。</p>
+<p>因此可以先考虑把已经算过的结果保存下来。不过，保存所有区间的和需要对应O(n²)个区间，空间太多。更方便的一种选择是：<strong>只保存从数组开头到各个位置的累计和，再用较长的一段减去前面多出来的一段。</strong>两段的起点都是0，被减掉的部分完全相同，剩下的就是需要查询的区间。这种累计结果就叫作<strong>前缀和</strong>。</p>
 <h3 id="section-前缀下标表示已累计的元素数量">前缀下标表示已累计的元素数量</h3>
 <p>令<code>P[0]=0</code>，<code>P[i]</code>表示原数组前i个元素之和。原数组长n，前缀表就有n＋1项：</p>
 <p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">[</mo><mi>i</mi><mo>+</mo><mn>1</mn><mo stretchy="false">]</mo><mo>=</mo><mi>P</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo>+</mo><mi>n</mi><mi>u</mi><mi>m</mi><mi>s</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">P[i+1]=P[i]+nums[i]</annotation></semantics></math></span></p>
 <p>对于从0开始的闭区间<code>[l,r]</code>，<code>P[r+1]</code>包含下标0到r，减去包含0到l−1的<code>P[l]</code>，恰好留下所需部分：</p>
 <p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">sum</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>n</mi><mi>u</mi><mi>m</mi><mi>s</mi><mo stretchy="false">[</mo><mi>l</mi><mo>:</mo><mi>r</mi><mo>+</mo><mn>1</mn><mo stretchy="false">]</mo><mo stretchy="false">)</mo><mo>=</mo><mi>P</mi><mo stretchy="false">[</mo><mi>r</mi><mo>+</mo><mn>1</mn><mo stretchy="false">]</mo><mo>−</mo><mi>P</mi><mo stretchy="false">[</mo><mi>l</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">\operatorname{sum}(nums[l:r+1])=P[r+1]-P[l]</annotation></semantics></math></span></p>
 <p><strong>P的下标是前缀长度，并不等于正在加入的元素下标。</strong>空前缀0使从数组开头出发的区间也能用同一条公式，无需给l＝0另写分支。</p>
+<p>这里的<code>r+1</code>和<code>l</code>可以根据包含了多少个元素分别确定，不必把公式单独背下来。要包含原数组下标r，前缀必须有r+1项；要删除l之前的部分，正好删除前l项。因此，保留到r用<code>P[r+1]</code>，去掉l之前用<code>P[l]</code>。如果左右两边都随意加1，就会连下标l处需要保留的元素也一起删去。</p>
 <figure class="explain-figure"><figcaption>前缀长度与原数组下标要分别看</figcaption><div class="lane"><b>nums下标0、1、2</b><div class="cells"><div class="cell"><small>下标0</small><b>2</b></div><div class="cell active"><small>下标1</small><b>-1</b></div><div class="cell active"><small>下标2</small><b>3</b></div></div></div><div class="prefix-grid"><div class=""><small>P[0] · 前0项</small><b>0</b></div><div class="selected"><small>P[1] · 前1项</small><b>2</b></div><div class=""><small>P[2] · 前2项</small><b>1</b></div><div class="selected"><small>P[3] · 前3项</small><b>4</b></div></div><p>绿色选中的原数组区间为[1,2]。蓝框选出两个累计量：<b>P[3]−P[1]＝4−2＝2</b>，去掉了前1项。</p></figure>
 <p>例如<code>nums=[2,-1,3]</code>，前缀表为<code>[0,2,1,4]</code>。原数组区间<code>[1,2]</code>的和是<code>P[3]-P[1]=4-2=2</code>。前缀和允许负数，前缀表也可能下降；构造和相减都不要求表有序。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>前缀位置</th><th>累计了哪些元素</th><th>值</th></tr></thead><tbody><tr><td>P[0]</td><td>尚未包含元素</td><td>0</td></tr><tr><td>P[1]</td><td>[2]</td><td>2</td></tr><tr><td>P[2]</td><td>[2,-1]</td><td>1</td></tr><tr><td>P[3]</td><td>[2,-1,3]</td><td>4</td></tr></tbody></table>
+<p>查询下标1到2时，P[3]先包含了整段<code>[2,-1,3]</code>，再减去P[1]对应的<code>[2]</code>，剩下的正是<code>[-1,3]</code>。如果查询从0开始，就减P[0]；如果只查下标1这一个数，就用<code>P[2]-P[1]=1-2=-1</code>。这几种边界都能用同一套定义处理。</p>
 <h3 id="section-在numarray中预处理一次之后直接查询">在NumArray中预处理一次，之后直接查询</h3>
 <div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">NumArray</span>:
 
@@ -48,11 +83,13 @@ f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","cont
         <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.prefix[right + <span class="hljs-number">1</span>] - <span class="hljs-variable language_">self</span>.prefix[left]
 </code></pre></div>
 <p>初始化需要扫描n项，花O(n)时间、O(n)额外空间。每次<code>sumRange</code>只读取两项并相减，是O(1)时间；q次查询加上初始化，总时间为<strong>O(n+q)</strong>。</p>
+<p>预处理放在构造函数里，是为了让后续查询复用同一张表。假如每次调用sumRange时重新创建前缀表，虽然最后的相减仍然只有一步，整个查询却还包含O(n)的建表成本，重复查询的优势就消失了。<strong>一次准备、多次使用，是303中前缀和节省时间的前提。</strong></p>
 <p>直接使用<code>sum(nums[left:right+1])</code>时，每次都要重新扫描，还会创建切片，最坏总时间为O(nq)。前缀表省去的就是这部分重复加法与切片，不会把初始化本身也变成O(1)。</p>
 <p>单点区间返回该元素，整段查询返回最后的前缀值。题目保证<code>0&#x3C;=left&#x3C;=right&#x3C;n</code>；这份代码没有另外提供非法下标检查。<strong>数组不可变也是前提</strong>：原数组改变后，这张静态表不会自动更新。</p>
 <h2 id="section-560和为k的子数组把区间关系改写成旧前缀查询">560和为K的子数组：把区间关系改写成旧前缀查询</h2>
-<section class="problem"><div class="problem-heading"><strong>560. 和为K的子数组</strong><a href="https://leetcode.cn/problems/subarray-sum-equals-k/" rel="noopener noreferrer">完整力扣题面 ↗</a></div><p class="excerpt-label">题面原文节选</p><blockquote>给你一个整数数组 nums 和一个整数 k ，请你统计并返回 该数组中和为 k 的子数组的个数 。</blockquote><div class="examples"><b>示例输入与输出</b><code>nums=[1,1,1], k=2 → 2；nums=[1,2,3], k=3 → 2</code></div><p><b>任务与约束：</b>子数组为连续非空序列。n为1～2×10⁴，元素为−1000～1000，k为−10⁷～10⁷。</p></section>
+<section class="problem"><div class="problem-heading"><strong>560. 和为K的子数组</strong><a href="https://leetcode.cn/problems/subarray-sum-equals-k/" rel="noopener noreferrer">力扣原题 ↗</a></div><p><strong>题目要求</strong></p><p>输入整数数组nums和整数k，统计其中元素总和恰好等于k的连续、非空子数组数量，返回这个数量。</p><p>这里的子数组由原数组相邻位置组成。不同的起止位置对应不同子数组，即使它们的元素内容相同，也需要分别统计。</p><div class="examples"><p><strong>示例1</strong></p><p>输入：<code>nums = [1,1,1], k = 2</code></p><p>输出：<code>2</code></p><p>下标区间[0,1]与[1,2]的和都是2，因此统计为两段。</p></div><div class="examples"><p><strong>示例2</strong></p><p>输入：<code>nums = [1,2,3], k = 3</code></p><p>输出：<code>2</code></p><p>满足条件的是[1,2]和单独的[3]。</p></div><p><strong>约束条件</strong></p><ul><li>1 ≤ nums.length ≤ 2 × 10⁴</li><li>−1000 ≤ nums[i] ≤ 1000</li><li>−10⁷ ≤ k ≤ 10⁷</li></ul></section>
 <p>303已经给定区间两端，560需要找出所有满足条件的区间。即使每个区间的和都能O(1)计算，n个元素仍然有<code>n(n+1)/2</code>个非空连续区间，逐一枚举的时间还是O(n²)。</p>
+<p>这个数量可以按起点算出来：从下标0出发有n种终点，从下标1出发有n−1种，依次减少到最后一个起点只剩1种。前缀和只是把每一对边界的求和变快了，并没有自动减少边界组合的数量。<strong>要继续优化，需要处理的瓶颈已经从“怎样求一段的和”，变成“怎样少枚举一些起点”。</strong></p>
 <details class="extra">
 <summary>展开前缀和＋枚举两端的推导版本</summary>
 <div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">subarray_sum_quadratic</span>(<span class="hljs-params">nums: <span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>], k: <span class="hljs-built_in">int</span></span>) -> <span class="hljs-built_in">int</span>:
@@ -70,9 +107,12 @@ f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","cont
 <p>进一步固定当前右边界。用半开区间<code>[start,end)</code>表示子数组，所需条件可以改写成：</p>
 <p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">[</mo><mi>e</mi><mi>n</mi><mi>d</mi><mo stretchy="false">]</mo><mo>−</mo><mi>P</mi><mo stretchy="false">[</mo><mi>s</mi><mi>t</mi><mi>a</mi><mi>r</mi><mi>t</mi><mo stretchy="false">]</mo><mo>=</mo><mi>k</mi><mspace width="1em"></mspace><mo>⟹</mo><mspace width="1em"></mspace><mi>P</mi><mo stretchy="false">[</mo><mi>s</mi><mi>t</mi><mi>a</mi><mi>r</mi><mi>t</mi><mo stretchy="false">]</mo><mo>=</mo><mi>P</mi><mo stretchy="false">[</mo><mi>e</mi><mi>n</mi><mi>d</mi><mo stretchy="false">]</mo><mo>−</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">P[end]-P[start]=k\quad\Longrightarrow\quad P[start]=P[end]-k</annotation></semantics></math></span></p>
 <p><strong>当前前缀P[end]已知后，需要的旧前缀值就确定了，剩下的是查它以前出现过多少次。</strong>因此可以用哈希表保存<code>旧前缀和→出现次数</code>，不再逐个枚举起点。</p>
+<p>这个变形可以先用数值理解。假设当前从头累计到右端的总和是10，希望截出和为3的一段，就需要在前面找到累计和为7的位置，把那一段前缀去掉。所有累计和为7的旧位置都可以作为截断点，不需要再检查累计和为6、8或其他值的位置。<strong>固定当前右端后，合法起点虽然可能不止一个，但它们需要满足的前缀值只有一个：当前累计和减k。</strong></p>
+<p>这正好适合哈希查询：扫描时把更早的前缀值记录下来，以后直接根据这个值查数量。没有命中就增加0个答案，命中几次就增加几个答案。前缀和负责把连续区间变成两个边界值的关系，哈希表负责省去逐个查找旧边界的过程，两部分各自解决了一个问题。</p>
 <h3 id="section-旧前缀频次对应所有合法起点">旧前缀频次对应所有合法起点</h3>
 <p>不同起点可能有相同的前缀和。例如<code>[1,-1,1]</code>中，空前缀为0，读完前两个元素后的前缀也为0。它们分别对应起点0和起点2，都能与最后的前缀1组成和为1的子数组。</p>
 <p>集合只能回答有没有这个旧前缀，最后一个下标只能保留一个起点；<strong>统计所有合法区间时，需要把相同前缀对应的起点数量全部加进答案</strong>。</p>
+<p>对于<code>[1,-1,1]</code>，前缀表若完整写出来就是<code>[0,1,0,1]</code>。最后一个前缀是P[3]=1，需要找旧前缀0。P[0]=0对应从原数组下标0开始，P[2]=0对应从下标2开始，因此得到<code>[0,3)</code>与<code>[2,3)</code>这两段。它们用了同一个右边界，却有不同起点，所以不能因为前缀数值相同就合并成一个答案。</p>
 <div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">subarray_sum_hash</span>(<span class="hljs-params">nums: <span class="hljs-built_in">list</span>[<span class="hljs-built_in">int</span>], k: <span class="hljs-built_in">int</span></span>) -> <span class="hljs-built_in">int</span>:
     frequency = {<span class="hljs-number">0</span>: <span class="hljs-number">1</span>}  <span class="hljs-comment"># 空前缀出现一次，允许统计从下标0开始的子数组。</span>
     running = answer = <span class="hljs-number">0</span>
@@ -85,7 +125,7 @@ f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","cont
     <span class="hljs-keyword">return</span> answer
 </code></pre></div>
 <h2 id="section-交互演示和为k的子数组">交互演示：和为K的子数组</h2>
-9:["$","div",null,{"className":"shell reading-page algorithm-reading","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"前缀和（一）：区域和检索与和为K的子数组"}],["$","p",null,{"className":"article-deck","children":"明确前缀长度与数组下标，解释区间相减、旧前缀频次和先查询再记录，并与两数之和建立联系"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-23","children":"2026-10-23"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,459"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",8," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L18","前缀和",{"href":"/blog/#tag=%E5%89%8D%E7%BC%80%E5%92%8C","children":"前缀和"}],["$","$L18","哈希表",{"href":"/blog/#tag=%E5%93%88%E5%B8%8C%E8%A1%A8","children":"哈希表"}],["$","$L18","编程语言知识点",{"href":"/blog/#tag=%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9F%A5%E8%AF%86%E7%82%B9","children":"编程语言知识点"}],["$","$L18","Python",{"href":"/blog/#tag=Python","children":"Python"}]]}]]}],["$","$L19",null,{"headings":[{"id":"section-区域和检索用累计结果消除重复求和","text":"区域和检索：用累计结果消除重复求和","level":2},{"id":"section-前缀下标表示已累计的元素数量","text":"前缀下标表示已累计的元素数量","level":3},{"id":"section-在numarray中预处理一次之后直接查询","text":"在NumArray中预处理一次，之后直接查询","level":3},{"id":"section-560和为k的子数组把区间关系改写成旧前缀查询","text":"560和为K的子数组：把区间关系改写成旧前缀查询","level":2},{"id":"section-旧前缀频次对应所有合法起点","text":"旧前缀频次对应所有合法起点","level":3},{"id":"section-交互演示和为k的子数组","text":"交互演示：和为K的子数组","level":2},{"id":"section-空前缀初始化与先查询再记录的顺序","text":"空前缀初始化与先查询再记录的顺序","level":3},{"id":"section-560的时间空间与适用边界","text":"560的时间、空间与适用边界","level":3},{"id":"section-与两数之和的联系查询关系式需要的旧信息","text":"与两数之和的联系：查询关系式需要的旧信息","level":2},{"id":"section-与209和差分数组的区别","text":"与209和差分数组的区别","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1a",[["$","$L1b","0",{"html":"$1c"}],"$L1d","$L1e"],false,"$L1f","$L20","$L21"]}],"$L22"]}]]}]
+9:["$","div",null,{"className":"shell reading-page algorithm-reading","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"前缀和（一）：区域和检索与和为K的子数组"}],["$","p",null,{"className":"article-deck","children":"明确前缀长度与数组下标，解释区间相减、旧前缀频次和先查询再记录，并与两数之和建立联系"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-23","children":"2026-10-23"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-24","children":"2026-10-24"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"4,096"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",14," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L18","前缀和",{"href":"/blog/#tag=%E5%89%8D%E7%BC%80%E5%92%8C","children":"前缀和"}],["$","$L18","哈希表",{"href":"/blog/#tag=%E5%93%88%E5%B8%8C%E8%A1%A8","children":"哈希表"}],["$","$L18","编程语言知识点",{"href":"/blog/#tag=%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9F%A5%E8%AF%86%E7%82%B9","children":"编程语言知识点"}],["$","$L18","Python",{"href":"/blog/#tag=Python","children":"Python"}]]}]]}],["$","$L19",null,{"headings":[{"id":"section-区域和检索用累计结果消除重复求和","text":"区域和检索：用累计结果消除重复求和","level":2},{"id":"section-前缀下标表示已累计的元素数量","text":"前缀下标表示已累计的元素数量","level":3},{"id":"section-在numarray中预处理一次之后直接查询","text":"在NumArray中预处理一次，之后直接查询","level":3},{"id":"section-560和为k的子数组把区间关系改写成旧前缀查询","text":"560和为K的子数组：把区间关系改写成旧前缀查询","level":2},{"id":"section-旧前缀频次对应所有合法起点","text":"旧前缀频次对应所有合法起点","level":3},{"id":"section-交互演示和为k的子数组","text":"交互演示：和为K的子数组","level":2},{"id":"section-空前缀初始化与先查询再记录的顺序","text":"空前缀初始化与先查询再记录的顺序","level":3},{"id":"section-560的时间空间与适用边界","text":"560的时间、空间与适用边界","level":3},{"id":"section-与两数之和的联系查询关系式需要的旧信息","text":"与两数之和的联系：查询关系式需要的旧信息","level":2},{"id":"section-与209和差分数组的区别","text":"与209和差分数组的区别","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1a",[["$","$L1b","0",{"html":"$1c"}],"$L1d","$L1e"],false,"$L1f","$L20","$L21"]}],"$L22"]}]]}]
 c:null
 12:[["$","title","0",{"children":"前缀和（一）：区域和检索与和为K的子数组 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"明确前缀长度与数组下标，解释区间相减、旧前缀频次和先查询再记录，并与两数之和建立联系。"}]]
 23:"AlgorithmDemoLoader"
@@ -93,17 +133,59 @@ c:null
 26:I[2708,["825","$15","491","$16","953","$17"],"FeedbackForm"]
 27:I[3498,["825","$15","491","$16","953","$17"],"default"]
 1d:["$","$L24","1",{"id":"prefix-560","fallback":["$","figure",null,{"className":"explain-figure wp-demo","children":[["$","figcaption",null,{"children":"560：[1,−1,1]中和为1的子数组"}],["$","div",null,{"dangerouslySetInnerHTML":{"__html":"<div class=\"cells\"><div class=\"cell active\"><small>下标0</small><b>1</b></div><div class=\"cell active\"><small>下标1</small><b>-1</b></div><div class=\"cell active\"><small>下标2</small><b>1</b></div></div><div class=\"lookup-grid\"><div><b>查询前的旧前缀</b><div class=\"table-scroll\" tabindex=\"0\"><table><thead><tr><th scope=\"col\">前缀和</th><th scope=\"col\">出现次数</th></tr></thead><tbody><tr><td>0</td><td>2</td></tr><tr><td>1</td><td>1</td></tr></tbody></table></div></div><div><b>记录当前前缀后</b><div class=\"table-scroll\" tabindex=\"0\"><table><thead><tr><th scope=\"col\">前缀和</th><th scope=\"col\">出现次数</th></tr></thead><tbody><tr><td>0</td><td>2</td></tr><tr><td>1</td><td>2</td></tr></tbody></table></div></div></div><p><b>本轮新增2个区间，累计3个。</b></p><div class=\"state-msg\">读入1，当前前缀为1。先查询旧前缀1−1=0，找到2个起点；再记录当前前缀。</div>"}}],["$","p",null,{"className":"figure-note","children":"左表用于本轮查询；右表是在查询完成后加入当前前缀的状态。"}]]}]}]
-25:T11d6,
+25:T1a0b,
 <p>本例最后一步需要旧前缀0，它此前出现了两次，所以一次增加2个答案：<code>[1,-1,1]</code>和末尾的<code>[1]</code>。再加上第一步找到的开头<code>[1]</code>，结果为3。这三个区间位置不同，即使内容相同也分别计数。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>本轮加入的元素</th><th>当前running</th><th>查找running−k</th><th>查询时旧表中的次数</th><th>新增答案</th><th>随后记录的前缀</th></tr></thead><tbody><tr><td>下标0的1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>前缀1出现1次</td></tr><tr><td>下标1的−1</td><td>0</td><td>−1</td><td>0</td><td>0</td><td>前缀0增加到2次</td></tr><tr><td>下标2的1</td><td>1</td><td>0</td><td>2</td><td>2</td><td>前缀1增加到2次</td></tr></tbody></table>
+<p>这张表按“查询时看到什么”来写，是为了把当前前缀与旧前缀区分开。当前元素已经加入running，说明右端已经确定；但当前running还没有加入频次表，所以表中记录的都是位于它之前的截断位置。</p>
 <h3 id="section-空前缀初始化与先查询再记录的顺序">空前缀初始化与先查询再记录的顺序</h3>
 <p>初始<code>frequency={0:1}</code>表示<strong>数组还没读入任何元素时，累计和0已经出现一次</strong>。这样，从下标0开始、恰好和为k的区间也能被查询到。这里不是预先记录了一个答案，而是记录一个可用起点。</p>
 <p>每轮先查询<code>running-k</code>，再把当前running加入表中。这个顺序保证查到的前缀都来自以前，即<strong>start&#x3C;end，区间至少包含一个元素</strong>。如果先记当前前缀，在k＝0时就会把当前前缀与自身配对，错误计入空区间。</p>
+<p>最小的检查例子是<code>nums=[0]、k=0</code>。开始时表里只有空前缀<code>{0:1}</code>；读入这个0后，running仍为0，查询得到1，对应唯一的非空子数组<code>[0]</code>，随后才把次数增加到2。若先增加再查询，就会得到2，其中多出来的一次是用“读完这个元素后的前缀”减去它自己，实际上没有选中任何元素。</p>
+<p>空前缀和空子数组也需要区分：<strong>空前缀是位于数组开头、尚未读取元素的一个合法边界；空子数组则是起止边界相同、长度为0的区间。</strong>前者参与初始化，能和后面的右边界组成非空答案；后者不符合题目条件，通过先查询再记录将它排除。</p>
 <p>以<code>[0,0,0]、k=0</code>为例，三个右端分别能得到1、2、3个有效起点，总数为6。频次表中的0依次从1增加到4，但每一步查询使用的是增加前的次数。</p>
 <p><strong>循环不变量是：查询当前前缀时，表中恰好记录所有更早前缀的出现次数，答案已包含此前各右端对应的合法区间。</strong>当前右端新增的区间数由一次频次查询给出，随后记录当前前缀，供下一轮使用。每个区间只会在它自己的右端被统计一次。</p>
 <h3 id="section-560的时间空间与适用边界">560的时间、空间与适用边界</h3>
 <p>每个元素只进行一次累计、一次哈希查询和一次频次更新。在哈希操作平均O(1)的前提下，<strong>总时间为平均O(n)，辅助空间最坏为O(n)</strong>。如果所有前缀都不同，表中最多保存n＋1个键；许多前缀重复时，键数会更少，但不能因此把一般空间复杂度写成O(1)。</p>
 <p>这里无需另外保存完整的前缀数组，只维护当前累计和及旧频次。与前缀枚举法相比，省掉的是枚举旧起点的工作。用大整数时还需考虑整数运算成本，本文按题目范围采用常见的单位操作复杂度口径。</p>
 <p>负数和0都可以正常处理，因为<strong>等值哈希查询不依赖前缀的单调性</strong>。没有满足条件的区间返回0；k为负也不影响关系式。原题输入非空，代码额外兼容空列表并返回0。</p>
+<p>这里也没有尝试根据总和大小移动某个左边界。遇到负数后，区间延长可能让总和减小，删去左端也可能让总和增大，大小关系无法像209那样直接决定移动方向；但“两个前缀相减等于k”仍然始终成立。因此，<strong>通用的等值计数方案保留旧前缀频次，付出最坏O(n)空间，换取平均O(n)时间，并能够处理负数和0</strong>。如果题目只给正数，可能还有利用单调性的方案，那是额外条件带来的选择。</p>
 <h2 id="section-与两数之和的联系查询关系式需要的旧信息">与两数之和的联系：查询关系式需要的旧信息</h2>
 <p>前面的<a href="/blog/two-sum/">两数之和</a>也会把配对条件改写成查询：当前元素为x，就寻找旧元素<code>target-x</code>。560复用了这一步思考，但配对对象已经变成两个前缀。</p>
 
