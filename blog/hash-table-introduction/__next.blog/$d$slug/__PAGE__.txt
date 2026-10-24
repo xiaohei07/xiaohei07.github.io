@@ -3,39 +3,40 @@
 4:I[1380,[],""]
 b:"static/chunks/825-1a8f209f3ada760f.js"
 c:"static/chunks/491-13729696a55105fe.js"
-d:"static/chunks/app/blog/%5Bslug%5D/page-7e06e4a07db3c778.js"
+d:"static/chunks/app/blog/%5Bslug%5D/page-e3dca4a5bcf9cae5.js"
 e:I[3498,["825","$b","491","$c","953","$d"],"default"]
 f:I[6279,["825","$b","491","$c","953","$d"],"FilterLink"]
 10:I[4067,["825","$b","491","$c","953","$d"],"ArticleToc"]
-20:"ViewportBoundary"
-21:I[887,[],"$20"]
-22:"MetadataBoundary"
-23:I[887,[],"$22"]
-24:"$Sreact.suspense"
+21:"ViewportBoundary"
+22:I[887,[],"$21"]
+23:"MetadataBoundary"
+24:I[887,[],"$23"]
+25:"$Sreact.suspense"
 6:X
 6:C
 7:X
-a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page algorithm-reading","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":116}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":88}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#algorithms","children":["算法与数据结构",["$","span",null,{"children":10}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"哈希表（二）：键值映射与Python字典查找"}],["$","p",null,{"className":"article-deck","children":"通过两数之和理解哈希表的键值对应、冲突处理与查询成本，再用CPython字典的槽位和条目解释查找过程"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-21","children":"2026-10-21"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-23","children":"2026-10-23"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,643"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",9," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","数据结构",{"href":"/blog/#tag=%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84","children":"数据结构"}],["$","$Lf","哈希表",{"href":"/blog/#tag=%E5%93%88%E5%B8%8C%E8%A1%A8","children":"哈希表"}],["$","$Lf","Python",{"href":"/blog/#tag=Python","children":"Python"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-哈希表的用途通过键找到关联的值","text":"哈希表的用途：通过键找到关联的值","level":2},{"id":"section-键怎样变成查找位置哈希值槽位与冲突","text":"键怎样变成查找位置：哈希值、槽位与冲突","level":2},{"id":"section-indices与entries槽位怎样指向字典条目","text":"indices与entries：槽位怎样指向字典条目","level":2},{"id":"section-冲突与删除为什么查23要经过槽745","text":"冲突与删除：为什么查23要经过槽7、4、5","level":3},{"id":"section-交互演示字典查找","text":"交互演示：字典查找","level":2},{"id":"section-平均o1的条件散列分布与扩容","text":"平均O(1)的条件：散列分布与扩容","level":2},{"id":"section-好的哈希函数不一定复杂","text":"好的哈希函数不一定复杂","level":3},{"id":"section-python字典的常用操作与使用条件","text":"Python字典的常用操作与使用条件","level":2},{"id":"section-选择数据结构先明确需要怎样查找和修改","text":"选择数据结构：先明确需要怎样查找和修改","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading algorithm-series-reading","aria-label":"算法系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/blog/#category=algorithms","children":"算法与数据结构"}],["$","span",null,{"children":[2," / ",7," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["算法学习系列",["$","span",null,{"children":"哈希表"}]]}],[["$","section","hash-table",{"className":"algorithm-topic-group","aria-label":"哈希表","children":[["$","h2",null,{"children":"哈希表"}],["$","ol",null,{"children":[["$","li","two-sum",{"children":["$","$Le",null,{"href":"/blog/two-sum/","children":["哈希表（一）：两数之和的补数查询",["$","small",null,{"children":"题解"}]]}]}],["$","li","hash-table-introduction",{"children":["$","$Le",null,{"href":"/blog/hash-table-introduction/","aria-current":"page","children":["哈希表（二）：键值映射与Python字典查找",["$","small",null,{"children":"知识点"}]]}]}]]}]]}],["$","section","sliding-window",{"className":"algorithm-topic-group","aria-label":"滑动窗口","children":[["$","h2",null,{"children":"滑动窗口"}],["$","ol",null,{"children":[["$","li","longest-substring-without-repeating-characters",{"children":["$","$Le",null,{"href":"/blog/longest-substring-without-repeating-characters/","children":["滑动窗口（一）：无重复字符的最长子串","$L11"]}]}],"$L12"]}]]}],"$L13","$L14","$L15"]]}]]}],["$L16","$L17","$L18"],false,"$L19","$L1a","$L1b"]}],"$L1c"]}]]}],["$L1d"],"$L1e"]}],"p":"$@1f","v":null,"s":"$7"}}]]
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page algorithm-reading","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Le",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Le",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":117}]]}],["$","$Le",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":89}]]}],["$","$Lf",null,{"className":"trail-current","href":"/blog/#algorithms","children":["算法与数据结构",["$","span",null,{"children":11}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"哈希表（二）：键值映射与Python字典查找"}],["$","p",null,{"className":"article-deck","children":"通过两数之和理解哈希表的键值对应、冲突处理与查询成本，再用CPython字典的槽位和条目解释查找过程"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-21","children":"2026-10-21"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-23","children":"2026-10-23"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,643"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",9," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$Lf","数据结构",{"href":"/blog/#tag=%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84","children":"数据结构"}],["$","$Lf","哈希表",{"href":"/blog/#tag=%E5%93%88%E5%B8%8C%E8%A1%A8","children":"哈希表"}],["$","$Lf","Python",{"href":"/blog/#tag=Python","children":"Python"}]]}]]}],["$","$L10",null,{"headings":[{"id":"section-哈希表的用途通过键找到关联的值","text":"一、哈希表的用途：通过键找到关联的值","level":2},{"id":"section-键怎样变成查找位置哈希值槽位与冲突","text":"二、键到槽位的映射：哈希值、槽位与冲突","level":2},{"id":"section-indices与entries槽位怎样指向字典条目","text":"三、indices与entries：索引表与字典条目的关系","level":2},{"id":"section-冲突与删除为什么查23要经过槽745","text":"3.1 冲突与删除：查找23时经过槽7、4、5的过程","level":3},{"id":"section-交互演示字典查找","text":"3.1.1 交互演示：字典查找","level":4},{"id":"section-平均o1的条件散列分布与扩容","text":"四、平均O(1)的条件：散列分布与扩容","level":2},{"id":"section-好的哈希函数不一定复杂","text":"4.1 哈希函数的目标：分布与计算成本","level":3},{"id":"section-python字典的常用操作与使用条件","text":"五、Python字典的常用操作与使用条件","level":2},{"id":"section-选择数据结构先明确需要怎样查找和修改","text":"六、数据结构选择：查找与修改方式的比较","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading algorithm-series-reading","aria-label":"算法系列阅读顺序","children":[["$","div",null,{"children":[["$","$Le",null,{"href":"/blog/#category=algorithms","children":"算法与数据结构"}],["$","span",null,{"children":[2," / ",8," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["算法学习系列",["$","span",null,{"children":"哈希表"}]]}],[["$","section","hash-table",{"className":"algorithm-topic-group","aria-label":"哈希表","children":[["$","h2",null,{"children":"哈希表"}],["$","ol",null,{"children":[["$","li","two-sum",{"children":["$","$Le",null,{"href":"/blog/two-sum/","children":["哈希表（一）：两数之和的补数查询",["$","small",null,{"children":"题解"}]]}]}],["$","li","hash-table-introduction",{"children":["$","$Le",null,{"href":"/blog/hash-table-introduction/","aria-current":"page","children":["哈希表（二）：键值映射与Python字典查找",["$","small",null,{"children":"知识点"}]]}]}]]}]]}],["$","section","sliding-window",{"className":"algorithm-topic-group","aria-label":"滑动窗口","children":[["$","h2",null,{"children":"滑动窗口"}],["$","ol",null,{"children":[["$","li","longest-substring-without-repeating-characters",{"children":"$L11"}],"$L12"]}]]}],"$L13","$L14","$L15","$L16"]]}]]}],["$L17","$L18","$L19"],false,"$L1a","$L1b","$L1c"]}],"$L1d"]}]]}],["$L1e"],"$L1f"]}],"p":"$@20","v":null,"s":"$7"}}]]
 8:[["children",{"s":{"n":"slug","t":"d","k":"hash-table-introduction","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
 1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
-0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L21",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L23",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$24",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"哈希表（二）：键值映射与Python字典查找 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"通过两数之和理解哈希表的键值对应、冲突处理与查询成本，再用CPython字典的槽位和条目解释查找过程。"}]]}]}],null]}],null]}],"p":"$@25","v":null,"s":"$7"}},"a":"$@26","u":"$@27","b":"G0ZryR-_jKHSJKD69zS98"}
-28:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
-2a:"AlgorithmDemoLoader"
-2b:I[7223,["825","$b","491","$c","953","$d"],"$2a"]
-2d:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
-2e:I[887,[],"OutletBoundary"]
-:HL["/_next/static/css/2f2300ea426b880f.css","style"]
-11:["$","small",null,{"children":"题解"}]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L22",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L24",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$25",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"哈希表（二）：键值映射与Python字典查找 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"通过两数之和理解哈希表的键值对应、冲突处理与查询成本，再用CPython字典的槽位和条目解释查找过程。"}]]}]}],null]}],null]}],"p":"$@26","v":null,"s":"$7"}},"a":"$@27","u":"$@28","b":"9qbmaazjf6wDU3drChpgG"}
+29:I[4711,["825","$b","491","$c","953","$d"],"ArticleBody"]
+2b:"AlgorithmDemoLoader"
+2c:I[7223,["825","$b","491","$c","953","$d"],"$2b"]
+2e:I[2708,["825","$b","491","$c","953","$d"],"FeedbackForm"]
+2f:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/6609374383e1ad9d.css","style"]
+11:["$","$Le",null,{"href":"/blog/longest-substring-without-repeating-characters/","children":["滑动窗口（一）：无重复字符的最长子串",["$","small",null,{"children":"题解"}]]}]
 12:["$","li","sliding-window-209-438",{"children":["$","$Le",null,{"href":"/blog/sliding-window-209-438/","children":["滑动窗口（二）：长度最小的子数组与找到字符串中所有字母异位词",["$","small",null,{"children":"题解"}]]}]}]
 13:["$","section","opposing-pointers",{"className":"algorithm-topic-group","aria-label":"相向双指针","children":[["$","h2",null,{"children":"相向双指针"}],["$","ol",null,{"children":[["$","li","two-pointers-42-167",{"children":["$","$Le",null,{"href":"/blog/two-pointers-42-167/","children":["相向双指针（一）：接雨水与两数之和II",["$","small",null,{"children":"题解"}]]}]}]]}]]}]
 14:["$","section","difference-array",{"className":"algorithm-topic-group","aria-label":"差分数组","children":[["$","h2",null,{"children":"差分数组"}],["$","ol",null,{"children":[["$","li","difference-array",{"children":["$","$Le",null,{"href":"/blog/difference-array/","children":["差分数组（一）：航班预订统计与合并区间",["$","small",null,{"children":"知识点"}]]}]}]]}]]}]
 15:["$","section","prefix-sum",{"className":"algorithm-topic-group","aria-label":"前缀和","children":[["$","h2",null,{"children":"前缀和"}],["$","ol",null,{"children":[["$","li","prefix-sum",{"children":["$","$Le",null,{"href":"/blog/prefix-sum/","children":["前缀和（一）：区域和检索与和为K的子数组",["$","small",null,{"children":"知识点"}]]}]}]]}]]}]
-29:T2378,<p>在<a href="/blog/two-sum/">两数之和</a>中，需要反复查找补数以及它的位置，因此用字典保存<code>seen[数值] = 原下标</code>。要理解这一步为什么能加速，先需要分清<strong>“已知下标访问数组”和“已知数值寻找位置”</strong>。</p>
-<h2 id="section-哈希表的用途通过键找到关联的值">哈希表的用途：通过键找到关联的值</h2>
+16:["$","section","in-place-hash",{"className":"algorithm-topic-group","aria-label":"原地哈希","children":[["$","h2",null,{"children":"原地哈希"}],["$","ol",null,{"children":[["$","li","in-place-hash",{"children":["$","$Le",null,{"href":"/blog/in-place-hash/","children":["原地哈希（一）：缺失的第一个正数与数组缺失、重复问题",["$","small",null,{"children":"知识点"}]]}]}]]}]]}]
+2a:T2394,<p>在<a href="/blog/two-sum/">两数之和</a>中，需要反复查找补数以及它的位置，因此用字典保存<code>seen[数值] = 原下标</code>。要理解这一步为什么能加速，先需要分清<strong>“已知下标访问数组”和“已知数值寻找位置”</strong>。</p>
+<h2 id="section-哈希表的用途通过键找到关联的值">一、哈希表的用途：通过键找到关联的值</h2>
 <p>数组有了下标，就可以通过<code>nums[4]</code>直接读取第5个位置。底层按照<strong>起始地址＋下标×单元大小</strong>计算地址，通常可以按O(1)分析。可是，如果已知的只有“要找7”，普通数组并没有同时保存7的位置，仍需要逐个检查，或提前建立查询结构。</p>
 <p>字典保存的是<strong>键（key）→值（value）</strong>的对应关系。键用来查询，值保存需要取回的信息。在两数之和中，键是数组里的数，值是它的原下标；换成成绩表，键可以是学号，值可以是成绩。</p>
 <p><strong>哈希表是实现这种映射的一种数据结构。</strong>它借助哈希函数缩小查找范围，再核对键，找到对应的值。Python的字典在CPython（常见的Python解释器实现）中就采用了哈希表。</p>
-<h2 id="section-键怎样变成查找位置哈希值槽位与冲突">键怎样变成查找位置：哈希值、槽位与冲突</h2>
+<h2 id="section-键怎样变成查找位置哈希值槽位与冲突">二、键到槽位的映射：哈希值、槽位与冲突</h2>
 <p>哈希函数会把键转换成一个整数，叫作<strong>哈希值</strong>。表的容量有限，还需要把这个整数映射到表内的位置，这个位置叫作<strong>槽位</strong>。例如一张8槽的小表，可以先按下面的规则确定查找起点：</p>
 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>h</mi><mo>=</mo><mi mathvariant="normal">hash</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>k</mi><mi>e</mi><mi>y</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mspace width="2em"></mspace><mi>s</mi><mo>=</mo><mi>h</mi><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><mn>8</mn></mrow><annotation encoding="application/x-tex">h=\operatorname{hash}(key),\qquad s=h\bmod 8</annotation></semantics></math></span>
 <p><strong>哈希值是计算结果，槽位号是表内位置，两者含义不同。</strong>表扩容后容量改变，同一个哈希值也可能对应另一个槽位。</p>
@@ -59,7 +60,7 @@ a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$",
 
 <table><thead><tr><th>冲突处理方法</th><th>查找怎样继续</th></tr></thead><tbody><tr><td><strong>链地址法</strong></td><td>同一个桶保存多条记录，再在桶内比较键；桶可以由链表等结构实现</td></tr><tr><td><strong>开放寻址法</strong></td><td>按确定的探测规则，继续检查表内其他槽位；CPython字典采用这一类方法</td></tr></tbody></table>
 <p>可以把槽位理解成资料格的编号，哈希函数决定先去哪个格子找；发生冲突后，仍需要按规则寻找并核对完整编号。<strong>查找和插入使用相同的探测规则</strong>，才能再次找到存进去的键。两种方法的进一步说明可见<a href="https://opendatastructures.org/ods-python/5_1_ChainedHashTable_Hashin.html" rel="noopener noreferrer">链地址法</a>和<a href="https://opendatastructures.org/ods-python/5_2_LinearHashTable_Linear_.html" rel="noopener noreferrer">线性探测</a>。</p>
-<h2 id="section-indices与entries槽位怎样指向字典条目">indices与entries：槽位怎样指向字典条目</h2>
+<h2 id="section-indices与entries槽位怎样指向字典条目">三、indices与entries：索引表与字典条目的关系</h2>
 <p>下面以<strong>CPython3.12.0的整数键合并表（combined table）</strong>为例。这种布局把存储分成两部分：<strong>indices保存条目下标，entries保存条目的哈希信息以及键和值</strong>。</p>
 <p>下面取数组<code>nums = [15, 8, 23, 9, 7]</code>，手动按7、15、23的顺序记录三个数的位置，得到<code>{7: 4, 15: 0, 23: 2}</code>。这个写入顺序用于说明位置关系，不是两数之和从左到右扫描的顺序。</p>
 <figure class="static-figure address-figure" aria-label="查询键7，定位槽7，读取条目下标0，再从条目0取出原数组下标4">
@@ -77,7 +78,7 @@ a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$",
 </figure>
 <p>查询7时，先算出槽位7，读到<code>indices[7] = 0</code>；再访问<code>entries[0]</code>，核对键为7，取出value为4。<strong>槽位号7、条目下标0、原数组下标4，分别属于三个位置。</strong>其中4是主动存入的值，字典不会自动计算这个原下标。</p>
 <p>从槽位到条目的过程，可以理解为<strong>把indices里保存的整数，当作entries的下标使用</strong>。两次按已知下标访问数组，不需要重新在entries中搜索。实际字段见<a href="https://github.com/python/cpython/blob/v3.12.0/Include/internal/pycore_dict.h" rel="noopener noreferrer">CPython条目结构</a>。</p>
-<h3 id="section-冲突与删除为什么查23要经过槽745">冲突与删除：为什么查23要经过槽7、4、5</h3>
+<h3 id="section-冲突与删除为什么查23要经过槽745">3.1 冲突与删除：查找23时经过槽7、4、5的过程</h3>
 <p>23的起点也是槽7，但那里对应的键是7；继续探测槽4，读到键15；再到槽5，才找到键23。这个例子采用CPython3.12的扰动探测规则，具体计算放在下方补充中。</p>
 <figure class="static-figure probe-figure" aria-label="查询23的探测顺序：槽7的键7不匹配，槽4的键15不匹配，槽5的键23匹配；删除15后仍继续查找">
 <figcaption><strong>查询key=23时，沿探测规则寻找</strong></figcaption>
@@ -86,10 +87,10 @@ a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$",
 </figure>
 <p>如果删除15，<strong>槽4会留下DUMMY标记，对应条目可以留下空洞</strong>。查询23经过槽4时，仍需继续到槽5。若把槽4直接当成从未使用的空槽<code>EMPTY</code>，查找就会提前停止，后面的23也就找不到了。</p>
 <p><strong>EMPTY表示可以结束查找，DUMMY表示需要继续。</strong>普通删除不会每次都把末尾条目搬过来填洞，重新建表时才可以整理有效条目并重建索引。<a href="https://github.com/python/cpython/blob/v3.12.0/Objects/dictobject.c" rel="noopener noreferrer">CPython字典源码</a>包含这些状态和查找步骤。</p>
-<h2 id="section-交互演示字典查找">交互演示：字典查找</h2>
-16:["$","$L28","0",{"html":"$29"}]
-17:["$","$L2b","1",{"id":"dict-index"}]
-2c:T2121,
+<h4 id="section-交互演示字典查找">3.1.1 交互演示：字典查找</h4>
+17:["$","$L29","0",{"html":"$2a"}]
+18:["$","$L2c","1",{"id":"dict-index"}]
+2d:T213d,
 <details>
 <summary>CPython3.12的探测公式与7→4→5的计算</summary>
 <p>CPython3.12.0的槽位数是2的幂，令<code>mask = 容量 - 1</code>，初始槽位为<code>hash &#x26; mask</code>。<code>perturb</code>从转换为无符号整数的哈希值开始，每次继续探测时执行：</p>
@@ -101,17 +102,17 @@ s = (5 * s + perturb + 1) &#x26; mask
 s_2=(5\times4+1)\bmod8=5</annotation></semantics></math></span>
 <p>所以访问顺序是<strong>7→4→5</strong>。这只是选定小正整数和容量后的教学推演，实际解释器还有不同键类型与布局的处理，具体可看<a href="https://github.com/python/cpython/blob/v3.12.0/Objects/dictobject.c#L895-L938" rel="noopener noreferrer">查找源码</a>。</p>
 </details>
-<h2 id="section-平均o1的条件散列分布与扩容">平均O(1)的条件：散列分布与扩容</h2>
+<h2 id="section-平均o1的条件散列分布与扩容">四、平均O(1)的条件：散列分布与扩容</h2>
 <p>哈希表的一次查找包含<strong>计算哈希、访问槽位、比较键</strong>。平均O(1)表示平均工作量不会随元素数量持续增长，并不要求只做一次操作。</p>
 <p>以链地址法说明，设元素数量为<code>n</code>、桶数量为<code>m</code>，负载因子为：</p>
 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>α</mi><mo>=</mo><mfrac><mi>n</mi><mi>m</mi></mfrac><mo separator="true">,</mo><mspace width="2em"></mspace><mi mathvariant="double-struck">E</mi><mo stretchy="false">[</mo><msub><mi>T</mi><mrow><mi>l</mi><mi>o</mi><mi>o</mi><mi>k</mi><mi>u</mi><mi>p</mi></mrow></msub><mo stretchy="false">]</mo><mo>=</mo><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>α</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\alpha=\frac{n}{m},\qquad \mathbb{E}[T_{lookup}]=O(1+\alpha)</annotation></semantics></math></span>
 <p>在键分布较均匀、哈希和比较按常数成本计算的条件下，让桶数量随元素数量增长，把α控制在常数范围内，就能保持<strong>期望O(1)查找</strong>。开放寻址还需要保留足够空槽，具体成本取决于探测规则。</p>
 <p>表装得越来越满时，需要扩容并重新安排有效条目。一次扩容可能花O(n)时间；以容量翻倍为例，多次搬迁的总量是<code>1 + 2 + 4 + …</code>，仍与最终元素数量同阶，分摊到整个插入序列上就是<strong>O(1)均摊扩容成本</strong>。</p>
 <p><strong>“期望”对应散列分布，“均摊”对应一串操作的成本分担。</strong>两者结合，才得到常说的期望均摊O(1)插入。大量冲突可能让查找退化为O(n)，长字符串首次计算哈希也需要计入长度成本。</p>
-<h3 id="section-好的哈希函数不一定复杂">好的哈希函数不一定复杂</h3>
+<h3 id="section-好的哈希函数不一定复杂">4.1 哈希函数的目标：分布与计算成本</h3>
 <p>判断哈希函数时，需要关注<strong>结果是否稳定、计算是否足够快、常见输入是否分布合理</strong>。相等的键必须有相同的哈希值，但哈希值相同不保证键相等。</p>
 <p>CPython中7、15、23这类小正整数的哈希值就是自身，连续整数也可以分散到不同槽位。函数复杂并不自动带来好效果，<strong>需要结合输入和槽位映射来看分布</strong>。字符串等类型还采用进程级随机化，因此不能把<code>hash()</code>结果当作跨进程稳定编号（<a href="https://docs.python.org/3.12/reference/datamodel.html#object.__hash__" rel="noopener noreferrer">Python哈希约定</a>）。</p>
-<h2 id="section-python字典的常用操作与使用条件">Python字典的常用操作与使用条件</h2>
+<h2 id="section-python字典的常用操作与使用条件">五、Python字典的常用操作与使用条件</h2>
 <div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python">positions = {<span class="hljs-number">7</span>: <span class="hljs-number">4</span>, <span class="hljs-number">15</span>: <span class="hljs-number">0</span>}  <span class="hljs-comment"># 数值 -> 原数组下标</span>
 <span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> <span class="hljs-keyword">in</span> positions)     <span class="hljs-comment"># True：检查键7是否存在</span>
 <span class="hljs-built_in">print</span>(positions[<span class="hljs-number">7</span>])       <span class="hljs-comment"># 4：读取键7对应的值</span>
@@ -121,7 +122,7 @@ positions[<span class="hljs-number">7</span>] = <span class="hljs-number">1</spa
 </code></pre></div>
 <p><strong>键必须可哈希</strong>：哈希值在使用期间保持稳定，相等的键有相同哈希值。整数、字符串是常见键，列表不能直接作键；元组需要其中每个元素也可哈希（<a href="https://docs.python.org/3.12/glossary.html#term-hashable" rel="noopener noreferrer">可哈希的定义</a>）。</p>
 <p><strong><code>d[key]</code>在键不存在时会抛出KeyError</strong>，需要先用<code>key in d</code>判断，或用<code>d.get(key, 默认值)</code>。Python3.7起保证字典按插入顺序迭代：更新已有键不改变位置，删除后重新插入会排到末尾。<strong>插入顺序与键的大小顺序不同</strong>，有序范围查询仍需其他结构。<a href="https://docs.python.org/3.12/library/stdtypes.html#mapping-types-dict" rel="noopener noreferrer">字典文档</a>列出了完整操作。</p>
-<h2 id="section-选择数据结构先明确需要怎样查找和修改">选择数据结构：先明确需要怎样查找和修改</h2>
+<h2 id="section-选择数据结构先明确需要怎样查找和修改">六、数据结构选择：查找与修改方式的比较</h2>
 
 
 
@@ -149,19 +150,19 @@ positions[<span class="hljs-number">7</span>] = <span class="hljs-number">1</spa
 
 <table><thead><tr><th>需要完成的操作</th><th>可以考虑的结构</th></tr></thead><tbody><tr><td><strong>按确定的键查询、计数或记录位置</strong></td><td>哈希表；两数之和属于“数值→位置”</td></tr><tr><td>按键大小查询范围、寻找前驱后继</td><td>排序数组或平衡搜索树</td></tr><tr><td>已知节点及必要链接，频繁移动或删除节点</td><td>链表；LRU缓存可结合字典定位与双向链表调整顺序</td></tr><tr><td>已知连续下标，读取或遍历数据</td><td>数组</td></tr></tbody></table>
 <p>两数之和适合用字典，是因为每一步都需要<strong>精确查询补数，并取出已经保存的原下标</strong>。把这两个需求写清楚，再回看<a href="/blog/two-sum/#section-完整代码先查询补数再写入当前元素">先查询、后写入的代码</a>，记录的含义和更新顺序就比较容易对应起来了。</p>
-<p>需要统计数量时，字典里的值也可以保存次数：<a href="/blog/sliding-window-209-438/">字母异位词窗口</a>按字符保存频次，<a href="/blog/prefix-sum/">和为K的子数组</a>按旧前缀和保存频次。键、值的含义变了，查询和更新仍然要与当前处理范围对应起来。</p>18:["$","$L28","2",{"html":"$2c"}]
-19:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Le",null,{"href":"/blog/two-sum/","children":[["$","span",null,{"children":"上一篇"}],"哈希表（一）：两数之和的补数查询"]}],["$","$Le",null,{"href":"/blog/longest-substring-without-repeating-characters/","children":[["$","span",null,{"children":"下一篇"}],"滑动窗口（一）：无重复字符的最长子串"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","two-sum",{"children":[["$","$Le",null,{"href":"/blog/two-sum/","children":"哈希表（一）：两数之和的补数查询"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","longest-substring-without-repeating-characters",{"children":[["$","$Le",null,{"href":"/blog/longest-substring-without-repeating-characters/","children":"滑动窗口（一）：无重复字符的最长子串"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","sliding-window-209-438",{"children":[["$","$Le",null,{"href":"/blog/sliding-window-209-438/","children":"滑动窗口（二）：长度最小的子数组与找到字符串中所有字母异位词"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","two-pointers-42-167",{"children":[["$","$Le",null,{"href":"/blog/two-pointers-42-167/","children":"相向双指针（一）：接雨水与两数之和II"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","difference-array",{"children":[["$","$Le",null,{"href":"/blog/difference-array/","children":"差分数组（一）：航班预订统计与合并区间"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","prefix-sum",{"children":[["$","$Le",null,{"href":"/blog/prefix-sum/","children":"前缀和（一）：区域和检索与和为K的子数组"}],["$","span",null,{"children":"算法与数据结构"}]]}]]}]]}]]}]
-1a:["$","$L2d",null,{"contentId":"hash-table-introduction"}]
-1b:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],["$","$Le",null,{"href":"/blog/merge-sort/","children":"体验归并排序"}]]}]
-1c:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6","$a:0:1:d:r:props:children:0:props:children:1:props:headings:7","$a:0:1:d:r:props:children:0:props:children:1:props:headings:8"]}]
-1d:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2f2300ea426b880f.css","precedence":"next"}]
-1e:["$","$L2e",null,{"children":["$","$24",null,{"name":"Next.MetadataOutlet","children":"$@2f"}]}]
-27:true
+<p>需要统计数量时，字典里的值也可以保存次数：<a href="/blog/sliding-window-209-438/">字母异位词窗口</a>按字符保存频次，<a href="/blog/prefix-sum/">和为K的子数组</a>按旧前缀和保存频次。键、值的含义变了，查询和更新仍然要与当前处理范围对应起来。</p>19:["$","$L29","2",{"html":"$2d"}]
+1a:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Le",null,{"href":"/blog/two-sum/","children":[["$","span",null,{"children":"上一篇"}],"哈希表（一）：两数之和的补数查询"]}],["$","$Le",null,{"href":"/blog/longest-substring-without-repeating-characters/","children":[["$","span",null,{"children":"下一篇"}],"滑动窗口（一）：无重复字符的最长子串"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","two-sum",{"children":[["$","$Le",null,{"href":"/blog/two-sum/","children":"哈希表（一）：两数之和的补数查询"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","longest-substring-without-repeating-characters",{"children":[["$","$Le",null,{"href":"/blog/longest-substring-without-repeating-characters/","children":"滑动窗口（一）：无重复字符的最长子串"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","sliding-window-209-438",{"children":[["$","$Le",null,{"href":"/blog/sliding-window-209-438/","children":"滑动窗口（二）：长度最小的子数组与找到字符串中所有字母异位词"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","two-pointers-42-167",{"children":[["$","$Le",null,{"href":"/blog/two-pointers-42-167/","children":"相向双指针（一）：接雨水与两数之和II"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","difference-array",{"children":[["$","$Le",null,{"href":"/blog/difference-array/","children":"差分数组（一）：航班预订统计与合并区间"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","prefix-sum",{"children":[["$","$Le",null,{"href":"/blog/prefix-sum/","children":"前缀和（一）：区域和检索与和为K的子数组"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","in-place-hash",{"children":[["$","$Le",null,{"href":"/blog/in-place-hash/","children":"原地哈希（一）：缺失的第一个正数与数组缺失、重复问题"}],["$","span",null,{"children":"算法与数据结构"}]]}]]}]]}]]}]
+1b:["$","$L2e",null,{"contentId":"hash-table-introduction"}]
+1c:["$","div",null,{"className":"related-note","children":[["$","$Le",null,{"href":"/blog/","children":"返回技术笔记"}],["$","$Le",null,{"href":"/blog/merge-sort/","children":"体验归并排序"}]]}]
+1d:["$","$L10",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6","$a:0:1:d:r:props:children:0:props:children:1:props:headings:7","$a:0:1:d:r:props:children:0:props:children:1:props:headings:8"]}]
+1e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/6609374383e1ad9d.css","precedence":"next"}]
+1f:["$","$L2f",null,{"children":["$","$25",null,{"name":"Next.MetadataOutlet","children":"$@30"}]}]
+28:true
 7:300
-2f:null
+30:null
 7:C
-26:0
+27:0
 9:"$undefined"
 5:"$undefined"
-25:"$undefined"
-1f:"$undefined"
+26:"$undefined"
+20:"$undefined"
