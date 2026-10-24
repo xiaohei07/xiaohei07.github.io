@@ -1,0 +1,1000 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+16:"ViewportBoundary"
+17:I[887,[],"$16"]
+18:"MetadataBoundary"
+19:I[887,[],"$18"]
+1a:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page algorithm-reading","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":119}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":91}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#algorithms","children":["算法与数据结构",["$","span",null,{"children":13}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"哑节点（一）：合并两个有序链表、移除链表元素与删除倒数节点"}],["$","p",null,{"className":"article-deck","children":"从头前插入时没有前驱、错误连接成环，到哑节点统一边界，再比较删除倒数节点的计数法及n与n+1两种固定间距"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-24","children":"2026-10-24"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"11,353"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",37," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","哑节点",{"href":"/blog/#tag=%E5%93%91%E8%8A%82%E7%82%B9","children":"哑节点"}],["$","$L10","链表",{"href":"/blog/#tag=%E9%93%BE%E8%A1%A8","children":"链表"}],["$","$L10","双指针",{"href":"/blog/#tag=%E5%8F%8C%E6%8C%87%E9%92%88","children":"双指针"}],["$","$L10","算法",{"href":"/blog/#tag=%E7%AE%97%E6%B3%95","children":"算法"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-题目一合并两个有序链表","text":"一、题目一：合并两个有序链表","level":2},{"id":"section-链表中的节点变量和next连接","text":"1.1 链表中的节点、变量和next连接","level":3},{"id":"section-首次插入pre为空时无法修改前驱的next","text":"1.2 首次插入：pre为空时无法修改前驱的next","level":3},{"id":"section-第二次修改pre指向当前节点后形成了环","text":"1.3 第二次修改：pre指向当前节点后形成了环","level":3},{"id":"section-区分头部与中间插入先把原思路修正完整","text":"1.4 区分头部与中间插入，先把原思路修正完整","level":3},{"id":"section-哑节点的推导给第一次连接也提供一个前驱","text":"1.5 哑节点的推导：给第一次连接也提供一个前驱","level":3},{"id":"section-dummytail的完整选择与连接过程","text":"1.6 dummy＋tail的完整选择与连接过程","level":3},{"id":"section-交互演示有序链表合并与头部错误","text":"1.6.1 交互演示：有序链表合并与头部错误","level":4},{"id":"section-合并方法的复杂度与边界","text":"1.7 合并方法的复杂度与边界","level":3},{"id":"section-题目二移除链表元素","text":"二、题目二：移除链表元素","level":2},{"id":"section-保留时前驱跟上删除时前驱留在原位","text":"2.1 保留时前驱跟上，删除时前驱留在原位","level":3},{"id":"section-预先连接dummy后减少保留分支的重复写入","text":"2.2 预先连接dummy后，减少保留分支的重复写入","level":3},{"id":"section-交互演示连续删除与前驱位置","text":"2.2.1 交互演示：连续删除与前驱位置","level":4},{"id":"section-连续删除的复杂度与边界","text":"2.3 连续删除的复杂度与边界","level":3},{"id":"section-题目三删除链表的倒数第n个结点","text":"三、题目三：删除链表的倒数第N个结点","level":2},{"id":"section-计数法从倒数位置推导前驱的步数","text":"3.1 计数法：从倒数位置推导前驱的步数","level":3},{"id":"section-固定间距利用尾部终点确定前驱的位置","text":"3.2 固定间距：利用尾部终点确定前驱的位置","level":3},{"id":"section-n1步配合fast最终停在none","text":"3.2.1 n+1步配合fast最终停在None","level":4},{"id":"section-n步配合fast最终停在尾节点","text":"3.2.2 n步配合fast最终停在尾节点","level":4},{"id":"section-只改成n却仍走到none会定位到目标本身","text":"3.2.3 只改成n却仍走到None，会定位到目标本身","level":4},{"id":"section-固定间距的成立时机同步一轮完成以后","text":"3.2.4 固定间距的成立时机：同步一轮完成以后","level":4},{"id":"section-交互演示计数定位与两种固定间距","text":"3.2.5 交互演示：计数定位与两种固定间距","level":4},{"id":"section-删头删尾与单节点的统一处理","text":"3.3 删头、删尾与单节点的统一处理","level":3},{"id":"section-计数与双指针的时间空间及适用范围","text":"3.4 计数与双指针的时间、空间及适用范围","level":3},{"id":"section-知识点归纳用辅助起点统一链表边界","text":"四、知识点归纳：用辅助起点统一链表边界","level":2}],"mobile":true}],"$L12"]}],["$L13"],"$L14"]}],"p":"$@15","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"dummy-node-linked-lists","s":["cpp-casts","merge-sort"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L17",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L19",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1a",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"哑节点（一）：合并两个有序链表、移除链表元素与删除倒数节点 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从头前插入时没有前驱、错误连接成环，到哑节点统一边界，再比较删除倒数节点的计数法及n与n+1两种固定间距。"}]]}]}],null]}],null]}],"p":"$@1b","v":null,"s":"$7"}},"a":"$@1c","u":"$@1d","b":"y76-pNLxslR7RRZqOIxXb"}
+1e:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+2a:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+1f:T9f85,<h2 id="section-题目一合并两个有序链表">一、题目一：合并两个有序链表</h2>
+<section class="problem"><div class="problem-heading"><strong>21. 合并两个有序链表</strong><a href="https://leetcode.cn/problems/merge-two-sorted-lists/" rel="noopener noreferrer">力扣原题 ↗</a></div><p><strong>题目要求</strong></p><p>给定两条单链表的头节点list1和list2，两条链表的节点值都按非递减顺序排列。请把它们合并为一条同样有序的链表，并返回合并后链表的头节点。</p><p>合并时使用输入链表的已有节点，调整节点之间的连接，把两条链表的节点全部接到结果中。</p><div class="examples"><p><strong>示例1</strong></p><p>输入：<code>list1 = [1,2,4], list2 = [1,3,4]</code></p><p>输出：<code>[1,1,2,3,4,4]</code></p><p>两条链表的6个节点全部保留，合并后仍按非递减顺序连接。</p></div><div class="examples"><p><strong>示例2</strong></p><p>输入：<code>list1 = [], list2 = []</code></p><p>输出：<code>[]</code></p><p>两条链表都为空，结果也为空。</p></div><div class="examples"><p><strong>示例3</strong></p><p>输入：<code>list1 = [], list2 = [0]</code></p><p>输出：<code>[0]</code></p><p>第一条链表为空，直接返回第二条链表。</p></div><p><strong>约束条件</strong></p><ul><li>每条输入链表分别包含0到50个节点。</li><li>每个节点的值在−100到100之间。</li><li>list1和list2各自按非递减顺序排列。</li></ul></section>
+<p>我最开始考虑的是<strong>以第一条链表为基础，把第二条链表的节点逐个插进去</strong>。两条链表本来就有序，只要一边比较一边向后移动，就不用每插入一个节点都重新从头寻找位置。这条思路是可以做对的，不过真正写代码时，头节点的处理比中间位置多了一层问题：<strong>插到当前节点前面，需要修改它的前驱；但原来的头节点并没有前驱。</strong></p>
+<p>下面先沿着这几次修改看清问题，再引出哑节点。后面的“移除链表元素”和“删除链表的倒数第N个结点”，也会用到同一个前驱关系。</p>
+<h3 id="section-链表中的节点变量和next连接">1.1 链表中的节点、变量和next连接</h3>
+<p>单链表里的每个节点保存一个值val，以及指向下一个节点的next。head或list1保存的是入口节点的引用；从入口开始不断读取next，才能沿链表向后访问。最后一个节点的next为None，表示后面没有节点。</p>
+<p><strong>节点对象、指向对象的变量、对象自身的next连接，需要分别看。</strong>例如<code>pre=list1</code>只会让两个变量引用同一个节点；<code>pre.next=list2</code>则会修改这个节点的next，让链表连接发生变化。这也是<a href="https://docs.python.org/3/tutorial/classes.html#objects-and-individuality" rel="noopener noreferrer">Python关于名称与对象的说明</a>中所说的多个名称绑定同一个对象。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>语句</th><th>实际改变的内容</th></tr></thead><tbody><tr><td>pre=list1</td><td>pre与list1指向同一个现有节点，没有新建节点</td></tr><tr><td>list1=list1.next</td><td>list1变量移到后继节点，节点的next没有因此改动</td></tr><tr><td>pre.next=list2</td><td>pre所指节点的next改为指向list2所指节点</td></tr><tr><td>dummy=ListNode(0,head)</td><td>创建一个独立节点，并将它的next接到head</td></tr></tbody></table>
+<p>图中的A1、A2和B1等是<strong>节点身份</strong>。两个节点的值都为4，它们仍然是两个对象，合并时都要保留。如果还不熟悉这种表示，可以先看<a href="/blog/linked-list-basics/">链表（一）：节点、引用与next连接</a>，其中把访问、插入和删除单独整理了一遍。</p>
+<h3 id="section-首次插入pre为空时无法修改前驱的next">1.2 首次插入：pre为空时无法修改前驱的next</h3>
+<p>先看最短的头插例子：第一条只有节点A1，值为2；第二条只有节点B1，值为1。B1应该排在A1前面。</p>
+<p>首版先令<code>pre=None</code>，表示还没有经过前面的节点。发现1小于2后，先执行<code>list2_pos.next=list1_pos</code>，建立B1→A1；接下来执行<code>pre.next=list2_pos</code>，想让前驱接向B1。<strong>问题就在第二步：A1原本是头节点，pre确实没有可以指向的前驱，所以访问None.next会报错。</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>顺序</th><th>操作</th><th>已经得到的结构</th></tr></thead><tbody><tr><td>1</td><td>pre=None</td><td>A1前面没有节点</td></tr><tr><td>2</td><td>B1.next=A1</td><td>B1→A1→None</td></tr><tr><td>3</td><td>pre.next=B1</td><td>pre为None，无法完成这次连接</td></tr></tbody></table>
+<p>在普通位置插入时，修改前驱的next确实能把新节点接进来。但要把同样的操作用到头部，就必须先解决<strong>前驱是否存在，以及结果入口是否需要改变</strong>这两个问题。</p>
+<details class="extra">
+<summary>展开首版错误代码：pre为空时仍访问next</summary>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-comment"># 错误版V1：头前没有前驱</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:
+    <span class="hljs-comment"># 沿用力扣方法接口，节点类型由题目提供</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">mergeTwoLists</span>(<span class="hljs-params">self, list1: ListNode | <span class="hljs-literal">None</span>, list2: ListNode | <span class="hljs-literal">None</span></span>) -> ListNode | <span class="hljs-literal">None</span>:
+        <span class="hljs-comment"># 尚无已处理节点，当前位置暂时没有前驱</span>
+        pre=<span class="hljs-literal">None</span>
+        <span class="hljs-comment"># 用工作指针访问第一条链表，list1仍保存原始入口</span>
+        list1_pos = list1
+        <span class="hljs-comment"># 用工作指针访问第二条链表，list2仍保存原始入口</span>
+        list2_pos = list2
+        <span class="hljs-comment"># 两边均有待处理节点时继续比较</span>
+        <span class="hljs-keyword">while</span> list1_pos!=<span class="hljs-literal">None</span> <span class="hljs-keyword">and</span> list2_pos!=<span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 修改当前list2节点的next之前，保存其原后继</span>
+            list2_then = list2_pos.<span class="hljs-built_in">next</span>
+            <span class="hljs-comment"># 第二条当前节点更小，尝试将它插到第一条当前节点前</span>
+            <span class="hljs-keyword">if</span> list2_pos.val &#x3C; list1_pos.val:
+                <span class="hljs-comment"># 先将待插入节点接向第一条当前节点</span>
+                list2_pos.<span class="hljs-built_in">next</span> = list1_pos
+                <span class="hljs-comment"># 修改前驱连接；V1未处理pre为空的头插情形，会在此报错</span>
+                pre.<span class="hljs-built_in">next</span> = list2_pos
+                <span class="hljs-comment"># 插入后把新节点记为当前list1节点的前驱</span>
+                pre=list2_pos
+                <span class="hljs-comment"># 恢复第二条链表尚未处理部分的入口</span>
+                list2_pos = list2_then
+            <span class="hljs-comment"># 第二条当前节点不更小，考虑保留当前第一条节点或在其后插入</span>
+            <span class="hljs-keyword">else</span>:
+                <span class="hljs-comment"># 第一条当前节点已经位于末尾，准备连接剩余部分</span>
+                <span class="hljs-keyword">if</span> list1_pos.<span class="hljs-built_in">next</span> <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+                    <span class="hljs-comment"># 保留V1错误：接回第二条原始头，可能把已插入节点接成环</span>
+                    list1_pos.<span class="hljs-built_in">next</span> = list2
+                    <span class="hljs-comment"># 连接完成后退出循环，不再逐个处理剩余段</span>
+                    <span class="hljs-keyword">break</span>
+                <span class="hljs-comment"># 第二条当前节点可以放在第一条当前节点与其后继之间</span>
+                <span class="hljs-keyword">if</span> list2_pos.val &#x3C;= list1_pos.<span class="hljs-built_in">next</span>.val:
+                    <span class="hljs-comment"># 保存第一条当前节点原后继，避免插入时丢失</span>
+                    list1_then = list1_pos.<span class="hljs-built_in">next</span>
+                    <span class="hljs-comment"># 将前面的节点接向待插入节点</span>
+                    list1_pos.<span class="hljs-built_in">next</span> = list2_pos
+                    <span class="hljs-comment"># 将插入节点接回第一条原后继</span>
+                    list2_pos.<span class="hljs-built_in">next</span> = list1_then
+
+                    <span class="hljs-comment"># 保存插入位置前面的节点</span>
+                    pre = list1_pos
+                    <span class="hljs-comment"># 把刚插入节点设为新的当前位置，继续向后比较</span>
+                    list1_pos = list2_pos
+                    <span class="hljs-comment"># 恢复第二条链表尚未处理部分的入口</span>
+                    list2_pos = list2_then
+
+                <span class="hljs-comment"># 第二条当前值比第一条后继还大，继续向后寻找插入位置</span>
+                <span class="hljs-keyword">else</span>:
+                    <span class="hljs-comment"># 保存插入位置前面的节点</span>
+                    pre = list1_pos
+                    <span class="hljs-comment"># 沿第一条当前连接继续向后寻找位置</span>
+                    list1_pos = list1_pos.<span class="hljs-built_in">next</span>
+
+        <span class="hljs-comment"># 返回第一条链表的入口；V1未处理第一条为空而第二条非空的情形</span>
+        <span class="hljs-keyword">return</span> list1
+</code></pre></div>
+</details>
+<h3 id="section-第二次修改pre指向当前节点后形成了环">1.3 第二次修改：pre指向当前节点后形成了环</h3>
+<p>之后我把pre初始化为list1，希望让它先指向一个真实节点，同时增加了第一条为空时直接返回另一条的处理。空输入这一处补上了，但<code>pre=list1</code>没有补出前驱：<strong>它只是让pre和list1都指向A1，A1不会因为变量名叫pre就变成自己的前驱。</strong></p>
+<p>仍用A1（值2）和B1（值1）来看：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>顺序</th><th>执行语句</th><th>连接变化</th></tr></thead><tbody><tr><td>1</td><td>pre=list1</td><td>pre、list1和保存入口的head都指向A1</td></tr><tr><td>2</td><td>list2.next=list1</td><td>B1.next由None变为A1</td></tr><tr><td>3</td><td>pre.next=list2</td><td>实际修改A1.next，使它指向B1</td></tr><tr><td>4</td><td>list2=list2_then</td><td>list2移到None，函数循环可以结束</td></tr><tr><td>5</td><td>return head</td><td>返回A1，沿next会反复经过A1→B1→A1</td></tr></tbody></table>
+<figure class="explain-figure"><figcaption>错误版V2：A1与B1互相连接，形成了环</figcaption><div class="ll-figure-scroll" tabindex="0"><img src="/images/algorithms/dummy-node/cycle.svg" alt="错误版V2：A1与B1互相连接，形成了环" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div></figure>
+<p>这一版当时遇到的是“超出内存限制”。把节点关系展开后，可以明确看到返回链表里有环：后续如果一直沿next遍历，就不会遇到None。<strong>函数本身能够返回，与返回的链表能否正常遍历，是两件不同的事。</strong>这里复现的是成环结构，不据此猜测平台具体在哪个内部步骤耗尽了内存。</p>
+<details class="extra">
+<summary>展开第二版错误代码：非空引用没有解决前驱关系</summary>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-comment"># 错误版V2：别名使连接成环</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:
+    <span class="hljs-comment"># 沿用力扣方法接口，节点类型由题目提供</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">mergeTwoLists</span>(<span class="hljs-params">self, list1: ListNode | <span class="hljs-literal">None</span>, list2: ListNode | <span class="hljs-literal">None</span></span>) -> ListNode | <span class="hljs-literal">None</span>:
+        <span class="hljs-comment"># 第一条链表为空时，直接处理另一条链表即可</span>
+        <span class="hljs-keyword">if</span> list1 <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 返回第二条链表的入口</span>
+            <span class="hljs-keyword">return</span> list2
+        <span class="hljs-comment"># 保存当前结果的头节点，避免移动工作指针后丢失入口</span>
+        head=list1
+        <span class="hljs-comment"># 记录当前list1节点；V2初始化时它不是头节点的前驱，不能据此直接头插</span>
+        pre=list1
+        <span class="hljs-comment"># 两条工作链表均非空时继续处理</span>
+        <span class="hljs-keyword">while</span> list1!=<span class="hljs-literal">None</span> <span class="hljs-keyword">and</span> list2!=<span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 在重连之前保存第二条链表的后续入口</span>
+            list2_then = list2.<span class="hljs-built_in">next</span>
+            <span class="hljs-comment"># 第二条当前值更小，应插到第一条当前节点之前</span>
+            <span class="hljs-keyword">if</span> list2.val &#x3C; list1.val:
+                <span class="hljs-comment"># 让待插入节点指向当前第一条节点</span>
+                list2.<span class="hljs-built_in">next</span> = list1
+                <span class="hljs-comment"># 将前驱接到第二条当前节点；V2初始化头插时pre其实等于list1，会成环</span>
+                pre.<span class="hljs-built_in">next</span> = list2
+                <span class="hljs-comment"># 新插入节点成为当前list1节点的前驱</span>
+                pre=list2
+                <span class="hljs-comment"># 第二条工作指针前进到保存的后继</span>
+                list2 = list2_then
+            <span class="hljs-comment"># 第二条当前节点不更小，考虑保留当前第一条节点或在其后插入</span>
+            <span class="hljs-keyword">else</span>:
+                <span class="hljs-comment"># 第一条当前节点已经到末尾，可以整段连接第二条剩余部分</span>
+                <span class="hljs-keyword">if</span> list1.<span class="hljs-built_in">next</span> <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+                    <span class="hljs-comment"># 将第一条当前节点接向第二条当前节点；需要保留的原后继已另行保存</span>
+                    list1.<span class="hljs-built_in">next</span> = list2
+                    <span class="hljs-comment"># 连接完成后退出循环，不再逐个处理剩余段</span>
+                    <span class="hljs-keyword">break</span>
+                <span class="hljs-comment"># 判断第二条当前值是否适合插入当前节点与其后继之间</span>
+                <span class="hljs-keyword">if</span> list2.val &#x3C;= list1.<span class="hljs-built_in">next</span>.val:
+                    <span class="hljs-comment"># 保存第一条原后继，避免修改连接后失去入口</span>
+                    list1_then = list1.<span class="hljs-built_in">next</span>
+                    <span class="hljs-comment"># 将第一条当前节点接向第二条当前节点；需要保留的原后继已另行保存</span>
+                    list1.<span class="hljs-built_in">next</span> = list2
+                    <span class="hljs-comment"># 把新插入节点接回第一条原后继</span>
+                    list2.<span class="hljs-built_in">next</span> = list1_then
+
+                    <span class="hljs-comment"># 记录当前list1节点；V2初始化时它不是头节点的前驱，不能据此直接头插</span>
+                    pre = list1
+                    <span class="hljs-comment"># 以刚插入的节点作为当前比较位置</span>
+                    list1 = list2
+                    <span class="hljs-comment"># 第二条工作指针前进到保存的后继</span>
+                    list2 = list2_then
+
+                <span class="hljs-comment"># 第二条当前值比第一条后继还大，继续向后寻找插入位置</span>
+                <span class="hljs-keyword">else</span>:
+                    <span class="hljs-comment"># 记录当前list1节点；V2初始化时它不是头节点的前驱，不能据此直接头插</span>
+                    pre = list1
+                    <span class="hljs-comment"># 向后移动第一条工作指针；这行不修改任何节点的next</span>
+                    list1 = list1.<span class="hljs-built_in">next</span>
+
+        <span class="hljs-comment"># 返回此前维护的结果头节点</span>
+        <span class="hljs-keyword">return</span> head
+</code></pre></div>
+</details>
+<h3 id="section-区分头部与中间插入先把原思路修正完整">1.4 区分头部与中间插入，先把原思路修正完整</h3>
+<p>这时再回头看，需要补的条件就清楚了：<strong>如果pre为空，新节点插在原头前面，应该更新head；如果pre非空，才通过pre.next把它接进去。</strong>这两种情况下，新节点自己的next都要接向当前节点，但接入结果链表的方式不同。</p>
+<p>我接着按这个区别修改，得到下面的版本。当时的反馈是“好像通过了”；复盘时也用有限输入检查了它的结果。</p>
+<details class="extra">
+<summary>展开原思路修正版：保留头插和中间插入的完整分支</summary>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-comment"># 原思路修正版：区分头部与普通插入</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:
+    <span class="hljs-comment"># 沿用力扣方法接口，节点类型由题目提供</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">mergeTwoLists</span>(<span class="hljs-params">self, list1: ListNode | <span class="hljs-literal">None</span>, list2: ListNode | <span class="hljs-literal">None</span></span>) -> ListNode | <span class="hljs-literal">None</span>:
+        <span class="hljs-comment"># 第一条链表为空时，直接处理另一条链表即可</span>
+        <span class="hljs-keyword">if</span> list1 <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 返回第二条链表的入口</span>
+            <span class="hljs-keyword">return</span> list2
+        <span class="hljs-comment"># 第二条链表为空时，第一条链表已是结果</span>
+        <span class="hljs-keyword">if</span> list2 <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 返回第一条链表的入口</span>
+            <span class="hljs-keyword">return</span> list1
+        <span class="hljs-comment"># 先将结果入口留空，第一次选定头节点时再设置</span>
+        head=<span class="hljs-literal">None</span>
+        <span class="hljs-comment"># 尚无已处理节点，当前位置暂时没有前驱</span>
+        pre=<span class="hljs-literal">None</span>
+        <span class="hljs-comment"># 两条工作链表均非空时继续处理</span>
+        <span class="hljs-keyword">while</span> list1!=<span class="hljs-literal">None</span> <span class="hljs-keyword">and</span> list2!=<span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 在重连之前保存第二条链表的后续入口</span>
+            list2_then = list2.<span class="hljs-built_in">next</span>
+            <span class="hljs-comment"># 第二条当前值更小，应插到第一条当前节点之前</span>
+            <span class="hljs-keyword">if</span> list2.val &#x3C; list1.val:
+                <span class="hljs-comment"># 让待插入节点指向当前第一条节点</span>
+                list2.<span class="hljs-built_in">next</span> = list1
+                <span class="hljs-comment"># 没有现成前驱时，必须单独维护结果头节点</span>
+                <span class="hljs-keyword">if</span> pre <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+                    <span class="hljs-comment"># 插入节点成为结果的头节点</span>
+                    head=list2
+                    <span class="hljs-comment"># 新插入节点成为当前list1节点的前驱</span>
+                    pre=list2
+                    <span class="hljs-comment"># 连接到当前list1；在V3头插分支中，此连接刚刚已经设置过</span>
+                    pre.<span class="hljs-built_in">next</span> = list1
+                    <span class="hljs-comment"># 第二条工作指针前进到保存的后继</span>
+                    list2=list2_then
+                <span class="hljs-comment"># 已有真实前驱，通过pre.next连接新插入节点</span>
+                <span class="hljs-keyword">else</span>:
+                    <span class="hljs-comment"># 在pre确实存在的分支中，把前驱连接到新插入节点</span>
+                    pre.<span class="hljs-built_in">next</span> = list2
+                    <span class="hljs-comment"># 新插入节点成为当前list1节点的前驱</span>
+                    pre=list2
+                    <span class="hljs-comment"># 第二条工作指针前进到保存的后继</span>
+                    list2 = list2_then
+            <span class="hljs-comment"># 第二条当前节点不更小，考虑保留当前第一条节点或在其后插入</span>
+            <span class="hljs-keyword">else</span>:
+                <span class="hljs-comment"># 没有现成前驱时，必须单独维护结果头节点</span>
+                <span class="hljs-keyword">if</span> pre <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+                    <span class="hljs-comment"># 保存当前结果的头节点，避免移动工作指针后丢失入口</span>
+                    head = list1
+                    <span class="hljs-comment"># 记录第一条当前节点，后续分支会完成插入、推进或尾部连接</span>
+                    pre = list1
+                <span class="hljs-comment"># 第一条当前节点已经到末尾，可以整段连接第二条剩余部分</span>
+                <span class="hljs-keyword">if</span> list1.<span class="hljs-built_in">next</span> <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+                    <span class="hljs-comment"># 将第一条当前节点接向第二条当前节点；需要保留的原后继已另行保存</span>
+                    list1.<span class="hljs-built_in">next</span> = list2
+                    <span class="hljs-comment"># 连接完成后退出循环，不再逐个处理剩余段</span>
+                    <span class="hljs-keyword">break</span>
+                <span class="hljs-comment"># 判断第二条当前值是否适合插入当前节点与其后继之间</span>
+                <span class="hljs-keyword">if</span> list2.val &#x3C;= list1.<span class="hljs-built_in">next</span>.val:
+                    <span class="hljs-comment"># 保存第一条原后继，避免修改连接后失去入口</span>
+                    list1_then = list1.<span class="hljs-built_in">next</span>
+                    <span class="hljs-comment"># 将第一条当前节点接向第二条当前节点；需要保留的原后继已另行保存</span>
+                    list1.<span class="hljs-built_in">next</span> = list2
+                    <span class="hljs-comment"># 把新插入节点接回第一条原后继</span>
+                    list2.<span class="hljs-built_in">next</span> = list1_then
+
+                    <span class="hljs-comment"># 记录第一条当前节点，后续分支会完成插入、推进或尾部连接</span>
+                    pre = list1
+                    <span class="hljs-comment"># 以刚插入的节点作为当前比较位置</span>
+                    list1 = list2
+                    <span class="hljs-comment"># 第二条工作指针前进到保存的后继</span>
+                    list2 = list2_then
+
+                <span class="hljs-comment"># 第二条当前值比第一条后继还大，继续向后寻找插入位置</span>
+                <span class="hljs-keyword">else</span>:
+                    <span class="hljs-comment"># 记录第一条当前节点，后续分支会完成插入、推进或尾部连接</span>
+                    pre = list1
+                    <span class="hljs-comment"># 向后移动第一条工作指针；这行不修改任何节点的next</span>
+                    list1 = list1.<span class="hljs-built_in">next</span>
+
+        <span class="hljs-comment"># 返回此前维护的结果头节点</span>
+        <span class="hljs-keyword">return</span> head
+</code></pre></div>
+</details>
+<p>这份代码比较长，是因为同时维护了头部变化、前插、当前与后继之间的插入、尾部接入等分支。不过，<strong>先把每个分支所依赖的节点关系处理正确，再考虑哪些分支可以合并</strong>，会比直接套一份短代码更容易看懂。</p>
+<p>例如第一条为<code>1→4</code>，第二条为<code>2→3</code>：先经过1，当前节点到4时，把2插到4前面；4仍是尚待比较的节点，再把3插到4前面。这样就不必同时保留“插在当前节点前”和“插在当前与next之间”两套实现。后来参考的简化插入法就是沿着这个方向整理的。</p>
+<details class="extra">
+<summary>展开补充写法：只保留前插与继续向后移动</summary>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-comment"># 补充：简化插入法</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:
+    <span class="hljs-comment"># 沿用力扣方法接口，节点类型由题目提供</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">mergeTwoLists</span>(<span class="hljs-params">self, list1: ListNode | <span class="hljs-literal">None</span>, list2: ListNode | <span class="hljs-literal">None</span></span>) -> ListNode | <span class="hljs-literal">None</span>:
+        <span class="hljs-comment"># 第一条链表为空，无需插入</span>
+        <span class="hljs-keyword">if</span> list1 <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 直接返回第二条链表</span>
+            <span class="hljs-keyword">return</span> list2
+        <span class="hljs-comment"># 第二条链表为空，无需插入</span>
+        <span class="hljs-keyword">if</span> list2 <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 直接返回第一条链表</span>
+            <span class="hljs-keyword">return</span> list1
+
+        <span class="hljs-comment"># 暂用原list1的头节点；发生头部插入时再更新</span>
+        head = list1
+        <span class="hljs-comment"># pre表示当前list1节点在合并链表中的前驱</span>
+        pre = <span class="hljs-literal">None</span>
+
+        <span class="hljs-comment"># 两边还有待处理节点时继续</span>
+        <span class="hljs-keyword">while</span> list1 <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span> <span class="hljs-keyword">and</span> list2 <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 当前list2节点应插到当前list1节点之前</span>
+            <span class="hljs-keyword">if</span> list2.val &#x3C; list1.val:
+                <span class="hljs-comment"># 仅在准备插入时保存list2的后续节点</span>
+                list2_then = list2.<span class="hljs-built_in">next</span>
+                <span class="hljs-comment"># 让待插入节点指向当前list1节点</span>
+                list2.<span class="hljs-built_in">next</span> = list1
+                <span class="hljs-comment"># 当前list1节点仍是头节点，没有前驱</span>
+                <span class="hljs-keyword">if</span> pre <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+                    <span class="hljs-comment"># 插入的节点成为合并链表的新头</span>
+                    head = list2
+                <span class="hljs-comment"># 当前list1节点前面已有处理好的节点</span>
+                <span class="hljs-keyword">else</span>:
+                    <span class="hljs-comment"># 让原前驱接上新插入的节点</span>
+                    pre.<span class="hljs-built_in">next</span> = list2
+                <span class="hljs-comment"># 新插入的节点成为当前list1节点的前驱</span>
+                pre = list2
+                <span class="hljs-comment"># 继续处理list2剩余部分，list1暂时不动</span>
+                list2 = list2_then
+            <span class="hljs-comment"># 当前list1节点更小或相等，可以保留在前面</span>
+            <span class="hljs-keyword">else</span>:
+                <span class="hljs-comment"># 当前节点成为下一位置的前驱</span>
+                pre = list1
+                <span class="hljs-comment"># 走到下一节点，再判断是否需要在它前面插入</span>
+                list1 = list1.<span class="hljs-built_in">next</span>
+
+        <span class="hljs-comment"># list1已走完，而list2还有剩余节点</span>
+        <span class="hljs-keyword">if</span> list2 <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 两条输入原先非空，循环已设置pre，可直接接上剩余段</span>
+            pre.<span class="hljs-built_in">next</span> = list2
+        <span class="hljs-comment"># 返回始终维护的合并链表头节点</span>
+        <span class="hljs-keyword">return</span> head
+</code></pre></div>
+</details>
+<p>修改连接前保存<code>list2_then</code>也有明确用途：<strong>list2.next一旦被改成第一条链表的节点，第二条原来的后续入口就不能再从这个next读出来了</strong>。先保存它，处理完当前节点后才能继续第二条未处理的部分。</p>
+<details class="extra"><summary>复盘补充：首版还混用了原始头和未处理入口</summary>
+<p>首版尾部接入写的是<code>list1_pos.next=list2</code>，这里的list2还是第二条的原始头。对<code>[1,3]</code>和<code>[2,4]</code>，2已经插到1与3之间；最后再把3接回旧头2，就会形成2→3→2的环。需要接入的是<strong>当前尚未处理的入口</strong>，而不是原来保存的整条链表头。</p>
+<p>另外，首版遇到第一条为空、第二条非空时会直接返回空。这两处是这次回看旧代码时补充检查的边界，不能与当时逐次修改的过程混在一起。交互里的短例可以分别复现它们。</p>
+</details>
+<h3 id="section-哑节点的推导给第一次连接也提供一个前驱">1.5 哑节点的推导：给第一次连接也提供一个前驱</h3>
+<p>原思路修正后，头部仍然需要单独判断。于是可以继续想：普通插入已经有pre.next这条操作，头部缺的恰好是一个前驱，<strong>能不能额外放一个不计入结果的节点，让真正的头节点也有前驱？</strong></p>
+<p>这个额外节点就是<strong>哑节点（dummy node），也是哨兵节点的一种用法：它是实际创建的辅助节点，用来提供稳定入口或头前位置，节点值不参与题目的数据处理。</strong>比如建立<code>dummy→原头</code>，以后更换或删除原头，就可以修改dummy.next；最终返回dummy.next，便不会把辅助节点算进结果。</p>
+<figure class="explain-figure"><figcaption>dummy给原头节点提供一个实际前驱</figcaption><div class="ll-figure-scroll" tabindex="0"><img src="/images/algorithms/dummy-node/dummy.svg" alt="dummy给原头节点提供一个实际前驱" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div></figure>
+<p>构造合并结果时，dummy也可以先指向None，再把选中的节点逐个接到后面。<a href="https://opendsa-server.cs.vt.edu/ODSA/StandaloneModules/20260527013510/html/ListLinked.html" rel="noopener noreferrer">OpenDSA链表教材</a>也用辅助头节点处理边界，核心是补足普通操作需要的结构条件。</p>
+<p>后来看到常见的dummy＋tail写法时，合并的组织方式也随之改变了：<strong>每轮从两条尚未处理的链表中选较小的头节点，接到已经选好顺序的前缀后面</strong>。dummy固定保存结果入口，tail负责连接，list1和list2各自保留未处理部分。</p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-comment"># 哑节点＋tail合并</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:
+    <span class="hljs-comment"># 沿用力扣方法接口，节点类型由题目提供</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">mergeTwoLists</span>(<span class="hljs-params">self, list1: ListNode | <span class="hljs-literal">None</span>, list2: ListNode | <span class="hljs-literal">None</span></span>) -> ListNode | <span class="hljs-literal">None</span>:
+        <span class="hljs-comment"># 创建固定的起点；它的值不参与比较，也不属于最终结果</span>
+        dummy = ListNode(<span class="hljs-number">0</span>)
+        <span class="hljs-comment"># 开始时还没选中任何节点，尾指针先指向哑节点</span>
+        tail = dummy
+
+        <span class="hljs-comment"># 两条链表都还有未处理节点时进行比较</span>
+        <span class="hljs-keyword">while</span> list1 <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span> <span class="hljs-keyword">and</span> list2 <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># list1的当前节点更小或相等，优先选择它</span>
+            <span class="hljs-keyword">if</span> list1.val &#x3C;= list2.val:
+                <span class="hljs-comment"># 把选中的节点接到已确定顺序的部分后面</span>
+                tail.<span class="hljs-built_in">next</span> = list1
+                <span class="hljs-comment"># list1前进，指向这条输入链表下一个未处理节点</span>
+                list1 = list1.<span class="hljs-built_in">next</span>
+            <span class="hljs-comment"># list2的当前节点更小，本轮选择它</span>
+            <span class="hljs-keyword">else</span>:
+                <span class="hljs-comment"># 把选中的节点接到已确定顺序的部分后面</span>
+                tail.<span class="hljs-built_in">next</span> = list2
+                <span class="hljs-comment"># list2前进，指向这条输入链表下一个未处理节点</span>
+                list2 = list2.<span class="hljs-built_in">next</span>
+            <span class="hljs-comment"># 尾指针移动到本轮选中的节点</span>
+            tail = tail.<span class="hljs-built_in">next</span>
+
+        <span class="hljs-comment"># list2已经耗尽，而list1还有剩余节点</span>
+        <span class="hljs-keyword">if</span> list1 <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 剩余部分本来就有序，直接整段接上</span>
+            tail.<span class="hljs-built_in">next</span> = list1
+        <span class="hljs-comment"># list1已经耗尽；list2可能还有节点，也可能为空</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-comment"># 接上list2剩余部分；若也为空，就接上None</span>
+            tail.<span class="hljs-built_in">next</span> = list2
+
+        <span class="hljs-comment"># 跳过哑节点，返回第一个真正的数据节点</span>
+        <span class="hljs-keyword">return</span> dummy.<span class="hljs-built_in">next</span>
+</code></pre></div>
+<h3 id="section-dummytail的完整选择与连接过程">1.6 dummy＋tail的完整选择与连接过程</h3>
+<p>以<code>[2,4,7]</code>和<code>[1,3,4,8]</code>为例，A1/A2/A3来自第一条，B1/B2/B3/B4来自第二条。下表列出每轮完成后的状态（方括号中的内容是已选前缀）。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>轮次</th><th>本轮选中</th><th>已选前缀</th><th>tail</th><th>下一次比较的入口</th></tr></thead><tbody><tr><td>初始</td><td>无</td><td>空</td><td>dummy</td><td>A1（2）、B1（1）</td></tr><tr><td>1</td><td>B1（1）</td><td>[B1]</td><td>B1</td><td>A1（2）、B2（3）</td></tr><tr><td>2</td><td>A1（2）</td><td>[B1,A1]</td><td>A1</td><td>A2（4）、B2（3）</td></tr><tr><td>3</td><td>B2（3）</td><td>[B1,A1,B2]</td><td>B2</td><td>A2（4）、B3（4）</td></tr><tr><td>4</td><td>A2（4）</td><td>[B1,A1,B2,A2]</td><td>A2</td><td>A3（7）、B3（4）</td></tr><tr><td>5</td><td>B3（4）</td><td>[B1,A1,B2,A2,B3]</td><td>B3</td><td>A3（7）、B4（8）</td></tr><tr><td>6</td><td>A3（7）</td><td>[B1,A1,B2,A2,B3,A3]</td><td>A3</td><td>None、B4（8）</td></tr><tr><td>接入剩余段</td><td>B4及其后继</td><td>完整结果</td><td>仍为A3</td><td>不再继续比较</td></tr></tbody></table>
+<p>第三轮尤其适合分开观察三行赋值：先用<code>tail.next=list2</code>把A1.next从A2改为B2；再用<code>list2=list2.next</code>把第二条入口移到B3；最后用<code>tail=tail.next</code>让tail跟到B2。<strong>第一行改了节点连接，后两行只移动变量。</strong>A2虽然不再直接接在A1后面，但仍有list1指向它，因此没有丢失。</p>
+<p><strong>tail表示已选前缀的末端，不一定是沿当前next一直走能到达的物理尾部。</strong>刚接入一个节点时，它可能还保留着原链表的后继；这些连接会在后续步骤中调整。最后整段接入剩余链表后，不再需要tail继续移动到最终尾部。</p>
+<p>两条输入有序，因此每次选中的较小入口，不会大于其他未处理节点。这使已选前缀能够持续保持有序。两个值4的节点身份不同；这份模板在相等时先选第一条，原插入版可能采用另一种跨链表顺序，<strong>只要有序并保留全部输入节点，都符合题意</strong>。</p>
+<h4 id="section-交互演示有序链表合并与头部错误">1.6.1 交互演示：有序链表合并与头部错误</h4>
+12:["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading algorithm-series-reading","aria-label":"算法系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/#category=algorithms","children":"算法与数据结构"}],["$","span",null,{"children":[9," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["算法学习系列",["$","span",null,{"children":"哑节点"}]]}],[["$","section","hash-table",{"className":"algorithm-topic-group","aria-label":"哈希表","children":[["$","h2",null,{"children":"哈希表"}],["$","ol",null,{"children":[["$","li","two-sum",{"children":["$","$Lf",null,{"href":"/blog/two-sum/","children":["哈希表（一）：两数之和的补数查询",["$","small",null,{"children":"题解"}]]}]}],["$","li","hash-table-introduction",{"children":["$","$Lf",null,{"href":"/blog/hash-table-introduction/","children":["哈希表（二）：键值映射与Python字典查找",["$","small",null,{"children":"知识点"}]]}]}]]}]]}],["$","section","sliding-window",{"className":"algorithm-topic-group","aria-label":"滑动窗口","children":[["$","h2",null,{"children":"滑动窗口"}],["$","ol",null,{"children":[["$","li","longest-substring-without-repeating-characters",{"children":["$","$Lf",null,{"href":"/blog/longest-substring-without-repeating-characters/","children":["滑动窗口（一）：无重复字符的最长子串",["$","small",null,{"children":"题解"}]]}]}],["$","li","sliding-window-209-438",{"children":["$","$Lf",null,{"href":"/blog/sliding-window-209-438/","children":["滑动窗口（二）：长度最小的子数组与找到字符串中所有字母异位词",["$","small",null,{"children":"题解"}]]}]}]]}]]}],["$","section","opposing-pointers",{"className":"algorithm-topic-group","aria-label":"相向双指针","children":[["$","h2",null,{"children":"相向双指针"}],["$","ol",null,{"children":[["$","li","two-pointers-42-167",{"children":["$","$Lf",null,{"href":"/blog/two-pointers-42-167/","children":["相向双指针（一）：接雨水与两数之和II",["$","small",null,{"children":"题解"}]]}]}]]}]]}],["$","section","difference-array",{"className":"algorithm-topic-group","aria-label":"差分数组","children":[["$","h2",null,{"children":"差分数组"}],["$","ol",null,{"children":[["$","li","difference-array",{"children":["$","$Lf",null,{"href":"/blog/difference-array/","children":["差分数组（一）：航班预订统计与合并区间",["$","small",null,{"children":"知识点"}]]}]}]]}]]}],["$","section","prefix-sum",{"className":"algorithm-topic-group","aria-label":"前缀和","children":[["$","h2",null,{"children":"前缀和"}],["$","ol",null,{"children":[["$","li","prefix-sum",{"children":["$","$Lf",null,{"href":"/blog/prefix-sum/","children":["前缀和（一）：区域和检索与和为K的子数组",["$","small",null,{"children":"知识点"}]]}]}]]}]]}],["$","section","in-place-hash",{"className":"algorithm-topic-group","aria-label":"原地哈希","children":[["$","h2",null,{"children":"原地哈希"}],["$","ol",null,{"children":[["$","li","in-place-hash",{"children":["$","$Lf",null,{"href":"/blog/in-place-hash/","children":["原地哈希（一）：缺失的第一个正数与数组缺失、重复问题",["$","small",null,{"children":"知识点"}]]}]}]]}]]}],["$","section","dummy-node",{"className":"algorithm-topic-group","aria-label":"哑节点","children":[["$","h2",null,{"children":"哑节点"}],["$","ol",null,{"children":[["$","li","dummy-node-linked-lists",{"children":["$","$Lf",null,{"href":"/blog/dummy-node-linked-lists/","aria-current":"page","children":["哑节点（一）：合并两个有序链表、移除链表元素与删除倒数节点",["$","small",null,{"children":"题解"}]]}]}]]}]]}],["$","section","linked-list",{"className":"algorithm-topic-group","aria-label":"链表","children":[["$","h2",null,{"children":"链表"}],["$","ol",null,{"children":[["$","li","linked-list-basics",{"children":["$","$Lf",null,{"href":"/blog/linked-list-basics/","children":["链表（一）：节点、引用与next连接",["$","small",null,{"children":"知识点"}]]}]}]]}]]}]]]}]]}],[["$","$L1e","0",{"html":"$1f"}],"$L20","$L21","$L22","$L23","$L24","$L25"],false,"$L26","$L27","$L28"]}],"$L29"]}]
+13:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+14:["$","$L2a",null,{"children":["$","$1a",null,{"name":"Next.MetadataOutlet","children":"$@2b"}]}]
+1d:true
+2c:"AlgorithmDemoLoader"
+2d:I[7223,["5587","$b","8612","$c","1133","$d","5953","$e"],"$2c"]
+34:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+7:300
+2e:T4557,<section class="ll-demo" data-linked-demo="21" aria-label="链表21逐行演示"><p class="ll-intro">每次前进一步，只执行一条语句或一次条件判断。节点ID保持不变，变量移动与next重连分别显示；历史错误版可以在对应案例中选择。</p><div class="ll-controls" hidden><div class="ll-selectors"><label>选择输入案例<select data-action="case"></select></label><label>选择实现方法<select data-action="method"></select></label></div><p class="ll-case-note"></p><div class="ll-buttons"><button data-action="previous" type="button">上一步</button><button data-action="next" type="button">下一步</button><button data-action="reset" type="button">重置</button><output aria-live="polite"></output></div><label class="ll-jump">定位到某一步<select data-action="step"></select></label></div><p class="ll-fallback">下方为主例终态。开启脚本后可从原始输入逐步操作；正文中的状态表也保留完整推导。</p><div class="ll-stage"><div class="ll-state" data-index="61" data-status="returned"><div class="ll-operation"><strong>返回此前维护的结果头节点</strong><code>第81行　return head</code></div><p class="ll-write">本步没有改变已有节点的next连接。</p><div class="ll-graph-scroll" tabindex="0" aria-label="链表连接图，可左右滚动"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="节点ID、变量引用和实际next连接" viewBox="0 0 774 540" width="774" height="540"><defs><marker id="ll-main-21-LC21V3-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#597366"/></marker><marker id="ll-main-21-LC21V3-active" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#b75928"/></marker></defs><rect width="100%" height="100%" fill="#fbfdfb"/><text x="24" y="24" font-size="13" fill="#42634e">A：原list1节点　B：原list2节点　D：辅助节点</text><path data-edge="A1:B2" d="M 254 218 V 255 H 342 V 335" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-21-LC21V3-arrow)"/><path data-edge="A2:A3" d="M 428 137 H 455" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-21-LC21V3-arrow)"/><path data-edge="A3:B4" d="M 546 218 V 265 H 634 V 335" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-21-LC21V3-arrow)"/><path data-edge="B1:A1" d="M 254 340 V 275 H 196 V 223" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-21-LC21V3-arrow)"/><path data-edge="B2:B3" d="M 428 377 H 455" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-21-LC21V3-arrow)"/><path data-edge="B3:A2" d="M 546 340 V 285 H 342 V 223" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-21-LC21V3-arrow)"/><g data-edge="B4:None"><path d="M 720 418 h 16" stroke="#597366" fill="none" marker-end="url(#ll-main-21-LC21V3-arrow)"/><text x="723" y="440" font-size="10" fill="#54695e">None</text></g><g data-node="A1"><rect x="168" y="100" width="114" height="118" rx="7" fill="#e1f1e7" stroke="#80998a" stroke-width="1.3"/><text x="180" y="122" fill="#365b47" font-size="13">A1</text><text x="180" y="149" font-size="21" font-weight="700" fill="#203e30">2</text><line x1="178" x2="272" y1="161" y2="161" stroke="#acbfb0"/></g><g data-node="A2"><rect x="314" y="100" width="114" height="118" rx="7" fill="#e1f1e7" stroke="#80998a" stroke-width="1.3"/><text x="326" y="122" fill="#365b47" font-size="13">A2</text><text x="326" y="149" font-size="21" font-weight="700" fill="#203e30">4</text><line x1="324" x2="418" y1="161" y2="161" stroke="#acbfb0"/><text x="323" y="178" font-size="11" fill="#244936">pre · list1_then</text></g><g data-node="A3"><rect x="460" y="100" width="114" height="118" rx="7" fill="#e1f1e7" stroke="#80998a" stroke-width="1.3"/><text x="472" y="122" fill="#365b47" font-size="13">A3</text><text x="472" y="149" font-size="21" font-weight="700" fill="#203e30">7</text><line x1="470" x2="564" y1="161" y2="161" stroke="#acbfb0"/><text x="469" y="178" font-size="11" fill="#244936">list1</text></g><g data-node="B1"><rect x="168" y="340" width="114" height="118" rx="7" fill="#e4eff8" stroke="#80998a" stroke-width="1.3"/><text x="180" y="362" fill="#365b47" font-size="13">B1</text><text x="180" y="389" font-size="21" font-weight="700" fill="#203e30">1</text><line x1="178" x2="272" y1="401" y2="401" stroke="#acbfb0"/><text x="177" y="418" font-size="11" fill="#244936">head</text></g><g data-node="B2"><rect x="314" y="340" width="114" height="118" rx="7" fill="#e4eff8" stroke="#80998a" stroke-width="1.3"/><text x="326" y="362" fill="#365b47" font-size="13">B2</text><text x="326" y="389" font-size="21" font-weight="700" fill="#203e30">3</text><line x1="324" x2="418" y1="401" y2="401" stroke="#acbfb0"/></g><g data-node="B3"><rect x="460" y="340" width="114" height="118" rx="7" fill="#e4eff8" stroke="#80998a" stroke-width="1.3"/><text x="472" y="362" fill="#365b47" font-size="13">B3</text><text x="472" y="389" font-size="21" font-weight="700" fill="#203e30">4</text><line x1="470" x2="564" y1="401" y2="401" stroke="#acbfb0"/></g><g data-node="B4"><rect x="606" y="340" width="114" height="118" rx="7" fill="#e4eff8" stroke="#80998a" stroke-width="1.3"/><text x="618" y="362" fill="#365b47" font-size="13">B4</text><text x="618" y="389" font-size="21" font-weight="700" fill="#203e30">8</text><line x1="616" x2="710" y1="401" y2="401" stroke="#acbfb0"/><text x="615" y="418" font-size="11" fill="#244936">list2</text></g><text x="24" y="506" font-size="12" fill="#506a5b">None处的变量：list2_then</text><text x="24" y="527" font-size="11" fill="#506a5b">箭头表示next；框内下方列出指向该节点的变量。位置固定，连接随代码改变。</text></svg></div><div class="ll-result"><strong>实际返回</strong>：<code>B1</code><br>沿next读取：B1(1) → A1(2) → B2(3) → B3(4) → A2(4) → A3(7) → B4(8) → None<br>值序列：<code>[1,2,3,4,4,7,8]</code><p>题目期望：<code>[1,2,3,4,4,7,8]</code></p></div><details class="ll-vars" open><summary>变量与节点的对应关系</summary><div class="ll-table-scroll"><table><thead><tr><th>变量</th><th>当前内容</th><th>含义</th></tr></thead><tbody><tr><td><code>list1</code></td><td>A3</td><td>节点引用</td></tr><tr><td><code>list2</code></td><td>B4</td><td>节点引用</td></tr><tr><td><code>head</code></td><td>B1</td><td>节点引用</td></tr><tr><td><code>pre</code></td><td>A2</td><td>节点引用</td></tr><tr><td><code>list2_then</code></td><td>None</td><td>节点引用</td></tr><tr><td><code>list1_then</code></td><td>A2</td><td>节点引用</td></tr></tbody></table></div></details><details class="ll-source"><summary>展开对应代码与逐行注释 · 当前第81行</summary><pre class="ll-code"><span class="ll-code-line"><span class="ll-line-no">1</span><code># 原思路修正版：区分头部与普通插入</code></span><span class="ll-code-line"><span class="ll-line-no">2</span><code>class Solution:</code></span><span class="ll-code-line"><span class="ll-line-no">3</span><code>    # 沿用力扣方法接口，节点类型由题目提供</code></span><span class="ll-code-line"><span class="ll-line-no">4</span><code>    def mergeTwoLists(self, list1: ListNode | None, list2: ListNode | None) -&gt; ListNode | None:</code></span><span class="ll-code-line"><span class="ll-line-no">5</span><code>        # 第一条链表为空时，直接处理另一条链表即可</code></span><span class="ll-code-line"><span class="ll-line-no">6</span><code>        if list1 is None:</code></span><span class="ll-code-line"><span class="ll-line-no">7</span><code>            # 返回第二条链表的入口</code></span><span class="ll-code-line"><span class="ll-line-no">8</span><code>            return list2</code></span><span class="ll-code-line"><span class="ll-line-no">9</span><code>        # 第二条链表为空时，第一条链表已是结果</code></span><span class="ll-code-line"><span class="ll-line-no">10</span><code>        if list2 is None:</code></span><span class="ll-code-line"><span class="ll-line-no">11</span><code>            # 返回第一条链表的入口</code></span><span class="ll-code-line"><span class="ll-line-no">12</span><code>            return list1</code></span><span class="ll-code-line"><span class="ll-line-no">13</span><code>        # 先将结果入口留空，第一次选定头节点时再设置</code></span><span class="ll-code-line"><span class="ll-line-no">14</span><code>        head=None</code></span><span class="ll-code-line"><span class="ll-line-no">15</span><code>        # 尚无已处理节点，当前位置暂时没有前驱</code></span><span class="ll-code-line"><span class="ll-line-no">16</span><code>        pre=None</code></span><span class="ll-code-line"><span class="ll-line-no">17</span><code>        # 两条工作链表均非空时继续处理</code></span><span class="ll-code-line"><span class="ll-line-no">18</span><code>        while list1!=None and list2!=None:</code></span><span class="ll-code-line"><span class="ll-line-no">19</span><code>            # 在重连之前保存第二条链表的后续入口</code></span><span class="ll-code-line"><span class="ll-line-no">20</span><code>            list2_then = list2.next</code></span><span class="ll-code-line"><span class="ll-line-no">21</span><code>            # 第二条当前值更小，应插到第一条当前节点之前</code></span><span class="ll-code-line"><span class="ll-line-no">22</span><code>            if list2.val &lt; list1.val:</code></span><span class="ll-code-line"><span class="ll-line-no">23</span><code>                # 让待插入节点指向当前第一条节点</code></span><span class="ll-code-line"><span class="ll-line-no">24</span><code>                list2.next = list1</code></span><span class="ll-code-line"><span class="ll-line-no">25</span><code>                # 没有现成前驱时，必须单独维护结果头节点</code></span><span class="ll-code-line"><span class="ll-line-no">26</span><code>                if pre is None:</code></span><span class="ll-code-line"><span class="ll-line-no">27</span><code>                    # 插入节点成为结果的头节点</code></span><span class="ll-code-line"><span class="ll-line-no">28</span><code>                    head=list2</code></span><span class="ll-code-line"><span class="ll-line-no">29</span><code>                    # 新插入节点成为当前list1节点的前驱</code></span><span class="ll-code-line"><span class="ll-line-no">30</span><code>                    pre=list2</code></span><span class="ll-code-line"><span class="ll-line-no">31</span><code>                    # 连接到当前list1；在V3头插分支中，此连接刚刚已经设置过</code></span><span class="ll-code-line"><span class="ll-line-no">32</span><code>                    pre.next = list1</code></span><span class="ll-code-line"><span class="ll-line-no">33</span><code>                    # 第二条工作指针前进到保存的后继</code></span><span class="ll-code-line"><span class="ll-line-no">34</span><code>                    list2=list2_then</code></span><span class="ll-code-line"><span class="ll-line-no">35</span><code>                # 已有真实前驱，通过pre.next连接新插入节点</code></span><span class="ll-code-line"><span class="ll-line-no">36</span><code>                else:</code></span><span class="ll-code-line"><span class="ll-line-no">37</span><code>                    # 在pre确实存在的分支中，把前驱连接到新插入节点</code></span><span class="ll-code-line"><span class="ll-line-no">38</span><code>                    pre.next = list2</code></span><span class="ll-code-line"><span class="ll-line-no">39</span><code>                    # 新插入节点成为当前list1节点的前驱</code></span><span class="ll-code-line"><span class="ll-line-no">40</span><code>                    pre=list2</code></span><span class="ll-code-line"><span class="ll-line-no">41</span><code>                    # 第二条工作指针前进到保存的后继</code></span><span class="ll-code-line"><span class="ll-line-no">42</span><code>                    list2 = list2_then</code></span><span class="ll-code-line"><span class="ll-line-no">43</span><code>            # 第二条当前节点不更小，考虑保留当前第一条节点或在其后插入</code></span><span class="ll-code-line"><span class="ll-line-no">44</span><code>            else:</code></span><span class="ll-code-line"><span class="ll-line-no">45</span><code>                # 没有现成前驱时，必须单独维护结果头节点</code></span><span class="ll-code-line"><span class="ll-line-no">46</span><code>                if pre is None:</code></span><span class="ll-code-line"><span class="ll-line-no">47</span><code>                    # 保存当前结果的头节点，避免移动工作指针后丢失入口</code></span><span class="ll-code-line"><span class="ll-line-no">48</span><code>                    head = list1</code></span><span class="ll-code-line"><span class="ll-line-no">49</span><code>                    # 记录第一条当前节点，后续分支会完成插入、推进或尾部连接</code></span><span class="ll-code-line"><span class="ll-line-no">50</span><code>                    pre = list1</code></span><span class="ll-code-line"><span class="ll-line-no">51</span><code>                # 第一条当前节点已经到末尾，可以整段连接第二条剩余部分</code></span><span class="ll-code-line"><span class="ll-line-no">52</span><code>                if list1.next is None:</code></span><span class="ll-code-line"><span class="ll-line-no">53</span><code>                    # 将第一条当前节点接向第二条当前节点；需要保留的原后继已另行保存</code></span><span class="ll-code-line"><span class="ll-line-no">54</span><code>                    list1.next = list2</code></span><span class="ll-code-line"><span class="ll-line-no">55</span><code>                    # 连接完成后退出循环，不再逐个处理剩余段</code></span><span class="ll-code-line"><span class="ll-line-no">56</span><code>                    break</code></span><span class="ll-code-line"><span class="ll-line-no">57</span><code>                # 判断第二条当前值是否适合插入当前节点与其后继之间</code></span><span class="ll-code-line"><span class="ll-line-no">58</span><code>                if list2.val &lt;= list1.next.val:</code></span><span class="ll-code-line"><span class="ll-line-no">59</span><code>                    # 保存第一条原后继，避免修改连接后失去入口</code></span><span class="ll-code-line"><span class="ll-line-no">60</span><code>                    list1_then = list1.next</code></span><span class="ll-code-line"><span class="ll-line-no">61</span><code>                    # 将第一条当前节点接向第二条当前节点；需要保留的原后继已另行保存</code></span><span class="ll-code-line"><span class="ll-line-no">62</span><code>                    list1.next = list2</code></span><span class="ll-code-line"><span class="ll-line-no">63</span><code>                    # 把新插入节点接回第一条原后继</code></span><span class="ll-code-line"><span class="ll-line-no">64</span><code>                    list2.next = list1_then</code></span><span class="ll-code-line"><span class="ll-line-no">65</span><code></code></span><span class="ll-code-line"><span class="ll-line-no">66</span><code>                    # 记录第一条当前节点，后续分支会完成插入、推进或尾部连接</code></span><span class="ll-code-line"><span class="ll-line-no">67</span><code>                    pre = list1</code></span><span class="ll-code-line"><span class="ll-line-no">68</span><code>                    # 以刚插入的节点作为当前比较位置</code></span><span class="ll-code-line"><span class="ll-line-no">69</span><code>                    list1 = list2</code></span><span class="ll-code-line"><span class="ll-line-no">70</span><code>                    # 第二条工作指针前进到保存的后继</code></span><span class="ll-code-line"><span class="ll-line-no">71</span><code>                    list2 = list2_then</code></span><span class="ll-code-line"><span class="ll-line-no">72</span><code></code></span><span class="ll-code-line"><span class="ll-line-no">73</span><code>                # 第二条当前值比第一条后继还大，继续向后寻找插入位置</code></span><span class="ll-code-line"><span class="ll-line-no">74</span><code>                else:</code></span><span class="ll-code-line"><span class="ll-line-no">75</span><code>                    # 记录第一条当前节点，后续分支会完成插入、推进或尾部连接</code></span><span class="ll-code-line"><span class="ll-line-no">76</span><code>                    pre = list1</code></span><span class="ll-code-line"><span class="ll-line-no">77</span><code>                    # 向后移动第一条工作指针；这行不修改任何节点的next</code></span><span class="ll-code-line"><span class="ll-line-no">78</span><code>                    list1 = list1.next</code></span><span class="ll-code-line"><span class="ll-line-no">79</span><code></code></span><span class="ll-code-line comment-active"><span class="ll-line-no">80</span><code>        # 返回此前维护的结果头节点</code></span><span class="ll-code-line active"><span class="ll-line-no">81</span><code>        return head</code></span></pre></details></div></div></section>20:["$","$L2d","1",{"id":"linked-list-21","fallback":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$2e"}}]}]
+2f:T27f7,
+<h3 id="section-合并方法的复杂度与边界">1.7 合并方法的复杂度与边界</h3>
+<p>设两条链表长度分别为m、n。dummy版每轮都推进一条未处理输入，累计处理的节点数不会超过m+n，剩余段最后直接接入，所以<strong>时间复杂度为O(m+n)</strong>。原插入法的工作指针也持续向后移动，没有为每次插入重新从头搜索，因此同样可以达到线性时间。简化分支不会把它再降低一个复杂度等级。</p>
+<p>额外使用固定数量的变量；dummy版再增加一个辅助节点，所以<strong>辅助空间都是O(1)</strong>。这里复用的是输入节点，合并后原来的next关系会改变；如果另外的接口要求保留两条原链表，就需要重新考虑是否复制节点。</p>
+<p>双空时返回None；仅一条为空时返回另一条；相等值要保留不同对象；一条先耗尽时接入另一条未处理段。这些边界都可以从“入口指向谁、前驱能改哪条连接”继续核对。</p>
+<h2 id="section-题目二移除链表元素">二、题目二：移除链表元素</h2>
+<section class="problem"><div class="problem-heading"><strong>203. 移除链表元素</strong><a href="https://leetcode.cn/problems/remove-linked-list-elements/" rel="noopener noreferrer">力扣原题 ↗</a></div><p><strong>题目要求</strong></p><p>给定单链表的头节点head和整数val，移除链表中所有节点值等于val的节点，返回处理后的头节点。</p><p>其余节点保持原来的相对顺序。若全部节点都被移除，返回空链表。</p><div class="examples"><p><strong>示例1</strong></p><p>输入：<code>head = [1,2,6,3,4,5,6], val = 6</code></p><p>输出：<code>[1,2,3,4,5]</code></p><p>两个值为6的节点被移除，其余节点继续按原顺序连接。</p></div><div class="examples"><p><strong>示例2</strong></p><p>输入：<code>head = [], val = 1</code></p><p>输出：<code>[]</code></p><p>空链表没有需要移除的节点。</p></div><div class="examples"><p><strong>示例3</strong></p><p>输入：<code>head = [7,7,7,7], val = 7</code></p><p>输出：<code>[]</code></p><p>所有节点的值都等于val，移除后为空链表。</p></div><p><strong>约束条件</strong></p><ul><li>链表节点数量在0到10⁴之间。</li><li>每个节点的值在1到50之间。</li><li>val在0到50之间。</li></ul></section>
+<p>理解哑节点后，我在这道题里独立用了同样的结构，首版就通过了。删除头节点也要有前驱，连续删除时这个前驱还得留在原位，所以<strong>用dummy作为起点，让pre表示最后保留的节点</strong>，比较容易把操作统一起来。</p>
+<h3 id="section-保留时前驱跟上删除时前驱留在原位">2.1 保留时前驱跟上，删除时前驱留在原位</h3>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-comment"># 首版：保留时接入，删除时绕过</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:
+    <span class="hljs-comment"># 沿用力扣方法接口，节点类型由题目提供</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">removeElements</span>(<span class="hljs-params">self, head: ListNode | <span class="hljs-literal">None</span>, val: <span class="hljs-built_in">int</span></span>) -> ListNode | <span class="hljs-literal">None</span>:
+        <span class="hljs-comment"># 创建辅助头节点，默认next为空；它不属于最终数据</span>
+        dummy = ListNode()
+        <span class="hljs-comment"># 从辅助头节点开始维护已保留部分的末端</span>
+        pre = dummy
+        <span class="hljs-comment"># 依次处理原链表中的每个节点</span>
+        <span class="hljs-keyword">while</span> head!=<span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 当前节点的值等于待删除值，需要绕过它</span>
+            <span class="hljs-keyword">if</span> head.val==val:
+                <span class="hljs-comment"># 让前驱直接连接当前节点的后继，pre本身不前进</span>
+                pre.<span class="hljs-built_in">next</span> = head.<span class="hljs-built_in">next</span>
+            <span class="hljs-comment"># 当前节点不需要删除，将它保留在结果中</span>
+            <span class="hljs-keyword">else</span>:
+                <span class="hljs-comment"># 将保留节点接入结果；若尚未建立结果入口，也在此完成连接</span>
+                pre.<span class="hljs-built_in">next</span> = head
+                <span class="hljs-comment"># 当前节点被保留后，它成为后续处理的前驱</span>
+                pre = head
+            <span class="hljs-comment"># 工作指针沿原后继前进；删除操作没有改动当前节点自己的next</span>
+            head=head.<span class="hljs-built_in">next</span>
+        <span class="hljs-comment"># 跳过辅助头节点，返回真正的结果入口</span>
+        <span class="hljs-keyword">return</span> dummy.<span class="hljs-built_in">next</span>
+</code></pre></div>
+<p>这份代码里的dummy刚创建时并没有连上head，但两种分支都会设置pre.next：需要删除时，直接接到head.next；需要保留时，先接到head，再把pre移到这个保留节点。因此，<strong>第一轮就会建立相应连接，不预先写dummy.next=head也可以正确工作</strong>。空输入则不进入循环，dummy.next仍是None。</p>
+<p>以<code>[6,6,1,6,2,6,6]、val=6</code>为例，连续头删、中间删和连续尾删都能在同一遍扫描中观察到：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>当前节点</th><th>处理</th><th>pre.next设置为</th><th>处理后pre</th></tr></thead><tbody><tr><td>A1（6）</td><td>删除</td><td>A2</td><td>dummy</td></tr><tr><td>A2（6）</td><td>删除</td><td>A3</td><td>dummy</td></tr><tr><td>A3（1）</td><td>保留</td><td>A3</td><td>A3</td></tr><tr><td>A4（6）</td><td>删除</td><td>A5</td><td>A3</td></tr><tr><td>A5（2）</td><td>保留</td><td>A5</td><td>A5</td></tr><tr><td>A6（6）</td><td>删除</td><td>A7</td><td>A5</td></tr><tr><td>A7（6）</td><td>删除</td><td>None</td><td>A5</td></tr></tbody></table>
+<p>最后从dummy.next出发，只会经过A3→A5，值为<code>[1,2]</code>。<strong>删除当前节点后，pre不能跟着移到被删除节点上</strong>，因为下一次仍要通过最后保留节点的next处理后续节点。只有当前节点保留时，它才成为新的前驱。</p>
+<p>被绕过的A4仍可能保留原来的next=A5。删除操作改变的是结果入口能够走到的路径，并没有自动把A4.next清空。图里保留这些连接，是为了让每次变化都能对应到实际语句。</p>
+<h3 id="section-预先连接dummy后减少保留分支的重复写入">2.2 预先连接dummy后，减少保留分支的重复写入</h3>
+<p>如果一开始用<code>ListNode(0,head)</code>把dummy接到原头，原链表的连接已经存在。之后遇到保留节点，只移动pre即可，不需要再次写<code>pre.next=head</code>。下面是沿着这个观察补充的版本，原来的实现本身没有错误。</p>
+<details class="extra">
+<summary>展开补充写法：保留时只移动pre</summary>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-comment"># 补充：先连接dummy，减少重复写入</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:
+    <span class="hljs-comment"># 保留用户的扫描与前驱思路，返回删除后的头节点</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">removeElements</span>(<span class="hljs-params">self, head: ListNode | <span class="hljs-literal">None</span>, val: <span class="hljs-built_in">int</span></span>) -> ListNode | <span class="hljs-literal">None</span>:
+        <span class="hljs-comment"># 预先把dummy接到原头，使保留节点时无需重复连接</span>
+        dummy = ListNode(<span class="hljs-number">0</span>, head)
+        <span class="hljs-comment"># pre始终表示当前待处理节点前面的已保留节点</span>
+        pre = dummy
+        <span class="hljs-comment"># 每个原始节点按顺序处理一次</span>
+        <span class="hljs-keyword">while</span> head <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 当前节点匹配删除值时，将它从结果中绕过</span>
+            <span class="hljs-keyword">if</span> head.val == val:
+                <span class="hljs-comment"># 前驱接到后继，pre不动，以便继续检查连续待删节点</span>
+                pre.<span class="hljs-built_in">next</span> = head.<span class="hljs-built_in">next</span>
+            <span class="hljs-comment"># 当前节点不需要删除，原连接已经存在</span>
+            <span class="hljs-keyword">else</span>:
+                <span class="hljs-comment"># 只移动前驱，不重复写入同一条连接</span>
+                pre = head
+            <span class="hljs-comment"># 当前节点自己的next未被改动，可以继续沿它前进</span>
+            head = head.<span class="hljs-built_in">next</span>
+        <span class="hljs-comment"># 结果可能为空，统一由dummy.next给出</span>
+        <span class="hljs-keyword">return</span> dummy.<span class="hljs-built_in">next</span>
+</code></pre></div>
+</details>
+<p>这种调整减少了保留分支里的重复连接赋值，但没有改变遍历方式；全删时仍要逐个绕过，也不能仅凭代码更短就断定所有输入都运行得更快。</p>
+<h4 id="section-交互演示连续删除与前驱位置">2.2.1 交互演示：连续删除与前驱位置</h4>
+21:["$","$L1e","2",{"html":"$2f"}]
+30:T2819,<section class="ll-demo" data-linked-demo="203" aria-label="链表203逐行演示"><p class="ll-intro">每次前进一步，只执行一条语句或一次条件判断。节点ID保持不变，变量移动与next重连分别显示；历史错误版可以在对应案例中选择。</p><div class="ll-controls" hidden><div class="ll-selectors"><label>选择输入案例<select data-action="case"></select></label><label>选择实现方法<select data-action="method"></select></label></div><p class="ll-case-note"></p><div class="ll-buttons"><button data-action="previous" type="button">上一步</button><button data-action="next" type="button">下一步</button><button data-action="reset" type="button">重置</button><output aria-live="polite"></output></div><label class="ll-jump">定位到某一步<select data-action="step"></select></label></div><p class="ll-fallback">下方为主例终态。开启脚本后可从原始输入逐步操作；正文中的状态表也保留完整推导。</p><div class="ll-stage"><div class="ll-state" data-index="34" data-status="returned"><div class="ll-operation"><strong>跳过辅助头节点，返回真正的结果入口</strong><code>第24行　return dummy.next</code></div><p class="ll-write">本步没有改变已有节点的next连接。</p><div class="ll-graph-scroll" tabindex="0" aria-label="链表连接图，可左右滚动"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="节点ID、变量引用和实际next连接" viewBox="0 0 1212 300" width="1212" height="300"><defs><marker id="ll-main-203-LC203User-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#597366"/></marker><marker id="ll-main-203-LC203User-active" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#b75928"/></marker></defs><rect width="100%" height="100%" fill="#fbfdfb"/><text x="24" y="24" font-size="13" fill="#42634e">A：原输入节点　D：辅助节点</text><path data-edge="A1:A2" d="M 282 137 H 309" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-203-LC203User-arrow)"/><path data-edge="A2:A3" d="M 428 137 H 455" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-203-LC203User-arrow)"/><path data-edge="A3:A5" d="M 545 100 V 68 H 781 V 95" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-203-LC203User-arrow)"/><path data-edge="A4:A5" d="M 720 137 H 747" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-203-LC203User-arrow)"/><g data-edge="A5:None"><path d="M 866 178 h 16" stroke="#597366" fill="none" marker-end="url(#ll-main-203-LC203User-arrow)"/><text x="869" y="200" font-size="10" fill="#54695e">None</text></g><path data-edge="A6:A7" d="M 1012 137 H 1039" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-203-LC203User-arrow)"/><g data-edge="A7:None"><path d="M 1158 178 h 16" stroke="#597366" fill="none" marker-end="url(#ll-main-203-LC203User-arrow)"/><text x="1161" y="200" font-size="10" fill="#54695e">None</text></g><path data-edge="D1:A3" d="M 109 100 V 57 H 489 V 95" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-203-LC203User-arrow)"/><g data-node="A1"><rect x="168" y="100" width="114" height="118" rx="7" fill="#e1f1e7" stroke="#80998a" stroke-width="1.3"/><text x="180" y="122" fill="#365b47" font-size="13">A1</text><text x="180" y="149" font-size="21" font-weight="700" fill="#203e30">6</text><line x1="178" x2="272" y1="161" y2="161" stroke="#acbfb0"/></g><g data-node="A2"><rect x="314" y="100" width="114" height="118" rx="7" fill="#e1f1e7" stroke="#80998a" stroke-width="1.3"/><text x="326" y="122" fill="#365b47" font-size="13">A2</text><text x="326" y="149" font-size="21" font-weight="700" fill="#203e30">6</text><line x1="324" x2="418" y1="161" y2="161" stroke="#acbfb0"/></g><g data-node="A3"><rect x="460" y="100" width="114" height="118" rx="7" fill="#e1f1e7" stroke="#80998a" stroke-width="1.3"/><text x="472" y="122" fill="#365b47" font-size="13">A3</text><text x="472" y="149" font-size="21" font-weight="700" fill="#203e30">1</text><line x1="470" x2="564" y1="161" y2="161" stroke="#acbfb0"/></g><g data-node="A4"><rect x="606" y="100" width="114" height="118" rx="7" fill="#e1f1e7" stroke="#80998a" stroke-width="1.3"/><text x="618" y="122" fill="#365b47" font-size="13">A4</text><text x="618" y="149" font-size="21" font-weight="700" fill="#203e30">6</text><line x1="616" x2="710" y1="161" y2="161" stroke="#acbfb0"/></g><g data-node="A5"><rect x="752" y="100" width="114" height="118" rx="7" fill="#e1f1e7" stroke="#80998a" stroke-width="1.3"/><text x="764" y="122" fill="#365b47" font-size="13">A5</text><text x="764" y="149" font-size="21" font-weight="700" fill="#203e30">2</text><line x1="762" x2="856" y1="161" y2="161" stroke="#acbfb0"/><text x="761" y="178" font-size="11" fill="#244936">pre</text></g><g data-node="A6"><rect x="898" y="100" width="114" height="118" rx="7" fill="#e1f1e7" stroke="#80998a" stroke-width="1.3"/><text x="910" y="122" fill="#365b47" font-size="13">A6</text><text x="910" y="149" font-size="21" font-weight="700" fill="#203e30">6</text><line x1="908" x2="1002" y1="161" y2="161" stroke="#acbfb0"/></g><g data-node="A7"><rect x="1044" y="100" width="114" height="118" rx="7" fill="#e1f1e7" stroke="#80998a" stroke-width="1.3"/><text x="1056" y="122" fill="#365b47" font-size="13">A7</text><text x="1056" y="149" font-size="21" font-weight="700" fill="#203e30">6</text><line x1="1054" x2="1148" y1="161" y2="161" stroke="#acbfb0"/></g><g data-node="D1"><rect x="24" y="100" width="114" height="118" rx="7" fill="#fff2cf" stroke="#80998a" stroke-width="1.3"/><text x="36" y="122" fill="#365b47" font-size="13">D1 · 辅助</text><text x="36" y="149" font-size="21" font-weight="700" fill="#203e30">0</text><line x1="34" x2="128" y1="161" y2="161" stroke="#acbfb0"/><text x="33" y="178" font-size="11" fill="#244936">dummy</text></g><text x="24" y="266" font-size="12" fill="#506a5b">None处的变量：head</text><text x="24" y="287" font-size="11" fill="#506a5b">箭头表示next；框内下方列出指向该节点的变量。位置固定，连接随代码改变。</text></svg></div><div class="ll-result"><strong>实际返回</strong>：<code>A3</code><br>沿next读取：A3(1) → A5(2) → None<br>值序列：<code>[1,2]</code><p>题目期望：<code>[1,2]</code></p></div><details class="ll-vars" open><summary>变量与节点的对应关系</summary><div class="ll-table-scroll"><table><thead><tr><th>变量</th><th>当前内容</th><th>含义</th></tr></thead><tbody><tr><td><code>head</code></td><td>None</td><td>节点引用</td></tr><tr><td><code>dummy</code></td><td>D1</td><td>节点引用</td></tr><tr><td><code>pre</code></td><td>A5</td><td>节点引用</td></tr><tr><td><code>val</code></td><td>6</td><td>普通数值</td></tr></tbody></table></div></details><details class="ll-source"><summary>展开对应代码与逐行注释 · 当前第24行</summary><pre class="ll-code"><span class="ll-code-line"><span class="ll-line-no">1</span><code># 首版：保留时接入，删除时绕过</code></span><span class="ll-code-line"><span class="ll-line-no">2</span><code>class Solution:</code></span><span class="ll-code-line"><span class="ll-line-no">3</span><code>    # 沿用力扣方法接口，节点类型由题目提供</code></span><span class="ll-code-line"><span class="ll-line-no">4</span><code>    def removeElements(self, head: ListNode | None, val: int) -&gt; ListNode | None:</code></span><span class="ll-code-line"><span class="ll-line-no">5</span><code>        # 创建辅助头节点，默认next为空；它不属于最终数据</code></span><span class="ll-code-line"><span class="ll-line-no">6</span><code>        dummy = ListNode()</code></span><span class="ll-code-line"><span class="ll-line-no">7</span><code>        # 从辅助头节点开始维护已保留部分的末端</code></span><span class="ll-code-line"><span class="ll-line-no">8</span><code>        pre = dummy</code></span><span class="ll-code-line"><span class="ll-line-no">9</span><code>        # 依次处理原链表中的每个节点</code></span><span class="ll-code-line"><span class="ll-line-no">10</span><code>        while head!=None:</code></span><span class="ll-code-line"><span class="ll-line-no">11</span><code>            # 当前节点的值等于待删除值，需要绕过它</code></span><span class="ll-code-line"><span class="ll-line-no">12</span><code>            if head.val==val:</code></span><span class="ll-code-line"><span class="ll-line-no">13</span><code>                # 让前驱直接连接当前节点的后继，pre本身不前进</code></span><span class="ll-code-line"><span class="ll-line-no">14</span><code>                pre.next = head.next</code></span><span class="ll-code-line"><span class="ll-line-no">15</span><code>            # 当前节点不需要删除，将它保留在结果中</code></span><span class="ll-code-line"><span class="ll-line-no">16</span><code>            else:</code></span><span class="ll-code-line"><span class="ll-line-no">17</span><code>                # 将保留节点接入结果；若尚未建立结果入口，也在此完成连接</code></span><span class="ll-code-line"><span class="ll-line-no">18</span><code>                pre.next = head</code></span><span class="ll-code-line"><span class="ll-line-no">19</span><code>                # 当前节点被保留后，它成为后续处理的前驱</code></span><span class="ll-code-line"><span class="ll-line-no">20</span><code>                pre = head</code></span><span class="ll-code-line"><span class="ll-line-no">21</span><code>            # 工作指针沿原后继前进；删除操作没有改动当前节点自己的next</code></span><span class="ll-code-line"><span class="ll-line-no">22</span><code>            head=head.next</code></span><span class="ll-code-line comment-active"><span class="ll-line-no">23</span><code>        # 跳过辅助头节点，返回真正的结果入口</code></span><span class="ll-code-line active"><span class="ll-line-no">24</span><code>        return dummy.next</code></span></pre></details></div></div></section>22:["$","$L2d","3",{"id":"linked-list-203","fallback":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$30"}}]}]
+31:T570b,
+<h3 id="section-连续删除的复杂度与边界">2.3 连续删除的复杂度与边界</h3>
+<p>head每轮向后走一个节点，每个数据节点恰好接受一次是否等于val的判断，所以长度为L时，<strong>时间复杂度是O(L)，辅助空间是O(1)</strong>。循环内删除几个连续节点，并不会增加一层扫描。</p>
+<p>全删时pre一直停在dummy，最终dummy.next为None；全保留时pre依次跟着head走到尾部；删除尾节点时，最后保留节点的next会被改成None。这几种情况都使用同一条连接操作，dummy的作用在这里就比较直观了。</p>
+<h2 id="section-题目三删除链表的倒数第n个结点">三、题目三：删除链表的倒数第N个结点</h2>
+<section class="problem"><div class="problem-heading"><strong>19. 删除链表的倒数第N个结点</strong><a href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list/" rel="noopener noreferrer">力扣原题 ↗</a></div><p><strong>题目要求</strong></p><p>给定单链表的头节点head和整数n，删除链表中倒数第n个节点，并返回处理后的头节点。</p><p>倒数从1开始计数：n=1时删除尾节点，n等于链表长度时删除头节点。</p><div class="examples"><p><strong>示例1</strong></p><p>输入：<code>head = [1,2,3,4,5], n = 2</code></p><p>输出：<code>[1,2,3,5]</code></p><p>倒数第2个节点的值为4，删除后3直接连接5。</p></div><div class="examples"><p><strong>示例2</strong></p><p>输入：<code>head = [1], n = 1</code></p><p>输出：<code>[]</code></p><p>唯一的节点也是倒数第1个节点，删除后为空链表。</p></div><div class="examples"><p><strong>示例3</strong></p><p>输入：<code>head = [1,2], n = 1</code></p><p>输出：<code>[1]</code></p><p>删除尾节点2，剩余头节点1。</p></div><p><strong>约束条件</strong></p><ul><li>设节点数量为L，1≤L≤30。</li><li>每个节点的值在0到100之间。</li><li>1≤n≤L，题目保证需要删除的位置有效。</li></ul><p><strong>进阶要求：尝试只用一趟遍历完成删除。</strong></p></section>
+<p>这道题的删除动作与203相同，新增的问题是<strong>怎样找到倒数第n个节点的前驱</strong>。我先用了最直接的办法：统计长度，再把倒数位置换成从头走的步数。这一版也是一次通过，后面再尝试题目的单趟遍历要求。</p>
+<h3 id="section-计数法从倒数位置推导前驱的步数">3.1 计数法：从倒数位置推导前驱的步数</h3>
+<p>设链表长度为L，把dummy记为位置0，数据节点依次记为1到L。倒数第n个节点位于<code>L−n+1</code>，而删除语句要修改它前一个节点的next，因此要停在<strong>位置L−n</strong>。</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>目标位置</mtext><mo>=</mo><mi>L</mi><mo>−</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo separator="true">,</mo><mspace width="2em"></mspace><mtext>前驱位置</mtext><mo>=</mo><mi>L</mi><mo>−</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">\text{目标位置}=L-n+1,\qquad \text{前驱位置}=L-n</annotation></semantics></math></span></p>
+<p>例如<code>[1,2,3,4,5]、n=2</code>，目标是位置4，前驱是位置3。从dummy出发，恰好走3步就能到达这个前驱。</p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-comment"># 计数法：先求长度，再定位前驱</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:
+    <span class="hljs-comment"># 沿用力扣方法接口，节点类型由题目提供</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">removeNthFromEnd</span>(<span class="hljs-params">self, head: ListNode | <span class="hljs-literal">None</span>, n: <span class="hljs-built_in">int</span></span>) -> ListNode | <span class="hljs-literal">None</span>:
+        <span class="hljs-comment"># 创建辅助头节点，默认next为空；它不属于最终数据</span>
+        dummy = ListNode()
+        <span class="hljs-comment"># 定位指针从dummy开始，因此前进0步就能定位原头的前驱</span>
+        cur = dummy
+        <span class="hljs-comment"># 把辅助头节点接到原链表，使删除原头也能通过前驱完成</span>
+        cur.<span class="hljs-built_in">next</span> = head
+        <span class="hljs-comment"># 初始化链表长度计数</span>
+        count = <span class="hljs-number">0</span>
+        <span class="hljs-comment"># 依次处理原链表中的每个节点</span>
+        <span class="hljs-keyword">while</span> head!=<span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 计数用的工作指针前进；原链表入口仍由dummy.next保留</span>
+            head=head.<span class="hljs-built_in">next</span>
+            <span class="hljs-comment"># 每经过一个数据节点，长度增加1</span>
+            count+=<span class="hljs-number">1</span>
+        <span class="hljs-comment"># 目标前驱的位置为L-n，因此从dummy需要前进这么多步</span>
+        step = count - n
+        <span class="hljs-comment"># 走到待删除节点的前驱，而不是走到目标本身</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(step):
+            <span class="hljs-comment"># 定位指针向后移动一个next连接</span>
+            cur = cur.<span class="hljs-built_in">next</span>
+        <span class="hljs-comment"># 从前驱绕过目标节点，连接目标的后继</span>
+        cur.<span class="hljs-built_in">next</span> = cur.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span>
+        <span class="hljs-comment"># 跳过辅助头节点，返回真正的结果入口</span>
+        <span class="hljs-keyword">return</span> dummy.<span class="hljs-built_in">next</span>
+</code></pre></div>
+<p>这里先让head走完整条链表来计数，head最后会变成None，但<strong>dummy.next一直保存着原入口</strong>，所以第二阶段仍然能从dummy重新定位，不会丢掉整条链表。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>阶段</th><th>实际过程</th><th>得到的信息</th></tr></thead><tbody><tr><td>初始化</td><td>dummy.next=head，cur=dummy，count=0</td><td>入口与定位起点保存好</td></tr><tr><td>计数</td><td>head走过1、2、3、4、5，最终到None；count依次增加到5</td><td>L=5</td></tr><tr><td>换算</td><td>step=5−2</td><td>前驱位于位置3</td></tr><tr><td>定位第1步</td><td>cur：dummy→A1</td><td>到位置1</td></tr><tr><td>定位第2步</td><td>cur：A1→A2</td><td>到位置2</td></tr><tr><td>定位第3步</td><td>cur：A2→A3</td><td>到目标前驱</td></tr><tr><td>删除</td><td>A3.next由A4改为A5</td><td>结果[1,2,3,5]</td></tr></tbody></table>
+<p><code>range(step)</code>会执行step次，结束值本身不包含在范围内；这一点可以回看<a href="https://blog.07xiaohei.com/blog/python-loops/" rel="noopener noreferrer">Python循环与range</a>。循环变量i从0开始计数，与cur当前所处的链表位置不是同一个量。</p>
+<h3 id="section-固定间距利用尾部终点确定前驱的位置">3.2 固定间距：利用尾部终点确定前驱的位置</h3>
+<p>计数法需要先知道L，才能算出L−n。继续考虑单趟遍历时，可以换一种保存长度信息的方法：<strong>让两个指针先相隔一段固定距离，再一起向后移动；前面的指针到达约定终点时，后面的指针就停在所需位置。</strong></p>
+<p>这个距离按沿next前进的次数计算，也就是连接条数。例如<code>A3→A4→A5→None</code>需要3次next。它与“两个指针之间夹着几个节点”不是同一个计数口径，后者很容易让步数少算1。</p>
+<p>我按照这个方向写了双指针版本，随后遇到的疑问就是：<strong>两者都从dummy出发，为什么先让fast走n+1步，而不是n步？</strong>要回答这个问题，需要把slow的目标和fast的终点一起标出来。</p>
+<h4 id="section-n1步配合fast最终停在none">3.2.1 n+1步配合fast最终停在None</h4>
+<p>当前写法的循环条件是<code>while fast!=None</code>，所以fast最后会到尾节点之后的结束位置。为了推导，把这个位置记为L+1（<strong>None只是结束标记，不是一个额外的数据节点</strong>）。slow要停在前驱位置L−n，两者之差就是：</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>间距</mtext><mo>=</mo><mo stretchy="false">(</mo><mi>L</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo>−</mo><mo stretchy="false">(</mo><mi>L</mi><mo>−</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mi>n</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\text{间距}=(L+1)-(L-n)=n+1</annotation></semantics></math></span></p>
+<p>因此，两者从同一个dummy出发时，fast先走n+1步，再每轮各走一步，才能在fast到None时让slow正好落到目标前驱。</p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-comment"># n+1步：fast最终停在None</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:
+    <span class="hljs-comment"># 沿用力扣方法接口，节点类型由题目提供</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">removeNthFromEnd</span>(<span class="hljs-params">self, head: ListNode | <span class="hljs-literal">None</span>, n: <span class="hljs-built_in">int</span></span>) -> ListNode | <span class="hljs-literal">None</span>:
+        <span class="hljs-comment"># 创建并连接辅助头节点；值0仅占位，不参加题目计算</span>
+        dummy = ListNode(<span class="hljs-number">0</span>, head)
+        <span class="hljs-comment"># 本版的cur后续未使用，保留原语句供对照，去掉不影响算法</span>
+        cur = dummy
+        <span class="hljs-comment"># 两个变量最初都指向同一个辅助头节点</span>
+        fast, slow =  dummy, dummy
+        <span class="hljs-comment"># fast先走n+1条next连接，配合最终停在None的位置</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n+<span class="hljs-number">1</span>):
+            <span class="hljs-comment"># 快指针向后移动一步，不修改链表连接</span>
+            fast=fast.<span class="hljs-built_in">next</span>
+        <span class="hljs-comment"># 继续到fast越过尾节点，停在None这一结束标记</span>
+        <span class="hljs-keyword">while</span> fast!=<span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 快指针向后移动一步，不修改链表连接</span>
+            fast=fast.<span class="hljs-built_in">next</span>
+            <span class="hljs-comment"># 慢指针同步前进，恢复两指针的固定间距</span>
+            slow=slow.<span class="hljs-built_in">next</span>
+        <span class="hljs-comment"># 从slow这个前驱绕过下一个节点；距离搭配错误时会删错或访问None</span>
+        slow.<span class="hljs-built_in">next</span>=slow.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span>
+        <span class="hljs-comment"># 跳过辅助头节点，返回真正的结果入口</span>
+        <span class="hljs-keyword">return</span> dummy.<span class="hljs-built_in">next</span>
+</code></pre></div>
+<p>原代码中的<code>cur=dummy</code>后面没有再使用，删掉也不影响这套逻辑；这里保留它，以便与当时写下的版本对应。</p>
+<p>对L=5、n=2，完整过程如下。表中的“同步一次”包含fast和slow分别前进一步，两行都执行完才算一轮完成。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>阶段</th><th>slow</th><th>fast</th><th>相隔的next次数</th></tr></thead><tbody><tr><td>初始化</td><td>dummy（0）</td><td>dummy（0）</td><td>0</td></tr><tr><td>fast预走第1步</td><td>dummy</td><td>A1</td><td>1</td></tr><tr><td>fast预走第2步</td><td>dummy</td><td>A2</td><td>2</td></tr><tr><td>fast预走第3步</td><td>dummy</td><td>A3</td><td>3</td></tr><tr><td>完整同步第1轮</td><td>A1</td><td>A4</td><td>3</td></tr><tr><td>完整同步第2轮</td><td>A2</td><td>A5</td><td>3</td></tr><tr><td>完整同步第3轮</td><td>A3</td><td>None</td><td>3</td></tr><tr><td>删除</td><td>A3.next从A4改为A5</td><td>已结束定位</td><td>不再维持原间距</td></tr></tbody></table>
+<h4 id="section-n步配合fast最终停在尾节点">3.2.2 n步配合fast最终停在尾节点</h4>
+<p>如果希望只先走n步，也能写出正确算法，但fast的终点要相应改为<strong>最后一个真实节点</strong>。这个位置是L，与目标前驱L−n的差为：</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>间距</mtext><mo>=</mo><mi>L</mi><mo>−</mo><mo stretchy="false">(</mo><mi>L</mi><mo>−</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">\text{间距}=L-(L-n)=n</annotation></semantics></math></span></p>
+<p>所以预走改成<code>range(n)</code>时，同步循环也要改成<code>while fast.next is not None</code>。主例中fast预走到A2；同步后依次到A3、A4、A5，slow则依次到A1、A2、A3，仍然落在节点4的前驱上。</p>
+<details class="extra">
+<summary>展开补充变式：走n步，并让fast停在真实尾节点</summary>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-comment"># n步：fast最终停在尾节点</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:
+    <span class="hljs-comment"># 题目保证链表非空，且1&#x3C;=n&#x3C;=链表长度</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">removeNthFromEnd</span>(<span class="hljs-params">self, head: ListNode | <span class="hljs-literal">None</span>, n: <span class="hljs-built_in">int</span></span>) -> ListNode | <span class="hljs-literal">None</span>:
+        <span class="hljs-comment"># 为原头提供真实前驱，便于统一删除头节点</span>
+        dummy = ListNode(<span class="hljs-number">0</span>, head)
+        <span class="hljs-comment"># 快指针从位置0开始</span>
+        fast = dummy
+        <span class="hljs-comment"># 慢指针也从位置0开始，之后寻找目标前驱</span>
+        slow = dummy
+        <span class="hljs-comment"># 快指针先走n步；题目范围保证此时它是一个真实节点</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):
+            <span class="hljs-comment"># 沿next连接向后移动一步</span>
+            fast = fast.<span class="hljs-built_in">next</span>
+        <span class="hljs-comment"># 在fast仍有后继时同步移动，终点是尾节点而不是None</span>
+        <span class="hljs-keyword">while</span> fast.<span class="hljs-built_in">next</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 快指针向后一步，此时与slow的距离暂时增加1</span>
+            fast = fast.<span class="hljs-built_in">next</span>
+            <span class="hljs-comment"># 慢指针跟进一步，恢复n条next连接的间距</span>
+            slow = slow.<span class="hljs-built_in">next</span>
+        <span class="hljs-comment"># slow停在目标前驱，修改它的连接以绕过目标</span>
+        slow.<span class="hljs-built_in">next</span> = slow.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span>
+        <span class="hljs-comment"># 跳过dummy返回结果</span>
+        <span class="hljs-keyword">return</span> dummy.<span class="hljs-built_in">next</span>
+</code></pre></div>
+</details>
+<p>题目保证<code>1≤n≤L</code>，所以从dummy先走n步后，fast仍是一个真实节点，检查fast.next有依据。<strong>预走步数和结束条件需要一起选，不能只改其中一个。</strong></p>
+<figure class="explain-figure"><figcaption>相同的目标前驱，配合不同的fast终点</figcaption><div class="ll-figure-scroll" tabindex="0"><img src="/images/algorithms/dummy-node/gap.svg" alt="相同的目标前驱，配合不同的fast终点" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div></figure>
+<h4 id="section-只改成n却仍走到none会定位到目标本身">3.2.3 只改成n却仍走到None，会定位到目标本身</h4>
+<p>我当时说最初写了n，不过没有保留下完整错误版。下面按当前版本只修改预走步数，重建这个错误搭配，单独看它会造成什么结果。</p>
+<details class="extra">
+<summary>展开重建的错误搭配：只改n，结束条件保持不变</summary>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-comment"># 错误搭配：n步却仍走到None</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:
+    <span class="hljs-comment"># 沿用力扣方法接口，节点类型由题目提供</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">removeNthFromEnd</span>(<span class="hljs-params">self, head: ListNode | <span class="hljs-literal">None</span>, n: <span class="hljs-built_in">int</span></span>) -> ListNode | <span class="hljs-literal">None</span>:
+        <span class="hljs-comment"># 创建并连接辅助头节点；值0仅占位，不参加题目计算</span>
+        dummy = ListNode(<span class="hljs-number">0</span>, head)
+        <span class="hljs-comment"># 本版的cur后续未使用，保留原语句供对照，去掉不影响算法</span>
+        cur = dummy
+        <span class="hljs-comment"># 两个变量最初都指向同一个辅助头节点</span>
+        fast, slow =  dummy, dummy
+        <span class="hljs-comment"># fast先走n条next连接；是否正确还必须结合后面的终止条件</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):
+            <span class="hljs-comment"># 快指针向后移动一步，不修改链表连接</span>
+            fast=fast.<span class="hljs-built_in">next</span>
+        <span class="hljs-comment"># 继续到fast越过尾节点，停在None这一结束标记</span>
+        <span class="hljs-keyword">while</span> fast!=<span class="hljs-literal">None</span>:
+            <span class="hljs-comment"># 快指针向后移动一步，不修改链表连接</span>
+            fast=fast.<span class="hljs-built_in">next</span>
+            <span class="hljs-comment"># 慢指针同步前进，恢复两指针的固定间距</span>
+            slow=slow.<span class="hljs-built_in">next</span>
+        <span class="hljs-comment"># 从slow这个前驱绕过下一个节点；距离搭配错误时会删错或访问None</span>
+        slow.<span class="hljs-built_in">next</span>=slow.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span>
+        <span class="hljs-comment"># 跳过辅助头节点，返回真正的结果入口</span>
+        <span class="hljs-keyword">return</span> dummy.<span class="hljs-built_in">next</span>
+</code></pre></div>
+</details>
+<p>fast仍会到结束位置L+1，距离却只有n，所以slow停在<code>L+1−n</code>，也就是<strong>待删除节点本身</strong>。随后执行<code>slow.next=slow.next.next</code>，绕过的便成了目标后面的节点。</p>
+<p>对于<code>[1,2,3,4,5]、n=2</code>，slow会停在4，实际删掉5，错误结果为<code>[1,2,3,4]</code>；如果n=1，slow会停在尾节点，此时slow.next已经为None，再访问slow.next.next就会报错。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>从dummy出发的预走步数</th><th>fast停止位置</th><th>slow停止位置</th><th>能否从slow.next删除目标</th></tr></thead><tbody><tr><td>n+1</td><td>None，结束位置L+1</td><td>前驱L−n</td><td>可以</td></tr><tr><td>n</td><td>尾节点，位置L</td><td>前驱L−n</td><td>可以</td></tr><tr><td>n</td><td>None，结束位置L+1</td><td>目标L−n+1</td><td>删错后继或访问None.next</td></tr></tbody></table>
+<h4 id="section-固定间距的成立时机同步一轮完成以后">3.2.4 固定间距的成立时机：同步一轮完成以后</h4>
+<p>代码先执行<code>fast=fast.next</code>，再执行<code>slow=slow.next</code>，两行不是同时发生的。因此，<strong>fast刚走完的半步里，间距会临时增加1；slow随后跟上，间距才恢复</strong>。这属于逐行执行的正常中间状态。</p>
+<p>例如n+1方案预走后，slow=dummy、fast=A3，相隔3条连接；fast先到A4时相隔4条；slow再到A1后重新相隔3条。交互会分别显示这两个步骤，避免图上把slow提前一起移动。</p>
+<p>另外，删除连接一旦完成，经过目标节点的路径已经改变。此时任务进入返回阶段，<strong>不再用定位时的旧间距判断算法是否正确</strong>。</p>
+<h4 id="section-交互演示计数定位与两种固定间距">3.2.5 交互演示：计数定位与两种固定间距</h4>
+23:["$","$L1e","4",{"html":"$31"}]
+32:T26a4,<section class="ll-demo" data-linked-demo="19" aria-label="链表19逐行演示"><p class="ll-intro">每次前进一步，只执行一条语句或一次条件判断。节点ID保持不变，变量移动与next重连分别显示；历史错误版可以在对应案例中选择。</p><div class="ll-controls" hidden><div class="ll-selectors"><label>选择输入案例<select data-action="case"></select></label><label>选择实现方法<select data-action="method"></select></label></div><p class="ll-case-note"></p><div class="ll-buttons"><button data-action="previous" type="button">上一步</button><button data-action="next" type="button">下一步</button><button data-action="reset" type="button">重置</button><output aria-live="polite"></output></div><label class="ll-jump">定位到某一步<select data-action="step"></select></label></div><p class="ll-fallback">下方为主例终态。开启脚本后可从原始输入逐步操作；正文中的状态表也保留完整推导。</p><div class="ll-stage"><div class="ll-state" data-index="30" data-status="returned"><div class="ll-operation"><strong>跳过辅助头节点，返回真正的结果入口</strong><code>第28行　return dummy.next</code></div><p class="ll-write">本步没有改变已有节点的next连接。</p><div class="ll-graph-scroll" tabindex="0" aria-label="链表连接图，可左右滚动"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="节点ID、变量引用和实际next连接" viewBox="0 0 920 300" width="920" height="300"><defs><marker id="ll-main-19-LC19Count-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#597366"/></marker><marker id="ll-main-19-LC19Count-active" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#b75928"/></marker></defs><rect width="100%" height="100%" fill="#fbfdfb"/><text x="24" y="24" font-size="13" fill="#42634e">A：原输入节点　D：辅助节点</text><path data-edge="A1:A2" d="M 282 137 H 309" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-19-LC19Count-arrow)"/><path data-edge="A2:A3" d="M 428 137 H 455" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-19-LC19Count-arrow)"/><path data-edge="A3:A5" d="M 545 100 V 68 H 781 V 95" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-19-LC19Count-arrow)"/><path data-edge="A4:A5" d="M 720 137 H 747" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-19-LC19Count-arrow)"/><g data-edge="A5:None"><path d="M 866 178 h 16" stroke="#597366" fill="none" marker-end="url(#ll-main-19-LC19Count-arrow)"/><text x="869" y="200" font-size="10" fill="#54695e">None</text></g><path data-edge="D1:A1" d="M 109 100 V 57 H 197 V 95" fill="none" stroke="#597366" stroke-width="1.8" marker-end="url(#ll-main-19-LC19Count-arrow)"/><g data-node="A1"><rect x="168" y="100" width="114" height="118" rx="7" fill="#e1f1e7" stroke="#80998a" stroke-width="1.3"/><text x="180" y="122" fill="#365b47" font-size="13">A1</text><text x="180" y="149" font-size="21" font-weight="700" fill="#203e30">1</text><line x1="178" x2="272" y1="161" y2="161" stroke="#acbfb0"/></g><g data-node="A2"><rect x="314" y="100" width="114" height="118" rx="7" fill="#e1f1e7" stroke="#80998a" stroke-width="1.3"/><text x="326" y="122" fill="#365b47" font-size="13">A2</text><text x="326" y="149" font-size="21" font-weight="700" fill="#203e30">2</text><line x1="324" x2="418" y1="161" y2="161" stroke="#acbfb0"/></g><g data-node="A3"><rect x="460" y="100" width="114" height="118" rx="7" fill="#e1f1e7" stroke="#80998a" stroke-width="1.3"/><text x="472" y="122" fill="#365b47" font-size="13">A3</text><text x="472" y="149" font-size="21" font-weight="700" fill="#203e30">3</text><line x1="470" x2="564" y1="161" y2="161" stroke="#acbfb0"/><text x="469" y="178" font-size="11" fill="#244936">cur</text></g><g data-node="A4"><rect x="606" y="100" width="114" height="118" rx="7" fill="#e1f1e7" stroke="#80998a" stroke-width="1.3"/><text x="618" y="122" fill="#365b47" font-size="13">A4</text><text x="618" y="149" font-size="21" font-weight="700" fill="#203e30">4</text><line x1="616" x2="710" y1="161" y2="161" stroke="#acbfb0"/></g><g data-node="A5"><rect x="752" y="100" width="114" height="118" rx="7" fill="#e1f1e7" stroke="#80998a" stroke-width="1.3"/><text x="764" y="122" fill="#365b47" font-size="13">A5</text><text x="764" y="149" font-size="21" font-weight="700" fill="#203e30">5</text><line x1="762" x2="856" y1="161" y2="161" stroke="#acbfb0"/></g><g data-node="D1"><rect x="24" y="100" width="114" height="118" rx="7" fill="#fff2cf" stroke="#80998a" stroke-width="1.3"/><text x="36" y="122" fill="#365b47" font-size="13">D1 · 辅助</text><text x="36" y="149" font-size="21" font-weight="700" fill="#203e30">0</text><line x1="34" x2="128" y1="161" y2="161" stroke="#acbfb0"/><text x="33" y="178" font-size="11" fill="#244936">dummy</text></g><text x="24" y="266" font-size="12" fill="#506a5b">None处的变量：head</text><text x="24" y="287" font-size="11" fill="#506a5b">箭头表示next；框内下方列出指向该节点的变量。位置固定，连接随代码改变。</text></svg></div><div class="ll-result"><strong>实际返回</strong>：<code>A1</code><br>沿next读取：A1(1) → A2(2) → A3(3) → A5(5) → None<br>值序列：<code>[1,2,3,5]</code><p>题目期望：<code>[1,2,3,5]</code></p></div><details class="ll-vars" open><summary>变量与节点的对应关系</summary><div class="ll-table-scroll"><table><thead><tr><th>变量</th><th>当前内容</th><th>含义</th></tr></thead><tbody><tr><td><code>head</code></td><td>None</td><td>节点引用</td></tr><tr><td><code>dummy</code></td><td>D1</td><td>节点引用</td></tr><tr><td><code>cur</code></td><td>A3</td><td>节点引用</td></tr><tr><td><code>n</code></td><td>2</td><td>普通数值</td></tr><tr><td><code>count</code></td><td>5</td><td>普通数值</td></tr><tr><td><code>step</code></td><td>3</td><td>普通数值</td></tr><tr><td><code>i</code></td><td>2</td><td>普通数值</td></tr></tbody></table></div></details><details class="ll-source"><summary>展开对应代码与逐行注释 · 当前第28行</summary><pre class="ll-code"><span class="ll-code-line"><span class="ll-line-no">1</span><code># 计数法：先求长度，再定位前驱</code></span><span class="ll-code-line"><span class="ll-line-no">2</span><code>class Solution:</code></span><span class="ll-code-line"><span class="ll-line-no">3</span><code>    # 沿用力扣方法接口，节点类型由题目提供</code></span><span class="ll-code-line"><span class="ll-line-no">4</span><code>    def removeNthFromEnd(self, head: ListNode | None, n: int) -&gt; ListNode | None:</code></span><span class="ll-code-line"><span class="ll-line-no">5</span><code>        # 创建辅助头节点，默认next为空；它不属于最终数据</code></span><span class="ll-code-line"><span class="ll-line-no">6</span><code>        dummy = ListNode()</code></span><span class="ll-code-line"><span class="ll-line-no">7</span><code>        # 定位指针从dummy开始，因此前进0步就能定位原头的前驱</code></span><span class="ll-code-line"><span class="ll-line-no">8</span><code>        cur = dummy</code></span><span class="ll-code-line"><span class="ll-line-no">9</span><code>        # 把辅助头节点接到原链表，使删除原头也能通过前驱完成</code></span><span class="ll-code-line"><span class="ll-line-no">10</span><code>        cur.next = head</code></span><span class="ll-code-line"><span class="ll-line-no">11</span><code>        # 初始化链表长度计数</code></span><span class="ll-code-line"><span class="ll-line-no">12</span><code>        count = 0</code></span><span class="ll-code-line"><span class="ll-line-no">13</span><code>        # 依次处理原链表中的每个节点</code></span><span class="ll-code-line"><span class="ll-line-no">14</span><code>        while head!=None:</code></span><span class="ll-code-line"><span class="ll-line-no">15</span><code>            # 计数用的工作指针前进；原链表入口仍由dummy.next保留</code></span><span class="ll-code-line"><span class="ll-line-no">16</span><code>            head=head.next</code></span><span class="ll-code-line"><span class="ll-line-no">17</span><code>            # 每经过一个数据节点，长度增加1</code></span><span class="ll-code-line"><span class="ll-line-no">18</span><code>            count+=1</code></span><span class="ll-code-line"><span class="ll-line-no">19</span><code>        # 目标前驱的位置为L-n，因此从dummy需要前进这么多步</code></span><span class="ll-code-line"><span class="ll-line-no">20</span><code>        step = count - n</code></span><span class="ll-code-line"><span class="ll-line-no">21</span><code>        # 走到待删除节点的前驱，而不是走到目标本身</code></span><span class="ll-code-line"><span class="ll-line-no">22</span><code>        for i in range(step):</code></span><span class="ll-code-line"><span class="ll-line-no">23</span><code>            # 定位指针向后移动一个next连接</code></span><span class="ll-code-line"><span class="ll-line-no">24</span><code>            cur = cur.next</code></span><span class="ll-code-line"><span class="ll-line-no">25</span><code>        # 从前驱绕过目标节点，连接目标的后继</code></span><span class="ll-code-line"><span class="ll-line-no">26</span><code>        cur.next = cur.next.next</code></span><span class="ll-code-line comment-active"><span class="ll-line-no">27</span><code>        # 跳过辅助头节点，返回真正的结果入口</code></span><span class="ll-code-line active"><span class="ll-line-no">28</span><code>        return dummy.next</code></span></pre></details></div></div></section>24:["$","$L2d","5",{"id":"linked-list-19","fallback":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$32"}}]}]
+33:Te40,
+<h3 id="section-删头删尾与单节点的统一处理">3.3 删头、删尾与单节点的统一处理</h3>
+<ul>
+<li><strong>n=L，删除头节点：</strong>前驱就是dummy。计数法走L−n=0步；n+1方案预走后fast已到None；n方案预走后fast已到尾节点。两种双指针都不必再同步移动。</li>
+<li><strong>n=1，删除尾节点：</strong>工作指针应停在尾节点前面，修改其next为None；单节点链表的这个前驱仍是dummy。</li>
+<li><strong>L=1、n=1：</strong>删除后dummy.next为None，返回空链表。辅助节点不会作为数据结果返回。</li>
+<li><strong>节点值重复：</strong>倒数位置由连接关系决定，不能只看数值。图中一直保留节点ID，避免把不同对象当作同一个节点。</li>
+</ul>
+<h3 id="section-计数与双指针的时间空间及适用范围">3.4 计数与双指针的时间、空间及适用范围</h3>
+<p>计数阶段走L步，定位阶段走L−n步，两段相加是<code>2L−n</code>，因此<strong>计数法仍是O(L)时间，并不是O(L²)</strong>。双指针的fast和slow也只向后走，累计移动次数同样是线性的。三种正确写法都只用固定变量和一个dummy，<strong>辅助空间都是O(1)</strong>。</p>
+<p>若只数“某个工作指针沿next前进一步”的次数，可以进一步对照：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方法</th><th>fast/head移动</th><th>slow/cur移动</th><th>总次数</th></tr></thead><tbody><tr><td>先计数再定位</td><td>L</td><td>L−n</td><td>2L−n</td></tr><tr><td>n+1、fast到None</td><td>L+1</td><td>L−n</td><td>2L+1−n</td></tr><tr><td>n、fast到尾节点</td><td>L</td><td>L−n</td><td>2L−n</td></tr></tbody></table>
+<p>这个计数没有包含条件读取和其他语句，不能代替实际耗时测试，但足以说明：<strong>单趟遍历改变的是组织方式，不代表每个节点只被一个指针访问一次，也不自动意味着运行更快。</strong>计数法先得到长度再定位，比较直观；固定间距法用相对位置代替显式长度，满足单趟遍历的进阶要求。</p>
+<p>在没有额外长度信息的单链表中，最坏需要看到尾部才能确定倒数位置，因此这些方法都已达到线性的渐近时间界。进一步选择时，重点可以放在状态是否容易解释、边界是否清楚，以及接口是否已经提供长度信息。</p>
+<h2 id="section-知识点归纳用辅助起点统一链表边界">四、知识点归纳：用辅助起点统一链表边界</h2>
+<p>这三题里，dummy的具体用法略有区别：21从空结果开始追加，203为连续删除保留前驱，19提供删除头节点时的位置0。它们共同解决的是<strong>第一次连接或删除原头时，普通操作缺少一个可供修改的前驱</strong>。</p>
+<p>这种思考可以和<a href="https://blog.07xiaohei.com/blog/prefix-sum/" rel="noopener noreferrer">前缀和中的空前缀P[0]=0</a>联系起来：前缀和补一个初始累计状态，使从头开始的区间也能直接相减；链表补一个辅助节点，使头部也能使用修改前驱next的操作。两者的具体算法不同，但都先看清普通规则需要什么，再补足边界缺少的条件。</p>
+<p>以后遇到反复判断“是不是第一个节点”的代码，可以先检查<strong>需要稳定入口，还是需要目标前驱，以及补一个固定节点能否统一操作</strong>。dummy提供了结构位置，具体指针仍要按各自职责移动；保存未处理入口、区分变量赋值与next修改，也仍然是连接正确的前提。</p>25:["$","$L1e","6",{"html":"$33"}]
+26:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/in-place-hash/","children":[["$","span",null,{"children":"上一篇"}],"原地哈希（一）：缺失的第一个正数与数组缺失、重复问题"]}],["$","$Lf",null,{"href":"/blog/linked-list-basics/","children":[["$","span",null,{"children":"下一篇"}],"链表（一）：节点、引用与next连接"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","two-sum",{"children":[["$","$Lf",null,{"href":"/blog/two-sum/","children":"哈希表（一）：两数之和的补数查询"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","hash-table-introduction",{"children":[["$","$Lf",null,{"href":"/blog/hash-table-introduction/","children":"哈希表（二）：键值映射与Python字典查找"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","longest-substring-without-repeating-characters",{"children":[["$","$Lf",null,{"href":"/blog/longest-substring-without-repeating-characters/","children":"滑动窗口（一）：无重复字符的最长子串"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","sliding-window-209-438",{"children":[["$","$Lf",null,{"href":"/blog/sliding-window-209-438/","children":"滑动窗口（二）：长度最小的子数组与找到字符串中所有字母异位词"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","two-pointers-42-167",{"children":[["$","$Lf",null,{"href":"/blog/two-pointers-42-167/","children":"相向双指针（一）：接雨水与两数之和II"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","difference-array",{"children":[["$","$Lf",null,{"href":"/blog/difference-array/","children":"差分数组（一）：航班预订统计与合并区间"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","prefix-sum",{"children":[["$","$Lf",null,{"href":"/blog/prefix-sum/","children":"前缀和（一）：区域和检索与和为K的子数组"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","in-place-hash",{"children":[["$","$Lf",null,{"href":"/blog/in-place-hash/","children":"原地哈希（一）：缺失的第一个正数与数组缺失、重复问题"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","linked-list-basics",{"children":[["$","$Lf",null,{"href":"/blog/linked-list-basics/","children":"链表（一）：节点、引用与next连接"}],["$","span",null,{"children":"算法与数据结构"}]]}]]}]]}]]}]
+27:["$","$L34",null,{"contentId":"dummy-node-linked-lists"}]
+28:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],["$","$Lf",null,{"href":"/blog/merge-sort/","children":"体验归并排序"}]]}]
+29:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6","$a:0:1:d:r:props:children:0:props:children:1:props:headings:7","$a:0:1:d:r:props:children:0:props:children:1:props:headings:8","$a:0:1:d:r:props:children:0:props:children:1:props:headings:9","$a:0:1:d:r:props:children:0:props:children:1:props:headings:10","$a:0:1:d:r:props:children:0:props:children:1:props:headings:11","$a:0:1:d:r:props:children:0:props:children:1:props:headings:12","$a:0:1:d:r:props:children:0:props:children:1:props:headings:13","$a:0:1:d:r:props:children:0:props:children:1:props:headings:14","$a:0:1:d:r:props:children:0:props:children:1:props:headings:15","$a:0:1:d:r:props:children:0:props:children:1:props:headings:16","$a:0:1:d:r:props:children:0:props:children:1:props:headings:17","$a:0:1:d:r:props:children:0:props:children:1:props:headings:18","$a:0:1:d:r:props:children:0:props:children:1:props:headings:19","$a:0:1:d:r:props:children:0:props:children:1:props:headings:20","$a:0:1:d:r:props:children:0:props:children:1:props:headings:21","$a:0:1:d:r:props:children:0:props:children:1:props:headings:22","$a:0:1:d:r:props:children:0:props:children:1:props:headings:23","$a:0:1:d:r:props:children:0:props:children:1:props:headings:24"]}]
+2b:null
+7:C
+1c:0
+9:"$undefined"
+5:"$undefined"
+1b:"$undefined"
+15:"$undefined"
