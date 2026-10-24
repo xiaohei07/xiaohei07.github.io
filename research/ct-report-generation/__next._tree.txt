@@ -1,6 +1,6 @@
 :HL["/_next/static/css/ed72070de5f1647a.css","style"]
-:HL["/_next/static/css/9bb6c7702d40846d.css","style"]
+:HL["/_next/static/css/a323f5f1e281fdbc.css","style"]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"topic","t":"d","k":"ct-report-generation","s":[]},"h":65632,"c":"$Q3"}]]
 1:[["children",{"s":"research","h":131136,"c":"$Q2"}]]
-0:{"b":"D2jJOsQvX1tewV4nVZt-b","t":{"t":{"s":"","h":131088,"c":"$Q1"}}}
+0:{"b":"lPQHtz5V686I814a7y5zQ","t":{"t":{"s":"","h":131088,"c":"$Q1"}}}
