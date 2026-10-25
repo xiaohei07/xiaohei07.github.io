@@ -1,0 +1,154 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+b:I[887,[],"OutletBoundary"]
+c:"$Sreact.suspense"
+e:"ViewportBoundary"
+f:I[887,[],"$e"]
+11:"MetadataBoundary"
+12:I[887,[],"$11"]
+14:I[5718,[],"default",1]
+:HL["/_next/static/css/ed72070de5f1647a.css","style"]
+:HL["/_next/static/css/6241f55ce16a0817.css","style"]
+6:X
+9:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]]}],"p":false,"v":null}}]]
+8:[["children",{"s":{"n":"page","t":"d","k":"interview","s":[]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q9"}]]
+7:[["children",{"s":{"n":"project","t":"d","k":"shicheng","s":["mental-health-evaluation"]},"h":197120,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"projects","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","projects","shicheng","interview",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/6241f55ce16a0817.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":"$L13"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$14",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"fLRi0L0GUI3JUvO3VynCJ"}
+6:C
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+15:Tb2c,(()=>{const d={"wallpaper":"banner","layout":"list","cardStyle":"soft","textSize":"normal","hero":true,"carousel":false,"waves":false,"fade":true,"motion":true,"typewriter":true,"progress":true,"petals":false,"dim":28,"blur":0,"cardOpacity":78,"colorMode":"section","customColor":"#32846b","sectionColors":{},"customTheme":"","sectionThemes":{}},enums={"wallpaper":["banner","fullscreen","overlay","none"],"layout":["list","grid"],"cardStyle":["soft","flat"],"textSize":["normal","large"],"colorMode":["section","custom"]},bools=["hero","carousel","waves","fade","motion","typewriter","progress","petals"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]));const color=(function(a,b){let c=b.startsWith("/credits")?"about":b.split("/")[1],d=["home","blog","research","projects","about"].includes(c)?c:"home",e=(a.sectionColors&&"object"==typeof a.sectionColors&&!Array.isArray(a.sectionColors)?a.sectionColors:{})[d],f="string"==typeof e&&/^#[\da-f]{6}$/i.test(e)?e.toLowerCase():void 0,g="string"==typeof a.customColor&&/^#[\da-f]{6}$/i.test(a.customColor)?a.customColor.toLowerCase():"#32846b",h=a.sectionThemes&&"object"==typeof a.sectionThemes&&!Array.isArray(a.sectionThemes)?a.sectionThemes:{},i="custom"===a.colorMode?a.customTheme:h[d],j="string"==typeof i&&["home","blog","research","projects","about"].includes(i)?i:void 0;return{section:d,color:"custom"===a.colorMode?g:f??g,customized:"custom"===a.colorMode?!j:!!f,theme:j??d}})(p,location.pathname);document.documentElement.setAttribute('data-custom-palette',String(color.customized));document.documentElement.setAttribute('data-palette-section',color.theme);const palette=(function(a){let b=/^#[\da-f]{6}$/i.test(a)?a:"#32846b",c=[1,3,5].map(a=>Number.parseInt(b.slice(a,a+2),16)),d={};for(let[a,[b,e]]of Object.entries({"light-page":[248,.09],"light-surface":[255,.025],"light-surface-soft":[252,.05],"light-surface-raised":[246,.08],"light-ink":[0,.15],"light-muted":[0,.32],"light-line":[213,.12],"light-accent":[0,.4],"light-accent-strong":[0,.3],"light-accent-soft":[248,.1],"light-on-accent":[255,0],"dark-page":[16,.025],"dark-surface":[26,.045],"dark-surface-soft":[22,.04],"dark-surface-raised":[33,.06],"dark-ink":[255,.12],"dark-muted":[255,.34],"dark-line":[72,.1],"dark-accent":[255,.35],"dark-accent-strong":[255,.22],"dark-accent-soft":[24,.1],"dark-on-accent":[0,.1]}))d[`--palette-${a}`]=`#${c.map(a=>Math.round(b*(1-e)+a*e).toString(16).padStart(2,"0")).join("")}`;return d})(color.color);for(const k in palette)document.documentElement.style.setProperty(k,palette[k])})()2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$15"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],"$L16"]}],"$L17"]}]
+18:"static/chunks/5587-bf231f55b3fd3ee7.js"
+19:"static/chunks/7107-d67496718f7d4082.js"
+1a:"static/chunks/app/layout-883cb555fbda7bdc.js"
+1b:I[5376,["5587","$18","7107","$19","7177","$1a"],"DisplayProvider"]
+1c:"NavigationFeedback"
+1d:I[2842,["5587","$18","7107","$19","7177","$1a"],"$1c"]
+1e:I[4085,["5587","$18","7107","$19","7177","$1a"],"SiteHeader"]
+1f:I[5803,["5587","$18","7107","$19","7177","$1a"],"SiteFrame"]
+20:I[164,["5587","$18","7107","$19","7177","$1a"],"ProfileSidebar"]
+21:"static/chunks/8612-cbc92f3b94933c0e.js"
+22:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-125d4ec691c8a1a8.js"
+23:I[3498,["5587","$18","8612","$21","4067","$22"],"default"]
+16:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]
+17:["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L1b",null,{"children":[["$","$L1d",null,{}],["$","$L1e",null,{"tags":["编程语言知识点","Python","C++"],"categoryIds":["foundations","frontend","backend","agent","computing","ai","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L1f",null,{"sidebar":["$","$L20",null,{"categoryIds":"$17:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L23",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L23",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L23",null,{"href":"/about/","children":"关于这个站点"}],["$","$L23",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]
+d:null
+13:[["$","title","0",{"children":"拾程：项目汇报与面试摘要 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"按实际贡献概括拾程的需求、两条输入路径、去重与日期、人工确认、事务和邮件不确定性。"}],["$","link","2",{"rel":"canonical","href":"/projects/shicheng/interview/"}]]
+25:I[5128,["5587","$18","8612","$21","4067","$22"],"ArticleToc"]
+26:I[4711,["5587","$18","8612","$21","4067","$22"],"ArticleBody"]
+27:T2dd0,<p>本篇配合<a href="/projects/shicheng/">完整文章</a>使用。完整原理先看正文，下列内容用于汇报组织与快速回看；问答保持自然专业，不模拟个人口头习惯。采用2026-10-25代码快照，历史最新发布线索为20261022-f。</p>
+<h2 id="section-一先说项目与实际贡献">一、先说项目与实际贡献</h2>
+<h3 id="section-11-开场介绍">1.1 开场介绍</h3>
+<p>拾程是我围绕个人招聘信息整理需求推进的AI辅助开发项目。微信群通知经常分散在链接、海报和补充消息中，同一活动还会跨群转发。我希望先批量接收，再决定保存、忽略或加入日程，并对重要安排单独开启邮件提醒。</p>
+<p>我负责需求与规则取舍、配置参与和试用验收，没有亲自编写或独立修改模块。代码、脚本和测试由Codex辅助实现，MiniMax负责从选定材料提取结构化候选。当前使用改善是定性反馈，没有节省工时或总体准确率数据。</p>
+<p>系统采用FastAPI、SQLite和直接模型HTTP调用。本机微信处理与服务器收件有不同的进度和预算机制，后面共用来源保存、人工确认与邮件账本。可以重点讲上下文与身份、日期证据、短事务、人工决定保护，以及SMTP结果不确定性的处理。</p>
+<h3 id="section-12-汇报顺序">1.2 汇报顺序</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>顺序</th><th>建议说明</th><th>正文位置</th></tr></thead><tbody><tr><td>场景与目标</td><td>信息碎片化、批量筛选、线下与招聘分开</td><td>第一节</td></tr><tr><td>完整链路</td><td>两条入口到候选，再到人工确认与邮件</td><td>第二节</td></tr><tr><td>具体问题</td><td>同公司不同场次、无年日期、忽略后重入</td><td>第三、四节</td></tr><tr><td>核心机制</td><td>持久任务、事务与版本，或邮件提交未知</td><td>第五—七节</td></tr><tr><td>效果和边界</td><td>选择一个同样本对比，说明测试环境和未测项</td><td>第十节</td></tr></tbody></table>
+<p>时间有限时，选一个问题讲清输入、错误原因、改动与验证，其他模块留作追问。不要把架构名词连成清单后省略因果。</p>
+<h2 id="section-二机制短答与继续追问">二、机制短答与继续追问</h2>
+<h3 id="section-21-为什么不用常驻通用agent而直接调用模型">2.1 为什么不用常驻通用Agent，而直接调用模型</h3>
+<p><strong>短答：</strong>需求链路固定，服务器资源有限。模型负责提取，应用负责持久状态、人工确认和提醒，直接HTTP调用符合当前范围。没有做OpenClaw同负载对照，不能说节省了某个比例。</p>
+<p><strong>继续追问：</strong>本机复杂微信提取后提交结构化结果，服务器不再次调用模型；手机上传才进入服务器持久任务。本机材料尝试可包含多组图片，因此一份材料也可能超过3次模型请求；输出分片只是本地处理。串行、缓存和预算分属各自路径。参见正文2.1、5.4；M001/M003，K001/K007，E085—E093。</p>
+<h3 id="section-22-上下文合组与活动去重有什么区别">2.2 上下文合组与活动去重有什么区别</h3>
+<p><strong>短答：</strong>上下文合组让模型一起看相关消息，不宣告它们是同一活动。同发送人相邻消息可以补充语义；不同链接集合和招聘汇总会限制合组。之后再按企业、日期、地点、场次等判断同场。</p>
+<p><strong>继续追问：</strong>消息身份控制重叠扫描，材料身份减少重复提取，活动身份合并跨群来源，人工决定匹配保留忽略结果。只按正文哈希无法同时解决这些问题，也不能忽略一个公司后就屏蔽其全部新活动。参见正文3.1—3.4；M003，K003，E006—E009。</p>
+<h3 id="section-23-增量失败后怎么继续能保证不漏不重吗">2.3 增量失败后怎么继续，能保证不漏不重吗</h3>
+<p><strong>短答：</strong>先持久保存pending批次、范围和结果缓存，全部提交成功返回后才推进游标与已见编号。部分提交或回执丢失会重试，服务端去重继续保护业务记录。</p>
+<p><strong>继续追问：</strong>这不是跨本机与服务器的共同事务，也不是恰好一次模型调用。十分钟重叠不能覆盖更早的迟到同步消息，本机未取得的微信记录也无法凭游标补全。参见正文3.3；M003，K003，E007/E079。</p>
+<h3 id="section-24-1022日19-00与明天如何处理">2.4 “10.22日19-00”与“明天”如何处理</h3>
+<p><strong>短答：</strong>明确月日钟点从候选对应的原文依据解析；缺年按运行时上海当前年补齐并留下说明，显式活动年优先。“2027届”是届别，不能当活动年；只有日期时保留date精度，不造零点。</p>
+<p><strong>继续追问：</strong>相对日期需要原消息时间。合组正文和提示词保留逐条时间，但当前准入仍检查材料级时间，没有逐候选时间映射；不符时追加待核对原因，不自动重算或拒绝整次同步。跨午夜因此仍是边界，模拟提取器也不能代替真实路径的证明。参见正文第四节；M004，K004，E082—E084/E088/E090。</p>
+<h3 id="section-25-为什么有数据库事务还要租约令牌和版本">2.5 为什么有数据库事务，还要租约令牌和版本</h3>
+<p><strong>短答：</strong>事务保证相关数据库更新共同提交；租约和令牌判断这次任务执行是否仍有效；材料版本防止旧提取结果覆盖新材料，页面版本防止旧页面覆盖新决定。它们保护的对象不同。</p>
+<p><strong>继续追问：</strong>SQLite当前用DELETE回滚日志，显式BEGIN IMMEDIATE。模型网络在事务外，避免长时间占写锁；返回后重查条件。to_thread只是把阻塞工作转到线程，单Web worker不等于一条线程。参见正文第五节、6.1；M001/M002/M005，K001/K002/K005，E003/E004/E009/E013。</p>
+<h3 id="section-26-批量处理一项过时为什么不用全批失败">2.6 批量处理一项过时，为什么不用全批失败</h3>
+<p><strong>短答：</strong>每项携带指纹，在事务内设置SAVEPOINT。已知单项冲突回退这一项并说明，其余合法项继续；未知异常仍使外层事务整体回滚。内部RELEASE不是独立提交。</p>
+<p><strong>继续追问：</strong>批量保存只处理合适的新增候选，改期、取消和潜在重复需逐项核对；服务端强制关闭邮件。恢复保留ID、时间与来源，也关闭邮件，不把恢复可见性当作恢复通知授权。参见正文6.2—6.3；M005，K005，E009/E070/E071。</p>
+<h3 id="section-27-smtp超时为什么不能直接重试">2.7 SMTP超时为什么不能直接重试</h3>
+<p><strong>短答：</strong>DATA阶段断线时，服务器可能已受理，只是最终回复丢失。项目将此类传输异常标为uncertain，不自动重发；明确临时拒绝或DATA前的部分连接失败可以有限重试。accepted只代表服务受理，不能等同收件箱送达。</p>
+<p><strong>继续追问：</strong>取消在提交前核对生效；进入submitting后不能保证撤回。稳定Message-ID没有通用的服务端去重保证。为降低重复风险，不确定时需要人工核查，代价是不能保证自动补发所有实际未送达项。参见正文7.2—7.3；M006，K006，E012/E054/E073。</p>
+<h3 id="section-28-为什么地点修改和时间修改要分两种版本">2.8 为什么地点修改和时间修改要分两种版本</h3>
+<p><strong>短答：</strong>内容版本记录标题、地点等变化；时间版本用于提醒相关变化。只补地点不应重新产生一封已受理的常规提醒，所以邮件账本与时间版本关联。</p>
+<p><strong>继续追问：</strong>独立timer触发后查due_at小于等于当前时间的记录，不能只查当前分钟。Persistent补触发，具体补漏仍靠账本；活动已开始则过期。每分钟调度也不保证一分钟内送达。参见正文7.1、7.4；M006，K006，E009/E012/E019。</p>
+<h3 id="section-29-url日历导出和备份各有什么容易误判的边界">2.9 URL、日历导出和备份各有什么容易误判的边界</h3>
+<p><strong>短答：</strong>URL需核对实际公网连接与每次重定向；ICS文件需正确转义、按字节折行并提供稳定身份；数据库快照与附件必须分别保存和检查。三个功能都不能只用“生成了结果”证明完整正确。</p>
+<p><strong>继续追问：</strong>本机图片补充不等于所有服务器URL都能读到海报；ICS不等于双向日历同步；哈希一致只证明已取得文件的复制一致；代码回退不能覆盖后续人工决定和邮件账本。参见正文第八、九节；M007—M009，K007—K009。</p>
+<h3 id="section-210-20857mib能证明可以降到2gb吗">2.10 208.57MiB能证明可以降到2GB吗</h3>
+<p><strong>短答：</strong>不能。它是历史有限Linux回放的共享slice峰值，包含正常API、验证API和模拟邮件；四张5MiB合成图经过真实编码与序列化，远端由MockTransport接管，邮件为dry_run。它只支持该负载下的预算结论。</p>
+<p><strong>继续追问：</strong>40.9MiB是另一轮即时读数，384MiB是硬限制；分项峰值不一定同时发生，不能相加。其他项目繁忙共存、长期真实模型与SMTP、2GB整机配置都缺少等价验证。参见正文10.1；M008，K008，E018/E020/E022/E023。</p>
+<h2 id="section-三效果用这些证据陈述">三、效果用这些证据陈述</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>可以讲的结果</th><th>必须保留的范围</th></tr></thead><tbody><tr><td>同50条忽略候选，修正前43条被抑制，修正后50条被抑制</td><td>内存副本同样本对比；不是未来准确率100%</td></tr><tr><td>f版Windows与Linux各187项历史测试通过</td><td>特定版本和集合，不是本次文章整理重新执行</td></tr><tr><td>2026-10-25项目方91项隔离测试通过</td><td>8个模块、临时库与模拟输入，无真实模型/邮件</td></tr><tr><td>一份合成文字和一份合成图片分别通过真实模型字段断言</td><td>两个接口样例，不是代表性海报评测</td></tr><tr><td>用户确认一封真实测试邮件收到，当前自用更舒服</td><td>无长期收件率、延迟或节省工时统计</td></tr></tbody></table>
+<p>17条新消息、19份同步材料、6项线下和12项招聘待处理，是同一历史处理中不同对象的数量，不要用它们计算处理准确率。303项提取机会不等于303项确认安排；165张已有图片不等于全部原图已取得。</p>
+<h2 id="section-四个人掌握与未解决项">四、个人掌握与未解决项</h2>
+<p>被问亲自写了哪段代码，应按事实回答当前没有亲自编写或独立修改模块；可以具体解释需求、验收判断，以及当时实际理解了哪些实现。稿件说明不能自动成为个人独立排错或开发的证明。</p>
+<p>仍需保留：总体准确率未测、相对日期与迟到记录边界、图片及受限链接缺失、SMTP长期效果未统计、安卓实机和外部日历未完整验收、忙时共存及2GB降配未测。本次写作不启动这些补测。</p>
+<p>后续可以在临时数据库或模拟传输中练习版本冲突、SAVEPOINT和SMTP不确定结果，记录输入、步骤、观察与自己的解释；这些是建议，尚未作为本人完成的实践。资料版本与来源见<a href="/projects/shicheng/references/">资料与核对说明</a>。</p>a:["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"shicheng-interview-summary","children":[["$","header",null,{"className":"article-heading","children":["$L24",["$","h1",null,{"tabIndex":-1,"children":"拾程：项目汇报与面试摘要"}],["$","p",null,{"className":"article-deck","children":"按实际贡献概括拾程的需求、两条输入路径、去重与日期、人工确认、事务和邮件不确定性。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["2,817"," 字"]}],["$","span",null,{"children":["阅读约 ",9," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","个人工具",{"children":"个人工具"}],["$","span","AI辅助开发",{"children":"AI辅助开发"}]]}]]}],["$","$L25",null,{"headings":[{"id":"section-一先说项目与实际贡献","text":"一、先说项目与实际贡献","level":2},{"id":"section-11-开场介绍","text":"1.1 开场介绍","level":3},{"id":"section-12-汇报顺序","text":"1.2 汇报顺序","level":3},{"id":"section-二机制短答与继续追问","text":"二、机制短答与继续追问","level":2},{"id":"section-21-为什么不用常驻通用agent而直接调用模型","text":"2.1 为什么不用常驻通用Agent，而直接调用模型","level":3},{"id":"section-22-上下文合组与活动去重有什么区别","text":"2.2 上下文合组与活动去重有什么区别","level":3},{"id":"section-23-增量失败后怎么继续能保证不漏不重吗","text":"2.3 增量失败后怎么继续，能保证不漏不重吗","level":3},{"id":"section-24-1022日19-00与明天如何处理","text":"2.4 “10.22日19-00”与“明天”如何处理","level":3},{"id":"section-25-为什么有数据库事务还要租约令牌和版本","text":"2.5 为什么有数据库事务，还要租约令牌和版本","level":3},{"id":"section-26-批量处理一项过时为什么不用全批失败","text":"2.6 批量处理一项过时，为什么不用全批失败","level":3},{"id":"section-27-smtp超时为什么不能直接重试","text":"2.7 SMTP超时为什么不能直接重试","level":3},{"id":"section-28-为什么地点修改和时间修改要分两种版本","text":"2.8 为什么地点修改和时间修改要分两种版本","level":3},{"id":"section-29-url日历导出和备份各有什么容易误判的边界","text":"2.9 URL、日历导出和备份各有什么容易误判的边界","level":3},{"id":"section-210-20857mib能证明可以降到2gb吗","text":"2.10 208.57MiB能证明可以降到2GB吗","level":3},{"id":"section-三效果用这些证据陈述","text":"三、效果用这些证据陈述","level":2},{"id":"section-四个人掌握与未解决项","text":"四、个人掌握与未解决项","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[["$","nav",null,{"className":"series-reading","aria-label":"项目内阅读","children":["$","div",null,{"children":[["$","$L23","shicheng-project-retrospective",{"href":"/projects/shicheng/","aria-current":"$undefined","children":"项目正文"}],["$","$L23","shicheng-interview-summary",{"href":"/projects/shicheng/interview/","aria-current":"page","children":"汇报摘要"}],["$","$L23","shicheng-references",{"href":"/projects/shicheng/references/","aria-current":"$undefined","children":"资料说明"}]]}]}],["$","$L26",null,{"html":"$27","zoomImages":true}],"$L28"]}],"$L29"]}]]}]
+28:["$","div",null,{"className":"related-note","children":[["$","$L23",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L23",null,{"href":"/projects/shicheng/","children":"返回项目正文"}]]}]
+29:["$","$L25",null,{"headings":"$a:props:children:1:props:headings"}]
+2a:I[6279,["5587","$18","8612","$21","4067","$22"],"FilterLink"]
+24:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L23",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L23",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$L23",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L2a",null,{"className":"trail-current","href":"/projects/","children":["个人工具",["$","span",null,{"children":1}]]}],"$undefined"]}]

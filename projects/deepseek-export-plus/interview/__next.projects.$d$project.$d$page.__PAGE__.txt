@@ -1,0 +1,142 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+d:"static/chunks/5587-bf231f55b3fd3ee7.js"
+e:"static/chunks/8612-cbc92f3b94933c0e.js"
+f:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-125d4ec691c8a1a8.js"
+10:I[3498,["5587","$d","8612","$e","4067","$f"],"default"]
+11:I[6279,["5587","$d","8612","$e","4067","$f"],"FilterLink"]
+12:I[5128,["5587","$d","8612","$e","4067","$f"],"ArticleToc"]
+13:I[4711,["5587","$d","8612","$e","4067","$f"],"ArticleBody"]
+19:"ViewportBoundary"
+1a:I[887,[],"$19"]
+1b:"MetadataBoundary"
+1c:I[887,[],"$1b"]
+1d:"$Sreact.suspense"
+6:X
+6:C
+7:X
+14:T2a6f,<p>这是<a href="/projects/deepseek-export-plus/">完整复盘文章</a>的汇报提纲，技术基准为v2.3.0/c673ba7。详细原理先看正文，下面用于组织现场说明和快速回看。问答采用自然专业表达，不模拟个人口头习惯。</p>
+<h2 id="section-一先说明项目和自己的实际贡献">一、先说明项目和自己的实际贡献</h2>
+<h3 id="section-11-开场介绍">1.1 开场介绍</h3>
+<p>我主导了一个基于开源项目的DeepSeek对话导出扩展改进，主要负责需求、失败样例、真实chat/share效果核验和版本取舍，代码分析、实现与测试由GPT/Codex协作完成。我没有亲自修改代码，也没有独立复现这些故障，目前在补齐代码机制和排错原理。</p>
+<p>项目来自保存对话时遇到的实际问题：代码卡片会混入控件文字，折叠内容和工具记录不一定完整，附件也需要单独保存。成品面向Chromium桌面浏览器，支持选轮，导出Markdown、HTML、TXT、JSON、Word和PNG；PDF保留浏览器打印另存。</p>
+<p>实现上，先把chat/share的不同数据来源转换为共同会话模型，再让不同格式复用消息与附件。比较有代表性的难点是虚拟列表的完整读取、思考与工具顺序、Word的XML合法性、附件路径兼容，以及不破坏宿主布局的工具栏。已有具体修复与历史测试记录，但没有统一性能基线，也不承诺所有网页版本和阅读器兼容。</p>
+<h3 id="section-12-汇报时的展开顺序">1.2 汇报时的展开顺序</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>讲述内容</th><th>重点说明</th><th>对应正文</th></tr></thead><tbody><tr><td>动机与分工</td><td>保存自己的对话；基于上游；需求、核验和AI实现分别归属</td><td>开头、第一节</td></tr><tr><td>一条完整链路</td><td>取得消息→形成模型→选轮→准备资源→格式转换→下载</td><td>第二节</td></tr><tr><td>一个信息完整性问题</td><td>虚拟列表边滚边收集，按身份去重；思考和工具保留顺序</td><td>第三节</td></tr><tr><td>一个真正发生过的故障</td><td>SVG解码与Word正文XML分别出错，修复层次不同</td><td>第六节</td></tr><tr><td>效果与局限</td><td>说具体样例、环境和断言；未测性能不报数字</td><td>第九、十节</td></tr></tbody></table>
+<p>时间有限时，选一条故障链讲完整即可。不要为了列全技术栈，把每个术语都压成一句没有因果的名称。</p>
+<h2 id="section-二核心机制的短答与追问">二、核心机制的短答与追问</h2>
+<h3 id="section-21-为什么不直接把页面文本复制下来">2.1 为什么不直接把页面文本复制下来</h3>
+<p><strong>短答：</strong>页面文本不能完整代表会话。折叠内容可能未出现在DOM，虚拟列表也可能卸载旧消息；代码卡片还包含复制等控件。项目按页面类型提取，再转换为共同模型，下游格式复用这一结果。</p>
+<p><strong>继续追问：</strong>share优先使用公开分享响应；chat先尝试挂载消息对象，没有对象才采用历史缓存，结构化解析成功便返回，未成功才进入DOM回退。对象存在不保证逐字段完整，也不会自动补齐缺失思考。统一模型减少输出分叉，不能保证服务端原子快照。参见正文2.1、3.1—3.2；M002/M003，K001/K003，E007—E010。</p>
+<h3 id="section-22-虚拟列表为什么必须边滚边保存">2.2 虚拟列表为什么必须边滚边保存</h3>
+<p><strong>短答：</strong>节点可能随滚动卸载。若顶部只能读到A/B/C，底部只能读到C/D/E，最后才扫描就会漏A/B。应在每次访问窗口时保存，按稳定身份去重，最终得到A到E。</p>
+<p><strong>继续追问：</strong>两次“继续”可以是不同消息，按正文去重会误删。项目有稳定key、消息ID和节点身份等回退，节点重用仍是边界。快速读完全部挂载消息也不是漏读，验证应比较首尾、数量和顺序。参见正文3.1；M003，K003。</p>
+<h3 id="section-23-思考与工具为什么放在同一个序列里">2.3 思考与工具为什么放在同一个序列里</h3>
+<p><strong>短答：</strong>它们有时间顺序。输入“思考A→搜索B→思考C→打开D”若先合并思考再附工具，会变成A→C→B→D。统一有序片段才能保留判断与操作的相对关系。</p>
+<p><strong>继续追问：</strong>工具地址只取真实来源字段，不根据回答内容补造。默认不导出思考只约束输出；选轮也不等于只读取选中的轮次。首次带思考重取会话后只比较轮数，相同轮数内的内容变化不一定被拒绝，原数字轮号仍应用到新模型。参见正文3.2—3.3；M004，K003/K004，E006/E014。</p>
+<h3 id="section-24-word生成成功为什么实际还会打不开">2.4 Word生成成功，为什么实际还会打不开</h3>
+<p><strong>短答：</strong>DOCX是包含XML和资源的ZIP，生成容器不代表内部XML合法。历史故障定位到正文中的U+000C、U+0008，项目通过统一<code>wordText</code>入口把非法字符变成可见转义，再检查全部XML与实际Word打开。</p>
+<p><strong>继续追问：</strong>PNG只保存像素，成功不代表Word文本合法；把非法字符写成数值实体也不能绕过XML 1.0字符规则。此前SVG的<code>&#x26;nbsp;</code>解码问题则发生在HTML到XML序列化边界，采用命名空间与XMLSerializer修复，两者不能混为一次“编码修复”。参见正文6.2—6.3；M007，K006。</p>
+<h3 id="section-25-word公式和附件分别以什么方式保存">2.5 Word公式和附件分别以什么方式保存</h3>
+<p><strong>短答：</strong>普通段落、代码和表格映射为可编辑Word结构，公式以图片保存并在替代文本中保留LaTeX。文档附件不内嵌：勾选附带资源且下载成功时，放在同级assets并用相对链接访问；未附带时可能保留在线链接，失败项注明未打包。</p>
+<p><strong>继续追问：</strong>LaTeX替代文本不等于原生OMML公式，外部链接也不等于OLE嵌入。移动已附带资源的文档时要保留assets；原生可编辑公式转换仍是候选能力，没有实现。参见正文6.1；M007，K005/K006/K007。</p>
+<h3 id="section-26-为什么中文附件链接需要专门适配">2.6 为什么中文附件链接需要专门适配</h3>
+<p><strong>短答：</strong>归档路径和URI是同一目标的不同表示。网页链接需要转义特殊字符，Word历史本机验证又显示全编码中文相对链接不能正确跟随，因此单独解开非ASCII转义，保留空格、<code>#</code>和<code>%</code>等ASCII字符的编码。</p>
+<p><strong>继续追问：</strong>不能直接全部decode，否则<code>#</code>可能变成片段起点，字面<code>%E8</code>还可能被误作另一层编码。验证要实际打开目标文件并核对正文，不只是检查字符串。规则只对已测消费者负责。参见正文5.2；M005/M006，K005。</p>
+<h3 id="section-27-设置超时点取消撤回同意有什么区别">2.7 设置超时、点取消、撤回同意有什么区别</h3>
+<p><strong>短答：</strong>超时结束调用方等待，取消请求底层协作停止，授权代次检查拒绝过期结果。<code>Promise.race</code>不会自动终止没胜出的任务；AbortSignal也只有在下游支持时才有效。</p>
+<p><strong>继续追问：</strong>任务在代次7开始，撤回变8、再次同意变9，旧结果7不能因为当前同意而生效。普通关闭窗口、撤回授权和网页内容变化的检查范围不同；当前没有全链路立即中止，也没有覆盖所有消息修订的一致性锁。参见正文第八节；M001/M002/M005，K001/K002。</p>
+<h3 id="section-28-工具栏为什么不能只靠加大z-index">2.8 工具栏为什么不能只靠加大z-index</h3>
+<p><strong>短答：</strong>z-index只能处理部分层叠问题，不能解决插入Grid/Flex后撑高输入框、找错弹窗输入框或父容器裁切。项目将入口放在body独立定位，根据真实控件矩形找空位，空间不足时回退。</p>
+<p><strong>继续追问：</strong>验证分视觉、矩形、命中与真实点击，并确认原控件未被挤动。历史96组是布局组合，不是96个真实账号。参见正文第七节；M009，K008。</p>
+<h2 id="section-三效果用哪几项证据说明">三、效果用哪几项证据说明</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>可以直接说的事实</th><th>必须随同保留的条件</th></tr></thead><tbody><tr><td>旧Grid复现把输入框从162px撑到206px，独立定位后保持162px</td><td>是指定历史复现条件，不是全网布局证明</td></tr><tr><td>两份修复后DOCX各17个XML部分合法，实际Word打开且末尾标记保留</td><td>历史本机Word结果；完整构建号未统一保存</td></tr><tr><td>三类中文/特殊字符路径在Word中实际打开目标附件</td><td>不扩写成全部Word、WPS和操作系统兼容</td></tr><tr><td>多个附件合成一次ZIP下载，部分失败留下清单</td><td>说明操作次数与失败处理，不表示网络提速比例</td></tr><tr><td>2.3.0记录有56项单元测试、十套浏览器脚本、96布局及9弹窗组合</td><td>不同口径存在包含关系，不能相加为覆盖率</td></tr></tbody></table>
+<p><strong>没有同口径耗时、峰值内存、用户增长或收益数据。</strong>可以解释成功URL复用、完整挂载快路径和按需加载的作用；若被问“快了多少”，应直接说明尚无可以支持该数字的基线。</p>
+<p>分享页XLSX失败也需要保留：chat可取得，share网页本身失败及404支持“已测分享侧不可取得”，不能推断所有Excel的官方共享政策，更不能声称已修复平台服务。</p>
+<h2 id="section-四本人能力与下一步练习">四、本人能力与下一步练习</h2>
+<p>被问“哪段代码是你写的”时，按已确认事实回答目前没有亲自修改。可以继续说明需求与核验做了什么，并分析自己已理解的代码；不能把这份文章中的解释自动变成独立开发或排错经历。</p>
+<p>如果要补独立动手证据，可以从一个范围较小的练习开始：构造含U+000C的文本，比较DOCX容器、XML解析与实际Word打开三层检查；或者构造中文、<code>#</code>和字面百分号文件名，逐层检查归档路径与目标链接。这些是建议，尚未作为本人练习完成。完成后再记录日期、环境、输入、操作、观察与失败分支。</p>
+<p>事实来源、版本与仍存限制见<a href="/projects/deepseek-export-plus/references/">资料与核对说明</a>。</p>c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"deepseek-export-plus-interview-summary","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L10",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L10",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$L10",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L11",null,{"className":"trail-current","href":"/projects/","children":["浏览器扩展",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"DeepSeek Export Plus：项目汇报与面试摘要"}],["$","p",null,{"className":"article-deck","children":"在明确本人贡献的前提下，概括项目动机、导出链路、关键故障、验证证据与可继续追问的边界。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["2,608"," 字"]}],["$","span",null,{"children":["阅读约 ",8," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","浏览器扩展",{"children":"浏览器扩展"}],["$","span","AI辅助开发",{"children":"AI辅助开发"}]]}]]}],["$","$L12",null,{"headings":[{"id":"section-一先说明项目和自己的实际贡献","text":"一、先说明项目和自己的实际贡献","level":2},{"id":"section-11-开场介绍","text":"1.1 开场介绍","level":3},{"id":"section-12-汇报时的展开顺序","text":"1.2 汇报时的展开顺序","level":3},{"id":"section-二核心机制的短答与追问","text":"二、核心机制的短答与追问","level":2},{"id":"section-21-为什么不直接把页面文本复制下来","text":"2.1 为什么不直接把页面文本复制下来","level":3},{"id":"section-22-虚拟列表为什么必须边滚边保存","text":"2.2 虚拟列表为什么必须边滚边保存","level":3},{"id":"section-23-思考与工具为什么放在同一个序列里","text":"2.3 思考与工具为什么放在同一个序列里","level":3},{"id":"section-24-word生成成功为什么实际还会打不开","text":"2.4 Word生成成功，为什么实际还会打不开","level":3},{"id":"section-25-word公式和附件分别以什么方式保存","text":"2.5 Word公式和附件分别以什么方式保存","level":3},{"id":"section-26-为什么中文附件链接需要专门适配","text":"2.6 为什么中文附件链接需要专门适配","level":3},{"id":"section-27-设置超时点取消撤回同意有什么区别","text":"2.7 设置超时、点取消、撤回同意有什么区别","level":3},{"id":"section-28-工具栏为什么不能只靠加大z-index","text":"2.8 工具栏为什么不能只靠加大z-index","level":3},{"id":"section-三效果用哪几项证据说明","text":"三、效果用哪几项证据说明","level":2},{"id":"section-四本人能力与下一步练习","text":"四、本人能力与下一步练习","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[["$","nav",null,{"className":"series-reading","aria-label":"项目内阅读","children":["$","div",null,{"children":[["$","$L10","deepseek-export-plus-retrospective",{"href":"/projects/deepseek-export-plus/","children":"项目正文"}],["$","$L10","deepseek-export-plus-interview-summary",{"href":"/projects/deepseek-export-plus/interview/","aria-current":"page","children":"汇报摘要"}],["$","$L10","deepseek-export-plus-references",{"href":"/projects/deepseek-export-plus/references/","children":"资料说明"}]]}]}],["$","$L13",null,{"html":"$14","zoomImages":true}],"$L15"]}],"$L16"]}]]}],null,"$L17"]}],"p":"$@18","v":null,"s":"$7"}}]]
+a:[["children",{"s":{"n":"page","t":"d","k":"interview","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
+8:[["children",{"s":{"n":"project","t":"d","k":"deepseek-export-plus","s":["mental-health-evaluation"]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"projects","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1a",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1c",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1d",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"DeepSeek Export Plus：项目汇报与面试摘要 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"在明确本人贡献的前提下，概括项目动机、导出链路、关键故障、验证证据与可继续追问的边界。"}],["$","link","2",{"rel":"canonical","href":"/projects/deepseek-export-plus/interview/"}]]}]}],null]}],null]}],"p":"$@1e","v":null,"s":"$7"}},"a":"$@1f","u":"$@20","b":"fLRi0L0GUI3JUvO3VynCJ"}
+21:I[887,[],"OutletBoundary"]
+15:["$","div",null,{"className":"related-note","children":[["$","$L10",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L10",null,{"href":"/projects/deepseek-export-plus/","children":"返回项目正文"}]]}]
+16:["$","$L12",null,{"headings":"$c:0:1:d:r:props:children:0:props:children:1:props:headings"}]
+17:["$","$L21",null,{"children":["$","$1d",null,{"name":"Next.MetadataOutlet","children":"$@22"}]}]
+20:true
+7:300
+22:null
+7:C
+1f:0
+b:"$undefined"
+9:"$undefined"
+5:"$undefined"
+1e:"$undefined"
+18:"$undefined"
