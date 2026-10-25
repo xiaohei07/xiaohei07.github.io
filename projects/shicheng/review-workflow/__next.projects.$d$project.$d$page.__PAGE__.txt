@@ -1,0 +1,65 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+d:"static/chunks/5587-bf231f55b3fd3ee7.js"
+e:"static/chunks/8612-cbc92f3b94933c0e.js"
+f:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-ebed4086c1c4f871.js"
+10:I[3498,["5587","$d","8612","$e","4067","$f"],"default"]
+11:I[6279,["5587","$d","8612","$e","4067","$f"],"FilterLink"]
+12:I[5128,["5587","$d","8612","$e","4067","$f"],"ArticleToc"]
+1c:"ViewportBoundary"
+1d:I[887,[],"$1c"]
+1e:"MetadataBoundary"
+1f:I[887,[],"$1e"]
+20:"$Sreact.suspense"
+6:X
+6:C
+7:X
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"shicheng-review-workflow","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L10",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L10",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$L10",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L11",null,{"className":"trail-current","href":"/projects/","children":["个人工具",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"确认、批量操作与恢复怎样保护用户决定"}],["$","p",null,{"className":"article-deck","children":"用版本、内容指纹与保存点解释旧页面冲突、单项失败、计数及恢复后关闭邮件的原因。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["1,314"," 字"]}],["$","span",null,{"children":["阅读约 ",4," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","并发",{"children":"并发"}],["$","span","事务",{"children":"事务"}],["$","span","状态管理",{"children":"状态管理"}]]}]]}],["$","$L12",null,{"headings":[{"id":"section-一数据库按顺序写入仍可能覆盖旧页面上的决定","text":"一、数据库按顺序写入，仍可能覆盖旧页面上的决定","level":2},{"id":"section-二批量操作保留每项结果","text":"二、批量操作保留每项结果","level":2},{"id":"section-三恢复保持身份不恢复旧邮件授权","text":"三、恢复保持身份，不恢复旧邮件授权","level":2},{"id":"section-四计数要跟着当前对象走","text":"四、计数要跟着当前对象走","level":2},{"id":"section-五网页操作与程序同步使用不同凭据","text":"五、网页操作与程序同步使用不同凭据","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L10",null,{"href":"/projects/shicheng/#project-reading","children":"项目首页与阅读路线"}],["$","span",null,{"children":[4," / ",11," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","shicheng-architecture",{"value":1,"children":["$","$L10",null,{"href":"/projects/shicheng/architecture/","data-reading-start":"true","children":"本机、服务端和提醒任务怎样组成拾程"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","shicheng-material-intake",{"value":2,"children":["$","$L10",null,{"href":"/projects/shicheng/material-intake/","data-reading-start":"true","children":"微信记录、网页和图片怎样成为可处理材料"}]}],["$","li","shicheng-model-extraction",{"value":3,"children":["$","$L10",null,{"href":"/projects/shicheng/model-extraction/","data-reading-start":"true","children":"模型输出怎样变成可检查的候选"}]}],["$","li","shicheng-review-workflow",{"value":4,"children":["$","$L10",null,{"href":"/projects/shicheng/review-workflow/","data-reading-start":"true","aria-current":"page","children":"确认、批量操作与恢复怎样保护用户决定"}]}],["$","li","shicheng-job-queue",{"value":5,"children":["$","$L10",null,{"href":"/projects/shicheng/job-queue/","data-reading-start":"true","children":"串行队列怎样把处理进度留下来"}]}],["$","li","shicheng-mail-reminders",{"value":6,"children":["$","$L10",null,{"href":"/projects/shicheng/mail-reminders/","data-reading-start":"true","children":"一封提醒邮件怎样从日程走到发送结果"}]}],["$","li","shicheng-backup-export",{"value":7,"children":["$","$L10",null,{"href":"/projects/shicheng/backup-export/","data-reading-start":"true","children":"备份、恢复与日历导出分别保存什么"}]}]]}]]}],["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","shicheng-sqlite-transactions",{"value":8,"children":["$","$L10",null,{"href":"/projects/shicheng/sqlite-transactions/","data-reading-start":"true","children":"SQLite怎样处理短事务与并发写入"}]}],["$","li","shicheng-calendar-format",{"value":9,"children":"$L13"}]]}]]}],"$L14"]]}]]}],"$L15","$L16","$L17","$L18"]}],"$L19"]}]]}],null,"$L1a"]}],"p":"$@1b","v":null,"s":"$7"}}]]
+a:[["children",{"s":{"n":"page","t":"d","k":"review-workflow","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
+8:[["children",{"s":{"n":"project","t":"d","k":"shicheng","s":["mental-health-evaluation"]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"projects","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1d",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1f",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$20",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"确认、批量操作与恢复怎样保护用户决定 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"用版本、内容指纹与保存点解释旧页面冲突、单项失败、计数及恢复后关闭邮件的原因。"}],["$","link","2",{"rel":"canonical","href":"/projects/shicheng/review-workflow/"}]]}]}],null]}],null]}],"p":"$@21","v":null,"s":"$7"}},"a":"$@22","u":"$@23","b":"qlxSqwLiBLEa9YI_MjhDr"}
+24:"ProjectLegacyAnchors"
+25:I[1103,["5587","$d","8612","$e","4067","$f"],"$24"]
+26:I[4711,["5587","$d","8612","$e","4067","$f"],"ArticleBody"]
+28:I[887,[],"OutletBoundary"]
+13:["$","$L10",null,{"href":"/projects/shicheng/calendar-format/","data-reading-start":"true","children":"ICS怎样把一条日程交给其他日历"}]
+14:["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","shicheng-date-correction",{"value":10,"children":["$","$L10",null,{"href":"/projects/shicheng/date-correction/","data-reading-start":"true","children":"通知里的“明天”和“10.22”怎样落成时间"}]}],["$","li","shicheng-incremental-dedup",{"value":11,"children":["$","$L10",null,{"href":"/projects/shicheng/incremental-dedup/","data-reading-start":"true","children":"重复通知怎样合并，又不抹掉新的变化"}]}]]}]]}]
+15:["$","$L25",null,{"mappings":[]}]
+27:T158a,<p>模型整理出候选后，拾程还需要回答另一个问题：这项安排是不是用户看过并决定保留的那一份？手机与电脑可能同时打开页面，新的通知也可能补充地点；只让数据库按顺序写入，并不能保护旧页面上做出的决定。</p>
+<p>材料保存输入，reviews保存待确认项，events保存日程，opportunities保存招聘资料。后面提到的版本和指纹，都是为了区分“现在这份内容”与“用户刚才看到的内容”。</p>
+<h2 id="section-一数据库按顺序写入仍可能覆盖旧页面上的决定">一、数据库按顺序写入，仍可能覆盖旧页面上的决定</h2>
+<p>假设手机打开一项日程时，拿到的版本是<code>revision=3</code>。随后电脑把地点改了，版本变为4。手机仍按版本3提交修改，即使这次请求成功取得了独占写入资格，也不代表它应该覆盖版本4。</p>
+<p>项目用<strong>乐观并发控制</strong>解决这一问题：读取时取得版本，提交时携带<code>expected_revision</code>，服务端发现版本已经变化就拒绝并要求刷新。这里的“乐观”表示不在用户整个阅读期间锁住记录，而是在真正提交时检查前提。</p>
+<p>候选批量处理使用内容指纹。指纹由候选内容、操作类型、目标日程和预期版本计算；例如候选地点被补充，指纹随内容改变，用户旧页面上的勾选不能自动被解释为已经核对新内容。来源关联表本身不在这个指纹里，单纯追加来源未必改变指纹。它用于比较特定字段，不是加密或保密措施。</p>
+<h2 id="section-二批量操作保留每项结果">二、批量操作保留每项结果</h2>
+<p>假设用户选择A、B、C三项。提交前B已被另一端处理，A和C仍有效。项目为每项建立<code>SAVEPOINT</code>，即事务内的局部回退点：A正常处理；B遇到已知业务冲突，只回退B并记录原因；C继续处理。最后由外层事务决定整个结果是否提交。</p>
+<p><strong>释放内部SAVEPOINT不等于已经独立落盘。</strong>如果出现未知异常，外层事务仍会整体回滚。<a href="https://www.sqlite.org/lang_savepoint.html" rel="noopener noreferrer">SQLite SAVEPOINT说明</a>明确区分了内部释放与最外层提交。</p>
+<p>批量接口还限制每次1—100项，核对当前状态、分类与指纹。保存只接受合适的新增候选；改期、取消和可能重复的安排转回逐项核对。服务端强制邮件关闭，不依赖前端“没有显示邮件按钮”来保障这条规则。</p>
+<h2 id="section-三恢复保持身份不恢复旧邮件授权">三、恢复保持身份，不恢复旧邮件授权</h2>
+<p>软删除主要改变状态，记录仍留在数据库中，因此可以恢复。它与物理擦除内容是不同操作。</p>
+<p>已忽略候选恢复为同一编号的<code>pending</code>，保留处理历史，并校验内容指纹和上次处理时间。后者很有必要：即使内容没变，另一端可能已经重新作出决定，旧页面也不应撤销这次决定。</p>
+<p>已删除或取消日程恢复为同一编号、原时间和来源，校验版本后回到可用状态，<strong>邮件一律关闭</strong>。如果原活动已经过期，它恢复后仍然可能在过期分区，不会自动被挪到今天。用户想重新启用提醒，需要另行选择，已有受理或不确定账本仍会约束是否可以发送。</p>
+<p><a href="/images/projects/shicheng/restore-mobile.jpg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：拾程手机宽度下的已删除可恢复入口"><img src="/images/projects/shicheng/restore-mobile.jpg" alt="拾程手机宽度下的已删除可恢复入口" width="375" height="811" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p>图为2026-10-22合成响应式截图，展示“已删除·可恢复”入口及空状态。它不是安卓真机截图，也没有展示恢复动作；恢复行为的依据来自隔离测试与历史验收记录。</p>
+<h2 id="section-四计数要跟着当前对象走">四、计数要跟着当前对象走</h2>
+<p>收件箱有10份材料，不代表待确认也应有10项。一份汇总可能产生3项，3份转发可能合并成1项，还有材料会失败或没有识别结果。</p>
+<p>列表与导航复用统一分类规则，先区分线下/招聘，再看待处理、缺字段与过期状态。字段是否缺失按真实内容判断，不能只看到提示里出现“冲突”或“年份”就认定为空。材料最初的处理状态也不一定反映后来已合并、确认或忽略的结果，展示需要结合当前关联项。</p>
+<h2 id="section-五网页操作与程序同步使用不同凭据">五、网页操作与程序同步使用不同凭据</h2>
+<p>手机网页登录后用Cookie维持会话，写操作还检查CSRF token和Origin；本机程序同步使用请求头中的长Bearer令牌，短登录口令不能拿来调用程序接口。这些凭据回答谁有权操作，版本与内容指纹回答操作前提是否还成立，两者都需要。</p>
+<p><a href="/blog/browser-cookie-cors-csrf/">Cookie与CSRF</a>已有基础解释。恢复页面的意义，是让被忽略、删除或取消的内容可以被重新检查；恢复邮件则需要新的明确决定。后续发送过程见<a href="/projects/shicheng/mail-reminders/">邮件提醒</a>。</p>16:["$","$L26",null,{"html":"$27","zoomImages":true}]
+17:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L10",null,{"href":"/projects/shicheng/model-extraction/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"模型输出怎样变成可检查的候选"}]]}],["$","$L10",null,{"href":"/projects/shicheng/job-queue/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"串行队列怎样把处理进度留下来"}]]}]]}]
+18:["$","div",null,{"className":"related-note","children":[["$","$L10",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L10",null,{"href":"/projects/shicheng/","children":"返回项目首页"}]]}]
+19:["$","$L12",null,{"headings":"$c:0:1:d:r:props:children:0:props:children:1:props:headings"}]
+1a:["$","$L28",null,{"children":["$","$20",null,{"name":"Next.MetadataOutlet","children":"$@29"}]}]
+23:true
+7:300
+29:null
+7:C
+22:0
+b:"$undefined"
+9:"$undefined"
+5:"$undefined"
+21:"$undefined"
+1b:"$undefined"

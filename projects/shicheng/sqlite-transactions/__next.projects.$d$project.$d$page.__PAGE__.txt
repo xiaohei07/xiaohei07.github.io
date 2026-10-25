@@ -1,0 +1,99 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+d:"static/chunks/5587-bf231f55b3fd3ee7.js"
+e:"static/chunks/8612-cbc92f3b94933c0e.js"
+f:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-ebed4086c1c4f871.js"
+10:I[3498,["5587","$d","8612","$e","4067","$f"],"default"]
+11:I[6279,["5587","$d","8612","$e","4067","$f"],"FilterLink"]
+12:I[5128,["5587","$d","8612","$e","4067","$f"],"ArticleToc"]
+1c:"ViewportBoundary"
+1d:I[887,[],"$1c"]
+1e:"MetadataBoundary"
+1f:I[887,[],"$1e"]
+20:"$Sreact.suspense"
+6:X
+6:C
+7:X
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"shicheng-sqlite-transactions","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L10",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L10",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$L10",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L11",null,{"className":"trail-current","href":"/projects/","children":["个人工具",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"SQLite怎样处理短事务与并发写入"}],["$","p",null,{"className":"article-deck","children":"以拾程为例，补充DELETE日志、BEGIN IMMEDIATE、条件更新、唯一约束和SAVEPOINT的实际含义。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["1,466"," 字"]}],["$","span",null,{"children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","SQLite",{"children":"SQLite"}],["$","span","SQL",{"children":"SQL"}],["$","span","事务",{"children":"事务"}]]}]]}],["$","$L12",null,{"headings":[{"id":"section-一一次确认为什么需要一个事务","text":"一、一次确认为什么需要一个事务","level":2},{"id":"section-二delete回滚日志与wal是不同机制","text":"二、DELETE回滚日志与WAL是不同机制","level":2},{"id":"section-三begin-immediate提前争取写入资格","text":"三、BEGIN IMMEDIATE提前争取写入资格","level":2},{"id":"section-四有写锁为什么仍需要版本检查","text":"四、有写锁为什么仍需要版本检查","level":2},{"id":"section-五批量操作怎样保留单项结果","text":"五、批量操作怎样保留单项结果","level":2},{"id":"section-六什么时候需要重新评估选择","text":"六、什么时候需要重新评估选择","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L10",null,{"href":"/projects/shicheng/#project-reading","children":"项目首页与阅读路线"}],["$","span",null,{"children":[8," / ",11," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","shicheng-architecture",{"value":1,"children":["$","$L10",null,{"href":"/projects/shicheng/architecture/","data-reading-start":"true","children":"本机、服务端和提醒任务怎样组成拾程"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","shicheng-material-intake",{"value":2,"children":["$","$L10",null,{"href":"/projects/shicheng/material-intake/","data-reading-start":"true","children":"微信记录、网页和图片怎样成为可处理材料"}]}],["$","li","shicheng-model-extraction",{"value":3,"children":["$","$L10",null,{"href":"/projects/shicheng/model-extraction/","data-reading-start":"true","children":"模型输出怎样变成可检查的候选"}]}],["$","li","shicheng-review-workflow",{"value":4,"children":["$","$L10",null,{"href":"/projects/shicheng/review-workflow/","data-reading-start":"true","children":"确认、批量操作与恢复怎样保护用户决定"}]}],["$","li","shicheng-job-queue",{"value":5,"children":["$","$L10",null,{"href":"/projects/shicheng/job-queue/","data-reading-start":"true","children":"串行队列怎样把处理进度留下来"}]}],["$","li","shicheng-mail-reminders",{"value":6,"children":["$","$L10",null,{"href":"/projects/shicheng/mail-reminders/","data-reading-start":"true","children":"一封提醒邮件怎样从日程走到发送结果"}]}],["$","li","shicheng-backup-export",{"value":7,"children":["$","$L10",null,{"href":"/projects/shicheng/backup-export/","data-reading-start":"true","children":"备份、恢复与日历导出分别保存什么"}]}]]}]]}],["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","shicheng-sqlite-transactions",{"value":8,"children":["$","$L10",null,{"href":"/projects/shicheng/sqlite-transactions/","data-reading-start":"true","aria-current":"page","children":"SQLite怎样处理短事务与并发写入"}]}],"$L13"]}]]}],"$L14"]]}]]}],"$L15","$L16","$L17","$L18"]}],"$L19"]}]]}],null,"$L1a"]}],"p":"$@1b","v":null,"s":"$7"}}]]
+a:[["children",{"s":{"n":"page","t":"d","k":"sqlite-transactions","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
+8:[["children",{"s":{"n":"project","t":"d","k":"shicheng","s":["mental-health-evaluation"]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"projects","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1d",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1f",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$20",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"SQLite怎样处理短事务与并发写入 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"以拾程为例，补充DELETE日志、BEGIN IMMEDIATE、条件更新、唯一约束和SAVEPOINT的实际含义。"}],["$","link","2",{"rel":"canonical","href":"/projects/shicheng/sqlite-transactions/"}]]}]}],null]}],null]}],"p":"$@21","v":null,"s":"$7"}},"a":"$@22","u":"$@23","b":"qlxSqwLiBLEa9YI_MjhDr"}
+24:"ProjectLegacyAnchors"
+25:I[1103,["5587","$d","8612","$e","4067","$f"],"$24"]
+26:I[4711,["5587","$d","8612","$e","4067","$f"],"ArticleBody"]
+28:I[887,[],"OutletBoundary"]
+13:["$","li","shicheng-calendar-format",{"value":9,"children":["$","$L10",null,{"href":"/projects/shicheng/calendar-format/","data-reading-start":"true","children":"ICS怎样把一条日程交给其他日历"}]}]
+14:["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","shicheng-date-correction",{"value":10,"children":["$","$L10",null,{"href":"/projects/shicheng/date-correction/","data-reading-start":"true","children":"通知里的“明天”和“10.22”怎样落成时间"}]}],["$","li","shicheng-incremental-dedup",{"value":11,"children":["$","$L10",null,{"href":"/projects/shicheng/incremental-dedup/","data-reading-start":"true","children":"重复通知怎样合并，又不抹掉新的变化"}]}]]}]]}]
+15:["$","$L25",null,{"mappings":[]}]
+27:T1a91,<p>拾程需要保存候选、人工决定和邮件账本，但使用规模不要求一开始就维护独立数据库服务。因此项目采用SQLite：数据库引擎嵌入应用，数据保存在文件中，Python通过标准库sqlite3访问。</p>
+<p>表、约束和事务的基础可以先看<a href="/blog/postgresql-tables-queries/">关系表与SQL</a>以及<a href="/blog/postgresql-transactions-locks/">事务与锁</a>。本篇只展开SQLite在拾程中的实际差异，不把PostgreSQL行锁或MySQL的MVCC机制套进来。</p>
+<h2 id="section-一一次确认为什么需要一个事务">一、一次确认为什么需要一个事务</h2>
+<p>确认候选不是只改一个状态。可能要创建日程，关联来源，保存修订，再把候选标为已处理；若用户另行启用邮件且条件满足，还需要保存提醒意图。</p>
+<p>假设前三步成功，最后一步失败，如果每步都单独提交，就可能出现日程已经存在、候选仍然等待确认的半套结果。事务将这些相关修改组织为一次提交：成功后一起保留，失败时回滚这组修改。</p>
+<p>数据库只能维护已经写出的约束，不能判断用户是否真的想参加。事务也无法撤回已经送到远程邮件服务器的正文，所以确认落库与实际发信仍要分开。</p>
+<h2 id="section-二delete回滚日志与wal是不同机制">二、DELETE回滚日志与WAL是不同机制</h2>
+<p>拾程显式使用<code>journal_mode=DELETE</code>。数据库以页为单位管理数据，回滚日志保存修改前所需的页信息，未完成提交时可以恢复旧状态；完成提交后删除日志。可以对照<a href="https://www.sqlite.org/atomiccommit.html" rel="noopener noreferrer">SQLite原子提交说明</a>。</p>
+<p>WAL则把变更追加到单独日志，再通过检查点合入数据库文件。它是另一种可选模式，不能因为看见SQLite就默认项目使用WAL，也不能将MySQL的redo/undo过程直接搬过来。</p>
+<p>项目连接启用外键，设置有限的忙等待和<code>synchronous=FULL</code>，并由程序显式管理事务。FULL强调相应同步策略，但硬件、文件系统与实际故障仍是持久性条件，不能写成任何断电或存储损坏都不会丢数据。</p>
+<h2 id="section-三begin-immediate提前争取写入资格">三、BEGIN IMMEDIATE提前争取写入资格</h2>
+<p>SQLite可以有多个连接，但同一时刻只允许一个写事务。<code>BEGIN IMMEDIATE</code>在事务开始时尝试取得写入资格；另一个写者可能等待，也可能在超过等待条件后得到busy。规则见<a href="https://www.sqlite.org/lang_transaction.html" rel="noopener noreferrer">SQLite事务文档</a>。</p>
+<p>拾程使用<code>isolation_level=None</code>，再明确执行BEGIN、提交或回滚。这里对应现有Python接口的使用方式，不需要套用另一版Python新增的事务参数。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>阶段</th><th>是否持有写事务</th><th>原因</th></tr></thead><tbody><tr><td>领取任务、写令牌和预算</td><td>是，尽量短</td><td>这些状态需要共同改变</td></tr><tr><td>请求模型或SMTP</td><td>否</td><td>远程等待不应占住数据库写入资格</td></tr><tr><td>核对令牌、版本并保存结果</td><td>是，尽量短</td><td>防止旧结果覆盖新状态</td></tr></tbody></table>
+<p>这两段事务之间不是空白：材料可能被修改，任务租约可能过期，因此返回时必须重新检查条件。网络操作移出事务提高了其他写入可进行的机会，也要求更清楚的状态协议。</p>
+<h2 id="section-四有写锁为什么仍需要版本检查">四、有写锁为什么仍需要版本检查</h2>
+<p>手机打开日程时版本是3，电脑随后修改到4。手机晚一点取得写锁，不代表它手里的内容也变成了4；如果直接覆盖，仍然会丢掉电脑刚才的修改。</p>
+<p>下面是缩小的教学SQL，用于表达条件更新，不是生产完整语句：</p>
+<div class="code-block"><div class="code-toolbar"><span>sql</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-sql"><span class="hljs-keyword">UPDATE</span> events
+<span class="hljs-keyword">SET</span> location <span class="hljs-operator">=</span> ?, revision <span class="hljs-operator">=</span> revision <span class="hljs-operator">+</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">WHERE</span> id <span class="hljs-operator">=</span> ? <span class="hljs-keyword">AND</span> revision <span class="hljs-operator">=</span> ?;
+</code></pre></div>
+<p>最后一个参数是用户读取时的预期版本。若匹配行数为0，就要检查记录是否已删除或版本是否变化，不能仍返回“修改成功”。问号表示绑定参数，不通过拼接用户输入生成SQL。</p>
+<p>唯一约束解决另一件事：同一个业务键不能被插入两次。例如提醒账本用活动、场次、时间版本和提醒类型等字段表达一次意图。锁、版本条件与唯一约束各管一层，不是任意一个都能替代另外两个。</p>
+<h2 id="section-五批量操作怎样保留单项结果">五、批量操作怎样保留单项结果</h2>
+<p>一次选择A、B、C三项，其中B已经被另一端处理。项目可以在外层事务中为每项建立SAVEPOINT：A成功，B遇到已知业务冲突时回退到自己的保存点，C继续；最终由外层事务决定是否提交。</p>
+<p>SAVEPOINT是事务里的局部回退位置。释放它不代表那一项已经独立持久提交；如果后面出现未知异常，外层事务仍可能整体回滚。具体语义见<a href="https://www.sqlite.org/lang_savepoint.html" rel="noopener noreferrer">SQLite SAVEPOINT</a>。</p>
+<p>这让界面可以解释“哪些项完成、哪些项需要刷新”，但不能借批量操作跳过分类、版本、邮件授权等业务检查。具体场景见<a href="/projects/shicheng/review-workflow/">人工确认与恢复</a>。</p>
+<h2 id="section-六什么时候需要重新评估选择">六、什么时候需要重新评估选择</h2>
+<p>当前方案适合单主机、低写入并发和少组件的个人工具。若长期读事务或大量写入造成锁等待，应先记录耗时和冲突位置，再评估WAL或独立数据库；不能只改日志模式就承诺所有性能问题消失。</p>
+<p>对这个项目而言，先把网络等待移出写事务、让更新带上前提、用约束表达不可重复的意图，比先增加数据库种类更直接。备份时则使用SQLite backup接口并检查数据库与原件，见<a href="/projects/shicheng/backup-export/">备份、导出与回退</a>。</p>16:["$","$L26",null,{"html":"$27","zoomImages":true}]
+17:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L10",null,{"href":"/projects/shicheng/backup-export/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"备份、恢复与日历导出分别保存什么"}]]}],["$","$L10",null,{"href":"/projects/shicheng/calendar-format/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"ICS怎样把一条日程交给其他日历"}]]}]]}]
+18:["$","div",null,{"className":"related-note","children":[["$","$L10",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L10",null,{"href":"/projects/shicheng/","children":"返回项目首页"}]]}]
+19:["$","$L12",null,{"headings":"$c:0:1:d:r:props:children:0:props:children:1:props:headings"}]
+1a:["$","$L28",null,{"children":["$","$20",null,{"name":"Next.MetadataOutlet","children":"$@29"}]}]
+23:true
+7:300
+29:null
+7:C
+22:0
+b:"$undefined"
+9:"$undefined"
+5:"$undefined"
+21:"$undefined"
+1b:"$undefined"

@@ -1,0 +1,98 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+d:"static/chunks/5587-bf231f55b3fd3ee7.js"
+e:"static/chunks/8612-cbc92f3b94933c0e.js"
+f:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-ebed4086c1c4f871.js"
+10:I[3498,["5587","$d","8612","$e","4067","$f"],"default"]
+11:I[6279,["5587","$d","8612","$e","4067","$f"],"FilterLink"]
+12:I[5128,["5587","$d","8612","$e","4067","$f"],"ArticleToc"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+6:X
+6:C
+7:X
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"deepseek-export-plus-extension-runtime","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L10",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L10",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$L10",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L11",null,{"className":"trail-current","href":"/projects/","children":["浏览器扩展",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"内容脚本、网页环境与后台怎样协作"}],["$","p",null,{"className":"article-deck","children":"认识Manifest V3、隔离环境、MAIN、service worker与短期会话，再看消息检查和临时渲染表面。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["1,639"," 字"]}],["$","span",null,{"children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","Manifest V3",{"children":"Manifest V3"}],["$","span","浏览器扩展",{"children":"浏览器扩展"}]]}]]}],["$","$L12",null,{"headings":[{"id":"section-一dom共享不等于javascript变量共享","text":"一、DOM共享，不等于JavaScript变量共享","level":2},{"id":"section-二怎样让两个环境找到同一条消息","text":"二、怎样让两个环境找到同一条消息","level":2},{"id":"section-三后台service-worker为什么不能当永久运行的程序","text":"三、后台service worker为什么不能当永久运行的程序","level":2},{"id":"section-四独立页面与离屏iframe各做什么","text":"四、独立页面与离屏iframe各做什么","level":2},{"id":"section-五撤回和更新要处理已经运行的实例","text":"五、撤回和更新要处理已经运行的实例","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L10",null,{"href":"/projects/deepseek-export-plus/#project-reading","children":"项目首页与阅读路线"}],["$","span",null,{"children":[6," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-architecture",{"value":1,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/architecture/","data-reading-start":"true","children":"从网页到文件，导出链路怎样分工"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extract-conversation",{"value":2,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/extract-conversation/","data-reading-start":"true","children":"长对话、折叠思考与有序消息怎样提取"}]}],["$","li","deepseek-export-plus-format-output",{"value":3,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/format-output/","data-reading-start":"true","children":"同一份对话怎样生成不同格式"}]}],["$","li","deepseek-export-plus-attachments",{"value":4,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/attachments/","data-reading-start":"true","children":"附件怎样下载、打包并保持可打开"}]}],["$","li","deepseek-export-plus-task-lifecycle",{"value":5,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/task-lifecycle/","data-reading-start":"true","children":"取消、撤回和页面切换后，任务怎样收尾"}]}]]}]]}],["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extension-runtime",{"value":6,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/extension-runtime/","data-reading-start":"true","aria-current":"page","children":"内容脚本、网页环境与后台怎样协作"}]}],["$","li","deepseek-export-plus-document-formats",{"value":7,"children":"$L13"}],"$L14"]}]]}],"$L15"]]}]]}],"$L16","$L17","$L18","$L19"]}],"$L1a"]}]]}],null,"$L1b"]}],"p":"$@1c","v":null,"s":"$7"}}]]
+a:[["children",{"s":{"n":"page","t":"d","k":"extension-runtime","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
+8:[["children",{"s":{"n":"project","t":"d","k":"deepseek-export-plus","s":["mental-health-evaluation"]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"projects","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"内容脚本、网页环境与后台怎样协作 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"认识Manifest V3、隔离环境、MAIN、service worker与短期会话，再看消息检查和临时渲染表面。"}],["$","link","2",{"rel":"canonical","href":"/projects/deepseek-export-plus/extension-runtime/"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$7"}},"a":"$@23","u":"$@24","b":"qlxSqwLiBLEa9YI_MjhDr"}
+25:"ProjectLegacyAnchors"
+26:I[1103,["5587","$d","8612","$e","4067","$f"],"$25"]
+27:I[4711,["5587","$d","8612","$e","4067","$f"],"ArticleBody"]
+29:I[887,[],"OutletBoundary"]
+13:["$","$L10",null,{"href":"/projects/deepseek-export-plus/document-formats/","data-reading-start":"true","children":"字符、XML和DOCX：文件格式怎样层层组成"}]
+14:["$","li","deepseek-export-plus-rendering-pagination",{"value":8,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/rendering-pagination/","data-reading-start":"true","children":"从网页排版到长图：字体、画布和分页"}]}]
+15:["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-word-png",{"value":9,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/word-png/","data-reading-start":"true","children":"Word与PNG的两次失败，为什么要分层修复"}]}],["$","li","deepseek-export-plus-page-integration",{"value":10,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/page-integration/","data-reading-start":"true","children":"导出按钮怎样与原网页和平共处"}]}]]}]]}]
+16:["$","$L26",null,{"mappings":[]}]
+28:T1a96,<p>在网页里增加一个按钮，与读取网页程序保存的消息数据，是两种不同能力。DeepSeek Export Plus既要操作页面，又要调用浏览器扩展API，还要打开独立打印页，因此不能把所有代码想象成同一段网页脚本。</p>
+<p>已有的<a href="/blog/react-components-props/">React组件与props</a>解释了网页怎样组织界面数据；本篇只补浏览器扩展新增的执行环境与通信规则。扩展自己的界面使用原生JavaScript和CSS，读取DeepSeek的React数据不代表扩展本身使用React构建。</p>
+<h2 id="section-一dom共享不等于javascript变量共享">一、DOM共享，不等于JavaScript变量共享</h2>
+<p>DOM是浏览器组织页面元素的树。内容脚本可以读写这棵树，例如找到消息节点、放入按钮；但它默认运行在ISOLATED环境，自己的JavaScript变量与网页变量隔离。同一页面中的网页脚本和扩展可以看见同一个元素，不意味着它们能直接访问彼此定义的变量。</p>
+<p>假设网页脚本里有<code>const messageData = ...</code>，内容脚本不能仅因看见对应段落，就直接使用这个变量。MAIN环境与网页共享JavaScript执行环境，适合执行少量必须依赖网页对象的读取，但它也受网页环境影响，不适合存放秘密或无约束运行。具体边界见<a href="https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts" rel="noopener noreferrer">Chrome内容脚本说明</a>。</p>
+<p>项目把当前节点的元数据读取放到MAIN里，把页面交互留给内容脚本。返回结果只包含允许的角色、文本、片段和文件字段，不把整个框架对象交给其他模块；框架对象可能有循环引用、庞大状态和与导出无关的信息。</p>
+<h2 id="section-二怎样让两个环境找到同一条消息">二、怎样让两个环境找到同一条消息</h2>
+<p>一次读取可以拆成以下步骤：</p>
+<ol>
+<li>内容脚本给目标节点加一个临时标记，并向后台发送读取请求。</li>
+<li>后台检查发送者所在页面、操作类型及当前同意状态。</li>
+<li>后台在同一标签页、同一frame的MAIN环境运行读取函数。frame指页面文档环境，嵌入的子页面也有自己的frame。</li>
+<li>读取函数按临时标记找到节点，有限度地检查关联对象，选出允许字段。</li>
+<li>返回结果后再检查授权是否仍有效，内容脚本移除临时标记，交给会话提取模块。</li>
+</ol>
+<p><strong>临时标记解决的是节点定位，不能当成认证凭据。</strong>有界遍历则限制检查深度和数量，避免循环或过量对象拖住页面；达到限制时也可能拿不到完整内容。网页内部字段没有稳定接口承诺，这个适配点仍需要随网页变化维护。</p>
+<p>长期历史观察与这次读取又是两件事。历史脚本在同意后观察符合范围的fetch/XHR响应，缓存随后到来的数据；单次函数则检查眼前挂载节点。观察器没有安装前已经结束的响应，不会因为后来启用扩展就自动重现。</p>
+<h2 id="section-三后台service-worker为什么不能当永久运行的程序">三、后台service worker为什么不能当永久运行的程序</h2>
+<p>Manifest V3是Chrome扩展清单及相关运行机制的第三版。清单声明入口、权限和允许访问的目标；后台使用service worker处理扩展事件。它没有网页DOM，也不保证一直驻留，浏览器可能在空闲时将其回收。</p>
+<p>因此，把打印内容只放在后台全局Map里并不稳妥：打印页打开时，原worker实例可能已经不存在。项目将短期打印会话放在<code>storage.session</code>，使用会话ID、有效期、大小限制和附件白名单关联。存储可跨一次worker回收保留数据，但不跨所有扩展或浏览器生命周期，不能当永久备份。平台规则见<a href="https://developer.chrome.com/docs/extensions/develop/concepts/service-workers/lifecycle" rel="noopener noreferrer">worker生命周期</a>与<a href="https://developer.chrome.com/docs/extensions/reference/api/storage" rel="noopener noreferrer">session存储</a>。</p>
+<p>权限与同意也分开。浏览器授予scripting能力，表示扩展可以按规则注入；用户同意处理对话，才表示应用当前可以执行相应读取。后台需要同时考虑平台权限与应用状态。</p>
+<h2 id="section-四独立页面与离屏iframe各做什么">四、独立页面与离屏iframe各做什么</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>执行位置</th><th>本项目用途</th><th>与后台的区别</th></tr></thead><tbody><tr><td>隐私设置页</td><td>说明并管理数据处理同意</td><td>是可显示的扩展页面</td></tr><tr><td>打印预览页</td><td>读取短期会话、显示内容、调用浏览器打印</td><td>有DOM和排版，不是直接PDF编码器</td></tr><tr><td>Word/PNG离屏iframe</td><td>临时装入导出内容，稳定字体、图片并测量绘制</td><td>是页面里的独立文档，不是Web Worker或云转换服务</td></tr></tbody></table>
+<p>iframe可以先理解为页面中嵌入的另一个文档。这里采用受限制的临时排版表面，完成或取消后移除；它让导出内容有自己的样式与尺寸，却不会自动把同步绘制移到后台线程。</p>
+<p>构建时，esbuild把内容脚本、历史观察、后台和独立页面组织为各自入口。Word/PNG共用一个按需包，其中包含docx与html2canvas；它不是每种格式独立一个懒加载包。marked、DOMPurify和KaTeX已有静态依赖链，界面晚一点出现，不意味着这些代码也一定晚一点下载。</p>
+<h2 id="section-五撤回和更新要处理已经运行的实例">五、撤回和更新要处理已经运行的实例</h2>
+<p>撤回同意时，仅取消未来脚本注册还不够，已经注入的脚本仍可能留在页面里。需要停止已有观察逻辑、清理缓存与打印会话，并处理尚未完成的读取。任务返回以后也要重新检查授权状态，具体时序见<a href="/projects/deepseek-export-plus/task-lifecycle/">任务取消与过期结果</a>。</p>
+<p>扩展重载后，旧页面中的内容脚本还可能连接着失效上下文。项目识别这种失效，清理旧界面后提示刷新；刷新提示依靠页面DOM与<code>location.reload()</code>，不再调用已经失效的扩展API。</p>
+<p>如果要做类似扩展，可以先画出“哪个环境拥有哪种数据、哪个环境允许哪种操作”，再设计消息字段、来源检查与清理动作。分环境的目的，是让能力和状态有明确位置，而不是把一个小扩展拆成许多看不见关系的文件。</p>17:["$","$L27",null,{"html":"$28","zoomImages":true}]
+18:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L10",null,{"href":"/projects/deepseek-export-plus/task-lifecycle/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"取消、撤回和页面切换后，任务怎样收尾"}]]}],["$","$L10",null,{"href":"/projects/deepseek-export-plus/document-formats/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"字符、XML和DOCX：文件格式怎样层层组成"}]]}]]}]
+19:["$","div",null,{"className":"related-note","children":[["$","$L10",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L10",null,{"href":"/projects/deepseek-export-plus/","children":"返回项目首页"}]]}]
+1a:["$","$L12",null,{"headings":"$c:0:1:d:r:props:children:0:props:children:1:props:headings"}]
+1b:["$","$L29",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@2a"}]}]
+24:true
+7:300
+2a:null
+7:C
+23:0
+b:"$undefined"
+9:"$undefined"
+5:"$undefined"
+22:"$undefined"
+1c:"$undefined"

@@ -1,0 +1,97 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+d:"static/chunks/5587-bf231f55b3fd3ee7.js"
+e:"static/chunks/8612-cbc92f3b94933c0e.js"
+f:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-ebed4086c1c4f871.js"
+10:I[3498,["5587","$d","8612","$e","4067","$f"],"default"]
+11:I[6279,["5587","$d","8612","$e","4067","$f"],"FilterLink"]
+12:I[5128,["5587","$d","8612","$e","4067","$f"],"ArticleToc"]
+1c:"ViewportBoundary"
+1d:I[887,[],"$1c"]
+1e:"MetadataBoundary"
+1f:I[887,[],"$1e"]
+20:"$Sreact.suspense"
+6:X
+6:C
+7:X
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"deepseek-export-plus-word-png","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L10",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L10",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$L10",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L11",null,{"className":"trail-current","href":"/projects/","children":["浏览器扩展",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"Word与PNG的两次失败，为什么要分层修复"}],["$","p",null,{"className":"article-deck","children":"沿公式SVG解码与Word正文XML两个故障，解释共享渲染、非法字符处理和实际应用验证。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["1,694"," 字"]}],["$","span",null,{"children":["阅读约 ",6," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","问题排查",{"children":"问题排查"}],["$","span","DOCX",{"children":"DOCX"}],["$","span","SVG",{"children":"SVG"}]]}]]}],["$","$L12",null,{"headings":[{"id":"section-一word保留正文结构公式暂时图片化","text":"一、Word保留正文结构，公式暂时图片化","level":2},{"id":"section-二第一次失败html里的空格实体进入了svg","text":"二、第一次失败：HTML里的空格实体进入了SVG","level":2},{"id":"section-三第二次失败png成功含思考的word仍然打不开","text":"三、第二次失败：PNG成功，含思考的Word仍然打不开","level":2},{"id":"section-四修复之后验证要走到实际阅读器","text":"四、修复之后，验证要走到实际阅读器","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L10",null,{"href":"/projects/deepseek-export-plus/#project-reading","children":"项目首页与阅读路线"}],["$","span",null,{"children":[9," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-architecture",{"value":1,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/architecture/","data-reading-start":"true","children":"从网页到文件，导出链路怎样分工"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extract-conversation",{"value":2,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/extract-conversation/","data-reading-start":"true","children":"长对话、折叠思考与有序消息怎样提取"}]}],["$","li","deepseek-export-plus-format-output",{"value":3,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/format-output/","data-reading-start":"true","children":"同一份对话怎样生成不同格式"}]}],["$","li","deepseek-export-plus-attachments",{"value":4,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/attachments/","data-reading-start":"true","children":"附件怎样下载、打包并保持可打开"}]}],["$","li","deepseek-export-plus-task-lifecycle",{"value":5,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/task-lifecycle/","data-reading-start":"true","children":"取消、撤回和页面切换后，任务怎样收尾"}]}]]}]]}],["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extension-runtime",{"value":6,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/extension-runtime/","data-reading-start":"true","children":"内容脚本、网页环境与后台怎样协作"}]}],["$","li","deepseek-export-plus-document-formats",{"value":7,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/document-formats/","data-reading-start":"true","children":"字符、XML和DOCX：文件格式怎样层层组成"}]}],"$L13"]}]]}],"$L14"]]}]]}],"$L15","$L16","$L17","$L18"]}],"$L19"]}]]}],null,"$L1a"]}],"p":"$@1b","v":null,"s":"$7"}}]]
+a:[["children",{"s":{"n":"page","t":"d","k":"word-png","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
+8:[["children",{"s":{"n":"project","t":"d","k":"deepseek-export-plus","s":["mental-health-evaluation"]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"projects","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1d",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1f",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$20",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Word与PNG的两次失败，为什么要分层修复 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"沿公式SVG解码与Word正文XML两个故障，解释共享渲染、非法字符处理和实际应用验证。"}],["$","link","2",{"rel":"canonical","href":"/projects/deepseek-export-plus/word-png/"}]]}]}],null]}],null]}],"p":"$@21","v":null,"s":"$7"}},"a":"$@22","u":"$@23","b":"qlxSqwLiBLEa9YI_MjhDr"}
+24:"ProjectLegacyAnchors"
+25:I[1103,["5587","$d","8612","$e","4067","$f"],"$24"]
+26:I[4711,["5587","$d","8612","$e","4067","$f"],"ArticleBody"]
+28:I[887,[],"OutletBoundary"]
+13:["$","li","deepseek-export-plus-rendering-pagination",{"value":8,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/rendering-pagination/","data-reading-start":"true","children":"从网页排版到长图：字体、画布和分页"}]}]
+14:["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-word-png",{"value":9,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/word-png/","data-reading-start":"true","aria-current":"page","children":"Word与PNG的两次失败，为什么要分层修复"}]}],["$","li","deepseek-export-plus-page-integration",{"value":10,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/page-integration/","data-reading-start":"true","children":"导出按钮怎样与原网页和平共处"}]}]]}]]}]
+15:["$","$L25",null,{"mappings":[]}]
+27:T1bad,<p>我希望Word里的正文仍然能够编辑，也希望需要分享时能得到清晰的图片。这两个目标让导出过程同时经过网页排版、图像生成和文档结构转换。最初看上去，它们都只是“把内容保存成文件”；实际遇到的两次失败却说明，每个格式都有自己的接收规则。</p>
+<p>先是Word和PNG一起报图像解码失败，修正后PNG可以生成，含思考的Word仍然打不开。沿着两者共用和分开的步骤检查，才能把问题分别定位到公式SVG与正文XML。</p>
+<h2 id="section-一word保留正文结构公式暂时图片化">一、Word保留正文结构，公式暂时图片化</h2>
+<p>DOCX是一个ZIP容器，内部装有正文XML、关系文件、样式和图片等部分。XML用有规则的标签组织内容；WordprocessingML是其中描述Word正文的格式，例如段落里再包含带有相同样式的文本片段。<a href="https://learn.microsoft.com/en-us/office/open-xml/word/structure-of-a-wordprocessingml-document" rel="noopener noreferrer">Microsoft的文档结构说明</a>给出了这些层次。</p>
+<p>项目把普通段落、代码和表格映射为可编辑Word结构，再由<code>docx</code>依赖生成文件。公式则先渲染为图片，并把LaTeX保留在替代文本中。因此，<strong>正文可以编辑，公式还不是原生Office数学对象</strong>。OMML是Office表达可编辑数学结构的语言，把LaTeX转换成OMML还需要另做语法映射与兼容验证，当前没有实现。</p>
+<p>文档附件不嵌入DOCX内部。勾选“附带图片与附件”且下载成功时，文件保存在ZIP内与DOCX同级的<code>assets</code>目录，通过相对链接访问；未附带时可以保留可用的在线链接，下载失败的附件则标明未打包。对于已附带成功的文件，应完整解压ZIP再打开Word；只把DOCX单独移走，附件链接就可能失去目标。</p>
+<h2 id="section-二第一次失败html里的空格实体进入了svg">二、第一次失败：HTML里的空格实体进入了SVG</h2>
+<p>网页公式通常是一组通过字体和CSS排版的节点。通用DOM转图工具根据节点信息重建画面，并不直接取得浏览器已经显示的像素，复杂公式可能出现错位。<a href="https://html2canvas.hertzen.com/documentation" rel="noopener noreferrer">html2canvas的原理说明</a>明确指出了这种差异。</p>
+<p>项目的处理是先让浏览器把公式绘制成图片，再供Word和PNG使用。这里用到了SVG：它本身是XML描述的图像，可以通过<code>foreignObject</code>承载相应布局。</p>
+<p>Word与PNG曾同时报出图像无法解码。沿两种格式共同经过的处理链检查，问题落在一个共享步骤：HTML序列化可能写出<code>&#x26;nbsp;</code>，即不换行空格的HTML实体；直接把它放进普通SVG/XML后，XML解析器并不会自动拥有HTML的全部实体定义。</p>
+<p>修复顺序是：创建具有正确命名空间的SVG节点；把公式相关的XHTML、MathML和SVG子结构放进去；用<code>XMLSerializer</code>序列化整棵树；再交给浏览器解码和绘制。<strong>命名空间说明元素属于哪种标记语言，XML序列化则让结构按接收端规则表达。</strong>删除全部空格或直接删掉SVG虽然可能绕开报错，却会损失间距和根号等内容。</p>
+<p>该层修复后，历史回归记录了六类公式的DOCX/PNG生成成功。但是，后面的实际Word检查又发现了另一个问题。</p>
+<h2 id="section-三第二次失败png成功含思考的word仍然打不开">三、第二次失败：PNG成功，含思考的Word仍然打不开</h2>
+<p>PNG最后保存的是像素；Word还需要解析正文XML。用户反馈的含思考DOCX，在<code>word/document.xml</code>对应位置出现U+000C，思考文本中还存在U+0008。它们是Unicode码点表示的控制字符，能够出现在程序字符串里，却不属于XML 1.0允许写入的字符。</p>
+<p>这里需要区分<strong>字符是否合法</strong>和<strong>字符怎样编码</strong>。Unicode给字符分配码点；UTF-8、UTF-16规定怎样表示这些码点。把一个XML不允许的字符改成另一种编码，或者写成<code>&#x26;#xC;</code>，都不能使它变成合法XML字符。XML 1.0的字符集合允许TAB、LF、CR和规定的Unicode范围，数值字符引用也必须满足这个集合。<a href="https://www.w3.org/TR/xml/#charsets" rel="noopener noreferrer">XML 1.0字符与引用规则</a>是这项判断的依据。</p>
+<p><code>wordText</code>将非法字符改为可见的反斜线转义。例如下面是按规则推演的输入输出，用于解释规则：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>输入内容</th><th>写入Word前的文本</th><th>为什么这样处理</th></tr></thead><tbody><tr><td><code>甲</code>、U+000C、<code>乙</code></td><td><code>甲\u000c乙</code></td><td>让异常码点的位置仍然可见，避免整个XML损坏</td></tr><tr><td>正常中文、TAB和换行</td><td>保持原内容</td><td>它们在允许范围内</td></tr><tr><td>正常emoji</td><td>保留合法代理对代表的字符</td><td>不能按单个UTF-16码元误删完整字符</td></tr><tr><td>孤立代理码元</td><td>转成可见转义</td><td>它没有组成完整合法字符</td></tr></tbody></table>
+<p><code>\u000c</code>在这里是反斜线、字母u与数字组成的可见文本，不再是控制字符本身。实现没有猜测它原本是否来自LaTeX转义，也没有静默删除。</p>
+<p>这一处理需要覆盖<strong>所有进入DOCX的文本口</strong>：正文、思考、表格、标题元数据、链接和图片说明。只改当时报错的段落，异常字符换个位置仍可能破坏文档。</p>
+<p>两次故障因此采用了不同修复：SVG问题处理结构序列化，Word问题处理合法字符集合。前者不能替代后者。历史修复记录中，两份重新导出的DOCX各有17个XML部分检查通过，并在本机Microsoft Word实际打开，末尾标记也保留；这些结果不表示全部Office版本都通过。</p>
+<h2 id="section-四修复之后验证要走到实际阅读器">四、修复之后，验证要走到实际阅读器</h2>
+<p>这两次问题也改变了检查顺序：先确认DOCX容器及条目存在，再解析内部XML和关系文件，然后让Word实际打开，核对末尾内容，最后跟随附件链接。压缩包能打开、正文标记存在，都不足以替代最后几步。</p>
+<p>历史修复中的指定文件已经通过本机Word打开检查，但没有据此得到所有Office版本或WPS的兼容结论。PNG成功也只能说明对应图像路径完成，不能替Word证明XML合法。</p>
+<p>如果对“合法字符”和“编码”还不熟，可接着看<a href="/projects/deepseek-export-plus/document-formats/">字符、XML与DOCX</a>；长PNG如何等待布局、避免切开一行字，则在<a href="/projects/deepseek-export-plus/rendering-pagination/">字体、画布与分页</a>中展开。</p>16:["$","$L26",null,{"html":"$27","zoomImages":true}]
+17:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L10",null,{"href":"/projects/deepseek-export-plus/rendering-pagination/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"从网页排版到长图：字体、画布和分页"}]]}],["$","$L10",null,{"href":"/projects/deepseek-export-plus/page-integration/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"导出按钮怎样与原网页和平共处"}]]}]]}]
+18:["$","div",null,{"className":"related-note","children":[["$","$L10",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L10",null,{"href":"/projects/deepseek-export-plus/","children":"返回项目首页"}]]}]
+19:["$","$L12",null,{"headings":"$c:0:1:d:r:props:children:0:props:children:1:props:headings"}]
+1a:["$","$L28",null,{"children":["$","$20",null,{"name":"Next.MetadataOutlet","children":"$@29"}]}]
+23:true
+7:300
+29:null
+7:C
+22:0
+b:"$undefined"
+9:"$undefined"
+5:"$undefined"
+21:"$undefined"
+1b:"$undefined"

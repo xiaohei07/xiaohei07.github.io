@@ -1,0 +1,94 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+d:"static/chunks/5587-bf231f55b3fd3ee7.js"
+e:"static/chunks/8612-cbc92f3b94933c0e.js"
+f:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-ebed4086c1c4f871.js"
+10:I[3498,["5587","$d","8612","$e","4067","$f"],"default"]
+11:I[6279,["5587","$d","8612","$e","4067","$f"],"FilterLink"]
+12:I[5128,["5587","$d","8612","$e","4067","$f"],"ArticleToc"]
+1c:"ViewportBoundary"
+1d:I[887,[],"$1c"]
+1e:"MetadataBoundary"
+1f:I[887,[],"$1e"]
+20:"$Sreact.suspense"
+6:X
+6:C
+7:X
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"deepseek-export-plus-attachments","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L10",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L10",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$L10",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L11",null,{"className":"trail-current","href":"/projects/","children":["浏览器扩展",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"附件怎样下载、打包并保持可打开"}],["$","p",null,{"className":"article-deck","children":"解释资源复用、原文件与预览图、中文路径和Word链接，以及分享附件失败时怎样保留结果。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["1,602"," 字"]}],["$","span",null,{"children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","文件下载",{"children":"文件下载"}],["$","span","URI",{"children":"URI"}],["$","span","ZIP",{"children":"ZIP"}]]}]]}],["$","$L12",null,{"headings":[{"id":"section-一同一份资源怎样被多个格式共用","text":"一、同一份资源怎样被多个格式共用","level":2},{"id":"section-二中文文件名与uri是同一目标的不同表示","text":"二、中文文件名与URI是同一目标的不同表示","level":2},{"id":"section-三分享页xlsx失败应把结论停在证据支持的位置","text":"三、分享页XLSX失败，应把结论停在证据支持的位置","level":2},{"id":"section-四怎样使用附带资源的导出包","text":"四、怎样使用附带资源的导出包","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L10",null,{"href":"/projects/deepseek-export-plus/#project-reading","children":"项目首页与阅读路线"}],["$","span",null,{"children":[4," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-architecture",{"value":1,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/architecture/","data-reading-start":"true","children":"从网页到文件，导出链路怎样分工"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extract-conversation",{"value":2,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/extract-conversation/","data-reading-start":"true","children":"长对话、折叠思考与有序消息怎样提取"}]}],["$","li","deepseek-export-plus-format-output",{"value":3,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/format-output/","data-reading-start":"true","children":"同一份对话怎样生成不同格式"}]}],["$","li","deepseek-export-plus-attachments",{"value":4,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/attachments/","data-reading-start":"true","aria-current":"page","children":"附件怎样下载、打包并保持可打开"}]}],["$","li","deepseek-export-plus-task-lifecycle",{"value":5,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/task-lifecycle/","data-reading-start":"true","children":"取消、撤回和页面切换后，任务怎样收尾"}]}]]}]]}],["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extension-runtime",{"value":6,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/extension-runtime/","data-reading-start":"true","children":"内容脚本、网页环境与后台怎样协作"}]}],["$","li","deepseek-export-plus-document-formats",{"value":7,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/document-formats/","data-reading-start":"true","children":"字符、XML和DOCX：文件格式怎样层层组成"}]}],"$L13"]}]]}],"$L14"]]}]]}],"$L15","$L16","$L17","$L18"]}],"$L19"]}]]}],null,"$L1a"]}],"p":"$@1b","v":null,"s":"$7"}}]]
+a:[["children",{"s":{"n":"page","t":"d","k":"attachments","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
+8:[["children",{"s":{"n":"project","t":"d","k":"deepseek-export-plus","s":["mental-health-evaluation"]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"projects","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1d",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1f",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$20",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"附件怎样下载、打包并保持可打开 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"解释资源复用、原文件与预览图、中文路径和Word链接，以及分享附件失败时怎样保留结果。"}],["$","link","2",{"rel":"canonical","href":"/projects/deepseek-export-plus/attachments/"}]]}]}],null]}],null]}],"p":"$@21","v":null,"s":"$7"}},"a":"$@22","u":"$@23","b":"qlxSqwLiBLEa9YI_MjhDr"}
+24:"ProjectLegacyAnchors"
+25:I[1103,["5587","$d","8612","$e","4067","$f"],"$24"]
+26:I[4711,["5587","$d","8612","$e","4067","$f"],"ArticleBody"]
+28:I[887,[],"OutletBoundary"]
+13:["$","li","deepseek-export-plus-rendering-pagination",{"value":8,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/rendering-pagination/","data-reading-start":"true","children":"从网页排版到长图：字体、画布和分页"}]}]
+14:["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-word-png",{"value":9,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/word-png/","data-reading-start":"true","children":"Word与PNG的两次失败，为什么要分层修复"}]}],["$","li","deepseek-export-plus-page-integration",{"value":10,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/page-integration/","data-reading-start":"true","children":"导出按钮怎样与原网页和平共处"}]}]]}]]}]
+15:["$","$L25",null,{"mappings":[]}]
+27:T1a68,<p>一段对话可能同时引用图片、PDF、表格和文档。下载正文之后，如果附件仍散落在网页里，离线阅读和继续编辑都会受影响。我希望在需要时把可取得的文件一起带走，同时看得出哪些文件没有下载成功。</p>
+<p>资源模块负责取得字节、分配文件名、建立文档中的引用，并记录失败。它不负责解析Excel或Word里的业务内容；网页给出的地址能否返回文件，也是另一个需要检查的环节。</p>
+<h2 id="section-一同一份资源怎样被多个格式共用">一、同一份资源怎样被多个格式共用</h2>
+<p>文件名只是名称，文件真正的内容是一串字节。保存文档附件时，插件要取得文件内容；网页提供的预览文字不能改名成DOCX或XLSX，冒充原文件。图片又有特殊情况：DeepSeek可能提供的是预览版，即使宽高与上传图片相同，也不证明压缩、格式和元数据一致，因此导出时需要标明。</p>
+<p>假设同时导出Markdown和HTML，并勾选“附带图片与附件”，两份文档都引用附件A，还有附件B。<code>prepareExport</code>为单次任务建立资源Map，也就是按键查找值的内存映射，在这里用URL作为键保存已取得资源。A成功下载一次后，相同URL再次出现就复用字节和路径；B若失败，保留失败信息，其余可用内容仍然进入导出包。</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-text">对话.md ──┐
+          ├── 引用 assets/001-说明.txt
+对话.html ┘
+附件清单.json：记录成功文件、实际字节数与失败项
+</code></pre></div>
+<p>这份教学结构中，ZIP里只有一份A。缓存键是URL，不是文件内容摘要，所以两个不同签名URL即使指向相同内容，也不保证合并。<strong>减少同一任务里的重复读取，是可以从实现解释的机制；它节省多少时间，仍需要同口径测量。</strong></p>
+<p>单个附件直接下载，选多个时生成ZIP；文档按原文件保存，图片仍以网页实际提供的版本为准，不能把预览图当成原始上传图。多格式文档或者带离线资源的导出也可能需要ZIP。一次下载比逐个确认更方便，但<code>fflate.zipSync</code>仍然是同步内存归档。资源、文档、图片与最终ZIP可能同时占内存，资源总量预算不能直接当成峰值内存上限。</p>
+<h2 id="section-二中文文件名与uri是同一目标的不同表示">二、中文文件名与URI是同一目标的不同表示</h2>
+<p>假设解压后的文件叫<code>附件 中文 #1 100%.docx</code>。在文件系统中，<code>#</code>只是文件名的一部分；放进URL时，<code>#</code>会开始片段标识，<code>%</code>又用于百分号编码，所以不能不加区分地原样拼接。</p>
+<p>URI是标识资源的一套语法，文档里的相对路径也要按相应规则表达。百分号编码把需要转义的字节写成<code>%</code>加两位十六进制数，例如<code>#</code>对应<code>%23</code>；中文通常先按UTF-8表示为字节，再逐字节转义。因此链接中出现<code>%E8…</code>不代表文件名已经乱码。</p>
+<p>项目把几种表示分开：ZIP条目使用可读文件名；Markdown和HTML使用URI形式的链接；TXT展示可读路径；JSON保留兼容链接的<code>path</code>，同时提供实际文件名对应的<code>localPath</code>。它们指向同一份文件，不是导出了多份附件。</p>
+<p>Word在历史本机验证中，对全百分号编码的中文相对链接跟随失败。修复因此放在专门的<code>wordAttachmentTarget</code>中：解开非ASCII字符对应的UTF-8转义，保留空格、<code>#</code>、<code>%</code>等ASCII特殊字符的编码。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>目标字符或文件名片段</th><th>Word适配后需要保留的含义</th></tr></thead><tbody><tr><td>中文字符</td><td>使用该消费者能正确跟随的Unicode表示</td></tr><tr><td><code>#</code></td><td>仍编码为<code>%23</code>，避免成为片段起点</td></tr><tr><td>字面百分号<code>%</code></td><td>仍编码为<code>%25</code>，避免被当成另一层转义</td></tr><tr><td>文件名本来含<code>%E8</code></td><td>保留字面名称，不能再解码成别的字符</td></tr></tbody></table>
+<p><strong>转换规则取决于消费者，不能推广为“所有链接都应该解码中文”。</strong>历史验证不仅检查关系文件中的链接，还让本机Word实际打开目标附件、核对正文标记。只检查链接字符串长得正确，仍然可能漏掉打开了错误文件或根本打不开的情况。</p>
+<h2 id="section-三分享页xlsx失败应把结论停在证据支持的位置">三、分享页XLSX失败，应把结论停在证据支持的位置</h2>
+<p>这次还遇到过XLSX在原chat中可下载、在share中失败的问题。已有记录显示：分享网页本身也打不开该文件，重新取得分享元数据后仍返回404；原chat导出的XLSX与3968字节的原样例一致，分享回放里的另外13个附件可正常取得。</p>
+<p>因此，现有证据支持的是<strong>已测分享侧文件不可取得</strong>。插件下载附件时没有解析Excel工作簿，不能把它说成插件的表格解析错误；也不能进一步断言DeepSeek禁止所有Excel分享。HTTP的404本身并不能确定服务端是没有资源，还是不愿披露资源存在性。<a href="https://www.rfc-editor.org/rfc/rfc9110.html#section-15.5.5" rel="noopener noreferrer">RFC 9110的404定义</a>保留了这种区别。</p>
+<p>产品继续提示回原chat取得文件，并在部分失败时保留清单。扩展无法从不可用地址恢复一个真实文件，生成空XLSX只会让下载表面成功、实际内容缺失。</p>
+<h2 id="section-四怎样使用附带资源的导出包">四、怎样使用附带资源的导出包</h2>
+<p>勾选附带资源且下载成功，文件才会进入同级assets目录。打开Word等文档前应完整解压，保持文档与assets的相对位置；只移动文档，原来的相对链接就可能找不到目标。未勾选或下载失败时，文档可能保留在线链接或失败说明，不能把这些链接当成已保存文件。</p>
+<p>HTTP请求和状态码的通用含义见<a href="/blog/web-http-browser/">HTTP与浏览器</a>。如果想继续理解中文路径为什么需要编码，以及DOCX里怎样保存链接关系，可看<a href="/projects/deepseek-export-plus/document-formats/">字符与文档格式</a>。</p>16:["$","$L26",null,{"html":"$27","zoomImages":true}]
+17:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L10",null,{"href":"/projects/deepseek-export-plus/format-output/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"同一份对话怎样生成不同格式"}]]}],["$","$L10",null,{"href":"/projects/deepseek-export-plus/task-lifecycle/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"取消、撤回和页面切换后，任务怎样收尾"}]]}]]}]
+18:["$","div",null,{"className":"related-note","children":[["$","$L10",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L10",null,{"href":"/projects/deepseek-export-plus/","children":"返回项目首页"}]]}]
+19:["$","$L12",null,{"headings":"$c:0:1:d:r:props:children:0:props:children:1:props:headings"}]
+1a:["$","$L28",null,{"children":["$","$20",null,{"name":"Next.MetadataOutlet","children":"$@29"}]}]
+23:true
+7:300
+29:null
+7:C
+22:0
+b:"$undefined"
+9:"$undefined"
+5:"$undefined"
+21:"$undefined"
+1b:"$undefined"

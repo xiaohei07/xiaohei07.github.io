@@ -1,0 +1,163 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+b:I[887,[],"OutletBoundary"]
+c:"$Sreact.suspense"
+e:"ViewportBoundary"
+f:I[887,[],"$e"]
+11:"MetadataBoundary"
+12:I[887,[],"$11"]
+14:I[5718,[],"default",1]
+:HL["/_next/static/css/ed72070de5f1647a.css","style"]
+:HL["/_next/static/css/fba8334474de6d5c.css","style"]
+6:X
+9:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]]}],"p":false,"v":null}}]]
+8:[["children",{"s":{"n":"page","t":"d","k":"architecture","s":[]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q9"}]]
+7:[["children",{"s":{"n":"project","t":"d","k":"shicheng","s":["mental-health-evaluation"]},"h":197120,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"projects","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","projects","shicheng","architecture",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/fba8334474de6d5c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":"$L13"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$14",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"qlxSqwLiBLEa9YI_MjhDr"}
+6:C
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+15:Tb2c,(()=>{const d={"wallpaper":"banner","layout":"list","cardStyle":"soft","textSize":"normal","hero":true,"carousel":false,"waves":false,"fade":true,"motion":true,"typewriter":true,"progress":true,"petals":false,"dim":28,"blur":0,"cardOpacity":78,"colorMode":"section","customColor":"#32846b","sectionColors":{},"customTheme":"","sectionThemes":{}},enums={"wallpaper":["banner","fullscreen","overlay","none"],"layout":["list","grid"],"cardStyle":["soft","flat"],"textSize":["normal","large"],"colorMode":["section","custom"]},bools=["hero","carousel","waves","fade","motion","typewriter","progress","petals"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]));const color=(function(a,b){let c=b.startsWith("/credits")?"about":b.split("/")[1],d=["home","blog","research","projects","about"].includes(c)?c:"home",e=(a.sectionColors&&"object"==typeof a.sectionColors&&!Array.isArray(a.sectionColors)?a.sectionColors:{})[d],f="string"==typeof e&&/^#[\da-f]{6}$/i.test(e)?e.toLowerCase():void 0,g="string"==typeof a.customColor&&/^#[\da-f]{6}$/i.test(a.customColor)?a.customColor.toLowerCase():"#32846b",h=a.sectionThemes&&"object"==typeof a.sectionThemes&&!Array.isArray(a.sectionThemes)?a.sectionThemes:{},i="custom"===a.colorMode?a.customTheme:h[d],j="string"==typeof i&&["home","blog","research","projects","about"].includes(i)?i:void 0;return{section:d,color:"custom"===a.colorMode?g:f??g,customized:"custom"===a.colorMode?!j:!!f,theme:j??d}})(p,location.pathname);document.documentElement.setAttribute('data-custom-palette',String(color.customized));document.documentElement.setAttribute('data-palette-section',color.theme);const palette=(function(a){let b=/^#[\da-f]{6}$/i.test(a)?a:"#32846b",c=[1,3,5].map(a=>Number.parseInt(b.slice(a,a+2),16)),d={};for(let[a,[b,e]]of Object.entries({"light-page":[248,.09],"light-surface":[255,.025],"light-surface-soft":[252,.05],"light-surface-raised":[246,.08],"light-ink":[0,.15],"light-muted":[0,.32],"light-line":[213,.12],"light-accent":[0,.4],"light-accent-strong":[0,.3],"light-accent-soft":[248,.1],"light-on-accent":[255,0],"dark-page":[16,.025],"dark-surface":[26,.045],"dark-surface-soft":[22,.04],"dark-surface-raised":[33,.06],"dark-ink":[255,.12],"dark-muted":[255,.34],"dark-line":[72,.1],"dark-accent":[255,.35],"dark-accent-strong":[255,.22],"dark-accent-soft":[24,.1],"dark-on-accent":[0,.1]}))d[`--palette-${a}`]=`#${c.map(a=>Math.round(b*(1-e)+a*e).toString(16).padStart(2,"0")).join("")}`;return d})(color.color);for(const k in palette)document.documentElement.style.setProperty(k,palette[k])})()2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$15"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],"$L16"]}],"$L17"]}]
+18:"static/chunks/5587-bf231f55b3fd3ee7.js"
+19:"static/chunks/7107-d67496718f7d4082.js"
+1a:"static/chunks/app/layout-77ed034f8eeb34f4.js"
+1b:I[5376,["5587","$18","7107","$19","7177","$1a"],"DisplayProvider"]
+1c:"NavigationFeedback"
+1d:I[2842,["5587","$18","7107","$19","7177","$1a"],"$1c"]
+1e:I[4085,["5587","$18","7107","$19","7177","$1a"],"SiteHeader"]
+1f:I[5803,["5587","$18","7107","$19","7177","$1a"],"SiteFrame"]
+20:I[164,["5587","$18","7107","$19","7177","$1a"],"ProfileSidebar"]
+21:"static/chunks/8612-cbc92f3b94933c0e.js"
+22:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-ebed4086c1c4f871.js"
+23:I[3498,["5587","$18","8612","$21","4067","$22"],"default"]
+16:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]
+17:["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L1b",null,{"children":[["$","$L1d",null,{}],["$","$L1e",null,{"tags":["编程语言知识点","Python","C++"],"categoryIds":["foundations","frontend","backend","agent","computing","ai","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L1f",null,{"sidebar":["$","$L20",null,{"categoryIds":"$17:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L23",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L23",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L23",null,{"href":"/about/","children":"关于这个站点"}],["$","$L23",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]
+d:null
+13:[["$","title","0",{"children":"本机、服务端和提醒任务怎样组成拾程 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"解释原生页面、FastAPI、SQLite和模型HTTP调用怎样分工，以及两条入口为什么保留不同处理路径。"}],["$","link","2",{"rel":"canonical","href":"/projects/shicheng/architecture/"}]]
+25:I[5128,["5587","$18","8612","$21","4067","$22"],"ArticleToc"]
+26:"ProjectLegacyAnchors"
+27:I[1103,["5587","$18","8612","$21","4067","$22"],"$26"]
+28:I[4711,["5587","$18","8612","$21","4067","$22"],"ArticleBody"]
+29:T1f75,<p>拾程要处理的事情可以连成一条线：取得通知，整理信息，形成候选，人工确认，必要时提醒。但这条线不应该全部塞进一个模型请求，也不需要每一步都增加一个常驻服务。</p>
+<p>项目面对的是资源有限、同时运行其他服务的个人云主机。我的需求是先把固定流程做好，能从手机查看，也能在本机处理较复杂的微信材料。因此它采用<strong>原生网页、Python API、SQLite和直接模型调用</strong>，把业务状态留在服务器，将批量微信处理放在本机，邮件用独立短时任务执行。</p>
+<h2 id="section-一先看完整的数据流">一、先看完整的数据流</h2>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-text">手机或网页提交文字、链接、图片
+  → API收件 → 持久任务 → 服务端串行提取
+  → 校验与保存候选
+
+本机选定微信记录
+  → Tulpa导出 → 上下文、网页和图片处理
+  → 本机模型提取 → 缓存、归并与结构化结果同步
+  → 服务端再次校验与保存候选
+
+候选与来源 → 人工筛选、确认 → 日程或招聘资料
+已确认且单独授权的精确时间日程
+  → 提醒账本 → 独立邮件任务 → SMTP结果
+</code></pre></div>
+<p>两条入口共享后面的业务规则，却不共享同一种执行过程。本机结果到达<code>/v1/local-results</code>后，服务端做校验和落库，不再调用一次模型；手机提交原始材料，则进入服务器的任务队列。</p>
+<p>本机同步会包含需要的材料和来源，不能把“本机提取”理解为原文绝不离开电脑。它改变了复杂处理发生的位置，也让流程依赖本机已经同步的微信记录与相应工具。</p>
+<h2 id="section-二页面api与数据库分别承担什么">二、页面、API与数据库分别承担什么</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>组成</th><th>工具</th><th>做什么</th></tr></thead><tbody><tr><td>网页界面</td><td>HTML、CSS、原生JavaScript</td><td>显示收件、候选与日程，管理筛选和多选，发送操作请求</td></tr><tr><td>HTTP入口</td><td>FastAPI、Uvicorn</td><td>接收请求、认证、路由、调用业务逻辑并返回结果</td></tr><tr><td>持久状态</td><td>SQLite与Python标准库sqlite3</td><td>保存材料、任务、候选、来源、修订和邮件账本</td></tr><tr><td>模型适配</td><td>HTTPX与MiniMax接口</td><td>提交文字和图片，读取完整响应，进行自定义结果校验</td></tr><tr><td>任务组织</td><td>asyncio、线程执行器和项目任务代码</td><td>串行领取服务端任务，把阻塞处理转交线程</td></tr><tr><td>运行与提醒</td><td>systemd、Nginx、SMTP</td><td>管理服务、HTTPS入口、定时唤醒邮件脚本与提交邮件</td></tr></tbody></table>
+<p>Uvicorn负责运行ASGI应用，FastAPI负责组织接口；更完整的请求过程可以直接看<a href="/blog/backend-agent-s06-06-fastapi/">FastAPI请求链</a>。这里没有Next.js、React或Vue前端，也没有SQLAlchemy ORM。数据库操作使用原始参数化SQL，模型调用使用HTTPX直接请求，没有另加模型SDK或Agent框架。</p>
+<p><code>providers</code>是项目自己的模型适配模块，<code>jobs</code>负责处理任务，<code>domain</code>负责业务状态改变，<code>storage</code>负责数据库连接与事务。这些名称描述本地代码职责，不是额外部署的四个产品。</p>
+<h2 id="section-三为什么把数据分成几个对象">三、为什么把数据分成几个对象</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>对象</th><th>保存内容</th><th>为什么不能混在一起</th></tr></thead><tbody><tr><td>materials，材料</td><td>原文、链接、时间、附件与缺失说明</td><td>保留提取依据，一份材料可能包含多个事项</td></tr><tr><td>reviews，待确认项</td><td>候选、疑点和处理状态</td><td>提取结果还没有获得用户确认</td></tr><tr><td>events，日程</td><td>已确认安排、时间、地点和版本</td><td>需要修改、取消与提醒规则</td></tr><tr><td>opportunities，招聘资料</td><td>企业、岗位等信息</td><td>不一定有线下地点，也不一定要建立日程</td></tr><tr><td>来源关联</td><td>材料与候选、日程的对应关系</td><td>多份转发可以指向同一事项</td></tr><tr><td>reminder_outbox，提醒账本</td><td>发送意图、期限与结果</td><td>邮件状态不能由“材料处理完成”推导</td></tr></tbody></table>
+<p>假设一份汇总包含三家公司，它可以产生三项候选；同一活动被三个群转发，又可能只对应一项日程。材料数、候选数和日程数因此不应强行一致。保留关联，才能在用户质疑时间时找到具体依据。</p>
+<h2 id="section-四本机工具怎样接上服务器">四、本机工具怎样接上服务器</h2>
+<p>Tulpa是已经存在的微信记录工具。拾程主增量流程调用它的导出CLI，明确账号、群和时间范围，再处理导出结果；补取特定媒体的脚本另通过受限MCP接口工作。这不是模型自主选择工具，也不是自行实现微信协议。</p>
+<p>本机流程使用PowerShell入口启动项目Python环境，依次完成增量筛选、上下文组材、网页与图片补充、提取、归并和同步。网页读取使用受限制的HTTP与HTML处理，不运行目标网页脚本；Pillow校验图片文件和尺寸，招聘内容由远程模型理解，Pillow本身不是OCR引擎。</p>
+<p>每个阶段保留缓存和进度。这样一组图片里前半部分成功、后半部分失败时，可以按规则复用已完成结果，不必把全部内容当成从未处理。具体预算单位仍要区分，见<a href="/projects/shicheng/model-extraction/">模型提取与调用预算</a>。</p>
+<h2 id="section-五串行处理与独立邮件为什么这样组合">五、串行处理与独立邮件为什么这样组合</h2>
+<p>API的生命周期中有一个任务循环，一次等待一个<code>run_one</code>完成，再领取下一个。同步工作通过<code>asyncio.to_thread</code>进入线程，事件循环仍能处理其他请求。单Web worker、串行提取与只有一条线程是不同概念。</p>
+<p>SQLite记录任务状态，网络请求放在写事务外，返回后再用令牌、租约与材料版本核对。对于当前个人工具，这减少了常驻组件，也让失败状态集中可查；代价是处理量上来会排队，写事务仍会竞争，不能把轻量等同于无限扩展。</p>
+<p>邮件则由systemd timer每分钟唤醒独立脚本，直接扫描数据库账本，不依赖模型或者API请求正在运行。它仍依赖主机、数据库和SMTP可用，因此这是一种故障范围的分离，不是另一台高可用机器。</p>
+<h2 id="section-六如果从头搭一个类似项目">六、如果从头搭一个类似项目</h2>
+<p>可以先完成一条最小业务线：提交文字、保存材料、提取候选、人工确认、查看日程。确认对象与状态稳定后，再加入本机批量输入、图片分组和增量游标；最后增加邮件与恢复，检查重复执行和外部结果不确定时怎么办。</p>
+<p>通用HTTP、FastAPI、SQL和安全前置直接使用已有博客；<a href="/projects/shicheng/sqlite-transactions/">SQLite事务</a>与<a href="/projects/shicheng/calendar-format/">ICS日历格式</a>补本项目新增知识。阅读模块时重点看每一步交给下一步什么，而不是试图记住所有文件名。</p>
+<p>项目还没有Redis、独立消息队列、向量聚类或持续日历同步。未来如果负载和使用方式变化，应先观察真实瓶颈，再决定是否引入这些组件；增加技术栈数量本身不构成功能改善。</p>a:["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"shicheng-architecture","children":[["$","header",null,{"className":"article-heading","children":["$L24",["$","h1",null,{"tabIndex":-1,"children":"本机、服务端和提醒任务怎样组成拾程"}],["$","p",null,{"className":"article-deck","children":"解释原生页面、FastAPI、SQLite和模型HTTP调用怎样分工，以及两条入口为什么保留不同处理路径。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["1,836"," 字"]}],["$","span",null,{"children":["阅读约 ",6," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","架构设计",{"children":"架构设计"}],["$","span","FastAPI",{"children":"FastAPI"}],["$","span","SQLite",{"children":"SQLite"}]]}]]}],["$","$L25",null,{"headings":[{"id":"section-一先看完整的数据流","text":"一、先看完整的数据流","level":2},{"id":"section-二页面api与数据库分别承担什么","text":"二、页面、API与数据库分别承担什么","level":2},{"id":"section-三为什么把数据分成几个对象","text":"三、为什么把数据分成几个对象","level":2},{"id":"section-四本机工具怎样接上服务器","text":"四、本机工具怎样接上服务器","level":2},{"id":"section-五串行处理与独立邮件为什么这样组合","text":"五、串行处理与独立邮件为什么这样组合","level":2},{"id":"section-六如果从头搭一个类似项目","text":"六、如果从头搭一个类似项目","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L23",null,{"href":"/projects/shicheng/#project-reading","children":"项目首页与阅读路线"}],["$","span",null,{"children":[1," / ",11," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","shicheng-architecture",{"value":1,"children":["$","$L23",null,{"href":"/projects/shicheng/architecture/","data-reading-start":"true","aria-current":"page","children":"本机、服务端和提醒任务怎样组成拾程"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","shicheng-material-intake",{"value":2,"children":["$","$L23",null,{"href":"/projects/shicheng/material-intake/","data-reading-start":"true","aria-current":"$undefined","children":"微信记录、网页和图片怎样成为可处理材料"}]}],["$","li","shicheng-model-extraction",{"value":3,"children":["$","$L23",null,{"href":"/projects/shicheng/model-extraction/","data-reading-start":"true","aria-current":"$undefined","children":"模型输出怎样变成可检查的候选"}]}],["$","li","shicheng-review-workflow",{"value":4,"children":["$","$L23",null,{"href":"/projects/shicheng/review-workflow/","data-reading-start":"true","aria-current":"$undefined","children":"确认、批量操作与恢复怎样保护用户决定"}]}],["$","li","shicheng-job-queue",{"value":5,"children":["$","$L23",null,{"href":"/projects/shicheng/job-queue/","data-reading-start":"true","aria-current":"$undefined","children":"串行队列怎样把处理进度留下来"}]}],["$","li","shicheng-mail-reminders",{"value":6,"children":["$","$L23",null,{"href":"/projects/shicheng/mail-reminders/","data-reading-start":"true","aria-current":"$undefined","children":"一封提醒邮件怎样从日程走到发送结果"}]}],["$","li","shicheng-backup-export",{"value":7,"children":["$","$L23",null,{"href":"/projects/shicheng/backup-export/","data-reading-start":"true","aria-current":"$undefined","children":"备份、恢复与日历导出分别保存什么"}]}]]}]]}],["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","shicheng-sqlite-transactions",{"value":8,"children":["$","$L23",null,{"href":"/projects/shicheng/sqlite-transactions/","data-reading-start":"true","aria-current":"$undefined","children":"SQLite怎样处理短事务与并发写入"}]}],["$","li","shicheng-calendar-format",{"value":9,"children":["$","$L23",null,{"href":"/projects/shicheng/calendar-format/","data-reading-start":"true","aria-current":"$undefined","children":"ICS怎样把一条日程交给其他日历"}]}]]}]]}],["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","shicheng-date-correction",{"value":10,"children":["$","$L23",null,{"href":"/projects/shicheng/date-correction/","data-reading-start":"true","aria-current":"$undefined","children":"通知里的“明天”和“10.22”怎样落成时间"}]}],["$","li","shicheng-incremental-dedup",{"value":11,"children":["$","$L23",null,{"href":"/projects/shicheng/incremental-dedup/","data-reading-start":"true","aria-current":"$undefined","children":"重复通知怎样合并，又不抹掉新的变化"}]}]]}]]}]]]}]]}],["$","$L27",null,{"mappings":[]}],["$","$L28",null,{"html":"$29","zoomImages":true}],"$L2a","$L2b"]}],"$L2c"]}]]}]
+2a:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[false,["$","$L23",null,{"href":"/projects/shicheng/material-intake/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"微信记录、网页和图片怎样成为可处理材料"}]]}]]}]
+2b:["$","div",null,{"className":"related-note","children":[["$","$L23",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L23",null,{"href":"/projects/shicheng/","children":"返回项目首页"}]]}]
+2c:["$","$L25",null,{"headings":"$a:props:children:1:props:headings"}]
+2d:I[6279,["5587","$18","8612","$21","4067","$22"],"FilterLink"]
+24:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L23",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L23",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$L23",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L2d",null,{"className":"trail-current","href":"/projects/","children":["个人工具",["$","span",null,{"children":1}]]}],"$undefined"]}]

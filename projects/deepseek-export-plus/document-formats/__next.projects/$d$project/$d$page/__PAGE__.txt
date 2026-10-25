@@ -1,0 +1,110 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+d:"static/chunks/5587-bf231f55b3fd3ee7.js"
+e:"static/chunks/8612-cbc92f3b94933c0e.js"
+f:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-ebed4086c1c4f871.js"
+10:I[3498,["5587","$d","8612","$e","4067","$f"],"default"]
+11:I[6279,["5587","$d","8612","$e","4067","$f"],"FilterLink"]
+12:I[5128,["5587","$d","8612","$e","4067","$f"],"ArticleToc"]
+1c:"ViewportBoundary"
+1d:I[887,[],"$1c"]
+1e:"MetadataBoundary"
+1f:I[887,[],"$1e"]
+20:"$Sreact.suspense"
+6:X
+6:C
+7:X
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"deepseek-export-plus-document-formats","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L10",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L10",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$L10",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L11",null,{"className":"trail-current","href":"/projects/","children":["浏览器扩展",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"字符、XML和DOCX：文件格式怎样层层组成"}],["$","p",null,{"className":"article-deck","children":"从码点、编码与合法字符，走到命名空间、Word正文和资源关系，按层次理解导出故障。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["1,482"," 字"]}],["$","span",null,{"children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","Unicode",{"children":"Unicode"}],["$","span","XML",{"children":"XML"}],["$","span","DOCX",{"children":"DOCX"}]]}]]}],["$","$L12",null,{"headings":[{"id":"section-一字符码点编码与字符串长度","text":"一、字符、码点、编码与字符串长度","level":2},{"id":"section-二xml不仅要求编码正确还限制内容是否合法","text":"二、XML不仅要求编码正确，还限制内容是否合法","level":2},{"id":"section-三htmlxhtmlmathml和svg为什么会相遇","text":"三、HTML、XHTML、MathML和SVG为什么会相遇","level":2},{"id":"section-四docx怎样把正文和资源装在一起","text":"四、DOCX怎样把正文和资源装在一起","level":2},{"id":"section-五怎样从格式层次回到检查步骤","text":"五、怎样从格式层次回到检查步骤","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L10",null,{"href":"/projects/deepseek-export-plus/#project-reading","children":"项目首页与阅读路线"}],["$","span",null,{"children":[7," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-architecture",{"value":1,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/architecture/","data-reading-start":"true","children":"从网页到文件，导出链路怎样分工"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extract-conversation",{"value":2,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/extract-conversation/","data-reading-start":"true","children":"长对话、折叠思考与有序消息怎样提取"}]}],["$","li","deepseek-export-plus-format-output",{"value":3,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/format-output/","data-reading-start":"true","children":"同一份对话怎样生成不同格式"}]}],["$","li","deepseek-export-plus-attachments",{"value":4,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/attachments/","data-reading-start":"true","children":"附件怎样下载、打包并保持可打开"}]}],["$","li","deepseek-export-plus-task-lifecycle",{"value":5,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/task-lifecycle/","data-reading-start":"true","children":"取消、撤回和页面切换后，任务怎样收尾"}]}]]}]]}],["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extension-runtime",{"value":6,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/extension-runtime/","data-reading-start":"true","children":"内容脚本、网页环境与后台怎样协作"}]}],["$","li","deepseek-export-plus-document-formats",{"value":7,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/document-formats/","data-reading-start":"true","aria-current":"page","children":"字符、XML和DOCX：文件格式怎样层层组成"}]}],"$L13"]}]]}],"$L14"]]}]]}],"$L15","$L16","$L17","$L18"]}],"$L19"]}]]}],null,"$L1a"]}],"p":"$@1b","v":null,"s":"$7"}}]]
+a:[["children",{"s":{"n":"page","t":"d","k":"document-formats","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
+8:[["children",{"s":{"n":"project","t":"d","k":"deepseek-export-plus","s":["mental-health-evaluation"]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"projects","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1d",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1f",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$20",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"字符、XML和DOCX：文件格式怎样层层组成 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从码点、编码与合法字符，走到命名空间、Word正文和资源关系，按层次理解导出故障。"}],["$","link","2",{"rel":"canonical","href":"/projects/deepseek-export-plus/document-formats/"}]]}]}],null]}],null]}],"p":"$@21","v":null,"s":"$7"}},"a":"$@22","u":"$@23","b":"qlxSqwLiBLEa9YI_MjhDr"}
+24:"ProjectLegacyAnchors"
+25:I[1103,["5587","$d","8612","$e","4067","$f"],"$24"]
+26:I[4711,["5587","$d","8612","$e","4067","$f"],"ArticleBody"]
+28:I[887,[],"OutletBoundary"]
+13:["$","li","deepseek-export-plus-rendering-pagination",{"value":8,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/rendering-pagination/","data-reading-start":"true","children":"从网页排版到长图：字体、画布和分页"}]}]
+14:["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-word-png",{"value":9,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/word-png/","data-reading-start":"true","children":"Word与PNG的两次失败，为什么要分层修复"}]}],["$","li","deepseek-export-plus-page-integration",{"value":10,"children":["$","$L10",null,{"href":"/projects/deepseek-export-plus/page-integration/","data-reading-start":"true","children":"导出按钮怎样与原网页和平共处"}]}]]}]]}]
+15:["$","$L25",null,{"mappings":[]}]
+27:T1d8c,<p>Word打不开、链接乱码和SVG解码失败，看起来都可能被叫作“编码问题”，但它们经过的规则不同。要定位这类问题，需要分清字符怎样表示、标记文档允许什么、资源怎样组合，以及最后由谁解释。</p>
+<p>这篇补齐导出文件所需的格式知识。<a href="/blog/web-http-browser/">HTTP与浏览器</a>已经介绍URL和请求，本篇不重新讲网络流程；实际两次故障的过程见<a href="/projects/deepseek-export-plus/word-png/">Word与PNG问题排查</a>。</p>
+<h2 id="section-一字符码点编码与字符串长度">一、字符、码点、编码与字符串长度</h2>
+<p>Unicode为字符分配码点，例如“中”对应U+4E2D。UTF-8和UTF-16是表示码点的编码方式：同一个字符可以有不同的字节表示，并不意味着它变成了另一个字符。</p>
+<p>JavaScript字符串按UTF-16码元组织。码元是编码使用的单位，不总等于一个完整字符。常见emoji可能由两个码元构成；如果逐个码元删除“看起来不在普通范围内”的值，就可能把合法字符拆坏。反过来，一个孤立代理码元没有组成完整字符，也不能直接送进所有文档格式。</p>
+<div class="code-block"><div class="code-toolbar"><span>js</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-js"><span class="hljs-comment">// 教学示例：比较UTF-16码元数与UTF-8编码后的字节数。</span>
+<span class="hljs-keyword">const</span> text = <span class="hljs-string">"中😀"</span>;
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(text.<span class="hljs-property">length</span>); <span class="hljs-comment">// 3个UTF-16码元</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">TextEncoder</span>().<span class="hljs-title function_">encode</span>(text).<span class="hljs-property">length</span>); <span class="hljs-comment">// 7字节</span>
+</code></pre></div>
+<p>这里不把字节数、码元数和人眼看到的字符数互换。复杂emoji还可能由多个码点组合；具体字符串行为可对照<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length" rel="noopener noreferrer">JavaScript字符串长度说明</a>。</p>
+<h2 id="section-二xml不仅要求编码正确还限制内容是否合法">二、XML不仅要求编码正确，还限制内容是否合法</h2>
+<p>XML用元素和属性组织文档，例如<code>&#x3C;title>内容&#x3C;/title></code>。它规定标签怎样闭合、特殊符号怎样表示，也规定允许哪些字符出现。一个字符串能够存在于JavaScript里，不代表能直接进入XML 1.0。</p>
+<p><code>&#x26;lt;</code>表达一个作为文字的“小于号”，属于转义问题；U+000C控制字符不在XML 1.0允许集合中，则属于字符合法性问题。将后者写成数值字符引用<code>&#x26;#xC;</code>仍不合法，因为引用目标也必须满足字符集合规则。规范依据见<a href="https://www.w3.org/TR/xml/#charsets" rel="noopener noreferrer">XML字符与引用规则</a>。</p>
+<p>项目的<code>wordText</code>是一个本地文本处理函数，用于把非法字符变成可见的反斜线表示。例如控制字符本身变成普通文本<code>\u000c</code>，读者仍能看到原来的异常位置；正常中文、换行与合法emoji保持原状。它不猜测原文意图，也不将字符静默改成另一段自然语言。</p>
+<h2 id="section-三htmlxhtmlmathml和svg为什么会相遇">三、HTML、XHTML、MathML和SVG为什么会相遇</h2>
+<p>网页公式不是天然的一张图片，往往包含HTML排版、MathML数学语义和SVG笔画。将这组节点放入SVG的<code>foreignObject</code>，再让浏览器绘制时，外层接收的是XML结构，不能直接假设HTML字符串中的全部实体仍然有效。</p>
+<p><strong>命名空间说明元素属于哪种标记语言。</strong>同一棵结构里，SVG外层、XHTML内容和MathML公式各有自己的语义。<code>XMLSerializer</code>是浏览器提供的序列化工具，把节点树按XML规则转换为文本；项目中的<code>formulaSvg</code>则是组织这些步骤的本地封装。</p>
+<p>HTML的<code>&#x26;nbsp;</code>问题说明了这个边界：HTML解析器认识的命名实体，普通XML不一定预先定义。让正确的节点树走对应序列化，比到处替换字符串更容易保持结构。但序列化也不能替代对非法文本、资源地址和活动内容的检查。可对照<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLSerializer/serializeToString" rel="noopener noreferrer">XMLSerializer接口</a>。</p>
+<h2 id="section-四docx怎样把正文和资源装在一起">四、DOCX怎样把正文和资源装在一起</h2>
+<p>DOCX是一个ZIP容器，里面有正文XML、样式、图片与关系文件。Office Open XML，简称OOXML，是这类Office文档采用的一组结构规范；WordprocessingML描述Word正文。</p>
+<p>可以把一个带链接的段落理解为：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-text">段落
+  普通文本片段：“请看”
+  超链接：“附件”
+       ↓
+正文XML：段落、文本、链接引用
+关系文件：引用标识 → 目标地址
+媒体文件：文档实际包含的图片
+       ↓
+ZIP容器 → Word读取与排版
+</code></pre></div>
+<p>项目把会话语义映射为段落、文本、表格与图片，由docx库生成对应结构；没有自行实现整套Office规范。段落层次可参考<a href="https://learn.microsoft.com/en-us/office/open-xml/word/structure-of-a-wordprocessingml-document" rel="noopener noreferrer">Microsoft的WordprocessingML介绍</a>。</p>
+<p>超链接只保存目标位置，与把另一个文件嵌入文档不同。附带成功的文档附件位于外部assets目录，Word通过相对链接打开；公式图片则可以作为DOCX内部媒体。LaTeX保存在替代文本中，也不等于已经生成OMML原生数学对象。OMML能够表达可编辑分式等数学结构，当前项目没有实现这层转换。</p>
+<h2 id="section-五怎样从格式层次回到检查步骤">五、怎样从格式层次回到检查步骤</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>检查层次</th><th>解决的问题</th><th>仍不能证明什么</th></tr></thead><tbody><tr><td>字节与容器</td><td>文件是否完整，ZIP能否读取</td><td>内部XML是否正确</td></tr><tr><td>XML结构与字符</td><td>各部分能否合法解析</td><td>样式、关系和阅读器行为是否符合预期</td></tr><tr><td>资源关系</td><td>图片和链接目标是否对应</td><td>消费者是否按相同方式处理路径</td></tr><tr><td>实际应用</td><td>Word能否打开、末尾是否保留、链接是否打开正确文件</td><td>所有版本和其他Office软件都兼容</td></tr></tbody></table>
+<p>这个顺序也适用于其他导出项目：先确认出错的对象，再选对应解析器或消费者检查。改变文件后缀不能改变内部格式，换编码也不能修复所有结构问题。清楚每一层的输入与规则，才知道修改应该落在哪一步。</p>16:["$","$L26",null,{"html":"$27","zoomImages":true}]
+17:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L10",null,{"href":"/projects/deepseek-export-plus/extension-runtime/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"内容脚本、网页环境与后台怎样协作"}]]}],["$","$L10",null,{"href":"/projects/deepseek-export-plus/rendering-pagination/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"从网页排版到长图：字体、画布和分页"}]]}]]}]
+18:["$","div",null,{"className":"related-note","children":[["$","$L10",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L10",null,{"href":"/projects/deepseek-export-plus/","children":"返回项目首页"}]]}]
+19:["$","$L12",null,{"headings":"$c:0:1:d:r:props:children:0:props:children:1:props:headings"}]
+1a:["$","$L28",null,{"children":["$","$20",null,{"name":"Next.MetadataOutlet","children":"$@29"}]}]
+23:true
+7:300
+29:null
+7:C
+22:0
+b:"$undefined"
+9:"$undefined"
+5:"$undefined"
+21:"$undefined"
+1b:"$undefined"

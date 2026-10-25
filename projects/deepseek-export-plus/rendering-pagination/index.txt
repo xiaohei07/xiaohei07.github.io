@@ -1,0 +1,100 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+b:I[887,[],"OutletBoundary"]
+c:"$Sreact.suspense"
+e:"ViewportBoundary"
+f:I[887,[],"$e"]
+11:"MetadataBoundary"
+12:I[887,[],"$11"]
+14:I[5718,[],"default",1]
+:HL["/_next/static/css/ed72070de5f1647a.css","style"]
+:HL["/_next/static/css/fba8334474de6d5c.css","style"]
+6:X
+9:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]]}],"p":false,"v":null}}]]
+8:[["children",{"s":{"n":"page","t":"d","k":"rendering-pagination","s":[]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q9"}]]
+7:[["children",{"s":{"n":"project","t":"d","k":"deepseek-export-plus","s":["mental-health-evaluation"]},"h":197120,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"projects","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","projects","deepseek-export-plus","rendering-pagination",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/fba8334474de6d5c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":"$L13"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$14",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"qlxSqwLiBLEa9YI_MjhDr"}
+6:C
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+15:Tb2c,(()=>{const d={"wallpaper":"banner","layout":"list","cardStyle":"soft","textSize":"normal","hero":true,"carousel":false,"waves":false,"fade":true,"motion":true,"typewriter":true,"progress":true,"petals":false,"dim":28,"blur":0,"cardOpacity":78,"colorMode":"section","customColor":"#32846b","sectionColors":{},"customTheme":"","sectionThemes":{}},enums={"wallpaper":["banner","fullscreen","overlay","none"],"layout":["list","grid"],"cardStyle":["soft","flat"],"textSize":["normal","large"],"colorMode":["section","custom"]},bools=["hero","carousel","waves","fade","motion","typewriter","progress","petals"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]));const color=(function(a,b){let c=b.startsWith("/credits")?"about":b.split("/")[1],d=["home","blog","research","projects","about"].includes(c)?c:"home",e=(a.sectionColors&&"object"==typeof a.sectionColors&&!Array.isArray(a.sectionColors)?a.sectionColors:{})[d],f="string"==typeof e&&/^#[\da-f]{6}$/i.test(e)?e.toLowerCase():void 0,g="string"==typeof a.customColor&&/^#[\da-f]{6}$/i.test(a.customColor)?a.customColor.toLowerCase():"#32846b",h=a.sectionThemes&&"object"==typeof a.sectionThemes&&!Array.isArray(a.sectionThemes)?a.sectionThemes:{},i="custom"===a.colorMode?a.customTheme:h[d],j="string"==typeof i&&["home","blog","research","projects","about"].includes(i)?i:void 0;return{section:d,color:"custom"===a.colorMode?g:f??g,customized:"custom"===a.colorMode?!j:!!f,theme:j??d}})(p,location.pathname);document.documentElement.setAttribute('data-custom-palette',String(color.customized));document.documentElement.setAttribute('data-palette-section',color.theme);const palette=(function(a){let b=/^#[\da-f]{6}$/i.test(a)?a:"#32846b",c=[1,3,5].map(a=>Number.parseInt(b.slice(a,a+2),16)),d={};for(let[a,[b,e]]of Object.entries({"light-page":[248,.09],"light-surface":[255,.025],"light-surface-soft":[252,.05],"light-surface-raised":[246,.08],"light-ink":[0,.15],"light-muted":[0,.32],"light-line":[213,.12],"light-accent":[0,.4],"light-accent-strong":[0,.3],"light-accent-soft":[248,.1],"light-on-accent":[255,0],"dark-page":[16,.025],"dark-surface":[26,.045],"dark-surface-soft":[22,.04],"dark-surface-raised":[33,.06],"dark-ink":[255,.12],"dark-muted":[255,.34],"dark-line":[72,.1],"dark-accent":[255,.35],"dark-accent-strong":[255,.22],"dark-accent-soft":[24,.1],"dark-on-accent":[0,.1]}))d[`--palette-${a}`]=`#${c.map(a=>Math.round(b*(1-e)+a*e).toString(16).padStart(2,"0")).join("")}`;return d})(color.color);for(const k in palette)document.documentElement.style.setProperty(k,palette[k])})()2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$15"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],"$L16"]}],"$L17"]}]
+18:"static/chunks/5587-bf231f55b3fd3ee7.js"
+19:"static/chunks/7107-d67496718f7d4082.js"
+1a:"static/chunks/app/layout-77ed034f8eeb34f4.js"
+1b:I[5376,["5587","$18","7107","$19","7177","$1a"],"DisplayProvider"]
+1c:"NavigationFeedback"
+1d:I[2842,["5587","$18","7107","$19","7177","$1a"],"$1c"]
+1e:I[4085,["5587","$18","7107","$19","7177","$1a"],"SiteHeader"]
+1f:I[5803,["5587","$18","7107","$19","7177","$1a"],"SiteFrame"]
+20:I[164,["5587","$18","7107","$19","7177","$1a"],"ProfileSidebar"]
+21:"static/chunks/8612-cbc92f3b94933c0e.js"
+22:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-ebed4086c1c4f871.js"
+23:I[3498,["5587","$18","8612","$21","4067","$22"],"default"]
+16:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]
+17:["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L1b",null,{"children":[["$","$L1d",null,{}],["$","$L1e",null,{"tags":["编程语言知识点","Python","C++"],"categoryIds":["foundations","frontend","backend","agent","computing","ai","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L1f",null,{"sidebar":["$","$L20",null,{"categoryIds":"$17:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L23",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L23",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L23",null,{"href":"/about/","children":"关于这个站点"}],["$","$L23",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]
+d:null
+13:[["$","title","0",{"children":"从网页排版到长图：字体、画布和分页 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"理解字体与图片就绪、公式图像、文本行保护区以及清晰度对画布内存的影响。"}],["$","link","2",{"rel":"canonical","href":"/projects/deepseek-export-plus/rendering-pagination/"}]]
+25:I[5128,["5587","$18","8612","$21","4067","$22"],"ArticleToc"]
+26:"ProjectLegacyAnchors"
+27:I[1103,["5587","$18","8612","$21","4067","$22"],"$26"]
+28:I[4711,["5587","$18","8612","$21","4067","$22"],"ArticleBody"]
+29:T16b9,<p>把回答保存为PNG，需要先把内容排成一个稳定的画面。长回答还要决定在哪里切页，公式要尽量保持原来的结构，同时不能为了清晰度无限放大画布。这里的工作发生在浏览器排版与绘制阶段，和把文字写入文件不同。</p>
+<p>CSS布局、图片候选与像素基础已有<a href="/blog/css-responsive-images/">独立文章</a>。本篇沿DeepSeek Export Plus的导出表面，补充字体就绪、公式渲染、分页边界与画布占用。</p>
+<h2 id="section-一先建立一个只包含导出内容的排版表面">一、先建立一个只包含导出内容的排版表面</h2>
+<p>原聊天页包含侧栏、输入框和很多交互状态，不适合直接当输出模板。Word/PNG模块创建临时离屏iframe，把选中内容渲染为经过净化的HTML，配上受控样式与可使用的图片，再进行测量。</p>
+<p>离屏表示这个文档不作为正常页面内容供人浏览，不表示计算进入另一条后台线程。它仍需要浏览器布局和绘制。生成结束或取消后移除iframe，也要释放对应引用，避免临时表面一直留着。</p>
+<p>当同时选择Word和PNG时，两个格式共用一次表面，按顺序生成，然后清理；这不是两套独立并行渲染服务。</p>
+<h2 id="section-二为什么要先等字体与图片">二、为什么要先等字体与图片</h2>
+<p>字体决定字符宽度、行高和对齐基线。若先用替代字体排版并记录切点，字体随后加载，原先一行的文字可能变成两行，切点就会穿过新的文本。</p>
+<p>图片也要经过解码，才能成为可绘制的图像。文件下载完成与解码完成是不同阶段。导出表面先等待相应图片，触发布局，再等待<code>document.fonts.ready</code>，之后才使用文本行和块的位置。该接口的含义见<a href="https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSet/ready" rel="noopener noreferrer">FontFaceSet.ready</a>。</p>
+<p>项目还区分三个消费者的字体交付：打印页使用本地KaTeX样式与字体资源；Word/PNG按需包把相应字体内嵌到样式中，供受限制的临时表面使用；独立HTML默认使用MathML，并没有把同一套字体包原样塞进每份输出。</p>
+<h2 id="section-三公式为什么先单独变成图片">三、公式为什么先单独变成图片</h2>
+<p>html2canvas根据DOM和样式重建画面，不是直接读取浏览器屏幕上的现成像素。复杂分式、矩阵和根号依赖字体度量与多层布局，通用转图工具不一定与浏览器原生排版完全一致。其工作方式见<a href="https://html2canvas.hertzen.com/documentation" rel="noopener noreferrer">html2canvas说明</a>。</p>
+<p>项目因此先让浏览器通过SVG <code>foreignObject</code>渲染公式，再把得到的图像用于Word和PNG。普通Word正文仍映射为段落、代码与表格，没有把整篇Word都变成截图。</p>
+<p>这种组合保留正文编辑能力，也让两种输出共用公式图像；代价是公式不能原生编辑。SVG的结构合法性与Word正文字符合法性仍是两类问题，相关故障见<a href="/projects/deepseek-export-plus/word-png/">分层修复过程</a>。</p>
+<h2 id="section-四分页要避开文字行与图片">四、分页要避开文字行与图片</h2>
+<p>假设希望在纵坐标1800处切页，一行文字占1788到1812。直接切割会把字拆成上下两半。分页需要先知道哪些区间应该尽量保持完整。</p>
+<p>项目收集块边界、文本Range得到的行矩形以及图片保护区。Range是浏览器表示一段文档范围的对象，可以帮助取得文本实际排版后的矩形。切点落进保护区时，尝试移到合适边界；很短的尾页也可以按规则合并。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>情况</th><th>处理思路</th><th>代价</th></tr></thead><tbody><tr><td>切点穿过一行文字</td><td>提前到完整行之前</td><td>当前页可能留白</td></tr><tr><td>切点穿过普通图片</td><td>尽量移到图片边界</td><td>页高不一定完全相同</td></tr><tr><td>单个块本身大于一页</td><td>只能在既有限制内退让</td><td>可能没有完美切点</td></tr><tr><td>内容过高或切点过多</td><td>拒绝或要求拆分轮次</td><td>不承诺任意长文一次完成</td></tr></tbody></table>
+<p>这套规则控制的是重新排版后的导出表面，不是原网页每个像素位置。打印PDF的分页还会受到纸张与页边距影响，因此PNG和PDF页数不同并不自动表示内容丢失。</p>
+<h2 id="section-五清晰度怎样影响画布内存">五、清晰度怎样影响画布内存</h2>
+<p>CSS像素描述布局，canvas像素描述最终位图。以900×1800 CSS像素、缩放系数1.5为例，最终画布是1350×2700，共3,645,000个像素。RGBA的红、绿、蓝和透明度四个通道若各占一字节，仅像素缓冲就约13.9MiB。</p>
+<p>这个数字只是算例，还没有包括DOM、字体、原图、导出文件和归档结果。缩放系数翻倍时，两维一起翻倍，像素数量约变为四倍；清晰度不是没有成本的开关。</p>
+<p>PNG逐页创建画布，转出字节后清空画布尺寸，有助于控制单张表面。但已经生成的字节仍要保留到下载阶段，资源和ZIP也可能同时存在。<strong>逐页绘制不等于流式归档，单张画布占用不等于整个任务峰值。</strong></p>
+<p>如果要继续优化，应分别观察资源获取、字体与公式、画布绘制和归档阶段，固定输入与选项再比较。通用测量方法可参考<a href="/blog/backend-agent-s04-05-latency-capacity/">时延与容量分析</a>，不把这份像素算例写成已经测得的性能提升。</p>a:["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"deepseek-export-plus-rendering-pagination","children":[["$","header",null,{"className":"article-heading","children":["$L24",["$","h1",null,{"tabIndex":-1,"children":"从网页排版到长图：字体、画布和分页"}],["$","p",null,{"className":"article-deck","children":"理解字体与图片就绪、公式图像、文本行保护区以及清晰度对画布内存的影响。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["1,415"," 字"]}],["$","span",null,{"children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","Canvas",{"children":"Canvas"}],["$","span","字体",{"children":"字体"}],["$","span","分页",{"children":"分页"}]]}]]}],["$","$L25",null,{"headings":[{"id":"section-一先建立一个只包含导出内容的排版表面","text":"一、先建立一个只包含导出内容的排版表面","level":2},{"id":"section-二为什么要先等字体与图片","text":"二、为什么要先等字体与图片","level":2},{"id":"section-三公式为什么先单独变成图片","text":"三、公式为什么先单独变成图片","level":2},{"id":"section-四分页要避开文字行与图片","text":"四、分页要避开文字行与图片","level":2},{"id":"section-五清晰度怎样影响画布内存","text":"五、清晰度怎样影响画布内存","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L23",null,{"href":"/projects/deepseek-export-plus/#project-reading","children":"项目首页与阅读路线"}],["$","span",null,{"children":[8," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-architecture",{"value":1,"children":["$","$L23",null,{"href":"/projects/deepseek-export-plus/architecture/","data-reading-start":"true","aria-current":"$undefined","children":"从网页到文件，导出链路怎样分工"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extract-conversation",{"value":2,"children":["$","$L23",null,{"href":"/projects/deepseek-export-plus/extract-conversation/","data-reading-start":"true","aria-current":"$undefined","children":"长对话、折叠思考与有序消息怎样提取"}]}],["$","li","deepseek-export-plus-format-output",{"value":3,"children":["$","$L23",null,{"href":"/projects/deepseek-export-plus/format-output/","data-reading-start":"true","aria-current":"$undefined","children":"同一份对话怎样生成不同格式"}]}],["$","li","deepseek-export-plus-attachments",{"value":4,"children":["$","$L23",null,{"href":"/projects/deepseek-export-plus/attachments/","data-reading-start":"true","aria-current":"$undefined","children":"附件怎样下载、打包并保持可打开"}]}],["$","li","deepseek-export-plus-task-lifecycle",{"value":5,"children":["$","$L23",null,{"href":"/projects/deepseek-export-plus/task-lifecycle/","data-reading-start":"true","aria-current":"$undefined","children":"取消、撤回和页面切换后，任务怎样收尾"}]}]]}]]}],["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extension-runtime",{"value":6,"children":["$","$L23",null,{"href":"/projects/deepseek-export-plus/extension-runtime/","data-reading-start":"true","aria-current":"$undefined","children":"内容脚本、网页环境与后台怎样协作"}]}],["$","li","deepseek-export-plus-document-formats",{"value":7,"children":["$","$L23",null,{"href":"/projects/deepseek-export-plus/document-formats/","data-reading-start":"true","aria-current":"$undefined","children":"字符、XML和DOCX：文件格式怎样层层组成"}]}],["$","li","deepseek-export-plus-rendering-pagination",{"value":8,"children":["$","$L23",null,{"href":"/projects/deepseek-export-plus/rendering-pagination/","data-reading-start":"true","aria-current":"page","children":"从网页排版到长图：字体、画布和分页"}]}]]}]]}],["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-word-png",{"value":9,"children":["$","$L23",null,{"href":"/projects/deepseek-export-plus/word-png/","data-reading-start":"true","aria-current":"$undefined","children":"Word与PNG的两次失败，为什么要分层修复"}]}],["$","li","deepseek-export-plus-page-integration",{"value":10,"children":["$","$L23",null,{"href":"/projects/deepseek-export-plus/page-integration/","data-reading-start":"true","aria-current":"$undefined","children":"导出按钮怎样与原网页和平共处"}]}]]}]]}]]]}]]}],["$","$L27",null,{"mappings":[]}],["$","$L28",null,{"html":"$29","zoomImages":true}],"$L2a","$L2b"]}],"$L2c"]}]]}]
+2a:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L23",null,{"href":"/projects/deepseek-export-plus/document-formats/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"字符、XML和DOCX：文件格式怎样层层组成"}]]}],["$","$L23",null,{"href":"/projects/deepseek-export-plus/word-png/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"Word与PNG的两次失败，为什么要分层修复"}]]}]]}]
+2b:["$","div",null,{"className":"related-note","children":[["$","$L23",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L23",null,{"href":"/projects/deepseek-export-plus/","children":"返回项目首页"}]]}]
+2c:["$","$L25",null,{"headings":"$a:props:children:1:props:headings"}]
+2d:I[6279,["5587","$18","8612","$21","4067","$22"],"FilterLink"]
+24:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L23",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L23",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$L23",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L2d",null,{"className":"trail-current","href":"/projects/","children":["浏览器扩展",["$","span",null,{"children":1}]]}],"$undefined"]}]
