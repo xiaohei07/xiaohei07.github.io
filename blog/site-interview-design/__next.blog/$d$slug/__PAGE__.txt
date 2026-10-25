@@ -8,74 +8,131 @@ e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
 f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
 10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
 11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
-1c:"ViewportBoundary"
-1d:I[887,[],"$1c"]
-1e:"MetadataBoundary"
-1f:I[887,[],"$1e"]
-20:"$Sreact.suspense"
+1f:"ViewportBoundary"
+20:I[887,[],"$1f"]
+21:"MetadataBoundary"
+22:I[887,[],"$21"]
+23:"$Sreact.suspense"
 6:X
 6:C
 7:X
-a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#project-log","children":["项目建设",["$","span",null,{"children":9}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"个人主页建设（八）：从真实实现继续追问设计与故障处理"}],["$","p",null,{"className":"article-deck","children":"围绕选型、数据流、幂等、并发、安全、容量和AI协作组织连续追问，并区分现状与扩展"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,294"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",7," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","项目复盘",{"href":"/blog/#tag=%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%9B%98","children":"项目复盘"}],["$","$L10","面试",{"href":"/blog/#tag=%E9%9D%A2%E8%AF%95","children":"面试"}],["$","$L10","架构设计",{"href":"/blog/#tag=%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1","children":"架构设计"}],["$","$L10","AI协作",{"href":"/blog/#tag=AI%E5%8D%8F%E4%BD%9C","children":"AI协作"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-项目为什么做框架为什么这样选","text":"项目为什么做，框架为什么这样选","level":2},{"id":"section-从一次点击解释完整数据流","text":"从一次点击解释完整数据流","level":2},{"id":"section-写成功超时与重复提交怎样区分","text":"写成功、超时与重复提交怎样区分","level":2},{"id":"section-审核并发为什么使用数据库行锁","text":"审核并发为什么使用数据库行锁","level":2},{"id":"section-流量增加后怎样找到瓶颈","text":"流量增加后怎样找到瓶颈","level":2},{"id":"section-安全与兼容继续往下问","text":"安全与兼容继续往下问","level":2},{"id":"section-ai参与了哪些工作个人判断怎样说明","text":"AI参与了哪些工作，个人判断怎样说明","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[9," / ",9," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["个人主页与博客建设",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","personal-site-overview",{"children":["$","$Lf",null,{"href":"/blog/personal-site-overview/","children":"个人主页与博客建设：项目系列与前后端知识阅读指南"}]}],["$","li","site-upgrade-architecture",{"children":["$","$Lf",null,{"href":"/blog/site-upgrade-architecture/","children":"个人主页建设（一）：升级动机、框架选择与系统分工"}]}],["$","li","site-setup-migration",{"children":["$","$Lf",null,{"href":"/blog/site-setup-migration/","children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}]}],["$","li","site-content-search-flow",{"children":["$","$Lf",null,{"href":"/blog/site-content-search-flow/","children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}]}],["$","li","site-feedback-data-flow",{"children":["$","$Lf",null,{"href":"/blog/site-feedback-data-flow/","children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}]}],["$","li","site-auth-review-concurrency",{"children":["$","$Lf",null,{"href":"/blog/site-auth-review-concurrency/","children":"个人主页建设（五）：作者登录、反馈审核与并发控制"}]}],["$","li","site-images-performance",{"children":["$","$Lf",null,{"href":"/blog/site-images-performance/","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}]}],"$L12","$L13"]}]]}]]}],"$L14",false,"$L15","$L16","$L17"]}],"$L18"]}]]}],["$L19"],"$L1a"]}],"p":"$@1b","v":null,"s":"$7"}}]]
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#project-log","children":["项目建设",["$","span",null,{"children":9}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"个人主页建设（八）：从真实实现继续追问设计与故障处理"}],["$","p",null,{"className":"article-deck","children":"围绕选型、数据流、幂等、并发、安全、容量和AI协作组织连续追问，并区分现状与扩展"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-21","children":"2026-10-21"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"3,756"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",12," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","项目复盘",{"href":"/blog/#tag=%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%9B%98","children":"项目复盘"}],["$","$L10","面试",{"href":"/blog/#tag=%E9%9D%A2%E8%AF%95","children":"面试"}],["$","$L10","架构设计",{"href":"/blog/#tag=%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1","children":"架构设计"}],["$","$L10","AI协作",{"href":"/blog/#tag=AI%E5%8D%8F%E4%BD%9C","children":"AI协作"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-一一分钟介绍与继续展开的路线","text":"一、一分钟介绍与继续展开的路线","level":2},{"id":"section-二项目为什么做框架为什么这样选","text":"二、项目为什么做，框架为什么这样选","level":2},{"id":"section-三从一次点击解释完整数据流","text":"三、从一次点击解释完整数据流","level":2},{"id":"section-四写成功超时与重复提交怎样区分","text":"四、写成功、超时与重复提交怎样区分","level":2},{"id":"section-五审核并发为什么使用数据库行锁","text":"五、审核并发为什么使用数据库行锁","level":2},{"id":"section-六流量增加后怎样找到瓶颈","text":"六、流量增加后怎样找到瓶颈","level":2},{"id":"section-七安全与兼容继续往下问","text":"七、安全与兼容继续往下问","level":2},{"id":"section-八内容快照旧锚点和演示怎样保持一致","text":"八、内容快照、旧锚点和演示怎样保持一致","level":2},{"id":"section-九目录和配色如何用状态说明","text":"九、目录和配色如何用状态说明","level":2},{"id":"section-十效果与性能应该怎样回答","text":"十、效果与性能应该怎样回答","level":2},{"id":"section-十一ai参与了哪些工作个人判断怎样说明","text":"十一、AI参与了哪些工作，个人判断怎样说明","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[9," / ",9," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["个人主页与博客建设",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","personal-site-overview",{"children":["$","$Lf",null,{"href":"/blog/personal-site-overview/","children":"个人主页与博客建设：项目系列与前后端知识阅读指南"}]}],["$","li","site-upgrade-architecture",{"children":["$","$Lf",null,{"href":"/blog/site-upgrade-architecture/","children":"个人主页建设（一）：升级动机、框架选择与系统分工"}]}],["$","li","site-setup-migration",{"children":["$","$Lf",null,{"href":"/blog/site-setup-migration/","children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}]}],["$","li","site-content-search-flow",{"children":["$","$Lf",null,{"href":"/blog/site-content-search-flow/","children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}]}],"$L12","$L13","$L14","$L15","$L16"]}]]}]]}],"$L17",false,"$L18","$L19","$L1a"]}],"$L1b"]}]]}],["$L1c"],"$L1d"]}],"p":"$@1e","v":null,"s":"$7"}}]]
 8:[["children",{"s":{"n":"slug","t":"d","k":"site-interview-design","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
 1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
-0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1d",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1f",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$20",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"个人主页建设（八）：从真实实现继续追问设计与故障处理 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"围绕选型、数据流、幂等、并发、安全、容量和AI协作组织连续追问，并区分现状与扩展。"}],["$","link","2",{"rel":"canonical","href":"/blog/site-interview-design/"}]]}]}],null]}],null]}],"p":"$@21","v":null,"s":"$7"}},"a":"$@22","u":"$@23","b":"fLRi0L0GUI3JUvO3VynCJ"}
-24:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
-26:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
-27:I[887,[],"OutletBoundary"]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L20",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L22",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$23",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"个人主页建设（八）：从真实实现继续追问设计与故障处理 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"围绕选型、数据流、幂等、并发、安全、容量和AI协作组织连续追问，并区分现状与扩展。"}],["$","link","2",{"rel":"canonical","href":"/blog/site-interview-design/"}]]}]}],null]}],null]}],"p":"$@24","v":null,"s":"$7"}},"a":"$@25","u":"$@26","b":"BqCQgyp2NTp7xIGY-M8en"}
+27:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+29:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+2a:I[887,[],"OutletBoundary"]
 :HL["/_next/static/css/0d4edec444d587ad.css","style"]
-12:["$","li","site-deployment-recovery",{"children":["$","$Lf",null,{"href":"/blog/site-deployment-recovery/","children":"个人主页建设（七）：Nginx部署、版本切换与数据恢复"}]}]
-13:["$","li","site-interview-design",{"children":["$","$Lf",null,{"href":"/blog/site-interview-design/","aria-current":"page","children":"个人主页建设（八）：从真实实现继续追问设计与故障处理"}]}]
-25:T2333,<p>介绍项目时，先讲清网站要解决什么、实际运行了什么，再沿着一个功能往下说明，会比单独报一串技术名更容易继续交流。这里按真实项目整理几组连续追问，每组都保留当前实现、判断依据和后续改进的边界。</p>
-<p>问题形式参考了实际面试中的追问方式，但内容重新对应本站。截图里的抢购、支付、Redis与Agent业务不属于这个个人主页，不能为了套题而写进现有架构。</p>
-<h2 id="section-项目为什么做框架为什么这样选">项目为什么做，框架为什么这样选</h2>
+12:["$","li","site-feedback-data-flow",{"children":["$","$Lf",null,{"href":"/blog/site-feedback-data-flow/","children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}]}]
+13:["$","li","site-auth-review-concurrency",{"children":["$","$Lf",null,{"href":"/blog/site-auth-review-concurrency/","children":"个人主页建设（五）：作者登录、反馈审核与并发控制"}]}]
+14:["$","li","site-images-performance",{"children":["$","$Lf",null,{"href":"/blog/site-images-performance/","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}]}]
+15:["$","li","site-deployment-recovery",{"children":["$","$Lf",null,{"href":"/blog/site-deployment-recovery/","children":"个人主页建设（七）：Nginx部署、版本切换与数据恢复"}]}]
+16:["$","li","site-interview-design",{"children":["$","$Lf",null,{"href":"/blog/site-interview-design/","aria-current":"page","children":"个人主页建设（八）：从真实实现继续追问设计与故障处理"}]}]
+28:T3d3a,<p>介绍项目时，先讲清网站要解决什么、实际运行了什么，再沿着一个功能往下说明，会比单独报一串技术名更容易继续交流。这里按真实项目整理几组连续追问，每组都保留当前实现、判断依据和后续改进的边界。</p>
+<p>这里的答法用于学习和练习，不是技术掌握程度的证明。<strong>本人亲自负责检验和效果审查，具体实现、排查、部署与整理等工作由AI完成。</strong> 介绍系统可以讲代码机制，介绍个人经历则应保留这条分工。</p>
+<h2 id="section-一一分钟介绍与继续展开的路线">一、一分钟介绍与继续展开的路线</h2>
+<p>可以先这样概括：我希望把学习和研究内容集中到博客，方便回看和分享，也借项目学习前后端。网站从原有技术博客扩展为文章、研究、项目等入口。公共内容由Next.js提前生成，Nginx提供静态文件；React负责搜索、目录、配色和演示，FastAPI与PostgreSQL负责私密反馈、作者会话和审核。AI完成实现等工作，我亲自做检验和效果审查。系统已有发布和有限场景验证，但没有用历史样本推算当前容量或学习效果。</p>
+<p>接下来选一条自己确实能解释的路线，不必一次讲完所有技术：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>路线</th><th>先说输入输出</th><th>再说明关键机制</th><th>最后主动保留的边界</th></tr></thead><tbody><tr><td>内容发布</td><td>原稿变成HTML与搜索条目</td><td>语法树、快照、批准摘要、稳定URL</td><td>哈希不证明知识正确</td></tr><tr><td>读者反馈</td><td>JSON变成记录与201回执</td><td>校验、内容登记、Session与commit</td><td>超时可能已提交，无幂等键</td></tr><tr><td>作者审核</td><td>pending变成处理结果</td><td>会话、CSRF、行锁、同事务审计</td><td>隔离级别与失败条件仍重要</td></tr><tr><td>阅读交互</td><td>标题/偏好变成目录和配色</td><td>树、activeId、Portal、状态恢复</td><td>Chrome检查不等于所有真机通过</td></tr></tbody></table>
+<span id="section-项目为什么做框架为什么这样选" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-二项目为什么做框架为什么这样选">二、项目为什么做，框架为什么这样选</h2>
 <p><strong>先怎样介绍这个项目？</strong> 可以说明它从Hexo技术博客扩展为个人主页，组织文章、研究和项目，加入React交互、私密反馈与作者审核。公共内容静态导出，动态业务使用FastAPI和PostgreSQL。再选择一条自己能解释清楚的数据流继续讲。</p>
 <p><strong>为什么选择Next.js，而不是继续Hexo？</strong> 继续Hexo也能发布文章。本次还要学习和组织React组件、交互、类型与构建，同时保留内容静态交付。选择同时服务于站点需求和学习目标，没有对照实验支持“Next全面更快”。</p>
-<p><strong>那为什么后端又用Python？</strong> 已确认的科研衔接是原因之一。代价是两套依赖与前后端契约需要维护。当前客户端请求函数是手写的，并没有把规划里的OpenAPI自动生成SDK写成已经完成。</p>
+<p><strong>那为什么后端又用Python？</strong> 这套方案便于衔接Python代码与学习，独立API承担动态反馈。代价是两套依赖与前后端契约需要维护。这里解释适用性，不补写个人独立选型经历。当前客户端请求函数是手写的，并没有把规划里的OpenAPI自动生成SDK写成已经完成。</p>
 <p><strong>如果只保留文章，是否还要这些组件？</strong> 可以缩减。独立API与数据库服务于动态业务与学习需求；纯内容站可以采用更简单的部署。取舍要与实际目标对应。</p>
-<h2 id="section-从一次点击解释完整数据流">从一次点击解释完整数据流</h2>
+<span id="section-从一次点击解释完整数据流" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-三从一次点击解释完整数据流">三、从一次点击解释完整数据流</h2>
 <p><strong>读文章会查数据库吗？</strong> 通常不会。构建时已经形成正文HTML，读者访问Nginx静态文件，浏览器加载脚本接管交互。数据库保存内容登记和动态业务，不保存全文供每次阅读查询。</p>
 <p><strong>点击发送反馈之后呢？</strong> React状态→JSON请求→Nginx代理→FastAPI/Pydantic与业务校验→SQLAlchemy事务→psycopg→PostgreSQL，commit后返回ID与pending，浏览器再更新提示。还应说明每个箭头是进程内调用、网络请求还是数据转换。</p>
 <p><strong>数据库挂了，网页是不是全部不可用？</strong> 已发布正文仍可能正常读取，反馈、登录和审核会受影响。若故障发生在Nginx或整台主机，静态路径也受影响。这个分工减少阅读依赖，没有构成多机高可用。</p>
 <p><strong>既然静态页面可读，为什么还要JS？</strong> 搜索、筛选、主题、反馈和交互演示需要客户端逻辑。能提前生成正文与后续需要交互并不矛盾，具体参见<a href="/blog/nextjs-rendering-hydration/">渲染与hydration</a>。</p>
-<h2 id="section-写成功超时与重复提交怎样区分">写成功、超时与重复提交怎样区分</h2>
+<span id="section-写成功超时与重复提交怎样区分" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-四写成功超时与重复提交怎样区分">四、写成功、超时与重复提交怎样区分</h2>
 <p><strong>为什么commit后才显示成功？</strong> add只是把对象交给Session，提交前仍可能失败。API按契约在提交后返回201，前端收到回执后才清空输入。</p>
 <p><strong>提交成功，但响应丢失怎么办？</strong> 客户端只能说尚未确认成功，数据库可能已有记录。当前保留输入、不自动重试POST；还没有请求键查询与回执重放机制。</p>
 <p><strong>按钮禁用和限流能保证只写一次吗？</strong> 不能。它们控制当前UI和请求频率，没有标识一次逻辑提交。第二个合法POST仍可能创建另一条记录。</p>
 <p><strong>幂等键准备怎么做？</strong> 为逻辑提交生成键，同事务保存唯一键、请求摘要和回执；相同键同内容重放，冲突内容拒绝，并定义过期与处理中行为。这是拟议改造，需要数据库唯一约束，不能只做一次“先查后写”。</p>
-<h2 id="section-审核并发为什么使用数据库行锁">审核并发为什么使用数据库行锁</h2>
+<span id="section-审核并发为什么使用数据库行锁" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-五审核并发为什么使用数据库行锁">五、审核并发为什么使用数据库行锁</h2>
 <p><strong>两个人或两个标签页同时审核会怎样？</strong> 当前同一作者的两个会话也可能竞争。接口锁定目标行，再检查pending；一个提交后，另一个看到已处理状态返回409，状态和审计同事务。</p>
 <p><strong>锁住的是什么？</strong> PostgreSQL中的目标反馈行及相应事务冲突，不是浏览器按钮，也不是整个系统。普通读取还要按隔离与MVCC规则理解。</p>
 <p><strong>为什么不用乐观锁？</strong> 条件更新也是可行备选。当前短事务需要读取目标、修改多项字段并写审计，显式行锁便于组织与核验；若采用版本列或条件更新，需要处理0行更新和冲突反馈。</p>
 <p><strong>为什么不加Redis锁？</strong> 当前数据库已经是写入的最终协调位置。额外分布式锁要处理过期、续租和数据库事务关系，并没有被当前需求要求。未来有跨资源协调时再讨论，不能把技术名当解决方案。</p>
-<h2 id="section-流量增加后怎样找到瓶颈">流量增加后怎样找到瓶颈</h2>
+<span id="section-流量增加后怎样找到瓶颈" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-六流量增加后怎样找到瓶颈">六、流量增加后怎样找到瓶颈</h2>
 <p><strong>3个数据库连接是不是只能服务3个人？</strong> 它限制同一进程该池同时借出的连接，连接可顺序处理许多短事务。在线人数、到达率、事务时长和在途数是不同指标。</p>
 <p><strong>增加worker是否就能提高容量？</strong> 可能增加并行处理，也会复制内存、连接池与当前内存限流器。4个worker可能使用约12个池连接，限流还会分散计数，需要先评估数据库和一致性。</p>
 <p><strong>应该先加缓存还是消息队列？</strong> 先测慢在哪里。静态读取、密码哈希、SQL等待和同一行竞争的处理不同。当前短反馈事务不必先经过队列。未来异步通知若用队列，还要考虑业务提交与消息投递的原子性，可评估事务outbox、重试与去重；本站尚未实现。</p>
 <p><strong>能支持多少QPS？</strong> 没有容量实测就不能给数字。应在隔离环境定义读写比例、延迟目标、错误上限和停止条件，再看吞吐与尾延迟。历史慢网首屏样本不能换算成后端并发容量。</p>
-<h2 id="section-安全与兼容继续往下问">安全与兼容继续往下问</h2>
+<span id="section-安全与兼容继续往下问" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-七安全与兼容继续往下问">七、安全与兼容继续往下问</h2>
 <p><strong>CORS配置正确是不是就安全？</strong> CORS约束浏览器跨源访问，不是身份认证。管理操作还检查Cookie会话、Origin和CSRF；公开反馈还要考虑限流与滥用。</p>
 <p><strong>隐藏管理页面能不能保护数据？</strong> 不能。静态界面可访问，权限必须在API检查。未公开全文不能先编译进公共HTML再用按钮遮住。</p>
 <p><strong>前端旧版本还开着，新API增加字段怎么办？</strong> 优先保持旧请求仍有效，新增字段先可选或有兼容语义；确需破坏性改变时定义版本与迁移窗口。数据库先扩展后收缩，并验证旧代码回滚是否仍兼容。</p>
-<p><strong>如何证明恢复可用？</strong> 除了备份文件存在，还应在隔离目标恢复，检查表、关键数据、权限和应用连接。本站有一次实际dump/restore记录，没有自动离机备份与持续灾备保证。</p>
-<h2 id="section-ai参与了哪些工作个人判断怎样说明">AI参与了哪些工作，个人判断怎样说明</h2>
-<p>项目使用Codex协助规划、实现、内容整理和检查，不适合把它描述为全部逐行手写。可确认的用户判断包括Python技术方向、Firefly视觉选择、栏目与内容范围，以及对首页裁切、旧稿公开范围、写作深度和文风的持续修改要求。</p>
-<p><strong>能举一个判断具体改变实现的例子吗？</strong> 用户要求保留Next/FastAPI/PostgreSQL，同时采用Firefly的视觉方向，因此实现借鉴布局与阅读体验，没有为了外观更换整个框架。另一个例子是横幅两侧留白与手机裁切反馈，推动检查真实容器宽度和分辨率，而非只修改颜色。</p>
+<p><strong>如何证明恢复可用？</strong> 除了备份文件存在，还应在隔离目标恢复，检查表、关键数据、权限和应用连接。本站有历史dump/restore记录，10月25日的对应发布还核对六表指纹；没有自动离机备份与持续灾备保证。</p>
+<h2 id="section-八内容快照旧锚点和演示怎样保持一致">八、内容快照、旧锚点和演示怎样保持一致</h2>
+<p><strong>为什么不直接让网站扫描所有Markdown？</strong> 文件夹里还有草稿与核对资料。显式清单列出允许的内容、图片和运行文件，导入先查路径、元数据及摘要，再写冻结快照，网站按快照读取。</p>
+<p><strong>源包写着publishAllowed:false，为什么文章已经公开？</strong> 它描述预览接入合同。公开构建另看批准记录，要求集合、snapshot与manifestHash匹配；29篇在10月21日已经公开。既不能把false当成当前线上状态，也不能把一次批准扩展到所有未来修改。</p>
+<p><strong>标题加编号以后，旧书签怎么办？</strong> 显示标题与定位身份需要分别处理。本站按内容范围使用标题装饰或旧ID别名，确保旧锚点仍找到对应章节；要检查重复ID、目标存在和真实跳转，文章URL不变并不够。</p>
+<p><strong>演示是不是浏览器把代码传给后端执行？</strong> 当前是固定轨迹数据驱动的客户端演示。静态主例先可读，展开后挂载组件，下一步改变帧位置；收起后卸载。按需挂载可以解释运行时机，没有测量就不报流量或耗时提升率。</p>
+<h2 id="section-九目录和配色如何用状态说明">九、目录和配色如何用状态说明</h2>
+<p><strong>目录怎样处理h2、h3、h4？</strong> 以栈维护祖先链，新标题到来时弹出层级大于等于它的节点，再接到最近较浅标题下。跳级也能挂到已有祖先，建树O(n)。阅读中的activeId另行确定，并展开对应祖先分支。</p>
+<p><strong>手动折叠会不会马上被自动展开覆盖？</strong> 手动集合与当时的activeId绑定；同一节保持操作，换节后按新阅读路径展开。目录自身滚动用于露出当前项，不牵动正文。</p>
+<p><strong>Portal与dialog分别解决什么？</strong> Portal把DOM放到body，避开祖先容器定位干扰，同时保留React树中的上下文与事件关系；原生dialog提供模态基础。项目还处理打开聚焦、跳转收起、背景滚动与清理。使用原生元素也仍需做实际可访问性检查。</p>
+<p><strong>复制栏目颜色为什么要分支？</strong> 复制其他栏目保存当时解析出的色板或种子色；点击当前栏目则要恢复原色。旧逻辑再次复制自身覆盖值，恢复自然无效。当前识别source等于target，清除覆盖并取原色。栏目模式与全站统一模式又有不同作用范围。</p>
+<p><strong>标签数量与搜索条数为什么不等于文章数？</strong> 标签先归一、按篇去重，再在当前分类里统计；搜索按规范URL汇集入口，也可包含项目配套页；反馈登记服务于业务实体。说明数量前先说统计集合，不能把218条搜索结果直接说成218篇文章。</p>
+<h2 id="section-十效果与性能应该怎样回答">十、效果与性能应该怎样回答</h2>
+<p><strong>可以展示哪些改进？</strong> 可以展示目录定位、配色自身恢复、旧资源保留等具体行为，并说明对应代码、回归或浏览器记录。用户是否因此学得更快，需要另外的用户实验；代码存在不能代替这种证据。</p>
+<p><strong>有性能数字吗？</strong> 有10月18日明确模拟条件下的一次首页样本：390×844、DPR2、下行3Mbps、上行0.75Mbps、延迟150ms、CPU4倍降速，LCP1052ms、CLS约0.00418。它没有重复分布，不是当前版本P95/P99，更不能换算后端QPS。</p>
+<p><strong>怎样检查AI说“测试通过”？</strong> 看具体版本、用例、环境、跳过项和观察位置。PostgreSQL测试缺配置可能被跳过；整体命令退出0也不意味着真实数据库路径跑过。构建、浏览器、发布响应、用户审阅分别记录，不能把所有数量加成一个总分。</p>
+<span id="section-ai参与了哪些工作个人判断怎样说明" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-十一ai参与了哪些工作个人判断怎样说明">十一、AI参与了哪些工作，个人判断怎样说明</h2>
+<p>已经确认的分工是：<strong>我亲自完成检验和效果审查，其余由AI完成</strong>。写作时不能只把“独立开发”换成“AI协助”就算准确，因为“协助”仍可能让听者以为主要实现由本人完成。应直接说清谁执行了实现与排查，自己审查了什么。</p>
+<p><strong>能举一个效果审查的例子吗？</strong> 可以围绕有记录的横幅留白与手机裁切问题，说明观察对象是容器宽度、主体位置和不同视口的呈现；进一步的事件定位与代码修复由AI完成。介绍具体一次个人操作时仍要以本人确实做过的审查为准，不能把工程日志里的每个点击都转为个人经历。</p>
 <p><strong>AI提出的每条方案都自己验证过吗？</strong> 应按实际证据回答。源码阅读、自动测试、浏览器操作、部署与恢复各有记录，用户审阅与agent执行不能混写。没有记录的手工推导、性能收益、原创比例或投入时长不补造。</p>
 <p><strong>最终学会了什么，怎样证明可以迁移？</strong> 可以选择一次反馈超时、一次审核冲突或一次旧chunk丢失，先说明现状，再改变一个条件，推演哪里失效、需要增加什么约束，最后给出可验证的检查。能够解释这些关系，比把汇报稿完整背下来更有用。</p>
-<p>这几组问答可以配合<a href="/blog/personal-site-overview/">项目总览</a>反向使用：遇到答不清的层次，就回到对应知识篇和源码位置，再用自己的话沿数据变化讲一遍。</p>14:["$","$L24",null,{"html":"$25"}]
-15:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/site-deployment-recovery/","children":[["$","span",null,{"children":"上一篇"}],"个人主页建设（七）：Nginx部署、版本切换与数据恢复"]}],"$undefined"]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","nextjs-rendering-hydration",{"children":[["$","$Lf",null,{"href":"/blog/nextjs-rendering-hydration/","children":"Next.js入门（三）：SSG、SSR、组件边界与交互接管"}],["$","span",null,{"children":"前端开发"}]]}],["$","li","personal-site-overview",{"children":[["$","$Lf",null,{"href":"/blog/personal-site-overview/","children":"个人主页与博客建设：项目系列与前后端知识阅读指南"}],["$","span",null,{"children":"项目建设"}]]}]]}]]}]]}]
-16:["$","$L26",null,{"contentId":"site-interview-design"}]
-17:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
-18:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6"]}]
-19:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
-1a:["$","$L27",null,{"children":["$","$20",null,{"name":"Next.MetadataOutlet","children":"$@28"}]}]
-23:true
+<p>这几组问答可以配合<a href="/blog/personal-site-overview/">项目总览</a>反向使用：遇到答不清的层次，就回到对应知识篇和源码位置，再用自己的话沿数据变化讲一遍。</p>17:["$","$L27",null,{"html":"$28"}]
+18:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/site-deployment-recovery/","children":[["$","span",null,{"children":"上一篇"}],"个人主页建设（七）：Nginx部署、版本切换与数据恢复"]}],"$undefined"]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","nextjs-rendering-hydration",{"children":[["$","$Lf",null,{"href":"/blog/nextjs-rendering-hydration/","children":"Next.js入门（三）：SSG、SSR、组件边界与交互接管"}],["$","span",null,{"children":"前端开发"}]]}],["$","li","personal-site-overview",{"children":[["$","$Lf",null,{"href":"/blog/personal-site-overview/","children":"个人主页与博客建设：项目系列与前后端知识阅读指南"}],["$","span",null,{"children":"项目建设"}]]}]]}]]}]]}]
+19:["$","$L29",null,{"contentId":"site-interview-design"}]
+1a:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+1b:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6","$a:0:1:d:r:props:children:0:props:children:1:props:headings:7","$a:0:1:d:r:props:children:0:props:children:1:props:headings:8","$a:0:1:d:r:props:children:0:props:children:1:props:headings:9","$a:0:1:d:r:props:children:0:props:children:1:props:headings:10"]}]
+1c:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1d:["$","$L2a",null,{"children":["$","$23",null,{"name":"Next.MetadataOutlet","children":"$@2b"}]}]
+26:true
 7:300
-28:null
+2b:null
 7:C
-22:0
+25:0
 9:"$undefined"
 5:"$undefined"
-21:"$undefined"
-1b:"$undefined"
+24:"$undefined"
+1e:"$undefined"

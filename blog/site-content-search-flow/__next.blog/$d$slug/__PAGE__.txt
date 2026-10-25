@@ -8,41 +8,54 @@ e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
 f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
 10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
 11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
-1d:"ViewportBoundary"
-1e:I[887,[],"$1d"]
-1f:"MetadataBoundary"
-20:I[887,[],"$1f"]
-21:"$Sreact.suspense"
+20:"ViewportBoundary"
+21:I[887,[],"$20"]
+22:"MetadataBoundary"
+23:I[887,[],"$22"]
+24:"$Sreact.suspense"
 6:X
 6:C
 7:X
-a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#project-log","children":["项目建设",["$","span",null,{"children":9}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}],["$","p",null,{"className":"article-deck","children":"沿Markdown、语法树、Article对象和搜索索引追踪内容变化，说明分类、系列与发布清单的关系"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,845"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",6," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","数据流",{"href":"/blog/#tag=%E6%95%B0%E6%8D%AE%E6%B5%81","children":"数据流"}],["$","$L10","Markdown",{"href":"/blog/#tag=Markdown","children":"Markdown"}],["$","$L10","搜索",{"href":"/blog/#tag=%E6%90%9C%E7%B4%A2","children":"搜索"}],["$","$L10","内容建模",{"href":"/blog/#tag=%E5%86%85%E5%AE%B9%E5%BB%BA%E6%A8%A1","children":"内容建模"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-固定一篇文章看它怎样进入网站","text":"固定一篇文章，看它怎样进入网站","level":2},{"id":"section-正文目录和代码怎样共同生成","text":"正文、目录和代码怎样共同生成","level":2},{"id":"section-搜索与列表筛选走的是哪份数据","text":"搜索与列表筛选走的是哪份数据","level":2},{"id":"section-一次标题修改哪里需要重新生成","text":"一次标题修改，哪里需要重新生成","level":2},{"id":"section-分类标签系列与项目如何同时存在","text":"分类、标签、系列与项目如何同时存在","level":2},{"id":"section-先截断再统计为什么年份数量会变小","text":"先截断再统计，为什么年份数量会变小","level":2},{"id":"section-哈希与发布清单保护什么","text":"哈希与发布清单保护什么","level":2},{"id":"section-如果文章数量继续增长应先优化哪里","text":"如果文章数量继续增长，应先优化哪里","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[4," / ",9," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["个人主页与博客建设",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","personal-site-overview",{"children":["$","$Lf",null,{"href":"/blog/personal-site-overview/","children":"个人主页与博客建设：项目系列与前后端知识阅读指南"}]}],["$","li","site-upgrade-architecture",{"children":["$","$Lf",null,{"href":"/blog/site-upgrade-architecture/","children":"个人主页建设（一）：升级动机、框架选择与系统分工"}]}],["$","li","site-setup-migration",{"children":["$","$Lf",null,{"href":"/blog/site-setup-migration/","children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}]}],["$","li","site-content-search-flow",{"children":["$","$Lf",null,{"href":"/blog/site-content-search-flow/","aria-current":"page","children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}]}],["$","li","site-feedback-data-flow",{"children":["$","$Lf",null,{"href":"/blog/site-feedback-data-flow/","children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}]}],["$","li","site-auth-review-concurrency",{"children":["$","$Lf",null,{"href":"/blog/site-auth-review-concurrency/","children":"个人主页建设（五）：作者登录、反馈审核与并发控制"}]}],"$L12","$L13","$L14"]}]]}]]}],"$L15",false,"$L16","$L17","$L18"]}],"$L19"]}]]}],["$L1a"],"$L1b"]}],"p":"$@1c","v":null,"s":"$7"}}]]
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#project-log","children":["项目建设",["$","span",null,{"children":9}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}],["$","p",null,{"className":"article-deck","children":"沿Markdown、语法树、Article对象和搜索索引追踪内容变化，说明分类、系列与发布清单的关系"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-21","children":"2026-10-21"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"3,013"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",9," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","数据流",{"href":"/blog/#tag=%E6%95%B0%E6%8D%AE%E6%B5%81","children":"数据流"}],["$","$L10","Markdown",{"href":"/blog/#tag=Markdown","children":"Markdown"}],["$","$L10","搜索",{"href":"/blog/#tag=%E6%90%9C%E7%B4%A2","children":"搜索"}],["$","$L10","内容建模",{"href":"/blog/#tag=%E5%86%85%E5%AE%B9%E5%BB%BA%E6%A8%A1","children":"内容建模"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-一固定一篇文章看它怎样进入网站","text":"一、固定一篇文章，看它怎样进入网站","level":2},{"id":"section-二正文目录和代码怎样共同生成","text":"二、正文、目录和代码怎样共同生成","level":2},{"id":"section-三搜索与列表筛选走的是哪份数据","text":"三、搜索与列表筛选走的是哪份数据","level":2},{"id":"section-四一次标题修改哪里需要重新生成","text":"四、一次标题修改，哪里需要重新生成","level":2},{"id":"section-五分类标签系列与项目如何同时存在","text":"五、分类、标签、系列与项目如何同时存在","level":2},{"id":"section-51-标签先归一再按篇计数","text":"5.1 标签先归一，再按篇计数","level":3},{"id":"section-52-名称排序只改变比较键","text":"5.2 名称排序只改变比较键","level":3},{"id":"section-六先截断再统计为什么年份数量会变小","text":"六、先截断再统计，为什么年份数量会变小","level":2},{"id":"section-七哈希与发布清单保护什么","text":"七、哈希与发布清单保护什么","level":2},{"id":"section-71-清单和快照先固定输入","text":"7.1 清单和快照先固定输入","level":3},{"id":"section-72-公开批准绑定具体版本","text":"7.2 公开批准绑定具体版本","level":3},{"id":"section-73-正文之外还需要核对什么","text":"7.3 正文之外还需要核对什么","level":3},{"id":"section-八如果文章数量继续增长应先优化哪里","text":"八、如果文章数量继续增长，应先优化哪里","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[4," / ",9," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["个人主页与博客建设",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","personal-site-overview",{"children":["$","$Lf",null,{"href":"/blog/personal-site-overview/","children":"个人主页与博客建设：项目系列与前后端知识阅读指南"}]}],["$","li","site-upgrade-architecture",{"children":["$","$Lf",null,{"href":"/blog/site-upgrade-architecture/","children":"个人主页建设（一）：升级动机、框架选择与系统分工"}]}],["$","li","site-setup-migration",{"children":["$","$Lf",null,{"href":"/blog/site-setup-migration/","children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}]}],"$L12","$L13","$L14","$L15","$L16","$L17"]}]]}]]}],"$L18",false,"$L19","$L1a","$L1b"]}],"$L1c"]}]]}],["$L1d"],"$L1e"]}],"p":"$@1f","v":null,"s":"$7"}}]]
 8:[["children",{"s":{"n":"slug","t":"d","k":"site-content-search-flow","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
 1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
-0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"沿Markdown、语法树、Article对象和搜索索引追踪内容变化，说明分类、系列与发布清单的关系。"}],["$","link","2",{"rel":"canonical","href":"/blog/site-content-search-flow/"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$7"}},"a":"$@23","u":"$@24","b":"fLRi0L0GUI3JUvO3VynCJ"}
-25:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
-27:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
-28:I[887,[],"OutletBoundary"]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L21",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L23",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$24",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"沿Markdown、语法树、Article对象和搜索索引追踪内容变化，说明分类、系列与发布清单的关系。"}],["$","link","2",{"rel":"canonical","href":"/blog/site-content-search-flow/"}]]}]}],null]}],null]}],"p":"$@25","v":null,"s":"$7"}},"a":"$@26","u":"$@27","b":"BqCQgyp2NTp7xIGY-M8en"}
+28:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+2a:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+2b:I[887,[],"OutletBoundary"]
 :HL["/_next/static/css/0d4edec444d587ad.css","style"]
-12:["$","li","site-images-performance",{"children":["$","$Lf",null,{"href":"/blog/site-images-performance/","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}]}]
-13:["$","li","site-deployment-recovery",{"children":["$","$Lf",null,{"href":"/blog/site-deployment-recovery/","children":"个人主页建设（七）：Nginx部署、版本切换与数据恢复"}]}]
-14:["$","li","site-interview-design",{"children":["$","$Lf",null,{"href":"/blog/site-interview-design/","children":"个人主页建设（八）：从真实实现继续追问设计与故障处理"}]}]
-26:T1e5a,<p>修改一篇文章标题后，卡片、正文、搜索和系列导航都应该显示同一份标题。如果分别在这些地方手工改，很容易出现一个入口更新了、另一个入口还保留旧文字的情况。本站通过统一内容对象，将这些展示入口接到同一份正文与元数据上。</p>
-<h2 id="section-固定一篇文章看它怎样进入网站">固定一篇文章，看它怎样进入网站</h2>
+12:["$","li","site-content-search-flow",{"children":["$","$Lf",null,{"href":"/blog/site-content-search-flow/","aria-current":"page","children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}]}]
+13:["$","li","site-feedback-data-flow",{"children":["$","$Lf",null,{"href":"/blog/site-feedback-data-flow/","children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}]}]
+14:["$","li","site-auth-review-concurrency",{"children":["$","$Lf",null,{"href":"/blog/site-auth-review-concurrency/","children":"个人主页建设（五）：作者登录、反馈审核与并发控制"}]}]
+15:["$","li","site-images-performance",{"children":["$","$Lf",null,{"href":"/blog/site-images-performance/","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}]}]
+16:["$","li","site-deployment-recovery",{"children":["$","$Lf",null,{"href":"/blog/site-deployment-recovery/","children":"个人主页建设（七）：Nginx部署、版本切换与数据恢复"}]}]
+17:["$","li","site-interview-design",{"children":["$","$Lf",null,{"href":"/blog/site-interview-design/","children":"个人主页建设（八）：从真实实现继续追问设计与故障处理"}]}]
+29:T3491,<p>修改一篇文章标题后，卡片、正文、搜索和系列导航都应该显示同一份标题。如果分别在这些地方手工改，很容易出现一个入口更新了、另一个入口还保留旧文字的情况。本站通过统一内容对象，将这些展示入口接到同一份正文与元数据上。</p>
+<span id="section-固定一篇文章看它怎样进入网站" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-一固定一篇文章看它怎样进入网站">一、固定一篇文章，看它怎样进入网站</h2>
 <p>以稳定ID为<code>python-slices</code>的文章为例。内容清单先指定允许读取的文件与规范路径，读取器分离front matter和正文，检查schemaVersion、ID、栏目、日期、标签和状态，再把正文送入Markdown管线。</p>
 <p>得到的Article对象包含标题、摘要、分类、标签，以及生成后的HTML、headings、searchText、字数和阅读时间。卡片只用其中一部分，详情页需要HTML与目录，搜索需要纯文本。不同页面读取不同字段，但内容身份保持相同。</p>
 <p><a href="/images/website-series/content.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：从受控内容文件到文章对象，再派生正文、目录、卡片与搜索的过程"><img src="/images/website-series/content.svg" alt="从受控内容文件到文章对象，再派生正文、目录、卡片与搜索的过程" width="1100" height="425" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
 <p><a href="/images/website-series/content.svg">查看图中细节</a></p>
 <p>这张图概括的是构建数据关系，没有表示每个箭头都是一次网络请求。比如Markdown到语法树是在构建进程中处理，读者并不会把Markdown发给FastAPI转换。</p>
-<h2 id="section-正文目录和代码怎样共同生成">正文、目录和代码怎样共同生成</h2>
+<span id="section-正文目录和代码怎样共同生成" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-二正文目录和代码怎样共同生成">二、正文、目录和代码怎样共同生成</h2>
 <p>本站管线先解析Markdown，再转换HTML树、清理不允许的结构，生成标题ID和代码高亮。随后收集标题信息并装饰代码块、图片和链接，最后输出HTML。</p>
+<p><strong>语法树</strong>把正文拆成有类型的节点，例如标题、段落、代码和链接。可以用下面这段教学输入理解区别：</p>
+<div class="code-block"><div class="code-toolbar"><span>markdown</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-markdown"><span class="hljs-section">## 边界说明</span>
+
+<span class="hljs-code">```python
+# 这行只是代码注释，不是文章标题
+print("## 也只是字符串")
+```</span>
+</code></pre></div>
+<p>解析器把第一行识别为二级标题，把代码块保存为代码节点。后面的目录收集只取标题节点，因此不会把字符串里的<code>##</code>也放进目录。这也是旧上下标适配只修改普通文本节点的原因：先确定对象，再变换内容，避免全局替换破坏代码。</p>
 <p>目录中的<code>href</code>应该与正文真实ID对应。假设目录指向<code>#section-步长</code>，就要确认HTML中存在相应元素；只在Markdown中看见标题“步长”，还不足以证明最终锚点相同。标题中的标点、重复标题、清理前缀和历史alias都会影响结果。</p>
+<p>标题增加“一、”“1.1”等编号后，显示文字会变化，但旧读者保存的片段链接仍有价值。兼容时要把旧ID明确关联到当前章节，并检查目标实际存在、别名没有冲突；只保留文章URL还不够。本站既有算法章节的显示装饰，也有旧标题别名机制，分别按明确的内容范围启用。目录怎样从平铺标题形成树、怎样跟随当前章节，继续见<a href="/blog/react-state-effects/">React状态与阅读目录</a>。</p>
 <p>代码复制按钮也属于呈现层装饰，不应改写原代码。旧上下标兼容只操作文本节点，避免把代码中的<code>~</code>或<code>^</code>当成排版标记。新系列普通代码同样保留语言标记，复杂解释放在代码外，方便阅读和复制。</p>
-<h2 id="section-搜索与列表筛选走的是哪份数据">搜索与列表筛选走的是哪份数据</h2>
+<span id="section-搜索与列表筛选走的是哪份数据" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-三搜索与列表筛选走的是哪份数据">三、搜索与列表筛选走的是哪份数据</h2>
 <p>文章列表的分类、标签、时间和字数筛选，主要在浏览器里处理已经取得的文章摘要；全站搜索另外加载构建好的<code>search-index.json</code>，覆盖允许进入索引的文章、研究和项目。</p>
 <p>搜索条目只输出ID、类型、标题、摘要、标签、正文纯文本和URL。按规范URL去重，可以让同一篇内容从不同栏目被找到，同时不重复计数。源码路径和私密核对字段不应混入索引。</p>
 <p>本站打开搜索时才加载索引，后续输入在本地匹配。英文技术词会考虑完整命中优先级，多词查询与C++这类符号需要明确处理。它没有使用PostgreSQL全文检索，也没有为每次键盘输入调用后端搜索接口。</p>
-<h2 id="section-一次标题修改哪里需要重新生成">一次标题修改，哪里需要重新生成</h2>
+<span id="section-一次标题修改哪里需要重新生成" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-四一次标题修改哪里需要重新生成">四、一次标题修改，哪里需要重新生成</h2>
 <p>假设标题从“列表切片”改成“Python列表切片的起点、终点与步长”，ID不变。原稿更新后，重新导入对应快照，再由构建生成卡片、正文与搜索条目。线上仍要发布新产物才生效。</p>
 
 
@@ -75,32 +88,45 @@ a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$",
 
 <table><thead><tr><th>阶段</th><th>应检查的内容</th></tr></thead><tbody><tr><td>原稿</td><td>标题改了，ID与旧URL关系保留</td></tr><tr><td>导入快照</td><td>字节与清单哈希对应</td></tr><tr><td>Article对象</td><td>title、html、headings与searchText来自当前文件</td></tr><tr><td>页面与索引</td><td>新标题一致，站内链接仍正确</td></tr><tr><td>浏览器</td><td>实际取得新版本，缓存按预期处理</td></tr></tbody></table>
 <p>如果正文更新了、搜索还旧，先检查构建索引与缓存；如果所有地方都旧，先检查导入快照。不同故障位置需要不同动作，不能一开始就删全部依赖重装。</p>
-<h2 id="section-分类标签系列与项目如何同时存在">分类、标签、系列与项目如何同时存在</h2>
+<span id="section-分类标签系列与项目如何同时存在" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-五分类标签系列与项目如何同时存在">五、分类、标签、系列与项目如何同时存在</h2>
 <p>本轮接入把语言知识、前端开发、后端与数据库、部署与运维、项目建设等按主旨分开，随后又增加Agent分类。技术标签可以横跨类别，系列表达学习顺序，项目关联说明这篇文章与哪个项目有关。</p>
 <p>例如“psycopg驱动与参数绑定”属于后端与数据库，标签包含Python、PostgreSQL和psycopg；它也在数据库学习顺序中，并关联个人主页项目。文章只有一个<code>/blog/&#x3C;id>/</code>入口，不为每条关联再复制正文。</p>
+<h3 id="section-51-标签先归一再按篇计数">5.1 标签先归一，再按篇计数</h3>
+<p>展示层会把部分旧标签归入同一主题。假设A文章同时带有“SSG”和“页面渲染”，B文章只带“页面渲染”，而规则将SSG也映射为“页面渲染”。先对A的标签集合去重，A只贡献1篇，再加B得到2篇；直接累加原标签次数会误算成3。</p>
+<p>分类内的标签数量，还应先限制到当前分类。算法稿即使用Python，也不因此自动变成Python语言基础课；本站在展示层区分算法主题与语言知识标签，保留源正文。分类、标签和系列提供不同阅读关系，不需要彼此替代。</p>
+<h3 id="section-52-名称排序只改变比较键">5.2 名称排序只改变比较键</h3>
+<p>中文题名中的“第九篇”“第十篇”如果直接按字符比较，可能不符合阅读顺序。本站先做NFKC规范化，把可识别篇号转换为数字，再交给支持数字比较的中文<code>Intl.Collator</code>，并用稳定ID处理并列。NFKC处理的是全半角等兼容形式；它没有理解整篇文章的含义。</p>
+<p>显示题名仍用原文，排序只使用派生的键。普通入口默认按最新时间排列；分享链接明确带有排序状态时保留它。规则只覆盖项目定义的篇号形式，不能据此说能理解所有中文数字表达。</p>
 <p>项目总览按系列分组，文章详情显示当前系列位置、前后篇和相关内容。新类别没有文章时显示真实空态，不能为了把界面填满就虚构已经写好的内容。</p>
-<h2 id="section-先截断再统计为什么年份数量会变小">先截断再统计，为什么年份数量会变小</h2>
+<span id="section-先截断再统计为什么年份数量会变小" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-六先截断再统计为什么年份数量会变小">六、先截断再统计，为什么年份数量会变小</h2>
 <p>首页归档曾先取全局8条预览，再按年份分组计数。这样统计的实际上是预览中的条数，较早年份的文章没有进入这8条，就不会被完整计入。</p>
 <p>用一个缩小的人工数组可以看清这个差别：年份依次为<code>[2026, 2026, 2024, 2023, 2023]</code>，只取前3条再分组，会得到2026年2条、2024年1条，完全没有2023年。完整分组则还有2023年2条。随后即使只显示每年一条预览，也应保留这个完整总数。</p>
 <p>工程据此改为先按完整筛选结果分组并保存每年总数，再限制各年预览数量。折叠与展开改变可见条目，不改变统计口径。这个问题没有涉及数据库或缓存，原因就在数组处理顺序，因此排查时先看筛选、分组、排序和截断各使用哪份数据。</p>
-<h2 id="section-哈希与发布清单保护什么">哈希与发布清单保护什么</h2>
-<p>SHA256可以检查当前文件是否与交付清单中的字节相同。原稿改动后，旧哈希就不再匹配，导入器应该拒绝把不一致版本混进批次。先写完文件再切换清单指针，可以减少读到半份交付的机会。</p>
-<p>哈希不判断技术正确性、素材权利或作者贡献。被允许本地预览，也不等于已获公网发布批准。新系列目前使用独立review/private清单，公共构建排除它的页面、搜索、项目入口与图片，避免只隐藏导航却留下直接地址。</p>
-<h2 id="section-如果文章数量继续增长应先优化哪里">如果文章数量继续增长，应先优化哪里</h2>
+<span id="section-哈希与发布清单保护什么" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-七哈希与发布清单保护什么">七、哈希与发布清单保护什么</h2>
+<h3 id="section-71-清单和快照先固定输入">7.1 清单和快照先固定输入</h3>
+<p><strong>清单</strong>列出这一批允许使用的文章与资产，<strong>快照</strong>保存它们相互配套的固定版本。SHA256摘要用来比较字节：假设清单记录稿件摘要A，文件修改后变成B，导入器发现B不等于A就停止，避免拿旧审核结果接入新文件。这里的A、B只是教学符号。</p>
+<p>导入还检查真实路径没有越出来源根目录，ID和系列顺序不重复，图片格式与内容符合规则。全部输入检查完毕后，先写快照，再替换当前清单指针，可以减少读到半份交付的机会。这个文件流程不等于数据库事务，也没有承诺任意磁盘故障下都完整原子化。</p>
+<h3 id="section-72-公开批准绑定具体版本">7.2 公开批准绑定具体版本</h3>
+<p>本系列源包的<code>publishAllowed:false</code>表示本地预览接入合同，公开决定由独立记录中的<code>approved</code>、<code>snapshot</code>和<code>manifestHash</code>共同控制。集合需要在允许范围内，快照标识和清单摘要还必须与批准项匹配。29篇已经公开，不能因为源包仍有false就判断网站没有发布它们。</p>
+<p>例如只调整分类配置，没有改文章字节，清单仍可能发生变化，因此旧manifestHash不再匹配。项目按约定的对象序列化计算摘要，并不是任意JSON排版、键顺序都能得到同一个摘要的通用标准。<strong>批准的是一份明确版本，不是此目录以后出现的任意文件。</strong></p>
+<h3 id="section-73-正文之外还需要核对什么">7.3 正文之外还需要核对什么</h3>
+<p>交互演示也属于内容的一部分。只冻结文章，却另外替换演示控制器或轨迹，画面可能不再对应解释。算法内容把运行文件、章节方案和资产一起纳入校验，由已知演示标记映射到受控组件；普通Markdown不能随意指定服务器要执行的代码。</p>
+<p>公开构建还要同步检查搜索、项目入口与图片的准入，并生成完整的反馈内容登记。否则页面虽可打开，反馈API仍可能因为content_id没有登记而拒绝提交。搜索可以包含配套阅读页，数据库登记服务于可反馈的内容实体，两者数量不必相同。哈希只能证明版本字节一致，技术正确性、素材使用范围和个人贡献仍需单独核对。</p>
+<span id="section-如果文章数量继续增长应先优化哪里" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-八如果文章数量继续增长应先优化哪里">八、如果文章数量继续增长，应先优化哪里</h2>
 <p>当前静态搜索索引需要下载正文纯文本。内容变大后，可以先测索引体积、首次搜索延迟和内存，再评估分片、精简字段、Worker计算或服务端搜索。是否引入数据库全文检索，要看实际检索需求与更新频率。</p>
-<p>同样，内容构建时间增长可以从重复解析、缓存范围和受影响页面检查入手。当前方案有清楚的数据入口，这使以后替换搜索方式时可以保留稳定ID和文章URL，减少对其他页面的影响。</p>15:["$","$L25",null,{"html":"$26"}]
-16:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/site-setup-migration/","children":[["$","span",null,{"children":"上一篇"}],"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"]}],["$","$Lf",null,{"href":"/blog/site-feedback-data-flow/","children":[["$","span",null,{"children":"下一篇"}],"个人主页建设（四）：反馈提交的数据流、事务与超时处理"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","site-feedback-data-flow",{"children":[["$","$Lf",null,{"href":"/blog/site-feedback-data-flow/","children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","site-setup-migration",{"children":[["$","$Lf",null,{"href":"/blog/site-setup-migration/","children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","nextjs-content-cache",{"children":[["$","$Lf",null,{"href":"/blog/nextjs-content-cache/","children":"Next.js入门（四）：Markdown内容管线与多层缓存"}],["$","span",null,{"children":"前端开发"}]]}]]}]]}]]}]
-17:["$","$L27",null,{"contentId":"site-content-search-flow"}]
-18:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
-19:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6","$a:0:1:d:r:props:children:0:props:children:1:props:headings:7"]}]
-1a:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
-1b:["$","$L28",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@29"}]}]
-24:true
+<p>同样，内容构建时间增长可以从重复解析、缓存范围和受影响页面检查入手。当前方案有清楚的数据入口，这使以后替换搜索方式时可以保留稳定ID和文章URL，减少对其他页面的影响。</p>18:["$","$L28",null,{"html":"$29"}]
+19:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/site-setup-migration/","children":[["$","span",null,{"children":"上一篇"}],"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"]}],["$","$Lf",null,{"href":"/blog/site-feedback-data-flow/","children":[["$","span",null,{"children":"下一篇"}],"个人主页建设（四）：反馈提交的数据流、事务与超时处理"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","react-state-effects",{"children":[["$","$Lf",null,{"href":"/blog/react-state-effects/","children":"React入门（二）：状态、Effect与目录和配色交互"}],["$","span",null,{"children":"前端开发"}]]}]]}]]}]]}]
+1a:["$","$L2a",null,{"contentId":"site-content-search-flow"}]
+1b:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+1c:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6","$a:0:1:d:r:props:children:0:props:children:1:props:headings:7","$a:0:1:d:r:props:children:0:props:children:1:props:headings:8","$a:0:1:d:r:props:children:0:props:children:1:props:headings:9","$a:0:1:d:r:props:children:0:props:children:1:props:headings:10","$a:0:1:d:r:props:children:0:props:children:1:props:headings:11","$a:0:1:d:r:props:children:0:props:children:1:props:headings:12"]}]
+1d:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1e:["$","$L2b",null,{"children":["$","$24",null,{"name":"Next.MetadataOutlet","children":"$@2c"}]}]
+27:true
 7:300
-29:null
+2c:null
 7:C
-23:0
+26:0
 9:"$undefined"
 5:"$undefined"
-22:"$undefined"
-1c:"$undefined"
+25:"$undefined"
+1f:"$undefined"

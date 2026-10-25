@@ -15,7 +15,7 @@ e:I[887,[],"$d"]
 8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
 7:[["children",{"s":{"n":"slug","t":"d","k":"personal-site-overview","s":["cpp-casts","merge-sort","series"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
 3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
-0:{"P":null,"c":["","blog","personal-site-overview",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/6241f55ce16a0817.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"fLRi0L0GUI3JUvO3VynCJ"}
+0:{"P":null,"c":["","blog","personal-site-overview",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/6241f55ce16a0817.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"BqCQgyp2NTp7xIGY-M8en"}
 15:"static/chunks/5587-bf231f55b3fd3ee7.js"
 16:"static/chunks/8612-cbc92f3b94933c0e.js"
 17:"static/chunks/1133-0d344bd2ae49df3d.js"
@@ -24,15 +24,19 @@ e:I[887,[],"$d"]
 1a:I[5128,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleToc"]
 1c:I[4711,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleBody"]
 6:C
-1d:T1a9d,<p>这次个人主页升级，除了继续整理原来的技术笔记，还要把研究、项目和一些交互演示组织起来。网站本身也作为一个持续学习的项目：文章怎样生成、反馈怎样保存、不同页面为什么会共享状态，以及更新后出了问题要怎样恢复，都需要能顺着实现说明清楚。</p>
+1d:T2918,<p>我希望把学过、研究过的内容集中整理到博客，方便自己回看，也能与他人分享经验、一起进步。这次个人主页升级把原来的技术笔记、研究、项目和交互演示组织起来，也借这套实际运行的网站学习前后端：文章怎样生成、反馈怎样保存、页面为什么会共享状态，以及更新出问题后怎样恢复。</p>
 <p>所以这个系列分成项目过程和基础知识两部分。项目过程沿着本站已经做过的工作讲，基础知识则把过程中用到的框架和机制单独展开。你如果和我一样是从基础HTML、CSS、JS、一点Vue以及Python开始接触这些内容，可以先按下面的顺序读，不需要提前掌握所有框架。</p>
-<h2 id="section-个人主页目前采用的结构">个人主页目前采用的结构</h2>
+<h2 id="section-一本人参与和ai完成的工作">一、本人参与和AI完成的工作</h2>
+<p><strong>我亲自负责检验和效果审查，其余工作由AI完成。</strong> 这包括工程实现、排查、部署和资料整理。文章会讲具体代码和选择理由，但不会把这些内容换成我独立设计、逐行编写或亲手部署的经历。技术解释也是学习材料；是否已经掌握，要看能否独立推演和实际操作。</p>
+<p>检验时需要把需要变成可观察的行为。例如“长文章容易找到当前章节”，可以继续拆成：当前标题是否高亮、祖先目录是否展开、手机点开目录后能否看到当前位置、关闭后正文是否留在原处。代码与自动测试提供实现证据，最后的效果仍需要实际查看。后面的文章按这个顺序组织：具体问题、输入输出、实现机制、选择理由、结果及限制。</p>
+<span id="section-个人主页目前采用的结构" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-二个人主页目前采用的结构">二、个人主页目前采用的结构</h2>
 <p>公共正文由Next.js在构建时生成，Nginx提供静态文件。浏览器中的React处理搜索、筛选、主题与表单状态；需要保存反馈或执行作者审核时，再调用FastAPI，通过SQLAlchemy和psycopg访问PostgreSQL。</p>
 <p><a href="/images/website-series/architecture.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：本站构建阶段与运行阶段的结构：静态阅读和动态反馈使用不同依赖"><img src="/images/website-series/architecture.svg" alt="本站构建阶段与运行阶段的结构：静态阅读和动态反馈使用不同依赖" width="1100" height="510" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
 <p><a href="/images/website-series/architecture.svg">查看图中细节</a></p>
 <p>站点包含文章、研究、项目和关于四个主栏目。反馈是只供作者查看的收件箱，当前没有公开评论、读者回复、点赞或真实浏览量统计。已有热度排序字段不等于已经采集访问数据。</p>
-<p>本系列事实核对以2026年10月18日的工程部署记录与随后读取的源码为基础。记录中的静态版本为20261018-2，API与数据库部署沿用20261018-1；新增系列先在本地审阅。历史上线记录、这次本地写作和未来改进会分别说明。</p>
-<h2 id="section-个人主页建设项目的阅读顺序">个人主页建设项目的阅读顺序</h2>
+<p>本系列29篇文章首次公开于2026年10月21日，10月25日按当前源码与发布记录重整，统一由<a href="/projects/personal-site/">个人主页与博客建设项目</a>组织阅读。重整前核对到的静态版本为20261025-2，API/Compose仍沿用20261018-1。这说明静态内容已经多次更新，不能把API版本号当成整站内容日期。后文的10月18日截图与性能数字继续保留原日期。</p>
+<p>页面中的局部交互也逐步增加：目录按标题层级组织并跟随阅读位置，窄屏提供悬浮入口；栏目可以分别保存颜色；算法演示先呈现静态结果，展开后再挂载交互组件。它们有各自的状态与加载机制，具体见<a href="/blog/react-state-effects/">React状态与阅读交互</a>和<a href="/blog/react-components-props/">组件挂载</a>。</p>
+<span id="section-个人主页建设项目的阅读顺序" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-三个人主页建设项目的阅读顺序">三、个人主页建设项目的阅读顺序</h2>
 <ol>
 <li><a href="/blog/site-upgrade-architecture/">升级动机与架构选择</a>：为什么从原博客继续扩展，以及前端、后端和数据库怎样确定职责。</li>
 <li><a href="/blog/site-setup-migration/">工程搭建与旧文迁移</a>：从独立工程、环境与内容身份开始，把现有资料保留下来。</li>
@@ -44,16 +48,54 @@ e:I[887,[],"$d"]
 <li><a href="/blog/site-interview-design/">项目连续追问与扩展设计</a>：沿真实实现讨论取舍、故障、兼容、AI协作和后续扩展。</li>
 </ol>
 <p>每篇都可以单独读。如果某个术语还不熟，可以跳到对应知识篇，理解后再回到项目中的那一步。</p>
-<h2 id="section-前后端知识文章怎样衔接">前后端知识文章怎样衔接</h2>
+<span id="section-前后端知识文章怎样衔接" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-四前后端知识文章怎样衔接">四、前后端知识文章怎样衔接</h2>
 <p>前端先从<a href="/blog/web-http-browser/">HTTP与浏览器请求</a>、<a href="/blog/javascript-async-fetch/">异步JS与Fetch</a>、<a href="/blog/typescript-types-boundaries/">TypeScript类型</a>开始，再看<a href="/blog/react-components-props/">React组件</a>和<a href="/blog/react-state-effects/">状态与Effect</a>。这些内容解释页面数据和事件的基本关系。</p>
 <p>Next.js分成<a href="/blog/nextjs-position-toolchain/">框架定位与工具链</a>、<a href="/blog/nextjs-routing-layouts/">路由与布局</a>、<a href="/blog/nextjs-rendering-hydration/">渲染与交互接管</a>、<a href="/blog/nextjs-content-cache/">内容加载与缓存</a>四篇。页面布局和图像呈现再接到<a href="/blog/css-responsive-images/">响应式CSS与图片</a>。</p>
 <p>后端从<a href="/blog/python-api-environment/">Python环境与API</a>到<a href="/blog/fastapi-dependencies-concurrency/">FastAPI依赖和并发</a>，再用<a href="/blog/pydantic-validation/">Pydantic</a>理解输入边界。数据部分依次看<a href="/blog/postgresql-tables-queries/">PostgreSQL表与SQL</a>、<a href="/blog/postgresql-transactions-locks/">事务与锁</a>、<a href="/blog/sqlalchemy-session-pool/">SQLAlchemy</a>、<a href="/blog/psycopg-driver-parameters/">psycopg</a>。先知道数据库需要完成什么，再看库怎样帮助调用。</p>
 <p>最后将<a href="/blog/browser-cookie-cors-csrf/">Cookie、CORS与CSRF</a>、<a href="/blog/cloud-docker-nginx/">云服务器、Docker与Nginx</a>、<a href="/blog/web-testing-observability/">测试与观测</a>接起来，才能解释功能在浏览器、网络和服务环境中怎样运行。</p>
-<h2 id="section-文章里的图代码和实验怎样使用">文章里的图、代码和实验怎样使用</h2>
+<span id="section-文章里的图代码和实验怎样使用" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-五文章里的图代码和实验怎样使用">五、文章里的图、代码和实验怎样使用</h2>
 <p>项目源码摘录会说明位置；为了帮助理解而缩小的代码会标为教学示例，省略的部分也会交代。请求链交互只在浏览器中推演步骤，不会向生产接口写入数据。性能数字引用已有工程样本，不会用动画速度代替实际耗时。</p>
 <p><a href="/images/website-series/home-history.png" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：2026年10月18日工程记录中的个人主页窄屏截图"><img src="/images/website-series/home-history.png" alt="2026年10月18日工程记录中的个人主页窄屏截图" width="780" height="1688" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
 <p>这张图来自当时的工程截图，展示旧发布版本的页面结构。页面插画来源沿用<a href="/credits/">素材署名</a>，不因为出现在教程截图里就额外取得再分发许可；本文不提供原插画下载。</p>
-<p>文章会继续保留明确的未完成项，例如反馈幂等键、跨进程限流、自动离机备份和真实用户性能分布。讨论怎样实现这些能力有助于理解设计，但它们不会因此变成已经完成的项目成果。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"个人主页与博客建设：项目系列与前后端知识阅读指南"}],["$","p",null,{"className":"article-deck","children":"以基础HTML、CSS、JS和Python经验为起点，沿静态阅读与动态反馈两条路线理解个人主页工程"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-19","children":"2026-10-19"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,262"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",4," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L19","个人博客",{"href":"/blog/#tag=%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2","children":"个人博客"}],["$","$L19","Next.js",{"href":"/blog/#tag=Next.js","children":"Next.js"}],["$","$L19","FastAPI",{"href":"/blog/#tag=FastAPI","children":"FastAPI"}],["$","$L19","PostgreSQL",{"href":"/blog/#tag=PostgreSQL","children":"PostgreSQL"}]]}]]}],["$","$L1a",null,{"headings":[{"id":"section-个人主页目前采用的结构","text":"个人主页目前采用的结构","level":2},{"id":"section-个人主页建设项目的阅读顺序","text":"个人主页建设项目的阅读顺序","level":2},{"id":"section-前后端知识文章怎样衔接","text":"前后端知识文章怎样衔接","level":2},{"id":"section-文章里的图代码和实验怎样使用","text":"文章里的图、代码和实验怎样使用","level":2},{"id":"request-flow","text":"跟着一次请求走","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1b",["$","$L1c",null,{"html":"$1d"}],"$L1e","$L1f","$L20","$L21"]}],"$L22"]}]]}]
+<p>文章会继续保留明确的未完成项，例如反馈幂等键、跨进程限流、自动离机备份和真实用户性能分布。讨论怎样实现这些能力有助于理解设计，但它们不会因此变成已经完成的项目成果。</p>
+<h2 id="section-六已经改善的行为与仍缺少的证据">六、已经改善的行为与仍缺少的证据</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>原先遇到的问题</th><th>当前做法</th><th>可以确认到哪里</th></tr></thead><tbody><tr><td>正文、搜索和目录各自更新容易不一致</td><td>同一内容对象派生多个入口，快照固定输入版本</td><td>可以核对标题、正文、URL与清单；不能仅由哈希证明知识正确</td></tr><tr><td>长目录难定位当前位置</td><td>分级目录、当前祖先展开、窄屏悬浮弹层</td><td>有代码、Chrome视口与操作检查；没有用户查找耗时对照实验</td></tr><tr><td>已借用其他栏目配色后，点击自身不能恢复</td><td>单独识别恢复原色的动作，清除当前栏目覆盖</td><td>历史回归与浏览器记录确认对应行为；未穷尽所有色彩对比度组合</td></tr><tr><td>新版本可访问，旧标签页却可能缺少资源</td><td>发布保留仍需兼容的旧哈希资源</td><td>可以检查文件及响应；不承诺无限期保留所有历史版本</td></tr><tr><td>页面更新可能误触动态数据</td><td>静态目录与数据库分开，登记保留旧内容与反馈</td><td>发布有备份恢复比对；没有自动离机灾备保证</td></tr></tbody></table>
+<p>这些变化说明网站的组织、阅读和更新流程更具体了。真实访问量、学习效率、当前容量和最新弱网性能仍缺少同口径证据。准备汇报时，可以先用<a href="/blog/site-interview-design/">项目连续追问中的短介绍</a>说明动机与分工，再选择一条确实能解释的数据流展开。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"个人主页与博客建设：项目系列与前后端知识阅读指南"}],["$","p",null,{"className":"article-deck","children":"以基础HTML、CSS、JS和Python经验为起点，沿静态阅读与动态反馈两条路线理解个人主页工程"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-21","children":"2026-10-21"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,068"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",7," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L19","个人博客",{"href":"/blog/#tag=%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2","children":"个人博客"}],["$","$L19","Next.js",{"href":"/blog/#tag=Next.js","children":"Next.js"}],["$","$L19","FastAPI",{"href":"/blog/#tag=FastAPI","children":"FastAPI"}],["$","$L19","PostgreSQL",{"href":"/blog/#tag=PostgreSQL","children":"PostgreSQL"}]]}]]}],["$","$L1a",null,{"headings":[{"id":"section-一本人参与和ai完成的工作","text":"一、本人参与和AI完成的工作","level":2},{"id":"section-二个人主页目前采用的结构","text":"二、个人主页目前采用的结构","level":2},{"id":"section-三个人主页建设项目的阅读顺序","text":"三、个人主页建设项目的阅读顺序","level":2},{"id":"section-四前后端知识文章怎样衔接","text":"四、前后端知识文章怎样衔接","level":2},{"id":"section-五文章里的图代码和实验怎样使用","text":"五、文章里的图、代码和实验怎样使用","level":2},{"id":"section-六已经改善的行为与仍缺少的证据","text":"六、已经改善的行为与仍缺少的证据","level":2},{"id":"request-flow","text":"跟着一次请求走","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1b",["$","$L1c",null,{"html":"$1d"}],"$L1e","$L1f","$L20","$L21"]}],"$L22"]}]]}]
 23:"RequestFlowLoader"
 24:I[3236,["5587","$15","8612","$16","1133","$17","5953","$18"],"$23"]
 25:I[2708,["5587","$15","8612","$16","1133","$17","5953","$18"],"FeedbackForm"]
@@ -61,8 +103,8 @@ e:I[887,[],"$d"]
 1e:["$","$L24",null,{}]
 20:["$","$L25",null,{"contentId":"personal-site-overview"}]
 21:["$","div",null,{"className":"related-note","children":[["$","$L26",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
-22:["$","$L1a",null,{"headings":["$9:props:children:1:props:headings:0","$9:props:children:1:props:headings:1","$9:props:children:1:props:headings:2","$9:props:children:1:props:headings:3",{"id":"request-flow","text":"跟着一次请求走","level":2}]}]
-1f:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","span",null,{}],["$","$L26",null,{"href":"/blog/site-upgrade-architecture/","children":[["$","span",null,{"children":"下一篇"}],"个人主页建设（一）：升级动机、框架选择与系统分工"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","site-upgrade-architecture",{"children":[["$","$L26",null,{"href":"/blog/site-upgrade-architecture/","children":"个人主页建设（一）：升级动机、框架选择与系统分工"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","site-setup-migration",{"children":[["$","$L26",null,{"href":"/blog/site-setup-migration/","children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","site-content-search-flow",{"children":[["$","$L26",null,{"href":"/blog/site-content-search-flow/","children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","site-feedback-data-flow",{"children":[["$","$L26",null,{"href":"/blog/site-feedback-data-flow/","children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","site-auth-review-concurrency",{"children":[["$","$L26",null,{"href":"/blog/site-auth-review-concurrency/","children":"个人主页建设（五）：作者登录、反馈审核与并发控制"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","site-images-performance",{"children":[["$","$L26",null,{"href":"/blog/site-images-performance/","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","site-deployment-recovery",{"children":[["$","$L26",null,{"href":"/blog/site-deployment-recovery/","children":"个人主页建设（七）：Nginx部署、版本切换与数据恢复"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","site-interview-design",{"children":[["$","$L26",null,{"href":"/blog/site-interview-design/","children":"个人主页建设（八）：从真实实现继续追问设计与故障处理"}],["$","span",null,{"children":"项目建设"}]]}]]}]]}]]}]
+22:["$","$L1a",null,{"headings":["$9:props:children:1:props:headings:0","$9:props:children:1:props:headings:1","$9:props:children:1:props:headings:2","$9:props:children:1:props:headings:3","$9:props:children:1:props:headings:4","$9:props:children:1:props:headings:5",{"id":"request-flow","text":"跟着一次请求走","level":2}]}]
+1f:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","span",null,{}],["$","$L26",null,{"href":"/blog/site-upgrade-architecture/","children":[["$","span",null,{"children":"下一篇"}],"个人主页建设（一）：升级动机、框架选择与系统分工"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","react-state-effects",{"children":[["$","$L26",null,{"href":"/blog/react-state-effects/","children":"React入门（二）：状态、Effect与目录和配色交互"}],["$","span",null,{"children":"前端开发"}]]}],["$","li","react-components-props",{"children":[["$","$L26",null,{"href":"/blog/react-components-props/","children":"React入门（一）：组件、JSX、props与列表身份"}],["$","span",null,{"children":"前端开发"}]]}],["$","li","site-upgrade-architecture",{"children":[["$","$L26",null,{"href":"/blog/site-upgrade-architecture/","children":"个人主页建设（一）：升级动机、框架选择与系统分工"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","site-setup-migration",{"children":[["$","$L26",null,{"href":"/blog/site-setup-migration/","children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","site-content-search-flow",{"children":[["$","$L26",null,{"href":"/blog/site-content-search-flow/","children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","site-feedback-data-flow",{"children":[["$","$L26",null,{"href":"/blog/site-feedback-data-flow/","children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","site-auth-review-concurrency",{"children":[["$","$L26",null,{"href":"/blog/site-auth-review-concurrency/","children":"个人主页建设（五）：作者登录、反馈审核与并发控制"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","site-images-performance",{"children":[["$","$L26",null,{"href":"/blog/site-images-performance/","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}],["$","span",null,{"children":"项目建设"}]]}]]}]]}]]}]
 f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 c:null
 12:[["$","title","0",{"children":"个人主页与博客建设：项目系列与前后端知识阅读指南 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"以基础HTML、CSS、JS和Python经验为起点，沿静态阅读与动态反馈两条路线理解个人主页工程。"}],["$","link","2",{"rel":"canonical","href":"/blog/personal-site-overview/"}]]
