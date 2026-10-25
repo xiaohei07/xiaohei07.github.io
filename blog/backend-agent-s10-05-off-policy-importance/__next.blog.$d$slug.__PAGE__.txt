@@ -1,0 +1,81 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+1b:"ViewportBoundary"
+1c:I[887,[],"$1b"]
+1d:"MetadataBoundary"
+1e:I[887,[],"$1d"]
+1f:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#ai","children":["人工智能",["$","span",null,{"children":25}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"强化学习05｜On-policy、Off-policy与重要性采样：旧轨迹怎样参与当前策略训练"}],["$","p",null,{"className":"article-deck","children":"区分采样策略、当前策略与参考策略，用离散算例检查概率比，再说明长轨迹方差和截断代价"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,420"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","强化学习",{"href":"/blog/#tag=%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0","children":"强化学习"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-一条轨迹是谁生成的为什么重要","text":"一条轨迹是谁生成的，为什么重要","level":2},{"id":"section-重要性采样怎样修正分布","text":"重要性采样怎样修正分布","level":2},{"id":"section-长轨迹的概率比为什么容易失控","text":"长轨迹的概率比为什么容易失控","level":2},{"id":"section-ppo中的旧策略比值是什么范围的修正","text":"PPO中的旧策略比值是什么范围的修正","level":2},{"id":"section-采样温度和top-p怎样影响支持集","text":"采样温度和Top-p怎样影响支持集","level":2},{"id":"section-怎样使用旧数据更稳妥","text":"怎样使用旧数据更稳妥","level":2},{"id":"section-面试追问grpo重要性采样与策略数据来源","text":"面试追问：GRPO、重要性采样与策略数据来源","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/reinforcement-learning/","children":"强化学习与偏好优化"}],["$","span",null,{"children":[5," / ",7," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s10-returns-ppo",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-returns-ppo/","children":"强化学习01｜奖励怎样变成策略更新：回报、优势、Critic与PPO"}]}],["$","li","backend-agent-s10-dpo",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-dpo/","children":"强化学习02｜偏好对怎样直接训练模型：DPO目标与PPO的区别"}]}],["$","li","backend-agent-s10-grpo-agent",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-grpo-agent/","children":"强化学习03｜同一道题的多个回答怎样参与训练：GRPO与Agent轨迹"}]}],["$","li","backend-agent-s10-04-policy-gradient",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-04-policy-gradient/","children":"强化学习04｜策略梯度怎样推导：为什么奖励可以乘在log概率的梯度上"}]}],["$","li","backend-agent-s10-05-off-policy-importance",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-05-off-policy-importance/","aria-current":"page","children":"强化学习05｜On-policy、Off-policy与重要性采样：旧轨迹怎样参与当前策略训练"}]}],["$","li","backend-agent-s10-06-grpo-variants",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-06-grpo-variants/","children":"强化学习06｜GRPO、DAPO与Dr.GRPO：裁剪和平均方式为什么会改变训练目标"}]}],"$L12"]}]]}]]}],"$L13","$undefined","$L14","$L15","$L16"]}],"$L17"]}]]}],["$L18"],"$L19"]}],"p":"$@1a","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s10-05-off-policy-importance","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1c",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1e",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"强化学习05｜On-policy、Off-policy与重要性采样：旧轨迹怎样参与当前策略训练 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"区分采样策略、当前策略与参考策略，用离散算例检查概率比，再说明长轨迹方差和截断代价。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s10-05-off-policy-importance/"}]]}]}],null]}],null]}],"p":"$@20","v":null,"s":"$7"}},"a":"$@21","u":"$@22","b":"t75SI7oTDmNtBl3uMkJyg"}
+23:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+25:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+26:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+12:["$","li","backend-agent-s10-07-async-rollout-frameworks",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-07-async-rollout-frameworks/","children":"强化学习07｜异步Rollout与训练框架：采样器、队列和训练器怎样协作"}]}]
+24:T1dfe,<h2 id="section-一条轨迹是谁生成的为什么重要">一条轨迹是谁生成的，为什么重要</h2>
+<p>策略更新以后，动作分布会变化。旧策略倾向调用搜索工具，新策略更倾向直接回答，那么旧轨迹里两类动作的比例不一定代表新策略的行为。</p>
+<p><strong>行为策略μ</strong>负责实际生成数据，<strong>目标策略π</strong>是希望评价或优化的策略。On-policy方法主要使用与当前策略一致或紧密相关的数据；Off-policy方法允许从不同的行为策略学习，但需要相应理论和实现处理分布差异。</p>
+<p>“数据在线生成”不自动等于on-policy。异步采样器可能还使用旧权重；反过来，刚存到本地的数据如果仍来自当前策略，也不能只因为保存过文件就称为off-policy。</p>
+<h2 id="section-重要性采样怎样修正分布">重要性采样怎样修正分布</h2>
+<p>希望计算目标分布π下的期望，却只有μ采样的数据时，可以使用：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi mathvariant="double-struck">E</mi><mrow><mi>a</mi><mo>∼</mo><mi>π</mi></mrow></msub><mo stretchy="false">[</mo><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mo>=</mo><msub><mi mathvariant="double-struck">E</mi><mrow><mi>a</mi><mo>∼</mo><mi>μ</mi></mrow></msub><mrow><mo fence="true">[</mo><mfrac><mrow><mi>π</mi><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mrow><mi>μ</mi><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mfrac><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\mathbb E_{a\sim\pi}[f(a)]
+=\mathbb E_{a\sim\mu}
+\left[\frac{\pi(a)}{\mu(a)}f(a)\right]</annotation></semantics></math></span>
+<p><strong>支持集条件</strong>要求：π可能选择的动作，μ也必须有非零概率。若旧策略从不生成某类动作，已有样本无法凭概率比补出它的结果。</p>
+<p>设A、B的奖励为2、0，目标概率<code>π=(0.75,0.25)</code>，行为概率<code>μ=(0.5,0.5)</code>。目标期望为1.5；行为样本不加权时的期望是1。加权后：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>0.5</mn><mo>×</mo><mfrac><mn>0.75</mn><mn>0.5</mn></mfrac><mo>×</mo><mn>2</mn><mo>+</mo><mn>0.5</mn><mo>×</mo><mfrac><mn>0.25</mn><mn>0.5</mn></mfrac><mo>×</mo><mn>0</mn><mo>=</mo><mn>1.5</mn></mrow><annotation encoding="application/x-tex">0.5\times\frac{0.75}{0.5}\times2+
+0.5\times\frac{0.25}{0.5}\times0=1.5</annotation></semantics></math></span>
+<p>这个恒等式说明权重来自“目标概率除以实际采样概率”，不能把分母随意换成参考模型。</p>
+<h2 id="section-长轨迹的概率比为什么容易失控">长轨迹的概率比为什么容易失控</h2>
+<p>如果环境相同且转移概率抵消，完整轨迹权重包含各步动作概率比的乘积：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>w</mi><mo stretchy="false">(</mo><mi>τ</mi><mo stretchy="false">)</mo><mo>=</mo><munder><mo>∏</mo><mi>t</mi></munder><mfrac><mrow><mi>π</mi><mo stretchy="false">(</mo><msub><mi>a</mi><mi>t</mi></msub><mi mathvariant="normal">∣</mi><msub><mi>s</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>μ</mi><mo stretchy="false">(</mo><msub><mi>a</mi><mi>t</mi></msub><mi mathvariant="normal">∣</mi><msub><mi>s</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">w(\tau)=\prod_t
+\frac{\pi(a_t|s_t)}{\mu(a_t|s_t)}</annotation></semantics></math></span>
+<p>每步比值只是1.1，100步乘积也约为13780。少数大权重样本可能主导估计，造成很高方差；很多小权重则让样本几乎不起作用。</p>
+<p>因此实际方法可能使用逐步修正、截断、优势估计或其他代理目标。<strong>截断减少方差，同时通常引入偏差。</strong>不能一边裁掉大权重，一边仍宣称保留了原始无偏估计。</p>
+<p>有效样本量可以用<code>(Σw)²/Σw²</code>作诊断。例如权重[1,1,1,9]对应144/84≈1.71，虽然有4条样本，权重分布却高度集中。这是重要性权重退化的信号，不是任务质量评分。</p>
+<h2 id="section-ppo中的旧策略比值是什么范围的修正">PPO中的旧策略比值是什么范围的修正</h2>
+<p>PPO常固定一批由旧策略生成的数据，再用当前策略与旧策略的逐动作概率比构造裁剪目标。它允许在这批数据上做多次小批更新，但不因此成为可以无限复用任意旧轨迹的通用off-policy算法。<a href="https://arxiv.org/abs/1707.06347" rel="noopener noreferrer">PPO论文</a></p>
+<p>语言模型训练还可能有三份策略：当前训练策略、采样时冻结的旧策略、实际推理引擎中的rollout策略。推理精度、权重同步、采样温度与截断方式可能使实际分布不同，需要保存真实采样配置与log概率。</p>
+<p>参考策略则常用于KL约束，职责不同。即使某一时刻它与旧策略权重相同，也不能把二者长期混为一个概念。</p>
+<h2 id="section-采样温度和top-p怎样影响支持集">采样温度和Top-p怎样影响支持集</h2>
+<p>实际rollout可能对logits使用温度、Top-k或Top-p处理。采样分布因此与原始模型softmax不同，尤其截断会让部分动作概率变为0。</p>
+<p>如果重要性权重声称修正到另一个分布，就需要对应考虑这些处理与支持集。记录一个未经相同处理的log概率，并不能自动成为真实行为概率。工程中有时使用近似或特定代理目标，应明确其假设。</p>
+<p>多步Agent轨迹还包含工具观察和环境状态。外部工具版本改变以后，即使动作概率能重算，环境分布也可能已经不同，不能只靠策略概率比解决全部差异。</p>
+<h2 id="section-怎样使用旧数据更稳妥">怎样使用旧数据更稳妥</h2>
+<p>限制策略滞后、按版本保存轨迹、监测权重分布与裁剪比例，对过旧或环境不兼容的数据拒绝使用。若采用回放缓冲，需要对应选择能处理该数据形式的方法，并明确奖励和终止状态如何重算。</p>
+<p>本篇只核对两动作期望与权重算例，没有进行异步模型训练。算法正确性还需结合具体目标、采样分布和实现版本，而非只检查公式里有没有一个比值。</p>
+<h2 id="section-面试追问grpo重要性采样与策略数据来源">面试追问：GRPO、重要性采样与策略数据来源</h2>
+<p><span id="q-FQ-doxcnnbCe2tcDReUaCMXGyk4Mgd" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnnbCe2tcDReUaCMXGyk4Mgd"></a></p>
+<blockquote>
+<p>问八股：GRPO，重要性采样，rl中on-policy和off-policy的区别</p>
+</blockquote>
+<p><strong>回答：</strong>GRPO用同提示多输出的组内奖励构造相对优势，再通过相应概率比目标更新。重要性采样用目标概率与行为概率之比修正期望，要求支持集覆盖，并面临长轨迹高方差问题。On-policy强调数据与当前策略匹配，Off-policy允许行为策略不同但需要对应算法处理。异步rollout会引入策略滞后，不能仅因为数据刚生成就忽略分布差异。</p>
+<p>原问及来源见<a href="/media/backend-agent-series/questions.json">逐题映射</a>。</p>13:["$","$L23",null,{"html":"$24"}]
+14:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/backend-agent-s10-04-policy-gradient/","children":[["$","span",null,{"children":"上一篇"}],"强化学习04｜策略梯度怎样推导：为什么奖励可以乘在log概率的梯度上"]}],["$","$Lf",null,{"href":"/blog/backend-agent-s10-06-grpo-variants/","children":[["$","span",null,{"children":"下一篇"}],"强化学习06｜GRPO、DAPO与Dr.GRPO：裁剪和平均方式为什么会改变训练目标"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s10-04-policy-gradient",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s10-04-policy-gradient/","children":"强化学习04｜策略梯度怎样推导：为什么奖励可以乘在log概率的梯度上"}],["$","span",null,{"children":"人工智能"}]]}],["$","li","backend-agent-s10-06-grpo-variants",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s10-06-grpo-variants/","children":"强化学习06｜GRPO、DAPO与Dr.GRPO：裁剪和平均方式为什么会改变训练目标"}],["$","span",null,{"children":"人工智能"}]]}],["$","li","backend-agent-s10-07-async-rollout-frameworks",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s10-07-async-rollout-frameworks/","children":"强化学习07｜异步Rollout与训练框架：采样器、队列和训练器怎样协作"}],["$","span",null,{"children":"人工智能"}]]}]]}]]}]]}]
+15:["$","$L25",null,{"contentId":"backend-agent-s10-05-off-policy-importance"}]
+16:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+17:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6"]}]
+18:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+19:["$","$L26",null,{"children":["$","$1f",null,{"name":"Next.MetadataOutlet","children":"$@27"}]}]
+22:true
+7:300
+27:null
+7:C
+21:0
+9:"$undefined"
+5:"$undefined"
+20:"$undefined"
+1a:"$undefined"

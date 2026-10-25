@@ -1,0 +1,115 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+1e:"ViewportBoundary"
+1f:I[887,[],"$1e"]
+20:"MetadataBoundary"
+21:I[887,[],"$20"]
+22:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#backend","children":["后端与数据库",["$","span",null,{"children":33}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"分布式系统01｜数据库提交以后，消息怎样可靠送达：Outbox、确认与业务幂等"}],["$","p",null,{"className":"article-deck","children":"从工单创建后发送通知开始，逐个检查生产、投递和消费的故障窗口，区分重复消息与重复业务效果"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,075"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",7," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","分布式系统",{"href":"/blog/#tag=%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F","children":"分布式系统"}],["$","$L10","消息队列",{"href":"/blog/#tag=%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97","children":"消息队列"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-为什么写库成功以后还可能永远没有通知","text":"为什么写库成功以后，还可能永远没有通知","level":2},{"id":"section-把可靠传递拆成几个可检查的阶段","text":"把可靠传递拆成几个可检查的阶段","level":2},{"id":"section-投递和消费分别怎样产生重复","text":"投递和消费分别怎样产生重复","level":2},{"id":"section-去重标记必须和哪一步保持一致","text":"去重标记必须和哪一步保持一致","level":2},{"id":"section-重复下单和真的想再买一次怎样区分","text":"重复下单和真的想再买一次怎样区分","level":2},{"id":"section-面试问答重复消费与幂等身份","text":"面试问答：重复消费与幂等身份","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/distributed-services/","children":"分布式系统与服务设计"}],["$","span",null,{"children":[1," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s08-outbox-delivery",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-outbox-delivery/","aria-current":"page","children":"分布式系统01｜数据库提交以后，消息怎样可靠送达：Outbox、确认与业务幂等"}]}],["$","li","backend-agent-s08-consensus-leases",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-consensus-leases/","children":"分布式系统02｜网络分区后谁还能写入：CAP、Raft与租约失效"}]}],["$","li","backend-agent-s08-rate-limits",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-rate-limits/","children":"分布式系统03｜请求太多时限制什么：窗口、令牌桶、漏桶与全局额度"}]}],["$","li","backend-agent-s08-04-cdc-transaction-message",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-04-cdc-transaction-message/","children":"分布式系统04｜CDC与事务消息：数据库提交以后，消息怎样可靠地发出去"}]}],["$","li","backend-agent-s08-05-queue-backlog-order",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-05-queue-backlog-order/","children":"分布式系统05｜消息积压与顺序消费：为什么增加消费者有时不起作用"}]}],["$","li","backend-agent-s08-06-sharding-migration",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-06-sharding-migration/","children":"分布式系统06｜分片扩容与热点数据：数据怎样迁移，读写怎样保持连续"}]}],"$L12","$L13","$L14","$L15"]}]]}]]}],"$L16","$undefined","$L17","$L18","$L19"]}],"$L1a"]}]]}],["$L1b"],"$L1c"]}],"p":"$@1d","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s08-outbox-delivery","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1f",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L21",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$22",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"分布式系统01｜数据库提交以后，消息怎样可靠送达：Outbox、确认与业务幂等 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从工单创建后发送通知开始，逐个检查生产、投递和消费的故障窗口，区分重复消息与重复业务效果。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s08-outbox-delivery/"}]]}]}],null]}],null]}],"p":"$@23","v":null,"s":"$7"}},"a":"$@24","u":"$@25","b":"t75SI7oTDmNtBl3uMkJyg"}
+26:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+28:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+29:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+12:["$","li","backend-agent-s08-07-circuit-breaker",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-07-circuit-breaker/","children":"分布式系统07｜熔断、超时与隔离：下游变慢以后，怎样防止请求一起堆住"}]}]
+13:["$","li","backend-agent-s08-08-jwt-csrf",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-08-jwt-csrf/","children":"分布式系统08｜JWT、Cookie与CSRF：登录身份怎样传递，又该在哪一步检查权限"}]}]
+14:["$","li","backend-agent-s08-09-resumable-upload",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-09-resumable-upload/","children":"分布式系统09｜弱网分片上传：怎样确认进度、断点续传并控制内存占用"}]}]
+15:["$","li","backend-agent-s08-10-api-compatibility",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-10-api-compatibility/","children":"分布式系统10｜接口版本与数据库迁移：新旧客户端怎样同时使用一个服务"}]}]
+27:T2297,<h2 id="section-为什么写库成功以后还可能永远没有通知">为什么写库成功以后，还可能永远没有通知</h2>
+<p>假设创建工单以后，需要向通知服务发一条消息。程序先提交数据库，再发送消息；如果在两步之间崩溃，工单已经存在，通知却没有任何持久待发记录。把顺序换过来，也可能出现消息已发出、数据库最后回滚的问题。</p>
+<p><strong>Outbox（事务发件箱）</strong>把“需要发送的事件”也写进本地数据库，并与业务修改放在同一个事务中。事务提交后，再由独立投递程序发送这些事件。这样即使发送程序暂时失败，待发事件仍然可以被发现。<a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html" rel="noopener noreferrer">事务Outbox模式</a></p>
+<p>一个教学事务可以同时写入工单<code>T17</code>和事件<code>E17</code>，事件记录包含业务对象ID、事件类型、版本和载荷。<strong>本地事务保护的是工单与待发记录一起提交，不是消息系统和消费者也在这一刻全部完成。</strong></p>
+<h2 id="section-把可靠传递拆成几个可检查的阶段">把可靠传递拆成几个可检查的阶段</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>阶段</th><th>已完成的事实</th><th>尚不能推出什么</th></tr></thead><tbody><tr><td>数据库提交</td><td>工单与Outbox事件持久记录完成</td><td>消息已经到达broker</td></tr><tr><td>broker确认接收</td><td>按其确认契约接收了消息</td><td>消费者已经完成业务</td></tr><tr><td>消费者提交业务</td><td>目标状态已经改变</td><td>消费确认一定已送达</td></tr><tr><td>消费确认完成</td><td>broker可按协议更新投递状态</td><td>任意外部副作用都只执行过一次</td></tr></tbody></table>
+<p>RabbitMQ将发布确认与消费者确认分开处理，两者保护不同的链路。具体耐久保证还取决于队列、消息和复制等配置；确认机制不能脱离配置单独讨论。<a href="https://www.rabbitmq.com/docs/confirms" rel="noopener noreferrer">发布确认与消费确认</a></p>
+<h2 id="section-投递和消费分别怎样产生重复">投递和消费分别怎样产生重复</h2>
+<p>投递程序把E17发到broker，broker已接受，但投递程序在写“已发送”之前崩溃。恢复后Outbox仍显示未发，再发一次就会产生重复。若为了避免重复而先标记已发，再实际发送，标记后崩溃又可能造成漏发。</p>
+<p>消费者也有类似窗口。若先确认消息再提交业务，确认后崩溃可能丢掉业务处理；若先提交业务再确认，提交后崩溃可能导致再次投递。</p>
+<p>所以可靠设计通常需要接受某个边界上的重试，并确保重复不会产生错误业务效果。<strong>消息重复交付，与业务效果重复，是两个可以分别处理的问题。</strong></p>
+<h2 id="section-去重标记必须和哪一步保持一致">去重标记必须和哪一步保持一致</h2>
+<p>假设消费者处理E17时需要更新自己的数据库。可以在同一事务中检查事件ID唯一约束、写业务变化并记录处理结果。事务成功后再确认消息。再次收到E17时，依据已持久化结果复用或跳过业务更新。</p>
+<p>如果先在Redis里写“E17已处理”，随后更新数据库失败，重试可能因为这个标记而被错误跳过。如果先更新数据库再单独写去重标记，则又有重复执行的窗口。<strong>关键是去重记录与目标业务变化的原子边界。</strong></p>
+<p>如果目标动作是调用外部短信或支付服务，本地事务不能把外部提交一起回滚。需要下游提供稳定幂等键、结果查询或对账能力，按<a href="/blog/backend-agent-s01-recovery/">业务操作ID</a>处理未决结果。</p>
+<p>Kafka的事务和exactly-once相关能力也有范围。Kafka内的读取、处理与写回可以在相应配置和API下协调，但任意外部数据库或HTTP副作用需要额外配合，不能从一个配置开关推出整个业务链都恰好执行一次。<a href="https://kafka.apache.org/41/design/design/" rel="noopener noreferrer">Kafka4.1消息交付语义</a></p>
+<h2 id="section-重复下单和真的想再买一次怎样区分">重复下单和真的想再买一次怎样区分</h2>
+<p>幂等键应代表一次业务意图。用户点击提交后因网络问题重试，沿用同一操作ID；用户完成一次购买以后又决定再买，应产生新的业务操作ID。</p>
+<p>只用用户ID去重，会把这个用户后续合法订单挡住；永久使用“用户+商品”去重，也会混淆重试与再次购买。服务端需要核对相同ID是否携带相同参数，处理中返回真实状态，已完成返回已有结果，并约定记录保留期。</p>
+<p>关掉页面再进入，不应自动决定这是新意图还是旧重试。前后端需要保存并展示可查询的订单状态，让用户继续尚未确认的提交，或明确发起新的购买。幂等不能替产品流程替用户猜意图。</p>
+<p>事件顺序还需另外设计。取消事件先到、创建事件后到时，如果仅按接收顺序执行，就可能把已取消对象重新创建。可以依据业务版本和终态规则拒绝过时事件，但具体规则必须符合业务含义，不能用队列顺序代替所有状态判断。</p>
+<h2 id="section-面试问答重复消费与幂等身份">面试问答：重复消费与幂等身份</h2>
+<p><span id="q-FQ-doxcnyHdQLRAyuiIGzR7wdJyhad" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnyHdQLRAyuiIGzR7wdJyhad"></a></p>
+<blockquote>
+<p>如何保证消息不会重复消费？</p>
+</blockquote>
+<p><strong>回答：</strong> 先说明所要求的边界。消息系统在确认丢失、消费者重启等情况下可能重新投递，业务通常需要通过幂等处理保证重复消息不会产生重复效果，而不是承诺任何故障下都只收到一次消息。</p>
+<p>消费者为事件建立稳定ID，并将去重结果与目标业务更新放在同一可靠事务边界，业务提交后再确认消息。若提交成功但确认丢失，消息会重来，但去重记录可阻止业务再次更新。先确认后处理有丢失窗口，先单独写去重标记再执行业务则可能产生假成功。</p>
+<p>对于外部HTTP副作用，本地数据库去重不足以覆盖远端提交，必须结合下游幂等与状态查询。还要规定去重记录保留时间、重复事件参数冲突、乱序和失败重试，监测积压与无法自动处理的事件。</p>
+<p><strong>延伸追问（自拟）：exactly-once是否就不需要业务幂等？</strong> 要看保证范围。消息系统内部的事务语义不自动扩展到任意外部资源；跨出该边界时仍需协议支持。</p>
+<p>原问ID：<code>FQ-doxcnyHdQLRAyuiIGzR7wdJyhad</code>。出处：<a href="https://www.nowcoder.com/discuss/611696355077103616" rel="noopener noreferrer">原始面经</a>。</p>
+<p><span id="q-FQ-doxcn3NJaFPBkaSITXx83Z7Aklg" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcn3NJaFPBkaSITXx83Z7Aklg"></a></p>
+<blockquote>
+<p>一个用户下两次单怎么办？一个用户下一次单立刻退出并进入再下两次单怎么办（想买两件商品）？幂等性实现。</p>
+</blockquote>
+<p><strong>回答：</strong> 先区分重复提交与新的购买意图。一次提交生成稳定业务操作ID，网络重试沿用该ID；用户明确再次购买则生成新的操作ID。不能只用用户ID或用户与商品的组合永久去重，否则会误拦合法的第二次购买。</p>
+<p>服务端通过唯一约束或等效原子机制登记操作，校验参数摘要，保存处理中、成功或失败状态及已有订单号。相同ID相同参数返回已有结果，相同ID不同参数报告冲突。退出再进入时，前端应能查询尚未确认的操作，避免页面重建就无条件产生新的提交身份。</p>
+<p>如果用户想在一次订单里购买两件，应通过数量或订单明细表达；如果想分别下两张单，则是两个明确意图。订单创建、库存与支付还各自需要协调边界，单个入口去重不能自动保证所有下游操作只执行一次。</p>
+<p><strong>延伸追问（自拟）：为什么锁不够？</strong> 锁限制同时执行，锁释放后仍可能收到同一意图的迟到重试。幂等记录跨时间保留操作身份和结果，作用不同。</p>
+<p>原问ID：<code>FQ-doxcn3NJaFPBkaSITXx83Z7Aklg</code>。出处：<a href="https://www.nowcoder.com/feed/main/detail/6de306829fa941969e9f2b95613a00c7" rel="noopener noreferrer">原始面经</a>。</p>16:["$","$L26",null,{"html":"$27"}]
+17:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","span",null,{}],["$","$Lf",null,{"href":"/blog/backend-agent-s08-consensus-leases/","children":[["$","span",null,{"children":"下一篇"}],"分布式系统02｜网络分区后谁还能写入：CAP、Raft与租约失效"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s01-recovery",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s01-recovery/","children":"Agent基础02｜Agent中断后怎样继续：检查点、幂等与结果未知"}],["$","span",null,{"children":"Agent"}]]}]]}]]}]]}]
+18:["$","$L28",null,{"contentId":"backend-agent-s08-outbox-delivery"}]
+19:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+1a:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5"]}]
+1b:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1c:["$","$L29",null,{"children":["$","$22",null,{"name":"Next.MetadataOutlet","children":"$@2a"}]}]
+25:true
+7:300
+2a:null
+7:C
+24:0
+9:"$undefined"
+5:"$undefined"
+23:"$undefined"
+1d:"$undefined"

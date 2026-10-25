@@ -1,0 +1,30 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+d:"static/chunks/5587-bf231f55b3fd3ee7.js"
+e:"static/chunks/app/blog/series/%5Bseries%5D/page.learning-c7d22cf3260ffb13.js"
+f:I[3498,["5587","$d","2187","$e"],"default"]
+10:I[887,[],"OutletBoundary"]
+11:"$Sreact.suspense"
+14:"ViewportBoundary"
+15:I[887,[],"$14"]
+16:"MetadataBoundary"
+17:I[887,[],"$16"]
+6:X
+6:C
+7:X
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"learning-directory","children":[["$","header",null,{"children":[["$","$Lf",null,{"className":"action-link","href":"/blog/series/","children":"← 全部学习系列"}],["$","h1",null,{"children":"强化学习与偏好优化"}],["$","p",null,{"children":"从回报与策略梯度，到PPO、偏好优化和Agent训练"}],["$","p",null,{"children":[["$","strong",null,{"children":7}]," 篇 · 可按顺序阅读，也可选择具体问题"]}]]}],["$","ol",null,{"className":"learning-article-list","children":[["$","li","backend-agent-s10-returns-ppo",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-returns-ppo/","children":[["$","span",null,{"className":"learning-series-meta","children":["人工智能"," · ","强化学习"]}],["$","h2",null,{"children":"强化学习01｜奖励怎样变成策略更新：回报、优势、Critic与PPO"}],["$","p",null,{"children":"从两动作环境建立回报和优势，再计算GAE与PPO裁剪项，区分奖励模型、Critic、采样旧策略和参考策略的职责。"}],["$","span",null,{"className":"learning-series-cta","children":"阅读笔记 →"}]]}]}],["$","li","backend-agent-s10-dpo",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-dpo/","children":[["$","span",null,{"className":"learning-series-meta","children":["人工智能"," · ","强化学习"]}],["$","h2",null,{"children":"强化学习02｜偏好对怎样直接训练模型：DPO目标与PPO的区别"}],["$","p",null,{"children":"从同一提示的胜负回答解释DPO，展开参考策略、奖励重参数化和可计算损失，并说明离线偏好数据的限制。"}],["$","span",null,{"className":"learning-series-cta","children":"阅读笔记 →"}]]}]}],["$","li","backend-agent-s10-grpo-agent",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-grpo-agent/","children":[["$","span",null,{"className":"learning-series-meta","children":["人工智能"," · ","强化学习"]}],["$","h2",null,{"children":"强化学习03｜同一道题的多个回答怎样参与训练：GRPO与Agent轨迹"}],["$","p",null,{"children":"从组内奖励计算优势，展开序列与Token的平均方式、零方差和策略版本，再说明多步工具任务的奖励与环境恢复。"}],["$","span",null,{"className":"learning-series-cta","children":"阅读笔记 →"}]]}]}],["$","li","backend-agent-s10-04-policy-gradient",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-04-policy-gradient/","children":[["$","span",null,{"className":"learning-series-meta","children":["人工智能"," · ","强化学习"]}],["$","h2",null,{"children":"强化学习04｜策略梯度怎样推导：为什么奖励可以乘在log概率的梯度上"}],["$","p",null,{"children":"从轨迹概率和期望回报推导梯度，再用两动作环境核对基线、优势与更新方向。"}],["$","span",null,{"className":"learning-series-cta","children":"阅读笔记 →"}]]}]}],["$","li","backend-agent-s10-05-off-policy-importance",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-05-off-policy-importance/","children":[["$","span",null,{"className":"learning-series-meta","children":["人工智能"," · ","强化学习"]}],["$","h2",null,{"children":"强化学习05｜On-policy、Off-policy与重要性采样：旧轨迹怎样参与当前策略训练"}],["$","p",null,{"children":"区分采样策略、当前策略与参考策略，用离散算例检查概率比，再说明长轨迹方差和截断代价。"}],["$","span",null,{"className":"learning-series-cta","children":"阅读笔记 →"}]]}]}],["$","li","backend-agent-s10-06-grpo-variants",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-06-grpo-variants/","children":[["$","span",null,{"className":"learning-series-meta","children":["人工智能"," · ","强化学习"]}],["$","h2",null,{"children":"强化学习06｜GRPO、DAPO与Dr.GRPO：裁剪和平均方式为什么会改变训练目标"}],["$","p",null,{"children":"用长度不同的输出和概率比算例比较目标差异，说明动态采样、截断与版本配置。"}],["$","span",null,{"className":"learning-series-cta","children":"阅读笔记 →"}]]}]}],["$","li","backend-agent-s10-07-async-rollout-frameworks",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-07-async-rollout-frameworks/","children":[["$","span",null,{"className":"learning-series-meta","children":["人工智能"," · ","强化学习"]}],["$","h2",null,{"children":"强化学习07｜异步Rollout与训练框架：采样器、队列和训练器怎样协作"}],["$","p",null,{"children":"追踪一条Agent轨迹从生成到更新的数据流，解释长尾、策略滞后、参数同步与框架边界。"}],["$","span",null,{"className":"learning-series-cta","children":"阅读笔记 →"}]]}]}]]}]]}],null,["$","$L10",null,{"children":["$","$11",null,{"name":"Next.MetadataOutlet","children":"$@12"}]}]]}],"p":"$@13","v":null,"s":"$7"}}]]
+a:[["children",{"s":{"n":"series","t":"d","k":"reinforcement-learning","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
+8:[["children",{"s":"series","h":131168,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L15",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L17",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$11",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"强化学习与偏好优化 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"07xiaohei 的学习笔记、医学影像研究记录与交互式技术实践。"}],["$","link","2",{"rel":"canonical","href":"/blog/series/reinforcement-learning/"}]]}]}],null]}],null]}],"p":"$@18","v":null,"s":"$7"}},"a":"$@19","u":"$@1a","b":"t75SI7oTDmNtBl3uMkJyg"}
+12:null
+1a:true
+7:300
+7:C
+19:0
+b:"$undefined"
+9:"$undefined"
+5:"$undefined"
+18:"$undefined"
+13:"$undefined"

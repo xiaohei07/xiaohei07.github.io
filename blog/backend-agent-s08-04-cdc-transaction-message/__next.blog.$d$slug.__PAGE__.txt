@@ -1,0 +1,120 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+1f:"ViewportBoundary"
+20:I[887,[],"$1f"]
+21:"MetadataBoundary"
+22:I[887,[],"$21"]
+23:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#backend","children":["后端与数据库",["$","span",null,{"children":33}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"分布式系统04｜CDC与事务消息：数据库提交以后，消息怎样可靠地发出去"}],["$","p",null,{"className":"article-deck","children":"沿本地事务的提交结果追踪Outbox、日志订阅和事务回查，区分消息可见与业务处理完成"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,957"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",6," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","分布式系统",{"href":"/blog/#tag=%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F","children":"分布式系统"}],["$","$L10","消息队列",{"href":"/blog/#tag=%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97","children":"消息队列"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-数据库和消息队列之间缺的是哪一步保证","text":"数据库和消息队列之间，缺的是哪一步保证","level":2},{"id":"section-从数据库日志到消费者的完整过程","text":"从数据库日志到消费者的完整过程","level":2},{"id":"section-连接器恢复以后为什么仍可能收到重复消息","text":"连接器恢复以后，为什么仍可能收到重复消息","level":2},{"id":"section-rocketmq事务消息怎样使用本地事务结果","text":"RocketMQ事务消息怎样使用本地事务结果","level":2},{"id":"section-两种方案应该怎样选择","text":"两种方案应该怎样选择","level":2},{"id":"section-面试追问事务消息保证到哪一层","text":"面试追问：事务消息保证到哪一层","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/distributed-services/","children":"分布式系统与服务设计"}],["$","span",null,{"children":[4," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s08-outbox-delivery",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-outbox-delivery/","children":"分布式系统01｜数据库提交以后，消息怎样可靠送达：Outbox、确认与业务幂等"}]}],["$","li","backend-agent-s08-consensus-leases",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-consensus-leases/","children":"分布式系统02｜网络分区后谁还能写入：CAP、Raft与租约失效"}]}],["$","li","backend-agent-s08-rate-limits",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-rate-limits/","children":"分布式系统03｜请求太多时限制什么：窗口、令牌桶、漏桶与全局额度"}]}],["$","li","backend-agent-s08-04-cdc-transaction-message",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-04-cdc-transaction-message/","aria-current":"page","children":"分布式系统04｜CDC与事务消息：数据库提交以后，消息怎样可靠地发出去"}]}],["$","li","backend-agent-s08-05-queue-backlog-order",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-05-queue-backlog-order/","children":"分布式系统05｜消息积压与顺序消费：为什么增加消费者有时不起作用"}]}],["$","li","backend-agent-s08-06-sharding-migration",{"children":"$L12"}],"$L13","$L14","$L15","$L16"]}]]}]]}],"$L17","$undefined","$L18","$L19","$L1a"]}],"$L1b"]}]]}],["$L1c"],"$L1d"]}],"p":"$@1e","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s08-04-cdc-transaction-message","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L20",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L22",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$23",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"分布式系统04｜CDC与事务消息：数据库提交以后，消息怎样可靠地发出去 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"沿本地事务的提交结果追踪Outbox、日志订阅和事务回查，区分消息可见与业务处理完成。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s08-04-cdc-transaction-message/"}]]}]}],null]}],null]}],"p":"$@24","v":null,"s":"$7"}},"a":"$@25","u":"$@26","b":"t75SI7oTDmNtBl3uMkJyg"}
+27:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+29:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+2a:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+12:["$","$Lf",null,{"href":"/blog/backend-agent-s08-06-sharding-migration/","children":"分布式系统06｜分片扩容与热点数据：数据怎样迁移，读写怎样保持连续"}]
+13:["$","li","backend-agent-s08-07-circuit-breaker",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-07-circuit-breaker/","children":"分布式系统07｜熔断、超时与隔离：下游变慢以后，怎样防止请求一起堆住"}]}]
+14:["$","li","backend-agent-s08-08-jwt-csrf",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-08-jwt-csrf/","children":"分布式系统08｜JWT、Cookie与CSRF：登录身份怎样传递，又该在哪一步检查权限"}]}]
+15:["$","li","backend-agent-s08-09-resumable-upload",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-09-resumable-upload/","children":"分布式系统09｜弱网分片上传：怎样确认进度、断点续传并控制内存占用"}]}]
+16:["$","li","backend-agent-s08-10-api-compatibility",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-10-api-compatibility/","children":"分布式系统10｜接口版本与数据库迁移：新旧客户端怎样同时使用一个服务"}]}]
+28:T225a,<h2 id="section-数据库和消息队列之间缺的是哪一步保证">数据库和消息队列之间，缺的是哪一步保证</h2>
+<p><a href="/blog/backend-agent-s08-outbox-delivery/">Outbox与幂等消费</a>介绍过一种写法：把业务数据和待发送事件放进同一个数据库事务，再由另外的程序发送事件。这样，订单提交后即使发送程序退出，数据库中仍然留着需要发送的记录。</p>
+<p>接下来需要解决的是，<strong>发送程序怎样发现已经提交的事件，以及发生中断后从哪里继续。</strong>一种办法是定期查询Outbox表；另一种办法是读取数据库的变更日志。这种从数据源捕获新增、修改和删除的方式，叫作<strong>CDC（Change Data Capture，变更数据捕获）</strong>。</p>
+<p>CDC可以同步普通业务表，也可以专门订阅Outbox表。两者提供的含义有所不同：订单表的一次字段更新描述“数据变了”，Outbox中的<code>OrderPaid</code>事件则可以明确表达“订单已支付”，并携带业务版本、事件ID和发生时间。</p>
+<h2 id="section-从数据库日志到消费者的完整过程">从数据库日志到消费者的完整过程</h2>
+<p>以MySQL、Debezium和Kafka的组合为例，教学数据流可以写成：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-text">本地事务：更新订单 + 插入Outbox事件
+       ↓ COMMIT
+MySQL binlog中的已提交变更
+       ↓ 连接器读取并记录进度
+转换为带event_id和order_id的消息
+       ↓
+Kafka分区 → 消费者业务事务 → 提交消费进度
+</code></pre></div>
+<p>这里的<strong>进度</strong>是读到了数据源的什么位置，不能只用“最后成功时间”代替。相同时间内可能有多次更新，数据库重启或故障切换也需要使用连接器支持的日志位置、GTID等恢复信息。Debezium的MySQL连接器还需要维护理解历史事件所用的表结构信息；日志位置正确而表结构解释错误，同样无法可靠恢复。<a href="https://debezium.io/documentation/reference/stable/connectors/mysql.html" rel="noopener noreferrer">Debezium MySQL连接器</a></p>
+<p>首次接入时，旧数据已经存在，日志也可能只保留了最近几天。通常需要<strong>快照与后续日志衔接</strong>：先建立某个一致性位置对应的数据视图，再继续处理该位置之后的变更。具体快照模式、锁和并发限制要按连接器版本配置，不能直接用“导出表，然后开始订阅”来假定没有空档。</p>
+<p>对Outbox事件，<code>event_id</code>负责识别同一件事，<code>order_id</code>可以作为消息Key，把同一订单的事件送入同一个分区。<strong>去重标识与分区标识的目的不同。</strong>Debezium的Outbox Event Router也区分事件ID与聚合对象ID；是否采用默认字段名，需要与应用表结构对应。<a href="https://debezium.io/documentation/reference/stable/transformations/outbox-event-router.html" rel="noopener noreferrer">Outbox Event Router</a></p>
+<h2 id="section-连接器恢复以后为什么仍可能收到重复消息">连接器恢复以后，为什么仍可能收到重复消息</h2>
+<p>假设事件E17已经发送到消息队列，发送结果也已经确认，但连接器还没来得及持久保存最新读取进度就退出。恢复后再次读取E17，就可能再次发送它。</p>
+<p>因此，消费端可以在一个本地事务中完成：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-text">检查并登记event_id=E17
+更新订单对应的下游业务状态
+提交事务
+</code></pre></div>
+<p><strong>去重记录与业务修改必须一起成功或一起回滚。</strong>先登记“已消费”再单独修改业务，第二步失败后会把真正需要执行的消息当成重复消息跳过。外部支付或发送短信等操作，还需要相应服务支持幂等键或可查询的执行状态；数据库事务无法把外部请求自动纳入原子提交。</p>
+<p>还有一种恢复失败更难发现：连接器暂停太久，尚未读取的binlog已经过期。这时不能直接移动进度跳过缺口。应根据业务可接受的恢复方式重新建立快照、补读或对账，并检查缺失的历史事件是否还能从业务记录重建。</p>
+<h2 id="section-rocketmq事务消息怎样使用本地事务结果">RocketMQ事务消息怎样使用本地事务结果</h2>
+<p>RocketMQ事务消息采用另一条路径：先将消息交给Broker，暂时不允许消费者读取；再执行本地事务，根据结果决定消息是否可以投递。这个暂不可消费的消息通常叫作<strong>半消息</strong>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>时刻</th><th>本地业务</th><th>Broker中的消息</th></tr></thead><tbody><tr><td>发送半消息成功</td><td>尚未提交</td><td>消费者不可见</td></tr><tr><td>本地事务提交</td><td>订单已落库</td><td>等待提交确认</td></tr><tr><td>提交确认送达</td><td>已提交</td><td>可以投递</td></tr><tr><td>确认丢失</td><td>可能已提交</td><td>通过事务回查确认</td></tr></tbody></table>
+<p><strong>事务回查</strong>就是Broker向生产者询问对应本地事务的最终结果。生产者应查询可以持久保存的业务状态或事务记录，不能只查某个进程内变量。RocketMQ也明确要求，正在执行的事务应返回Unknown，避免过早作出提交或回滚决定。<a href="https://rocketmq.apache.org/docs/featureBehavior/04transactionmessage/" rel="noopener noreferrer">RocketMQ事务消息机制</a></p>
+<p>例如订单O8的数据库事务已经提交，但提交消息的网络请求超时。回查通过O8的事务记录确认成功，就可以让消息继续投递。反过来，<strong>“查询暂时没找到记录”不一定等于“事务已回滚”</strong>：事务可能尚未结束，读取的副本也可能有延迟。回查的数据源和状态模型必须能够区分这些情况。</p>
+<p>事务消息有回查次数、超时等运行边界。如果长期无法确认，本地状态与消息状态仍需对账和补偿，不能把回查理解成无限等待且必然恢复。</p>
+<h2 id="section-两种方案应该怎样选择">两种方案应该怎样选择</h2>
+<p>已经使用数据库事务、又希望业务代码与消息发送解耦时，Outbox通常便于说明正确性。轮询实现较直接，需要处理扫描成本；CDC降低反复扫描的需要，同时增加连接器、日志保留、Schema变更与恢复运维工作。</p>
+<p>已有RocketMQ事务消息能力，并且能提供可靠的事务回查逻辑时，可以围绕半消息与回查组织实现。两种路径都要继续考虑下游幂等、重试期限和失败对账。<strong>消息已经可以消费，只说明上游的消息发布条件成立，下游业务是否完成需要另外确认。</strong></p>
+<p>本篇没有启动Debezium、Kafka或RocketMQ。验证重点是下面的故障推演：业务提交前失败不应产生有效事件；业务提交后发送失败必须可恢复；发送成功但进度未保存允许重复，不能丢失；消费业务提交后确认丢失必须能安全重放。</p>
+<h2 id="section-面试追问事务消息保证到哪一层">面试追问：事务消息保证到哪一层</h2>
+<p><span id="q-FQ-doxcnQqOkNTYVwffOvhABwMzZrb" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnQqOkNTYVwffOvhABwMzZrb"></a></p>
+<blockquote>
+<p>RocketMQ 事务消息的原理。</p>
+</blockquote>
+<p><strong>回答：</strong>先发送消费者不可见的半消息，再执行本地事务。生产者根据事务结果提交或回滚消息；如果Broker没有得到明确结果，就触发事务回查，由生产者查询持久化状态后返回结果。这个机制协调的是本地事务和消息发布，适合允许异步完成的业务。消费侧仍然要处理重复投递、失败重试和业务幂等，不能据此断言上下游同时完成。</p>
+<p><strong>自拟追问：已经有事务消息，为什么还需要对账？</strong>网络故障可能持续超过重试窗口，回查逻辑可能有缺陷，下游也可能发生无法自动恢复的业务错误。对账根据业务ID比较应有状态与实际状态，用于发现并处理这些长期未收敛的情况。</p>
+<p>原问及来源见<a href="/media/backend-agent-series/questions.json">逐题映射</a>。</p>17:["$","$L27",null,{"html":"$28"}]
+18:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/backend-agent-s08-rate-limits/","children":[["$","span",null,{"children":"上一篇"}],"分布式系统03｜请求太多时限制什么：窗口、令牌桶、漏桶与全局额度"]}],["$","$Lf",null,{"href":"/blog/backend-agent-s08-05-queue-backlog-order/","children":[["$","span",null,{"children":"下一篇"}],"分布式系统05｜消息积压与顺序消费：为什么增加消费者有时不起作用"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s08-outbox-delivery",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s08-outbox-delivery/","children":"分布式系统01｜数据库提交以后，消息怎样可靠送达：Outbox、确认与业务幂等"}],["$","span",null,{"children":"后端与数据库"}]]}]]}]]}]]}]
+19:["$","$L29",null,{"contentId":"backend-agent-s08-04-cdc-transaction-message"}]
+1a:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+1b:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5"]}]
+1c:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1d:["$","$L2a",null,{"children":["$","$23",null,{"name":"Next.MetadataOutlet","children":"$@2b"}]}]
+26:true
+7:300
+2b:null
+7:C
+25:0
+9:"$undefined"
+5:"$undefined"
+24:"$undefined"
+1e:"$undefined"

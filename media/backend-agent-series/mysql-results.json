@@ -1,0 +1,18 @@
+{
+  "version": "8.0.35",
+  "plan_before": "1\tSIMPLE\tjobs\tNULL\tALL\tNULL\tNULL\tNULL\tNULL\t6\t16.67\tUsing where; Using filesort",
+  "plan_after": "1\tSIMPLE\tjobs\tNULL\tref\tix_jobs\tix_jobs\t54\tconst,const\t3\t100.00\tBackward index scan; Using index",
+  "analyze": "-> Limit: 2 row(s)  (cost=0.554 rows=2) (actual time=0.0218..0.0228 rows=2 loops=1)\n    -> Covering index lookup on jobs using ix_jobs (tenant_id=7, status='pending') (reverse)  (cost=0.554 rows=3) (actual time=0.0214..0.0223 rows=2 loops=1)",
+  "checks": [
+    "indexed query returns ids 5,2; both plans and ANALYZE captured",
+    "REPEATABLE READ second snapshot read=100",
+    "READ COMMITTED second snapshot read=80",
+    "NOWAIT reports 3572 while another session holds row lock",
+    "NOWAIT locking read succeeds after lock owner rolls back"
+  ],
+  "passed": 5,
+  "failed": 0,
+  "scope": "本地隔离环境的功能与机制示例，不代表生产并发能力或吞吐量",
+  "buffer_pool_mib": 32,
+  "redo_capacity_mib": 16
+}

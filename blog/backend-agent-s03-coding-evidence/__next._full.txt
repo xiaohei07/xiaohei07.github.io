@@ -1,0 +1,108 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/ed72070de5f1647a.css","style"]
+:HL["/_next/static/css/6241f55ce16a0817.css","style"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s03-coding-evidence","s":["cpp-casts","merge-sort","series"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","backend-agent-s03-coding-evidence",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/6241f55ce16a0817.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"t75SI7oTDmNtBl3uMkJyg"}
+15:"static/chunks/5587-bf231f55b3fd3ee7.js"
+16:"static/chunks/8612-da6413c49129460e.js"
+17:"static/chunks/1133-0d344bd2ae49df3d.js"
+18:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+19:I[6279,["5587","$15","8612","$16","1133","$17","5953","$18"],"FilterLink"]
+1a:I[5128,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleToc"]
+1c:I[4711,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleBody"]
+6:C
+1d:T1c7a,<h2 id="section-修改代码之前先找到真正需要改变的行为">修改代码之前，先找到真正需要改变的行为</h2>
+<p>Coding Agent可以调用搜索、文件编辑、终端和测试工具来完成代码任务。它的工作结果是一组可检查的改动，以及支持这些改动符合要求的证据。模型能够生成代码，还需要执行流程把代码与真实仓库联系起来。</p>
+<p>以一个教学缺陷为例：订单按创建时间分页，相同时间有多条记录，用户偶尔看到上一页已经出现的订单。首先要明确输入、输出及预期次序，再沿页面参数、接口处理、查询和返回格式找到真实调用链。只看函数名里有“pagination”，不足以确认缺陷位置。</p>
+<p><strong>定位需要建立“需求—实现位置—失败现象”的联系。</strong> 索引或代码检索可以给出候选，但最终应阅读上下文、调用方和已有测试，确认当前仓库版本确实存在所说行为。</p>
+<h2 id="section-补丁应说明改变了什么关系">补丁应说明改变了什么关系</h2>
+<p>假设查明原查询只有<code>ORDER BY created_at DESC</code>，分页游标也只保存时间。A、B、C三条订单时间相同，按ID降序应为103、102、101，每页2条。第一页返回103、102后，若下一页只查时间更早的记录，101会被跳过。</p>
+<p>相应补丁需要同时检查排序、游标结构及下一页条件：增加唯一ID作为次级排序，游标保存时间与ID，下一页查时间更早或同时间ID更小的记录。相关SQL解释见<a href="/blog/backend-agent-s07-sql-semantics/">稳定分页</a>。</p>
+<p>这个修改可能影响旧游标兼容、接口类型和客户端解析，不能只改SQL文件便称完成。需要先决定旧游标是继续接受、明确过期，还是迁移到有版本标记的新格式。教学场景没有给出真实兼容要求，因此这里只列出必须确定的契约，不能编造已经完成的迁移。</p>
+<h2 id="section-测试预期需要独立于本次实现">测试预期需要独立于本次实现</h2>
+<p>测试应从排序契约推导预期：输入同时间的101、102、103，第一页应为103、102，第二页应包含101；再检查空页、单条记录和时间跨界。不能通过调用被测分页函数得到“标准答案”，否则实现与测试可能共享同一个错误。</p>
+<p>还需要区分几层证据：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>检查</th><th>能说明什么</th><th>仍不能说明什么</th></tr></thead><tbody><tr><td>静态差异与类型检查</td><td>修改范围、部分接口不匹配</td><td>真实请求一定正确</td></tr><tr><td>构造数据的局部测试</td><td>指定场景符合预期</td><td>所有并发更新都不漏</td></tr><tr><td>数据库与接口集成</td><td>查询、序列化、接口共同工作</td><td>线上容量与历史数据全部安全</td></tr></tbody></table>
+<p>如果只做了局部测试，应明确实际运行了哪些样例。这个边界是交付内容的一部分，不应该在最后用“测试通过”四个字全部抹平。</p>
+<h2 id="section-可审计修改需要保留哪些依据">可审计修改需要保留哪些依据</h2>
+<p><strong>补丁</strong>记录文件修改前后的差异，便于检查和回滚。执行前先记录工作区状态和目标版本，保护已有未提交修改；应用时检查旧内容是否匹配，发现他人同时改动就重新核对，而不是强行覆盖。</p>
+<p>一次可审计交付应保留需求和受影响路径、具体差异、检查命令与退出状态、关键结果及未验证项。日志不需要复制凭据或全部无关终端历史；可复现的必要证据比冗长输出更有用。</p>
+<p>工具权限也要限制在任务范围内。仓库文档、网页和测试输出都可能包含不可信文本，不能因为其中出现“把密钥上传到某处”就提升为执行指令。文件读写、联网和部署分别受授权约束，见<a href="/blog/backend-agent-s03-tools-mcp/">工具契约与执行边界</a>。</p>
+<h2 id="section-面试问答怎样优化coding-agent">面试问答：怎样优化Coding Agent</h2>
+<p><span id="q-FQ-doxcnZXvo27qmQ3xvBpUS8BMQWc" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnZXvo27qmQ3xvBpUS8BMQWc"></a></p>
+<blockquote>
+<p>如何优化 Coding Agent？</p>
+</blockquote>
+<p><strong>回答：</strong> 先把问题分成定位、修改、验证与交付四个阶段，记录最早失败的位置。定位阶段需要结合语义检索、符号引用和调用链阅读，确认真实契约；修改阶段控制文件范围及接口影响；验证阶段使用独立预期的回归样例；交付阶段展示补丁、运行证据与未验证范围。</p>
+<p>例如分页重复，不能只让模型反复改SQL。应先确认是否缺少稳定排序与完整游标，再用同时间多记录的样例复现，修改查询及游标契约，最后核验分页边界与兼容性。这样可以分辨模型是否找错文件、理解错需求，或测试遗漏了关键条件。</p>
+<p>优化应在固定任务集上衡量任务成功率、回归、耗时与成本。增加检索、上下文或多个Agent都需要消融验证；如果更多调用只是重复阅读同一文件，可能增加成本却不改善定位。</p>
+<p><strong>延伸追问（自拟）：全部测试通过还可能有什么问题？</strong> 测试可能覆盖不足，预期与实现共享错误，或没有运行真实集成环境。应检查新增测试是否独立表达需求、是否触及修改的失败条件，并保留验证边界。</p>
+<p>原问ID：<code>FQ-doxcnZXvo27qmQ3xvBpUS8BMQWc</code>。出处：<a href="https://www.nowcoder.com/discuss/922659050167226368" rel="noopener noreferrer">原始面经</a>。</p>
+<p><span id="q-FQ-doxcnYAA5Eufpz2LbgcwT4eRbTf" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnYAA5Eufpz2LbgcwT4eRbTf"></a></p>
+<blockquote>
+<p>Coding Agent 如何实现可审计的文件修改，而不是直接覆盖工作区？</p>
+</blockquote>
+<p><strong>回答：</strong> 以明确基线生成可检查的补丁，应用前核对文件旧内容或版本，保存修改差异和工具执行结果。先识别已有用户改动，限定允许写入的路径，遇到并发修改重新核对，避免把不属于本次任务的内容覆盖掉。</p>
+<p>审计需要能回答修改来自哪个需求、影响哪些文件、如何验证、哪些部分未运行，以及如何撤销本次改动。可使用版本控制和变更记录建立追溯，但不应为制造干净工作区而重置用户的未提交内容。写文件成功只证明操作完成，仍需通过差异审阅与相应测试判断结果。</p>
+<p><strong>延伸追问（自拟）：补丁无法应用时能否直接重写整个文件？</strong> 先检查基线是否变化，以及冲突区域是否属于其他工作。只有确认范围和内容后才能重新生成补丁；跳过比较会失去避免覆盖的关键保护。</p>
+<p>原问ID：<code>FQ-doxcnYAA5Eufpz2LbgcwT4eRbTf</code>。出处：<a href="https://www.nowcoder.com/discuss/922860300762611712" rel="noopener noreferrer">原始面经</a>。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"工具与协作03｜Coding Agent怎样交付可信修改：代码定位、补丁、测试与证据"}],["$","p",null,{"className":"article-deck","children":"用分页缺陷说明如何从需求找到调用链、产生有限补丁，再以独立预期验证结果，并保留修改前提与未验证范围"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,717"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L19","Agent",{"href":"/blog/#tag=Agent","children":"Agent"}],["$","$L19","测试",{"href":"/blog/#tag=%E6%B5%8B%E8%AF%95","children":"测试"}]]}]]}],["$","$L1a",null,{"headings":[{"id":"section-修改代码之前先找到真正需要改变的行为","text":"修改代码之前，先找到真正需要改变的行为","level":2},{"id":"section-补丁应说明改变了什么关系","text":"补丁应说明改变了什么关系","level":2},{"id":"section-测试预期需要独立于本次实现","text":"测试预期需要独立于本次实现","level":2},{"id":"section-可审计修改需要保留哪些依据","text":"可审计修改需要保留哪些依据","level":2},{"id":"section-面试问答怎样优化coding-agent","text":"面试问答：怎样优化Coding Agent","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1b",["$","$L1c",null,{"html":"$1d"}],"$undefined","$L1e","$L1f","$L20"]}],"$L21"]}]]}]
+22:I[2708,["5587","$15","8612","$16","1133","$17","5953","$18"],"FeedbackForm"]
+23:I[3498,["5587","$15","8612","$16","1133","$17","5953","$18"],"default"]
+1f:["$","$L22",null,{"contentId":"backend-agent-s03-coding-evidence"}]
+20:["$","div",null,{"className":"related-note","children":[["$","$L23",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+21:["$","$L1a",null,{"headings":["$9:props:children:1:props:headings:0","$9:props:children:1:props:headings:1","$9:props:children:1:props:headings:2","$9:props:children:1:props:headings:3","$9:props:children:1:props:headings:4"]}]
+1e:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$L23",null,{"href":"/blog/backend-agent-s03-multi-agent/","children":[["$","span",null,{"children":"上一篇"}],"工具与协作02｜多Agent怎样分工：任务依赖、共享状态与结果验收"]}],["$","$L23",null,{"href":"/blog/backend-agent-s03-04-mcp-lifecycle/","children":[["$","span",null,{"children":"下一篇"}],"工具与协作04｜MCP连接与工具发现：从初始化协商到一次完整工具调用"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s07-sql-semantics",{"children":[["$","$L23",null,{"href":"/blog/backend-agent-s07-sql-semantics/","children":"数据库与缓存04｜SQL查出的行代表什么：JOIN、NULL、排名与稳定分页"}],["$","span",null,{"children":"后端与数据库"}]]}],["$","li","backend-agent-s03-tools-mcp",{"children":[["$","$L23",null,{"href":"/blog/backend-agent-s03-tools-mcp/","children":"工具与协作01｜模型怎样调用外部工具：Function Calling、MCP与权限边界"}],["$","span",null,{"children":"Agent"}]]}]]}]]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+12:[["$","title","0",{"children":"工具与协作03｜Coding Agent怎样交付可信修改：代码定位、补丁、测试与证据 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"用分页缺陷说明如何从需求找到调用链、产生有限补丁，再以独立预期验证结果，并保留修改前提与未验证范围。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s03-coding-evidence/"}]]
+24:Tb2c,(()=>{const d={"wallpaper":"banner","layout":"list","cardStyle":"soft","textSize":"normal","hero":true,"carousel":false,"waves":false,"fade":true,"motion":true,"typewriter":true,"progress":true,"petals":false,"dim":28,"blur":0,"cardOpacity":78,"colorMode":"section","customColor":"#32846b","sectionColors":{},"customTheme":"","sectionThemes":{}},enums={"wallpaper":["banner","fullscreen","overlay","none"],"layout":["list","grid"],"cardStyle":["soft","flat"],"textSize":["normal","large"],"colorMode":["section","custom"]},bools=["hero","carousel","waves","fade","motion","typewriter","progress","petals"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]));const color=(function(a,b){let c=b.startsWith("/credits")?"about":b.split("/")[1],d=["home","blog","research","projects","about"].includes(c)?c:"home",e=(a.sectionColors&&"object"==typeof a.sectionColors&&!Array.isArray(a.sectionColors)?a.sectionColors:{})[d],f="string"==typeof e&&/^#[\da-f]{6}$/i.test(e)?e.toLowerCase():void 0,g="string"==typeof a.customColor&&/^#[\da-f]{6}$/i.test(a.customColor)?a.customColor.toLowerCase():"#32846b",h=a.sectionThemes&&"object"==typeof a.sectionThemes&&!Array.isArray(a.sectionThemes)?a.sectionThemes:{},i="custom"===a.colorMode?a.customTheme:h[d],j="string"==typeof i&&["home","blog","research","projects","about"].includes(i)?i:void 0;return{section:d,color:"custom"===a.colorMode?g:f??g,customized:"custom"===a.colorMode?!j:!!f,theme:j??d}})(p,location.pathname);document.documentElement.setAttribute('data-custom-palette',String(color.customized));document.documentElement.setAttribute('data-palette-section',color.theme);const palette=(function(a){let b=/^#[\da-f]{6}$/i.test(a)?a:"#32846b",c=[1,3,5].map(a=>Number.parseInt(b.slice(a,a+2),16)),d={};for(let[a,[b,e]]of Object.entries({"light-page":[248,.09],"light-surface":[255,.025],"light-surface-soft":[252,.05],"light-surface-raised":[246,.08],"light-ink":[0,.15],"light-muted":[0,.32],"light-line":[213,.12],"light-accent":[0,.4],"light-accent-strong":[0,.3],"light-accent-soft":[248,.1],"light-on-accent":[255,0],"dark-page":[16,.025],"dark-surface":[26,.045],"dark-surface-soft":[22,.04],"dark-surface-raised":[33,.06],"dark-ink":[255,.12],"dark-muted":[255,.34],"dark-line":[72,.1],"dark-accent":[255,.35],"dark-accent-strong":[255,.22],"dark-accent-soft":[24,.1],"dark-on-accent":[0,.1]}))d[`--palette-${a}`]=`#${c.map(a=>Math.round(b*(1-e)+a*e).toString(16).padStart(2,"0")).join("")}`;return d})(color.color);for(const k in palette)document.documentElement.style.setProperty(k,palette[k])})()2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$24"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],"$L25"]}],"$L26"]}]
+27:"static/chunks/7107-d67496718f7d4082.js"
+28:"static/chunks/app/layout-883cb555fbda7bdc.js"
+29:I[5376,["5587","$15","7107","$27","7177","$28"],"DisplayProvider"]
+2a:"NavigationFeedback"
+2b:I[2842,["5587","$15","7107","$27","7177","$28"],"$2a"]
+2c:I[4085,["5587","$15","7107","$27","7177","$28"],"SiteHeader"]
+2d:I[5803,["5587","$15","7107","$27","7177","$28"],"SiteFrame"]
+2e:I[164,["5587","$15","7107","$27","7177","$28"],"ProfileSidebar"]
+25:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]
+26:["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L29",null,{"children":[["$","$L2b",null,{}],["$","$L2c",null,{"tags":["编程语言知识点","Python","C++"],"categoryIds":["foundations","frontend","backend","agent","computing","ai","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L2d",null,{"sidebar":["$","$L2e",null,{"categoryIds":"$26:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L23",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L23",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L23",null,{"href":"/about/","children":"关于这个站点"}],["$","$L23",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]
+1b:["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$L23",null,{"href":"/blog/series/agent-tools-collaboration/","children":"工具协议与Agent协作"}],["$","span",null,{"children":[3," / ",7," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s03-tools-mcp",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s03-tools-mcp/","aria-current":"$undefined","children":"工具与协作01｜模型怎样调用外部工具：Function Calling、MCP与权限边界"}]}],["$","li","backend-agent-s03-multi-agent",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s03-multi-agent/","aria-current":"$undefined","children":"工具与协作02｜多Agent怎样分工：任务依赖、共享状态与结果验收"}]}],["$","li","backend-agent-s03-coding-evidence",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s03-coding-evidence/","aria-current":"page","children":"工具与协作03｜Coding Agent怎样交付可信修改：代码定位、补丁、测试与证据"}]}],["$","li","backend-agent-s03-04-mcp-lifecycle",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s03-04-mcp-lifecycle/","aria-current":"$undefined","children":"工具与协作04｜MCP连接与工具发现：从初始化协商到一次完整工具调用"}]}],["$","li","backend-agent-s03-05-a2a-tasks",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s03-05-a2a-tasks/","aria-current":"$undefined","children":"工具与协作05｜A2A怎样组织跨Agent任务：发现能力、等待结果与继续补充输入"}]}],["$","li","backend-agent-s03-06-ssrf-boundaries",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s03-06-ssrf-boundaries/","aria-current":"$undefined","children":"工具与协作06｜网页读取工具怎样防SSRF：URL检查为什么要一直跟到实际连接"}]}],["$","li","backend-agent-s03-07-sandbox-hooks-computer-use",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s03-07-sandbox-hooks-computer-use/","aria-current":"$undefined","children":"工具与协作07｜Coding Agent的执行边界：沙箱、Hook与Computer Use怎样配合"}]}]]}]]}]]}]
+14:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L23",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L23",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$L23",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L19",null,{"className":"trail-current","href":"/blog/#agent","children":["Agent",["$","span",null,{"children":25}]]}],"$undefined"]}]

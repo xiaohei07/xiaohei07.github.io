@@ -1,0 +1,31 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+d:"static/chunks/5587-bf231f55b3fd3ee7.js"
+e:"static/chunks/app/blog/series/%5Bseries%5D/page.learning-c7d22cf3260ffb13.js"
+f:I[3498,["5587","$d","2187","$e"],"default"]
+12:"ViewportBoundary"
+13:I[887,[],"$12"]
+14:"MetadataBoundary"
+15:I[887,[],"$14"]
+16:"$Sreact.suspense"
+6:X
+6:C
+7:X
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"learning-directory","children":[["$","header",null,{"children":[["$","$Lf",null,{"className":"action-link","href":"/blog/series/","children":"← 全部学习系列"}],["$","h1",null,{"children":"上下文、记忆与RAG"}],["$","p",null,{"children":"理解上下文与记忆，沿着解析、检索、重排到引用组织RAG"}],["$","p",null,{"children":[["$","strong",null,{"children":8}]," 篇 · 可按顺序阅读，也可选择具体问题"]}]]}],["$","ol",null,{"className":"learning-article-list","children":[["$","li","backend-agent-s02-context-memory",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s02-context-memory/","children":[["$","span",null,{"className":"learning-series-meta","children":["Agent"," · ","Agent / RAG"]}],["$","h2",null,{"children":"上下文与RAG01｜上下文与记忆怎样配合：信息选择、压缩、过期与删除"}],["$","p",null,{"children":"用预算表和偏好更新的例子，解释本轮模型可见的信息与跨请求保留的数据为何需要分别管理。"}],["$","span",null,{"className":"learning-series-cta","children":"阅读笔记 →"}]]}]}],["$","li","backend-agent-s02-rag-evidence",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s02-rag-evidence/","children":[["$","span",null,{"className":"learning-series-meta","children":["Agent"," · ","RAG"]}],["$","h2",null,{"children":"上下文与RAG02｜RAG怎样把资料变成回答：检索、重排、引用与错误定位"}],["$","p",null,{"children":"从有版本和部门限制的报销制度出发，走完离线索引与在线回答，并逐层判断回答错误发生在哪里。"}],["$","span",null,{"className":"learning-series-cta","children":"阅读笔记 →"}]]}]}],["$","li","backend-agent-s02-retrieval",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s02-retrieval/","children":[["$","span",null,{"className":"learning-series-meta","children":["Agent"," · ","RAG"]}],["$","h2",null,{"children":"上下文与RAG03｜关键词和向量怎样找资料：倒排索引、BM25与近似最近邻"}],["$","p",null,{"children":"从词项匹配和向量距离分别推导检索机制，用小算例说明评分与近似搜索的代价，再接回混合检索。"}],["$","span",null,{"className":"learning-series-cta","children":"阅读笔记 →"}]]}]}],["$","li","backend-agent-s02-knowledge-choice",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s02-knowledge-choice/","children":[["$","span",null,{"className":"learning-series-meta","children":["Agent"," · ","RAG / 大模型"]}],["$","h2",null,{"children":"上下文与RAG04｜新知识应该放在哪里：长上下文、RAG、图检索与微调"}],["$","p",null,{"children":"根据资料规模、更新频率、证据要求和行为稳定性选择知识供给方式，用制度变更案例说明检索与训练可以怎样配合。"}],["$","span",null,{"className":"learning-series-cta","children":"阅读笔记 →"}]]}]}],["$","li","backend-agent-s02-05-ingestion-incremental",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s02-05-ingestion-incremental/","children":[["$","span",null,{"className":"learning-series-meta","children":["Agent"," · ","RAG"]}],["$","h2",null,{"children":"上下文与RAG05｜文档解析与增量索引：原文改了一段，知识库应该更新哪些内容"}],["$","p",null,{"children":"从版面读取到文档版本切换，解释切片标识、Embedding复用、删除传播和权限更新。"}],["$","span",null,{"className":"learning-series-cta","children":"阅读笔记 →"}]]}]}],["$","li","backend-agent-s02-06-reranker-training",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s02-06-reranker-training/","children":[["$","span",null,{"className":"learning-series-meta","children":["Agent"," · ","RAG / 模型训练"]}],["$","h2",null,{"children":"上下文与RAG06｜Reranker怎样训练和评价：从候选召回到有依据的排序"}],["$","p",null,{"children":"解释交叉编码器、难负例与排序损失，并用小候选集区分召回不足和重排错误。"}],["$","span",null,{"className":"learning-series-cta","children":"阅读笔记 →"}]]}]}],["$","li","backend-agent-s02-07-hyde-multihop-graph",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s02-07-hyde-multihop-graph/","children":[["$","span",null,{"className":"learning-series-meta","children":["Agent"," · ","RAG"]}],["$","h2",null,{"children":"上下文与RAG07｜HyDE、多跳检索与GraphRAG：复杂问题缺少的证据怎样补齐"}],["$","p",null,{"children":"区分查询表达、证据依赖和全局归纳三类问题，说明不同检索增强方法的作用与代价。"}],["$","span",null,{"className":"learning-series-cta","children":"阅读笔记 →"}]]}]}],["$","li","backend-agent-s02-08-memory-conflicts",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s02-08-memory-conflicts/","children":[["$","span",null,{"className":"learning-series-meta","children":["Agent"," · ","Agent"]}],["$","h2",null,{"children":"上下文与RAG08｜Agent记忆冲突怎样更新：什么时候覆盖、并存或拒绝写入"}],["$","p",null,{"children":"用用户偏好和项目配置两个例子，解释记忆的作用域、来源、有效时间与并发更新。"}],["$","span",null,{"className":"learning-series-cta","children":"阅读笔记 →"}]]}]}]]}]]}],null,"$L10"]}],"p":"$@11","v":null,"s":"$7"}}]]
+a:[["children",{"s":{"n":"series","t":"d","k":"context-memory-rag","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
+8:[["children",{"s":"series","h":131168,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L13",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L15",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$16",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"上下文、记忆与RAG | 07xiaohei"}],["$","meta","1",{"name":"description","content":"07xiaohei 的学习笔记、医学影像研究记录与交互式技术实践。"}],["$","link","2",{"rel":"canonical","href":"/blog/series/context-memory-rag/"}]]}]}],null]}],null]}],"p":"$@17","v":null,"s":"$7"}},"a":"$@18","u":"$@19","b":"t75SI7oTDmNtBl3uMkJyg"}
+1a:I[887,[],"OutletBoundary"]
+10:["$","$L1a",null,{"children":["$","$16",null,{"name":"Next.MetadataOutlet","children":"$@1b"}]}]
+19:true
+7:300
+1b:null
+7:C
+18:0
+b:"$undefined"
+9:"$undefined"
+5:"$undefined"
+17:"$undefined"
+11:"$undefined"

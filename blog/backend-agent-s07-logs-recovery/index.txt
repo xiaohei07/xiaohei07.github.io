@@ -1,0 +1,107 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/ed72070de5f1647a.css","style"]
+:HL["/_next/static/css/6241f55ce16a0817.css","style"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s07-logs-recovery","s":["cpp-casts","merge-sort","series"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","backend-agent-s07-logs-recovery",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/6241f55ce16a0817.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"t75SI7oTDmNtBl3uMkJyg"}
+6:C
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+15:"static/chunks/5587-bf231f55b3fd3ee7.js"
+16:"static/chunks/8612-da6413c49129460e.js"
+17:"static/chunks/1133-0d344bd2ae49df3d.js"
+18:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+19:I[6279,["5587","$15","8612","$16","1133","$17","5953","$18"],"FilterLink"]
+1a:I[5128,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleToc"]
+1c:I[4711,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleBody"]
+1d:T1c58,<h2 id="section-修改先发生在内存里持久性怎样建立">修改先发生在内存里，持久性怎样建立</h2>
+<p>数据库不会在每次修改一行时都立即把包含这行的完整数据页写回磁盘。InnoDB使用<strong>Buffer Pool（缓冲池）</strong>缓存数据页，更新后的页可以暂时成为<strong>脏页</strong>，也就是内存内容与持久存储中的对应页不一致。</p>
+<p>这提高了处理效率，也带来一个问题：余额已从100改为80，但修改过的数据页尚未写回，进程就崩溃了，如何恢复已提交结果？</p>
+<p><strong>预写日志（WAL，Write-Ahead Logging）</strong>要求相关日志先于对应的数据页修改落到满足持久性要求的位置。这样可以先顺序保存恢复依据，数据页再由后台按策略写回。本文以MySQL8.4的InnoDB为例；提交时刷到哪一层仍取决于配置和存储设备是否兑现持久化请求。</p>
+<h2 id="section-三类日志分别保存什么依据">三类日志分别保存什么依据</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>日志</th><th>所属与主要用途</th><th>一次更新中需要解决的问题</th></tr></thead><tbody><tr><td>redo log</td><td>InnoDB崩溃恢复依据</td><td>数据页尚未写回时，怎样恢复已记录的修改</td></tr><tr><td>undo log</td><td>InnoDB回滚与旧版本重建依据</td><td>事务撤销时怎样恢复，快照读取怎样得到旧值</td></tr><tr><td>binlog</td><td>MySQL服务器的变更记录</td><td>副本怎样接收变更，备份后怎样按记录继续恢复</td></tr></tbody></table>
+<p>redo记录数据修改的恢复信息，不能简单当成原始SQL重放列表。undo也不等于“所有数据的完整历史备份”，它的保留受到事务和版本清理机制影响。binlog可以采用不同格式，行格式记录行变更事件，语句格式记录语句相关事件，具体内容需看配置。<a href="https://dev.mysql.com/doc/refman/8.4/en/innodb-redo-log.html" rel="noopener noreferrer">redo机制</a>、<a href="https://dev.mysql.com/doc/refman/8.4/en/innodb-multi-versioning.html" rel="noopener noreferrer">多版本与undo</a>、<a href="https://dev.mysql.com/doc/refman/8.4/en/binary-log.html" rel="noopener noreferrer">binlog用途与格式</a></p>
+<p>为了理解一次余额更新，可以沿下面的教学时序看：</p>
+<ol>
+<li>事务读取并锁定需要修改的记录，确认更新条件成立。</li>
+<li>产生本次修改所需的undo信息，修改缓冲池中的数据，并产生相应redo。</li>
+<li>提交路径协调存储引擎事务和启用的binlog，按配置执行日志写入及持久化。</li>
+<li>满足提交条件后返回结果；对应脏页可以在之后写回。</li>
+</ol>
+<p>这是职责顺序的概念说明，没有把每条内部日志写入当作单线程的固定源码调用顺序。组提交、日志缓冲与后台刷盘会让多个事务的处理交错。</p>
+<h2 id="section-三个故障位置对应三种恢复问题">三个故障位置对应三种恢复问题</h2>
+<p><strong>提交前进程崩溃。</strong> 恢复需要区分已提交与未提交事务，重建必要数据状态并撤销未完成事务的影响，不能把所有内存修改都宣布成功。</p>
+<p><strong>提交已经持久化，数据页还未写回。</strong> 恢复根据日志补齐数据页所需修改。redo的LSN可以理解为日志中的递增位置；检查点记录恢复推进到哪里，减少必须重新处理的范围。具体redo布局和容量管理有版本差异，本文不据此给出固定文件大小。</p>
+<p><strong>数据库已提交，响应在网络中丢失。</strong> 数据库可以是正确的，客户端却只得到超时。这时重复发送“余额减20”可能再减一次。应用需要稳定业务操作ID、唯一约束或状态查询，把“未收到结果”和“没有提交”区分开，见<a href="/blog/backend-agent-s01-recovery/">幂等与恢复</a>。</p>
+<p>第三种故障尤其值得保留：<strong>数据库事务只能约束其覆盖范围内的操作，不能让客户端在所有网络故障下立即知道提交结果。</strong></p>
+<h2 id="section-两阶段提交和刷盘设置要回答到什么程度">两阶段提交和刷盘设置要回答到什么程度</h2>
+<p>启用binlog的MySQL需要协调引擎事务与binlog，否则可能出现引擎数据已提交但复制依据缺失，或两者对同一事务结论不一致。内部提交协议包含prepare与commit等阶段，并在恢复时根据日志状态作出判断。它与跨任意外部API的分布式事务不是同一承诺。</p>
+<p>持久性还与<code>innodb_flush_log_at_trx_commit</code>、<code>sync_binlog</code>等设置有关。将前者设为1、后者设为1，是常见的较强提交持久性配置；它仍依赖操作系统和设备正确实现刷盘语义。改成延迟刷盘可减少部分开销，但崩溃时可能失去最近事务，不能只报告吞吐提升而不说明代价。<a href="https://dev.mysql.com/doc/refman/8.4/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit" rel="noopener noreferrer">InnoDB提交刷盘配置</a></p>
+<p>备份恢复又是另一个范围。<strong>按时间点恢复通常需要基础备份与连续、可用的binlog</strong>，并确认恢复停止的位置。把binlog打开，不等于已经完成了备份策略、恢复演练或异地容灾。</p>
+<h2 id="section-面试问答redoundo和binlog">面试问答：redo、undo和binlog</h2>
+<p><span id="q-FQ-doxcnGhBmX39r66dUhmZ1NRXwjb" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnGhBmX39r66dUhmZ1NRXwjb"></a></p>
+<blockquote>
+<p>MySQL：redo log、undo log、binlog</p>
+</blockquote>
+<p><strong>回答：</strong> redo主要支持InnoDB崩溃恢复，让尚未写回数据页的修改能够根据持久日志恢复；undo保存事务撤销及多版本读取所需的信息；binlog在服务器层记录变更，支持复制和结合备份的恢复。三者在记录内容、保留机制和使用场景上都不同。</p>
+<p>以余额100更新为80为例，undo支持回滚或旧快照重建100，redo支持崩溃后恢复相应页修改，binlog为副本及后续恢复提供变更事件。提交路径需要协调引擎事务和binlog，并按配置持久化；不能只说“写了日志”而忽略是否还停留在进程或操作系统缓存中。</p>
+<p>日志能支持数据库恢复，但提交响应丢失仍会让客户端处于结果未决状态。业务重试需要幂等设计。日志也不自动替代备份：误删除若已正常提交，崩溃恢复会保留这个合法提交，恢复到误删前通常要使用备份和相应日志范围。</p>
+<p><strong>延伸追问（自拟）：有redo，为什么还要binlog？</strong> redo面向存储引擎恢复，binlog提供服务器层的变更传播与恢复依据，两者的格式、生命周期和目标不同。恢复本机数据页与让副本持续追随业务变更，需要分别设计。</p>
+<p>原问ID：<code>FQ-doxcnGhBmX39r66dUhmZ1NRXwjb</code>。出处：<a href="https://www.nowcoder.com/feed/main/detail/d14d568264f941a18811a4e8029a884f" rel="noopener noreferrer">原始面经</a>。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"数据库与缓存05｜数据库崩溃后怎样恢复：redo、undo、binlog与提交结果"}],["$","p",null,{"className":"article-deck","children":"沿一次余额更新说明数据页与日志的职责，区分回滚、崩溃恢复和按时间点恢复，并分析提交成功但客户端超时的情况"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,631"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L19","MySQL",{"href":"/blog/#tag=MySQL","children":"MySQL"}],["$","$L19","备份恢复",{"href":"/blog/#tag=%E5%A4%87%E4%BB%BD%E6%81%A2%E5%A4%8D","children":"备份恢复"}]]}]]}],["$","$L1a",null,{"headings":[{"id":"section-修改先发生在内存里持久性怎样建立","text":"修改先发生在内存里，持久性怎样建立","level":2},{"id":"section-三类日志分别保存什么依据","text":"三类日志分别保存什么依据","level":2},{"id":"section-三个故障位置对应三种恢复问题","text":"三个故障位置对应三种恢复问题","level":2},{"id":"section-两阶段提交和刷盘设置要回答到什么程度","text":"两阶段提交和刷盘设置要回答到什么程度","level":2},{"id":"section-面试问答redoundo和binlog","text":"面试问答：redo、undo和binlog","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1b",["$","$L1c",null,{"html":"$1d"}],"$undefined","$L1e","$L1f","$L20"]}],"$L21"]}]]}]
+c:null
+12:[["$","title","0",{"children":"数据库与缓存05｜数据库崩溃后怎样恢复：redo、undo、binlog与提交结果 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"沿一次余额更新说明数据页与日志的职责，区分回滚、崩溃恢复和按时间点恢复，并分析提交成功但客户端超时的情况。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s07-logs-recovery/"}]]
+22:I[2708,["5587","$15","8612","$16","1133","$17","5953","$18"],"FeedbackForm"]
+23:I[3498,["5587","$15","8612","$16","1133","$17","5953","$18"],"default"]
+1f:["$","$L22",null,{"contentId":"backend-agent-s07-logs-recovery"}]
+20:["$","div",null,{"className":"related-note","children":[["$","$L23",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+21:["$","$L1a",null,{"headings":["$9:props:children:1:props:headings:0","$9:props:children:1:props:headings:1","$9:props:children:1:props:headings:2","$9:props:children:1:props:headings:3","$9:props:children:1:props:headings:4"]}]
+1e:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$L23",null,{"href":"/blog/backend-agent-s07-sql-semantics/","children":[["$","span",null,{"children":"上一篇"}],"数据库与缓存04｜SQL查出的行代表什么：JOIN、NULL、排名与稳定分页"]}],["$","$L23",null,{"href":"/blog/backend-agent-s07-redis-durability/","children":[["$","span",null,{"children":"下一篇"}],"数据库与缓存06｜Redis的数据怎样保存：数据类型、RDB、AOF与复制"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s01-recovery",{"children":[["$","$L23",null,{"href":"/blog/backend-agent-s01-recovery/","children":"Agent基础02｜Agent中断后怎样继续：检查点、幂等与结果未知"}],["$","span",null,{"children":"Agent"}]]}]]}]]}]]}]
+24:Tb2c,(()=>{const d={"wallpaper":"banner","layout":"list","cardStyle":"soft","textSize":"normal","hero":true,"carousel":false,"waves":false,"fade":true,"motion":true,"typewriter":true,"progress":true,"petals":false,"dim":28,"blur":0,"cardOpacity":78,"colorMode":"section","customColor":"#32846b","sectionColors":{},"customTheme":"","sectionThemes":{}},enums={"wallpaper":["banner","fullscreen","overlay","none"],"layout":["list","grid"],"cardStyle":["soft","flat"],"textSize":["normal","large"],"colorMode":["section","custom"]},bools=["hero","carousel","waves","fade","motion","typewriter","progress","petals"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]));const color=(function(a,b){let c=b.startsWith("/credits")?"about":b.split("/")[1],d=["home","blog","research","projects","about"].includes(c)?c:"home",e=(a.sectionColors&&"object"==typeof a.sectionColors&&!Array.isArray(a.sectionColors)?a.sectionColors:{})[d],f="string"==typeof e&&/^#[\da-f]{6}$/i.test(e)?e.toLowerCase():void 0,g="string"==typeof a.customColor&&/^#[\da-f]{6}$/i.test(a.customColor)?a.customColor.toLowerCase():"#32846b",h=a.sectionThemes&&"object"==typeof a.sectionThemes&&!Array.isArray(a.sectionThemes)?a.sectionThemes:{},i="custom"===a.colorMode?a.customTheme:h[d],j="string"==typeof i&&["home","blog","research","projects","about"].includes(i)?i:void 0;return{section:d,color:"custom"===a.colorMode?g:f??g,customized:"custom"===a.colorMode?!j:!!f,theme:j??d}})(p,location.pathname);document.documentElement.setAttribute('data-custom-palette',String(color.customized));document.documentElement.setAttribute('data-palette-section',color.theme);const palette=(function(a){let b=/^#[\da-f]{6}$/i.test(a)?a:"#32846b",c=[1,3,5].map(a=>Number.parseInt(b.slice(a,a+2),16)),d={};for(let[a,[b,e]]of Object.entries({"light-page":[248,.09],"light-surface":[255,.025],"light-surface-soft":[252,.05],"light-surface-raised":[246,.08],"light-ink":[0,.15],"light-muted":[0,.32],"light-line":[213,.12],"light-accent":[0,.4],"light-accent-strong":[0,.3],"light-accent-soft":[248,.1],"light-on-accent":[255,0],"dark-page":[16,.025],"dark-surface":[26,.045],"dark-surface-soft":[22,.04],"dark-surface-raised":[33,.06],"dark-ink":[255,.12],"dark-muted":[255,.34],"dark-line":[72,.1],"dark-accent":[255,.35],"dark-accent-strong":[255,.22],"dark-accent-soft":[24,.1],"dark-on-accent":[0,.1]}))d[`--palette-${a}`]=`#${c.map(a=>Math.round(b*(1-e)+a*e).toString(16).padStart(2,"0")).join("")}`;return d})(color.color);for(const k in palette)document.documentElement.style.setProperty(k,palette[k])})()2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$24"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],"$L25"]}],"$L26"]}]
+1b:["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$L23",null,{"href":"/blog/series/database-cache/","children":"数据库与缓存"}],["$","span",null,{"children":[5," / ",11," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s07-index-query",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-index-query/","aria-current":"$undefined","children":"数据库与缓存01｜MySQL索引怎样减少查询工作：B+树、回表与联合索引"}]}],["$","li","backend-agent-s07-transactions",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-transactions/","aria-current":"$undefined","children":"数据库与缓存02｜并发事务究竟读到什么：RC、RR、MVCC与锁"}]}],["$","li","backend-agent-s07-cache-consistency",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-cache-consistency/","aria-current":"$undefined","children":"数据库与缓存03｜先更新数据库再删除缓存之后：旧值回填、一致性与缓存保护"}]}],["$","li","backend-agent-s07-sql-semantics",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-sql-semantics/","aria-current":"$undefined","children":"数据库与缓存04｜SQL查出的行代表什么：JOIN、NULL、排名与稳定分页"}]}],["$","li","backend-agent-s07-logs-recovery",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-logs-recovery/","aria-current":"page","children":"数据库与缓存05｜数据库崩溃后怎样恢复：redo、undo、binlog与提交结果"}]}],["$","li","backend-agent-s07-redis-durability",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-redis-durability/","aria-current":"$undefined","children":"数据库与缓存06｜Redis的数据怎样保存：数据类型、RDB、AOF与复制"}]}],["$","li","backend-agent-s07-07-explain",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-07-explain/","aria-current":"$undefined","children":"数据库与缓存07｜怎样读MySQL执行计划：六行数据的EXPLAIN与索引实验"}]}],["$","li","backend-agent-s07-08-two-sessions",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-08-two-sessions/","aria-current":"$undefined","children":"数据库与缓存08｜两次SELECT为什么结果不同：MySQL双会话隔离与锁实验"}]}],["$","li","backend-agent-s07-09-redis-encoding",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-09-redis-encoding/","aria-current":"$undefined","children":"数据库与缓存09｜Redis类型怎样落到内存：紧凑编码、跳表与容量估算"}]}],["$","li","backend-agent-s07-10-cache-protection",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-10-cache-protection/","aria-current":"$undefined","children":"数据库与缓存10｜缓存失效以后怎样保护数据库：穿透、击穿、雪崩与回源合并"}]}],["$","li","backend-agent-s07-11-multilevel-cache",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-11-multilevel-cache/","aria-current":"$undefined","children":"数据库与缓存11｜本地缓存与Redis怎样协同：版本、失效通知和断线恢复"}]}]]}]]}]]}]
+27:"static/chunks/7107-d67496718f7d4082.js"
+28:"static/chunks/app/layout-883cb555fbda7bdc.js"
+29:I[5376,["5587","$15","7107","$27","7177","$28"],"DisplayProvider"]
+2a:"NavigationFeedback"
+2b:I[2842,["5587","$15","7107","$27","7177","$28"],"$2a"]
+2c:I[4085,["5587","$15","7107","$27","7177","$28"],"SiteHeader"]
+2d:I[5803,["5587","$15","7107","$27","7177","$28"],"SiteFrame"]
+2e:I[164,["5587","$15","7107","$27","7177","$28"],"ProfileSidebar"]
+25:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]
+26:["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L29",null,{"children":[["$","$L2b",null,{}],["$","$L2c",null,{"tags":["编程语言知识点","Python","C++"],"categoryIds":["foundations","frontend","backend","agent","computing","ai","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L2d",null,{"sidebar":["$","$L2e",null,{"categoryIds":"$26:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L23",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L23",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L23",null,{"href":"/about/","children":"关于这个站点"}],["$","$L23",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]
+14:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L23",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L23",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$L23",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L19",null,{"className":"trail-current","href":"/blog/#backend","children":["后端与数据库",["$","span",null,{"children":33}]]}],"$undefined"]}]

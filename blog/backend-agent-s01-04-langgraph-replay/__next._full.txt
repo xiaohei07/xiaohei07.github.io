@@ -1,0 +1,126 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/ed72070de5f1647a.css","style"]
+:HL["/_next/static/css/6241f55ce16a0817.css","style"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s01-04-langgraph-replay","s":["cpp-casts","merge-sort","series"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","backend-agent-s01-04-langgraph-replay",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/6241f55ce16a0817.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"t75SI7oTDmNtBl3uMkJyg"}
+6:C
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+15:"static/chunks/5587-bf231f55b3fd3ee7.js"
+16:"static/chunks/8612-da6413c49129460e.js"
+17:"static/chunks/1133-0d344bd2ae49df3d.js"
+18:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+19:I[6279,["5587","$15","8612","$16","1133","$17","5953","$18"],"FilterLink"]
+1a:I[5128,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleToc"]
+1c:I[4711,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleBody"]
+1d:T1f01,<h2 id="section-先把报告任务表示成状态与节点">先把报告任务表示成状态与节点</h2>
+<p>假设一个Agent负责整理报告，流程是“检索资料→生成草稿→人工确认→保存报告”。<strong>节点</strong>表示一次处理步骤，<strong>边</strong>表示下一步去哪里，<strong>状态</strong>保存各步骤需要继续使用的数据。</p>
+<p>状态可以包含<code>request_id</code>、证据列表、草稿内容、草稿版本和审批结果。节点读取状态后返回更新；多个节点写入同一个字段时，需要预先定义怎样合并。这种合并规则在LangGraph中称为<strong>reducer</strong>。例如列表可以追加，单个草稿版本可以替换，不能把所有字段都默认相加。</p>
+<p>LangGraph提供图式执行、条件分支和持久化等能力，适合需要追踪执行位置、暂停与恢复的流程。框架能够管理这些结构，具体业务的完成条件、权限与错误处理仍由应用定义。</p>
+<h2 id="section-检查点保存了什么">检查点保存了什么</h2>
+<p><strong>检查点（checkpoint）</strong>用于保存执行过程中可恢复的图状态与相关执行信息。通过同一个<code>thread_id</code>，应用可以找到对应任务的状态；历史检查点则可以区分任务在不同阶段的版本。</p>
+<p>教学过程可以记为：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>检查点</th><th align="right">草稿版本</th><th>已完成内容</th><th>后续动作</th></tr></thead><tbody><tr><td>C1</td><td align="right">无</td><td>检索完成</td><td>生成草稿</td></tr><tr><td>C2</td><td align="right">1</td><td>草稿已生成</td><td>等待确认</td></tr><tr><td>C3</td><td align="right">1</td><td>审批通过</td><td>保存报告</td></tr><tr><td>C4</td><td align="right">1</td><td>保存结果已记录</td><td>结束</td></tr></tbody></table>
+<p>持久化保存器应与运行要求匹配。内存保存器适合本地演示，进程退出后不能据此承诺仍可恢复。需要跨重启恢复时，要使用合适的持久化后端，并处理状态Schema升级、租户隔离和访问权限。</p>
+<p><code>thread_id</code>也只是状态定位信息，不能直接当成鉴权凭证。知道某个任务ID，不应该就能读取或批准别人的任务。</p>
+<h2 id="section-interrupt恢复时从节点开头重新执行">interrupt恢复时，从节点开头重新执行</h2>
+<p>LangGraph的<code>interrupt()</code>可以把审批内容返回给外部，暂停等待输入；恢复时通过<code>Command(resume=...)</code>提交结果。关键细节是：<strong>恢复会重新进入发生中断的节点，中断之前的代码可能再次执行。</strong><a href="https://docs.langchain.com/oss/python/langgraph/interrupts" rel="noopener noreferrer">LangGraph中断说明</a></p>
+<p>下面是节点逻辑示意，省略图的注册与保存器配置：</p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">review_node</span>(<span class="hljs-params">state</span>):
+    <span class="hljs-comment"># 这里只准备可重复计算的数据，不发送报告或扣费。</span>
+    payload = {
+        <span class="hljs-string">"draft"</span>: state[<span class="hljs-string">"draft"</span>],
+        <span class="hljs-string">"draft_version"</span>: state[<span class="hljs-string">"draft_version"</span>],
+    }
+    answer = interrupt(payload)
+    <span class="hljs-keyword">return</span> {<span class="hljs-string">"approval"</span>: answer}
+</code></pre></div>
+<p>这个片段依赖LangGraph的<code>interrupt</code>导入，展示的是节点结构，并非独立可运行程序。执行外部写入应放在明确的后续步骤，并为它设置业务幂等键。</p>
+<p>例如用<code>request_id + draft_version + action</code>确定保存操作。如果第一次保存成功后进程退出，恢复后再次执行保存，可以查询相同操作的结果，而不是生成重复记录。<strong>检查点管理执行状态，幂等处理管理外部世界的重复副作用。</strong></p>
+<h2 id="section-修改草稿以后旧审批还有效吗">修改草稿以后，旧审批还有效吗</h2>
+<p>审批应该绑定用户实际看到的草稿版本。用户确认v1之后，如果Agent又把草稿改成v2，就不能沿用v1的批准去发布v2。</p>
+<p>可以让审批记录保存草稿哈希、版本和操作类型。保存节点检查当前草稿是否仍与审批对象相同；不一致时重新进入确认流程。审批结果也要检查操作者身份、有效期及是否已经使用，不能只接受前端传来的<code>approved=true</code>。</p>
+<p>这类条件应由业务代码验证。提示词可以说明审批规则，但不能代替真正的状态检查。</p>
+<h2 id="section-重放与分支为什么不会撤销外部操作">重放与分支为什么不会撤销外部操作</h2>
+<p>从旧检查点恢复，可以重新执行后面的节点。使用<code>update_state</code>修改旧状态会形成新的检查点分支，原历史仍然保留。修改时也会应用相应reducer，因此对列表字段的更新未必等同于直接覆盖。<a href="https://docs.langchain.com/oss/python/langgraph/use-time-travel" rel="noopener noreferrer">LangGraph时间旅行</a></p>
+<p>假设C4对应的报告已经保存到外部系统，回到C2生成另一份草稿，只会改变新的执行分支。外部系统中的旧报告不会自动消失。模型调用也可能得到不同结果，所以重放不能被理解为完全相同的录像回放。</p>
+<p>调试时应区分两种目的：查看已经记录的输入输出，只需读取历史；尝试另一条执行路径，才需要重新运行节点。后者可能产生新费用或写入，应使用隔离环境或模拟工具。</p>
+<h2 id="section-怎样验证恢复行为">怎样验证恢复行为</h2>
+<p>本篇未安装LangGraph或调用付费模型，代码仅展示节点结构。接入框架后可以用确定性函数代替LLM，准备四个小测试：中断前的计数是否在恢复时增加；拒绝审批是否跳过保存；草稿变更后旧审批是否失效；保存成功后模拟进程退出，再恢复是否只产生一个业务结果。</p>
+<p>还要测试状态字段变化与历史检查点兼容。一个旧任务保存的是<code>draft</code>字符串，新代码却期待<code>draft</code>对象时，恢复需要迁移或明确拒绝，不能让任务在半路以难以理解的方式失败。</p>
+<h2 id="section-面试追问langgraph的组成与适用范围">面试追问：LangGraph的组成与适用范围</h2>
+<p><span id="q-FQ-doxcnupENEV3KQXp3lFwDz3QXyc" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnupENEV3KQXp3lFwDz3QXyc"></a></p>
+<blockquote>
+<p>LangGraph 有哪些组件，以及它能实现的功能，这个框架的优点在哪里？</p>
+</blockquote>
+<p><strong>回答：</strong>核心包括状态Schema、处理节点、普通或条件边、状态合并规则，以及检查点保存与执行配置。它可以组织循环、分支、并行与子图，也能实现中断等待、恢复和历史分支。优势是把长流程的状态与执行关系显式化，便于追踪和恢复；代价是需要维护状态设计与持久化兼容。外部副作用的幂等、权限和业务成功条件仍需应用实现。</p>
+<p><strong>自拟追问：暂停在节点中间，恢复后之前的代码还会执行吗？</strong>会重新进入该节点，不能依赖普通局部变量保留，也不能在中断前随意放不可重复的操作。</p>
+<p>原问及来源见<a href="/media/backend-agent-series/questions.json">逐题映射</a>。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"Agent基础04｜LangGraph的中断、状态修订与重放：任务恢复后会重新执行什么"}],["$","p",null,{"className":"article-deck","children":"用报告审批流程说明检查点、中断恢复和历史分支，并解释外部副作用为何仍需幂等"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,630"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L19","Agent",{"href":"/blog/#tag=Agent","children":"Agent"}],["$","$L19","LangGraph",{"href":"/blog/#tag=LangGraph","children":"LangGraph"}]]}]]}],["$","$L1a",null,{"headings":[{"id":"section-先把报告任务表示成状态与节点","text":"先把报告任务表示成状态与节点","level":2},{"id":"section-检查点保存了什么","text":"检查点保存了什么","level":2},{"id":"section-interrupt恢复时从节点开头重新执行","text":"interrupt恢复时，从节点开头重新执行","level":2},{"id":"section-修改草稿以后旧审批还有效吗","text":"修改草稿以后，旧审批还有效吗","level":2},{"id":"section-重放与分支为什么不会撤销外部操作","text":"重放与分支为什么不会撤销外部操作","level":2},{"id":"section-怎样验证恢复行为","text":"怎样验证恢复行为","level":2},{"id":"section-面试追问langgraph的组成与适用范围","text":"面试追问：LangGraph的组成与适用范围","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1b",["$","$L1c",null,{"html":"$1d"}],"$undefined","$L1e","$L1f","$L20"]}],"$L21"]}]]}]
+c:null
+12:[["$","title","0",{"children":"Agent基础04｜LangGraph的中断、状态修订与重放：任务恢复后会重新执行什么 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"用报告审批流程说明检查点、中断恢复和历史分支，并解释外部副作用为何仍需幂等。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s01-04-langgraph-replay/"}]]
+22:I[2708,["5587","$15","8612","$16","1133","$17","5953","$18"],"FeedbackForm"]
+23:I[3498,["5587","$15","8612","$16","1133","$17","5953","$18"],"default"]
+1f:["$","$L22",null,{"contentId":"backend-agent-s01-04-langgraph-replay"}]
+20:["$","div",null,{"className":"related-note","children":[["$","$L23",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+21:["$","$L1a",null,{"headings":["$9:props:children:1:props:headings:0","$9:props:children:1:props:headings:1","$9:props:children:1:props:headings:2","$9:props:children:1:props:headings:3","$9:props:children:1:props:headings:4","$9:props:children:1:props:headings:5","$9:props:children:1:props:headings:6"]}]
+1e:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$L23",null,{"href":"/blog/backend-agent-s01-planning/","children":[["$","span",null,{"children":"上一篇"}],"Agent基础03｜Agent怎样规划和调整任务：ReAct、计划执行与反馈修订"]}],["$","$L23",null,{"href":"/blog/backend-agent-s01-05-intent-routing/","children":[["$","span",null,{"children":"下一篇"}],"Agent基础05｜意图识别与任务路由：遇到“帮我看看”时，怎样决定下一步"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s01-05-intent-routing",{"children":[["$","$L23",null,{"href":"/blog/backend-agent-s01-05-intent-routing/","children":"Agent基础05｜意图识别与任务路由：遇到“帮我看看”时，怎样决定下一步"}],["$","span",null,{"children":"Agent"}]]}],["$","li","backend-agent-s01-loop",{"children":[["$","$L23",null,{"href":"/blog/backend-agent-s01-loop/","children":"Agent基础01｜Agent怎样完成一个任务：模型、工具、状态与执行循环"}],["$","span",null,{"children":"Agent"}]]}],["$","li","backend-agent-s01-planning",{"children":[["$","$L23",null,{"href":"/blog/backend-agent-s01-planning/","children":"Agent基础03｜Agent怎样规划和调整任务：ReAct、计划执行与反馈修订"}],["$","span",null,{"children":"Agent"}]]}]]}]]}]]}]
+24:Tb2c,(()=>{const d={"wallpaper":"banner","layout":"list","cardStyle":"soft","textSize":"normal","hero":true,"carousel":false,"waves":false,"fade":true,"motion":true,"typewriter":true,"progress":true,"petals":false,"dim":28,"blur":0,"cardOpacity":78,"colorMode":"section","customColor":"#32846b","sectionColors":{},"customTheme":"","sectionThemes":{}},enums={"wallpaper":["banner","fullscreen","overlay","none"],"layout":["list","grid"],"cardStyle":["soft","flat"],"textSize":["normal","large"],"colorMode":["section","custom"]},bools=["hero","carousel","waves","fade","motion","typewriter","progress","petals"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]));const color=(function(a,b){let c=b.startsWith("/credits")?"about":b.split("/")[1],d=["home","blog","research","projects","about"].includes(c)?c:"home",e=(a.sectionColors&&"object"==typeof a.sectionColors&&!Array.isArray(a.sectionColors)?a.sectionColors:{})[d],f="string"==typeof e&&/^#[\da-f]{6}$/i.test(e)?e.toLowerCase():void 0,g="string"==typeof a.customColor&&/^#[\da-f]{6}$/i.test(a.customColor)?a.customColor.toLowerCase():"#32846b",h=a.sectionThemes&&"object"==typeof a.sectionThemes&&!Array.isArray(a.sectionThemes)?a.sectionThemes:{},i="custom"===a.colorMode?a.customTheme:h[d],j="string"==typeof i&&["home","blog","research","projects","about"].includes(i)?i:void 0;return{section:d,color:"custom"===a.colorMode?g:f??g,customized:"custom"===a.colorMode?!j:!!f,theme:j??d}})(p,location.pathname);document.documentElement.setAttribute('data-custom-palette',String(color.customized));document.documentElement.setAttribute('data-palette-section',color.theme);const palette=(function(a){let b=/^#[\da-f]{6}$/i.test(a)?a:"#32846b",c=[1,3,5].map(a=>Number.parseInt(b.slice(a,a+2),16)),d={};for(let[a,[b,e]]of Object.entries({"light-page":[248,.09],"light-surface":[255,.025],"light-surface-soft":[252,.05],"light-surface-raised":[246,.08],"light-ink":[0,.15],"light-muted":[0,.32],"light-line":[213,.12],"light-accent":[0,.4],"light-accent-strong":[0,.3],"light-accent-soft":[248,.1],"light-on-accent":[255,0],"dark-page":[16,.025],"dark-surface":[26,.045],"dark-surface-soft":[22,.04],"dark-surface-raised":[33,.06],"dark-ink":[255,.12],"dark-muted":[255,.34],"dark-line":[72,.1],"dark-accent":[255,.35],"dark-accent-strong":[255,.22],"dark-accent-soft":[24,.1],"dark-on-accent":[0,.1]}))d[`--palette-${a}`]=`#${c.map(a=>Math.round(b*(1-e)+a*e).toString(16).padStart(2,"0")).join("")}`;return d})(color.color);for(const k in palette)document.documentElement.style.setProperty(k,palette[k])})()2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$24"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],"$L25"]}],"$L26"]}]
+1b:["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$L23",null,{"href":"/blog/series/agent-foundations/","children":"Agent执行与任务恢复"}],["$","span",null,{"children":[4," / ",5," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s01-loop",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s01-loop/","aria-current":"$undefined","children":"Agent基础01｜Agent怎样完成一个任务：模型、工具、状态与执行循环"}]}],["$","li","backend-agent-s01-recovery",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s01-recovery/","aria-current":"$undefined","children":"Agent基础02｜Agent中断后怎样继续：检查点、幂等与结果未知"}]}],["$","li","backend-agent-s01-planning",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s01-planning/","aria-current":"$undefined","children":"Agent基础03｜Agent怎样规划和调整任务：ReAct、计划执行与反馈修订"}]}],["$","li","backend-agent-s01-04-langgraph-replay",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s01-04-langgraph-replay/","aria-current":"page","children":"Agent基础04｜LangGraph的中断、状态修订与重放：任务恢复后会重新执行什么"}]}],["$","li","backend-agent-s01-05-intent-routing",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s01-05-intent-routing/","aria-current":"$undefined","children":"Agent基础05｜意图识别与任务路由：遇到“帮我看看”时，怎样决定下一步"}]}]]}]]}]]}]
+27:"static/chunks/7107-d67496718f7d4082.js"
+28:"static/chunks/app/layout-883cb555fbda7bdc.js"
+29:I[5376,["5587","$15","7107","$27","7177","$28"],"DisplayProvider"]
+2a:"NavigationFeedback"
+2b:I[2842,["5587","$15","7107","$27","7177","$28"],"$2a"]
+2c:I[4085,["5587","$15","7107","$27","7177","$28"],"SiteHeader"]
+2d:I[5803,["5587","$15","7107","$27","7177","$28"],"SiteFrame"]
+2e:I[164,["5587","$15","7107","$27","7177","$28"],"ProfileSidebar"]
+25:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]
+26:["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L29",null,{"children":[["$","$L2b",null,{}],["$","$L2c",null,{"tags":["编程语言知识点","Python","C++"],"categoryIds":["foundations","frontend","backend","agent","computing","ai","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L2d",null,{"sidebar":["$","$L2e",null,{"categoryIds":"$26:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L23",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L23",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L23",null,{"href":"/about/","children":"关于这个站点"}],["$","$L23",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]
+14:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L23",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L23",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$L23",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L19",null,{"className":"trail-current","href":"/blog/#agent","children":["Agent",["$","span",null,{"children":25}]]}],"$undefined"]}]

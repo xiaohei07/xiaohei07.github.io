@@ -1,0 +1,104 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+1e:"ViewportBoundary"
+1f:I[887,[],"$1e"]
+20:"MetadataBoundary"
+21:I[887,[],"$20"]
+22:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#backend","children":["后端与数据库",["$","span",null,{"children":33}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"分布式系统09｜弱网分片上传：怎样确认进度、断点续传并控制内存占用"}],["$","p",null,{"className":"article-deck","children":"从一次响应丢失解释服务端进度确认，设计可重试的分片上传与完成校验"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,833"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",6," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","HTTP",{"href":"/blog/#tag=HTTP","children":"HTTP"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-一个大文件为什么需要拆成多个可恢复步骤","text":"一个大文件为什么需要拆成多个可恢复步骤","level":2},{"id":"section-按分片编号上传和按连续偏移上传","text":"按分片编号上传和按连续偏移上传","level":2},{"id":"section-一次确认丢失应该怎样处理","text":"一次确认丢失应该怎样处理","level":2},{"id":"section-分片成功与完整文件成功怎样校验","text":"分片成功与完整文件成功怎样校验","level":2},{"id":"section-小型服务器怎样限制资源","text":"小型服务器怎样限制资源","level":2},{"id":"section-用几十字节模拟断点与重试","text":"用几十字节模拟断点与重试","level":2},{"id":"section-面试追问弱网上传器怎样设计","text":"面试追问：弱网上传器怎样设计","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/distributed-services/","children":"分布式系统与服务设计"}],["$","span",null,{"children":[9," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s08-outbox-delivery",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-outbox-delivery/","children":"分布式系统01｜数据库提交以后，消息怎样可靠送达：Outbox、确认与业务幂等"}]}],["$","li","backend-agent-s08-consensus-leases",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-consensus-leases/","children":"分布式系统02｜网络分区后谁还能写入：CAP、Raft与租约失效"}]}],["$","li","backend-agent-s08-rate-limits",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-rate-limits/","children":"分布式系统03｜请求太多时限制什么：窗口、令牌桶、漏桶与全局额度"}]}],["$","li","backend-agent-s08-04-cdc-transaction-message",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-04-cdc-transaction-message/","children":"分布式系统04｜CDC与事务消息：数据库提交以后，消息怎样可靠地发出去"}]}],["$","li","backend-agent-s08-05-queue-backlog-order",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-05-queue-backlog-order/","children":"分布式系统05｜消息积压与顺序消费：为什么增加消费者有时不起作用"}]}],["$","li","backend-agent-s08-06-sharding-migration",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-06-sharding-migration/","children":"分布式系统06｜分片扩容与热点数据：数据怎样迁移，读写怎样保持连续"}]}],["$","li","backend-agent-s08-07-circuit-breaker",{"children":"$L12"}],"$L13","$L14","$L15"]}]]}]]}],"$L16","$undefined","$L17","$L18","$L19"]}],"$L1a"]}]]}],["$L1b"],"$L1c"]}],"p":"$@1d","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s08-09-resumable-upload","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1f",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L21",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$22",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"分布式系统09｜弱网分片上传：怎样确认进度、断点续传并控制内存占用 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从一次响应丢失解释服务端进度确认，设计可重试的分片上传与完成校验。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s08-09-resumable-upload/"}]]}]}],null]}],null]}],"p":"$@23","v":null,"s":"$7"}},"a":"$@24","u":"$@25","b":"t75SI7oTDmNtBl3uMkJyg"}
+26:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+28:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+29:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+12:["$","$Lf",null,{"href":"/blog/backend-agent-s08-07-circuit-breaker/","children":"分布式系统07｜熔断、超时与隔离：下游变慢以后，怎样防止请求一起堆住"}]
+13:["$","li","backend-agent-s08-08-jwt-csrf",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-08-jwt-csrf/","children":"分布式系统08｜JWT、Cookie与CSRF：登录身份怎样传递，又该在哪一步检查权限"}]}]
+14:["$","li","backend-agent-s08-09-resumable-upload",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-09-resumable-upload/","aria-current":"page","children":"分布式系统09｜弱网分片上传：怎样确认进度、断点续传并控制内存占用"}]}]
+15:["$","li","backend-agent-s08-10-api-compatibility",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s08-10-api-compatibility/","children":"分布式系统10｜接口版本与数据库迁移：新旧客户端怎样同时使用一个服务"}]}]
+27:T1e18,<h2 id="section-一个大文件为什么需要拆成多个可恢复步骤">一个大文件为什么需要拆成多个可恢复步骤</h2>
+<p>上传一个1GiB视频，如果网络在最后几秒断开，整份重新上传会浪费已经传输的数据。分片上传把文件拆成较小的片段，失败后只重传缺失部分。</p>
+<p><strong>断点续传的依据应是服务端已经确认保存的进度。</strong>浏览器显示“已发送80%”，只表示客户端传输过程中的某个状态，不一定表示服务端已经将相应字节可靠保存。响应丢失时，客户端甚至无法直接区分“没收到”与“已经保存但确认没回来”。</p>
+<p>因此需要先创建一个上传任务，拿到<code>upload_id</code>，并约定文件大小、分片方式、拥有者、过期时间和完成条件。后续操作都围绕这个任务进行。</p>
+<h2 id="section-按分片编号上传和按连续偏移上传">按分片编号上传和按连续偏移上传</h2>
+<p>两种常见方式可以这样区分：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方式</th><th>服务端记录</th><th>恢复时查询</th><th>并行条件</th></tr></thead><tbody><tr><td>分片编号</td><td>哪些编号已保存及其校验值</td><td>已完成编号列表</td><td>可以独立上传不同片</td></tr><tr><td>连续偏移</td><td>已连续保存到哪个字节</td><td>当前offset</td><td>通常按顺序追加</td></tr></tbody></table>
+<p>例如1GiB按8MiB切分，共128片。编号从0开始时，第3片对应字节区间<code>[3×8MiB, 4×8MiB)</code>。最后一片的长度可能小于标准分片长度，必须用实际文件总长度计算。</p>
+<p>对象存储的Multipart Upload通常允许独立上传分片，再提交分片列表完成对象；重新上传同一编号等操作的行为应遵循相应服务的协议。<a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html" rel="noopener noreferrer">S3分片上传概览</a></p>
+<p>tus核心协议采用连续偏移方式。客户端先查询服务端offset，再带着这个offset继续上传；偏移不匹配时服务端返回409，防止在错误位置追加数据。要实现并行，需要使用支持的扩展或其他分片协议，不能直接把多个追加请求同时发出去。<a href="https://tus.io/protocols/resumable-upload" rel="noopener noreferrer">tus恢复上传协议</a></p>
+<h2 id="section-一次确认丢失应该怎样处理">一次确认丢失应该怎样处理</h2>
+<p>假设服务端已经保存第5片，但返回响应时连接断开。</p>
+<p>客户端重连后查询<code>upload_id</code>的分片状态。如果第5片已经存在，且长度和校验值对应同一内容，就跳过它；如果不存在，就重新上传。若同一编号出现不同内容，应拒绝冲突或按明确的覆盖协议处理，不能在不知情的情况下把两个不同文件拼起来。</p>
+<p><strong>重试使用相同的任务ID、片号和内容标识。</strong>每次失败都新建上传任务，会留下重复的临时文件，也无法准确恢复原任务。</p>
+<p>上传完成以后还有一次确认问题：服务端已经合并对象，但客户端没收到完成响应。完成接口也应具有可查询、可重复确认的结果。状态可以区分为<code>uploading → verifying → complete</code>，另有<code>expired/failed</code>等终态；同一任务不能因为重复提交而触发两次转码或两次扣费。</p>
+<h2 id="section-分片成功与完整文件成功怎样校验">分片成功与完整文件成功怎样校验</h2>
+<p>分片层面检查任务归属、片号范围、长度和校验值。文件层面检查全部片段是否齐全、顺序是否正确、总长度是否匹配，并按照约定验证完整对象。</p>
+<p><strong>ETag不应被一律当成完整文件的MD5。</strong>尤其是分片上传或特定加密方式下，应使用服务明确提供的校验接口与算法。客户端提交的校验值也不是可信身份凭据，服务端仍需计算或验证收到的内容。</p>
+<p>文件名、扩展名和Content-Type都是需要检查的输入，不能直接作为执行或信任依据。服务端分配存储名称，限制大小与类型，把未检查内容放在隔离位置；需要解析或转码时，也要限制CPU、内存、时间和解压后大小。<a href="https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html" rel="noopener noreferrer">OWASP文件上传防护</a></p>
+<p>所谓“秒传”同样涉及授权：知道某个文件摘要，并不代表有权获得别人上传的文件。存在性检查不能泄露私有文件，也不能绕过所有权验证。</p>
+<h2 id="section-小型服务器怎样限制资源">小型服务器怎样限制资源</h2>
+<p>若分片8MiB、并发数2，仅客户端两个完整分片缓冲就可能占约16MiB；服务端若还各复制一份，会继续增加内存。更合适的实现是<strong>按小块流式读取和写入，让缓冲大小与整个文件大小分离</strong>。</p>
+<p>还要查看反向代理是否把请求体缓存在内存或临时磁盘，应用框架是否先读完整请求。即使业务代码使用流式写入，前面的代理缓冲仍可能占满磁盘。</p>
+<p>以1GiB上传为例，如果同时保留分片和完整合并文件，单任务磁盘占用可能短时接近2GiB，还没算转码输出。对象存储直接上传可以让业务服务器主要处理授权和元数据，但签名URL必须限制目标对象、权限、有效期和允许的大小范围。</p>
+<p>本篇只做资源估算，不在ECS上传1GiB文件，也不启动转码任务。临时文件需要任务级配额和过期清理；清理流程应跳过仍有有效租约或正在完成校验的任务，避免与上传发生竞态。</p>
+<h2 id="section-用几十字节模拟断点与重试">用几十字节模拟断点与重试</h2>
+<p>机制验证不需要真实视频。可以将<code>abcdefghij</code>按4字节分为<code>abcd</code>、<code>efgh</code>、<code>ij</code>，模拟第二片响应丢失：服务端已有片号1，恢复查询后不重复追加；补齐最后一片，按编号组合后结果仍为原来的10字节。</p>
+<p>再测试少一片、同号不同内容、长度错误、过期任务、其他用户查询、完成接口重复调用。这个小模型能检查状态与组合逻辑；真实网络断开、代理限制和存储持久性仍需小规模集成测试。</p>
+<h2 id="section-面试追问弱网上传器怎样设计">面试追问：弱网上传器怎样设计</h2>
+<p><span id="q-FQ-doxcng6h1vfrffKqLt3SZrmDGih" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcng6h1vfrffKqLt3SZrmDGih"></a></p>
+<blockquote>
+<p>用户在弱网环境下想上传一个 G 的视频，如何设计这个上传器？</p>
+</blockquote>
+<p><strong>回答：</strong>创建带所有权和有效期的上传任务，按服务支持的分片或偏移协议上传，限制并发并采用可取消的重试。恢复时以服务端进度为准，避免响应丢失后重复追加。完成前校验分片、总大小与完整性，完成操作可幂等查询，后台再进入转码等流程。客户端展示已确认进度，服务端限制缓冲、临时磁盘、任务总量和清理期限。</p>
+<p><strong>自拟追问：增加分片并发一定更快吗？</strong>弱网可能受总带宽、丢包和设备资源限制，过多并发还会增加重传与缓冲。应从较低并发开始，根据实际网络反馈调整，并保留全局资源上限。</p>
+<p>原问及来源见<a href="/media/backend-agent-series/questions.json">逐题映射</a>。</p>16:["$","$L26",null,{"html":"$27"}]
+17:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/backend-agent-s08-08-jwt-csrf/","children":[["$","span",null,{"children":"上一篇"}],"分布式系统08｜JWT、Cookie与CSRF：登录身份怎样传递，又该在哪一步检查权限"]}],["$","$Lf",null,{"href":"/blog/backend-agent-s08-10-api-compatibility/","children":[["$","span",null,{"children":"下一篇"}],"分布式系统10｜接口版本与数据库迁移：新旧客户端怎样同时使用一个服务"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s05-streaming",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s05-streaming/","children":"网络与操作系统03｜页面怎样持续收到任务进度：SSE、WebSocket与断线恢复"}],["$","span",null,{"children":"后端与数据库"}]]}],["$","li","backend-agent-s05-08-http-quic",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s05-08-http-quic/","children":"网络与操作系统08｜HTTP/1.1、HTTP/2和HTTP/3：多路复用解决了哪一层等待"}],["$","span",null,{"children":"计算机基础"}]]}],["$","li","web-http-browser",{"children":[["$","$Lf",null,{"href":"/blog/web-http-browser/","children":"HTTP与浏览器基础：从打开文章到提交一条反馈"}],["$","span",null,{"children":"部署与运维"}]]}]]}]]}]]}]
+18:["$","$L28",null,{"contentId":"backend-agent-s08-09-resumable-upload"}]
+19:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+1a:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6"]}]
+1b:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1c:["$","$L29",null,{"children":["$","$22",null,{"name":"Next.MetadataOutlet","children":"$@2a"}]}]
+25:true
+7:300
+2a:null
+7:C
+24:0
+9:"$undefined"
+5:"$undefined"
+23:"$undefined"
+1d:"$undefined"

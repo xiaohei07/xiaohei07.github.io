@@ -1,0 +1,109 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#ai","children":["人工智能",["$","span",null,{"children":25}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"推荐系统06｜语义ID与生成式推荐：TIGER怎样生成物品，HSTU怎样建模行为"}],["$","p",null,{"className":"article-deck","children":"从残差量化算例理解语义ID，再区分TIGER的ID生成路线、HSTU的序列建模和上线验证"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,942"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",6," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","推荐系统",{"href":"/blog/#tag=%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F","children":"推荐系统"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-物品id为什么会进入推荐模型的预测目标","text":"物品ID为什么会进入推荐模型的预测目标","level":2},{"id":"section-残差量化怎样生成多级编码","text":"残差量化怎样生成多级编码","level":2},{"id":"section-tiger怎样把用户历史变成下一件物品","text":"TIGER怎样把用户历史变成下一件物品","level":2},{"id":"section-hstu与tiger为什么不能直接当成同一种方案","text":"HSTU与TIGER为什么不能直接当成同一种方案","level":2},{"id":"section-新召回通路怎样判断是否值得上线","text":"新召回通路怎样判断是否值得上线","level":2},{"id":"section-面试追问语义id相对普通id的好处与代价","text":"面试追问：语义ID相对普通ID的好处与代价","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/recommendation-ranking/","children":"推荐与排序"}],["$","span",null,{"children":[6," / ",6," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s11-recommendation-pipeline",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-recommendation-pipeline/","children":"推荐系统01｜推荐结果怎样来到页面：召回、排序、特征与反馈"}]}],["$","li","backend-agent-s11-ndcg-ranking",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-ndcg-ranking/","children":"推荐系统02｜排序结果怎样比较：NDCG算例与搜索打分基线"}]}],["$","li","backend-agent-s11-03-two-tower-negatives",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-03-two-tower-negatives/","children":"推荐系统03｜双塔召回怎样训练：从向量打分到负采样与采样校正"}]}],["$","li","backend-agent-s11-04-din-deepfm",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-04-din-deepfm/","children":"推荐系统04｜DIN与DeepFM怎样预测点击：候选相关兴趣和特征交叉"}]}],["$","li","backend-agent-s11-05-multitask-ple",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-05-multitask-ple/","children":"推荐系统05｜推荐多任务学习：从共享底层到MMoE、CGC与PLE"}]}],["$","li","backend-agent-s11-06-semantic-id-generative",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-06-semantic-id-generative/","aria-current":"page","children":"推荐系统06｜语义ID与生成式推荐：TIGER怎样生成物品，HSTU怎样建模行为"}]}]]}]]}]]}],"$L12","$undefined","$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s11-06-semantic-id-generative","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"推荐系统06｜语义ID与生成式推荐：TIGER怎样生成物品，HSTU怎样建模行为 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从残差量化算例理解语义ID，再区分TIGER的ID生成路线、HSTU的序列建模和上线验证。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s11-06-semantic-id-generative/"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"t75SI7oTDmNtBl3uMkJyg"}
+22:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+24:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+25:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+23:T37b0,<h2 id="section-物品id为什么会进入推荐模型的预测目标">物品ID为什么会进入推荐模型的预测目标</h2>
+<p>在<a href="/blog/backend-agent-s11-03-two-tower-negatives/">双塔召回</a>中，请求先变成向量，再通过索引找到相近物品。另一种路线是把物品编码成一串离散符号，让模型根据用户历史直接预测下一件物品的符号序列。</p>
+<p><strong>生成式召回中的“生成”，可以指生成物品标识，并不要求生成一段推荐文案。</strong>模型输出标识后，还要查询物品目录，得到可以展示的具体内容。</p>
+<p>普通item ID通常是数据库分配的标识，17与18相邻不意味着两件物品相似。模型可以给这些ID学习Embedding，但标识数字本身没有预先编码内容关系。<strong>语义ID（Semantic ID）则把物品表示为多个离散码字，希望相似内容能共享部分编码。</strong></p>
+<p>例如两件跑鞋的编码可能是<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>5</mn><mo separator="true">,</mo><mn>12</mn><mo separator="true">,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(5,12,3)</annotation></semantics></math></span>、<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>5</mn><mo separator="true">,</mo><mn>12</mn><mo separator="true">,</mo><mn>8</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(5,12,8)</annotation></semantics></math></span>，一台相机是<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>9</mn><mo separator="true">,</mo><mn>4</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(9,4,2)</annotation></semantics></math></span>。这只是帮助理解的假设编码，不表示真实码字一定对应“鞋类—跑鞋—颜色”这种人工类别树。</p>
+<h2 id="section-残差量化怎样生成多级编码">残差量化怎样生成多级编码</h2>
+<p>TIGER使用RQ-VAE来形成语义ID。可以先把它分成三部分：编码器把物品内容向量压到潜在空间；<strong>残差量化逐级用码本向量逼近这个表示</strong>；解码器用量化结果重建输入，训练各部分参数。<a href="https://arxiv.org/abs/2305.05065" rel="noopener noreferrer">TIGER论文第3节</a></p>
+<p>设初始表示为<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">z</annotation></semantics></math></span>，第一级残差<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>=</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">r_0=z</annotation></semantics></math></span>，每一级在自己的码本中选择最近向量：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>c</mi><mi mathvariant="normal">ℓ</mi></msub><mo>=</mo><mi>arg</mi><mo>⁡</mo><munder><mrow><mi>min</mi><mo>⁡</mo></mrow><mi>k</mi></munder><mi mathvariant="normal">∥</mi><msub><mi>r</mi><mi mathvariant="normal">ℓ</mi></msub><mo>−</mo><msub><mi>e</mi><mrow><mi mathvariant="normal">ℓ</mi><mo separator="true">,</mo><mi>k</mi></mrow></msub><msup><mi mathvariant="normal">∥</mi><mn>2</mn></msup><mo separator="true">,</mo><mspace width="2em"></mspace><msub><mi>r</mi><mrow><mi mathvariant="normal">ℓ</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>r</mi><mi mathvariant="normal">ℓ</mi></msub><mo>−</mo><msub><mi>e</mi><mrow><mi mathvariant="normal">ℓ</mi><mo separator="true">,</mo><msub><mi>c</mi><mi mathvariant="normal">ℓ</mi></msub></mrow></msub><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">c_\ell=\arg\min_k\|r_\ell-e_{\ell,k}\|^2,\qquad
+r_{\ell+1}=r_\ell-e_{\ell,c_\ell}.</annotation></semantics></math></span>
+<p>编码是<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>c</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>c</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>…</mo><mtext> </mtext><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(c_0,c_1,\dots)</annotation></semantics></math></span>，量化表示为<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>z</mi><mo>^</mo></mover><mo>=</mo><msub><mo>∑</mo><mi mathvariant="normal">ℓ</mi></msub><msub><mi>e</mi><mrow><mi mathvariant="normal">ℓ</mi><mo separator="true">,</mo><msub><mi>c</mi><mi mathvariant="normal">ℓ</mi></msub></mrow></msub></mrow><annotation encoding="application/x-tex">\hat z=\sum_\ell e_{\ell,c_\ell}</annotation></semantics></math></span>。<strong>下一级编码的是上一级尚未解释的残差。</strong></p>
+<p>用一维数值演示，设<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mn>2.7</mn></mrow><annotation encoding="application/x-tex">z=2.7</annotation></semantics></math></span>，第一层码本为<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>4</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[0,2,4]</annotation></semantics></math></span>，最近的是2（索引1），剩余0.7；第二层码本为<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mo>−</mo><mn>0.5</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>0.5</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[-0.5,0,0.5,1]</annotation></semantics></math></span>，最近的是0.5（索引2），最后得到编码<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1,2)</annotation></semantics></math></span>，重建值2.5，误差0.2。它只展示量化步骤，没有训练编码器、码本或解码器。</p>
+<p>若每一级有256个码字，3级理论上有<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>256</mn><mn>3</mn></msup><mo>=</mo><mn>16</mn><mtext> </mtext><mn>777</mn><mtext> </mtext><mn>216</mn></mrow><annotation encoding="application/x-tex">256^3=16\,777\,216</annotation></semantics></math></span>种组合，但<strong>组合空间足够大也不保证每个物品都得到不同编码</strong>。相近物品可能落在相同组合上，需要额外的消歧标识或一对多映射策略。TIGER论文为冲突物品增加额外Token；具体系统还需要维护ID与物品目录的对应版本。</p>
+<h2 id="section-tiger怎样把用户历史变成下一件物品">TIGER怎样把用户历史变成下一件物品</h2>
+<p>有了语义ID，历史中的每件物品都可以替换为一段码字。模型读入历史后，自回归预测目标物品的码字：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><msub><mi>c</mi><mn>0</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>c</mi><mrow><mi>m</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>∣</mo><mi>h</mi><mo stretchy="false">)</mo><mo>=</mo><munderover><mo>∏</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>m</mi><mo>−</mo><mn>1</mn></mrow></munderover><mi>P</mi><mo stretchy="false">(</mo><msub><mi>c</mi><mi mathvariant="normal">ℓ</mi></msub><mo>∣</mo><mi>h</mi><mo separator="true">,</mo><msub><mi>c</mi><mrow><mo>&#x3C;</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo stretchy="false">)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">P(c_0,\dots,c_{m-1}\mid h)
+=\prod_{\ell=0}^{m-1}P(c_\ell\mid h,c_{&#x3C;\ell}),</annotation></semantics></math></span>
+<p>其中<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span>是历史。训练时可以用正确的前缀预测下一个码字，优化目标序列的负对数概率；推理时前缀由模型自己生成。<strong>训练看到正确前缀，并不保证推理时前面一位生成错误后仍能选到正确物品。</strong></p>
+<p>一个教学例子：模型给编码<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>5</mn><mo separator="true">,</mo><mn>12</mn><mo separator="true">,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(5,12,3)</annotation></semantics></math></span>各级条件概率0.6、0.5、0.4，联合概率是0.12；另一编码<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>5</mn><mo separator="true">,</mo><mn>8</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(5,8,2)</annotation></semantics></math></span>对应0.6、0.4、0.7，联合概率是0.168。只在第二级贪心选0.5，就会错过这个概率更高的完整编码。beam search保留若干前缀能减少这种局部选择的影响，但有限beam也不保证找到全局最优。</p>
+<p>生成结果还可能对应不存在或已经下架的编码。可考虑合法前缀约束、生成后过滤，以及候选不足时回退到其他召回通路。合法目录、库存和权限条件有各自更新时间，不能靠模型训练时记住一次就长期保证有效。</p>
+<h2 id="section-hstu与tiger为什么不能直接当成同一种方案">HSTU与TIGER为什么不能直接当成同一种方案</h2>
+<p><strong>TIGER的关键问题是如何编码并生成目标物品；HSTU是用于行为序列建模的一种网络单元。</strong>HSTU所属工作把推荐组织成序列建模任务，但不因此等同于“先做RQ-VAE，再逐位生成语义ID”。</p>
+<p>HSTU（Hierarchical Sequential Transduction Unit）的单元通过逐位置投影、序列信息聚合和逐位置变换构造表示，包含相对位置/时间信息与门控交互。其聚合也不直接沿用标准Transformer对整个序列做softmax的形式。<a href="https://arxiv.org/html/2402.17152v3" rel="noopener noreferrer">HSTU论文第3节</a></p>
+<p>从数据流看，可以把两者分别理解为：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>关注点</th><th>TIGER语义ID路线</th><th>HSTU序列建模路线</th></tr></thead><tbody><tr><td>核心表示问题</td><td>物品怎样变成可生成的离散编码</td><td>用户行为与上下文怎样在序列中交互</td></tr><tr><td>主要结构</td><td>语义ID编码器与序列到序列模型</td><td>多层HSTU序列表示网络</td></tr><tr><td>输出如何接业务</td><td>生成编码后映射到候选物品</td><td>结合任务头与检索/打分方式处理召回或排序</td></tr><tr><td>需要单独验证</td><td>编码冲突、非法ID、解码延迟</td><td>序列截断、候选计算成本、缓存与线上适配</td></tr></tbody></table>
+<p>HSTU论文也讨论检索及排序时的服务计算，不能写成“用了HSTU就自动取消ANN和候选打分”。复述方案时应沿着实际输入、网络输出和服务接口说明，模型名字不能替代整条链路。</p>
+<h2 id="section-新召回通路怎样判断是否值得上线">新召回通路怎样判断是否值得上线</h2>
+<p>语义ID可以让内容相近的物品共享编码，帮助模型利用内容关系，也为新物品提供编码入口。但内容相似与用户偏好并不完全相同，编码器更新还可能影响历史ID、模型和目录的一致性。</p>
+<p>离线先按时间切分，比较Recall@K、NDCG@K、有效候选数、重复率和新物品分组；同时检查评测候选范围是否一致。再评估增量价值：新通路带来的候选，有多少已经被其他通路覆盖，有多少能在后续排序中留下来。</p>
+<p>线上应通过小流量实验比较最终任务指标，并保留时延、错误率、内容质量和回退率等护栏。<a href="/blog/backend-agent-s04-03-confidence-online-ab/">实验与置信区间</a>介绍了样本和统计边界。论文中的提升不代表当前业务会有同样收益，本目录也没有运行模型训练或线上推荐实验。</p>
+<h2 id="section-面试追问语义id相对普通id的好处与代价">面试追问：语义ID相对普通ID的好处与代价</h2>
+<p><span id="q-FQ-doxcnOpvW7vkUrPBdyebsRfILKw" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnOpvW7vkUrPBdyebsRfILKw"></a></p>
+<blockquote>
+<p>4.sid和用传统item id对比的好处</p>
+</blockquote>
+<p><strong>回答：</strong>普通ID提供唯一身份，语义ID还希望保留内容关系，让相似物品共享部分码字，从而在序列预测中复用这些信息，并支持基于内容编码的新物品。代价是增加编码器、码本和版本维护，还要处理冲突、非法生成与业务过滤。传统ID也能学习有用的Embedding，因此应在相同数据和评测条件下比较，不能把“ID本身没有语义”推成“传统方法不能学习语义”。</p>
+<p><strong>自拟追问：能否保证新通路上线后一定有正收益？</strong>无法预先保证。可以用离线分组评测、影子请求、小流量随机实验和可回退发布减少不确定性，最后仍由实验结果决定是否扩大流量。</p>
+<p>原问及来源见<a href="/media/backend-agent-series/questions.json">逐题映射</a>。</p>12:["$","$L22",null,{"html":"$23"}]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/backend-agent-s11-05-multitask-ple/","children":[["$","span",null,{"children":"上一篇"}],"推荐系统05｜推荐多任务学习：从共享底层到MMoE、CGC与PLE"]}],"$undefined"]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s11-03-two-tower-negatives",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s11-03-two-tower-negatives/","children":"推荐系统03｜双塔召回怎样训练：从向量打分到负采样与采样校正"}],["$","span",null,{"children":"人工智能"}]]}],["$","li","backend-agent-s04-03-confidence-online-ab",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s04-03-confidence-online-ab/","children":"Agent评测03｜Agent评测的置信区间与A/B实验：怎样判断新版本确实更好"}],["$","span",null,{"children":"Agent"}]]}]]}]]}]]}]
+14:["$","$L24",null,{"contentId":"backend-agent-s11-06-semantic-id-generative"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+18:["$","$L25",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@26"}]}]
+21:true
+7:300
+26:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

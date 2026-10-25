@@ -1,0 +1,112 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+1c:"ViewportBoundary"
+1d:I[887,[],"$1c"]
+1e:"MetadataBoundary"
+1f:I[887,[],"$1e"]
+20:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#agent","children":["Agent",["$","span",null,{"children":25}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"上下文与RAG01｜上下文与记忆怎样配合：信息选择、压缩、过期与删除"}],["$","p",null,{"className":"article-deck","children":"用预算表和偏好更新的例子，解释本轮模型可见的信息与跨请求保留的数据为何需要分别管理"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,133"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",7," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","Agent",{"href":"/blog/#tag=Agent","children":"Agent"}],["$","$L10","RAG",{"href":"/blog/#tag=RAG","children":"RAG"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-模型本轮看到什么系统长期保存什么","text":"模型本轮看到什么，系统长期保存什么","level":2},{"id":"section-上下文预算为什么不能全部留给历史消息","text":"上下文预算为什么不能全部留给历史消息","level":2},{"id":"section-滑动窗口摘要和结构化状态各会丢失什么","text":"滑动窗口、摘要和结构化状态各会丢失什么","level":2},{"id":"section-记忆写入以后还需要更新去重和失效","text":"记忆写入以后，还需要更新、去重和失效","level":2},{"id":"section-面试问答记忆的类型存储与生命周期","text":"面试问答：记忆的类型、存储与生命周期","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/context-memory-rag/","children":"上下文、记忆与RAG"}],["$","span",null,{"children":[1," / ",8," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s02-context-memory",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s02-context-memory/","aria-current":"page","children":"上下文与RAG01｜上下文与记忆怎样配合：信息选择、压缩、过期与删除"}]}],["$","li","backend-agent-s02-rag-evidence",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s02-rag-evidence/","children":"上下文与RAG02｜RAG怎样把资料变成回答：检索、重排、引用与错误定位"}]}],["$","li","backend-agent-s02-retrieval",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s02-retrieval/","children":"上下文与RAG03｜关键词和向量怎样找资料：倒排索引、BM25与近似最近邻"}]}],["$","li","backend-agent-s02-knowledge-choice",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s02-knowledge-choice/","children":"上下文与RAG04｜新知识应该放在哪里：长上下文、RAG、图检索与微调"}]}],["$","li","backend-agent-s02-05-ingestion-incremental",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s02-05-ingestion-incremental/","children":"上下文与RAG05｜文档解析与增量索引：原文改了一段，知识库应该更新哪些内容"}]}],["$","li","backend-agent-s02-06-reranker-training",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s02-06-reranker-training/","children":"上下文与RAG06｜Reranker怎样训练和评价：从候选召回到有依据的排序"}]}],["$","li","backend-agent-s02-07-hyde-multihop-graph",{"children":"$L12"}],"$L13"]}]]}]]}],"$L14","$undefined","$L15","$L16","$L17"]}],"$L18"]}]]}],["$L19"],"$L1a"]}],"p":"$@1b","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s02-context-memory","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1d",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1f",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$20",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"上下文与RAG01｜上下文与记忆怎样配合：信息选择、压缩、过期与删除 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"用预算表和偏好更新的例子，解释本轮模型可见的信息与跨请求保留的数据为何需要分别管理。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s02-context-memory/"}]]}]}],null]}],null]}],"p":"$@21","v":null,"s":"$7"}},"a":"$@22","u":"$@23","b":"t75SI7oTDmNtBl3uMkJyg"}
+24:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+26:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+27:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+12:["$","$Lf",null,{"href":"/blog/backend-agent-s02-07-hyde-multihop-graph/","children":"上下文与RAG07｜HyDE、多跳检索与GraphRAG：复杂问题缺少的证据怎样补齐"}]
+13:["$","li","backend-agent-s02-08-memory-conflicts",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s02-08-memory-conflicts/","children":"上下文与RAG08｜Agent记忆冲突怎样更新：什么时候覆盖、并存或拒绝写入"}]}]
+25:T2421,<h2 id="section-模型本轮看到什么系统长期保存什么">模型本轮看到什么，系统长期保存什么</h2>
+<p>如果一项任务跨了很多轮，前面出现过的信息并不一定还在当前模型请求里。要理解这个问题，可以先区分<strong>上下文</strong>和<strong>记忆</strong>：上下文是本轮实际送给模型的信息；记忆是系统保留下来、供以后读取的数据。</p>
+<p>例如用户之前确认“生成的文件只保存在本地”，系统可以把这项约束存到任务记录里。但如果下一次模型请求没有包含它，也没有让执行器独立检查，记录存在并不能保证后续动作遵守约束。</p>
+<p><strong>聊天历史</strong>是消息记录，可以成为记忆的数据源；<strong>检索</strong>负责从候选数据中挑选相关内容；<strong>缓存</strong>复用已经计算过的结果。四者各有用途。检索到旧偏好以后仍要检查是否过期，缓存命中以后仍要检查当前身份是否有权限读取结果。</p>
+<p>LangGraph的持久化文档把checkpointer用于线程内状态，把store用于线程外的应用数据。这个例子说明，保存当前任务进度与保存跨会话信息可以使用不同机制；“短期”也不等于“只能存在内存里”。<a href="https://docs.langchain.com/oss/python/langgraph/persistence" rel="noopener noreferrer">官方职责说明</a></p>
+<h2 id="section-上下文预算为什么不能全部留给历史消息">上下文预算为什么不能全部留给历史消息</h2>
+<p><strong>Token</strong>是模型分词器处理文本时使用的单位，不能直接等同于一个汉字或一个英文单词。计算上下文预算时，应使用目标模型对应的计数方式，并考虑接口包装和工具定义等内容。</p>
+<p>假设某教学接口的输入与预留输出共同受32000token限制。先预留4000token输出空间和3000token后续工具结果余量，当前输入上限就是：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>I</mi><mo>≤</mo><mn>32000</mn><mo>−</mo><mn>4000</mn><mo>−</mo><mn>3000</mn><mo>=</mo><mn>25000</mn></mrow><annotation encoding="application/x-tex">I \leq 32000 - 4000 - 3000 = 25000</annotation></semantics></math></span>
+<p>其中<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi></mrow><annotation encoding="application/x-tex">I</annotation></semantics></math></span>表示本轮准备的输入量。这里是预算示例，不是任何产品的实际窗口配置；不同接口对输入、输出和内部处理的限制需要单独核对。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>当前输入内容</th><th align="right">教学预算</th><th>为什么需要它</th></tr></thead><tbody><tr><td>系统约束、工具定义与格式开销</td><td align="right">2000</td><td>说明可以做什么、怎样调用</td></tr><tr><td>任务目标与结构化状态</td><td align="right">3000</td><td>保存当前目标和已确认进度</td></tr><tr><td>必要的历史消息</td><td align="right">4000</td><td>保留会影响本轮判断的往返信息</td></tr><tr><td>当前问题对应的证据</td><td align="right">12000</td><td>支撑事实判断与引用</td></tr><tr><td>已获得的工具结果</td><td align="right">4000</td><td>让模型知道实际发生了什么</td></tr></tbody></table>
+<p>如果检索结果突然多了8000token，就不能只把表格最后的内容机械截掉。需要先判断哪些材料重复、哪些证据只与已经结束的分支有关，再调整输入。<strong>用户约束、否定条件和未决状态的重要性，并不由它们出现得早晚决定。</strong></p>
+<h2 id="section-滑动窗口摘要和结构化状态各会丢失什么">滑动窗口、摘要和结构化状态各会丢失什么</h2>
+<p>滑动窗口保留最近若干条消息，容易实现，但可能删掉较早确认的条件。例如最新消息只说“继续处理”，真正限制外发的要求却在更早的消息里。</p>
+<p>摘要可以保留更长历史的大意，但压缩过程也会改变信息。“只允许读取A目录，不允许上传”若被压成“可以处理A目录”，关键的禁止条件就丢失了。摘要还可能把“正在尝试”写成“已经完成”。因此应检查<strong>实体、时间、否定、权限和状态</strong>是否保真，不能只计算压缩率。</p>
+<p>结构化状态把需要稳定保留的信息放到字段中，例如<code>allowed_paths</code>、<code>pending_operations</code>、<code>confirmed_results</code>。字段的含义较明确，也方便程序校验；代价是需要维护Schema，并处理旧版本迁移。它适合保存可明确建模的信息，原始证据仍应保留可追溯引用。</p>
+<p>实际可以组合使用：关键约束和任务状态结构化保存，近期往返保留原消息，较早的辅助信息做摘要，详细资料在需要时检索。工具调用与返回结果还要保留关联关系，避免只留下“调用成功”却不知道是哪一次调用。</p>
+<h2 id="section-记忆写入以后还需要更新去重和失效">记忆写入以后，还需要更新、去重和失效</h2>
+<p>假设用户在1月要求默认导出PDF，3月明确改成默认Markdown。记忆项可以保存主体、偏好内容、适用范围、来源、版本以及生效时间。新信息到来后，系统需要判断它是在修改长期偏好，还是只要求这一次例外。</p>
+<p>“这次请导出PDF”不能自动覆盖“长期默认Markdown”；一份较新的外部文档，也不能自动覆盖用户本人确认的个人偏好。<strong>更新时间只是判断依据之一，来源权威性和适用范围也要一起看。</strong></p>
+<p>去重同样不能只看句子相似。可以按主体、属性、范围和版本建立逻辑键，把重复表达关联到同一记忆项；不同时间或不同项目的要求，即使文本相似，也可能应该分别保留。用于语义检索的向量可以帮助找到候选重复项，但不能单独决定两条事实等价。</p>
+<p>过期可以由有效期、业务事件或新版本触发。临时出差地点适合明确时间范围，长期语言偏好则不应随意设置一个很短的TTL。所谓TTL，是数据在约定时间后应被视为失效的期限；它不能代替来源与版本判断。</p>
+<p>用户要求删除记忆时，还要检查主记录、检索索引、摘要和缓存。如果主表删了，向量索引里仍能检索到旧内容，后续请求就可能再次使用它。系统应规定删除传播过程、审计数据的保留政策与实际可承诺的完成时间，不能把“从当前窗口移除”当作所有副本都已删除。</p>
+<h2 id="section-面试问答记忆的类型存储与生命周期">面试问答：记忆的类型、存储与生命周期</h2>
+<p><span id="q-FQ-doxcn7gx2uVBFNJC3BCz8bAn74c" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcn7gx2uVBFNJC3BCz8bAn74c"></a></p>
+<blockquote>
+<p>Memory 记忆管理：Memory 有哪些类型？分别如何实现？短期记忆和长期记忆在工程中如何进行存储、过期管理和去重？</p>
+</blockquote>
+<p><strong>回答：</strong> 可以按使用范围区分任务内工作记忆与跨会话长期记忆，也可以按内容区分事件记录、事实知识和操作经验。这两种分类维度不同，不能把每一种内容类型都固定绑定到某一种数据库。</p>
+<p>工作记忆保存当前目标、约束、消息、工具结果和待处理状态。短任务可以放在进程内，但需要跨重启恢复时，应使用检查点或持久任务状态。长期记忆保存需要在后续任务复用的信息，通常需要稳定记录ID、主体、来源、适用范围和版本；可用关系型或文档存储保留权威记录，全文或向量索引负责检索。</p>
+<p>写入时先判断内容是否值得长期保留，并区分用户确认事实与模型推测。去重以主体、属性和范围为基础，文本相似只辅助筛选。冲突处理比较来源、时间和有效范围，不机械采用最近一次覆盖。临时信息设置有效期，长期事实通过撤销或版本更新失效。读取时再验证权限和有效性，不能只在写入时校验一次。</p>
+<p>例如用户明确把默认格式从PDF改成Markdown，新版本应取代同一范围中的旧默认值；“本次用PDF”只构成一次任务覆盖。删除则需要同步处理权威记录、索引、摘要和相关缓存，避免旧内容通过派生数据重新进入上下文。</p>
+<p><strong>延伸追问（自拟）：把全部历史放进长上下文是否就不需要记忆管理？</strong> 仍需要。长窗口扩大了可传入内容，不自动完成事实更新、权限隔离、冲突解决或删除传播。全部历史还会增加成本与无关信息，必须评价实际任务效果。</p>
+<p>原问ID：<code>FQ-doxcn7gx2uVBFNJC3BCz8bAn74c</code>。出处：<a href="https://www.nowcoder.com/feed/main/detail/15af3788a038477bba99f2f9d94b2cef" rel="noopener noreferrer">原始面经</a>。</p>14:["$","$L24",null,{"html":"$25"}]
+15:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","span",null,{}],["$","$Lf",null,{"href":"/blog/backend-agent-s02-rag-evidence/","children":[["$","span",null,{"children":"下一篇"}],"上下文与RAG02｜RAG怎样把资料变成回答：检索、重排、引用与错误定位"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s01-04-langgraph-replay",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s01-04-langgraph-replay/","children":"Agent基础04｜LangGraph的中断、状态修订与重放：任务恢复后会重新执行什么"}],["$","span",null,{"children":"Agent"}]]}],["$","li","backend-agent-s01-05-intent-routing",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s01-05-intent-routing/","children":"Agent基础05｜意图识别与任务路由：遇到“帮我看看”时，怎样决定下一步"}],["$","span",null,{"children":"Agent"}]]}],["$","li","backend-agent-s01-loop",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s01-loop/","children":"Agent基础01｜Agent怎样完成一个任务：模型、工具、状态与执行循环"}],["$","span",null,{"children":"Agent"}]]}]]}]]}]]}]
+16:["$","$L26",null,{"contentId":"backend-agent-s02-context-memory"}]
+17:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+18:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4"]}]
+19:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1a:["$","$L27",null,{"children":["$","$20",null,{"name":"Next.MetadataOutlet","children":"$@28"}]}]
+23:true
+7:300
+28:null
+7:C
+22:0
+9:"$undefined"
+5:"$undefined"
+21:"$undefined"
+1b:"$undefined"

@@ -1,0 +1,111 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/ed72070de5f1647a.css","style"]
+:HL["/_next/static/css/6241f55ce16a0817.css","style"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s01-planning","s":["cpp-casts","merge-sort","series"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","backend-agent-s01-planning",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/6241f55ce16a0817.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"t75SI7oTDmNtBl3uMkJyg"}
+15:"static/chunks/5587-bf231f55b3fd3ee7.js"
+16:"static/chunks/8612-da6413c49129460e.js"
+17:"static/chunks/1133-0d344bd2ae49df3d.js"
+18:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+19:I[6279,["5587","$15","8612","$16","1133","$17","5953","$18"],"FilterLink"]
+1a:I[5128,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleToc"]
+1c:I[4711,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleBody"]
+6:C
+1d:T1dc6,<h2 id="section-任务还没查清楚时计划能确定到什么程度">任务还没查清楚时，计划能确定到什么程度</h2>
+<p>在<a href="/blog/backend-agent-s01-loop/">Agent执行循环</a>中，下一步取决于已经获得的信息。假设用户要求“查询订单，符合售后规则就建工单，然后通知我”，开始时只知道订单号，还不知道商品是否发出、是否已经处理过售后。</p>
+<p>这时可以确定“需要查询订单”，却不能把“工单将创建成功”当作事实。<strong>计划描述准备怎样达到目标，观察记录实际查到了什么，验收判断目标是否已经满足。</strong> 三者可以放在同一任务状态中，但需要分开保存。</p>
+<p>比较不同Agent范式时，我更关注的是：哪些决定可以提前做，哪些必须等外部信息回来以后再做。沿着这个问题看，ReAct和计划执行就比较容易区分。</p>
+<h2 id="section-react怎样根据观察选择下一步">ReAct怎样根据观察选择下一步</h2>
+<p><strong>ReAct</strong>将任务推理、外部行动和观察交替组织。一个动作带回新信息，后续决策再使用这些信息。原论文研究的是这种交替组织方式，并不意味着所有工程系统都要向用户展示完整推理文本。<a href="https://arxiv.org/abs/2210.03629" rel="noopener noreferrer">ReAct论文</a></p>
+<p>售后例子可以这样推进：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>当前已经确认的信息</th><th>下一项动作</th><th>新观察怎样改变后续任务</th></tr></thead><tbody><tr><td>只有订单号</td><td>查询订单</td><td>得到商品、发货状态和归属</td></tr><tr><td>订单未发货</td><td>查询适用规则与已有工单</td><td>确定是否允许创建、是否已经创建</td></tr><tr><td>存在同一事项的有效工单</td><td>返回已有工单</td><td>原本可能需要的创建步骤不再执行</td></tr><tr><td>没有工单且允许创建</td><td>提交创建请求</td><td>依据真实结果继续查询或完成</td></tr></tbody></table>
+<p>每一步只选择当前有依据的动作，适合路径会随环境变化的任务。代价是决策与工具调用可能反复往返，容易出现局部选择合理、整体却绕路的情况。比如连续搜索同一关键词，却始终不处理已经找到的订单号，就需要检查状态是否推进。</p>
+<p>运行日志应保存工具参数、调用ID、外部返回和状态变化。<strong>模型生成的解释不能替代这些执行证据。</strong></p>
+<h2 id="section-plan-and-execute怎样组织较长任务">Plan-and-Execute怎样组织较长任务</h2>
+<p><strong>Plan-and-Execute（计划与执行）</strong>先拆出子目标及其依赖，再逐项推进。计划可以由模型生成，也可以结合固定模板与程序规则；执行过程中还可以重新规划。</p>
+<p>例如生成一份售后统计报告，可以先安排：确定统计口径→读取订单与工单→清洗和关联→计算指标→检查结果→生成文件。读取两个独立数据源可以并行，计算指标则必须等口径和输入确认。</p>
+<p>一个有用的计划节点，应说明输入、预期产物、完成条件和依赖。例如“统计问题”太含糊，“按已确认的订单ID关联工单，输出未匹配记录和重复关联记录”才便于执行和检查。计划中的文件路径只是预期输出，直到文件实际生成并通过检查，才能转成已完成记录。</p>
+<p>如果读取时发现工单数据只覆盖近30天，原计划却要求统计整年，就要调整范围或补数据。继续生成全年结论会把输入缺口隐藏起来。重新规划时还要说明哪些旧产物仍有效：仅修改报告标题不一定需要重算数据，修改统计口径通常需要。</p>
+<h2 id="section-反馈修订怎样避免原地打转">反馈修订怎样避免原地打转</h2>
+<p><strong>反馈修订</strong>根据测试、外部检查或具体反例修改当前方案。反馈最好指向可观察的问题，例如“导出记录总数应为12，文件只有11条”，而不是只说“再认真想一遍”。</p>
+<p>假设教学数据中有12条订单，其中一条没有工单。实现使用内连接，结果只剩11条；检查指出缺失订单后，才能判断是否应改成左连接，以及没有工单的字段如何表达。若业务本来就要求只导出已建工单订单，则11条可能正确，需要先回到统计口径。</p>
+<p><strong>有反馈也需要判断反馈是否可靠。</strong> 错误测试、过期规则或不完整的参考答案都会误导修订。没有新证据的反复自评，不一定增加正确性，还可能让原本正确的结果被改错。</p>
+<h2 id="section-终止条件怎样覆盖成功和失败">终止条件怎样覆盖成功和失败</h2>
+<p>可以同时设置目标验收、调用预算、时间预算和无进展检测。成功由产物与规则决定；缺少必要输入时等待补充；工具结果未知时进入查询或对账；预算耗尽时明确记录尚未完成的部分。</p>
+<p>例如连续三次得到同样的权限错误，且身份和任务范围没有改变，再试一次通常不会产生新信息。程序应停止这条调用路径。若返回的是“任务仍在处理”，则可按约定间隔轮询，但仍需要截止时间。</p>
+<p>两种范式也可以组合：外层计划确定几个子目标，内层使用短ReAct循环处理每个子目标的未知信息。比较收益时固定任务集和工具条件，观察成功率、步骤数、延迟与成本，才能判断额外规划是否值得。</p>
+<h2 id="section-面试问答react与plan模式有什么区别">面试问答：ReAct与Plan模式有什么区别</h2>
+<p><span id="q-FQ-doxcn4rEgeHTfAaqbOkE6fTpUsd" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcn4rEgeHTfAaqbOkE6fTpUsd"></a></p>
+<blockquote>
+<p>ReAct 和 Plan 模式有什么区别？</p>
+</blockquote>
+<p><strong>回答：</strong> ReAct根据当前观察选择动作，动作返回后继续决策；Plan模式通常先生成子目标及依赖，再由执行阶段推进，并在需要时修订计划。区别主要在决策粒度和规划时机，不是一个有反馈、另一个完全没有反馈。</p>
+<p>ReAct适合信息需要逐步获取、路径变化较多的任务，例如先查订单，再依据状态决定是否查售后规则。它能及时利用外部反馈，但调用轮次可能较多，也可能局部绕路。计划执行适合依赖明确、跨度较长的任务，例如资料汇总后计算指标再生成报告；它便于检查覆盖和安排并行，但初始计划可能建立在错误假设上。</p>
+<p>实现时，两者都需要持久状态、工具校验、预算与验收。计划节点要给出输入输出和完成条件，执行结果必须有真实证据；发现前提变化后，要使受影响节点和产物失效，再重新规划。固定流程与模型决策也可以混用，权限检查仍由可信程序执行。</p>
+<p><strong>延伸追问（自拟）：怎样防止循环或反复改计划？</strong> 记录动作、参数、状态版本和新信息，识别重复错误与无进展；为局部修订设置预算，并把缺输入、结果未知和成功分成不同终态。重复次数只是保护，真正的完成判定仍要对照目标。</p>
+<p>原问ID：<code>FQ-doxcn4rEgeHTfAaqbOkE6fTpUsd</code>。出处：<a href="https://www.nowcoder.com/discuss/922659050167226368" rel="noopener noreferrer">原始面经</a>。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"Agent基础03｜Agent怎样规划和调整任务：ReAct、计划执行与反馈修订"}],["$","p",null,{"className":"article-deck","children":"沿一次带条件的售后任务，比较逐步决策与先规划后执行，并说明计划、执行证据和反思如何配合"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,873"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",6," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L19","Agent",{"href":"/blog/#tag=Agent","children":"Agent"}]]}]]}],["$","$L1a",null,{"headings":[{"id":"section-任务还没查清楚时计划能确定到什么程度","text":"任务还没查清楚时，计划能确定到什么程度","level":2},{"id":"section-react怎样根据观察选择下一步","text":"ReAct怎样根据观察选择下一步","level":2},{"id":"section-plan-and-execute怎样组织较长任务","text":"Plan-and-Execute怎样组织较长任务","level":2},{"id":"section-反馈修订怎样避免原地打转","text":"反馈修订怎样避免原地打转","level":2},{"id":"section-终止条件怎样覆盖成功和失败","text":"终止条件怎样覆盖成功和失败","level":2},{"id":"section-面试问答react与plan模式有什么区别","text":"面试问答：ReAct与Plan模式有什么区别","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1b",["$","$L1c",null,{"html":"$1d"}],"$undefined","$L1e","$L1f","$L20"]}],"$L21"]}]]}]
+22:I[2708,["5587","$15","8612","$16","1133","$17","5953","$18"],"FeedbackForm"]
+23:I[3498,["5587","$15","8612","$16","1133","$17","5953","$18"],"default"]
+1f:["$","$L22",null,{"contentId":"backend-agent-s01-planning"}]
+20:["$","div",null,{"className":"related-note","children":[["$","$L23",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+21:["$","$L1a",null,{"headings":["$9:props:children:1:props:headings:0","$9:props:children:1:props:headings:1","$9:props:children:1:props:headings:2","$9:props:children:1:props:headings:3","$9:props:children:1:props:headings:4","$9:props:children:1:props:headings:5"]}]
+1e:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$L23",null,{"href":"/blog/backend-agent-s01-recovery/","children":[["$","span",null,{"children":"上一篇"}],"Agent基础02｜Agent中断后怎样继续：检查点、幂等与结果未知"]}],["$","$L23",null,{"href":"/blog/backend-agent-s01-04-langgraph-replay/","children":[["$","span",null,{"children":"下一篇"}],"Agent基础04｜LangGraph的中断、状态修订与重放：任务恢复后会重新执行什么"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s01-loop",{"children":[["$","$L23",null,{"href":"/blog/backend-agent-s01-loop/","children":"Agent基础01｜Agent怎样完成一个任务：模型、工具、状态与执行循环"}],["$","span",null,{"children":"Agent"}]]}]]}]]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+12:[["$","title","0",{"children":"Agent基础03｜Agent怎样规划和调整任务：ReAct、计划执行与反馈修订 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"沿一次带条件的售后任务，比较逐步决策与先规划后执行，并说明计划、执行证据和反思如何配合。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s01-planning/"}]]
+24:Tb2c,(()=>{const d={"wallpaper":"banner","layout":"list","cardStyle":"soft","textSize":"normal","hero":true,"carousel":false,"waves":false,"fade":true,"motion":true,"typewriter":true,"progress":true,"petals":false,"dim":28,"blur":0,"cardOpacity":78,"colorMode":"section","customColor":"#32846b","sectionColors":{},"customTheme":"","sectionThemes":{}},enums={"wallpaper":["banner","fullscreen","overlay","none"],"layout":["list","grid"],"cardStyle":["soft","flat"],"textSize":["normal","large"],"colorMode":["section","custom"]},bools=["hero","carousel","waves","fade","motion","typewriter","progress","petals"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]));const color=(function(a,b){let c=b.startsWith("/credits")?"about":b.split("/")[1],d=["home","blog","research","projects","about"].includes(c)?c:"home",e=(a.sectionColors&&"object"==typeof a.sectionColors&&!Array.isArray(a.sectionColors)?a.sectionColors:{})[d],f="string"==typeof e&&/^#[\da-f]{6}$/i.test(e)?e.toLowerCase():void 0,g="string"==typeof a.customColor&&/^#[\da-f]{6}$/i.test(a.customColor)?a.customColor.toLowerCase():"#32846b",h=a.sectionThemes&&"object"==typeof a.sectionThemes&&!Array.isArray(a.sectionThemes)?a.sectionThemes:{},i="custom"===a.colorMode?a.customTheme:h[d],j="string"==typeof i&&["home","blog","research","projects","about"].includes(i)?i:void 0;return{section:d,color:"custom"===a.colorMode?g:f??g,customized:"custom"===a.colorMode?!j:!!f,theme:j??d}})(p,location.pathname);document.documentElement.setAttribute('data-custom-palette',String(color.customized));document.documentElement.setAttribute('data-palette-section',color.theme);const palette=(function(a){let b=/^#[\da-f]{6}$/i.test(a)?a:"#32846b",c=[1,3,5].map(a=>Number.parseInt(b.slice(a,a+2),16)),d={};for(let[a,[b,e]]of Object.entries({"light-page":[248,.09],"light-surface":[255,.025],"light-surface-soft":[252,.05],"light-surface-raised":[246,.08],"light-ink":[0,.15],"light-muted":[0,.32],"light-line":[213,.12],"light-accent":[0,.4],"light-accent-strong":[0,.3],"light-accent-soft":[248,.1],"light-on-accent":[255,0],"dark-page":[16,.025],"dark-surface":[26,.045],"dark-surface-soft":[22,.04],"dark-surface-raised":[33,.06],"dark-ink":[255,.12],"dark-muted":[255,.34],"dark-line":[72,.1],"dark-accent":[255,.35],"dark-accent-strong":[255,.22],"dark-accent-soft":[24,.1],"dark-on-accent":[0,.1]}))d[`--palette-${a}`]=`#${c.map(a=>Math.round(b*(1-e)+a*e).toString(16).padStart(2,"0")).join("")}`;return d})(color.color);for(const k in palette)document.documentElement.style.setProperty(k,palette[k])})()2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$24"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],"$L25"]}],"$L26"]}]
+27:"static/chunks/7107-d67496718f7d4082.js"
+28:"static/chunks/app/layout-883cb555fbda7bdc.js"
+29:I[5376,["5587","$15","7107","$27","7177","$28"],"DisplayProvider"]
+2a:"NavigationFeedback"
+2b:I[2842,["5587","$15","7107","$27","7177","$28"],"$2a"]
+2c:I[4085,["5587","$15","7107","$27","7177","$28"],"SiteHeader"]
+2d:I[5803,["5587","$15","7107","$27","7177","$28"],"SiteFrame"]
+2e:I[164,["5587","$15","7107","$27","7177","$28"],"ProfileSidebar"]
+25:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]
+26:["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L29",null,{"children":[["$","$L2b",null,{}],["$","$L2c",null,{"tags":["编程语言知识点","Python","C++"],"categoryIds":["foundations","frontend","backend","agent","computing","ai","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L2d",null,{"sidebar":["$","$L2e",null,{"categoryIds":"$26:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L23",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L23",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L23",null,{"href":"/about/","children":"关于这个站点"}],["$","$L23",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]
+1b:["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$L23",null,{"href":"/blog/series/agent-foundations/","children":"Agent执行与任务恢复"}],["$","span",null,{"children":[3," / ",5," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s01-loop",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s01-loop/","aria-current":"$undefined","children":"Agent基础01｜Agent怎样完成一个任务：模型、工具、状态与执行循环"}]}],["$","li","backend-agent-s01-recovery",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s01-recovery/","aria-current":"$undefined","children":"Agent基础02｜Agent中断后怎样继续：检查点、幂等与结果未知"}]}],["$","li","backend-agent-s01-planning",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s01-planning/","aria-current":"page","children":"Agent基础03｜Agent怎样规划和调整任务：ReAct、计划执行与反馈修订"}]}],["$","li","backend-agent-s01-04-langgraph-replay",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s01-04-langgraph-replay/","aria-current":"$undefined","children":"Agent基础04｜LangGraph的中断、状态修订与重放：任务恢复后会重新执行什么"}]}],["$","li","backend-agent-s01-05-intent-routing",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s01-05-intent-routing/","aria-current":"$undefined","children":"Agent基础05｜意图识别与任务路由：遇到“帮我看看”时，怎样决定下一步"}]}]]}]]}]]}]
+14:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L23",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L23",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$L23",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L19",null,{"className":"trail-current","href":"/blog/#agent","children":["Agent",["$","span",null,{"children":25}]]}],"$undefined"]}]

@@ -1,0 +1,158 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/ed72070de5f1647a.css","style"]
+:HL["/_next/static/css/6241f55ce16a0817.css","style"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s07-sql-semantics","s":["cpp-casts","merge-sort","series"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","backend-agent-s07-sql-semantics",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/6241f55ce16a0817.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"t75SI7oTDmNtBl3uMkJyg"}
+15:"static/chunks/5587-bf231f55b3fd3ee7.js"
+16:"static/chunks/8612-da6413c49129460e.js"
+17:"static/chunks/1133-0d344bd2ae49df3d.js"
+18:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+19:I[6279,["5587","$15","8612","$16","1133","$17","5953","$18"],"FilterLink"]
+1a:I[5128,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleToc"]
+1c:I[4711,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleBody"]
+6:C
+1d:T26c8,<h2 id="section-写查询前先确定要返回哪些对象">写查询前，先确定要返回哪些对象</h2>
+<p>“查出客户和订单”还不足以确定SQL。结果可以每个客户一行，也可以每笔订单一行；没有下单的客户要不要出现，也会改变连接方式。<strong>结果的粒度，就是一行代表什么对象。</strong> 先把这个问题说明白，后面的JOIN、聚合和去重才有依据。</p>
+<p>本文使用MySQL8.4支持的SQL语义。为了让算例容易复查，查询只使用常见的聚合和窗口函数；本地验证采用SQLite检查这些具体算例的结果，不代表运行了MySQL执行计划或锁行为。</p>
+<h2 id="section-left-join保留客户订单数量要数哪一列">LEFT JOIN保留客户，订单数量要数哪一列</h2>
+<p>假设客户表有A、B两人，订单表中A有两笔订单10、11，B没有订单。执行客户到订单的LEFT JOIN，结果为：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>客户</th><th align="right">订单ID</th></tr></thead><tbody><tr><td>A</td><td align="right">10</td></tr><tr><td>A</td><td align="right">11</td></tr><tr><td>B</td><td align="right">NULL</td></tr></tbody></table>
+<p>LEFT JOIN为没有匹配订单的B保留一行，并把订单侧字段补为NULL。于是按客户分组后，A的<code>COUNT(*)</code>为2，B的<code>COUNT(*)</code>为1；如果订单ID保证非空，<code>COUNT(order_id)</code>才分别得到2和0。</p>
+<p><strong>COUNT(*)数结果行，COUNT(表达式)数该表达式非NULL的行。</strong> NULL表示缺失或未知等情况，条件判断需要使用<code>IS NULL</code>，不能把<code>= NULL</code>当成普通等号比较。<a href="https://dev.mysql.com/doc/refman/8.4/en/aggregate-functions.html" rel="noopener noreferrer">MySQL聚合函数</a></p>
+<p>连接后再加<code>WHERE orders.status = 'paid'</code>，B那一行不会通过条件。如果目标是“保留所有客户，只统计已支付订单”，可以把订单状态限制放在LEFT JOIN的ON条件里，再数订单ID。条件放在哪里，改变的是哪些行在连接和过滤后留下来，不能只按SQL长得是否相似判断。</p>
+<p>同样需要注意一对多的连续连接。如果A有2笔订单、3个独立标签，直接同时连接可能生成6行。此时对订单金额求和会重复累计。应分别按目标粒度聚合，再连接汇总结果；<code>DISTINCT</code>也不能随意修复，因为两笔真实订单可能金额相同。</p>
+<h2 id="section-第二高要先确定重复值怎样参与排名">“第二高”要先确定重复值怎样参与排名</h2>
+<p>假设薪资依次为100、100、90、80。只说“第二高”，可能指排序后的第2个人，也可能指第2种不同薪资；这两种要求的答案分别可能为100和90。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="right">薪资（降序）</th><th align="right">ROW_NUMBER</th><th align="right">RANK</th><th align="right">DENSE_RANK</th></tr></thead><tbody><tr><td align="right">100</td><td align="right">1</td><td align="right">1</td><td align="right">1</td></tr><tr><td align="right">100</td><td align="right">2</td><td align="right">1</td><td align="right">1</td></tr><tr><td align="right">90</td><td align="right">3</td><td align="right">3</td><td align="right">2</td></tr><tr><td align="right">80</td><td align="right">4</td><td align="right">4</td><td align="right">3</td></tr></tbody></table>
+<p><strong>ROW_NUMBER给每行不同序号；RANK给并列项相同名次，并跳过被并列占用的后续名次；DENSE_RANK的名次连续。</strong> 若要区分两个100属于谁，ROW_NUMBER的排序应补充唯一ID，避免并列行的顺序未定义。<a href="https://dev.mysql.com/doc/refman/8.4/en/window-function-descriptions.html" rel="noopener noreferrer">MySQL窗口排名函数</a></p>
+<p>这里把“第二高薪资”明确解释为<strong>第二种不同的非NULL薪资</strong>，并约定不存在时返回一行NULL。一个直接写法是：</p>
+<div class="code-block"><div class="code-toolbar"><span>sql</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">MAX</span>(salary) <span class="hljs-keyword">AS</span> second_salary
+<span class="hljs-keyword">FROM</span> employee
+<span class="hljs-keyword">WHERE</span> salary <span class="hljs-operator">&#x3C;</span> (<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">MAX</span>(salary) <span class="hljs-keyword">FROM</span> employee);
+</code></pre></div>
+<p>内层先得到100，外层保留所有低于100的薪资，再从90和80中取最大值90。重复的100不会影响结果；只有100或表为空时，外层聚合仍返回一行，其值为NULL。</p>
+<p>窗口函数也能表达同一要求：</p>
+<div class="code-block"><div class="code-toolbar"><span>sql</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-sql"><span class="hljs-keyword">WITH</span> ranked <span class="hljs-keyword">AS</span> (
+    <span class="hljs-keyword">SELECT</span> salary,
+           <span class="hljs-built_in">DENSE_RANK</span>() <span class="hljs-keyword">OVER</span> (<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> salary <span class="hljs-keyword">DESC</span>) <span class="hljs-keyword">AS</span> salary_rank
+    <span class="hljs-keyword">FROM</span> employee
+    <span class="hljs-keyword">WHERE</span> salary <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT NULL</span>
+)
+<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">MAX</span>(salary) <span class="hljs-keyword">AS</span> second_salary
+<span class="hljs-keyword">FROM</span> ranked
+<span class="hljs-keyword">WHERE</span> salary_rank <span class="hljs-operator">=</span> <span class="hljs-number">2</span>;
+</code></pre></div>
+<p>外层MAX把多个并列的第二高值收成一行，也统一了不存在时的返回形式。若题目要返回所有第二高薪资的员工，就应该保留员工ID并直接筛选第2名，不能再只聚合薪资。</p>
+<h2 id="section-分页为什么需要稳定排序还需要考虑数据变化">分页为什么需要稳定排序，还需要考虑数据变化</h2>
+<p>按<code>created_at DESC</code>展示订单时，同一时间可能存在多笔订单。加上<code>id DESC</code>形成唯一的排序次序，才方便确定一页最后一行的位置。</p>
+<p>例如上一页末尾是<code>(created_at, id) = (T, 105)</code>，下一页可查：</p>
+<div class="code-block"><div class="code-toolbar"><span>sql</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> id, created_at
+<span class="hljs-keyword">FROM</span> orders
+<span class="hljs-keyword">WHERE</span> created_at <span class="hljs-operator">&#x3C;</span> :<span class="hljs-type">time</span>
+   <span class="hljs-keyword">OR</span> (created_at <span class="hljs-operator">=</span> :<span class="hljs-type">time</span> <span class="hljs-keyword">AND</span> id <span class="hljs-operator">&#x3C;</span> :id)
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> created_at <span class="hljs-keyword">DESC</span>, id <span class="hljs-keyword">DESC</span>
+LIMIT :page_size;
+</code></pre></div>
+<p><code>:time</code>等是示意参数，实际占位符取决于数据库驱动。这个方法按<strong>游标记录的位置继续查</strong>，避免深度OFFSET先跳过大量行的成本，也减轻前面新增记录导致的位置漂移。它要求索引、排序方向和比较条件相互匹配。</p>
+<p>但游标分页没有自动提供跨请求快照。若旧订单的排序字段被修改，或权限条件改变，后续页面仍可能出现遗漏或重复。需要严格的一次性导出时，还要设计一致性快照或固定的数据版本；普通动态列表则应明确刷新和去重策略。</p>
+<h2 id="section-面试问答查询第二高薪资">面试问答：查询第二高薪资</h2>
+<p><span id="q-FQ-doxcnE7SgCCO2PyqAY4jF1gOsVb" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnE7SgCCO2PyqAY4jF1gOsVb"></a></p>
+<blockquote>
+<p>SQL：一张表 id、薪资，查询薪资第二高的员工的薪资。</p>
+</blockquote>
+<p><strong>回答：</strong> 先确认“第二高”是第二个员工还是第二种不同薪资，以及不存在时的返回约定。按第二种不同的非NULL薪资解释，可先用MAX查出最高薪资，再查询低于它的最大薪资。100、100、90、80会得到90；只有100或没有数据时，聚合结果为NULL。</p>
+<p>使用窗口函数时应选DENSE_RANK，因为RANK在最高薪资并列时会跳过第2名。先过滤NULL、按薪资降序生成密集排名，再选排名2，即可找到第二档薪资。题目只要薪资时可以收成一个值；若要全部对应员工，应保留这些员工的行。</p>
+<p>性能还要结合数据规模和薪资索引验证。两种SQL语义上能表达目标，不表示它们在任意数据分布下有相同执行成本。数据量大时应查看实际执行计划及扫描量。</p>
+<p><strong>延伸追问（自拟）：使用LIMIT 1 OFFSET 1是否正确？</strong> 直接对员工行排序会受重复最高薪资影响。若先对非NULL薪资DISTINCT再排序，它可以表达第二种薪资，但空结果是零行；仍要按接口要求决定是否包装成一行NULL。</p>
+<p>原问ID：<code>FQ-doxcnE7SgCCO2PyqAY4jF1gOsVb</code>。出处：<a href="https://www.nowcoder.com/feed/main/detail/73c968a00be84af88e07f6e7b0d397c7" rel="noopener noreferrer">原始面经</a>。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"数据库与缓存04｜SQL查出的行代表什么：JOIN、NULL、排名与稳定分页"}],["$","p",null,{"className":"article-deck","children":"先确定每一行的含义，再推演连接后的重复、空值计数和第二高薪资，最后说明分页排序为何需要唯一的次级键"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,590"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L19","SQL",{"href":"/blog/#tag=SQL","children":"SQL"}]]}]]}],["$","$L1a",null,{"headings":[{"id":"section-写查询前先确定要返回哪些对象","text":"写查询前，先确定要返回哪些对象","level":2},{"id":"section-left-join保留客户订单数量要数哪一列","text":"LEFT JOIN保留客户，订单数量要数哪一列","level":2},{"id":"section-第二高要先确定重复值怎样参与排名","text":"“第二高”要先确定重复值怎样参与排名","level":2},{"id":"section-分页为什么需要稳定排序还需要考虑数据变化","text":"分页为什么需要稳定排序，还需要考虑数据变化","level":2},{"id":"section-面试问答查询第二高薪资","text":"面试问答：查询第二高薪资","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1b",["$","$L1c",null,{"html":"$1d"}],"$undefined","$L1e","$L1f","$L20"]}],"$L21"]}]]}]
+22:I[2708,["5587","$15","8612","$16","1133","$17","5953","$18"],"FeedbackForm"]
+23:I[3498,["5587","$15","8612","$16","1133","$17","5953","$18"],"default"]
+1f:["$","$L22",null,{"contentId":"backend-agent-s07-sql-semantics"}]
+20:["$","div",null,{"className":"related-note","children":[["$","$L23",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+21:["$","$L1a",null,{"headings":["$9:props:children:1:props:headings:0","$9:props:children:1:props:headings:1","$9:props:children:1:props:headings:2","$9:props:children:1:props:headings:3","$9:props:children:1:props:headings:4"]}]
+1e:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$L23",null,{"href":"/blog/backend-agent-s07-cache-consistency/","children":[["$","span",null,{"children":"上一篇"}],"数据库与缓存03｜先更新数据库再删除缓存之后：旧值回填、一致性与缓存保护"]}],["$","$L23",null,{"href":"/blog/backend-agent-s07-logs-recovery/","children":[["$","span",null,{"children":"下一篇"}],"数据库与缓存05｜数据库崩溃后怎样恢复：redo、undo、binlog与提交结果"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","postgresql-tables-queries",{"children":[["$","$L23",null,{"href":"/blog/postgresql-tables-queries/","children":"PostgreSQL入门（一）：表、SQL、约束与索引"}],["$","span",null,{"children":"后端与数据库"}]]}],["$","li","psycopg-driver-parameters",{"children":[["$","$L23",null,{"href":"/blog/psycopg-driver-parameters/","children":"psycopg入门：数据库驱动、参数绑定与类型适配"}],["$","span",null,{"children":"后端与数据库"}]]}],["$","li","backend-agent-s05-streaming",{"children":[["$","$L23",null,{"href":"/blog/backend-agent-s05-streaming/","children":"网络与操作系统03｜页面怎样持续收到任务进度：SSE、WebSocket与断线恢复"}],["$","span",null,{"children":"后端与数据库"}]]}]]}]]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+12:[["$","title","0",{"children":"数据库与缓存04｜SQL查出的行代表什么：JOIN、NULL、排名与稳定分页 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"先确定每一行的含义，再推演连接后的重复、空值计数和第二高薪资，最后说明分页排序为何需要唯一的次级键。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s07-sql-semantics/"}]]
+24:Tb2c,(()=>{const d={"wallpaper":"banner","layout":"list","cardStyle":"soft","textSize":"normal","hero":true,"carousel":false,"waves":false,"fade":true,"motion":true,"typewriter":true,"progress":true,"petals":false,"dim":28,"blur":0,"cardOpacity":78,"colorMode":"section","customColor":"#32846b","sectionColors":{},"customTheme":"","sectionThemes":{}},enums={"wallpaper":["banner","fullscreen","overlay","none"],"layout":["list","grid"],"cardStyle":["soft","flat"],"textSize":["normal","large"],"colorMode":["section","custom"]},bools=["hero","carousel","waves","fade","motion","typewriter","progress","petals"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]));const color=(function(a,b){let c=b.startsWith("/credits")?"about":b.split("/")[1],d=["home","blog","research","projects","about"].includes(c)?c:"home",e=(a.sectionColors&&"object"==typeof a.sectionColors&&!Array.isArray(a.sectionColors)?a.sectionColors:{})[d],f="string"==typeof e&&/^#[\da-f]{6}$/i.test(e)?e.toLowerCase():void 0,g="string"==typeof a.customColor&&/^#[\da-f]{6}$/i.test(a.customColor)?a.customColor.toLowerCase():"#32846b",h=a.sectionThemes&&"object"==typeof a.sectionThemes&&!Array.isArray(a.sectionThemes)?a.sectionThemes:{},i="custom"===a.colorMode?a.customTheme:h[d],j="string"==typeof i&&["home","blog","research","projects","about"].includes(i)?i:void 0;return{section:d,color:"custom"===a.colorMode?g:f??g,customized:"custom"===a.colorMode?!j:!!f,theme:j??d}})(p,location.pathname);document.documentElement.setAttribute('data-custom-palette',String(color.customized));document.documentElement.setAttribute('data-palette-section',color.theme);const palette=(function(a){let b=/^#[\da-f]{6}$/i.test(a)?a:"#32846b",c=[1,3,5].map(a=>Number.parseInt(b.slice(a,a+2),16)),d={};for(let[a,[b,e]]of Object.entries({"light-page":[248,.09],"light-surface":[255,.025],"light-surface-soft":[252,.05],"light-surface-raised":[246,.08],"light-ink":[0,.15],"light-muted":[0,.32],"light-line":[213,.12],"light-accent":[0,.4],"light-accent-strong":[0,.3],"light-accent-soft":[248,.1],"light-on-accent":[255,0],"dark-page":[16,.025],"dark-surface":[26,.045],"dark-surface-soft":[22,.04],"dark-surface-raised":[33,.06],"dark-ink":[255,.12],"dark-muted":[255,.34],"dark-line":[72,.1],"dark-accent":[255,.35],"dark-accent-strong":[255,.22],"dark-accent-soft":[24,.1],"dark-on-accent":[0,.1]}))d[`--palette-${a}`]=`#${c.map(a=>Math.round(b*(1-e)+a*e).toString(16).padStart(2,"0")).join("")}`;return d})(color.color);for(const k in palette)document.documentElement.style.setProperty(k,palette[k])})()2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$24"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],"$L25"]}],"$L26"]}]
+1b:["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$L23",null,{"href":"/blog/series/database-cache/","children":"数据库与缓存"}],["$","span",null,{"children":[4," / ",11," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s07-index-query",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-index-query/","aria-current":"$undefined","children":"数据库与缓存01｜MySQL索引怎样减少查询工作：B+树、回表与联合索引"}]}],["$","li","backend-agent-s07-transactions",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-transactions/","aria-current":"$undefined","children":"数据库与缓存02｜并发事务究竟读到什么：RC、RR、MVCC与锁"}]}],["$","li","backend-agent-s07-cache-consistency",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-cache-consistency/","aria-current":"$undefined","children":"数据库与缓存03｜先更新数据库再删除缓存之后：旧值回填、一致性与缓存保护"}]}],["$","li","backend-agent-s07-sql-semantics",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-sql-semantics/","aria-current":"page","children":"数据库与缓存04｜SQL查出的行代表什么：JOIN、NULL、排名与稳定分页"}]}],["$","li","backend-agent-s07-logs-recovery",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-logs-recovery/","aria-current":"$undefined","children":"数据库与缓存05｜数据库崩溃后怎样恢复：redo、undo、binlog与提交结果"}]}],["$","li","backend-agent-s07-redis-durability",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-redis-durability/","aria-current":"$undefined","children":"数据库与缓存06｜Redis的数据怎样保存：数据类型、RDB、AOF与复制"}]}],["$","li","backend-agent-s07-07-explain",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-07-explain/","aria-current":"$undefined","children":"数据库与缓存07｜怎样读MySQL执行计划：六行数据的EXPLAIN与索引实验"}]}],["$","li","backend-agent-s07-08-two-sessions",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-08-two-sessions/","aria-current":"$undefined","children":"数据库与缓存08｜两次SELECT为什么结果不同：MySQL双会话隔离与锁实验"}]}],["$","li","backend-agent-s07-09-redis-encoding",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-09-redis-encoding/","aria-current":"$undefined","children":"数据库与缓存09｜Redis类型怎样落到内存：紧凑编码、跳表与容量估算"}]}],["$","li","backend-agent-s07-10-cache-protection",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-10-cache-protection/","aria-current":"$undefined","children":"数据库与缓存10｜缓存失效以后怎样保护数据库：穿透、击穿、雪崩与回源合并"}]}],["$","li","backend-agent-s07-11-multilevel-cache",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-11-multilevel-cache/","aria-current":"$undefined","children":"数据库与缓存11｜本地缓存与Redis怎样协同：版本、失效通知和断线恢复"}]}]]}]]}]]}]
+27:"static/chunks/7107-d67496718f7d4082.js"
+28:"static/chunks/app/layout-883cb555fbda7bdc.js"
+29:I[5376,["5587","$15","7107","$27","7177","$28"],"DisplayProvider"]
+2a:"NavigationFeedback"
+2b:I[2842,["5587","$15","7107","$27","7177","$28"],"$2a"]
+2c:I[4085,["5587","$15","7107","$27","7177","$28"],"SiteHeader"]
+2d:I[5803,["5587","$15","7107","$27","7177","$28"],"SiteFrame"]
+2e:I[164,["5587","$15","7107","$27","7177","$28"],"ProfileSidebar"]
+25:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]
+26:["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L29",null,{"children":[["$","$L2b",null,{}],["$","$L2c",null,{"tags":["编程语言知识点","Python","C++"],"categoryIds":["foundations","frontend","backend","agent","computing","ai","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L2d",null,{"sidebar":["$","$L2e",null,{"categoryIds":"$26:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L23",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L23",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L23",null,{"href":"/about/","children":"关于这个站点"}],["$","$L23",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]
+14:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L23",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L23",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$L23",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L19",null,{"className":"trail-current","href":"/blog/#backend","children":["后端与数据库",["$","span",null,{"children":33}]]}],"$undefined"]}]

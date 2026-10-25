@@ -1,0 +1,115 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/ed72070de5f1647a.css","style"]
+:HL["/_next/static/css/6241f55ce16a0817.css","style"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s06-10-cpp","s":["cpp-casts","merge-sort","series"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","backend-agent-s06-10-cpp",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/6241f55ce16a0817.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"t75SI7oTDmNtBl3uMkJyg"}
+15:"static/chunks/5587-bf231f55b3fd3ee7.js"
+16:"static/chunks/8612-da6413c49129460e.js"
+17:"static/chunks/1133-0d344bd2ae49df3d.js"
+18:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+19:I[6279,["5587","$15","8612","$16","1133","$17","5953","$18"],"FilterLink"]
+1a:I[5128,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleToc"]
+1c:I[4711,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleBody"]
+6:C
+1d:T26c7,<h2 id="section-资源释放为什么应该跟着对象生命周期">资源释放为什么应该跟着对象生命周期</h2>
+<p>打开文件、获取锁、申请内存或建立连接之后，正常返回、提前返回和异常退出都需要考虑释放。如果每条分支都手写close或unlock，新增一个返回分支就可能遗漏。</p>
+<p><strong>RAII（Resource Acquisition Is Initialization，资源获取即初始化）</strong>把资源所有权绑定到对象生命周期：对象取得资源，析构时释放。函数的局部拥有者离开作用域时，清理沿语言的对象生命周期执行。<a href="https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rr-raii" rel="noopener noreferrer">C++ Core Guidelines资源管理</a></p>
+<p>RAII管理的是“谁负责释放”，不只针对内存。文件、锁、Socket和事务守卫都可以采用类似设计；但事务提交、回滚等业务语义必须由具体对象定义，不能因为析构函数执行了就断言远端操作已撤销。</p>
+<h2 id="section-异常展开时哪些对象会析构">异常展开时哪些对象会析构</h2>
+<p>一个局部对象已经成功构造，随后抛出异常并向外寻找处理器，栈展开会按相应规则析构这些对象，顺序通常与完成构造的顺序相反。如果对象自身的构造失败，该对象的析构函数不会像完整对象那样运行，但已经构造完成的成员和基类会按规则清理。<a href="https://eel.is/c++draft/except.ctor" rel="noopener noreferrer">C++异常展开规则</a></p>
+<p>这也是把成员资源交给独立拥有者的重要原因。构造函数拿到裸资源后还可能抛异常，若资源没有被一个已构造的RAII成员接管，就可能在构造失败时泄漏。</p>
+<p>RAII依赖正常的作用域退出和适用的异常展开。进程被强行终止、某些立即终止路径或系统崩溃，不保证局部析构全部执行。因此文件落盘、外部提交和故障恢复仍需要各自机制。</p>
+<h2 id="section-unique_ptr和shared_ptr表达不同所有权">unique_ptr和shared_ptr表达不同所有权</h2>
+<p><strong>unique_ptr</strong>表示独占所有权，不能复制，但可以移动。移动把所有权交给新对象，原拥有者不再负责同一资源；通过get拿到的裸指针通常只是观察，不应再次包装成另一个独立拥有者。</p>
+<p><strong>shared_ptr</strong>通过共享控制块延长对象生命周期，最后一个相应共享拥有者释放后销毁对象。多个shared_ptr互相组成强引用环时，计数可能永远不归零，需要weak_ptr等方式打断不应拥有的关系。</p>
+<p>共享所有权也不等于对象内部线程安全。不同shared_ptr实例可以按其规则维护控制块，但多个线程修改同一个业务对象仍需要同步。选择shared_ptr之前，应先问“对象是否真的需要多个独立生命周期拥有者”，不要把它当作默认万能指针。</p>
+<h2 id="section-一段异常路径的完整例子">一段异常路径的完整例子</h2>
+<p>下面用计数器表示资源是否被持有，同时用lock_guard管理互斥锁。示例不读写文件，也不分配大块内存。</p>
+<div class="code-block"><div class="code-toolbar"><span>cpp</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&#x3C;cassert></span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&#x3C;iostream></span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&#x3C;memory></span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&#x3C;mutex></span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&#x3C;stdexcept></span></span>
+
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">Resource</span> {
+    <span class="hljs-type">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> alive = <span class="hljs-number">0</span>;
+    <span class="hljs-built_in">Resource</span>() { ++alive; }
+    ~<span class="hljs-built_in">Resource</span>() { --alive; }
+    <span class="hljs-built_in">Resource</span>(<span class="hljs-type">const</span> Resource&#x26;) = <span class="hljs-keyword">delete</span>;
+    Resource&#x26; <span class="hljs-keyword">operator</span>=(<span class="hljs-type">const</span> Resource&#x26;) = <span class="hljs-keyword">delete</span>;
+};
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">fail_after_acquire</span><span class="hljs-params">(std::mutex&#x26; mutex)</span> </span>{
+    <span class="hljs-function">std::lock_guard&#x3C;std::mutex> <span class="hljs-title">guard</span><span class="hljs-params">(mutex)</span></span>;
+    <span class="hljs-keyword">auto</span> resource = std::<span class="hljs-built_in">make_unique</span>&#x3C;Resource>();
+    <span class="hljs-built_in">assert</span>(Resource::alive == <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">throw</span> std::<span class="hljs-built_in">runtime_error</span>(<span class="hljs-string">"teaching failure"</span>);
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    std::mutex mutex;
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-built_in">fail_after_acquire</span>(mutex);
+    } <span class="hljs-keyword">catch</span> (<span class="hljs-type">const</span> std::runtime_error&#x26;) {
+        <span class="hljs-built_in">assert</span>(Resource::alive == <span class="hljs-number">0</span>);
+    }
+    <span class="hljs-comment">// 异常已经离开原作用域，锁守卫应完成解锁</span>
+    <span class="hljs-type">bool</span> locked = mutex.try_lock();
+    <span class="hljs-built_in">assert</span>(locked);
+    <span class="hljs-keyword">if</span> (locked) mutex.<span class="hljs-built_in">unlock</span>();
+    std::cout &#x3C;&#x3C; Resource::alive &#x3C;&#x3C; <span class="hljs-string">'\n'</span>;
+}
+</code></pre></div>
+<p>resource后于guard构造，异常展开先销毁unique_ptr及其Resource，再销毁锁守卫并解锁。预期最终输出0。这里alive只有一个线程访问，因此使用普通整数即可；若并发构造和析构，就需要另行同步这个教学计数器。</p>
+<p>析构函数通常不应让异常逃出，尤其在已有异常展开过程中，再抛出另一个异常可能导致终止。需要报告清理错误时，应通过明确的业务接口或可处理的状态设计，而不是让调用方毫无机会地接住析构异常。</p>
+<h2 id="section-有了锁守卫还要检查什么并发条件">有了锁守卫，还要检查什么并发条件</h2>
+<p>RAII帮助保证“拿到锁后能按作用域释放”，不自动保证锁的选择和顺序正确。线程A先锁X再锁Y，线程B先锁Y再锁X，仍可能死锁。多个锁可采用统一顺序或适用的联合加锁机制。</p>
+<p>条件变量也需要结合谓词循环。等待被唤醒，只说明应该重新检查条件，可能存在虚假唤醒或其他线程已消费条件；用“队列非空或停止”作为谓词，比“收到了通知就肯定有任务”更稳妥。</p>
+<p>C++普通共享变量发生数据竞争时可能产生未定义行为。<code>volatile</code>不是通用线程同步工具，不能直接照搬Java volatile的语义。要根据互斥锁或原子操作的内存顺序建立明确关系。</p>
+<h2 id="section-与pythonjava和go的资源生命周期怎样对照">与Python、Java和Go的资源生命周期怎样对照</h2>
+<p>Python的with把进入和退出资源作用域显式组织起来；Java的try-with-resources调用AutoCloseable；Go常用defer安排退出函数时的动作。它们都能减少分支遗漏，但触发时机和语言规则不同。</p>
+<p>例如C++局部守卫通常在所在作用域结束时析构，Go的defer通常在所在函数返回时执行。在很长循环中不断defer关闭文件，可能直到函数退出才释放，不能直接按“每次循环花括号结束就释放”理解。Java和Go有GC，也仍需要及时关闭文件和连接，因为可达性回收与外部资源及时释放是不同需求。</p>
+<h2 id="section-面试问答raii是什么">面试问答：RAII是什么</h2>
+<p><span id="q-FQ-doxcnefB2jBISXcvqyofdNoH9pg" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnefB2jBISXcvqyofdNoH9pg"></a></p>
+<blockquote>
+<p>C++ 中什么是 RAII？</p>
+</blockquote>
+<p><strong>回答：</strong> RAII把资源所有权绑定到对象生命周期，在构造或取得所有权时建立有效状态，在析构时释放资源。它可以管理内存、锁、文件等，使正常返回、提前返回和适用的异常展开共用清理机制，减少每条分支手写释放。</p>
+<p>例如函数先创建lock_guard，再创建unique_ptr管理资源，随后抛异常；栈展开按反向顺序释放资源并解锁。构造失败、强行终止和外部副作用仍有各自边界。unique_ptr表达独占，shared_ptr表达共享，后者的引用计数不自动保护对象内部并发状态。</p>
+<p><strong>延伸追问（自拟）：RAII能保证数据库操作回滚吗？</strong> 取决于事务对象和驱动的具体语义。守卫可以安排清理或回滚调用，但连接丢失时远端提交可能已经发生，仍需处理结果未知和幂等。</p>
+<p>原问见<a href="/media/backend-agent-series/questions.json">逐题映射</a>。示例采用C++17功能，编译运行结果另记在续写核验记录中。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"语言与框架10｜C++怎样管理资源与并发：RAII、所有权和异常路径"}],["$","p",null,{"className":"article-deck","children":"通过异常退出仍释放资源的可执行示例，解释unique_ptr、shared_ptr、锁守卫和其他语言的生命周期差异"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,761"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",6," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L19","C++",{"href":"/blog/#tag=C%2B%2B","children":"C++"}]]}]]}],["$","$L1a",null,{"headings":[{"id":"section-资源释放为什么应该跟着对象生命周期","text":"资源释放为什么应该跟着对象生命周期","level":2},{"id":"section-异常展开时哪些对象会析构","text":"异常展开时哪些对象会析构","level":2},{"id":"section-unique_ptr和shared_ptr表达不同所有权","text":"unique_ptr和shared_ptr表达不同所有权","level":2},{"id":"section-一段异常路径的完整例子","text":"一段异常路径的完整例子","level":2},{"id":"section-有了锁守卫还要检查什么并发条件","text":"有了锁守卫，还要检查什么并发条件","level":2},{"id":"section-与pythonjava和go的资源生命周期怎样对照","text":"与Python、Java和Go的资源生命周期怎样对照","level":2},{"id":"section-面试问答raii是什么","text":"面试问答：RAII是什么","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1b",["$","$L1c",null,{"html":"$1d"}],"$undefined","$L1e","$L1f","$L20"]}],"$L21"]}]]}]
+22:I[2708,["5587","$15","8612","$16","1133","$17","5953","$18"],"FeedbackForm"]
+23:I[3498,["5587","$15","8612","$16","1133","$17","5953","$18"],"default"]
+1f:["$","$L22",null,{"contentId":"backend-agent-s06-10-cpp"}]
+20:["$","div",null,{"className":"related-note","children":[["$","$L23",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+21:["$","$L1a",null,{"headings":["$9:props:children:1:props:headings:0","$9:props:children:1:props:headings:1","$9:props:children:1:props:headings:2","$9:props:children:1:props:headings:3","$9:props:children:1:props:headings:4","$9:props:children:1:props:headings:5","$9:props:children:1:props:headings:6"]}]
+1e:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$L23",null,{"href":"/blog/backend-agent-s06-09-go/","children":[["$","span",null,{"children":"上一篇"}],"语言与框架09｜Go怎样协调并发任务：channel、取消、共享状态与资源回收"]}],"$undefined"]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","cpp-casts",{"children":[["$","$L23",null,{"href":"/blog/cpp-casts/","children":"C++ 类型转换：四种转换符"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","cpp-templates-1",{"children":[["$","$L23",null,{"href":"/blog/cpp-templates-1/","children":"c++类——模版(一)"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","cpp-templates-2",{"children":[["$","$L23",null,{"href":"/blog/cpp-templates-2/","children":"c++类——模版(二)"}],["$","span",null,{"children":"编程语言知识点"}]]}]]}]]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+12:[["$","title","0",{"children":"语言与框架10｜C++怎样管理资源与并发：RAII、所有权和异常路径 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"通过异常退出仍释放资源的可执行示例，解释unique_ptr、shared_ptr、锁守卫和其他语言的生命周期差异。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s06-10-cpp/"}]]
+24:Tb2c,(()=>{const d={"wallpaper":"banner","layout":"list","cardStyle":"soft","textSize":"normal","hero":true,"carousel":false,"waves":false,"fade":true,"motion":true,"typewriter":true,"progress":true,"petals":false,"dim":28,"blur":0,"cardOpacity":78,"colorMode":"section","customColor":"#32846b","sectionColors":{},"customTheme":"","sectionThemes":{}},enums={"wallpaper":["banner","fullscreen","overlay","none"],"layout":["list","grid"],"cardStyle":["soft","flat"],"textSize":["normal","large"],"colorMode":["section","custom"]},bools=["hero","carousel","waves","fade","motion","typewriter","progress","petals"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]));const color=(function(a,b){let c=b.startsWith("/credits")?"about":b.split("/")[1],d=["home","blog","research","projects","about"].includes(c)?c:"home",e=(a.sectionColors&&"object"==typeof a.sectionColors&&!Array.isArray(a.sectionColors)?a.sectionColors:{})[d],f="string"==typeof e&&/^#[\da-f]{6}$/i.test(e)?e.toLowerCase():void 0,g="string"==typeof a.customColor&&/^#[\da-f]{6}$/i.test(a.customColor)?a.customColor.toLowerCase():"#32846b",h=a.sectionThemes&&"object"==typeof a.sectionThemes&&!Array.isArray(a.sectionThemes)?a.sectionThemes:{},i="custom"===a.colorMode?a.customTheme:h[d],j="string"==typeof i&&["home","blog","research","projects","about"].includes(i)?i:void 0;return{section:d,color:"custom"===a.colorMode?g:f??g,customized:"custom"===a.colorMode?!j:!!f,theme:j??d}})(p,location.pathname);document.documentElement.setAttribute('data-custom-palette',String(color.customized));document.documentElement.setAttribute('data-palette-section',color.theme);const palette=(function(a){let b=/^#[\da-f]{6}$/i.test(a)?a:"#32846b",c=[1,3,5].map(a=>Number.parseInt(b.slice(a,a+2),16)),d={};for(let[a,[b,e]]of Object.entries({"light-page":[248,.09],"light-surface":[255,.025],"light-surface-soft":[252,.05],"light-surface-raised":[246,.08],"light-ink":[0,.15],"light-muted":[0,.32],"light-line":[213,.12],"light-accent":[0,.4],"light-accent-strong":[0,.3],"light-accent-soft":[248,.1],"light-on-accent":[255,0],"dark-page":[16,.025],"dark-surface":[26,.045],"dark-surface-soft":[22,.04],"dark-surface-raised":[33,.06],"dark-ink":[255,.12],"dark-muted":[255,.34],"dark-line":[72,.1],"dark-accent":[255,.35],"dark-accent-strong":[255,.22],"dark-accent-soft":[24,.1],"dark-on-accent":[0,.1]}))d[`--palette-${a}`]=`#${c.map(a=>Math.round(b*(1-e)+a*e).toString(16).padStart(2,"0")).join("")}`;return d})(color.color);for(const k in palette)document.documentElement.style.setProperty(k,palette[k])})()2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$24"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],"$L25"]}],"$L26"]}]
+27:"static/chunks/7107-d67496718f7d4082.js"
+28:"static/chunks/app/layout-883cb555fbda7bdc.js"
+29:I[5376,["5587","$15","7107","$27","7177","$28"],"DisplayProvider"]
+2a:"NavigationFeedback"
+2b:I[2842,["5587","$15","7107","$27","7177","$28"],"$2a"]
+2c:I[4085,["5587","$15","7107","$27","7177","$28"],"SiteHeader"]
+2d:I[5803,["5587","$15","7107","$27","7177","$28"],"SiteFrame"]
+2e:I[164,["5587","$15","7107","$27","7177","$28"],"ProfileSidebar"]
+25:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]
+26:["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L29",null,{"children":[["$","$L2b",null,{}],["$","$L2c",null,{"tags":["编程语言知识点","Python","C++"],"categoryIds":["foundations","frontend","backend","agent","computing","ai","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L2d",null,{"sidebar":["$","$L2e",null,{"categoryIds":"$26:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L23",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L23",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L23",null,{"href":"/about/","children":"关于这个站点"}],["$","$L23",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]
+1b:["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$L23",null,{"href":"/blog/series/languages-concurrency-frameworks/","children":"编程语言、并发与框架"}],["$","span",null,{"children":[10," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s06-threadpool",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s06-threadpool/","aria-current":"$undefined","children":"语言与框架01｜线程池怎样接收任务：核心线程、队列、扩容与背压"}]}],["$","li","backend-agent-s06-python-async",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s06-python-async/","aria-current":"$undefined","children":"语言与框架02｜Python怎样并发调用工具：协程、Task、限流与取消"}]}],["$","li","backend-agent-s06-shared-state",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s06-shared-state/","aria-current":"$undefined","children":"语言与框架03｜多个线程怎样共享状态：可见性、原子性与happens-before"}]}],["$","li","backend-agent-s06-spring-transactions",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s06-spring-transactions/","aria-current":"$undefined","children":"语言与框架04｜Spring事务为什么有时没有生效：代理、传播与回滚边界"}]}],["$","li","backend-agent-s06-05-maps",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s06-05-maps/","aria-current":"$undefined","children":"语言与框架05｜HashMap怎样找到键，并发更新为什么还需要原子操作"}]}],["$","li","backend-agent-s06-06-fastapi",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s06-06-fastapi/","aria-current":"$undefined","children":"语言与框架06｜一个请求怎样经过FastAPI：路由、依赖、校验与异步边界"}]}],["$","li","backend-agent-s06-07-jvm",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s06-07-jvm/","aria-current":"$undefined","children":"语言与框架07｜Java进程内存怎样排查：GC Roots、G1、堆与堆外"}]}],["$","li","backend-agent-s06-08-spring",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s06-08-spring/","aria-current":"$undefined","children":"语言与框架08｜Spring怎样组装对象并处理请求：IoC、Bean生命周期与MVC"}]}],["$","li","backend-agent-s06-09-go",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s06-09-go/","aria-current":"$undefined","children":"语言与框架09｜Go怎样协调并发任务：channel、取消、共享状态与资源回收"}]}],["$","li","backend-agent-s06-10-cpp",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s06-10-cpp/","aria-current":"page","children":"语言与框架10｜C++怎样管理资源与并发：RAII、所有权和异常路径"}]}]]}]]}]]}]
+14:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L23",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L23",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$L23",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L19",null,{"className":"trail-current","href":"/blog/#foundations","children":["编程语言知识点",["$","span",null,{"children":57}]]}],"$undefined"]}]

@@ -1,0 +1,108 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+1f:"ViewportBoundary"
+20:I[887,[],"$1f"]
+21:"MetadataBoundary"
+22:I[887,[],"$21"]
+23:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#backend","children":["后端与数据库",["$","span",null,{"children":33}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"数据库与缓存10｜缓存失效以后怎样保护数据库：穿透、击穿、雪崩与回源合并"}],["$","p",null,{"className":"article-deck","children":"按不存在的键、单个热点和成批失效区分故障，推演空值缓存、布隆过滤、请求合并和限流的条件与失效路径"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,872"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",6," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","Redis",{"href":"/blog/#tag=Redis","children":"Redis"}],["$","$L10","缓存",{"href":"/blog/#tag=%E7%BC%93%E5%AD%98","children":"缓存"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-先看哪些请求在同时回源","text":"先看哪些请求在同时回源","level":2},{"id":"section-不存在的数据怎样避免每次都查数据库","text":"不存在的数据怎样避免每次都查数据库","level":2},{"id":"section-布隆过滤器为什么只能做前置筛选","text":"布隆过滤器为什么只能做前置筛选","level":2},{"id":"section-热点过期时怎样合并回源请求","text":"热点过期时怎样合并回源请求","level":2},{"id":"section-大面积失效怎样分散与限制","text":"大面积失效怎样分散与限制","level":2},{"id":"section-怎样验证保护机制确实有效","text":"怎样验证保护机制确实有效","level":2},{"id":"section-面试问答穿透击穿与雪崩","text":"面试问答：穿透、击穿与雪崩","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/database-cache/","children":"数据库与缓存"}],["$","span",null,{"children":[10," / ",11," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s07-index-query",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-index-query/","children":"数据库与缓存01｜MySQL索引怎样减少查询工作：B+树、回表与联合索引"}]}],["$","li","backend-agent-s07-transactions",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-transactions/","children":"数据库与缓存02｜并发事务究竟读到什么：RC、RR、MVCC与锁"}]}],["$","li","backend-agent-s07-cache-consistency",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-cache-consistency/","children":"数据库与缓存03｜先更新数据库再删除缓存之后：旧值回填、一致性与缓存保护"}]}],["$","li","backend-agent-s07-sql-semantics",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-sql-semantics/","children":"数据库与缓存04｜SQL查出的行代表什么：JOIN、NULL、排名与稳定分页"}]}],["$","li","backend-agent-s07-logs-recovery",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-logs-recovery/","children":"数据库与缓存05｜数据库崩溃后怎样恢复：redo、undo、binlog与提交结果"}]}],["$","li","backend-agent-s07-redis-durability",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-redis-durability/","children":"数据库与缓存06｜Redis的数据怎样保存：数据类型、RDB、AOF与复制"}]}],["$","li","backend-agent-s07-07-explain",{"children":"$L12"}],"$L13","$L14","$L15","$L16"]}]]}]]}],"$L17","$undefined","$L18","$L19","$L1a"]}],"$L1b"]}]]}],["$L1c"],"$L1d"]}],"p":"$@1e","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s07-10-cache-protection","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L20",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L22",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$23",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"数据库与缓存10｜缓存失效以后怎样保护数据库：穿透、击穿、雪崩与回源合并 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"按不存在的键、单个热点和成批失效区分故障，推演空值缓存、布隆过滤、请求合并和限流的条件与失效路径。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s07-10-cache-protection/"}]]}]}],null]}],null]}],"p":"$@24","v":null,"s":"$7"}},"a":"$@25","u":"$@26","b":"t75SI7oTDmNtBl3uMkJyg"}
+27:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+29:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+2a:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+12:["$","$Lf",null,{"href":"/blog/backend-agent-s07-07-explain/","children":"数据库与缓存07｜怎样读MySQL执行计划：六行数据的EXPLAIN与索引实验"}]
+13:["$","li","backend-agent-s07-08-two-sessions",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-08-two-sessions/","children":"数据库与缓存08｜两次SELECT为什么结果不同：MySQL双会话隔离与锁实验"}]}]
+14:["$","li","backend-agent-s07-09-redis-encoding",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-09-redis-encoding/","children":"数据库与缓存09｜Redis类型怎样落到内存：紧凑编码、跳表与容量估算"}]}]
+15:["$","li","backend-agent-s07-10-cache-protection",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-10-cache-protection/","aria-current":"page","children":"数据库与缓存10｜缓存失效以后怎样保护数据库：穿透、击穿、雪崩与回源合并"}]}]
+16:["$","li","backend-agent-s07-11-multilevel-cache",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-11-multilevel-cache/","children":"数据库与缓存11｜本地缓存与Redis怎样协同：版本、失效通知和断线恢复"}]}]
+28:T1ee7,<h2 id="section-先看哪些请求在同时回源">先看哪些请求在同时回源</h2>
+<p><strong>回源</strong>表示缓存不能直接回答时，继续访问数据库等权威来源。缓存命中率很高，并不意味着数据库永远安全；一个很小的未命中比例乘上大流量，也可能超过后端容量。</p>
+<p>假设请求1000次/秒，正常未命中率1%，数据库承受约10次/秒回源。如果一个热门键过期导致其中300次/秒同时未命中，这一小部分键就可能改变后端负载。这里的数字只用于计算，不在小型服务器上施加对应压力。</p>
+<p>把失效分成三种常见形态，有助于找到针对的约束：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>情况</th><th>主要问题</th><th>首要观察</th></tr></thead><tbody><tr><td>穿透</td><td>请求的数据不存在，缓存与数据库都查不到</td><td>不存在键的比例、输入分布</td></tr><tr><td>击穿</td><td>某个热点键失效，大量请求集中回源</td><td>热点、过期时刻、同键并发</td></tr><tr><td>雪崩</td><td>大量键同时失效，或缓存服务整体不可用</td><td>多键回源量、缓存错误、数据库压力</td></tr></tbody></table>
+<p>这些名称用于描述模式，不是严格互斥的故障分类；一场故障可能同时包含多种原因。</p>
+<h2 id="section-不存在的数据怎样避免每次都查数据库">不存在的数据怎样避免每次都查数据库</h2>
+<p>先做合法性校验，拒绝明显不合规则的ID。对合法但不存在的记录，可以缓存一个明确的“未找到”标记，并给适当的短TTL。标记要与“缓存没有这个键”区分，否则读取端无法知道自己已经命中过一个空结果。</p>
+<p>空值缓存的代价是新增记录暂时仍可能被视为不存在。假设空结果保存30秒，第5秒数据库插入记录，若没有相应失效通知，后续读取可能仍等待剩余TTL。业务需要立即可见时，应在新增成功后更新或失效相应负缓存，并考虑并发回填。</p>
+<p>缓存键还必须包含会影响结果的租户、权限或查询条件。某用户无权限访问的结果，不一定等同于资源不存在，更不能作为全局空值缓存扩散给其他用户。</p>
+<h2 id="section-布隆过滤器为什么只能做前置筛选">布隆过滤器为什么只能做前置筛选</h2>
+<p><strong>布隆过滤器</strong>用位数组和若干哈希位置表达集合成员关系。添加元素时设置对应位；查询时若某个必要位为0，可以判定不在已正确维护的集合中；所有位都为1，则只是“可能存在”，仍需访问后续数据。</p>
+<p>这种结构存在假阳性。对理想近似模型，m个位、n个元素、k个哈希函数的假阳性率约为：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>p</mi><mo>≈</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>k</mi><mi>n</mi><mi mathvariant="normal">/</mi><mi>m</mi></mrow></msup><msup><mo stretchy="false">)</mo><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">p\approx(1-e^{-kn/m})^k</annotation></semantics></math></span>
+<p>例如m=1000、n=100、k=7，约为0.82%。这只是数学模型，哈希分布和实际实现会影响结果。<a href="https://redis.io/docs/latest/develop/data-types/probabilistic/bloom-filter/" rel="noopener noreferrer">布隆过滤器用途</a></p>
+<p><strong>不产生假阴性的前提包含数据已经正确加入。</strong> 如果数据库已新增记录，但过滤器还没有同步，就可能在业务层把真实数据挡掉。普通布隆过滤器也不能直接清除某个位来删除元素，因为该位可能被其他元素共用。需要设计同步时序、重建或适用的可删除结构。</p>
+<h2 id="section-热点过期时怎样合并回源请求">热点过期时怎样合并回源请求</h2>
+<p>让一个请求负责加载，其余同键请求等待或使用允许的旧值，可以把瞬时重复查询合并。常见做法是同键singleflight，或在适用范围内设置互斥加载。</p>
+<p>时间线可以这样推演：A发现缺失，取得加载资格；B也缺失，等待A；A查库并回填后，B直接使用已加载结果。<strong>取得资格后还要再次检查缓存</strong>，因为在等待期间其他请求可能已经完成加载。</p>
+<p>失败路径也要完整：A查询超时，等待者不能永久挂起；锁到期后B接手，A又恢复并写入旧结果，需要版本或所有权检查；不同进程各自合并，只能减少各进程内部的重复，不能自动形成全局一次回源。</p>
+<p>如果数据允许短时间陈旧，可以保存业务过期时间并异步刷新，读取暂时返回旧值。若是余额或权限等不能容忍旧数据的场景，就不能把这种方式作为无条件优化。</p>
+<h2 id="section-大面积失效怎样分散与限制">大面积失效怎样分散与限制</h2>
+<p>给过期时间增加合理抖动，可以避免整批预热数据同时到期；按热点分批预热和逐步恢复也能减少恢复瞬间的回源洪峰。但抖动不能解决缓存服务整体不可达。</p>
+<p>缓存故障时，应限制数据库并发、设置有界等待，并选择明确的降级响应。若每个缓存错误都立即回源，数据库就承接了全部请求。重试又可能把压力倍增，因此要配合总预算、退避和熔断，而不是单纯增加重试次数。</p>
+<p>对于缓存可用、数据库慢的情况，也应区分超时与不存在。把数据库超时缓存成“记录不存在”会改变业务事实，应记录可重试的依赖故障。</p>
+<h2 id="section-怎样验证保护机制确实有效">怎样验证保护机制确实有效</h2>
+<p>小实验可以同时触发几个同键请求，统计真正进入加载函数的次数，再让加载函数失败，检查等待者能否退出。随后改变键，确认不同键没有被一把全局锁无谓串行化。</p>
+<p>测试对象是合并、超时、释放和版本行为，不需要几千QPS。容量可以用估计回源率、单请求服务时间和数据库并发限额计算，再在有条件的环境逐步验证。文章里的预估不能写成生产承载承诺。</p>
+<h2 id="section-面试问答穿透击穿与雪崩">面试问答：穿透、击穿与雪崩</h2>
+<p><span id="q-FQ-doxcn8aJ1DvOwwCxtYmqxjh5pce" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcn8aJ1DvOwwCxtYmqxjh5pce"></a></p>
+<blockquote>
+<p>缓存击穿、穿透、雪崩这三个概念上的区别？</p>
+</blockquote>
+<p><strong>回答：</strong> 穿透侧重不存在的数据持续绕过缓存；击穿侧重某个热点失效后同键大量回源；雪崩侧重大批键同时失效或缓存整体不可用造成集中回源。处理应对应原因：合法性校验、负缓存或成员过滤处理不存在键；请求合并、互斥刷新或允许条件下返回旧值处理热点；过期抖动、分批恢复、限流和降级控制大面积回源。</p>
+<p>各方案都有成立条件。负缓存会影响新记录可见性；过滤器更新滞后可能误挡业务新数据；加载锁超时后旧请求回填需要防护；缓存故障时也不能无上限把压力转给数据库。</p>
+<p><strong>延伸追问（自拟）：缓存命中率99%为什么数据库仍可能过载？</strong> 还取决于总请求量、热点瞬时分布和回源成本。100万请求中的1%仍有1万次，平均命中率也会掩盖同一秒的集中失效。需要直接观察回源QPS、并发与等待。</p>
+<p>原问见<a href="/media/backend-agent-series/questions.json">逐题映射</a>，更新与旧读回填的一致性问题见<a href="/blog/backend-agent-s07-cache-consistency/">缓存一致性</a>。</p>17:["$","$L27",null,{"html":"$28"}]
+18:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/backend-agent-s07-09-redis-encoding/","children":[["$","span",null,{"children":"上一篇"}],"数据库与缓存09｜Redis类型怎样落到内存：紧凑编码、跳表与容量估算"]}],["$","$Lf",null,{"href":"/blog/backend-agent-s07-11-multilevel-cache/","children":[["$","span",null,{"children":"下一篇"}],"数据库与缓存11｜本地缓存与Redis怎样协同：版本、失效通知和断线恢复"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s07-cache-consistency",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s07-cache-consistency/","children":"数据库与缓存03｜先更新数据库再删除缓存之后：旧值回填、一致性与缓存保护"}],["$","span",null,{"children":"后端与数据库"}]]}]]}]]}]]}]
+19:["$","$L29",null,{"contentId":"backend-agent-s07-10-cache-protection"}]
+1a:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+1b:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6"]}]
+1c:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1d:["$","$L2a",null,{"children":["$","$23",null,{"name":"Next.MetadataOutlet","children":"$@2b"}]}]
+26:true
+7:300
+2b:null
+7:C
+25:0
+9:"$undefined"
+5:"$undefined"
+24:"$undefined"
+1e:"$undefined"

@@ -1,0 +1,108 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#computing","children":["计算机基础",["$","span",null,{"children":8}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"网络与操作系统01｜一次HTTPS请求怎样到达服务端：连接、字节流与业务结果"}],["$","p",null,{"className":"article-deck","children":"跟随一次创建任务请求区分网络层、HTTP层与业务层，并推演TCP握手、半关闭和TIME_WAIT"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,017"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",7," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","计算机网络",{"href":"/blog/#tag=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C","children":"计算机网络"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-从点击按钮到收到任务编号","text":"从点击按钮到收到任务编号","level":2},{"id":"section-tcp怎样让两端建立有序的字节流","text":"TCP怎样让两端建立有序的字节流","level":2},{"id":"section-tls保护的内容与http业务语义","text":"TLS保护的内容与HTTP业务语义","level":2},{"id":"section-关闭连接为什么要分别处理两个方向","text":"关闭连接为什么要分别处理两个方向","level":2},{"id":"section-面试问答握手挥手与协议分层","text":"面试问答：握手、挥手与协议分层","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/network-operating-systems/","children":"网络、操作系统与Linux"}],["$","span",null,{"children":[1," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s05-request-tcp",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-request-tcp/","aria-current":"page","children":"网络与操作系统01｜一次HTTPS请求怎样到达服务端：连接、字节流与业务结果"}]}],["$","li","backend-agent-s05-io-scheduling",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-io-scheduling/","children":"网络与操作系统02｜请求在等待什么：进程、线程、协程与I/O多路复用"}]}],["$","li","backend-agent-s05-streaming",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-streaming/","children":"网络与操作系统03｜页面怎样持续收到任务进度：SSE、WebSocket与断线恢复"}]}],["$","li","backend-agent-s05-memory",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-memory/","children":"网络与操作系统04｜程序使用的地址在哪里：虚拟内存、页表、缺页与内存排查"}]}],["$","li","backend-agent-s05-05-dns",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-05-dns/","children":"网络与操作系统05｜域名怎样找到服务器：DNS递归查询、缓存与切换延迟"}]}],["$","li","backend-agent-s05-06-tls",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-06-tls/","children":"网络与操作系统06｜HTTPS怎样确认对方身份：TLS1.3握手、证书链与主机名"}]}],["$","li","backend-agent-s05-07-congestion",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-07-congestion/","children":"网络与操作系统07｜TCP怎样决定还能发送多少数据：流量控制、拥塞窗口与重传"}]}],"$L12","$L13","$L14"]}]]}]]}],"$L15","$undefined","$L16","$L17","$L18"]}],"$L19"]}]]}],["$L1a"],"$L1b"]}],"p":"$@1c","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s05-request-tcp","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"网络与操作系统01｜一次HTTPS请求怎样到达服务端：连接、字节流与业务结果 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"跟随一次创建任务请求区分网络层、HTTP层与业务层，并推演TCP握手、半关闭和TIME_WAIT。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s05-request-tcp/"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$7"}},"a":"$@23","u":"$@24","b":"t75SI7oTDmNtBl3uMkJyg"}
+25:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+27:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+28:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+12:["$","li","backend-agent-s05-08-http-quic",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-08-http-quic/","children":"网络与操作系统08｜HTTP/1.1、HTTP/2和HTTP/3：多路复用解决了哪一层等待"}]}]
+13:["$","li","backend-agent-s05-09-ipc",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-09-ipc/","children":"网络与操作系统09｜进程之间怎样交换数据：管道、消息、共享内存与同步"}]}]
+14:["$","li","backend-agent-s05-10-linux-diagnostics",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-10-linux-diagnostics/","children":"网络与操作系统10｜容器里服务变慢怎样定位：资源限制、连接状态与Linux证据"}]}]
+26:T22c0,<h2 id="section-从点击按钮到收到任务编号">从点击按钮到收到任务编号</h2>
+<p>假设浏览器要向<code>https://api.example.test/tasks</code>提交任务。域名是示例地址，下面按HTTP/1.1或HTTP/2使用TCP、TLS1.3的典型情况讲解；HTTP/3使用QUIC，不能直接套用完全相同的连接过程。</p>
+<p>浏览器先解析URL，确定协议、主机、端口和路径。没有可用地址缓存时，需要通过DNS查询域名对应的地址；没有可复用连接时，再建立传输连接。使用HTTPS还需要完成TLS握手，校验服务端身份并协商保护后续数据的密钥。已经存在缓存、连接池或会话恢复时，不必每次都从头重复全部步骤。</p>
+<p>HTTP请求到达网关或应用服务器后，才进入路径路由、身份检查和业务处理。应用可能查询数据库、排队调用外部模型，最终返回任务编号。浏览器收到数据后，还要解析响应并更新页面。</p>
+<p><strong>网络传到了、HTTP返回了、任务完成了，是三个不同的判断。</strong> 例如HTTP的<code>202 Accepted</code>表示请求已被接受处理，并不表示处理已经完成。前端还应依据任务状态接口或事件确认结果。<a href="https://www.rfc-editor.org/rfc/rfc9110.html#section-15.3.3" rel="noopener noreferrer">HTTP状态语义</a></p>
+<h2 id="section-tcp怎样让两端建立有序的字节流">TCP怎样让两端建立有序的字节流</h2>
+<p><strong>TCP提供有序字节流。</strong> 每个方向都有自己的序号，用于标识数据在字节流中的位置；确认号通常表示接收方下一步期待的序号。连接建立时，两端需要交换并确认初始序号。</p>
+<p>教学例中，客户端初始序号为100，服务端为900，暂不携带应用数据：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方向</th><th>报文中的关键字段</th><th>接收方知道了什么</th></tr></thead><tbody><tr><td>客户端→服务端</td><td>SYN，seq=100</td><td>客户端希望建连，并声明发送起点</td></tr><tr><td>服务端→客户端</td><td>SYN+ACK，seq=900，ack=101</td><td>服务端确认客户端SYN，并声明自身起点</td></tr><tr><td>客户端→服务端</td><td>ACK，seq=101，ack=901</td><td>客户端已收到并确认服务端SYN</td></tr></tbody></table>
+<p>SYN占用一个序号，所以确认的是101和901。第三步让服务端获得对自身初始序号的确认，也有助于处理旧连接请求等异常情况。实际TCP还包含重传、同时打开等分支，这张表只演示常见主动连接。<a href="https://www.rfc-editor.org/rfc/rfc9293.html#section-3.5" rel="noopener noreferrer">TCP规范§3.5</a></p>
+<p>建立连接后，应用仍需定义自己的消息边界。假设连续发送<code>ABC</code>和<code>DEF</code>，接收方可能一次读到<code>ABCDEF</code>，也可能分多次得到<code>AB</code>、<code>CD</code>、<code>EF</code>。<strong>一次send不对应一次recv。</strong> 协议可以用长度字段、分隔符或自己的帧格式识别一条消息；读取程序要处理半条消息和一次读出多条消息的情况。</p>
+<p>TCP的确认也不表示应用已经提交数据库。字节可能已经进入接收端缓冲区，而业务线程尚未处理，或者处理以后在返回前崩溃。这就是<a href="/blog/backend-agent-s01-recovery/">工具请求超时</a>仍需要业务结果查询与幂等的原因。</p>
+<h2 id="section-tls保护的内容与http业务语义">TLS保护的内容与HTTP业务语义</h2>
+<p><strong>TLS建立经过认证和加密保护的通信通道。</strong> 常见Web场景通过证书和握手校验服务端身份，再使用协商出的流量密钥保护数据。证书校验、密钥协商和应用层鉴权分别解决不同的问题。<a href="https://www.rfc-editor.org/rfc/rfc8446.html" rel="noopener noreferrer">TLS1.3规范</a></p>
+<p>HTTPS连接建立成功，只说明相应通信安全条件得到满足，不表示当前用户有权读取每一个任务。接口仍需验证登录状态、租户与资源归属。请求经过反向代理时，还要明确TLS在哪一段终止，以及代理到后端的链路怎样保护。</p>
+<p>TLS也不负责判断任务是否成功。接口可以通过受保护的连接返回业务错误；同样，合法用户发出的参数也可能不满足业务约束。理解各层职责以后，排查时才知道该查看证书错误、HTTP状态，还是任务执行记录。</p>
+<h2 id="section-关闭连接为什么要分别处理两个方向">关闭连接为什么要分别处理两个方向</h2>
+<p>TCP允许两个方向分别结束发送。A发送FIN表示A没有更多数据要发；B确认以后，仍可能继续发送剩余数据。等B也结束发送，再发送自己的FIN，A确认后完成相应关闭过程。</p>
+<p>因此常见教学过程是<code>A FIN → B ACK → B FIN → A ACK</code>。中间两个报文在条件允许时可以合并，实际还可能出现同时关闭，所以“四次挥手”描述的是常见分开关闭的过程，不能要求抓包必须恰好出现四个报文。<a href="https://www.rfc-editor.org/rfc/rfc9293.html#section-3.6" rel="noopener noreferrer">TCP关闭与半关闭</a></p>
+<p>常见主动关闭路径中的A会进入<strong>TIME_WAIT</strong>，为可靠完成关闭和处理旧报文保留一段时间。它通常与连接关闭速率有关，数量多不直接等于故障。需要结合连接失败、端口资源、延迟和连接复用情况判断。</p>
+<p><strong>CLOSE_WAIT</strong>则表示本端已收到对端的关闭通知，本地关闭流程尚未结束。持续累积时，要检查应用是否遗漏关闭连接、是否卡在某段处理过程；它不能简单套用TIME_WAIT的解释。</p>
+<h2 id="section-面试问答握手挥手与协议分层">面试问答：握手、挥手与协议分层</h2>
+<p><span id="q-FQ-doxcnqvJOj8mlfECOElMVKISyPc" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnqvJOj8mlfECOElMVKISyPc"></a></p>
+<blockquote>
+<p>介绍 TCP 协议的连接（三次握手）和断开过程（四次挥手），为什么断开要进行 4 次挥手？</p>
+</blockquote>
+<p><strong>回答：</strong> 常见建连过程是客户端发送SYN，服务端返回SYN+ACK，客户端再确认服务端SYN。两端由此交换并确认各自的初始序号，建立双向传输所需的状态。SYN占用一个序号，确认号需要相应增加。</p>
+<p>关闭时，两端的发送方向独立结束。主动关闭方发送FIN，对方先确认；对方如果还有数据，可以发送完以后再发FIN，最后由主动方确认。因此常见过程包含两个FIN和分别对应的确认。若接收方已经可以立即关闭，ACK和FIN可以合并，报文数不必固定为4。</p>
+<p>在常见关闭时序中，主动方经历FIN_WAIT_1、FIN_WAIT_2和TIME_WAIT，被动方在收到FIN后进入CLOSE_WAIT，发出自己的FIN后进入LAST_ACK。状态转换还受报文到达顺序影响；同时关闭不能完全套用这条单向主动关闭路径。</p>
+<p><strong>延伸追问（自拟）：为什么不能收到FIN就把两端都立即关闭？</strong> FIN只声明发送者不再发送，另一方向可能仍有待发送数据。立即双向截断会破坏半关闭语义，并可能丢掉应用仍需要的内容。</p>
+<p>原问ID：<code>FQ-doxcnqvJOj8mlfECOElMVKISyPc</code>。出处：<a href="https://www.nowcoder.com/feed/main/detail/4cc50404c0d742cbb228091cd9d00bc9" rel="noopener noreferrer">原始面经</a>。</p>
+<p><span id="q-FQ-doxcnPMij1XhAx5JwrdMoaKFj4d" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnPMij1XhAx5JwrdMoaKFj4d"></a></p>
+<blockquote>
+<p>HTTPS 握手和 TCP 四次挥手分别解决什么问题？</p>
+</blockquote>
+<p><strong>回答：</strong> HTTPS使用的TLS握手用于协商安全参数、建立密钥并按配置认证通信方；TCP关闭过程用于结束两个方向的数据发送并处理连接状态。前者属于安全通道建立，后者属于传输连接关闭，作用和发生时机不同。</p>
+<p>在本文的TCP场景中，通常先建立TCP连接，再进行TLS握手，然后传输HTTP消息。TLS正常关闭还可能发送自己的关闭通知，这与TCP的FIN也不是同一个协议事件。关闭顺序应由所用库正确处理，不能把TCP收到了FIN解释成已经收到完整业务结果。</p>
+<p><strong>延伸追问（自拟）：HTTPS是否总要先进行TCP三次握手？</strong> 不应这样泛化。本文限定HTTP/1.1或HTTP/2 over TCP；HTTP/3的传输基础是QUIC，其连接过程不能直接照搬TCP流程。</p>
+<p>原问ID：<code>FQ-doxcnPMij1XhAx5JwrdMoaKFj4d</code>。出处：<a href="https://www.nowcoder.com/discuss/922660519729696768" rel="noopener noreferrer">原始面经</a>。</p>15:["$","$L25",null,{"html":"$26"}]
+16:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","span",null,{}],["$","$Lf",null,{"href":"/blog/backend-agent-s05-io-scheduling/","children":[["$","span",null,{"children":"下一篇"}],"网络与操作系统02｜请求在等待什么：进程、线程、协程与I/O多路复用"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s01-recovery",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s01-recovery/","children":"Agent基础02｜Agent中断后怎样继续：检查点、幂等与结果未知"}],["$","span",null,{"children":"Agent"}]]}]]}]]}]]}]
+17:["$","$L27",null,{"contentId":"backend-agent-s05-request-tcp"}]
+18:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+19:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4"]}]
+1a:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1b:["$","$L28",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@29"}]}]
+24:true
+7:300
+29:null
+7:C
+23:0
+9:"$undefined"
+5:"$undefined"
+22:"$undefined"
+1c:"$undefined"

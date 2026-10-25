@@ -1,0 +1,93 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+1f:"ViewportBoundary"
+20:I[887,[],"$1f"]
+21:"MetadataBoundary"
+22:I[887,[],"$21"]
+23:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#ai","children":["人工智能",["$","span",null,{"children":25}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"大模型与多模态10｜扩散模型怎样生成图像：加噪、去噪与条件控制的计算过程"}],["$","p",null,{"className":"article-deck","children":"从前向加噪公式和噪声预测目标说明生成过程，再解释潜空间扩散与采样代价"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,283"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",4," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","多模态",{"href":"/blog/#tag=%E5%A4%9A%E6%A8%A1%E6%80%81","children":"多模态"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-训练时为什么要给真实图像加噪声","text":"训练时为什么要给真实图像加噪声","level":2},{"id":"section-怎样直接得到任意一步的含噪图像","text":"怎样直接得到任意一步的含噪图像","level":2},{"id":"section-模型学习预测什么","text":"模型学习预测什么","level":2},{"id":"section-文本条件怎样影响图像","text":"文本条件怎样影响图像","level":2},{"id":"section-潜空间扩散为什么能减少计算","text":"潜空间扩散为什么能减少计算","level":2},{"id":"section-怎样评价扩散模型","text":"怎样评价扩散模型","level":2},{"id":"section-面试追问如何理解扩散模型","text":"面试追问：如何理解扩散模型","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/llm-multimodal/","children":"大模型基础与多模态"}],["$","span",null,{"children":[10," / ",12," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s09-token-attention",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-token-attention/","children":"大模型与多模态01｜文本怎样变成下一步预测：Token、QKV与注意力算例"}]}],["$","li","backend-agent-s09-kv-cache",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-kv-cache/","children":"大模型与多模态02｜生成文字为什么还要缓存：Prefill、Decode与KV显存估算"}]}],["$","li","backend-agent-s09-training-lora",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-training-lora/","children":"大模型与多模态03｜模型参数怎样被训练：交叉熵、反向传播与LoRA"}]}],["$","li","backend-agent-s09-04-rope-context",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-04-rope-context/","children":"大模型与多模态04｜RoPE与长上下文：旋转位置编码怎样表示相对距离"}]}],["$","li","backend-agent-s09-05-quantization",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-05-quantization/","children":"大模型与多模态05｜模型量化怎样减少存储：误差、校准与推理速度之间的关系"}]}],["$","li","backend-agent-s09-06-parallel-memory",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-06-parallel-memory/","children":"大模型与多模态06｜大模型并行与显存估算：参数、梯度、优化器和激活分别放在哪里"}]}],["$","li","backend-agent-s09-07-embedding-infonce",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-07-embedding-infonce/","children":"大模型与多模态07｜Embedding与InfoNCE：相似向量是怎样通过对比学习得到的"}]}],"$L12","$L13","$L14","$L15","$L16"]}]]}]]}],"$L17","$undefined","$L18","$L19","$L1a"]}],"$L1b"]}]]}],["$L1c"],"$L1d"]}],"p":"$@1e","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s09-10-diffusion","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L20",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L22",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$23",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"大模型与多模态10｜扩散模型怎样生成图像：加噪、去噪与条件控制的计算过程 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从前向加噪公式和噪声预测目标说明生成过程，再解释潜空间扩散与采样代价。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s09-10-diffusion/"}]]}]}],null]}],null]}],"p":"$@24","v":null,"s":"$7"}},"a":"$@25","u":"$@26","b":"t75SI7oTDmNtBl3uMkJyg"}
+27:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+29:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+2a:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+12:["$","li","backend-agent-s09-08-clip-vlm",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-08-clip-vlm/","children":"大模型与多模态08｜CLIP与视觉语言模型：图像特征怎样和文本建立联系"}]}]
+13:["$","li","backend-agent-s09-09-moe",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-09-moe/","children":"大模型与多模态09｜MoE的专家路由：激活参数减少以后，计算和通信怎样变化"}]}]
+14:["$","li","backend-agent-s09-10-diffusion",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-10-diffusion/","aria-current":"page","children":"大模型与多模态10｜扩散模型怎样生成图像：加噪、去噪与条件控制的计算过程"}]}]
+15:["$","li","backend-agent-s09-11-asr-streaming",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-11-asr-streaming/","children":"大模型与多模态11｜ASR怎样把语音转成文字：流式结果、稳定前缀与错误率评价"}]}]
+16:["$","li","backend-agent-s09-12-vla",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-12-vla/","children":"大模型与多模态12｜VLA怎样从图像和指令产生动作：表示、训练数据与闭环控制"}]}]
+28:T222b,<h2 id="section-训练时为什么要给真实图像加噪声">训练时为什么要给真实图像加噪声</h2>
+<p><strong>扩散模型</strong>学习从含噪数据逐步恢复数据分布。以DDPM为例，训练时先定义一个逐渐加噪的前向过程，再学习相反方向的去噪过程。<a href="https://arxiv.org/html/2006.11239v2" rel="noopener noreferrer">DDPM论文</a></p>
+<p>原始图像记为<code>x₀</code>，第t步的噪声水平由预先设定的参数控制。经过足够多步后，数据接近容易采样的噪声分布。生成时从噪声开始，多次调用模型与采样器，逐步得到图像。</p>
+<p>“去噪”不是简单地把固定噪声从任意图片中减掉。模型需要根据当前含噪状态、时间步和条件，估计符合训练数据分布的恢复方向。</p>
+<h2 id="section-怎样直接得到任意一步的含噪图像">怎样直接得到任意一步的含噪图像</h2>
+<p>定义<code>α_t=1-β_t</code>，其中β控制每步噪声强度；再令<code>ᾱ_t</code>为前t步α的乘积，可以写成：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>x</mi><mi>t</mi></msub><mo>=</mo><msqrt><msub><mover accent="true"><mi>α</mi><mo>ˉ</mo></mover><mi>t</mi></msub></msqrt><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><msqrt><mrow><mn>1</mn><mo>−</mo><msub><mover accent="true"><mi>α</mi><mo>ˉ</mo></mover><mi>t</mi></msub></mrow></msqrt><mi>ϵ</mi><mo separator="true">,</mo><mspace width="2em"></mspace><mi>ϵ</mi><mo>∼</mo><mi mathvariant="script">N</mi><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mi>I</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">x_t=\sqrt{\bar\alpha_t}x_0+
+\sqrt{1-\bar\alpha_t}\epsilon,\qquad
+\epsilon\sim\mathcal N(0,I)</annotation></semantics></math></span>
+<p>因此训练时不必每次从第1步循环加噪到t，可以直接采样t与ε，计算对应的x_t。</p>
+<p>取一个标量教学例子：<code>x₀=2</code>、<code>ᾱ_t=0.64</code>、<code>ε=-1</code>，则：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>x</mi><mi>t</mi></msub><mo>=</mo><mn>0.8</mn><mo>×</mo><mn>2</mn><mo>+</mo><mn>0.6</mn><mo>×</mo><mo stretchy="false">(</mo><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mn>1.0</mn></mrow><annotation encoding="application/x-tex">x_t=0.8\times2+0.6\times(-1)=1.0</annotation></semantics></math></span>
+<p><strong>信号和噪声都带缩放系数。</strong>如果直接写成<code>x_t=x₀+ε</code>，就没有表达DDPM中的噪声调度。</p>
+<h2 id="section-模型学习预测什么">模型学习预测什么</h2>
+<p>一种常用训练目标让网络<code>ε_θ(x_t,t)</code>预测加入的噪声，最小化均方误差：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi mathvariant="script">L</mi><mtext>simple</mtext></msub><mo>=</mo><msub><mi mathvariant="double-struck">E</mi><mrow><msub><mi>x</mi><mn>0</mn></msub><mo separator="true">,</mo><mi>t</mi><mo separator="true">,</mo><mi>ϵ</mi></mrow></msub><mrow><mo fence="true">[</mo><mi mathvariant="normal">∥</mi><mi>ϵ</mi><mo>−</mo><msub><mi>ϵ</mi><mi>θ</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo separator="true">,</mo><mi>t</mi><mo stretchy="false">)</mo><msup><mi mathvariant="normal">∥</mi><mn>2</mn></msup><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\mathcal L_{\text{simple}}
+=\mathbb E_{x_0,t,\epsilon}
+\left[\|\epsilon-\epsilon_\theta(x_t,t)\|^2\right]</annotation></semantics></math></span>
+<p>网络输入含噪数据和时间步，因为不同噪声强度需要不同的恢复方式。条件生成还会加入文本、类别等条件c。</p>
+<p>根据预测噪声，可以估计原始数据：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mover accent="true"><mi>x</mi><mo>^</mo></mover><mn>0</mn></msub><mo>=</mo><mfrac><mrow><msub><mi>x</mi><mi>t</mi></msub><mo>−</mo><msqrt><mrow><mn>1</mn><mo>−</mo><msub><mover accent="true"><mi>α</mi><mo>ˉ</mo></mover><mi>t</mi></msub></mrow></msqrt><msub><mi>ϵ</mi><mi>θ</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo separator="true">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><msqrt><msub><mover accent="true"><mi>α</mi><mo>ˉ</mo></mover><mi>t</mi></msub></msqrt></mfrac></mrow><annotation encoding="application/x-tex">\hat x_0=
+\frac{x_t-\sqrt{1-\bar\alpha_t}\epsilon_\theta(x_t,t)}
+{\sqrt{\bar\alpha_t}}</annotation></semantics></math></span>
+<p>若在上面的例子里预测噪声恰好为-1，就得到<code>x̂₀=2</code>。实际预测有误差，采样器还要按相应公式计算下一步状态，不能把这个x̂₀公式直接当成所有采样器的完整更新。</p>
+<p>不同模型也会预测x₀、速度参数或其他等价相关量；训练目标与采样公式必须配套。</p>
+<h2 id="section-文本条件怎样影响图像">文本条件怎样影响图像</h2>
+<p>文本编码器把提示转换为表示，去噪网络通过交叉注意力等结构使用这些条件。模型在每一步同时考虑当前图像状态与文本要求。</p>
+<p><strong>Classifier-free guidance（无分类器引导）</strong>是一类组合有条件与无条件预测的方式，常见表达为：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>ϵ</mi><mtext>guided</mtext></msub><mo>=</mo><msub><mi>ϵ</mi><mtext>uncond</mtext></msub><mo>+</mo><mi>w</mi><mo stretchy="false">(</mo><msub><mi>ϵ</mi><mtext>cond</mtext></msub><mo>−</mo><msub><mi>ϵ</mi><mtext>uncond</mtext></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\epsilon_{\text{guided}}
+=\epsilon_{\text{uncond}}
++w(\epsilon_{\text{cond}}-\epsilon_{\text{uncond}})</annotation></semantics></math></span>
+<p>w调节条件引导强度。较强引导可能提高与提示的对应程度，也可能降低多样性或带来失真，不应把w越大理解成质量越好。具体参数定义在不同实现中可能有命名差异。<a href="https://arxiv.org/abs/2207.12598" rel="noopener noreferrer">Classifier-Free Diffusion Guidance</a></p>
+<h2 id="section-潜空间扩散为什么能减少计算">潜空间扩散为什么能减少计算</h2>
+<p><strong>Latent Diffusion</strong>先用编码器把图像压缩到较小的潜变量空间，在潜空间进行扩散，再用解码器还原图像。这样避免每一步都在完整像素分辨率上计算。<a href="https://arxiv.org/abs/2112.10752" rel="noopener noreferrer">Latent Diffusion论文</a></p>
+<p>压缩会引入信息瓶颈，细小文字或精细结构可能受影响。图像尺寸、潜空间大小、网络结构和采样步数共同决定成本，不是只改一个“步数”就能保证速度与质量。</p>
+<p>减少采样步骤通常需要合适的采样器、蒸馏或训练方案，不能任意跳过更新步骤后假定分布保持不变。</p>
+<h2 id="section-怎样评价扩散模型">怎样评价扩散模型</h2>
+<p>图像质量、提示对应、多样性、文字准确和空间关系是不同指标。FID等分布指标有助于比较某些生成分布，但依赖特征和样本设置，也不能完全代表单张图是否满足用户要求。</p>
+<p>固定随机种子有助于局部比较，但不同硬件和实现未必严格逐像素一致。报告实验时应保留模型、采样器、步数、引导系数、分辨率和提示。</p>
+<p>本篇只验证标量加噪与恢复公式，没有生成图片、下载扩散模型或测量显存。实际图像效果不能由一维算例推断。</p>
+<h2 id="section-面试追问如何理解扩散模型">面试追问：如何理解扩散模型</h2>
+<p><span id="q-FQ-doxcnxbabJoYcrm2XY3bGnTGXgh" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnxbabJoYcrm2XY3bGnTGXgh"></a></p>
+<blockquote>
+<p>怎么看待扩散模型？</p>
+</blockquote>
+<p><strong>回答：</strong>扩散模型通过已知加噪过程构造训练样本，再学习逐步反向生成，具有较强的生成与条件控制能力。理解时应区分训练目标、采样器和潜空间表示：预测噪声只是常见参数化之一，多步采样带来计算成本，潜空间压缩则在效率与细节之间取舍。评价要同时看质量、条件一致性、多样性和实际资源，不只看示例图是否漂亮。</p>
+<p>原问及来源见<a href="/media/backend-agent-series/questions.json">逐题映射</a>。</p>17:["$","$L27",null,{"html":"$28"}]
+18:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/backend-agent-s09-09-moe/","children":[["$","span",null,{"children":"上一篇"}],"大模型与多模态09｜MoE的专家路由：激活参数减少以后，计算和通信怎样变化"]}],["$","$Lf",null,{"href":"/blog/backend-agent-s09-11-asr-streaming/","children":[["$","span",null,{"children":"下一篇"}],"大模型与多模态11｜ASR怎样把语音转成文字：流式结果、稳定前缀与错误率评价"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s09-08-clip-vlm",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s09-08-clip-vlm/","children":"大模型与多模态08｜CLIP与视觉语言模型：图像特征怎样和文本建立联系"}],["$","span",null,{"children":"人工智能"}]]}],["$","li","backend-agent-s09-11-asr-streaming",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s09-11-asr-streaming/","children":"大模型与多模态11｜ASR怎样把语音转成文字：流式结果、稳定前缀与错误率评价"}],["$","span",null,{"children":"人工智能"}]]}],["$","li","backend-agent-s09-12-vla",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s09-12-vla/","children":"大模型与多模态12｜VLA怎样从图像和指令产生动作：表示、训练数据与闭环控制"}],["$","span",null,{"children":"人工智能"}]]}]]}]]}]]}]
+19:["$","$L29",null,{"contentId":"backend-agent-s09-10-diffusion"}]
+1a:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+1b:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6"]}]
+1c:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1d:["$","$L2a",null,{"children":["$","$23",null,{"name":"Next.MetadataOutlet","children":"$@2b"}]}]
+26:true
+7:300
+2b:null
+7:C
+25:0
+9:"$undefined"
+5:"$undefined"
+24:"$undefined"
+1e:"$undefined"

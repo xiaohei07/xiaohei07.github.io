@@ -1,0 +1,79 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+1f:"ViewportBoundary"
+20:I[887,[],"$1f"]
+21:"MetadataBoundary"
+22:I[887,[],"$21"]
+23:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#ai","children":["人工智能",["$","span",null,{"children":25}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"大模型与多模态09｜MoE的专家路由：激活参数减少以后，计算和通信怎样变化"}],["$","p",null,{"className":"article-deck","children":"通过Token分配算例解释路由、容量与负载均衡，区分总参数、激活参数和实际吞吐"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,388"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","大模型",{"href":"/blog/#tag=%E5%A4%A7%E6%A8%A1%E5%9E%8B","children":"大模型"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-专家指的是模型里的计算模块","text":"专家指的是模型里的计算模块","level":2},{"id":"section-路由器怎样决定调用哪些专家","text":"路由器怎样决定调用哪些专家","level":2},{"id":"section-总参数和激活参数为什么差很多","text":"总参数和激活参数为什么差很多","level":2},{"id":"section-负载不均为什么会拖慢整批token","text":"负载不均为什么会拖慢整批Token","level":2},{"id":"section-专家并行怎样搬运token","text":"专家并行怎样搬运Token","level":2},{"id":"section-怎样比较moe与dense","text":"怎样比较MoE与Dense","level":2},{"id":"section-面试追问moe的收益与代价","text":"面试追问：MoE的收益与代价","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/llm-multimodal/","children":"大模型基础与多模态"}],["$","span",null,{"children":[9," / ",12," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s09-token-attention",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-token-attention/","children":"大模型与多模态01｜文本怎样变成下一步预测：Token、QKV与注意力算例"}]}],["$","li","backend-agent-s09-kv-cache",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-kv-cache/","children":"大模型与多模态02｜生成文字为什么还要缓存：Prefill、Decode与KV显存估算"}]}],["$","li","backend-agent-s09-training-lora",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-training-lora/","children":"大模型与多模态03｜模型参数怎样被训练：交叉熵、反向传播与LoRA"}]}],["$","li","backend-agent-s09-04-rope-context",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-04-rope-context/","children":"大模型与多模态04｜RoPE与长上下文：旋转位置编码怎样表示相对距离"}]}],["$","li","backend-agent-s09-05-quantization",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-05-quantization/","children":"大模型与多模态05｜模型量化怎样减少存储：误差、校准与推理速度之间的关系"}]}],["$","li","backend-agent-s09-06-parallel-memory",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-06-parallel-memory/","children":"大模型与多模态06｜大模型并行与显存估算：参数、梯度、优化器和激活分别放在哪里"}]}],["$","li","backend-agent-s09-07-embedding-infonce",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-07-embedding-infonce/","children":"大模型与多模态07｜Embedding与InfoNCE：相似向量是怎样通过对比学习得到的"}]}],"$L12","$L13","$L14","$L15","$L16"]}]]}]]}],"$L17","$undefined","$L18","$L19","$L1a"]}],"$L1b"]}]]}],["$L1c"],"$L1d"]}],"p":"$@1e","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s09-09-moe","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L20",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L22",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$23",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"大模型与多模态09｜MoE的专家路由：激活参数减少以后，计算和通信怎样变化 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"通过Token分配算例解释路由、容量与负载均衡，区分总参数、激活参数和实际吞吐。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s09-09-moe/"}]]}]}],null]}],null]}],"p":"$@24","v":null,"s":"$7"}},"a":"$@25","u":"$@26","b":"t75SI7oTDmNtBl3uMkJyg"}
+27:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+29:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+2a:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+12:["$","li","backend-agent-s09-08-clip-vlm",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-08-clip-vlm/","children":"大模型与多模态08｜CLIP与视觉语言模型：图像特征怎样和文本建立联系"}]}]
+13:["$","li","backend-agent-s09-09-moe",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-09-moe/","aria-current":"page","children":"大模型与多模态09｜MoE的专家路由：激活参数减少以后，计算和通信怎样变化"}]}]
+14:["$","li","backend-agent-s09-10-diffusion",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-10-diffusion/","children":"大模型与多模态10｜扩散模型怎样生成图像：加噪、去噪与条件控制的计算过程"}]}]
+15:["$","li","backend-agent-s09-11-asr-streaming",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-11-asr-streaming/","children":"大模型与多模态11｜ASR怎样把语音转成文字：流式结果、稳定前缀与错误率评价"}]}]
+16:["$","li","backend-agent-s09-12-vla",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-12-vla/","children":"大模型与多模态12｜VLA怎样从图像和指令产生动作：表示、训练数据与闭环控制"}]}]
+28:T185d,<h2 id="section-专家指的是模型里的计算模块">专家指的是模型里的计算模块</h2>
+<p><strong>MoE（Mixture of Experts，混合专家）</strong>在某些层中放置多个专家模块，再由路由器为输入选择一部分参与计算。在Transformer中，专家常替代原本的前馈网络，也就是对每个Token表示进行非线性变换的部分。</p>
+<p>这里的“专家”是不同参数的网络模块，不是多个独立聊天Agent。它们的专长通常由训练形成，不能仅凭编号就称为“数学专家”或“法律专家”。</p>
+<p><strong>Dense模型</strong>让Token经过该层同一组稠密参数；稀疏MoE则让不同Token使用不同专家，使模型能够拥有较多总参数，同时控制每个Token实际使用的专家数量。<a href="https://arxiv.org/html/2101.03961v3" rel="noopener noreferrer">Switch Transformer</a></p>
+<h2 id="section-路由器怎样决定调用哪些专家">路由器怎样决定调用哪些专家</h2>
+<p>设Token表示为x，路由器给E个专家打分，并选择Top-k集合S(x)。一种简化形式为：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>y</mi><mo>=</mo><munder><mo>∑</mo><mrow><mi>e</mi><mo>∈</mo><mi>S</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></munder><msub><mi>g</mi><mi>e</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><msub><mi>f</mi><mi>e</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y=\sum_{e\in S(x)}g_e(x)f_e(x)</annotation></semantics></math></span>
+<p><code>f_e</code>是专家计算，<code>g_e</code>是门控权重。不同模型对所选权重是否重新归一化、是否包含共享专家，有不同约定。</p>
+<p>假设4个专家的路由得分经softmax后为<code>[0.5,0.3,0.15,0.05]</code>，选择Top-2。在“选中后重新归一化”的教学实现里，两个权重是0.625和0.375；若不重新归一化，则仍是0.5和0.3。<strong>说明具体实现时要把这个细节写清楚，不能把所有MoE公式混用。</strong></p>
+<p>路由本身也有计算与训练成本。Top-k选择是离散操作，模型通常通过门控权重及相应训练设计学习路由，并需要关注稳定性。</p>
+<h2 id="section-总参数和激活参数为什么差很多">总参数和激活参数为什么差很多</h2>
+<p>设一层有8个专家，每个专家1亿参数，每个Token选2个。专家总参数为8亿，单Token使用的专家参数约2亿。模型还包含注意力、嵌入、路由器和可能的共享专家，所以不能据此声称整个模型计算量只剩四分之一。</p>
+<p><strong>未激活的专家仍然需要存储。</strong>在多卡系统中可以把专家分布在不同设备；如果无法全部驻留而频繁加载，也会增加等待。总参数影响存储与部署，激活参数更接近单Token计算的一部分，两者都需要报告。</p>
+<h2 id="section-负载不均为什么会拖慢整批token">负载不均为什么会拖慢整批Token</h2>
+<p>假设8个Token采用Top-1路由，4个专家收到的数量为<code>[5,1,1,1]</code>。平均每个专家2个，但第一个专家承担了大部分工作。</p>
+<p>若教学容量设置为每专家3个Token，就有2个超出容量。实际模型可能丢弃相应专家分支、重路由、增加容量，或使用不丢Token的动态执行方案。具体行为取决于实现，不能一概认为溢出会自动消失。</p>
+<p><strong>负载均衡损失</strong>通过训练信号减少路由过度集中；有些方案采用其他均衡策略。均衡也不是越平均越好，过强约束可能影响路由选择，因此需要同时观察任务质量、每专家Token数、溢出率与吞吐。</p>
+<h2 id="section-专家并行怎样搬运token">专家并行怎样搬运Token</h2>
+<p>专家分布在多卡时，输入Token需要发送到负责相应专家的设备，完成计算后再按原顺序汇总。这个过程常涉及All-to-All通信。</p>
+<p>通信量、跨节点带宽、小批量专家计算和等待最慢专家，都会影响实际效率。即使理论FLOPs下降，GPU利用率也可能不理想。批量小的时候，每个专家收到的Token太少，矩阵计算不够饱满；批量大时，又要考虑激活与通信缓冲。</p>
+<p>训练和推理的路由还可能受数值精度、批次组织和内核实现影响。需要比较路由结果与输出，而不是只确认权重文件相同。</p>
+<h2 id="section-怎样比较moe与dense">怎样比较MoE与Dense</h2>
+<p>应先明确比较条件：相同总参数、相同激活参数、相同训练计算量，或相同部署成本，得到的结论可能不同。</p>
+<p>比较指标至少包括任务质量、首Token延迟、解码吞吐、显存、跨设备通信和尾延迟。对不同输入长度与批量分别评价，避免只展示一个最适合MoE的批次。</p>
+<p>本篇只做路由权重、参数量和容量算例，不进行多卡通信或真实MoE推理。小型ECS不承担这类负载。</p>
+<h2 id="section-面试追问moe的收益与代价">面试追问：MoE的收益与代价</h2>
+<p><span id="q-FQ-doxcnlEs2mpsbFsUxYMCZVlITNb" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnlEs2mpsbFsUxYMCZVlITNb"></a></p>
+<blockquote>
+<p>为什么大家都开始探索 MoE 架构？MoE 相比 Dense 有什么好处与代价？</p>
+</blockquote>
+<p><strong>回答：</strong>稀疏MoE可以增加模型总容量，同时让每个Token只使用部分专家，控制相应计算开销。代价包括全部专家的存储、路由与负载均衡、跨设备Token通信，以及部署和训练稳定性。理论激活参数较少不保证实际更快，需要按相同质量或成本条件比较延迟、吞吐和资源占用。</p>
+<p><strong>自拟追问：专家越多一定越好吗？</strong>还受到训练数据、路由质量、专家负载和通信成本限制。专家数量增加而每个专家获得的有效训练不足，未必带来收益。</p>
+<p>原问及来源见<a href="/media/backend-agent-series/questions.json">逐题映射</a>。</p>17:["$","$L27",null,{"html":"$28"}]
+18:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/backend-agent-s09-08-clip-vlm/","children":[["$","span",null,{"children":"上一篇"}],"大模型与多模态08｜CLIP与视觉语言模型：图像特征怎样和文本建立联系"]}],["$","$Lf",null,{"href":"/blog/backend-agent-s09-10-diffusion/","children":[["$","span",null,{"children":"下一篇"}],"大模型与多模态10｜扩散模型怎样生成图像：加噪、去噪与条件控制的计算过程"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s09-04-rope-context",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s09-04-rope-context/","children":"大模型与多模态04｜RoPE与长上下文：旋转位置编码怎样表示相对距离"}],["$","span",null,{"children":"人工智能"}]]}],["$","li","backend-agent-s09-05-quantization",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s09-05-quantization/","children":"大模型与多模态05｜模型量化怎样减少存储：误差、校准与推理速度之间的关系"}],["$","span",null,{"children":"人工智能"}]]}],["$","li","backend-agent-s09-06-parallel-memory",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s09-06-parallel-memory/","children":"大模型与多模态06｜大模型并行与显存估算：参数、梯度、优化器和激活分别放在哪里"}],["$","span",null,{"children":"人工智能"}]]}]]}]]}]]}]
+19:["$","$L29",null,{"contentId":"backend-agent-s09-09-moe"}]
+1a:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+1b:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6"]}]
+1c:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1d:["$","$L2a",null,{"children":["$","$23",null,{"name":"Next.MetadataOutlet","children":"$@2b"}]}]
+26:true
+7:300
+2b:null
+7:C
+25:0
+9:"$undefined"
+5:"$undefined"
+24:"$undefined"
+1e:"$undefined"

@@ -1,0 +1,121 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+12:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+1b:"ViewportBoundary"
+1c:I[887,[],"$1b"]
+1d:"MetadataBoundary"
+1e:I[887,[],"$1d"]
+1f:"$Sreact.suspense"
+6:X
+6:C
+7:X
+13:T2b8c,<h2 id="section-为什么恢复进度还需要核对外部结果">为什么恢复进度还需要核对外部结果</h2>
+<p>前面介绍<a href="/blog/backend-agent-s01-loop/">Agent循环</a>时，把“提出创建工单”和“确认工单已创建”分成了两步。服务中断以后，这个区别尤其重要：程序里最后保存的状态，可能落后于外部系统已经发生的变化。</p>
+<p><strong>检查点（checkpoint）是为后续恢复保存的执行状态。</strong> 它可以包含节点进度、任务输入、已完成的工具结果，以及必要的版本信息。检查点应该明确恢复边界：重新进入某个节点，还是复用已持久化的子任务结果，都要由具体运行时保证。</p>
+<p>LangGraph把线程内图状态的持久化交给checkpointer，把跨线程的数据持久化交给store。这个划分有助于区分当前任务进度和长期数据；具体恢复行为仍应按所用版本核对，不能从“支持检查点”推断每条语句都能从中断位置接着执行。<a href="https://docs.langchain.com/oss/python/langgraph/persistence" rel="noopener noreferrer">持久化职责</a></p>
+<p>检查点能证明程序保存过什么，却不能单独证明外部服务做过什么。两个系统各自成功写入一次，并不等于它们共同完成了一个原子操作。</p>
+<h2 id="section-创建工单超时的三个可能位置">创建工单超时的三个可能位置</h2>
+<p>假设工单系统支持业务操作ID<code>op-17</code>。该ID代表“为这次用户意图创建一张工单”，不是每次HTTP尝试都重新生成的编号。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>中断位置</th><th>工单系统状态</th><th>调用方最后可能保存的状态</th><th>恢复时应如何判断</th></tr></thead><tbody><tr><td>请求发出前</td><td>没有工单</td><td>已准备创建</td><td>可按原操作ID提交</td></tr><tr><td>请求发出后、响应前</td><td>可能已创建，也可能未创建</td><td>正在调用</td><td>先标记结果未知，再查询</td></tr><tr><td>收到成功后、保存结果前</td><td>已创建</td><td>仍显示正在调用</td><td>查询并复用原结果</td></tr></tbody></table>
+<p>第二行最容易被一句“失败后重试”掩盖。<strong>超时只说明调用方在期限内没拿到可用结果。</strong> 如果工单系统已经提交，只是响应丢失，重新生成一个操作ID再次创建，就可能得到两张工单。</p>
+<p>再把过程展开成时间线：</p>
+<ol>
+<li>调用方先保存<code>op-17</code>和创建参数，再发送请求。</li>
+<li>工单系统创建<code>T17</code>并记录<code>op-17 → T17</code>。</li>
+<li>返回途中连接断开，调用方没有保存成功结果。</li>
+<li>调用方重启，从“正在创建”的检查点恢复。</li>
+<li>调用方用<code>op-17</code>查询，得到<code>T17</code>，保存结果后继续通知。</li>
+</ol>
+<p>这里用查询恢复了证据。若查询也暂时失败，应保留结果未知，而不是编造“已创建”或“未创建”。如果查询读的是有延迟的副本，“暂时查不到”也未必足以证明动作从未执行；是否允许重试还需要接口的幂等保证。</p>
+<h2 id="section-幂等怎样处理重复请求">幂等怎样处理重复请求</h2>
+<p><strong>幂等约束同一业务操作重复提交时的效果。</strong> 在这个例子中，相同操作ID与相同参数重复提交，应返回同一业务结果，不能创建新工单。</p>
+<p>服务端需要把“判定这个ID是否处理过”和“创建业务记录、保存结果”放在足够可靠的协调边界中。一个可行的数据库设计是给操作ID加唯一约束，并在同一事务中完成业务创建与结果登记。仅在程序里先查一次“有没有”，随后再插入，两个并发请求仍可能同时通过查询。</p>
+<p>还要明确几个条件。相同ID携带不同参数，应拒绝或明确报告冲突，不能静默复用另一项操作的结果。幂等记录保留期要覆盖业务允许的重试周期；记录删除以后收到旧请求，不能继续承诺原来的去重效果。长任务可能有<code>pending</code>、<code>succeeded</code>等中间状态，需要给重复调用者返回真实进度。AWS的幂等API设计说明也分别讨论了请求身份、参数冲突与迟到请求，具体保留周期仍由业务契约决定。<a href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/" rel="noopener noreferrer">幂等请求的身份与保留期</a></p>
+<p><strong>请求ID、执行尝试ID和业务操作ID可以同时存在。</strong> 请求ID用于追踪一次网络请求，尝试ID区分各轮重试，业务操作ID则把这些尝试关联到同一业务意图。把三者混成一个每次都变化的随机值，会丢失幂等依据。</p>
+<h2 id="section-多实例接管为什么需要防止旧实例继续写">多实例接管为什么需要防止旧实例继续写</h2>
+<p>如果任务可以由多台工作机执行，还需要解决“现在由谁推进”。通常可以保存任务所有者、租约到期时间和递增的执行代次。<strong>租约</strong>表示所有权只在规定时间内有效，工作者要定期续租；<strong>执行代次</strong>用于区分新旧持有者。</p>
+<p>假设A的租约是第7代。A长时间停顿后租约过期，B领取第8代并继续执行。随后A恢复，如果它仍能写任务结果，就可能覆盖B的新状态。</p>
+<p>因此任务状态更新可以使用条件<code>run_id匹配且epoch=8</code>，拒绝第7代的旧写入。外部资源如果支持<strong>fencing token（隔离旧持有者的单调令牌）</strong>，也可以拒绝过时代次的修改。仅在协调服务中把租约标为过期，不会自动终止A已经发出的网络请求。</p>
+<p>这又回到了外部副作用：如果工单服务不认识执行代次，仍要用业务幂等和查询保护创建动作。租约处理任务所有权，幂等处理重复业务效果，两者需要各自落实。</p>
+<h2 id="section-取消重试和补偿分别意味着什么">取消、重试和补偿分别意味着什么</h2>
+<p>取消到达时，动作可能还没开始，也可能已经提交。前一种可以阻止新动作，后一种需要查询已发生的结果，再判断是否需要撤销。<strong>取消请求不能直接证明外部操作已回滚。</strong></p>
+<p>补偿是另一次业务操作，例如关闭误建工单，而不是把时间倒回提交之前。补偿同样会遇到超时、权限变化和重复调用，也要记录状态与操作ID。</p>
+<p>重试还需要统一预算。假设HTTP客户端最多尝试3次、工具层最多尝试3次、Agent再尝试3轮，同一逻辑操作最多可能触发27次底层尝试。这个教学计算假定各层每次都耗尽重试；实际应明确一层统一控制，其他层把已用次数和结果状态向上传递。</p>
+<p>如果下游没有幂等键，也不能按业务标识查询结果，就不存在可以通用保证不重复的盲重试方案。可以先停止依赖这个结果的动作，保留待对账记录，由人工或专门流程确认。这个限制来自可观测性和业务接口，不能靠更详细的提示词消除。</p>
+<h2 id="section-面试问答多实例恢复与无损的条件">面试问答：多实例恢复与“无损”的条件</h2>
+<p><span id="q-FQ-doxcnEFAErQm00vlq7AaDtahMbg" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnEFAErQm00vlq7AaDtahMbg"></a></p>
+<blockquote>
+<p>我有一个多实例的 agent 服务，我应该怎么去做中断和恢复？就比如说我的实例、我的 pod 重启了，然后任务还在执行当中，我应该怎么做中断和恢复呢？</p>
+</blockquote>
+<p><strong>回答：</strong> 将任务状态持久化到实例外部，在可重放的执行边界保存检查点；使用持久任务队列或任务表重新调度，通过租约与执行代次控制多实例接管。恢复时先核对未决外部动作，再决定复用结果、继续执行或重试。</p>
+<p>检查点至少要能关联任务输入、执行节点、已确认结果和未完成操作的业务ID。Pod退出前可以停止接收新任务并尝试保存状态，但不能依赖优雅退出一定执行，机器故障和强制终止仍要由租约超时和持久数据处理。</p>
+<p>新实例获得第8代执行权后，状态写入应验证当前代次，防止旧实例恢复后覆盖进度。外部创建类工具使用稳定幂等键；工具请求超时但可能已提交时，按该键查结果。若外部系统既不能查询又不保证幂等，应把动作保留为结果未决，不能直接重放后宣称恢复正确。</p>
+<p><strong>延伸追问（自拟）：检查点越频繁，能否消除重复副作用？</strong> 不能。检查点与外部提交不在同一原子边界时，总会存在一方成功、另一方尚未保存的窗口。更频繁保存可以减少需要重算的工作，但副作用仍需独立协议保护。</p>
+<p>原问ID：<code>FQ-doxcnEFAErQm00vlq7AaDtahMbg</code>。本地出处与题组关系保留在<a href="/media/backend-agent-series/questions.json">私有逐题映射</a>，原记录没有提供公开来源URL。</p>
+<p><span id="q-FQ-doxcnk2EFetWefGPc5yc6r57EMh" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnk2EFetWefGPc5yc6r57EMh"></a></p>
+<blockquote>
+<p>故障恢复与续跑：任务执行期间发生服务重启、进程被 Kill 或机器故障时，怎样保证任务能够无损恢复？</p>
+</blockquote>
+<p><strong>回答：</strong> 应先定义“无损”的对象：已接受的任务不能丢、已确认结果不能丢、外部动作不能重复，分别需要持久接收、状态保存和业务幂等等保证。仅有检查点不能对任意故障承诺绝对无损。</p>
+<p>任务应在持久化成功后才向调用方确认受理，恢复系统必须能重新发现未完成任务。执行边界需要设计为可重放，已保存结果要带输入与版本信息；上游输入改变后，原结果可能失效。外部提交状态必须通过查询、幂等记录或业务对账确定，不能只相信调用方最后一次状态。</p>
+<p>还应说明持久存储本身的故障假设。单机磁盘永久损坏、已确认写入未得到足够持久化、备份过旧，都会影响恢复能力。系统需要给出实际的恢复点目标和恢复时间目标，并通过故障注入验证；本文的时间线只是机制推演，不是生产恢复演练。</p>
+<p><strong>延伸追问（自拟）：恢复后代码升级了怎么办？</strong> 检查点要能识别状态Schema、工具契约和关键输入版本。兼容升级可以迁移状态；不兼容时应固定旧执行环境、从安全边界重算或进入人工处理，不能让新代码误读旧字段后继续执行。</p>
+<p>原问ID：<code>FQ-doxcnk2EFetWefGPc5yc6r57EMh</code>。出处见<a href="/media/backend-agent-series/questions.json">私有逐题映射</a>。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#agent","children":["Agent",["$","span",null,{"children":25}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"Agent基础02｜Agent中断后怎样继续：检查点、幂等与结果未知"}],["$","p",null,{"className":"article-deck","children":"沿一次创建工单超时的过程，区分程序状态与外部事实，推演单实例恢复、多实例接管及取消的边界"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,736"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",8," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","Agent",{"href":"/blog/#tag=Agent","children":"Agent"}],["$","$L10","幂等性",{"href":"/blog/#tag=%E5%B9%82%E7%AD%89%E6%80%A7","children":"幂等性"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-为什么恢复进度还需要核对外部结果","text":"为什么恢复进度还需要核对外部结果","level":2},{"id":"section-创建工单超时的三个可能位置","text":"创建工单超时的三个可能位置","level":2},{"id":"section-幂等怎样处理重复请求","text":"幂等怎样处理重复请求","level":2},{"id":"section-多实例接管为什么需要防止旧实例继续写","text":"多实例接管为什么需要防止旧实例继续写","level":2},{"id":"section-取消重试和补偿分别意味着什么","text":"取消、重试和补偿分别意味着什么","level":2},{"id":"section-面试问答多实例恢复与无损的条件","text":"面试问答：多实例恢复与“无损”的条件","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/agent-foundations/","children":"Agent执行与任务恢复"}],["$","span",null,{"children":[2," / ",5," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s01-loop",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s01-loop/","children":"Agent基础01｜Agent怎样完成一个任务：模型、工具、状态与执行循环"}]}],["$","li","backend-agent-s01-recovery",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s01-recovery/","aria-current":"page","children":"Agent基础02｜Agent中断后怎样继续：检查点、幂等与结果未知"}]}],["$","li","backend-agent-s01-planning",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s01-planning/","children":"Agent基础03｜Agent怎样规划和调整任务：ReAct、计划执行与反馈修订"}]}],["$","li","backend-agent-s01-04-langgraph-replay",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s01-04-langgraph-replay/","children":"Agent基础04｜LangGraph的中断、状态修订与重放：任务恢复后会重新执行什么"}]}],["$","li","backend-agent-s01-05-intent-routing",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s01-05-intent-routing/","children":"Agent基础05｜意图识别与任务路由：遇到“帮我看看”时，怎样决定下一步"}]}]]}]]}]]}],["$","$L12",null,{"html":"$13"}],"$undefined","$L14","$L15","$L16"]}],"$L17"]}]]}],["$L18"],"$L19"]}],"p":"$@1a","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s01-recovery","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1c",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1e",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Agent基础02｜Agent中断后怎样继续：检查点、幂等与结果未知 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"沿一次创建工单超时的过程，区分程序状态与外部事实，推演单实例恢复、多实例接管及取消的边界。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s01-recovery/"}]]}]}],null]}],null]}],"p":"$@20","v":null,"s":"$7"}},"a":"$@21","u":"$@22","b":"t75SI7oTDmNtBl3uMkJyg"}
+23:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+24:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+14:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/backend-agent-s01-loop/","children":[["$","span",null,{"children":"上一篇"}],"Agent基础01｜Agent怎样完成一个任务：模型、工具、状态与执行循环"]}],["$","$Lf",null,{"href":"/blog/backend-agent-s01-planning/","children":[["$","span",null,{"children":"下一篇"}],"Agent基础03｜Agent怎样规划和调整任务：ReAct、计划执行与反馈修订"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s01-loop",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s01-loop/","children":"Agent基础01｜Agent怎样完成一个任务：模型、工具、状态与执行循环"}],["$","span",null,{"children":"Agent"}]]}]]}]]}]]}]
+15:["$","$L23",null,{"contentId":"backend-agent-s01-recovery"}]
+16:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+17:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5"]}]
+18:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+19:["$","$L24",null,{"children":["$","$1f",null,{"name":"Next.MetadataOutlet","children":"$@25"}]}]
+22:true
+7:300
+25:null
+7:C
+21:0
+9:"$undefined"
+5:"$undefined"
+20:"$undefined"
+1a:"$undefined"

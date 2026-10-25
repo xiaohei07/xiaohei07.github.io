@@ -1,0 +1,134 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+1a:"ViewportBoundary"
+1b:I[887,[],"$1a"]
+1c:"MetadataBoundary"
+1d:I[887,[],"$1c"]
+1e:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#ai","children":["人工智能",["$","span",null,{"children":25}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"强化学习02｜偏好对怎样直接训练模型：DPO目标与PPO的区别"}],["$","p",null,{"className":"article-deck","children":"从同一提示的胜负回答解释DPO，展开参考策略、奖励重参数化和可计算损失，并说明离线偏好数据的限制"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,376"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","强化学习",{"href":"/blog/#tag=%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0","children":"强化学习"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-一条偏好样本提供了什么信息","text":"一条偏好样本提供了什么信息","level":2},{"id":"section-从受约束的奖励目标到相对概率","text":"从受约束的奖励目标到相对概率","level":2},{"id":"section-实际损失怎样逐项计算","text":"实际损失怎样逐项计算","level":2},{"id":"section-dpo与ppo的数据流有什么不同","text":"DPO与PPO的数据流有什么不同","level":2},{"id":"section-面试问答dpo与ppo的关系","text":"面试问答：DPO与PPO的关系","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/reinforcement-learning/","children":"强化学习与偏好优化"}],["$","span",null,{"children":[2," / ",7," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s10-returns-ppo",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-returns-ppo/","children":"强化学习01｜奖励怎样变成策略更新：回报、优势、Critic与PPO"}]}],["$","li","backend-agent-s10-dpo",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-dpo/","aria-current":"page","children":"强化学习02｜偏好对怎样直接训练模型：DPO目标与PPO的区别"}]}],["$","li","backend-agent-s10-grpo-agent",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-grpo-agent/","children":"强化学习03｜同一道题的多个回答怎样参与训练：GRPO与Agent轨迹"}]}],["$","li","backend-agent-s10-04-policy-gradient",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-04-policy-gradient/","children":"强化学习04｜策略梯度怎样推导：为什么奖励可以乘在log概率的梯度上"}]}],["$","li","backend-agent-s10-05-off-policy-importance",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-05-off-policy-importance/","children":"强化学习05｜On-policy、Off-policy与重要性采样：旧轨迹怎样参与当前策略训练"}]}],["$","li","backend-agent-s10-06-grpo-variants",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-06-grpo-variants/","children":"强化学习06｜GRPO、DAPO与Dr.GRPO：裁剪和平均方式为什么会改变训练目标"}]}],["$","li","backend-agent-s10-07-async-rollout-frameworks",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s10-07-async-rollout-frameworks/","children":"强化学习07｜异步Rollout与训练框架：采样器、队列和训练器怎样协作"}]}]]}]]}]]}],"$L12","$undefined","$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"p":"$@19","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s10-dpo","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"强化学习02｜偏好对怎样直接训练模型：DPO目标与PPO的区别 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从同一提示的胜负回答解释DPO，展开参考策略、奖励重参数化和可计算损失，并说明离线偏好数据的限制。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s10-dpo/"}]]}]}],null]}],null]}],"p":"$@1f","v":null,"s":"$7"}},"a":"$@20","u":"$@21","b":"t75SI7oTDmNtBl3uMkJyg"}
+22:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+24:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+25:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+23:T2b20,<h2 id="section-一条偏好样本提供了什么信息">一条偏好样本提供了什么信息</h2>
+<p>假设同一问题有两个回答：y_w满足题目条件，y_l遗漏了条件，标注选择y_w更好。<strong>偏好对</strong>保存提示x、被偏好的回答y_w与另一个回答y_l，它表达相对偏好，不一定意味着胜出的回答绝对正确。</p>
+<p>SFT常直接增加示范回答的概率；<strong>DPO（Direct Preference Optimization，直接偏好优化）</strong>同时使用胜负关系，并参照固定的参考策略π_ref，训练当前策略π_θ。</p>
+<h2 id="section-从受约束的奖励目标到相对概率">从受约束的奖励目标到相对概率</h2>
+<p>DPO原论文从带KL正则项的奖励优化目标出发。先固定一个提示x，考虑：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munder><mrow><mi>max</mi><mo>⁡</mo></mrow><mi>π</mi></munder><mtext> </mtext><msub><mi mathvariant="double-struck">E</mi><mrow><mi>y</mi><mo>∼</mo><mi>π</mi><mo stretchy="false">(</mo><mo>⋅</mo><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo></mrow></msub><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mo>−</mo><mi>β</mi><msub><mi>D</mi><mrow><mi mathvariant="normal">K</mi><mi mathvariant="normal">L</mi></mrow></msub><mo stretchy="false">(</mo><mi>π</mi><mo stretchy="false">(</mo><mo>⋅</mo><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mi mathvariant="normal">∥</mi><msub><mi>π</mi><mrow><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">f</mi></mrow></msub><mo stretchy="false">(</mo><mo>⋅</mo><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\max_\pi\ \mathbb E_{y\sim\pi(\cdot|x)}[r(x,y)]
+-\beta D_{\mathrm{KL}}(\pi(\cdot|x)\Vert\pi_{\mathrm{ref}}(\cdot|x))</annotation></semantics></math></span>
+<p>在论文设定下，最优策略与奖励满足：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>π</mi><mo>∗</mo></msup><mo stretchy="false">(</mo><mi>y</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><msub><mi>π</mi><mrow><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">f</mi></mrow></msub><mo stretchy="false">(</mo><mi>y</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><msup><mi>e</mi><mrow><mi>r</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mi mathvariant="normal">/</mi><mi>β</mi></mrow></msup></mrow><mrow><mi>Z</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\pi^*(y|x)=\frac{\pi_{\mathrm{ref}}(y|x)e^{r(x,y)/\beta}}{Z(x)}</annotation></semantics></math></span>
+<p>其中Z(x)用于归一化，β>0控制该目标中偏离参考策略的代价。取对数并移项：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>r</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>β</mi><mi>log</mi><mo>⁡</mo><mfrac><mrow><msup><mi>π</mi><mo>∗</mo></msup><mo stretchy="false">(</mo><mi>y</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><msub><mi>π</mi><mrow><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">f</mi></mrow></msub><mo stretchy="false">(</mo><mi>y</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mi>β</mi><mi>log</mi><mo>⁡</mo><mi>Z</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">r(x,y)=\beta\log\frac{\pi^*(y|x)}{\pi_{\mathrm{ref}}(y|x)}
++\beta\log Z(x)</annotation></semantics></math></span>
+<p>偏好概率采用Bradley–Terry形式，即<code>P(y_w≻y_l|x)=σ(r_w−r_l)</code>。<strong>同一提示下两份回答相减，Z(x)相关项会抵消</strong>，因此可以用策略相对概率来表示偏好。这一步依赖论文的奖励优化和偏好模型设定，不代表任意人类判断都严格服从该模型。<a href="https://arxiv.org/pdf/2305.18290" rel="noopener noreferrer">DPO论文第3、4节</a></p>
+<h2 id="section-实际损失怎样逐项计算">实际损失怎样逐项计算</h2>
+<p>把最优策略替换为待训练策略后，DPO损失为：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi mathvariant="script">L</mi><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">O</mi></mrow></msub><mo>=</mo><mo>−</mo><msub><mi mathvariant="double-struck">E</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><msub><mi>y</mi><mi>w</mi></msub><mo separator="true">,</mo><msub><mi>y</mi><mi>l</mi></msub><mo stretchy="false">)</mo><mo>∼</mo><mi>D</mi></mrow></msub><mi>log</mi><mo>⁡</mo><mi>σ</mi><mrow><mo fence="true">(</mo><mi>β</mi><mrow><mo fence="true">[</mo><mi>log</mi><mo>⁡</mo><mfrac><mrow><msub><mi>π</mi><mi>θ</mi></msub><mo stretchy="false">(</mo><msub><mi>y</mi><mi>w</mi></msub><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><msub><mi>π</mi><mrow><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">f</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>y</mi><mi>w</mi></msub><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo></mrow></mfrac><mo>−</mo><mi>log</mi><mo>⁡</mo><mfrac><mrow><msub><mi>π</mi><mi>θ</mi></msub><mo stretchy="false">(</mo><msub><mi>y</mi><mi>l</mi></msub><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><msub><mi>π</mi><mrow><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">f</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>y</mi><mi>l</mi></msub><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo></mrow></mfrac><mo fence="true">]</mo></mrow><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathcal L_{\mathrm{DPO}}=
+-\mathbb E_{(x,y_w,y_l)\sim D}\log\sigma\left(
+\beta\left[
+\log\frac{\pi_\theta(y_w|x)}{\pi_{\mathrm{ref}}(y_w|x)}
+-\log\frac{\pi_\theta(y_l|x)}{\pi_{\mathrm{ref}}(y_l|x)}
+\right]\right)</annotation></semantics></math></span>
+<p>D为固定偏好数据集，<code>σ(z)=1/(1+e^{-z})</code>。当前策略参与梯度，参考策略及样本标签不参与更新。整段回答的log概率通常是其有效输出Token的条件log概率之和，需要排除padding并明确提示部分的mask。</p>
+<p>用一组教学log概率计算：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>回答</th><th align="right">当前策略log概率</th><th align="right">参考策略log概率</th><th align="right">相对变化</th></tr></thead><tbody><tr><td>y_w</td><td align="right">−2</td><td align="right">−3</td><td align="right">+1</td></tr><tr><td>y_l</td><td align="right">−4</td><td align="right">−4</td><td align="right">0</td></tr></tbody></table>
+<p>取β=1，括号内为1，损失为<code>−logσ(1)≈0.3133</code>。若当前策略与参考策略在两份回答上都没有相对变化，括号内为0，损失为<code>ln2≈0.6931</code>。若偏好方向相反，括号内为−1，损失约1.3133。</p>
+<p>这个例子显示损失奖励的是<strong>相对于参考策略的胜负差异</strong>，不能只看两份回答各自的绝对概率。也不能据此承诺每次梯度更新后胜出回答的绝对概率一定上升，参数共享和归一化会共同影响其他输出。</p>
+<h2 id="section-dpo与ppo的数据流有什么不同">DPO与PPO的数据流有什么不同</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>环节</th><th>常见RLHF PPO流程</th><th>原始离线DPO流程</th></tr></thead><tbody><tr><td>当前训练样本</td><td>策略采样轨迹，再评分</td><td>已标注的偏好对</td></tr><tr><td>评价信号</td><td>奖励模型或可验证环境奖励</td><td>数据中的胜负关系</td></tr><tr><td>更新依据</td><td>优势、概率比及相关约束</td><td>当前与参考策略的成对log概率</td></tr><tr><td>价值估计</td><td>Actor–Critic实现常用Critic</td><td>该目标不需要单独Critic</td></tr></tbody></table>
+<p>原始离线DPO训练步骤不要求每个batch都执行在线rollout，但偏好数据的生成仍可能使用模型采样。后来的在线或混合变体要另行说明，不能用同一个名称抹平数据来源差异。</p>
+<p>DPO也没有免除数据问题。两份回答都错、标签反转、长度偏好或分布偏离，都会影响学习。即使损失持续下降，也需要用独立任务评测事实正确性和实际效果，不能用偏好训练损失替代验收。</p>
+<h2 id="section-面试问答dpo与ppo的关系">面试问答：DPO与PPO的关系</h2>
+<p><span id="q-FQ-doxcn0PKZ8AEEXqjyrCks2ulkch" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcn0PKZ8AEEXqjyrCks2ulkch"></a></p>
+<blockquote>
+<p>DPO 和 PPO 是什么关系？它们有什么区别？</p>
+</blockquote>
+<p><strong>回答：</strong> 二者都可用于语言模型对齐，但PPO是一类策略优化方法，常见RLHF实现通过策略采样、奖励评价和优势估计来更新；DPO从特定KL正则奖励目标及偏好模型推导出直接作用于策略的分类损失，原始离线流程使用固定偏好对，不需要单独训练Critic或在每次更新时在线采样。</p>
+<p>DPO比较胜出与失败回答相对于参考策略的log概率差；PPO使用当前策略相对于采样旧策略的概率比和优势。DPO中的参考策略不能直接等同于PPO概率比分母中的旧策略，后者标记样本采样分布。</p>
+<p>选择取决于信号来源和任务。如果已有高质量偏好对，可以先验证DPO；如果任务需要与环境交互并依据可验证结果持续学习，在线策略优化有相应用途，但成本和稳定性需要单独管理。不能仅凭是否有Critic判断算法，也不能断言一种方法普遍优于另一种。</p>
+<p><strong>延伸追问（自拟）：DPO只保留胜出回答做SFT可以吗？</strong> 可以作为基线，但会丢掉成对比较及参考策略约束形成的目标信息，已经不等于原始DPO。应在同样数据和评测条件下比较。</p>
+<p>原问ID：<code>FQ-doxcn0PKZ8AEEXqjyrCks2ulkch</code>。出处：<a href="https://www.nowcoder.com/feed/main/detail/08c77582e2684108860965cd500e227b" rel="noopener noreferrer">原始面经</a>。</p>12:["$","$L22",null,{"html":"$23"}]
+13:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/backend-agent-s10-returns-ppo/","children":[["$","span",null,{"children":"上一篇"}],"强化学习01｜奖励怎样变成策略更新：回报、优势、Critic与PPO"]}],["$","$Lf",null,{"href":"/blog/backend-agent-s10-grpo-agent/","children":[["$","span",null,{"children":"下一篇"}],"强化学习03｜同一道题的多个回答怎样参与训练：GRPO与Agent轨迹"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s10-04-policy-gradient",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s10-04-policy-gradient/","children":"强化学习04｜策略梯度怎样推导：为什么奖励可以乘在log概率的梯度上"}],["$","span",null,{"children":"人工智能"}]]}],["$","li","backend-agent-s10-05-off-policy-importance",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s10-05-off-policy-importance/","children":"强化学习05｜On-policy、Off-policy与重要性采样：旧轨迹怎样参与当前策略训练"}],["$","span",null,{"children":"人工智能"}]]}],["$","li","backend-agent-s10-06-grpo-variants",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s10-06-grpo-variants/","children":"强化学习06｜GRPO、DAPO与Dr.GRPO：裁剪和平均方式为什么会改变训练目标"}],["$","span",null,{"children":"人工智能"}]]}]]}]]}]]}]
+14:["$","$L24",null,{"contentId":"backend-agent-s10-dpo"}]
+15:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+16:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4"]}]
+17:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+18:["$","$L25",null,{"children":["$","$1e",null,{"name":"Next.MetadataOutlet","children":"$@26"}]}]
+21:true
+7:300
+26:null
+7:C
+20:0
+9:"$undefined"
+5:"$undefined"
+1f:"$undefined"
+19:"$undefined"

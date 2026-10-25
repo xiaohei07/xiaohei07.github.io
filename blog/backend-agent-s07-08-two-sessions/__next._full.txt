@@ -1,0 +1,122 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+a:I[887,[],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[887,[],"$d"]
+10:"MetadataBoundary"
+11:I[887,[],"$10"]
+13:I[5718,[],"default",1]
+:HL["/_next/static/css/ed72070de5f1647a.css","style"]
+:HL["/_next/static/css/6241f55ce16a0817.css","style"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+6:X
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s07-08-two-sessions","s":["cpp-casts","merge-sort","series"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"blog","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","blog","backend-agent-s07-08-two-sessions",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/6241f55ce16a0817.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"t75SI7oTDmNtBl3uMkJyg"}
+6:C
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+15:"static/chunks/5587-bf231f55b3fd3ee7.js"
+16:"static/chunks/8612-da6413c49129460e.js"
+17:"static/chunks/1133-0d344bd2ae49df3d.js"
+18:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+19:I[6279,["5587","$15","8612","$16","1133","$17","5953","$18"],"FilterLink"]
+1a:I[5128,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleToc"]
+1c:I[4711,["5587","$15","8612","$16","1133","$17","5953","$18"],"ArticleBody"]
+1d:T2738,<h2 id="section-先确定谁提交谁读取以及何时建立快照">先确定谁提交、谁读取以及何时建立快照</h2>
+<p>事务讨论经常省略操作顺序，只说“另一个事务改了，所以能看见”或“RR一直看旧值”。要推演结果，至少需要知道隔离级别、语句类型、快照建立时间，以及当前事务是否做过自己的写入。</p>
+<p>本篇使用InnoDB，先比较普通一致性SELECT。<strong>RC（Read Committed，读已提交）</strong>通常为每次一致性读建立新的快照；<strong>RR（Repeatable Read，可重复读）</strong>在事务内复用相应一致性读快照。普通BEGIN与第一条一致性SELECT也不能无条件看作同一时刻。<a href="https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-isolation-levels.html" rel="noopener noreferrer">MySQL8.0隔离级别</a></p>
+<p>实际验证在本地MySQL8.0.35独立实例完成，不访问业务表。实验只用一行余额，目的不是模拟真实金融系统，而是让可见性结果容易核对。</p>
+<h2 id="section-初始化一行数据分别打开a和b">初始化一行数据，分别打开A和B</h2>
+<p>在专用教学数据库创建：</p>
+<div class="code-block"><div class="code-toolbar"><span>sql</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-sql"><span class="hljs-keyword">CREATE TABLE</span> balance (
+    id <span class="hljs-type">INT</span> <span class="hljs-keyword">PRIMARY KEY</span>,
+    amount <span class="hljs-type">INT</span>
+) ENGINE<span class="hljs-operator">=</span>InnoDB;
+<span class="hljs-keyword">INSERT INTO</span> balance <span class="hljs-keyword">VALUES</span> (<span class="hljs-number">1</span>,<span class="hljs-number">100</span>);
+</code></pre></div>
+<p>A、B必须是两个不同连接。一个SQL编辑器开两个标签，不一定代表两个数据库会话，应检查连接设置，必要时查询CONNECTION_ID。B的更新按autocommit提交，若把B留在未提交事务中，就改变了本实验条件。</p>
+<p>先在A执行：</p>
+<div class="code-block"><div class="code-toolbar"><span>sql</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-sql"><span class="hljs-keyword">SET</span> SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+<span class="hljs-keyword">START</span> TRANSACTION;
+<span class="hljs-keyword">SELECT</span> amount <span class="hljs-keyword">FROM</span> balance <span class="hljs-keyword">WHERE</span> id<span class="hljs-operator">=</span><span class="hljs-number">1</span>;
+</code></pre></div>
+<p>第一次返回100。随后B执行并提交：</p>
+<div class="code-block"><div class="code-toolbar"><span>sql</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-sql"><span class="hljs-keyword">UPDATE</span> balance <span class="hljs-keyword">SET</span> amount<span class="hljs-operator">=</span><span class="hljs-number">80</span> <span class="hljs-keyword">WHERE</span> id<span class="hljs-operator">=</span><span class="hljs-number">1</span>;
+</code></pre></div>
+<p>回到A再做同样的普通SELECT，实测仍为100；A回滚结束事务后再读，可以看到80。这个结果来自A此前建立的读视图，历史版本可以通过undo等机制重建，详见<a href="/blog/backend-agent-s07-transactions/">事务与多版本</a>。</p>
+<h2 id="section-只改变隔离级别再重复同一时序">只改变隔离级别，再重复同一时序</h2>
+<p>结束A的事务，把值恢复100；在A把隔离级别改为READ COMMITTED，再重复“读100→B提交80→A再读”：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>条件</th><th align="right">A第一次普通读</th><th align="right">B提交后A第二次普通读</th></tr></thead><tbody><tr><td>RR，同一事务</td><td align="right">100</td><td align="right">100</td></tr><tr><td>RC，同一事务</td><td align="right">100</td><td align="right">80</td></tr></tbody></table>
+<p>本轮两个结果均实际验证。RC避免读到其他事务未提交的更新，但允许两次已提交读之间发生变化。RR为这类一致性读提供稳定快照，却不能直接推出所有DML、锁定读及跨行业务约束都有相同表现。</p>
+<p>如果A先BEGIN，B随后提交80，然后A才做第一次一致性读，常见RR路径下A可以读到80。若使用显式一致性快照启动方式，条件又不同。因此必须把建立读视图的动作写进时间线。</p>
+<h2 id="section-for-update读取为什么进入另一条路径">FOR UPDATE读取为什么进入另一条路径</h2>
+<p><strong>锁定读</strong>用于读取并保护接下来要处理的当前记录，不能简单套用旧快照的返回规则。开启事务后，A对id=1执行：</p>
+<div class="code-block"><div class="code-toolbar"><span>sql</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> amount <span class="hljs-keyword">FROM</span> balance <span class="hljs-keyword">WHERE</span> id<span class="hljs-operator">=</span><span class="hljs-number">1</span> <span class="hljs-keyword">FOR</span> <span class="hljs-keyword">UPDATE</span>;
+</code></pre></div>
+<p>A持有相应行锁期间，B执行：</p>
+<div class="code-block"><div class="code-toolbar"><span>sql</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-sql"><span class="hljs-keyword">START</span> TRANSACTION;
+<span class="hljs-keyword">SELECT</span> amount <span class="hljs-keyword">FROM</span> balance <span class="hljs-keyword">WHERE</span> id<span class="hljs-operator">=</span><span class="hljs-number">1</span> <span class="hljs-keyword">FOR</span> <span class="hljs-keyword">UPDATE</span> NOWAIT;
+<span class="hljs-keyword">ROLLBACK</span>;
+</code></pre></div>
+<p>本轮B得到错误3572，表示无法立即取得锁；A回滚释放锁后，B再次执行相应锁定读成功，读到80。NOWAIT让冲突立即返回，便于区分“没有数据”与“数据存在但当前不可锁定”。<a href="https://dev.mysql.com/doc/refman/8.4/en/innodb-locking-reads.html" rel="noopener noreferrer">InnoDB锁定读</a></p>
+<p>SKIP LOCKED则可以跳过无法立即取得的行，适合某些并发任务领取场景，但会得到不完整视图，不适合随意用于要求一致完整结果的统计。使用这些选项之前应明确查询用途和错误处理。</p>
+<h2 id="section-四种隔离级别解决的现象怎样连接起来">四种隔离级别解决的现象怎样连接起来</h2>
+<p><strong>脏读</strong>是读到其他事务尚未提交的数据；<strong>不可重复读</strong>是同一事务两次读取同一对象发生变化；<strong>幻读</strong>通常描述同一条件下记录集合变化。读未提交、读已提交、可重复读和串行化提供不同级别的限制，但具体数据库通过哪些机制实现，需要结合产品说明。</p>
+<p>InnoDB的RR普通一致性读借助快照避免相应结果集合变化，某些锁定范围查询则通过记录锁、间隙锁或next-key lock控制插入。<strong>普通快照读和范围锁不是同一个机制。</strong> 唯一索引精确定位、范围扫描、缺少合适索引，会影响实际锁范围。</p>
+<p>业务中的写偏差也提醒我们：每个事务读到自洽快照，不意味着多个事务联合维护的跨行约束必然成立。例如两个值班人都观察到另一个在岗，分别把自己改为离岗，单行更新各自合法却破坏“至少一人在岗”。应使用合适的锁定协议、约束或更强隔离与重试设计。</p>
+<h2 id="section-怎样避免把实验结果用错">怎样避免把实验结果用错</h2>
+<p>每次实验先结束旧事务并恢复初始值，保存两个连接的语句顺序。超时和死锁是不同结果，处理时通常应重新判断并重试完整业务事务，不能只补跑最后一条SQL。</p>
+<p>本轮实际执行的是RC/RR普通读对照，以及同一主键行上的NOWAIT冲突和释放后重试。范围锁、死锁和写偏差在本篇解释机制，但没有伪装成已经执行的测试；小型实验也不提供生产吞吐结论。</p>
+<h2 id="section-面试问答四种隔离级别与并发问题">面试问答：四种隔离级别与并发问题</h2>
+<p><span id="q-FQ-doxcnyrfpWcjkUbDL4CkWvZeDvp" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnyrfpWcjkUbDL4CkWvZeDvp"></a></p>
+<blockquote>
+<p>事务隔离级别：四大事务隔离级别分别解决了什么并发问题？</p>
+</blockquote>
+<p><strong>回答：</strong> 读未提交允许更弱的可见性；读已提交避免读取其他事务未提交的写入，但不同语句可能看到不同已提交状态；可重复读对相应读取提供更稳定的视图；串行化进一步限制并发异常，使执行效果满足其串行化语义。具体实现不能只靠一张通用表判断，需明确数据库、普通读或锁定读及业务约束。</p>
+<p>例如InnoDB中，A先读100，B提交80，A在同一RR事务的普通一致性读仍见100，而RC第二次读见80。FOR UPDATE会进入当前记录和锁竞争路径，本轮NOWAIT实际得到3572，释放后可重新取得。快照稳定也不能自动替代跨行约束设计。</p>
+<p><strong>延伸追问（自拟）：所有事务都改成串行化就不用处理失败了吗？</strong> 更强隔离会增加等待或冲突失败的可能，仍需完整事务重试、超时和幂等处理；还要确认应用使用的数据库实现及访问路径。</p>
+<p>原问见<a href="/media/backend-agent-series/questions.json">逐题映射</a>，实际输出见<a href="/media/backend-agent-series/mysql-results.json">双会话结果</a>。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"数据库与缓存08｜两次SELECT为什么结果不同：MySQL双会话隔离与锁实验"}],["$","p",null,{"className":"article-deck","children":"按A/B会话的精确顺序比较RC与RR快照，观察NOWAIT锁冲突，并把隔离异常、范围锁和业务不变量连接起来"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,741"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",6," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L19","MySQL",{"href":"/blog/#tag=MySQL","children":"MySQL"}],["$","$L19","事务",{"href":"/blog/#tag=%E4%BA%8B%E5%8A%A1","children":"事务"}]]}]]}],["$","$L1a",null,{"headings":[{"id":"section-先确定谁提交谁读取以及何时建立快照","text":"先确定谁提交、谁读取以及何时建立快照","level":2},{"id":"section-初始化一行数据分别打开a和b","text":"初始化一行数据，分别打开A和B","level":2},{"id":"section-只改变隔离级别再重复同一时序","text":"只改变隔离级别，再重复同一时序","level":2},{"id":"section-for-update读取为什么进入另一条路径","text":"FOR UPDATE读取为什么进入另一条路径","level":2},{"id":"section-四种隔离级别解决的现象怎样连接起来","text":"四种隔离级别解决的现象怎样连接起来","level":2},{"id":"section-怎样避免把实验结果用错","text":"怎样避免把实验结果用错","level":2},{"id":"section-面试问答四种隔离级别与并发问题","text":"面试问答：四种隔离级别与并发问题","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":["$L1b",["$","$L1c",null,{"html":"$1d"}],"$undefined","$L1e","$L1f","$L20"]}],"$L21"]}]]}]
+c:null
+12:[["$","title","0",{"children":"数据库与缓存08｜两次SELECT为什么结果不同：MySQL双会话隔离与锁实验 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"按A/B会话的精确顺序比较RC与RR快照，观察NOWAIT锁冲突，并把隔离异常、范围锁和业务不变量连接起来。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s07-08-two-sessions/"}]]
+22:I[2708,["5587","$15","8612","$16","1133","$17","5953","$18"],"FeedbackForm"]
+23:I[3498,["5587","$15","8612","$16","1133","$17","5953","$18"],"default"]
+1f:["$","$L22",null,{"contentId":"backend-agent-s07-08-two-sessions"}]
+20:["$","div",null,{"className":"related-note","children":[["$","$L23",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+21:["$","$L1a",null,{"headings":["$9:props:children:1:props:headings:0","$9:props:children:1:props:headings:1","$9:props:children:1:props:headings:2","$9:props:children:1:props:headings:3","$9:props:children:1:props:headings:4","$9:props:children:1:props:headings:5","$9:props:children:1:props:headings:6"]}]
+1e:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$L23",null,{"href":"/blog/backend-agent-s07-07-explain/","children":[["$","span",null,{"children":"上一篇"}],"数据库与缓存07｜怎样读MySQL执行计划：六行数据的EXPLAIN与索引实验"]}],["$","$L23",null,{"href":"/blog/backend-agent-s07-09-redis-encoding/","children":[["$","span",null,{"children":"下一篇"}],"数据库与缓存09｜Redis类型怎样落到内存：紧凑编码、跳表与容量估算"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s07-transactions",{"children":[["$","$L23",null,{"href":"/blog/backend-agent-s07-transactions/","children":"数据库与缓存02｜并发事务究竟读到什么：RC、RR、MVCC与锁"}],["$","span",null,{"children":"后端与数据库"}]]}]]}]]}]]}]
+24:Tb2c,(()=>{const d={"wallpaper":"banner","layout":"list","cardStyle":"soft","textSize":"normal","hero":true,"carousel":false,"waves":false,"fade":true,"motion":true,"typewriter":true,"progress":true,"petals":false,"dim":28,"blur":0,"cardOpacity":78,"colorMode":"section","customColor":"#32846b","sectionColors":{},"customTheme":"","sectionThemes":{}},enums={"wallpaper":["banner","fullscreen","overlay","none"],"layout":["list","grid"],"cardStyle":["soft","flat"],"textSize":["normal","large"],"colorMode":["section","custom"]},bools=["hero","carousel","waves","fade","motion","typewriter","progress","petals"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]));const color=(function(a,b){let c=b.startsWith("/credits")?"about":b.split("/")[1],d=["home","blog","research","projects","about"].includes(c)?c:"home",e=(a.sectionColors&&"object"==typeof a.sectionColors&&!Array.isArray(a.sectionColors)?a.sectionColors:{})[d],f="string"==typeof e&&/^#[\da-f]{6}$/i.test(e)?e.toLowerCase():void 0,g="string"==typeof a.customColor&&/^#[\da-f]{6}$/i.test(a.customColor)?a.customColor.toLowerCase():"#32846b",h=a.sectionThemes&&"object"==typeof a.sectionThemes&&!Array.isArray(a.sectionThemes)?a.sectionThemes:{},i="custom"===a.colorMode?a.customTheme:h[d],j="string"==typeof i&&["home","blog","research","projects","about"].includes(i)?i:void 0;return{section:d,color:"custom"===a.colorMode?g:f??g,customized:"custom"===a.colorMode?!j:!!f,theme:j??d}})(p,location.pathname);document.documentElement.setAttribute('data-custom-palette',String(color.customized));document.documentElement.setAttribute('data-palette-section',color.theme);const palette=(function(a){let b=/^#[\da-f]{6}$/i.test(a)?a:"#32846b",c=[1,3,5].map(a=>Number.parseInt(b.slice(a,a+2),16)),d={};for(let[a,[b,e]]of Object.entries({"light-page":[248,.09],"light-surface":[255,.025],"light-surface-soft":[252,.05],"light-surface-raised":[246,.08],"light-ink":[0,.15],"light-muted":[0,.32],"light-line":[213,.12],"light-accent":[0,.4],"light-accent-strong":[0,.3],"light-accent-soft":[248,.1],"light-on-accent":[255,0],"dark-page":[16,.025],"dark-surface":[26,.045],"dark-surface-soft":[22,.04],"dark-surface-raised":[33,.06],"dark-ink":[255,.12],"dark-muted":[255,.34],"dark-line":[72,.1],"dark-accent":[255,.35],"dark-accent-strong":[255,.22],"dark-accent-soft":[24,.1],"dark-on-accent":[0,.1]}))d[`--palette-${a}`]=`#${c.map(a=>Math.round(b*(1-e)+a*e).toString(16).padStart(2,"0")).join("")}`;return d})(color.color);for(const k in palette)document.documentElement.style.setProperty(k,palette[k])})()2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$24"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],"$L25"]}],"$L26"]}]
+1b:["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$L23",null,{"href":"/blog/series/database-cache/","children":"数据库与缓存"}],["$","span",null,{"children":[8," / ",11," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s07-index-query",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-index-query/","aria-current":"$undefined","children":"数据库与缓存01｜MySQL索引怎样减少查询工作：B+树、回表与联合索引"}]}],["$","li","backend-agent-s07-transactions",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-transactions/","aria-current":"$undefined","children":"数据库与缓存02｜并发事务究竟读到什么：RC、RR、MVCC与锁"}]}],["$","li","backend-agent-s07-cache-consistency",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-cache-consistency/","aria-current":"$undefined","children":"数据库与缓存03｜先更新数据库再删除缓存之后：旧值回填、一致性与缓存保护"}]}],["$","li","backend-agent-s07-sql-semantics",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-sql-semantics/","aria-current":"$undefined","children":"数据库与缓存04｜SQL查出的行代表什么：JOIN、NULL、排名与稳定分页"}]}],["$","li","backend-agent-s07-logs-recovery",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-logs-recovery/","aria-current":"$undefined","children":"数据库与缓存05｜数据库崩溃后怎样恢复：redo、undo、binlog与提交结果"}]}],["$","li","backend-agent-s07-redis-durability",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-redis-durability/","aria-current":"$undefined","children":"数据库与缓存06｜Redis的数据怎样保存：数据类型、RDB、AOF与复制"}]}],["$","li","backend-agent-s07-07-explain",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-07-explain/","aria-current":"$undefined","children":"数据库与缓存07｜怎样读MySQL执行计划：六行数据的EXPLAIN与索引实验"}]}],["$","li","backend-agent-s07-08-two-sessions",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-08-two-sessions/","aria-current":"page","children":"数据库与缓存08｜两次SELECT为什么结果不同：MySQL双会话隔离与锁实验"}]}],["$","li","backend-agent-s07-09-redis-encoding",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-09-redis-encoding/","aria-current":"$undefined","children":"数据库与缓存09｜Redis类型怎样落到内存：紧凑编码、跳表与容量估算"}]}],["$","li","backend-agent-s07-10-cache-protection",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-10-cache-protection/","aria-current":"$undefined","children":"数据库与缓存10｜缓存失效以后怎样保护数据库：穿透、击穿、雪崩与回源合并"}]}],["$","li","backend-agent-s07-11-multilevel-cache",{"children":["$","$L23",null,{"href":"/blog/backend-agent-s07-11-multilevel-cache/","aria-current":"$undefined","children":"数据库与缓存11｜本地缓存与Redis怎样协同：版本、失效通知和断线恢复"}]}]]}]]}]]}]
+27:"static/chunks/7107-d67496718f7d4082.js"
+28:"static/chunks/app/layout-883cb555fbda7bdc.js"
+29:I[5376,["5587","$15","7107","$27","7177","$28"],"DisplayProvider"]
+2a:"NavigationFeedback"
+2b:I[2842,["5587","$15","7107","$27","7177","$28"],"$2a"]
+2c:I[4085,["5587","$15","7107","$27","7177","$28"],"SiteHeader"]
+2d:I[5803,["5587","$15","7107","$27","7177","$28"],"SiteFrame"]
+2e:I[164,["5587","$15","7107","$27","7177","$28"],"ProfileSidebar"]
+25:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]
+26:["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L29",null,{"children":[["$","$L2b",null,{}],["$","$L2c",null,{"tags":["编程语言知识点","Python","C++"],"categoryIds":["foundations","frontend","backend","agent","computing","ai","deployment","project-log","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L2d",null,{"sidebar":["$","$L2e",null,{"categoryIds":"$26:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L23",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L23",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L23",null,{"href":"/about/","children":"关于这个站点"}],["$","$L23",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]
+14:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L23",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L23",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$L23",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L19",null,{"className":"trail-current","href":"/blog/#backend","children":["后端与数据库",["$","span",null,{"children":33}]]}],"$undefined"]}]

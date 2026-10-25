@@ -1,0 +1,119 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+1f:"ViewportBoundary"
+20:I[887,[],"$1f"]
+21:"MetadataBoundary"
+22:I[887,[],"$21"]
+23:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#backend","children":["后端与数据库",["$","span",null,{"children":33}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"数据库与缓存11｜本地缓存与Redis怎样协同：版本、失效通知和断线恢复"}],["$","p",null,{"className":"article-deck","children":"沿L1、L2和数据库的读取与更新时序，解释通知丢失、旧读晚到和过期预算，并区分本地淘汰与跨实例一致性"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,745"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",6," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","Redis",{"href":"/blog/#tag=Redis","children":"Redis"}],["$","$L10","缓存",{"href":"/blog/#tag=%E7%BC%93%E5%AD%98","children":"缓存"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-每一层缓存为什么存在","text":"每一层缓存为什么存在","level":2},{"id":"section-一次读取怎样逐层进行","text":"一次读取怎样逐层进行","level":2},{"id":"section-数据库更新后怎样通知所有l1","text":"数据库更新后，怎样通知所有L1","level":2},{"id":"section-旧结果晚到为什么会覆盖已经失效的状态","text":"旧结果晚到，为什么会覆盖已经失效的状态","level":2},{"id":"section-用版本水位推演失效与回填","text":"用版本水位推演失效与回填","level":2},{"id":"section-断线恢复与容量控制需要一起设计","text":"断线恢复与容量控制需要一起设计","level":2},{"id":"section-面试问答多级缓存一致性","text":"面试问答：多级缓存一致性","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/database-cache/","children":"数据库与缓存"}],["$","span",null,{"children":[11," / ",11," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s07-index-query",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-index-query/","children":"数据库与缓存01｜MySQL索引怎样减少查询工作：B+树、回表与联合索引"}]}],["$","li","backend-agent-s07-transactions",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-transactions/","children":"数据库与缓存02｜并发事务究竟读到什么：RC、RR、MVCC与锁"}]}],["$","li","backend-agent-s07-cache-consistency",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-cache-consistency/","children":"数据库与缓存03｜先更新数据库再删除缓存之后：旧值回填、一致性与缓存保护"}]}],["$","li","backend-agent-s07-sql-semantics",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-sql-semantics/","children":"数据库与缓存04｜SQL查出的行代表什么：JOIN、NULL、排名与稳定分页"}]}],["$","li","backend-agent-s07-logs-recovery",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-logs-recovery/","children":"数据库与缓存05｜数据库崩溃后怎样恢复：redo、undo、binlog与提交结果"}]}],["$","li","backend-agent-s07-redis-durability",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-redis-durability/","children":"数据库与缓存06｜Redis的数据怎样保存：数据类型、RDB、AOF与复制"}]}],["$","li","backend-agent-s07-07-explain",{"children":"$L12"}],"$L13","$L14","$L15","$L16"]}]]}]]}],"$L17","$undefined","$L18","$L19","$L1a"]}],"$L1b"]}]]}],["$L1c"],"$L1d"]}],"p":"$@1e","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s07-11-multilevel-cache","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L20",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L22",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$23",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"数据库与缓存11｜本地缓存与Redis怎样协同：版本、失效通知和断线恢复 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"沿L1、L2和数据库的读取与更新时序，解释通知丢失、旧读晚到和过期预算，并区分本地淘汰与跨实例一致性。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s07-11-multilevel-cache/"}]]}]}],null]}],null]}],"p":"$@24","v":null,"s":"$7"}},"a":"$@25","u":"$@26","b":"t75SI7oTDmNtBl3uMkJyg"}
+27:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+29:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+2a:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+12:["$","$Lf",null,{"href":"/blog/backend-agent-s07-07-explain/","children":"数据库与缓存07｜怎样读MySQL执行计划：六行数据的EXPLAIN与索引实验"}]
+13:["$","li","backend-agent-s07-08-two-sessions",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-08-two-sessions/","children":"数据库与缓存08｜两次SELECT为什么结果不同：MySQL双会话隔离与锁实验"}]}]
+14:["$","li","backend-agent-s07-09-redis-encoding",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-09-redis-encoding/","children":"数据库与缓存09｜Redis类型怎样落到内存：紧凑编码、跳表与容量估算"}]}]
+15:["$","li","backend-agent-s07-10-cache-protection",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-10-cache-protection/","children":"数据库与缓存10｜缓存失效以后怎样保护数据库：穿透、击穿、雪崩与回源合并"}]}]
+16:["$","li","backend-agent-s07-11-multilevel-cache",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s07-11-multilevel-cache/","aria-current":"page","children":"数据库与缓存11｜本地缓存与Redis怎样协同：版本、失效通知和断线恢复"}]}]
+28:T1d7d,<h2 id="section-每一层缓存为什么存在">每一层缓存为什么存在</h2>
+<p>一个常见结构是：应用进程内的<strong>L1本地缓存</strong>提供很短的访问路径；Redis作为<strong>L2共享缓存</strong>让多个应用实例复用数据；数据库保存权威状态。层数增加后，访问可以更快，但同一对象也会出现更多副本。</p>
+<p>本地缓存适合体积可控、读多写少、允许明确陈旧窗口的数据。持续变化的全局计数或高敏感权限信息，可能不适合直接缓存很久。是否缓存，先看访问收益和一致性要求，再决定层数。</p>
+<p>以报告元数据为例，键不能只写<code>report:7</code>而忽略租户；内容包含<code>value、version、expires_at</code>，方便明确它是哪一版以及还能使用多久。版本应来自可信更新顺序，不能让各个进程随意拿本地时间比较先后。</p>
+<h2 id="section-一次读取怎样逐层进行">一次读取怎样逐层进行</h2>
+<p>命中L1且满足有效性条件时直接返回；L1未命中再查L2；L2也未命中才访问数据库，并按相应策略回填。不同层的TTL不是简单照抄同一个固定时长。</p>
+<p>假设L2记录只剩5秒有效期，应用把它放进L1却重新设置60秒，就可能在L2到期以后仍继续提供55秒旧数据。<strong>L1需要尊重数据剩余有效期和业务允许的陈旧预算</strong>，而不只是从“刚放入本地”重新计时。</p>
+<p>对热点，L1能减少网络访问；对冷键，每个实例都保存一份可能浪费内存。缓存条数也不等于字节数，大小差异明显时应考虑权重或容量估计。本地组件的淘汰规则仍需明确；例如Caffeine的最大数量与最大权重是不同配置。<a href="https://github.com/ben-manes/caffeine/wiki/Eviction" rel="noopener noreferrer">Caffeine淘汰与过期</a></p>
+<h2 id="section-数据库更新后怎样通知所有l1">数据库更新后，怎样通知所有L1</h2>
+<p>假设数据库从v7更新成v8，写入方完成提交，再更新或失效L2，并通知各实例失效本地副本。这个正常路径还不够，必须继续推演中途失败。</p>
+<p>如果A收到通知、B断线没收到，A重新加载v8，B仍持有v7。普通Redis Pub/Sub是至多一次投递，订阅方断开或处理失败时，消息不会自动补发。<a href="https://redis.io/docs/latest/develop/pubsub/" rel="noopener noreferrer">Redis Pub/Sub投递语义</a></p>
+<p>可根据要求选择持久事件与消费位点、版本检查、有限TTL，或断线后清理受影响的L1。若要求写后立即全局读取最新值，就需要更强的读取协调或绕过相应缓存，不能用“发了广播”证明所有副本已经更新。</p>
+<h2 id="section-旧结果晚到为什么会覆盖已经失效的状态">旧结果晚到，为什么会覆盖已经失效的状态</h2>
+<p>另一个问题即使通知没有丢失也可能发生：</p>
+<ol>
+<li>A发起读取v7，响应暂时在路上。</li>
+<li>数据更新为v8，A先收到失效通知，删除L1。</li>
+<li>原来的v7响应后到，A又把v7放回L1。</li>
+</ol>
+<p>只执行删除没有记录“某个在途读取已经失效”，所以旧值复活了。可以给加载过程记录代次或占位标记：发起时登记generation=3；收到失效时提高代次或移除标记；结果返回时仅在代次仍相同时写入。</p>
+<p>Redis客户端缓存文档专门讨论了数据连接与失效连接分离时的类似竞争，并提供加载中标记的处理思路。若采用CLIENT TRACKING，还要理解连接、重定向和版本支持条件，而不是只发一个开启命令就认为业务一致性自动完成。<a href="https://redis.io/docs/latest/develop/reference/client-side-caching/" rel="noopener noreferrer">客户端缓存竞争</a></p>
+<h2 id="section-用版本水位推演失效与回填">用版本水位推演失效与回填</h2>
+<p>假设本地已知最低有效版本为8，后来收到v7的加载结果，就拒绝它；v8及以上还需结合业务状态与TTL判断。版本水位与缓存值不宜在删除时一起无条件丢掉，否则旧结果可能再次被接受。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>事件</th><th align="right">本地最低版本</th><th align="right">加载结果</th><th>动作</th></tr></thead><tbody><tr><td>更新通知v8到达</td><td align="right">8</td><td align="right">无</td><td>失效旧值</td></tr><tr><td>旧请求返回</td><td align="right">8</td><td align="right">7</td><td>拒绝回填</td></tr><tr><td>新请求返回</td><td align="right">8</td><td align="right">8</td><td>按TTL等条件接受</td></tr><tr><td>进程重启</td><td align="right">状态可能丢失</td><td align="right">未知</td><td>按恢复协议重新验证</td></tr></tbody></table>
+<p>版本解决的是顺序判断，不会自动可靠投递，也不会替数据库生成正确版本。业务删除还需要墓碑或等价状态，否则“没有值”和“尚未加载”可能再次混淆。</p>
+<h2 id="section-断线恢复与容量控制需要一起设计">断线恢复与容量控制需要一起设计</h2>
+<p>失效通道断开后，应把L1视为可能失去更新。按一致性要求清空、缩短可用期或暂停使用，重连后重新建立跟踪或恢复位点。Redis官方客户端缓存建议失效连接丢失时清理本地缓存，并监测连接健康。<a href="https://redis.io/docs/latest/develop/reference/client-side-caching/" rel="noopener noreferrer">断线处理</a></p>
+<p>恢复时所有实例同时清空L1，也可能把流量集中到L2甚至数据库。可以结合分批恢复、同键加载合并和下游限流，但不能为了减轻负载偷偷延长业务不可接受的陈旧时间。</p>
+<p>教学容量估算：每实例L1保存10000项、平均500字节，仅内容约5MB；10个实例重复保存约50MB。实际还要加入容器、键、对象头和淘汰结构。L2共享一份并不意味着L1这些副本不占资源，因此增加实例也会增加缓存总内存。</p>
+<h2 id="section-面试问答多级缓存一致性">面试问答：多级缓存一致性</h2>
+<p><span id="q-FQ-doxcnPbpmEqgqM0hNHnEwmuRREf" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnPbpmEqgqM0hNHnEwmuRREf"></a></p>
+<blockquote>
+<p>多级缓存一致性怎么保证？</p>
+</blockquote>
+<p><strong>回答：</strong> 先明确业务允许的陈旧窗口及权威来源，再为数据库、共享L2和进程L1设计更新、失效和恢复协议。读取逐层命中，L1尊重剩余有效期；更新提交后传播失效或版本，处理通知丢失、乱序、旧读回填和进程重启。</p>
+<p>例如v8通知先到、v7读取结果后到时，只有删除L1会让旧值重新写回，需要加载代次或版本水位拒绝它。普通Pub/Sub断线会丢消息，所以还要有TTL、断线清理、可靠位点或重新验证等机制。若要求严格写后读最新，应采用相应协调，不能把异步广播描述为无条件强一致。</p>
+<p><strong>延伸追问（自拟）：L1失效是不是只能查数据库？</strong> 通常先查有效L2，L2也缺失才回源。是否允许使用L2还取决于版本和有效性要求；同键并发回源要合并，恢复过程也要受容量约束。</p>
+<p>原问见<a href="/media/backend-agent-series/questions.json">逐题映射</a>。本文时序为机制推演，本轮没有搭建多实例缓存集群或运行压力测试。</p>17:["$","$L27",null,{"html":"$28"}]
+18:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/backend-agent-s07-10-cache-protection/","children":[["$","span",null,{"children":"上一篇"}],"数据库与缓存10｜缓存失效以后怎样保护数据库：穿透、击穿、雪崩与回源合并"]}],"$undefined"]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s07-10-cache-protection",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s07-10-cache-protection/","children":"数据库与缓存10｜缓存失效以后怎样保护数据库：穿透、击穿、雪崩与回源合并"}],["$","span",null,{"children":"后端与数据库"}]]}],["$","li","backend-agent-s07-cache-consistency",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s07-cache-consistency/","children":"数据库与缓存03｜先更新数据库再删除缓存之后：旧值回填、一致性与缓存保护"}],["$","span",null,{"children":"后端与数据库"}]]}],["$","li","backend-agent-s07-09-redis-encoding",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s07-09-redis-encoding/","children":"数据库与缓存09｜Redis类型怎样落到内存：紧凑编码、跳表与容量估算"}],["$","span",null,{"children":"后端与数据库"}]]}]]}]]}]]}]
+19:["$","$L29",null,{"contentId":"backend-agent-s07-11-multilevel-cache"}]
+1a:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+1b:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6"]}]
+1c:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1d:["$","$L2a",null,{"children":["$","$23",null,{"name":"Next.MetadataOutlet","children":"$@2b"}]}]
+26:true
+7:300
+2b:null
+7:C
+25:0
+9:"$undefined"
+5:"$undefined"
+24:"$undefined"
+1e:"$undefined"

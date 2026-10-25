@@ -1,0 +1,83 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+1d:"ViewportBoundary"
+1e:I[887,[],"$1d"]
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#foundations","children":["编程语言知识点",["$","span",null,{"children":57}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"语言与框架07｜Java进程内存怎样排查：GC Roots、G1、堆与堆外"}],["$","p",null,{"className":"article-deck","children":"先建立可达性与内存区域，再用GC后基线和进程内存差异解释泄漏判断，给出JDK诊断步骤及风险边界"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,791"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",6," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","Java",{"href":"/blog/#tag=Java","children":"Java"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-进程占用java堆和存活对象是三个观察量","text":"进程占用、Java堆和存活对象是三个观察量","level":2},{"id":"section-gc-roots怎样确定对象还可能被使用","text":"GC Roots怎样确定对象还可能被使用","level":2},{"id":"section-标记回收与移动怎样配合","text":"标记、回收与移动怎样配合","level":2},{"id":"section-两组曲线怎样导向不同假设","text":"两组曲线怎样导向不同假设","level":2},{"id":"section-堆外增长怎样继续拆解","text":"堆外增长怎样继续拆解","level":2},{"id":"section-一套逐步收集证据的方式","text":"一套逐步收集证据的方式","level":2},{"id":"section-面试问答gc-roots与垃圾回收","text":"面试问答：GC Roots与垃圾回收","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/languages-concurrency-frameworks/","children":"编程语言、并发与框架"}],["$","span",null,{"children":[7," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s06-threadpool",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s06-threadpool/","children":"语言与框架01｜线程池怎样接收任务：核心线程、队列、扩容与背压"}]}],["$","li","backend-agent-s06-python-async",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s06-python-async/","children":"语言与框架02｜Python怎样并发调用工具：协程、Task、限流与取消"}]}],["$","li","backend-agent-s06-shared-state",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s06-shared-state/","children":"语言与框架03｜多个线程怎样共享状态：可见性、原子性与happens-before"}]}],["$","li","backend-agent-s06-spring-transactions",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s06-spring-transactions/","children":"语言与框架04｜Spring事务为什么有时没有生效：代理、传播与回滚边界"}]}],["$","li","backend-agent-s06-05-maps",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s06-05-maps/","children":"语言与框架05｜HashMap怎样找到键，并发更新为什么还需要原子操作"}]}],["$","li","backend-agent-s06-06-fastapi",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s06-06-fastapi/","children":"语言与框架06｜一个请求怎样经过FastAPI：路由、依赖、校验与异步边界"}]}],["$","li","backend-agent-s06-07-jvm",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s06-07-jvm/","aria-current":"page","children":"语言与框架07｜Java进程内存怎样排查：GC Roots、G1、堆与堆外"}]}],"$L12","$L13","$L14"]}]]}]]}],"$L15","$undefined","$L16","$L17","$L18"]}],"$L19"]}]]}],["$L1a"],"$L1b"]}],"p":"$@1c","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s06-07-jvm","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"语言与框架07｜Java进程内存怎样排查：GC Roots、G1、堆与堆外 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"先建立可达性与内存区域，再用GC后基线和进程内存差异解释泄漏判断，给出JDK诊断步骤及风险边界。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s06-07-jvm/"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$7"}},"a":"$@23","u":"$@24","b":"t75SI7oTDmNtBl3uMkJyg"}
+25:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+27:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+28:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+12:["$","li","backend-agent-s06-08-spring",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s06-08-spring/","children":"语言与框架08｜Spring怎样组装对象并处理请求：IoC、Bean生命周期与MVC"}]}]
+13:["$","li","backend-agent-s06-09-go",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s06-09-go/","children":"语言与框架09｜Go怎样协调并发任务：channel、取消、共享状态与资源回收"}]}]
+14:["$","li","backend-agent-s06-10-cpp",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s06-10-cpp/","children":"语言与框架10｜C++怎样管理资源与并发：RAII、所有权和异常路径"}]}]
+26:T1d86,<h2 id="section-进程占用java堆和存活对象是三个观察量">进程占用、Java堆和存活对象是三个观察量</h2>
+<p>Java进程的内存包含Java堆，也包含线程栈、类元数据、JIT生成代码、GC辅助结构和部分本地分配。<code>-Xmx</code>主要限制最大Java堆，不是整个进程的总内存上限。</p>
+<p><strong>对象存活量</strong>又小于或等于某次统计下的堆使用量：堆中可能还保留已经不可达、尚未回收的对象。操作系统看到的RSS表示驻留物理页，也不能直接等同于JVM报告的reserved或committed。排查时先统一指标定义，才有办法解释“堆很小但进程很大”。</p>
+<p>例如教学监控中，最大堆1GiB，进程RSS达到1.6GiB，并不能直接判定GC失效。需要继续拆分线程数量、直接缓冲区、元空间和其他本地分配；同时核对容器限额是否给这些区域留了余量。</p>
+<h2 id="section-gc-roots怎样确定对象还可能被使用">GC Roots怎样确定对象还可能被使用</h2>
+<p><strong>GC Roots</strong>是可达性分析的起点，包括相应线程执行状态、静态引用及运行时持有的根等。收集器从根沿引用关系追踪对象，得到仍可达的集合。具体根的表示和扫描方式与实现、阶段有关。</p>
+<p>构造一个图：静态列表L指向A，A与B互相引用。只要L仍引用A，A和B都可达。清除L到A的引用后，即使A、B还互相引用，若没有其他根路径，两者也可被判为不可达。</p>
+<p>这解释了Java为什么能处理环引用，也解释了逻辑泄漏：业务不再需要A，但一个长期存在的集合仍持有它，GC无法替业务判断“以后不会再用”。<strong>泄漏诊断要追保留路径，而不只是数对象数量。</strong></p>
+<h2 id="section-标记回收与移动怎样配合">标记、回收与移动怎样配合</h2>
+<p>标记负责识别存活，回收释放不再需要的空间；移动存活对象可以压缩空洞，但需要更新引用或使用相应屏障。不同收集器在停顿、并发、空间和吞吐之间采取不同方案。</p>
+<p>以JDK21的G1为例，堆划分为Region，年轻代回收会疏散存活对象；并发标记帮助识别老年代区域的存活情况，之后Mixed阶段可以同时选择年轻代和部分老年代区域回收。<strong>Mixed不等于每次都回收整个老年代</strong>，并发也不意味着完全没有暂停。<a href="https://docs.oracle.com/en/java/javase/21/gctuning/garbage-first-g1-garbage-collector1.html" rel="noopener noreferrer">G1回收周期</a></p>
+<p>停顿目标是调节目标，不是硬实时承诺。分配过快、保留对象过多、疏散空间不足等情况可能使结果偏离目标。谈G1或其他收集器时，应先确定JDK版本、配置和实际日志，不能只按“适合大堆”选一个名称。</p>
+<h2 id="section-两组曲线怎样导向不同假设">两组曲线怎样导向不同假设</h2>
+<p>教学场景A：每轮请求分配200MiB临时对象，回收后使用量回到约100MiB。峰值反复升高但基线稳定，可能主要是分配速率与回收节奏问题。</p>
+<p>教学场景B：相同请求结束并经过可比较的回收后，基线依次100、150、200MiB。这个趋势更值得检查持续保留的对象。若发现一个缓存每轮增加同样数量的键且没有淘汰，再沿根路径确认，才形成较完整的泄漏解释。</p>
+<p>这里不能随意把每次GC后的数值拼起来：不同GC阶段回收范围不同，负载也可能不同。要在相近业务条件和足够长窗口下比较，并保留暂停、分配与晋升信息。</p>
+<h2 id="section-堆外增长怎样继续拆解">堆外增长怎样继续拆解</h2>
+<p><strong>Native Memory Tracking（NMT）</strong>可以记录HotSpot内部内存类别，帮助区分Heap、Class、Thread、Code等。它需要按所用JDK方式启用，存在开销，而且不覆盖所有非JVM本地代码分配。因此“NMT没有发现增长”不能排除所有本地泄漏。<a href="https://docs.oracle.com/en/java/javase/21/troubleshoot/diagnostic-tools.html" rel="noopener noreferrer">JDK诊断与NMT</a></p>
+<p>若Thread类增长，核对线程数量和创建路径；若Class类持续增长，核对类加载器是否被长期保留；若业务使用直接缓冲区或JNI库，再结合相应池指标与操作系统工具。只增加Xmx可能挤占原本就紧张的本地内存。</p>
+<p>ThreadLocal也要结合线程池生命周期理解。任务结束不代表工作线程结束，任务残留的数据可能继续被线程持有；适当的finally清理与作用域管理比期待下一次GC更直接。</p>
+<h2 id="section-一套逐步收集证据的方式">一套逐步收集证据的方式</h2>
+<p>先记录版本、启动参数、业务时间窗口、GC日志及容器限制。JDK工具可用下列形式，<code>&#x3C;pid></code>必须换成经过确认的目标Java进程；以下为命令格式，不在本轮对其他业务进程执行：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-text">jcmd &#x3C;pid> VM.version
+jcmd &#x3C;pid> VM.flags
+jcmd &#x3C;pid> GC.heap_info
+jcmd &#x3C;pid> Thread.print
+jcmd &#x3C;pid> VM.native_memory summary
+</code></pre></div>
+<p>NMT未启用时不能把空结果当成“没有堆外问题”。对已启用NMT的受控实验，可以建立baseline后查看summary.diff。堆转储、类直方图和录制工具可能影响进程，也可能包含业务数据，使用前要明确范围和保存位置，不能在排查说明里默认对任意生产服务执行。</p>
+<p>得到保留路径后，还要构造重复请求的回归实验：修复前增长，修复后同负载下不再持续保留，同时检查功能正确。吞吐和延迟也要观察，不能用清空所有缓存换来表面上的低内存。</p>
+<h2 id="section-面试问答gc-roots与垃圾回收">面试问答：GC Roots与垃圾回收</h2>
+<p><span id="q-FQ-doxcnPCcaeBRrCuyQgfY2UuCarb" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnPCcaeBRrCuyQgfY2UuCarb"></a></p>
+<blockquote>
+<p>JVM 八股（垃圾回收）：JVM 的垃圾回收过程大致是什么？GC Roots 和可达性分析是怎么回事？</p>
+</blockquote>
+<p><strong>回答：</strong> 收集器从GC Roots沿引用追踪存活对象，回收不可达对象，并按算法选择是否移动或压缩。Java主要按可达性判断，所以两个对象互相引用但没有根路径时，仍可被回收；反过来，业务已经不用但仍被静态集合等引用的对象不会自动释放。</p>
+<p>具体过程随收集器和版本变化。以JDK21 G1为例，年轻代疏散、并发标记与后续Mixed回收协同工作，仍有暂停阶段。诊断时比较相近负载下的回收后基线和对象保留路径，不能把RSS增长全部归为Java堆泄漏，也不能把某次高峰直接判成泄漏。</p>
+<p><strong>延伸追问（自拟）：调用System.gc就能证明没有内存泄漏吗？</strong> 不能。它的实际处理受实现和配置影响，而且可达但业务不再需要的对象仍会保留。需要检查根路径、负载趋势和修复后的回归结果。</p>
+<p>原问见<a href="/media/backend-agent-series/questions.json">逐题映射</a>。本篇按JDK21文档解释机制，没有读取其他业务进程或制造内存耗尽。</p>15:["$","$L25",null,{"html":"$26"}]
+16:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/backend-agent-s06-06-fastapi/","children":[["$","span",null,{"children":"上一篇"}],"语言与框架06｜一个请求怎样经过FastAPI：路由、依赖、校验与异步边界"]}],["$","$Lf",null,{"href":"/blog/backend-agent-s06-08-spring/","children":[["$","span",null,{"children":"下一篇"}],"语言与框架08｜Spring怎样组装对象并处理请求：IoC、Bean生命周期与MVC"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s06-05-maps",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s06-05-maps/","children":"语言与框架05｜HashMap怎样找到键，并发更新为什么还需要原子操作"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","backend-agent-s06-shared-state",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s06-shared-state/","children":"语言与框架03｜多个线程怎样共享状态：可见性、原子性与happens-before"}],["$","span",null,{"children":"编程语言知识点"}]]}],["$","li","backend-agent-s06-threadpool",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s06-threadpool/","children":"语言与框架01｜线程池怎样接收任务：核心线程、队列、扩容与背压"}],["$","span",null,{"children":"编程语言知识点"}]]}]]}]]}]]}]
+17:["$","$L27",null,{"contentId":"backend-agent-s06-07-jvm"}]
+18:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+19:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6"]}]
+1a:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1b:["$","$L28",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@29"}]}]
+24:true
+7:300
+29:null
+7:C
+23:0
+9:"$undefined"
+5:"$undefined"
+22:"$undefined"
+1c:"$undefined"

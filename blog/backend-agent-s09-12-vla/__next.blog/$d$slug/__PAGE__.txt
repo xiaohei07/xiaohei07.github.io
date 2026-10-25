@@ -1,0 +1,83 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+20:"ViewportBoundary"
+21:I[887,[],"$20"]
+22:"MetadataBoundary"
+23:I[887,[],"$22"]
+24:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#ai","children":["人工智能",["$","span",null,{"children":25}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"大模型与多模态12｜VLA怎样从图像和指令产生动作：表示、训练数据与闭环控制"}],["$","p",null,{"className":"article-deck","children":"从机械臂教学任务解释视觉语言动作模型，说明动作坐标、时间对齐、动作块与安全控制边界"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,586"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","多模态",{"href":"/blog/#tag=%E5%A4%9A%E6%A8%A1%E6%80%81","children":"多模态"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-从看懂图像到控制动作还差什么","text":"从“看懂图像”到“控制动作”还差什么","level":2},{"id":"section-先定义一个可以检查的输入输出","text":"先定义一个可以检查的输入输出","level":2},{"id":"section-视觉特征怎样进入动作模型","text":"视觉特征怎样进入动作模型","level":2},{"id":"section-训练样本为什么必须在时间上对齐","text":"训练样本为什么必须在时间上对齐","level":2},{"id":"section-为什么预测动作块仍需要闭环观察","text":"为什么预测动作块仍需要闭环观察","level":2},{"id":"section-从零设计vla时先确定哪些选择","text":"从零设计VLA时，先确定哪些选择","level":2},{"id":"section-模型输出与真实执行之间需要什么约束","text":"模型输出与真实执行之间需要什么约束","level":2},{"id":"section-面试追问怎样设计一个vla","text":"面试追问：怎样设计一个VLA","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/llm-multimodal/","children":"大模型基础与多模态"}],["$","span",null,{"children":[12," / ",12," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s09-token-attention",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-token-attention/","children":"大模型与多模态01｜文本怎样变成下一步预测：Token、QKV与注意力算例"}]}],["$","li","backend-agent-s09-kv-cache",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-kv-cache/","children":"大模型与多模态02｜生成文字为什么还要缓存：Prefill、Decode与KV显存估算"}]}],["$","li","backend-agent-s09-training-lora",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-training-lora/","children":"大模型与多模态03｜模型参数怎样被训练：交叉熵、反向传播与LoRA"}]}],["$","li","backend-agent-s09-04-rope-context",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-04-rope-context/","children":"大模型与多模态04｜RoPE与长上下文：旋转位置编码怎样表示相对距离"}]}],["$","li","backend-agent-s09-05-quantization",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-05-quantization/","children":"大模型与多模态05｜模型量化怎样减少存储：误差、校准与推理速度之间的关系"}]}],["$","li","backend-agent-s09-06-parallel-memory",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-06-parallel-memory/","children":"大模型与多模态06｜大模型并行与显存估算：参数、梯度、优化器和激活分别放在哪里"}]}],"$L12","$L13","$L14","$L15","$L16","$L17"]}]]}]]}],"$L18","$undefined","$L19","$L1a","$L1b"]}],"$L1c"]}]]}],["$L1d"],"$L1e"]}],"p":"$@1f","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s09-12-vla","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L21",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L23",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$24",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"大模型与多模态12｜VLA怎样从图像和指令产生动作：表示、训练数据与闭环控制 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从机械臂教学任务解释视觉语言动作模型，说明动作坐标、时间对齐、动作块与安全控制边界。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s09-12-vla/"}]]}]}],null]}],null]}],"p":"$@25","v":null,"s":"$7"}},"a":"$@26","u":"$@27","b":"t75SI7oTDmNtBl3uMkJyg"}
+28:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+2a:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+2b:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+12:["$","li","backend-agent-s09-07-embedding-infonce",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-07-embedding-infonce/","children":"大模型与多模态07｜Embedding与InfoNCE：相似向量是怎样通过对比学习得到的"}]}]
+13:["$","li","backend-agent-s09-08-clip-vlm",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-08-clip-vlm/","children":"大模型与多模态08｜CLIP与视觉语言模型：图像特征怎样和文本建立联系"}]}]
+14:["$","li","backend-agent-s09-09-moe",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-09-moe/","children":"大模型与多模态09｜MoE的专家路由：激活参数减少以后，计算和通信怎样变化"}]}]
+15:["$","li","backend-agent-s09-10-diffusion",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-10-diffusion/","children":"大模型与多模态10｜扩散模型怎样生成图像：加噪、去噪与条件控制的计算过程"}]}]
+16:["$","li","backend-agent-s09-11-asr-streaming",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-11-asr-streaming/","children":"大模型与多模态11｜ASR怎样把语音转成文字：流式结果、稳定前缀与错误率评价"}]}]
+17:["$","li","backend-agent-s09-12-vla",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s09-12-vla/","aria-current":"page","children":"大模型与多模态12｜VLA怎样从图像和指令产生动作：表示、训练数据与闭环控制"}]}]
+29:T1a1f,<h2 id="section-从看懂图像到控制动作还差什么">从“看懂图像”到“控制动作”还差什么</h2>
+<p>视觉语言模型可以描述桌上有一个杯子，但让机械臂抓起杯子，还需要确定末端执行器怎样移动、夹爪何时闭合，以及执行后是否真的抓住。</p>
+<p><strong>VLA（Vision-Language-Action，视觉语言动作模型）</strong>根据视觉观察、语言指令，以及具体架构支持的机器人状态，预测动作。它把视觉与语言理解用于控制任务，输出不再仅是文字。<a href="https://arxiv.org/html/2406.09246v3" rel="noopener noreferrer">OpenVLA论文</a></p>
+<p>动作可以表示关节角、末端位姿增量、速度或离散控制命令。选择哪一种取决于机器人控制接口与训练数据，不能只说“输出一个动作Token”而不说明它最终对应什么物理量。</p>
+<h2 id="section-先定义一个可以检查的输入输出">先定义一个可以检查的输入输出</h2>
+<p>以教学机械臂为例，输入包括相机图像、指令“把红杯移到托盘里”和当前机械臂状态。输出可以定义为：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-text">动作 = [Δx, Δy, Δz, Δroll, Δpitch, Δyaw, gripper]
+</code></pre></div>
+<p>必须进一步说明平移单位、旋转约定、参考坐标系、控制周期和夹爪取值。<strong>同一个数值在不同坐标系和单位下可能代表完全不同的动作。</strong></p>
+<p>例如Δx=0.01若单位为米，表示1厘米；若误当厘米，动作就小了100倍。相机坐标、机器人基座坐标和末端坐标之间还需要标定与变换，不能由语言模型随意补全。</p>
+<h2 id="section-视觉特征怎样进入动作模型">视觉特征怎样进入动作模型</h2>
+<p>一种路线使用视觉编码器提取图像特征，通过连接模块接入语言骨干，再产生动作表示。OpenVLA采用预训练视觉语言模型并用机器人演示进行动作学习，是具体实现之一。</p>
+<p>动作输出可以采用离散化：把连续数值范围划分为区间，用Token表示区间；也可以使用连续回归头、扩散动作头等。离散化便于沿用序列预测方式，但精度受区间划分影响；连续头需要相应损失与尺度处理。</p>
+<p>教学上，把[-1,1]均分成8段，区间宽度为0.25，用中心值代表每段，则范围内最大舍入误差约0.125。真实动作还要经过归一化和反归一化，边界裁剪与异常值策略必须与数据处理一致。</p>
+<h2 id="section-训练样本为什么必须在时间上对齐">训练样本为什么必须在时间上对齐</h2>
+<p>机器人演示通常包含观察、指令、状态与动作序列。模型要学习的是“在这个观察时刻应采取什么动作”，因此相机延迟、控制延迟和采样频率差异会影响标签。</p>
+<p>若图像已经是动作执行后的状态，却配上执行前的动作标签，训练关系就错了。多相机还要处理同步与视角差异；多机器人数据需要统一或明确区分动作空间。</p>
+<p>训练可从行为克隆开始，让模型模仿演示动作，但离线动作误差小不保证长程任务成功。执行一次小偏差后，后续观察可能偏离训练分布，误差会逐步累积。</p>
+<h2 id="section-为什么预测动作块仍需要闭环观察">为什么预测动作块仍需要闭环观察</h2>
+<p><strong>动作块（action chunk）</strong>一次预测未来若干步动作，可以减少频繁逐步决策的开销，并表达短时间内的连续运动。ACT等工作使用这一思路处理精细操作。<a href="https://arxiv.org/abs/2304.13705" rel="noopener noreferrer">ACT论文</a></p>
+<p>如果一次执行整个很长的动作块，中途物体移动或抓取失败时，系统可能来不及调整。可以采用滚动执行：预测一段，只执行前几步，再获取新观察重新规划。</p>
+<p><strong>闭环控制</strong>就是根据执行后的反馈继续修正动作。它与模型一次生成看似合理的动作序列不同。抓取结果、碰撞状态和机器人实际位置，需要由观察或控制系统确认。</p>
+<h2 id="section-从零设计vla时先确定哪些选择">从零设计VLA时，先确定哪些选择</h2>
+<p>先限定机器人、任务范围与成功条件，再确定可获得的传感器、动作接口和演示数据。选模型之前，应先把数据时间对齐、坐标与归一化规则建立清楚。</p>
+<p>如果数据与算力有限，可以从已有视觉语言骨干和较小动作头开始适配，而非从头预训练所有模块。比较离散Token、连续头或动作块方案时，关注控制频率、精度、任务时长和部署资源。</p>
+<p>训练评测按任务、场景和物体划分，避免同一演示的相邻帧同时落入训练与测试。除成功率外，还看执行时间、恢复能力与越界动作次数，并报告失败类型。</p>
+<h2 id="section-模型输出与真实执行之间需要什么约束">模型输出与真实执行之间需要什么约束</h2>
+<p>执行前检查动作范围、速度、加速度和工作空间，保留急停与低层控制器约束。模型不确定、感知缺失或状态异常时，应进入停止或恢复流程。物理设备上的错误不能用“再生成一次”简单抵消。</p>
+<p>本文仅解释架构与离散化算例，没有控制机器人、运行仿真或训练VLA。架构中的安全控制是拟议设计要求，不是已经验证的设备能力。</p>
+<h2 id="section-面试追问怎样设计一个vla">面试追问：怎样设计一个VLA</h2>
+<p><span id="q-FQ-doxcnq8McQTTIGO2JmPDEXIN92c" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnq8McQTTIGO2JmPDEXIN92c"></a></p>
+<blockquote>
+<p>假如让你从零构建一个 vla 模型 你对他的架构的设计是怎么样的？为什么</p>
+</blockquote>
+<p><strong>回答：</strong>先确定观察输入、机器人动作空间与控制周期，建立时间对齐且坐标明确的演示数据。架构可用视觉编码器、语言骨干与动作输出模块，按精度和延迟要求选择离散动作Token、连续头或动作块。训练从行为克隆等可验证基线开始，按任务泛化评价，并通过闭环观察、动作限幅与低层控制约束连接实际执行。不能只凭语言理解能力推断机器人控制可靠。</p>
+<p>原问及来源见<a href="/media/backend-agent-series/questions.json">逐题映射</a>。</p>18:["$","$L28",null,{"html":"$29"}]
+19:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/backend-agent-s09-11-asr-streaming/","children":[["$","span",null,{"children":"上一篇"}],"大模型与多模态11｜ASR怎样把语音转成文字：流式结果、稳定前缀与错误率评价"]}],"$undefined"]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s09-08-clip-vlm",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s09-08-clip-vlm/","children":"大模型与多模态08｜CLIP与视觉语言模型：图像特征怎样和文本建立联系"}],["$","span",null,{"children":"人工智能"}]]}],["$","li","backend-agent-s09-10-diffusion",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s09-10-diffusion/","children":"大模型与多模态10｜扩散模型怎样生成图像：加噪、去噪与条件控制的计算过程"}],["$","span",null,{"children":"人工智能"}]]}],["$","li","backend-agent-s09-11-asr-streaming",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s09-11-asr-streaming/","children":"大模型与多模态11｜ASR怎样把语音转成文字：流式结果、稳定前缀与错误率评价"}],["$","span",null,{"children":"人工智能"}]]}]]}]]}]]}]
+1a:["$","$L2a",null,{"contentId":"backend-agent-s09-12-vla"}]
+1b:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+1c:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6","$a:0:1:d:r:props:children:0:props:children:1:props:headings:7"]}]
+1d:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1e:["$","$L2b",null,{"children":["$","$24",null,{"name":"Next.MetadataOutlet","children":"$@2c"}]}]
+27:true
+7:300
+2c:null
+7:C
+26:0
+9:"$undefined"
+5:"$undefined"
+25:"$undefined"
+1f:"$undefined"

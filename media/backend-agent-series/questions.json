@@ -1,0 +1,732 @@
+{
+  "questions": [
+    {
+      "question": "你如何理解 Agent 系统？可以拆解一下 Agent 的核心模块吗？",
+      "url": "/blog/backend-agent-s01-loop/#q-FQ-doxcnWAn77kY5xsRYOZjUdgL9Ic",
+      "articleTitle": "Agent基础01｜Agent怎样完成一个任务：模型、工具、状态与执行循环",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/15af3788a038477bba99f2f9d94b2cef"
+      ]
+    },
+    {
+      "question": "Workflow 和 Agent 的 Loop 各自怎么设计？",
+      "url": "/blog/backend-agent-s01-loop/#q-FQ-doxcnJ2T92nYbwok4vzsUR3crec",
+      "articleTitle": "Agent基础01｜Agent怎样完成一个任务：模型、工具、状态与执行循环",
+      "sources": [
+        "https://www.nowcoder.com/discuss/922659050167226368"
+      ]
+    },
+    {
+      "question": "我有一个多实例的 agent 服务，我应该怎么去做中断和恢复？就比如说我的实例、我的 pod 重启了，然后任务还在执行当中，我应该怎么做中断和恢复呢？",
+      "url": "/blog/backend-agent-s01-recovery/#q-FQ-doxcnEFAErQm00vlq7AaDtahMbg",
+      "articleTitle": "Agent基础02｜Agent中断后怎样继续：检查点、幂等与结果未知",
+      "sources": []
+    },
+    {
+      "question": "故障恢复与续跑：任务执行期间发生服务重启、进程被 Kill 或机器故障时，怎样保证任务能够无损恢复？",
+      "url": "/blog/backend-agent-s01-recovery/#q-FQ-doxcnk2EFetWefGPc5yc6r57EMh",
+      "articleTitle": "Agent基础02｜Agent中断后怎样继续：检查点、幂等与结果未知",
+      "sources": []
+    },
+    {
+      "question": "ReAct 和 Plan 模式有什么区别？",
+      "url": "/blog/backend-agent-s01-planning/#q-FQ-doxcn4rEgeHTfAaqbOkE6fTpUsd",
+      "articleTitle": "Agent基础03｜Agent怎样规划和调整任务：ReAct、计划执行与反馈修订",
+      "sources": [
+        "https://www.nowcoder.com/discuss/922659050167226368"
+      ]
+    },
+    {
+      "question": "LangGraph 有哪些组件，以及它能实现的功能，这个框架的优点在哪里？",
+      "url": "/blog/backend-agent-s01-04-langgraph-replay/#q-FQ-doxcnupENEV3KQXp3lFwDz3QXyc",
+      "articleTitle": "Agent基础04｜LangGraph的中断、状态修订与重放：任务恢复后会重新执行什么",
+      "sources": []
+    },
+    {
+      "question": "意图路由层怎么设计？查商品、查订单、退换货、投诉等业务 Agent，遇到「帮我看看」时怎么分发？",
+      "url": "/blog/backend-agent-s01-05-intent-routing/#q-FQ-doxcnZMV41Dlm5iTIME0DbrErNc",
+      "articleTitle": "Agent基础05｜意图识别与任务路由：遇到“帮我看看”时，怎样决定下一步",
+      "sources": []
+    },
+    {
+      "question": "Memory 记忆管理：Memory 有哪些类型？分别如何实现？短期记忆和长期记忆在工程中如何进行存储、过期管理和去重？",
+      "url": "/blog/backend-agent-s02-context-memory/#q-FQ-doxcn7gx2uVBFNJC3BCz8bAn74c",
+      "articleTitle": "上下文与RAG01｜上下文与记忆怎样配合：信息选择、压缩、过期与删除",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/15af3788a038477bba99f2f9d94b2cef"
+      ]
+    },
+    {
+      "question": "请完整介绍一下 RAG 的整体端到端流程。",
+      "url": "/blog/backend-agent-s02-rag-evidence/#q-FQ-doxcnHPvOg8CI3LGDuOqIdeixAh",
+      "articleTitle": "上下文与RAG02｜RAG怎样把资料变成回答：检索、重排、引用与错误定位",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/15af3788a038477bba99f2f9d94b2cef"
+      ]
+    },
+    {
+      "question": "如果有一个基于 RAG 的 Agent，在实际业务中你会通过哪些方式/维度来提升它的效果和召回质量？",
+      "url": "/blog/backend-agent-s02-rag-evidence/#q-FQ-doxcnXkfaQA80MsOpzVE8U4dzkg",
+      "articleTitle": "上下文与RAG02｜RAG怎样把资料变成回答：检索、重排、引用与错误定位",
+      "sources": [
+        "https://www.nowcoder.com/discuss/927161142194049024"
+      ]
+    },
+    {
+      "question": "讲一下 BM25 的计算原理。",
+      "url": "/blog/backend-agent-s02-retrieval/#q-FQ-doxcnPh476ieMNS96DCXKtFoJyg",
+      "articleTitle": "上下文与RAG03｜关键词和向量怎样找资料：倒排索引、BM25与近似最近邻",
+      "sources": []
+    },
+    {
+      "question": "3.HNSW算法和ANN算法的区别",
+      "url": "/blog/backend-agent-s02-retrieval/#q-FQ-doxcnq1pzbvYOtXR0Xqu69xSfUb",
+      "articleTitle": "上下文与RAG03｜关键词和向量怎样找资料：倒排索引、BM25与近似最近邻",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/abaa08ded8ec4f8ba8bbdb6a9877d8c3"
+      ]
+    },
+    {
+      "question": "业务权衡题：RAG 和微调怎么取舍？什么场景优先 RAG，什么场景才考虑微调？",
+      "url": "/blog/backend-agent-s02-knowledge-choice/#q-FQ-doxcnjmy5CZ6iqvCUfjBz19X8pd",
+      "articleTitle": "上下文与RAG04｜新知识应该放在哪里：长上下文、RAG、图检索与微调",
+      "sources": []
+    },
+    {
+      "question": "文档发生局部更新时，如何做增量索引而不是全量重建？",
+      "url": "/blog/backend-agent-s02-05-ingestion-incremental/#q-FQ-doxcn7UsDMiKKpNOkDB3QpmmBLh",
+      "articleTitle": "上下文与RAG05｜文档解析与增量索引：原文改了一段，知识库应该更新哪些内容",
+      "sources": []
+    },
+    {
+      "question": "Rerank 通常如何实现？排序过程中的特征权重如何进行分配？",
+      "url": "/blog/backend-agent-s02-06-reranker-training/#q-FQ-doxcnqnYf0qID4NhIVrn3ihlQSf",
+      "articleTitle": "上下文与RAG06｜Reranker怎样训练和评价：从候选召回到有依据的排序",
+      "sources": []
+    },
+    {
+      "question": "HyDE 在 query 模糊时是如何提升召回效果的？",
+      "url": "/blog/backend-agent-s02-07-hyde-multihop-graph/#q-FQ-doxcneTBJMa6FHwQxUe3ZAmmlqe",
+      "articleTitle": "上下文与RAG07｜HyDE、多跳检索与GraphRAG：复杂问题缺少的证据怎样补齐",
+      "sources": []
+    },
+    {
+      "question": "对于多跳推理或复杂的逻辑查询（需要多次 RAG），现有 RAG 架构该如何优化？",
+      "url": "/blog/backend-agent-s02-07-hyde-multihop-graph/#q-FQ-doxcnybL4iVIZrvQKxenw8nluhf",
+      "articleTitle": "上下文与RAG07｜HyDE、多跳检索与GraphRAG：复杂问题缺少的证据怎样补齐",
+      "sources": []
+    },
+    {
+      "question": "Agent 记忆发生事实冲突时，如何判断覆盖、并存还是拒绝写入？",
+      "url": "/blog/backend-agent-s02-08-memory-conflicts/#q-FQ-doxcnxMfLhlreqyzzJlK7TQGlIg",
+      "articleTitle": "上下文与RAG08｜Agent记忆冲突怎样更新：什么时候覆盖、并存或拒绝写入",
+      "sources": []
+    },
+    {
+      "question": "MCP 和 Function Calling",
+      "url": "/blog/backend-agent-s03-tools-mcp/#q-FQ-doxcnzrZWP1HquXFgrU2cEAcK2g",
+      "articleTitle": "工具与协作01｜模型怎样调用外部工具：Function Calling、MCP与权限边界",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/d31969d954a94f1cb1bb06abc3196fe9"
+      ]
+    },
+    {
+      "question": "多 Agent 协同：多 Agent 协作系统如何设计？Agent 之间的通信机制和状态共享如何实现？",
+      "url": "/blog/backend-agent-s03-multi-agent/#q-FQ-doxcnGMTTbivVvPF0eHH4q07V7s",
+      "articleTitle": "工具与协作02｜多Agent怎样分工：任务依赖、共享状态与结果验收",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/15af3788a038477bba99f2f9d94b2cef"
+      ]
+    },
+    {
+      "question": "如何优化 Coding Agent？",
+      "url": "/blog/backend-agent-s03-coding-evidence/#q-FQ-doxcnZXvo27qmQ3xvBpUS8BMQWc",
+      "articleTitle": "工具与协作03｜Coding Agent怎样交付可信修改：代码定位、补丁、测试与证据",
+      "sources": [
+        "https://www.nowcoder.com/discuss/922659050167226368"
+      ]
+    },
+    {
+      "question": "Coding Agent 如何实现可审计的文件修改，而不是直接覆盖工作区？",
+      "url": "/blog/backend-agent-s03-coding-evidence/#q-FQ-doxcnYAA5Eufpz2LbgcwT4eRbTf",
+      "articleTitle": "工具与协作03｜Coding Agent怎样交付可信修改：代码定位、补丁、测试与证据",
+      "sources": [
+        "https://www.nowcoder.com/discuss/922860300762611712"
+      ]
+    },
+    {
+      "question": "MCP 调用工具的流程是什么？",
+      "url": "/blog/backend-agent-s03-04-mcp-lifecycle/#q-FQ-doxcnx8a1YtuwbpG2vn93AIsfGc",
+      "articleTitle": "工具与协作04｜MCP连接与工具发现：从初始化协商到一次完整工具调用",
+      "sources": []
+    },
+    {
+      "question": "Agent 间通信协议：你了解 A2A（Agent-to-Agent 协作与通信协议）吗？",
+      "url": "/blog/backend-agent-s03-05-a2a-tasks/#q-FQ-doxcnycH0W43hKbFmeDRMNDKJ3d",
+      "articleTitle": "工具与协作05｜A2A怎样组织跨Agent任务：发现能力、等待结果与继续补充输入",
+      "sources": []
+    },
+    {
+      "question": "了解 SSRF 漏洞吗？",
+      "url": "/blog/backend-agent-s03-06-ssrf-boundaries/#q-FQ-doxcnPQ0rir4D7GkROj0OIhJWLb",
+      "articleTitle": "工具与协作06｜网页读取工具怎样防SSRF：URL检查为什么要一直跟到实际连接",
+      "sources": []
+    },
+    {
+      "question": "Coding Agent 执行 Shell 命令时如何隔离文件系统、网络和系统调用？",
+      "url": "/blog/backend-agent-s03-07-sandbox-hooks-computer-use/#q-FQ-doxcnv1gmCxLUIFSc7MtcFxf3Dc",
+      "articleTitle": "工具与协作07｜Coding Agent的执行边界：沙箱、Hook与Computer Use怎样配合",
+      "sources": []
+    },
+    {
+      "question": "12. 怎么评估 Agent 效果？",
+      "url": "/blog/backend-agent-s04-evaluation-traces/#q-FQ-doxcnjwCL18mrc3GLnTQ3mIceyc",
+      "articleTitle": "Agent评测01｜怎样判断Agent真的变好了：任务验收、对照评测与Trace",
+      "sources": []
+    },
+    {
+      "question": "如果 Agent 的评测结果变差了，如何定位是整个执行链路中的哪一步出现了问题？",
+      "url": "/blog/backend-agent-s04-evaluation-traces/#q-FQ-doxcn0cdv5EJqKkKmrRD1AEVe9f",
+      "articleTitle": "Agent评测01｜怎样判断Agent真的变好了：任务验收、对照评测与Trace",
+      "sources": []
+    },
+    {
+      "question": "LLM-as-Judge的分数结果如何衡量，怎么确定LLM打高分就一定是好？",
+      "url": "/blog/backend-agent-s04-judge-comparison/#q-FQ-doxcnHIJV3SL7Gal7pcXlmKCq1c",
+      "articleTitle": "Agent评测02｜模型给出的高分可靠吗：Judge校准与组件效果比较",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/c5a42f4e74c041078d27599df3147254"
+      ]
+    },
+    {
+      "question": "如何证明长期记忆和多 Agent 能提高完成质量而非增加成本？",
+      "url": "/blog/backend-agent-s04-judge-comparison/#q-FQ-doxcnLlLWBpoI0VhTr8ysrsMrFe",
+      "articleTitle": "Agent评测02｜模型给出的高分可靠吗：Judge校准与组件效果比较",
+      "sources": []
+    },
+    {
+      "question": "如何科学评测 Agent 系统效果？新版本对比旧版本如何证明更好？",
+      "url": "/blog/backend-agent-s04-03-confidence-online-ab/#q-FQ-doxcnntY7TgCGNWbPZN00TRV0Rf",
+      "articleTitle": "Agent评测03｜Agent评测的置信区间与A/B实验：怎样判断新版本确实更好",
+      "sources": []
+    },
+    {
+      "question": "3.如何解决大模型在客服场景中的幻觉问题？",
+      "url": "/blog/backend-agent-s04-04-customer-travel/#q-FQ-doxcn6g1ghtXPeR5O1Qz6f6Bk4e",
+      "articleTitle": "Agent评测04｜客服与旅行Agent怎样定义成功：证据、业务动作和转人工边界",
+      "sources": []
+    },
+    {
+      "question": "2. 你的Agent里面运行了一个长程的任务，它假设平时只允许需要运行5分钟就能结束。然后你新运行了一次，它运行了15-20分钟，也就是说跟之前比有明显的延迟，然后你会怎么分析这个延迟是什么导致的？",
+      "url": "/blog/backend-agent-s04-05-latency-capacity/#q-FQ-doxcnNEBv47Amcjfp7nTnrC048f",
+      "articleTitle": "Agent评测05｜Agent时延与容量怎样分析：从执行链路找到真正拖慢的一步",
+      "sources": []
+    },
+    {
+      "question": "介绍 TCP 协议的连接（三次握手）和断开过程（四次挥手），为什么断开要进行 4 次挥手？",
+      "url": "/blog/backend-agent-s05-request-tcp/#q-FQ-doxcnqvJOj8mlfECOElMVKISyPc",
+      "articleTitle": "网络与操作系统01｜一次HTTPS请求怎样到达服务端：连接、字节流与业务结果",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/4cc50404c0d742cbb228091cd9d00bc9"
+      ]
+    },
+    {
+      "question": "HTTPS 握手和 TCP 四次挥手分别解决什么问题？",
+      "url": "/blog/backend-agent-s05-request-tcp/#q-FQ-doxcnPMij1XhAx5JwrdMoaKFj4d",
+      "articleTitle": "网络与操作系统01｜一次HTTPS请求怎样到达服务端：连接、字节流与业务结果",
+      "sources": [
+        "https://www.nowcoder.com/discuss/922660519729696768"
+      ]
+    },
+    {
+      "question": "IO 多路复用怎么理解？怎么实现？select、poll 和 epoll 的区别？",
+      "url": "/blog/backend-agent-s05-io-scheduling/#q-FQ-doxcnZWU2FtFQuaP6CdHyuSS5dV",
+      "articleTitle": "网络与操作系统02｜请求在等待什么：进程、线程、协程与I/O多路复用",
+      "sources": [
+        "https://www.nowcoder.com/discuss/580165246438887424"
+      ]
+    },
+    {
+      "question": "epoll水平触发和边缘触发模式区别",
+      "url": "/blog/backend-agent-s05-io-scheduling/#q-FQ-doxcn79zaClcchPDWNuVABO6E5g",
+      "articleTitle": "网络与操作系统02｜请求在等待什么：进程、线程、协程与I/O多路复用",
+      "sources": [
+        "https://www.nowcoder.com/discuss/353158183189422080"
+      ]
+    },
+    {
+      "question": "SSE 和 WebSocket 的区别是什么？",
+      "url": "/blog/backend-agent-s05-streaming/#q-FQ-doxcnkCnjGJWHtYFwPTYlP21usb",
+      "articleTitle": "网络与操作系统03｜页面怎样持续收到任务进度：SSE、WebSocket与断线恢复",
+      "sources": []
+    },
+    {
+      "question": "虚拟内存和物理内存",
+      "url": "/blog/backend-agent-s05-memory/#q-FQ-doxcnNibBOknDLwQ6432CZfpTGO",
+      "articleTitle": "网络与操作系统04｜程序使用的地址在哪里：虚拟内存、页表、缺页与内存排查",
+      "sources": [
+        "https://www.nowcoder.com/discuss/353158183189422080"
+      ]
+    },
+    {
+      "question": "DNS 流程。",
+      "url": "/blog/backend-agent-s05-05-dns/#q-FQ-doxcnMimALyVqALGwRJAMUjaAjc",
+      "articleTitle": "网络与操作系统05｜域名怎样找到服务器：DNS递归查询、缓存与切换延迟",
+      "sources": []
+    },
+    {
+      "question": "TLS 握手流程。",
+      "url": "/blog/backend-agent-s05-06-tls/#q-FQ-doxcnIF8rYO887n6y7Scm8MWXyg",
+      "articleTitle": "网络与操作系统06｜HTTPS怎样确认对方身份：TLS1.3握手、证书链与主机名",
+      "sources": []
+    },
+    {
+      "question": "-TCP的拥塞避免算法",
+      "url": "/blog/backend-agent-s05-07-congestion/#q-FQ-doxcncTEf12VU9Pi2MvXFJACW5e",
+      "articleTitle": "网络与操作系统07｜TCP怎样决定还能发送多少数据：流量控制、拥塞窗口与重传",
+      "sources": []
+    },
+    {
+      "question": "HTTP3 和 QUIC 了解不？",
+      "url": "/blog/backend-agent-s05-08-http-quic/#q-FQ-doxcnKtYwViFcUweWVULs8SKjZb",
+      "articleTitle": "网络与操作系统08｜HTTP/1.1、HTTP/2和HTTP/3：多路复用解决了哪一层等待",
+      "sources": []
+    },
+    {
+      "question": "进程间通信（IPC）有哪些方式？（管道、命名管道、信号、消息队列、共享内存、信号量、套接字）",
+      "url": "/blog/backend-agent-s05-09-ipc/#q-FQ-doxcn0mLE5BEEbvBgIjfkxaRqCh",
+      "articleTitle": "网络与操作系统09｜进程之间怎样交换数据：管道、消息、共享内存与同步",
+      "sources": []
+    },
+    {
+      "question": "Docker 容器内运行程序，对比直接在宿主机运行进程，二者有什么区别？",
+      "url": "/blog/backend-agent-s05-10-linux-diagnostics/#q-FQ-doxcnM37jZtzT0N41x1fHEb11ld",
+      "articleTitle": "网络与操作系统10｜容器里服务变慢怎样定位：资源限制、连接状态与Linux证据",
+      "sources": []
+    },
+    {
+      "question": "如果服务器中含有大量一直处于close_wait的tcp连接，是为什么？",
+      "url": "/blog/backend-agent-s05-10-linux-diagnostics/#q-FQ-doxcnS2fml2u9XDAgCR1NxcGoDb",
+      "articleTitle": "网络与操作系统10｜容器里服务变慢怎样定位：资源限制、连接状态与Linux证据",
+      "sources": []
+    },
+    {
+      "question": "线程池核心参数如何配置？",
+      "url": "/blog/backend-agent-s06-threadpool/#q-FQ-doxcnaSx43fd3ZZld3qHTIFLTSd",
+      "articleTitle": "语言与框架01｜线程池怎样接收任务：核心线程、队列、扩容与背压",
+      "sources": [
+        "https://www.nowcoder.com/discuss/922660519729696768"
+      ]
+    },
+    {
+      "question": "Python 里多个 Tool 同时调用时，怎么做异步并发？",
+      "url": "/blog/backend-agent-s06-python-async/#q-FQ-doxcninSKVYiM7bU9Rb4O6CAn6Y",
+      "articleTitle": "语言与框架02｜Python怎样并发调用工具：协程、Task、限流与取消",
+      "sources": []
+    },
+    {
+      "question": "volatile的作用",
+      "url": "/blog/backend-agent-s06-shared-state/#q-FQ-doxcnmQMnNfYkP6oPVFzGGZfenf",
+      "articleTitle": "语言与框架03｜多个线程怎样共享状态：可见性、原子性与happens-before",
+      "sources": [
+        "https://www.nowcoder.com/discuss/353157498435739648"
+      ]
+    },
+    {
+      "question": "23.Spring事务注解@Transaction的底层实现",
+      "url": "/blog/backend-agent-s06-spring-transactions/#q-FQ-doxcn2Cev2kol5sjepkJ69MA0Xe",
+      "articleTitle": "语言与框架04｜Spring事务为什么有时没有生效：代理、传播与回滚边界",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/e6eceab3d329413cb398464a3c89f790"
+      ]
+    },
+    {
+      "question": "HashMap 原理；ConcurrentHashMap 如何实现线程安全",
+      "url": "/blog/backend-agent-s06-05-maps/#q-FQ-doxcnHPJRJwCjVAfKTWS0nQMNMh",
+      "articleTitle": "语言与框架05｜HashMap怎样找到键，并发更新为什么还需要原子操作",
+      "sources": []
+    },
+    {
+      "question": "FastAPI 中如果异步接口里出现阻塞操作，会有什么问题？",
+      "url": "/blog/backend-agent-s06-06-fastapi/#q-FQ-doxcnnTvO5oD3IP5HvQuNHCEpsd",
+      "articleTitle": "语言与框架06｜一个请求怎样经过FastAPI：路由、依赖、校验与异步边界",
+      "sources": []
+    },
+    {
+      "question": "JVM 八股（垃圾回收）：JVM 的垃圾回收过程大致是什么？GC Roots 和可达性分析是怎么回事？",
+      "url": "/blog/backend-agent-s06-07-jvm/#q-FQ-doxcnPCcaeBRrCuyQgfY2UuCarb",
+      "articleTitle": "语言与框架07｜Java进程内存怎样排查：GC Roots、G1、堆与堆外",
+      "sources": []
+    },
+    {
+      "question": "IOC 和 DI；有哪些注入方式。",
+      "url": "/blog/backend-agent-s06-08-spring/#q-FQ-doxcn8eYF8V9cnQhZOvKcMCYHsh",
+      "articleTitle": "语言与框架08｜Spring怎样组装对象并处理请求：IoC、Bean生命周期与MVC",
+      "sources": []
+    },
+    {
+      "question": "14. Spring MVC的执行流程是什么？",
+      "url": "/blog/backend-agent-s06-08-spring/#q-FQ-doxcnoV4mjBeqWkRrLKcK9FiBfd",
+      "articleTitle": "语言与框架08｜Spring怎样组装对象并处理请求：IoC、Bean生命周期与MVC",
+      "sources": []
+    },
+    {
+      "question": "讲讲 channel",
+      "url": "/blog/backend-agent-s06-09-go/#q-FQ-doxcnwD0SMj1Vz3mrzhIpznLmDb",
+      "articleTitle": "语言与框架09｜Go怎样协调并发任务：channel、取消、共享状态与资源回收",
+      "sources": []
+    },
+    {
+      "question": "C++ 中什么是 RAII？",
+      "url": "/blog/backend-agent-s06-10-cpp/#q-FQ-doxcnefB2jBISXcvqyofdNoH9pg",
+      "articleTitle": "语言与框架10｜C++怎样管理资源与并发：RAII、所有权和异常路径",
+      "sources": []
+    },
+    {
+      "question": "为什么要用B+树",
+      "url": "/blog/backend-agent-s07-index-query/#q-FQ-doxcnoqlk2yLOOrjZ4Tbcs7GsJf",
+      "articleTitle": "数据库与缓存01｜MySQL索引怎样减少查询工作：B+树、回表与联合索引",
+      "sources": [
+        "https://www.nowcoder.com/discuss/422360792755970048"
+      ]
+    },
+    {
+      "question": "联合索引在哪些场景下会失效？",
+      "url": "/blog/backend-agent-s07-index-query/#q-FQ-doxcn9ai3SeVfval2r98rowzXGc",
+      "articleTitle": "数据库与缓存01｜MySQL索引怎样减少查询工作：B+树、回表与联合索引",
+      "sources": [
+        "https://www.nowcoder.com/discuss/930155293864914944"
+      ]
+    },
+    {
+      "question": "MySQL 事务的隔离级别有哪些",
+      "url": "/blog/backend-agent-s07-transactions/#q-FQ-doxcnsmCVEvjUPprLK06S4ptyAd",
+      "articleTitle": "数据库与缓存02｜并发事务究竟读到什么：RC、RR、MVCC与锁",
+      "sources": [
+        "https://www.nowcoder.com/discuss/920033557844688896"
+      ]
+    },
+    {
+      "question": "MySQL 隔离级别、幻读和间隙锁有什么关系？",
+      "url": "/blog/backend-agent-s07-transactions/#q-FQ-doxcnZb59XiNpJQVG1qsBZk4IMp",
+      "articleTitle": "数据库与缓存02｜并发事务究竟读到什么：RC、RR、MVCC与锁",
+      "sources": [
+        "https://www.nowcoder.com/discuss/922660519729696768"
+      ]
+    },
+    {
+      "question": "4.为什么先更新MySQL再删除缓存",
+      "url": "/blog/backend-agent-s07-cache-consistency/#q-FQ-doxcnlbTn9zshwB5LO7ikWpbD0b",
+      "articleTitle": "数据库与缓存03｜先更新数据库再删除缓存之后：旧值回填、一致性与缓存保护",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/92b8d99a909a4d83acd3f41e51d1741b"
+      ]
+    },
+    {
+      "question": "SQL：一张表 id、薪资，查询薪资第二高的员工的薪资。",
+      "url": "/blog/backend-agent-s07-sql-semantics/#q-FQ-doxcnE7SgCCO2PyqAY4jF1gOsVb",
+      "articleTitle": "数据库与缓存04｜SQL查出的行代表什么：JOIN、NULL、排名与稳定分页",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/73c968a00be84af88e07f6e7b0d397c7"
+      ]
+    },
+    {
+      "question": "MySQL：redo log、undo log、binlog",
+      "url": "/blog/backend-agent-s07-logs-recovery/#q-FQ-doxcnGhBmX39r66dUhmZ1NRXwjb",
+      "articleTitle": "数据库与缓存05｜数据库崩溃后怎样恢复：redo、undo、binlog与提交结果",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/d14d568264f941a18811a4e8029a884f"
+      ]
+    },
+    {
+      "question": "redis持久化",
+      "url": "/blog/backend-agent-s07-redis-durability/#q-FQ-doxcnDFKUXQ7GPk37ftYIPQCpTg",
+      "articleTitle": "数据库与缓存06｜Redis的数据怎样保存：数据类型、RDB、AOF与复制",
+      "sources": [
+        "https://www.nowcoder.com/discuss/506885957010915328"
+      ]
+    },
+    {
+      "question": "4、sql优化，说说explain需要关注哪些参数？",
+      "url": "/blog/backend-agent-s07-07-explain/#q-FQ-doxcncW6HvvlDZkbtu2eGRGAtUe",
+      "articleTitle": "数据库与缓存07｜怎样读MySQL执行计划：六行数据的EXPLAIN与索引实验",
+      "sources": []
+    },
+    {
+      "question": "事务隔离级别：四大事务隔离级别分别解决了什么并发问题？",
+      "url": "/blog/backend-agent-s07-08-two-sessions/#q-FQ-doxcnyrfpWcjkUbDL4CkWvZeDvp",
+      "articleTitle": "数据库与缓存08｜两次SELECT为什么结果不同：MySQL双会话隔离与锁实验",
+      "sources": []
+    },
+    {
+      "question": "17.redis数据结构，底层实现以及编码中字段",
+      "url": "/blog/backend-agent-s07-09-redis-encoding/#q-FQ-doxcnqHEVE5YLKxXNVBRjzhVi9c",
+      "articleTitle": "数据库与缓存09｜Redis类型怎样落到内存：紧凑编码、跳表与容量估算",
+      "sources": []
+    },
+    {
+      "question": "缓存击穿、穿透、雪崩这三个概念上的区别？",
+      "url": "/blog/backend-agent-s07-10-cache-protection/#q-FQ-doxcn8aJ1DvOwwCxtYmqxjh5pce",
+      "articleTitle": "数据库与缓存10｜缓存失效以后怎样保护数据库：穿透、击穿、雪崩与回源合并",
+      "sources": []
+    },
+    {
+      "question": "多级缓存一致性怎么保证？",
+      "url": "/blog/backend-agent-s07-11-multilevel-cache/#q-FQ-doxcnPbpmEqgqM0hNHnEwmuRREf",
+      "articleTitle": "数据库与缓存11｜本地缓存与Redis怎样协同：版本、失效通知和断线恢复",
+      "sources": []
+    },
+    {
+      "question": "如何保证消息不会重复消费？",
+      "url": "/blog/backend-agent-s08-outbox-delivery/#q-FQ-doxcnyHdQLRAyuiIGzR7wdJyhad",
+      "articleTitle": "分布式系统01｜数据库提交以后，消息怎样可靠送达：Outbox、确认与业务幂等",
+      "sources": [
+        "https://www.nowcoder.com/discuss/611696355077103616"
+      ]
+    },
+    {
+      "question": "一个用户下两次单怎么办？一个用户下一次单立刻退出并进入再下两次单怎么办（想买两件商品）？幂等性实现。",
+      "url": "/blog/backend-agent-s08-outbox-delivery/#q-FQ-doxcn3NJaFPBkaSITXx83Z7Aklg",
+      "articleTitle": "分布式系统01｜数据库提交以后，消息怎样可靠送达：Outbox、确认与业务幂等",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/6de306829fa941969e9f2b95613a00c7"
+      ]
+    },
+    {
+      "question": "讲一下 CAP 理论",
+      "url": "/blog/backend-agent-s08-consensus-leases/#q-FQ-doxcn2StPdAqsRykFB200aY3zuc",
+      "articleTitle": "分布式系统02｜网络分区后谁还能写入：CAP、Raft与租约失效",
+      "sources": [
+        "https://www.nowcoder.com/discuss/920033557844688896"
+      ]
+    },
+    {
+      "question": "Redis 做限流的常见算法有哪些？（固定窗口、滑动窗口、漏桶、令牌桶）",
+      "url": "/blog/backend-agent-s08-rate-limits/#q-FQ-doxcnsUQPlszTEGAytnyQaSkSfb",
+      "articleTitle": "分布式系统03｜请求太多时限制什么：窗口、令牌桶、漏桶与全局额度",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/6968c77e4ac749fbba850ecf033962cd"
+      ]
+    },
+    {
+      "question": "RocketMQ 事务消息的原理。",
+      "url": "/blog/backend-agent-s08-04-cdc-transaction-message/#q-FQ-doxcnQqOkNTYVwffOvhABwMzZrb",
+      "articleTitle": "分布式系统04｜CDC与事务消息：数据库提交以后，消息怎样可靠地发出去",
+      "sources": []
+    },
+    {
+      "question": "Kafka 如何保证消息的顺序性和可靠性？",
+      "url": "/blog/backend-agent-s08-05-queue-backlog-order/#q-FQ-doxcnmvUT2o85CTau03hlrqcpIe",
+      "articleTitle": "分布式系统05｜消息积压与顺序消费：为什么增加消费者有时不起作用",
+      "sources": []
+    },
+    {
+      "question": "MQ 的消息积压如何处理？",
+      "url": "/blog/backend-agent-s08-05-queue-backlog-order/#q-FQ-doxcnTIpQwbdtVGtrBemjEtmoEd",
+      "articleTitle": "分布式系统05｜消息积压与顺序消费：为什么增加消费者有时不起作用",
+      "sources": []
+    },
+    {
+      "question": "假如现在分库分表，要添加一定数量的表，怎么让数据迁移的量尽量小、用户尽量无感？",
+      "url": "/blog/backend-agent-s08-06-sharding-migration/#q-FQ-doxcnk7ZTit2Jjl85Ym7UJ85qNg",
+      "articleTitle": "分布式系统06｜分片扩容与热点数据：数据怎样迁移，读写怎样保持连续",
+      "sources": []
+    },
+    {
+      "question": "除了限流，是否了解「熔断」机制？它与限流的区别是什么？下游服务扛不住时该如何处理？",
+      "url": "/blog/backend-agent-s08-07-circuit-breaker/#q-FQ-doxcnG7hFvsSCWEo5bfuLgyhFNg",
+      "articleTitle": "分布式系统07｜熔断、超时与隔离：下游变慢以后，怎样防止请求一起堆住",
+      "sources": []
+    },
+    {
+      "question": "什么是 CSRF 攻击？",
+      "url": "/blog/backend-agent-s08-08-jwt-csrf/#q-FQ-doxcnKjXHjYmxL3TkeamDl3NCMh",
+      "articleTitle": "分布式系统08｜JWT、Cookie与CSRF：登录身份怎样传递，又该在哪一步检查权限",
+      "sources": []
+    },
+    {
+      "question": "用户在弱网环境下想上传一个 G 的视频，如何设计这个上传器？",
+      "url": "/blog/backend-agent-s08-09-resumable-upload/#q-FQ-doxcng6h1vfrffKqLt3SZrmDGih",
+      "articleTitle": "分布式系统09｜弱网分片上传：怎样确认进度、断点续传并控制内存占用",
+      "sources": []
+    },
+    {
+      "question": "如果让你做兼容性测试，你会怎么做？",
+      "url": "/blog/backend-agent-s08-10-api-compatibility/#q-FQ-doxcnkLNOUdrLUpZy80HXVtybYb",
+      "articleTitle": "分布式系统10｜接口版本与数据库迁移：新旧客户端怎样同时使用一个服务",
+      "sources": []
+    },
+    {
+      "question": "介绍一下 QKV 的计算？",
+      "url": "/blog/backend-agent-s09-token-attention/#q-FQ-doxcnadpC2NHLY5ymb98EKrITvd",
+      "articleTitle": "大模型与多模态01｜文本怎样变成下一步预测：Token、QKV与注意力算例",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/d07189aecb5c40b89f5c4c1460d1167f"
+      ]
+    },
+    {
+      "question": "是否了解 KV Cache？它在大模型推理过程中起到什么作用？",
+      "url": "/blog/backend-agent-s09-kv-cache/#q-FQ-doxcn2XFWChKlOKHfKFXJC9TXtb",
+      "articleTitle": "大模型与多模态02｜生成文字为什么还要缓存：Prefill、Decode与KV显存估算",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/556b3a764a614931bc5bb8a96e4f5f3f"
+      ]
+    },
+    {
+      "question": "LoRA 原理",
+      "url": "/blog/backend-agent-s09-training-lora/#q-FQ-doxcnYwO2ygtOXjfhs0ktJKcXcf",
+      "articleTitle": "大模型与多模态03｜模型参数怎样被训练：交叉熵、反向传播与LoRA",
+      "sources": []
+    },
+    {
+      "question": "Qwen 的 RoPE 旋转位置编码原理与长文本外推特性",
+      "url": "/blog/backend-agent-s09-04-rope-context/#q-FQ-doxcnY2nHdIIXx0fIolIw3tZfHh",
+      "articleTitle": "大模型与多模态04｜RoPE与长上下文：旋转位置编码怎样表示相对距离",
+      "sources": []
+    },
+    {
+      "question": "知不知道其他量化方法？",
+      "url": "/blog/backend-agent-s09-05-quantization/#q-FQ-doxcnWQXPx8onVJ3QMkWPugDXNf",
+      "articleTitle": "大模型与多模态05｜模型量化怎样减少存储：误差、校准与推理速度之间的关系",
+      "sources": []
+    },
+    {
+      "question": "一个7B的模型，用BF16精度需要多少显存？还有可能有什么显存开销？存放在哪里？",
+      "url": "/blog/backend-agent-s09-06-parallel-memory/#q-FQ-doxcndB3w5ohk9JE1Bxwxde7SAh",
+      "articleTitle": "大模型与多模态06｜大模型并行与显存估算：参数、梯度、优化器和激活分别放在哪里",
+      "sources": []
+    },
+    {
+      "question": "谈谈你对 infoNCE 损失的理解，它具备哪些特性？",
+      "url": "/blog/backend-agent-s09-07-embedding-infonce/#q-FQ-doxcnpmRk22SkCZZHMuSFzNdXle",
+      "articleTitle": "大模型与多模态07｜Embedding与InfoNCE：相似向量是怎样通过对比学习得到的",
+      "sources": []
+    },
+    {
+      "question": "CLIP 底层原理",
+      "url": "/blog/backend-agent-s09-08-clip-vlm/#q-FQ-doxcnx7VnUZlHgKYZV2KW8xwE8f",
+      "articleTitle": "大模型与多模态08｜CLIP与视觉语言模型：图像特征怎样和文本建立联系",
+      "sources": []
+    },
+    {
+      "question": "为什么大家都开始探索 MoE 架构？MoE 相比 Dense 有什么好处与代价？",
+      "url": "/blog/backend-agent-s09-09-moe/#q-FQ-doxcnlEs2mpsbFsUxYMCZVlITNb",
+      "articleTitle": "大模型与多模态09｜MoE的专家路由：激活参数减少以后，计算和通信怎样变化",
+      "sources": []
+    },
+    {
+      "question": "怎么看待扩散模型？",
+      "url": "/blog/backend-agent-s09-10-diffusion/#q-FQ-doxcnxbabJoYcrm2XY3bGnTGXgh",
+      "articleTitle": "大模型与多模态10｜扩散模型怎样生成图像：加噪、去噪与条件控制的计算过程",
+      "sources": []
+    },
+    {
+      "question": "ASR 识别结果的准确率如何评估？",
+      "url": "/blog/backend-agent-s09-11-asr-streaming/#q-FQ-doxcnjT0hmDKhVFrAw52qkbRsCZ",
+      "articleTitle": "大模型与多模态11｜ASR怎样把语音转成文字：流式结果、稳定前缀与错误率评价",
+      "sources": []
+    },
+    {
+      "question": "假如让你从零构建一个 vla 模型 你对他的架构的设计是怎么样的？为什么",
+      "url": "/blog/backend-agent-s09-12-vla/#q-FQ-doxcnq8McQTTIGO2JmPDEXIN92c",
+      "articleTitle": "大模型与多模态12｜VLA怎样从图像和指令产生动作：表示、训练数据与闭环控制",
+      "sources": []
+    },
+    {
+      "question": "PPO 算法为什么有 reward model 又有 critic model。",
+      "url": "/blog/backend-agent-s10-returns-ppo/#q-FQ-doxcnf398LsC2bjL2xr3UEnarHe",
+      "articleTitle": "强化学习01｜奖励怎样变成策略更新：回报、优势、Critic与PPO",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/36f397670374455896bd05de6858c06a"
+      ]
+    },
+    {
+      "question": "DPO 和 PPO 是什么关系？它们有什么区别？",
+      "url": "/blog/backend-agent-s10-dpo/#q-FQ-doxcn0PKZ8AEEXqjyrCks2ulkch",
+      "articleTitle": "强化学习02｜偏好对怎样直接训练模型：DPO目标与PPO的区别",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/08c77582e2684108860965cd500e227b"
+      ]
+    },
+    {
+      "question": "GRPO 算法原理",
+      "url": "/blog/backend-agent-s10-grpo-agent/#q-FQ-doxcnC1zKCqUcY2irpPl4deZ6Eg",
+      "articleTitle": "强化学习03｜同一道题的多个回答怎样参与训练：GRPO与Agent轨迹",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/5710cbea8d9f46ca888ab57041d3f78f"
+      ]
+    },
+    {
+      "question": "GRPO训练的数据流",
+      "url": "/blog/backend-agent-s10-grpo-agent/#q-FQ-doxcnr9xxrfqCnLPiu0TI6gyaFg",
+      "articleTitle": "强化学习03｜同一道题的多个回答怎样参与训练：GRPO与Agent轨迹",
+      "sources": [
+        "https://www.nowcoder.com/discuss/864605093486682112"
+      ]
+    },
+    {
+      "question": "PPO、GRPO、DPO等算法原理。",
+      "url": "/blog/backend-agent-s10-04-policy-gradient/#q-FQ-doxcnf2AwdDZ70wok1zaESTuncg",
+      "articleTitle": "强化学习04｜策略梯度怎样推导：为什么奖励可以乘在log概率的梯度上",
+      "sources": []
+    },
+    {
+      "question": "问八股：GRPO，重要性采样，rl中on-policy和off-policy的区别",
+      "url": "/blog/backend-agent-s10-05-off-policy-importance/#q-FQ-doxcnnbCe2tcDReUaCMXGyk4Mgd",
+      "articleTitle": "强化学习05｜On-policy、Off-policy与重要性采样：旧轨迹怎样参与当前策略训练",
+      "sources": []
+    },
+    {
+      "question": "DAPO 相较于 GRPO 的 CLIP 有什么区别？",
+      "url": "/blog/backend-agent-s10-06-grpo-variants/#q-FQ-doxcnqB3oM7wlcSb4vBmnUmqQId",
+      "articleTitle": "强化学习06｜GRPO、DAPO与Dr.GRPO：裁剪和平均方式为什么会改变训练目标",
+      "sources": []
+    },
+    {
+      "question": "了解TRL，VERL吗？",
+      "url": "/blog/backend-agent-s10-07-async-rollout-frameworks/#q-FQ-doxcng3NaIuHjdEIyZFtYgpjsef",
+      "articleTitle": "强化学习07｜异步Rollout与训练框架：采样器、队列和训练器怎样协作",
+      "sources": []
+    },
+    {
+      "question": "对整个推荐系统链路有哪些了解",
+      "url": "/blog/backend-agent-s11-recommendation-pipeline/#q-FQ-doxcnQrXid12ZWhy7ZitWpODiUf",
+      "articleTitle": "推荐系统01｜推荐结果怎样来到页面：召回、排序、特征与反馈",
+      "sources": [
+        "https://www.nowcoder.com/feed/main/detail/5c5410fa424d42f9a1608a7fbdf9ef70"
+      ]
+    },
+    {
+      "question": "AI Coding：电商搜索排序题，给你 query 和商品特征，输出排序分数，提升 NDCG@10，你会怎么搭链路。",
+      "url": "/blog/backend-agent-s11-ndcg-ranking/#q-FQ-doxcnx0hixLRI8cSk3ZFRsk7fJh",
+      "articleTitle": "推荐系统02｜排序结果怎样比较：NDCG算例与搜索打分基线",
+      "sources": [
+        "https://www.nowcoder.com/discuss/932410744543379456"
+      ]
+    },
+    {
+      "question": "双塔召回的改进有哪些。",
+      "url": "/blog/backend-agent-s11-03-two-tower-negatives/#q-FQ-doxcn2jY6h1t3STswi4ajxaMK6d",
+      "articleTitle": "推荐系统03｜双塔召回怎样训练：从向量打分到负采样与采样校正",
+      "sources": []
+    },
+    {
+      "question": "DIN 中 attention 计算逻辑，对比 Transformer 的 attention 差异。",
+      "url": "/blog/backend-agent-s11-04-din-deepfm/#q-FQ-doxcnYov2cfYCseEtGOGmFufWeb",
+      "articleTitle": "推荐系统04｜DIN与DeepFM怎样预测点击：候选相关兴趣和特征交叉",
+      "sources": []
+    },
+    {
+      "question": "介绍一下 CGC、PLE 和 MMoE 的区别。",
+      "url": "/blog/backend-agent-s11-05-multitask-ple/#q-FQ-doxcn0CZcazzIzW63AmAZ44EcNh",
+      "articleTitle": "推荐系统05｜推荐多任务学习：从共享底层到MMoE、CGC与PLE",
+      "sources": []
+    },
+    {
+      "question": "4.sid和用传统item id对比的好处",
+      "url": "/blog/backend-agent-s11-06-semantic-id-generative/#q-FQ-doxcnOpvW7vkUrPBdyebsRfILKw",
+      "articleTitle": "推荐系统06｜语义ID与生成式推荐：TIGER怎样生成物品，HSTU怎样建模行为",
+      "sources": []
+    }
+  ]
+}

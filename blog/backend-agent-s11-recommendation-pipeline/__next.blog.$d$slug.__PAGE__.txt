@@ -1,0 +1,107 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+12:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+1b:"ViewportBoundary"
+1c:I[887,[],"$1b"]
+1d:"MetadataBoundary"
+1e:I[887,[],"$1d"]
+1f:"$Sreact.suspense"
+6:X
+6:C
+7:X
+13:T1b1b,<h2 id="section-推荐系统先要明确希望改善什么">推荐系统先要明确希望改善什么</h2>
+<p>给用户展示商品时，点击、购买和满意度并不等价。用户可能误点后立即返回，也可能收藏后几天才购买。<strong>反馈标签是对行为的定义，不能仅凭一个事件就确定长期兴趣。</strong></p>
+<p>因此需要先规定曝光怎样计数，点击如何与曝光关联，购买的归因窗口多长，退货或明确不感兴趣怎样处理。否则不同训练样本和线上指标可能讨论的不是同一种行为。</p>
+<h2 id="section-大量候选怎样逐步缩小">大量候选怎样逐步缩小</h2>
+<p>常见链路包含<strong>候选召回→打分排序→重排与展示</strong>。召回从较大集合找到可能合适的少量候选，排序使用更丰富的特征计算优先级，重排再处理去重、多样性及业务约束。<a href="https://developers.google.com/machine-learning/recommendation/overview/types" rel="noopener noreferrer">推荐系统基本链路</a></p>
+<p>构造一个只有6件商品的教学例子：用户近期看过跑鞋，商品有跑鞋A、跑鞋B、徒步鞋C、袜子D、篮球E和新上架跑鞋F。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>阶段</th><th>得到什么</th><th>需要检查什么</th></tr></thead><tbody><tr><td>向量召回</td><td>A、B、F</td><td>文本或行为表示是否兼容</td></tr><tr><td>关联行为召回</td><td>A、C、D</td><td>是否只重复热门商品</td></tr><tr><td>合并候选</td><td>A、B、C、D、F</td><td>同一商品去重，保留通道来源</td></tr><tr><td>资格过滤</td><td>去掉已下架的B</td><td>库存、地区和展示资格</td></tr><tr><td>排序与重排</td><td>例如A、F、D、C</td><td>相关性、重复程度和探索要求</td></tr></tbody></table>
+<p>最后的次序只是说明流程，并非训练模型的实测结果。若A根本没有被任何通道召回，后面的排序器无法把它排到第1名，因此召回覆盖与排序质量需要分别测量。</p>
+<p>不同召回通道的分数未必同量纲。向量相似度0.8和规则热度800不能直接相加；可以校准、使用融合方法，或把通道信号作为后续排序特征。<a href="https://developers.google.com/machine-learning/recommendation/dnn/scoring" rel="noopener noreferrer">召回与打分的区别</a></p>
+<h2 id="section-排序特征要与真正作出决策的时点一致">排序特征要与真正作出决策的时点一致</h2>
+<p>排序可使用用户历史、商品属性、当前时间和两者交互特征。关键在于：<strong>请求发生时，哪些信息已经可用？</strong></p>
+<p>假设上午10点曝光了商品，下午2点用户购买。用“当天是否购买”作为10点请求的输入特征，就把未来答案泄漏给模型；购买可以在适当归因规则下作为监督标签，但不能倒填到当时的输入里。</p>
+<p>还需核对离线训练与在线服务的处理方式。价格单位、缺失值、类别映射或特征更新时间不同，都可能让相同业务对象变成不同模型输入。数据集应保留事件时点、特征版本及生成逻辑，而不仅是一张最终CSV。</p>
+<p>负样本同样需要定义。未点击可能因为不感兴趣，也可能因为根本没有看到该位置；未召回商品更不能直接全部当成明确负反馈。采样方式改变训练分布，需要在评估与概率解释中考虑。</p>
+<h2 id="section-一次误点击怎样影响后续推荐">一次误点击怎样影响后续推荐</h2>
+<p>如果用户点击篮球E后立即返回，只凭这次点击把长期兴趣改成篮球，证据太弱。可以结合停留、后续行为、明确负反馈和历史模式，让不同信号影响不同时间尺度的特征。</p>
+<p>但“短停留一定是误触”也不能成立：用户可能已经快速找到需要的信息，或页面加载失败。应保留不确定性，结合业务实验确定权重，而不是写一个所有场景通用的衰减系数。</p>
+<p>新用户和新商品缺少行为数据，可以使用内容属性、上下文与适量探索建立候选。只追随历史高点击，会让新内容一直得不到曝光，形成反馈循环。</p>
+<h2 id="section-推荐与搜索共享哪些机制又多了什么约束">推荐与搜索共享哪些机制，又多了什么约束</h2>
+<p>搜索额外具有明确query。用户搜“黑色防水跑鞋”时，颜色、用途和防水条件应参与匹配与过滤，不能只因为用户常买篮球鞋就覆盖当前意图。推荐更多依赖上下文和历史推测意图，搜索则需要协调<strong>User–Query–Item</strong>三者关系。</p>
+<p>两者都可以使用倒排、向量和排序模型，检索基础见<a href="/blog/backend-agent-s02-retrieval/">BM25与向量检索</a>。模型选择应跟随信号和约束，不能仅因名称相近就直接复用训练标签。</p>
+<p>离线指标还需要接到线上实验。排序更准确不一定带来更好长期体验，展示延迟、商品可用性和内容重复都可能影响效果。线上比较应固定分流单位与观察窗口，报告业务收益和保护指标，而不只看点击率。</p>
+<h2 id="section-面试问答推荐系统完整链路">面试问答：推荐系统完整链路</h2>
+<p><span id="q-FQ-doxcnQrXid12ZWhy7ZitWpODiUf" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnQrXid12ZWhy7ZitWpODiUf"></a></p>
+<blockquote>
+<p>对整个推荐系统链路有哪些了解</p>
+</blockquote>
+<p><strong>回答：</strong> 推荐系统从业务目标和反馈定义开始，采集曝光及交互事件，构造时点正确的用户、商品与上下文特征；在线通过多路召回生成候选，合并去重和资格过滤，再用排序模型打分，经过重排及展示约束返回结果；新反馈进入后续训练与评估。</p>
+<p>各阶段需要独立诊断。正确商品未召回属于覆盖问题，已召回却靠后属于排序或特征问题，排序后大量下架商品又说明资格或时效处理有缺口。不同召回通道的分数未必可直接比较，训练与服务特征也必须一致。</p>
+<p>评价包含召回覆盖、排序指标和实际业务效果。标签需处理曝光偏差、弱反馈与延迟购买，避免未来信息泄漏。离线改善后还要通过合适线上实验验证，同时观察延迟、多样性及其他保护指标。</p>
+<p><strong>延伸追问（自拟）：点击率提高就代表推荐更好吗？</strong> 不一定，误触或标题吸引也能提高点击。需要结合后续行为、满意度和业务目标，并检查是否牺牲长期价值。</p>
+<p>原问ID：<code>FQ-doxcnQrXid12ZWhy7ZitWpODiUf</code>。出处：<a href="https://www.nowcoder.com/feed/main/detail/5c5410fa424d42f9a1608a7fbdf9ef70" rel="noopener noreferrer">原始面经</a>。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#ai","children":["人工智能",["$","span",null,{"children":25}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"推荐系统01｜推荐结果怎样来到页面：召回、排序、特征与反馈"}],["$","p",null,{"className":"article-deck","children":"沿一次商品推荐说明候选缩小、打分和展示约束，再从误点击分析标签含义、特征时点和离线线上评价的差别"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,640"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","推荐系统",{"href":"/blog/#tag=%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F","children":"推荐系统"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-推荐系统先要明确希望改善什么","text":"推荐系统先要明确希望改善什么","level":2},{"id":"section-大量候选怎样逐步缩小","text":"大量候选怎样逐步缩小","level":2},{"id":"section-排序特征要与真正作出决策的时点一致","text":"排序特征要与真正作出决策的时点一致","level":2},{"id":"section-一次误点击怎样影响后续推荐","text":"一次误点击怎样影响后续推荐","level":2},{"id":"section-推荐与搜索共享哪些机制又多了什么约束","text":"推荐与搜索共享哪些机制，又多了什么约束","level":2},{"id":"section-面试问答推荐系统完整链路","text":"面试问答：推荐系统完整链路","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/recommendation-ranking/","children":"推荐与排序"}],["$","span",null,{"children":[1," / ",6," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s11-recommendation-pipeline",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-recommendation-pipeline/","aria-current":"page","children":"推荐系统01｜推荐结果怎样来到页面：召回、排序、特征与反馈"}]}],["$","li","backend-agent-s11-ndcg-ranking",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-ndcg-ranking/","children":"推荐系统02｜排序结果怎样比较：NDCG算例与搜索打分基线"}]}],["$","li","backend-agent-s11-03-two-tower-negatives",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-03-two-tower-negatives/","children":"推荐系统03｜双塔召回怎样训练：从向量打分到负采样与采样校正"}]}],["$","li","backend-agent-s11-04-din-deepfm",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-04-din-deepfm/","children":"推荐系统04｜DIN与DeepFM怎样预测点击：候选相关兴趣和特征交叉"}]}],["$","li","backend-agent-s11-05-multitask-ple",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-05-multitask-ple/","children":"推荐系统05｜推荐多任务学习：从共享底层到MMoE、CGC与PLE"}]}],["$","li","backend-agent-s11-06-semantic-id-generative",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-06-semantic-id-generative/","children":"推荐系统06｜语义ID与生成式推荐：TIGER怎样生成物品，HSTU怎样建模行为"}]}]]}]]}]]}],["$","$L12",null,{"html":"$13"}],"$undefined","$L14","$L15","$L16"]}],"$L17"]}]]}],["$L18"],"$L19"]}],"p":"$@1a","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s11-recommendation-pipeline","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1c",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1e",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"推荐系统01｜推荐结果怎样来到页面：召回、排序、特征与反馈 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"沿一次商品推荐说明候选缩小、打分和展示约束，再从误点击分析标签含义、特征时点和离线线上评价的差别。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s11-recommendation-pipeline/"}]]}]}],null]}],null]}],"p":"$@20","v":null,"s":"$7"}},"a":"$@21","u":"$@22","b":"t75SI7oTDmNtBl3uMkJyg"}
+23:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+24:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+14:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","span",null,{}],["$","$Lf",null,{"href":"/blog/backend-agent-s11-ndcg-ranking/","children":[["$","span",null,{"children":"下一篇"}],"推荐系统02｜排序结果怎样比较：NDCG算例与搜索打分基线"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s02-retrieval",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s02-retrieval/","children":"上下文与RAG03｜关键词和向量怎样找资料：倒排索引、BM25与近似最近邻"}],["$","span",null,{"children":"Agent"}]]}]]}]]}]]}]
+15:["$","$L23",null,{"contentId":"backend-agent-s11-recommendation-pipeline"}]
+16:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+17:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5"]}]
+18:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+19:["$","$L24",null,{"children":["$","$1f",null,{"name":"Next.MetadataOutlet","children":"$@25"}]}]
+22:true
+7:300
+25:null
+7:C
+21:0
+9:"$undefined"
+5:"$undefined"
+20:"$undefined"
+1a:"$undefined"

@@ -1,0 +1,134 @@
+{
+  "environment": {
+    "python": "3.10.12",
+    "kernel": "5.15.0-131-generic",
+    "cgroup_v2_visible": true
+  },
+  "limits": {
+    "address_space_mib": 96,
+    "cpu_seconds": 3,
+    "file_bytes": 1048576,
+    "open_files": 64,
+    "external_timeout_seconds": 15
+  },
+  "checks": [
+    {
+      "name": "pipe can combine and split writes",
+      "actual": [
+        "abcd",
+        "ef"
+      ],
+      "expected": [
+        "abcd",
+        "ef"
+      ]
+    },
+    {
+      "name": "pipe EOF after final writer closes",
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "child notification",
+      "actual": "ready",
+      "expected": "ready"
+    },
+    {
+      "name": "child exited normally",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "shared mapping visible after synchronization",
+      "actual": 42,
+      "expected": 42
+    },
+    {
+      "name": "LT first readable event",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "LT partial read",
+      "actual": "abc",
+      "expected": "abc"
+    },
+    {
+      "name": "LT repeats readiness after partial read",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "LT drain remaining bytes",
+      "actual": "def",
+      "expected": "def"
+    },
+    {
+      "name": "LT drained socket reaches EAGAIN",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "LT new data after draining",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "LT new byte",
+      "actual": "g",
+      "expected": "g"
+    },
+    {
+      "name": "ET first readable event",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "ET partial read",
+      "actual": "abc",
+      "expected": "abc"
+    },
+    {
+      "name": "ET repeats readiness after partial read",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "ET drain remaining bytes",
+      "actual": "def",
+      "expected": "def"
+    },
+    {
+      "name": "ET drained socket reaches EAGAIN",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "ET new data after draining",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "ET new byte",
+      "actual": "g",
+      "expected": "g"
+    },
+    {
+      "name": "peer observes EOF after FIN",
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "our accepted socket is CLOSE_WAIT before local close",
+      "actual": [
+        "08"
+      ],
+      "expected": [
+        "08"
+      ]
+    }
+  ],
+  "passed": 21,
+  "failed": 0,
+  "scope": "本地隔离环境的功能与机制示例，不代表生产并发能力或吞吐量"
+}

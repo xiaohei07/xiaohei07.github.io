@@ -1,0 +1,92 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+1e:"ViewportBoundary"
+1f:I[887,[],"$1e"]
+20:"MetadataBoundary"
+21:I[887,[],"$20"]
+22:"$Sreact.suspense"
+6:X
+6:C
+7:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#deployment","children":["部署与运维",["$","span",null,{"children":4}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"网络与操作系统10｜容器里服务变慢怎样定位：资源限制、连接状态与Linux证据"}],["$","p",null,{"className":"article-deck","children":"把容器隔离、资源配额和宿主机负载分开，给出CPU、内存、I/O与连接问题的只读排查路径及示例判读"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,045"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",7," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","Linux",{"href":"/blog/#tag=Linux","children":"Linux"}],["$","$L10","问题排查",{"href":"/blog/#tag=%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5","children":"问题排查"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-容器中的进程仍然需要宿主内核调度","text":"容器中的进程仍然需要宿主内核调度","level":2},{"id":"section-cpu空闲与容器被限流为什么可以同时发生","text":"CPU空闲与容器被限流为什么可以同时发生","level":2},{"id":"section-内存与io要同时看容量等待和变化趋势","text":"内存与I/O要同时看容量、等待和变化趋势","level":2},{"id":"section-一组只读命令怎样对应证据","text":"一组只读命令怎样对应证据","level":2},{"id":"section-close_wait与time_wait为什么不能使用同一个解释","text":"CLOSE_WAIT与TIME_WAIT为什么不能使用同一个解释","level":2},{"id":"section-从请求链定位等待所在的位置","text":"从请求链定位等待所在的位置","level":2},{"id":"section-面试问答容器与宿主进程","text":"面试问答：容器与宿主进程","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/network-operating-systems/","children":"网络、操作系统与Linux"}],["$","span",null,{"children":[10," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s05-request-tcp",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-request-tcp/","children":"网络与操作系统01｜一次HTTPS请求怎样到达服务端：连接、字节流与业务结果"}]}],["$","li","backend-agent-s05-io-scheduling",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-io-scheduling/","children":"网络与操作系统02｜请求在等待什么：进程、线程、协程与I/O多路复用"}]}],["$","li","backend-agent-s05-streaming",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-streaming/","children":"网络与操作系统03｜页面怎样持续收到任务进度：SSE、WebSocket与断线恢复"}]}],["$","li","backend-agent-s05-memory",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-memory/","children":"网络与操作系统04｜程序使用的地址在哪里：虚拟内存、页表、缺页与内存排查"}]}],["$","li","backend-agent-s05-05-dns",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-05-dns/","children":"网络与操作系统05｜域名怎样找到服务器：DNS递归查询、缓存与切换延迟"}]}],["$","li","backend-agent-s05-06-tls",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-06-tls/","children":"网络与操作系统06｜HTTPS怎样确认对方身份：TLS1.3握手、证书链与主机名"}]}],"$L12","$L13","$L14","$L15"]}]]}]]}],"$L16","$undefined","$L17","$L18","$L19"]}],"$L1a"]}]]}],["$L1b"],"$L1c"]}],"p":"$@1d","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s05-10-linux-diagnostics","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1f",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L21",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$22",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"网络与操作系统10｜容器里服务变慢怎样定位：资源限制、连接状态与Linux证据 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"把容器隔离、资源配额和宿主机负载分开，给出CPU、内存、I/O与连接问题的只读排查路径及示例判读。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s05-10-linux-diagnostics/"}]]}]}],null]}],null]}],"p":"$@23","v":null,"s":"$7"}},"a":"$@24","u":"$@25","b":"t75SI7oTDmNtBl3uMkJyg"}
+26:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+28:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+29:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+12:["$","li","backend-agent-s05-07-congestion",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-07-congestion/","children":"网络与操作系统07｜TCP怎样决定还能发送多少数据：流量控制、拥塞窗口与重传"}]}]
+13:["$","li","backend-agent-s05-08-http-quic",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-08-http-quic/","children":"网络与操作系统08｜HTTP/1.1、HTTP/2和HTTP/3：多路复用解决了哪一层等待"}]}]
+14:["$","li","backend-agent-s05-09-ipc",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-09-ipc/","children":"网络与操作系统09｜进程之间怎样交换数据：管道、消息、共享内存与同步"}]}]
+15:["$","li","backend-agent-s05-10-linux-diagnostics",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s05-10-linux-diagnostics/","aria-current":"page","children":"网络与操作系统10｜容器里服务变慢怎样定位：资源限制、连接状态与Linux证据"}]}]
+27:T24d2,<h2 id="section-容器中的进程仍然需要宿主内核调度">容器中的进程仍然需要宿主内核调度</h2>
+<p>在常见Linux容器中，应用仍是由Linux内核调度的进程。<strong>namespace</strong>改变进程看到的资源视图，例如PID、网络和挂载空间；<strong>cgroup</strong>组织进程并约束、统计资源使用。文件系统、权限与其他安全机制再共同构成运行边界。<a href="https://man7.org/linux/man-pages/man7/namespaces.7.html" rel="noopener noreferrer">namespace</a>、<a href="https://docs.kernel.org/admin-guide/cgroup-v2.html" rel="noopener noreferrer">cgroup v2</a></p>
+<p>这能解释一种现象：容器里进程编号是1，宿主上却有另一个PID；容器里看见的网卡和根目录也可能不同。排查时首先确认自己站在哪个namespace、目标进程属于哪个cgroup，否则可能把宿主总内存与容器限额混在一起。</p>
+<p>容器与虚拟机的隔离结构不同。在Windows上运行Linux容器还可能经过虚拟机或WSL环境，不能把Linux宿主的描述直接当作当前Windows机器已经具备的运行条件。</p>
+<h2 id="section-cpu空闲与容器被限流为什么可以同时发生">CPU空闲与容器被限流为什么可以同时发生</h2>
+<p>cgroup v2的<code>cpu.max</code>用“配额 周期”表达带宽限制。教学配置<code>50000 100000</code>表示每100000微秒周期最多使用50000微秒CPU时间，约相当于0.5个CPU的配额。它并不指定固定绑到哪个核，也不要求每个瞬间只能使用半个核。</p>
+<p>如果进程短时间使用多个核，可能较早消耗本周期配额，随后等待下一周期。此时宿主总体CPU仍可能空闲，而容器请求延迟上升。应核对<code>cpu.stat</code>中的限流计数和时间增量，再结合应用并发与响应时间，避免看到“CPU不高”就排除CPU限制。<a href="https://docs.kernel.org/admin-guide/cgroup-v2.html" rel="noopener noreferrer">CPU带宽与统计</a></p>
+<p><strong>百分比必须说明分母。</strong> 100%可能相对于一个核、全部核或容器额度；不同监控工具的百分比不能直接相减。</p>
+<h2 id="section-内存与io要同时看容量等待和变化趋势">内存与I/O要同时看容量、等待和变化趋势</h2>
+<p>容器进程被终止，不一定意味着宿主物理内存已经耗尽。检查<code>memory.max</code>、<code>memory.current</code>及<code>memory.events</code>的增量，可以识别本组回收压力和OOM相关事件；再结合内核日志与退出信息确认，不只根据一个退出码下结论。</p>
+<p>RSS升高也不等于内存泄漏。缓存、匿名页、共享映射及运行时保留空间都可能影响指标。需要比较请求结束后的趋势、对象保留和资源上限。JVM堆与堆外的具体区分另见语言运行时篇。</p>
+<p><strong>PSI（Pressure Stall Information，资源压力停顿信息）</strong>记录任务因为CPU、内存或I/O竞争而等待的时间。<code>/proc/pressure</code>中的指标能补充“利用率高不高”，但仍要结合窗口与对象范围；系统级与cgroup级记录不要混为同一观察。<a href="https://docs.kernel.org/accounting/psi.html" rel="noopener noreferrer">Linux PSI</a></p>
+<h2 id="section-一组只读命令怎样对应证据">一组只读命令怎样对应证据</h2>
+<p>以下是Linux目标机上的命令示例，不是要求在PowerShell中直接执行。把目标PID换成已确认的进程编号；本篇不使用停止进程、修改内核参数或施加负载的命令。</p>
+<div class="code-block"><div class="code-toolbar"><span>bash</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-bash"><span class="hljs-built_in">uname</span> -r
+<span class="hljs-built_in">cat</span> /proc/1234/cgroup
+<span class="hljs-built_in">cat</span> /proc/1234/status
+<span class="hljs-built_in">cat</span> /proc/pressure/cpu
+<span class="hljs-built_in">cat</span> /proc/pressure/memory
+<span class="hljs-built_in">cat</span> /proc/pressure/io
+ss -s
+ss -tan state close-wait
+ss -tan state time-wait
+</code></pre></div>
+<p><code>/proc/1234/cgroup</code>用于定位进程所属组；实际cgroup文件路径还要结合挂载信息和当前命名空间解析，不能无条件把返回字符串拼到某个固定目录。读取<code>cpu.stat</code>等计数时保存两个时间点，用差值判断当前变化，累计值大不代表此刻仍有问题。</p>
+<p><code>ss</code>可以查看Socket状态；进一步关联进程通常需要适当权限。命令只看到状态分布，是否为同一应用、同一对端和同一故障窗口仍需核对。<a href="https://man7.org/linux/man-pages/man8/ss.8.html" rel="noopener noreferrer">ss选项与状态筛选</a></p>
+<h2 id="section-close_wait与time_wait为什么不能使用同一个解释">CLOSE_WAIT与TIME_WAIT为什么不能使用同一个解释</h2>
+<p><strong>CLOSE_WAIT</strong>表示本端已收到对方的FIN，但本地关闭流程尚未完成。少量短暂出现可能正常；持续增长则要看应用是否读取到EOF后忘记关闭、异常路径遗漏释放，或本地业务仍在等待结束。</p>
+<p><strong>TIME_WAIT</strong>与主动关闭后的协议状态有关，承担延迟报文和最终确认等处理。高频短连接可能产生大量TIME_WAIT；只有结合端口资源、建连失败和延迟才能判断它是否形成瓶颈。连接复用往往比先调小等待时间更能解释根因。<a href="https://www.rfc-editor.org/rfc/rfc9293.html" rel="noopener noreferrer">TCP关闭状态</a></p>
+<p>教学场景中，每秒新增100个CLOSE_WAIT，应用的文件描述符同步增长，而请求量稳定。下一步应关联持有Socket的进程、定位读取和关闭路径，再构造对端主动关闭或异常中断的回归样例。直接增大描述符上限最多延缓故障，不能证明泄漏已修复。</p>
+<h2 id="section-从请求链定位等待所在的位置">从请求链定位等待所在的位置</h2>
+<p>先把请求耗时拆为排队、执行、下游调用和发送，观察哪段从基线变化。假设总耗时从100ms增到700ms，其中数据库执行仍为50ms，但连接池等待从5ms增到600ms，优先核对池容量、未释放连接和下游并发；仅凭总时延就增加Web线程可能使排队更严重。</p>
+<p>反过来，若应用执行时间稳定，发送阶段增长，并伴随接收窗口缩小或重传变化，就需要继续核对客户端消费与网络。<strong>每个假设都应对应可观察的指标和一个能区分它与其他原因的检查。</strong></p>
+<h2 id="section-面试问答容器与宿主进程">面试问答：容器与宿主进程</h2>
+<p><span id="q-FQ-doxcnM37jZtzT0N41x1fHEb11ld" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnM37jZtzT0N41x1fHEb11ld"></a></p>
+<blockquote>
+<p>Docker 容器内运行程序，对比直接在宿主机运行进程，二者有什么区别？</p>
+</blockquote>
+<p><strong>回答：</strong> 在Linux容器场景下，两者都由宿主内核执行和调度，但容器通常结合namespace提供资源视图隔离，结合cgroup提供资源限制和统计，再配合文件系统、能力与安全策略。容器内看到的PID、网络和路径可能不同，资源上限也可能小于宿主可用量。</p>
+<p>例如宿主CPU空闲而容器达到0.5核配额时，进程仍可能被限流；宿主还有内存而容器达到memory.max时，也可能出现本组OOM。因此排查要同时确认进程、命名空间、cgroup与时间窗口。容器不是自动消除所有共享内核风险的边界，也不能把虚拟机的独立内核模型直接套过来。</p>
+<p><strong>延伸追问（自拟）：迁入容器后延迟上升，先调哪一个参数？</strong> 先比较CPU配额、内存事件、连接与I/O等待，定位新增等待。没有证据时，不应同时修改多个参数，否则难以判断有效原因。</p>
+<p><span id="q-FQ-doxcnS2fml2u9XDAgCR1NxcGoDb" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnS2fml2u9XDAgCR1NxcGoDb"></a></p>
+<blockquote>
+<p>如果服务器中含有大量一直处于close_wait的tcp连接，是为什么？</p>
+</blockquote>
+<p><strong>回答：</strong> 对端已经请求关闭，本地应用仍未完成关闭。需要关联持有连接的进程，检查EOF、异常和取消路径是否释放Socket，以及业务是否卡住；持续增长且伴随描述符增长时尤其需要排查资源泄漏。不能把CLOSE_WAIT解释成TIME_WAIT，也不能仅通过调小TCP等待参数修复应用未关闭连接。</p>
+<p>原问见<a href="/media/backend-agent-series/questions.json">逐题映射</a>。本地WSL启动失败后，按用户授权转到专用ECS实验目录。在Ubuntu22.04.5、内核5.15.0-131-generic上，用一个仅监听回环地址的短连接，实际观察到对端发送FIN、本端读取EOF后仍处于CLOSE_WAIT，关闭本端Socket后结束实验。管道、共享映射及epoll相关检查也完成，共21项通过，详见<a href="/media/backend-agent-series/linux-results.json">实验结果</a>。这是小数据机制验证，没有制造CPU或内存压力；本篇其他数值仍是教学示例，容器配额和完整服务故障链没有因此变成实测结论。</p>16:["$","$L26",null,{"html":"$27"}]
+17:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/backend-agent-s05-09-ipc/","children":[["$","span",null,{"children":"上一篇"}],"网络与操作系统09｜进程之间怎样交换数据：管道、消息、共享内存与同步"]}],"$undefined"]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","site-images-performance",{"children":[["$","$Lf",null,{"href":"/blog/site-images-performance/","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}],["$","span",null,{"children":"项目建设"}]]}],["$","li","hexo-tocbot-anchor-conflict",{"children":[["$","$Lf",null,{"href":"/blog/hexo-tocbot-anchor-conflict/","children":"bug解决——hexo插件冲突导致tocbot生成目录跳转异常"}],["$","span",null,{"children":"Bug解决"}]]}],["$","li","cloud-docker-nginx",{"children":[["$","$Lf",null,{"href":"/blog/cloud-docker-nginx/","children":"部署基础：云服务器、Docker、Nginx与HTTP缓存"}],["$","span",null,{"children":"部署与运维"}]]}]]}]]}]]}]
+18:["$","$L28",null,{"contentId":"backend-agent-s05-10-linux-diagnostics"}]
+19:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+1a:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5","$a:0:1:d:r:props:children:0:props:children:1:props:headings:6"]}]
+1b:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1c:["$","$L29",null,{"children":["$","$22",null,{"name":"Next.MetadataOutlet","children":"$@2a"}]}]
+25:true
+7:300
+2a:null
+7:C
+24:0
+9:"$undefined"
+5:"$undefined"
+23:"$undefined"
+1d:"$undefined"

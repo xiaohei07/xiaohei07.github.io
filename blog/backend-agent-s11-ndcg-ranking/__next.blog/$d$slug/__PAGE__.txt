@@ -1,0 +1,162 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+12:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+1b:"ViewportBoundary"
+1c:I[887,[],"$1b"]
+1d:"MetadataBoundary"
+1e:I[887,[],"$1d"]
+1f:"$Sreact.suspense"
+6:X
+6:C
+7:X
+13:T31d4,<h2 id="section-排序评价同时考虑相关程度与位置">排序评价同时考虑相关程度与位置</h2>
+<p>推荐或搜索已经找到候选后，还需要比较它们的顺序。<strong>DCG（折损累计增益）</strong>对靠后位置的相关性增益打折，<strong>NDCG</strong>再用理想排序的DCG归一化。</p>
+<p>本文采用非负相关性等级rel和<strong>线性增益<code>g(rel)=rel</code></strong>，位置i从1开始：</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>D</mi><mi>C</mi><mi>G</mi><mi mathvariant="normal">@</mi><mi>K</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>min</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>K</mi><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></munderover><mfrac><mrow><mi>g</mi><mo stretchy="false">(</mo><mi>r</mi><mi>e</mi><msub><mi>l</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mrow><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy="false">(</mo><mi>i</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac><mo separator="true">,</mo><mspace width="2em"></mspace><mi>N</mi><mi>D</mi><mi>C</mi><mi>G</mi><mi mathvariant="normal">@</mi><mi>K</mi><mo>=</mo><mfrac><mrow><mi>D</mi><mi>C</mi><mi>G</mi><mi mathvariant="normal">@</mi><mi>K</mi></mrow><mrow><mi>I</mi><mi>D</mi><mi>C</mi><mi>G</mi><mi mathvariant="normal">@</mi><mi>K</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">DCG@K=\sum_{i=1}^{\min(K,n)}
+\frac{g(rel_i)}{\log_2(i+1)},\qquad
+NDCG@K=\frac{DCG@K}{IDCG@K}</annotation></semantics></math></span>
+<p>IDCG是在同一评价候选集合上按相关性从高到低排列得到的理想值。若IDCG=0，本文约定返回0。另一种常见增益为<code>2^rel−1</code>，它更强调高等级差异，<strong>两种口径算出的数不能直接混用</strong>。<a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ndcg_score.html" rel="noopener noreferrer">scikit-learn的线性增益口径</a></p>
+<h2 id="section-三件商品怎样算出不同分数">三件商品怎样算出不同分数</h2>
+<p>假设同一个query下，A、B、C的相关性分别为3、2、0，计算NDCG@3：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>顺序</th><th>DCG计算</th><th align="right">DCG</th><th align="right">NDCG</th></tr></thead><tbody><tr><td>A、B、C</td><td><code>3+2/log₂3+0/2</code></td><td align="right">约4.2619</td><td align="right">1</td></tr><tr><td>B、A、C</td><td><code>2+3/log₂3+0/2</code></td><td align="right">约3.8928</td><td align="right">约0.9134</td></tr><tr><td>C、B、A</td><td><code>0+2/log₂3+3/2</code></td><td align="right">约2.7619</td><td align="right">约0.6480</td></tr></tbody></table>
+<p>把无关的C放在第1位，不仅浪费最显眼的位置，还把A推到更大的折扣下。若只看这3件商品是否都在候选中，无法区分这三种顺序。</p>
+<p>K也会改变评价范围。NDCG@1只看首位，不能说明第2到第10位是否合理。一个query的NDCG再高，也不能替代对不同query分别计算后的整体分析。</p>
+<h2 id="section-可直接复算的python实现">可直接复算的Python实现</h2>
+<p>输入是<strong>一条query的全部评价候选</strong>对应的标签和预测分数，两个列表长度一致。下面约定同分时保持输入顺序，便于复现；它不是所有库默认的并列平均语义。K超过候选数就按实际数量截断，空输入返回0，负标签或非有限数值拒绝处理。</p>
+<div class="code-block"><div class="code-toolbar"><span>python</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-python"><span class="hljs-keyword">import</span> math
+
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">ndcg_at_k</span>(<span class="hljs-params">labels, scores, k=<span class="hljs-number">10</span></span>):
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(labels) != <span class="hljs-built_in">len</span>(scores):
+        <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">"labels and scores must have equal length"</span>)
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(k, <span class="hljs-built_in">bool</span>) <span class="hljs-keyword">or</span> <span class="hljs-keyword">not</span> <span class="hljs-built_in">isinstance</span>(k, <span class="hljs-built_in">int</span>) <span class="hljs-keyword">or</span> k &#x3C;= <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">"k must be a positive integer"</span>)
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">any</span>(<span class="hljs-keyword">not</span> math.isfinite(x) <span class="hljs-keyword">or</span> x &#x3C; <span class="hljs-number">0</span> <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> labels):
+        <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">"labels must be finite and nonnegative"</span>)
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">any</span>(<span class="hljs-keyword">not</span> math.isfinite(x) <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> scores):
+        <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">"scores must be finite"</span>)
+
+    <span class="hljs-comment"># Python排序稳定；同分时按原输入次序。</span>
+    order = <span class="hljs-built_in">sorted</span>(<span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(scores)), key=<span class="hljs-keyword">lambda</span> i: -scores[i])
+    ranked = [labels[i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> order[:k]]
+    ideal = <span class="hljs-built_in">sorted</span>(labels, reverse=<span class="hljs-literal">True</span>)[:k]
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">dcg</span>(<span class="hljs-params">values</span>):
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">sum</span>(rel / math.log2(pos + <span class="hljs-number">2</span>)
+                   <span class="hljs-keyword">for</span> pos, rel <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(values))
+
+    best = dcg(ideal)
+    <span class="hljs-keyword">return</span> dcg(ranked) / best <span class="hljs-keyword">if</span> best > <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> <span class="hljs-number">0.0</span>
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    labels = [<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>]  <span class="hljs-comment"># 候选始终按A、B、C存储</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">round</span>(ndcg_at_k(labels, [<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>], <span class="hljs-number">3</span>), <span class="hljs-number">4</span>))
+    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">round</span>(ndcg_at_k(labels, [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>], <span class="hljs-number">3</span>), <span class="hljs-number">4</span>))
+    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">round</span>(ndcg_at_k(labels, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], <span class="hljs-number">3</span>), <span class="hljs-number">4</span>))
+</code></pre></div>
+<p>预期输出依次为<code>1.0、0.9134、0.648</code>。函数只计算指标，没有训练排序模型。对多个query应先分组计算，再按事先确定的权重汇总；不能把所有商品拼成一张总榜。</p>
+<p>完整排序使用<code>O(n log n)</code>时间与<code>O(n)</code>辅助存储。实际候选规模较大、只需TopK时可以优化选择过程，但必须保留理想排序口径和同分规则。</p>
+<h2 id="section-从query与商品特征建立一个可检查的打分基线">从query与商品特征建立一个可检查的打分基线</h2>
+<p>最小输入包括query、商品ID、商品特征和训练标签。特征可包含关键词匹配、语义相似度、类目或属性是否满足，以及请求时可用的商品质量信号。库存、地区等硬资格应先明确处理，不能靠一个高分把违规商品带回结果。</p>
+<p>假设只展示手工线性基线，使用已经归一化到0到1的<code>(文本匹配, 属性匹配, 质量)</code>，权重为<code>(0.6,0.3,0.1)</code>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>商品</th><th>特征</th><th align="right">分数</th></tr></thead><tbody><tr><td>A</td><td>(1,1,0.5)</td><td align="right">0.95</td></tr><tr><td>B</td><td>(0.8,1,0.9)</td><td align="right">0.87</td></tr><tr><td>C</td><td>(0.1,0,1)</td><td align="right">0.16</td></tr></tbody></table>
+<p>这是说明特征到分数的教学计算，<strong>没有通过真实数据学习，也不能据此宣称NDCG提升</strong>。实际可先建立线性或树模型基线，采用点式、成对或列表式训练目标，再在独立验证集选择配置。模型输出的排序分数也未必是已校准的点击概率。</p>
+<h2 id="section-提高ndcg时要排除哪些假改善">提高NDCG时要排除哪些假改善</h2>
+<p>评价先固定query分组、标签定义、候选范围、K和增益函数。只把已召回的候选拿来算IDCG，可能掩盖相关商品没有被召回的问题，因此召回覆盖要另外报告，必要时使用更完整的标注池评估端到端效果。</p>
+<p>训练数据应按业务时点切分，避免把后来的销量、购买或测试标签带进特征。改了候选集或标注口径后，不能只比较新旧两个平均数。还应检查长尾query、冷启动商品、同义表达和属性约束，而不仅是热门样本。</p>
+<p>NDCG关注已有标签下的排序，不直接表示延迟、库存可用、长期满意度或公平性。离线分数上升后，仍需受控线上实验和相应保护指标。</p>
+<h2 id="section-面试问答搭建电商搜索排序链路">面试问答：搭建电商搜索排序链路</h2>
+<p><span id="q-FQ-doxcnx0hixLRI8cSk3ZFRsk7fJh" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnx0hixLRI8cSk3ZFRsk7fJh"></a></p>
+<blockquote>
+<p>AI Coding：电商搜索排序题，给你 query 和商品特征，输出排序分数，提升 NDCG@10，你会怎么搭链路。</p>
+</blockquote>
+<p><strong>回答：</strong> 先核对输入字段、query分组、相关性标签和NDCG@10的增益及并列规则。对候选执行库存、地区等资格检查，构造query与商品的文本匹配、语义相似度、类目属性交互及请求时可用的质量特征，再建立可复现的简单打分基线。</p>
+<p>有标注数据时，按时间和必要的实体边界切分训练、验证与测试集，避免同query样本被随意拆散后形成泄漏。可从线性或树排序模型开始，根据数据采用成对或列表目标；验证集调参，冻结测试集做最终比较。实现中统一缺失值和特征版本，输出商品ID与排序分数，并保留稳定的同分处理。</p>
+<p>评价按query计算NDCG@10，再汇总并检查细分任务，同时单独报告召回覆盖、延迟和资格错误。上面的Python函数可作为线性增益、稳定同分规则下的指标基线，和目标评测器口径一致后才能使用。不能凭手工权重和单个算例声称提升，应展示固定数据上的基线、改动和独立结果。</p>
+<p>若使用编码工具辅助实现，应先固定指标边界测试，再检查分组、数据泄漏和接口契约。上线前验证训练与服务特征一致性，离线改善后用受控实验确认业务收益。</p>
+<p><strong>延伸追问（自拟）：AUC提高，NDCG@10为何下降？</strong> 两者关心的排序范围和标签使用方式不同，整体正负区分改善可能同时伴随顶部次序变差。还要检查分组口径与候选变化，不能用一个指标推定另一个必然改善。</p>
+<p>原问ID：<code>FQ-doxcnx0hixLRI8cSk3ZFRsk7fJh</code>。出处：<a href="https://www.nowcoder.com/discuss/932410744543379456" rel="noopener noreferrer">原始面经</a>。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#ai","children":["人工智能",["$","span",null,{"children":25}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"推荐系统02｜排序结果怎样比较：NDCG算例与搜索打分基线"}],["$","p",null,{"className":"article-deck","children":"用三件商品逐项计算DCG与NDCG，给出带明确边界的Python实现，再把query和商品特征接到训练、评价及上线链路"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,822"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",6," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","推荐系统",{"href":"/blog/#tag=%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F","children":"推荐系统"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-排序评价同时考虑相关程度与位置","text":"排序评价同时考虑相关程度与位置","level":2},{"id":"section-三件商品怎样算出不同分数","text":"三件商品怎样算出不同分数","level":2},{"id":"section-可直接复算的python实现","text":"可直接复算的Python实现","level":2},{"id":"section-从query与商品特征建立一个可检查的打分基线","text":"从query与商品特征建立一个可检查的打分基线","level":2},{"id":"section-提高ndcg时要排除哪些假改善","text":"提高NDCG时要排除哪些假改善","level":2},{"id":"section-面试问答搭建电商搜索排序链路","text":"面试问答：搭建电商搜索排序链路","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/recommendation-ranking/","children":"推荐与排序"}],["$","span",null,{"children":[2," / ",6," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s11-recommendation-pipeline",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-recommendation-pipeline/","children":"推荐系统01｜推荐结果怎样来到页面：召回、排序、特征与反馈"}]}],["$","li","backend-agent-s11-ndcg-ranking",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-ndcg-ranking/","aria-current":"page","children":"推荐系统02｜排序结果怎样比较：NDCG算例与搜索打分基线"}]}],["$","li","backend-agent-s11-03-two-tower-negatives",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-03-two-tower-negatives/","children":"推荐系统03｜双塔召回怎样训练：从向量打分到负采样与采样校正"}]}],["$","li","backend-agent-s11-04-din-deepfm",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-04-din-deepfm/","children":"推荐系统04｜DIN与DeepFM怎样预测点击：候选相关兴趣和特征交叉"}]}],["$","li","backend-agent-s11-05-multitask-ple",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-05-multitask-ple/","children":"推荐系统05｜推荐多任务学习：从共享底层到MMoE、CGC与PLE"}]}],["$","li","backend-agent-s11-06-semantic-id-generative",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s11-06-semantic-id-generative/","children":"推荐系统06｜语义ID与生成式推荐：TIGER怎样生成物品，HSTU怎样建模行为"}]}]]}]]}]]}],["$","$L12",null,{"html":"$13"}],"$undefined","$L14","$L15","$L16"]}],"$L17"]}]]}],["$L18"],"$L19"]}],"p":"$@1a","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s11-ndcg-ranking","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1c",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1e",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"推荐系统02｜排序结果怎样比较：NDCG算例与搜索打分基线 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"用三件商品逐项计算DCG与NDCG，给出带明确边界的Python实现，再把query和商品特征接到训练、评价及上线链路。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s11-ndcg-ranking/"}]]}]}],null]}],null]}],"p":"$@20","v":null,"s":"$7"}},"a":"$@21","u":"$@22","b":"t75SI7oTDmNtBl3uMkJyg"}
+23:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+24:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+14:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","$Lf",null,{"href":"/blog/backend-agent-s11-recommendation-pipeline/","children":[["$","span",null,{"children":"上一篇"}],"推荐系统01｜推荐结果怎样来到页面：召回、排序、特征与反馈"]}],["$","$Lf",null,{"href":"/blog/backend-agent-s11-03-two-tower-negatives/","children":[["$","span",null,{"children":"下一篇"}],"推荐系统03｜双塔召回怎样训练：从向量打分到负采样与采样校正"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s11-03-two-tower-negatives",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s11-03-two-tower-negatives/","children":"推荐系统03｜双塔召回怎样训练：从向量打分到负采样与采样校正"}],["$","span",null,{"children":"人工智能"}]]}],["$","li","backend-agent-s11-04-din-deepfm",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s11-04-din-deepfm/","children":"推荐系统04｜DIN与DeepFM怎样预测点击：候选相关兴趣和特征交叉"}],["$","span",null,{"children":"人工智能"}]]}],["$","li","backend-agent-s11-05-multitask-ple",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s11-05-multitask-ple/","children":"推荐系统05｜推荐多任务学习：从共享底层到MMoE、CGC与PLE"}],["$","span",null,{"children":"人工智能"}]]}]]}]]}]]}]
+15:["$","$L23",null,{"contentId":"backend-agent-s11-ndcg-ranking"}]
+16:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+17:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5"]}]
+18:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+19:["$","$L24",null,{"children":["$","$1f",null,{"name":"Next.MetadataOutlet","children":"$@25"}]}]
+22:true
+7:300
+25:null
+7:C
+21:0
+9:"$undefined"
+5:"$undefined"
+20:"$undefined"
+1a:"$undefined"

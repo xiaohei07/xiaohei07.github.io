@@ -1,0 +1,147 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+b:"static/chunks/5587-bf231f55b3fd3ee7.js"
+c:"static/chunks/8612-da6413c49129460e.js"
+d:"static/chunks/1133-0d344bd2ae49df3d.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
+f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
+10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
+11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
+12:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
+1b:"ViewportBoundary"
+1c:I[887,[],"$1b"]
+1d:"MetadataBoundary"
+1e:I[887,[],"$1d"]
+1f:"$Sreact.suspense"
+6:X
+6:C
+7:X
+13:T32a6,<h2 id="section-从一次回答到一个需要执行的任务">从一次回答到一个需要执行的任务</h2>
+<p>假设要完成这样的请求：“查一下订单为什么还没发货，如果符合条件，就创建一张售后工单。”这需要订单系统中的当前信息，也会改变工单系统里的数据。单独生成一段解释，还不能证明订单查过了或者工单已经创建。</p>
+<p>为了讲清Agent怎么工作，可以先把这个任务分开看。<strong>模型负责根据当前可见的信息提出下一步；运行程序负责检查这一步能不能做，并真正调用外部系统。</strong> 外部系统返回结果以后，程序把结果送回下一次模型请求，模型才能依据新信息继续判断。</p>
+<p>这个不断根据结果推进任务的过程，通常称为<strong>Agent Loop（Agent执行循环）</strong>。其中的“自主”始终受工具、权限和预算限制。系统让模型选择下一步，不代表模型可以自行决定自己拥有的权限。</p>
+<p>这里还有几个经常放在一起的名称。<strong>工具</strong>是系统向模型暴露的操作接口，例如<code>get_order(order_id)</code>；接口背后可能是本地函数，也可能是网络服务。<strong>状态</strong>记录任务进行到哪里、有哪些已确认结果。<strong>Harness</strong>则是模型外围负责上下文组装、工具执行、状态管理和约束检查等工作的运行系统。它们承担不同职责，不能互相替代。</p>
+<h2 id="section-workflow与agent分别怎样决定下一步">Workflow与Agent分别怎样决定下一步</h2>
+<p><strong>Workflow（工作流）</strong>通常由程序预先规定主要执行路径，例如先验参，再查订单，再根据固定规则选择是否允许提交。Agent则把部分路径选择交给模型，让它结合运行时的观察决定下一步。这个区分关注的是控制流由谁决定；实际系统可以把两者结合起来。Anthropic在2024年的设计文章中采用了类似区分，适合用来理解架构，但其中产品示例不能当作当前所有框架的统一实现。<a href="https://www.anthropic.com/research/building-effective-agents" rel="noopener noreferrer">架构区分</a></p>
+<p>比如查询失败后，要判断是缺少订单号、订单属于另一个账户，还是服务暂时不可用，可能需要动态获取信息；但“当前用户是否有权操作这个订单”仍适合由程序中的确定规则检查。<strong>权限检查的结果不能因为模型换了一种说法就改变。</strong></p>
+<p>如果任务只有固定字段校验和一次确定查询，普通函数或工作流就可能足够。引入动态决策会增加模型调用成本，也增加对终止条件、状态和错误处理的要求。是否使用Agent，应当看任务是否需要依据中间结果调整路径。</p>
+<h2 id="section-一次循环中的数据怎样变化">一次循环中的数据怎样变化</h2>
+<p>下面的例子是假设场景，不对应已经上线的项目。假设查询接口返回订单未发货，售后规则允许创建工单，创建接口支持稳定的业务操作ID。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>步骤</th><th>程序持有的数据</th><th>发生的动作</th><th>下一步依据</th></tr></thead><tbody><tr><td>接收任务</td><td>用户目标、当前身份、订单号</td><td>记录允许操作和完成条件</td><td>是否缺少必要信息</td></tr><tr><td>构建上下文</td><td>目标、工具定义、已知订单号</td><td>发出模型请求</td><td>模型返回查单建议</td></tr><tr><td>校验建议</td><td>工具名称、参数、当前身份</td><td>验证参数和订单访问权限</td><td>校验通过才允许调用</td></tr><tr><td>查询订单</td><td>查询请求与调用ID</td><td>工具返回订单状态</td><td>保存结果及查询时间</td></tr><tr><td>再次决策</td><td>订单状态、售后规则、剩余预算</td><td>模型提出创建工单建议</td><td>程序再次校验操作资格</td></tr><tr><td>创建工单</td><td>固定操作ID、创建参数</td><td>工具返回工单编号</td><td>保存外部执行证据</td></tr><tr><td>验收</td><td>工单编号、用户目标</td><td>检查目标是否满足</td><td>形成最终答复</td></tr></tbody></table>
+<p><strong>每次模型调用看到的是程序为这一轮准备的上下文。</strong> 订单状态不会因为上一轮工具“执行过”就自动进入下一轮；程序必须传入结果，或者提供可以再次读取结果的受控入口。上下文具体怎样组织，后面在<a href="/blog/backend-agent-s02-context-memory/">上下文与记忆</a>展开。</p>
+<p>工具返回的数据也需要识别含义。例如<code>{"accepted": true}</code>可能只表示任务已入队；只有接口契约明确表示工单已创建，才可以据此写“创建成功”。HTTP返回成功状态和业务操作完成之间，也需要这层判断。</p>
+<h2 id="section-状态应该保存哪些信息">状态应该保存哪些信息</h2>
+<p>可以先把状态理解成一份任务记录，但它需要区分<strong>计划、事实、动作和证据</strong>。例如“准备创建工单”是计划，“查到订单未发货”是观察，“发送创建请求”是动作，“查到工单编号T17”才是完成证据的一部分。</p>
+<p>下面只是教学用的数据结构，不是某框架的固定Schema：</p>
+<div class="code-block"><div class="code-toolbar"><span>json</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"run_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"run-17"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"goal"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"查询订单并按规则创建工单"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"status"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"running"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"facts"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span><span class="hljs-attr">"order_status"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"not_shipped"</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"next_action"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"create_ticket"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"operation_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"op-17"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"ticket_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">null</span></span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"remaining_tool_calls"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span>
+<span class="hljs-punctuation">}</span>
+</code></pre></div>
+<p>这些字段不能仅由模型随意改写。身份与权限来自可信服务，剩余预算由运行程序计算，外部结果来自工具或后续查询。模型可以提出修改建议，程序再决定是否接受。</p>
+<p>如果工单创建请求超时，状态还需要表达<strong>结果未知</strong>：此时既不能填入虚构的工单编号，也不能直接当作“没有创建”。这种状态怎样恢复，见<a href="/blog/backend-agent-s01-recovery/">检查点与外部副作用</a>。</p>
+<h2 id="section-规划反馈和终止条件怎样配合">规划、反馈和终止条件怎样配合</h2>
+<p>先列计划再执行，适合有明确子任务和依赖的工作；执行一步、观察一步，再决定下一步，适合信息逐渐暴露的场景。计划可以帮助检查遗漏，但<strong>计划中的步骤不能代替执行结果</strong>。</p>
+<p>比如最初计划是“查订单→创建工单→通知用户”，查单后发现订单已经取消，创建步骤就应重新判断。如果仍照最初计划往下走，说明程序没有把新观察用于控制流。</p>
+<p>执行循环还要有程序控制的停止方式。成功需要对应完成证据；缺少订单号可以等待输入；结果未知需要查询或对账；达到调用上限则结束在预算耗尽状态。不能把这些情况统一写成“完成”。</p>
+<p>检测死循环时，只限制总轮数还不够。可以同时记录动作与参数的摘要、连续错误次数，以及是否获得了新的信息。连续重复同一请求、得到同一错误且状态没有推进时，就需要改变策略或者停止。如果是在等待后台任务，则应有轮询间隔和截止时间，不能把合理等待与无意义重试混为一谈。</p>
+<h2 id="section-面试问答agent的核心模块与loop设计">面试问答：Agent的核心模块与Loop设计</h2>
+<p><span id="q-FQ-doxcnWAn77kY5xsRYOZjUdgL9Ic" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnWAn77kY5xsRYOZjUdgL9Ic"></a></p>
+<blockquote>
+<p>你如何理解 Agent 系统？可以拆解一下 Agent 的核心模块吗？</p>
+</blockquote>
+<p><strong>回答：</strong> Agent系统通过模型决策、外部动作和结果反馈持续推进一个任务。核心职责包括任务与权限约束、上下文构建、模型决策、工具执行、状态保存以及结果验收；具体代码可以合并模块，但这些职责需要有人承担。</p>
+<p>任务入口确定目标、身份和资源边界。上下文构建器把相关状态与证据传给模型；模型生成工具调用建议或最终答复。执行器检查名称、参数和权限，实际调用工具，再把结果关联到调用ID并写入状态。调度器依据状态决定继续、等待、失败或结束。验收环节检查产物是否满足用户目标，防止把“模型说完成了”当作唯一证据。</p>
+<p>以创建工单为例，模型提出创建建议后，执行器仍需确认用户有操作权限。接口只返回受理成功时，任务还要等待或查询实际创建结果。服务重启后，需要持久状态恢复进度；如果动作可能已经在外部完成，还需要幂等或结果查询。只保存聊天记录不能完整覆盖这条链路。</p>
+<p><strong>延伸追问（自拟）：每个系统都要有独立的规划模块吗？</strong> 不需要。简单任务可以由同一次模型调用完成下一步选择，固定流程也可以直接用程序控制。独立规划适合确实需要任务分解与依赖管理的情况；应根据错误类型、可控性和成本验证收益。</p>
+<p>原问ID：<code>FQ-doxcnWAn77kY5xsRYOZjUdgL9Ic</code>。提问记录来自<a href="https://www.nowcoder.com/feed/main/detail/15af3788a038477bba99f2f9d94b2cef" rel="noopener noreferrer">原始面经</a>，只用于证明题目出处。</p>
+<p><span id="q-FQ-doxcnJ2T92nYbwok4vzsUR3crec" class="legacy-anchor" aria-hidden="true"></span><a id="user-content-q-FQ-doxcnJ2T92nYbwok4vzsUR3crec"></a></p>
+<blockquote>
+<p>Workflow 和 Agent 的 Loop 各自怎么设计？</p>
+</blockquote>
+<p><strong>回答：</strong> Workflow按预先设计的节点和条件边推进，Agent Loop则让模型基于当前状态选择部分后续动作。两者都需要状态、错误分支与终止条件，区别在于哪些控制流由代码确定、哪些决策由模型产生。</p>
+<p>Workflow可以把验参、查询、判断和提交定义为节点，并明确每个节点的输入输出。Agent Loop则重复执行“组装上下文→模型建议→校验→执行→观察→更新状态”，但权限、预算和成功判定仍由程序约束。例如售后资格检查可以是固定工作流节点，缺少信息时要查询什么可以交给Agent判断。</p>
+<p>如果同一个工具持续返回权限不足，应终止该路径或请求用户补充授权，不能让模型不断更换参数尝试。外部结果未决时，应转入查询或对账状态，而不是直接再次提交。设计是否可靠，取决于这些状态转换是否明确，而不取决于循环代码是否写成了<code>while</code>。</p>
+<p><strong>延伸追问（自拟）：固定流程里调用了LLM，是否就变成Agent？</strong> 仍应检查控制流。若LLM只做文本分类或信息抽取，后续路径由固定规则决定，用工作流描述通常更准确；名称本身不能证明系统具备自主规划能力。</p>
+<p>原问ID：<code>FQ-doxcnJ2T92nYbwok4vzsUR3crec</code>。出处：<a href="https://www.nowcoder.com/discuss/922659050167226368" rel="noopener noreferrer">原始面经</a>。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":210}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#agent","children":["Agent",["$","span",null,{"children":25}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"Agent基础01｜Agent怎样完成一个任务：模型、工具、状态与执行循环"}],["$","p",null,{"className":"article-deck","children":"从查询订单并创建工单的教学场景，说明模型建议怎样变成实际动作，以及状态、反馈和验收分别由谁负责"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],false,["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"2,696"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",8," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","Agent",{"href":"/blog/#tag=Agent","children":"Agent"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-从一次回答到一个需要执行的任务","text":"从一次回答到一个需要执行的任务","level":2},{"id":"section-workflow与agent分别怎样决定下一步","text":"Workflow与Agent分别怎样决定下一步","level":2},{"id":"section-一次循环中的数据怎样变化","text":"一次循环中的数据怎样变化","level":2},{"id":"section-状态应该保存哪些信息","text":"状态应该保存哪些信息","level":2},{"id":"section-规划反馈和终止条件怎样配合","text":"规划、反馈和终止条件怎样配合","level":2},{"id":"section-面试问答agent的核心模块与loop设计","text":"面试问答：Agent的核心模块与Loop设计","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/blog/series/agent-foundations/","children":"Agent执行与任务恢复"}],["$","span",null,{"children":[1," / ",5," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["本系列目录",["$","span",null,{"children":"按知识顺序阅读"}]]}],["$","ol",null,{"children":[["$","li","backend-agent-s01-loop",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s01-loop/","aria-current":"page","children":"Agent基础01｜Agent怎样完成一个任务：模型、工具、状态与执行循环"}]}],["$","li","backend-agent-s01-recovery",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s01-recovery/","children":"Agent基础02｜Agent中断后怎样继续：检查点、幂等与结果未知"}]}],["$","li","backend-agent-s01-planning",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s01-planning/","children":"Agent基础03｜Agent怎样规划和调整任务：ReAct、计划执行与反馈修订"}]}],["$","li","backend-agent-s01-04-langgraph-replay",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s01-04-langgraph-replay/","children":"Agent基础04｜LangGraph的中断、状态修订与重放：任务恢复后会重新执行什么"}]}],["$","li","backend-agent-s01-05-intent-routing",{"children":["$","$Lf",null,{"href":"/blog/backend-agent-s01-05-intent-routing/","children":"Agent基础05｜意图识别与任务路由：遇到“帮我看看”时，怎样决定下一步"}]}]]}]]}]]}],["$","$L12",null,{"html":"$13"}],"$undefined","$L14","$L15","$L16"]}],"$L17"]}]]}],["$L18"],"$L19"]}],"p":"$@1a","v":null,"s":"$7"}}]]
+8:[["children",{"s":{"n":"slug","t":"d","k":"backend-agent-s01-loop","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1c",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1e",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Agent基础01｜Agent怎样完成一个任务：模型、工具、状态与执行循环 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从查询订单并创建工单的教学场景，说明模型建议怎样变成实际动作，以及状态、反馈和验收分别由谁负责。"}],["$","link","2",{"rel":"canonical","href":"/blog/backend-agent-s01-loop/"}]]}]}],null]}],null]}],"p":"$@20","v":null,"s":"$7"}},"a":"$@21","u":"$@22","b":"t75SI7oTDmNtBl3uMkJyg"}
+23:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
+24:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+14:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","span",null,{}],["$","$Lf",null,{"href":"/blog/backend-agent-s01-recovery/","children":[["$","span",null,{"children":"下一篇"}],"Agent基础02｜Agent中断后怎样继续：检查点、幂等与结果未知"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","backend-agent-s02-context-memory",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s02-context-memory/","children":"上下文与RAG01｜上下文与记忆怎样配合：信息选择、压缩、过期与删除"}],["$","span",null,{"children":"Agent"}]]}],["$","li","backend-agent-s01-recovery",{"children":[["$","$Lf",null,{"href":"/blog/backend-agent-s01-recovery/","children":"Agent基础02｜Agent中断后怎样继续：检查点、幂等与结果未知"}],["$","span",null,{"children":"Agent"}]]}]]}]]}]]}]
+15:["$","$L23",null,{"contentId":"backend-agent-s01-loop"}]
+16:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
+17:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4","$a:0:1:d:r:props:children:0:props:children:1:props:headings:5"]}]
+18:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+19:["$","$L24",null,{"children":["$","$1f",null,{"name":"Next.MetadataOutlet","children":"$@25"}]}]
+22:true
+7:300
+25:null
+7:C
+21:0
+9:"$undefined"
+5:"$undefined"
+20:"$undefined"
+1a:"$undefined"
