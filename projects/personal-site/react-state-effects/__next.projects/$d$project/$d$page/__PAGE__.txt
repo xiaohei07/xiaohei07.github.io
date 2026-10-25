@@ -1,0 +1,222 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+d:"static/chunks/5587-bf231f55b3fd3ee7.js"
+e:"static/chunks/8612-b99ba8072dd9edd6.js"
+f:"static/chunks/182-3013bbb685a41e87.js"
+10:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-aa53fa2ba92f4505.js"
+11:I[3498,["5587","$d","8612","$e","182","$f","4067","$10"],"default"]
+12:I[6279,["5587","$d","8612","$e","182","$f","4067","$10"],"FilterLink"]
+13:I[5128,["5587","$d","8612","$e","182","$f","4067","$10"],"ArticleToc"]
+28:"ViewportBoundary"
+29:I[887,[],"$28"]
+2a:"MetadataBoundary"
+2b:I[887,[],"$2a"]
+2c:"$Sreact.suspense"
+6:X
+6:C
+7:X
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L11",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L11",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L11",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L12",null,{"className":"trail-current","href":"/projects/","children":["网站建设",["$","span",null,{"children":4}]]}],["$","$L11",null,{"className":"trail-parent","href":"/projects/personal-site/series/","children":"个人主页与博客建设"}]]}],["$","h1",null,{"tabIndex":-1,"children":"React入门（二）：状态、Effect与目录和配色交互"}],["$","p",null,{"className":"article-deck","children":"从输入和横幅状态读到目录建树、Portal弹层与栏目色板的复制恢复，理解状态和副作用怎样配合"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-21","children":"2026-10-21"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"3,202"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",10," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","React",{"children":"React"}]]}],false]}],["$","$L13",null,{"headings":[{"id":"section-一usestate保存的是哪一轮状态","text":"一、useState保存的是哪一轮状态","level":2},{"id":"section-二输入框怎样保持值与界面一致","text":"二、输入框怎样保持值与界面一致","level":2},{"id":"section-三effect何时需要何时不需要","text":"三、Effect何时需要，何时不需要","level":2},{"id":"section-四横幅切换为什么要保留上一张图","text":"四、横幅切换为什么要保留上一张图","level":2},{"id":"section-五阅读目录怎样从标题列表变成可操作的树","text":"五、阅读目录怎样从标题列表变成可操作的树","level":2},{"id":"section-51-用栈建立标题的父子关系","text":"5.1 用栈建立标题的父子关系","level":3},{"id":"section-52-当前节与手动折叠各自保存什么","text":"5.2 当前节与手动折叠各自保存什么","level":3},{"id":"section-53-窄屏为什么使用portal和dialog","text":"5.3 窄屏为什么使用Portal和dialog","level":3},{"id":"section-六栏目配色怎样区分作用范围复制和恢复","text":"六、栏目配色怎样区分作用范围、复制和恢复","level":2},{"id":"section-61-先确定保存哪一份状态","text":"6.1 先确定保存哪一份状态","level":3},{"id":"section-62-从复制研究配色到恢复项目原色","text":"6.2 从复制研究配色到恢复项目原色","level":3},{"id":"section-63-刷新首屏为什么也需要相同解析规则","text":"6.3 刷新首屏为什么也需要相同解析规则","level":3},{"id":"section-七useref与state怎样选择","text":"七、useRef与state怎样选择","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L11",null,{"href":"/projects/personal-site/series/","data-reading-start":"true","children":"系列文章与阅读路线"}],["$","$L11",null,{"href":"/projects/personal-site/","data-reading-start":"true","children":"项目总览"}],["$","span",null,{"children":[12," / ",28," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","personal-site-build",{"children":[["$","strong",null,{"children":"个人主页与博客建设"}],["$","ol",null,{"children":[["$","li","site-upgrade-architecture",{"value":1,"children":["$","$L11",null,{"href":"/projects/personal-site/site-upgrade-architecture/","data-reading-start":"true","children":"个人主页建设（一）：升级动机、框架选择与系统分工"}]}],"$L14","$L15","$L16","$L17","$L18","$L19","$L1a"]}]]}],"$L1b","$L1c","$L1d","$L1e","$L1f"]]}]]}],null,"$L20",false,"$L21","$L22","$L23"]}],"$L24"]}]]}],["$L25"],"$L26"]}],"p":"$@27","v":null,"s":"$7"}}]]
+a:[["children",{"s":{"n":"page","t":"d","k":"react-state-effects","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
+8:[["children",{"s":{"n":"project","t":"d","k":"personal-site","s":["mental-health-evaluation"]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"projects","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L29",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L2b",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$2c",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"React入门（二）：状态、Effect与目录和配色交互 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从输入和横幅状态读到目录建树、Portal弹层与栏目色板的复制恢复，理解状态和副作用怎样配合。"}],["$","link","2",{"rel":"canonical","href":"/projects/personal-site/react-state-effects/"}]]}]}],null]}],null]}],"p":"$@2d","v":null,"s":"$7"}},"a":"$@2e","u":"$@2f","b":"6cQJHWqsmY59WndvF4Y-g"}
+30:I[4711,["5587","$d","8612","$e","182","$f","4067","$10"],"ArticleBody"]
+32:I[2708,["5587","$d","8612","$e","182","$f","4067","$10"],"FeedbackForm"]
+33:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+14:["$","li","site-setup-migration",{"value":2,"children":["$","$L11",null,{"href":"/projects/personal-site/site-setup-migration/","data-reading-start":"true","children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}]}]
+15:["$","li","site-content-search-flow",{"value":3,"children":["$","$L11",null,{"href":"/projects/personal-site/site-content-search-flow/","data-reading-start":"true","children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}]}]
+16:["$","li","site-feedback-data-flow",{"value":4,"children":["$","$L11",null,{"href":"/projects/personal-site/site-feedback-data-flow/","data-reading-start":"true","children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}]}]
+17:["$","li","site-auth-review-concurrency",{"value":5,"children":["$","$L11",null,{"href":"/projects/personal-site/site-auth-review-concurrency/","data-reading-start":"true","children":"个人主页建设（五）：作者登录、反馈审核与并发控制"}]}]
+18:["$","li","site-images-performance",{"value":6,"children":["$","$L11",null,{"href":"/projects/personal-site/site-images-performance/","data-reading-start":"true","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}]}]
+19:["$","li","site-deployment-recovery",{"value":7,"children":["$","$L11",null,{"href":"/projects/personal-site/site-deployment-recovery/","data-reading-start":"true","children":"个人主页建设（七）：Nginx部署、版本切换与数据恢复"}]}]
+1a:["$","li","site-interview-design",{"value":8,"children":["$","$L11",null,{"href":"/projects/personal-site/site-interview-design/","data-reading-start":"true","children":"个人主页建设（八）：从真实实现继续追问设计与故障处理"}]}]
+1b:["$","section","frontend-foundations",{"children":[["$","strong",null,{"children":"JavaScript、TypeScript与React基础"}],["$","ol",null,{"children":[["$","li","javascript-async-fetch",{"value":9,"children":["$","$L11",null,{"href":"/projects/personal-site/javascript-async-fetch/","data-reading-start":"true","children":"JavaScript异步请求：从Promise、await到表单失败处理"}]}],["$","li","typescript-types-boundaries",{"value":10,"children":["$","$L11",null,{"href":"/projects/personal-site/typescript-types-boundaries/","data-reading-start":"true","children":"TypeScript入门：对象类型、联合类型与网络数据边界"}]}],["$","li","react-components-props",{"value":11,"children":["$","$L11",null,{"href":"/projects/personal-site/react-components-props/","data-reading-start":"true","children":"React入门（一）：组件、JSX、props与列表身份"}]}],["$","li","react-state-effects",{"value":12,"children":["$","$L11",null,{"href":"/projects/personal-site/react-state-effects/","data-reading-start":"true","aria-current":"page","children":"React入门（二）：状态、Effect与目录和配色交互"}]}],["$","li","css-responsive-images",{"value":13,"children":["$","$L11",null,{"href":"/projects/personal-site/css-responsive-images/","data-reading-start":"true","children":"响应式页面基础：CSS布局、图片候选与动画呈现"}]}]]}]]}]
+1c:["$","section","nextjs-foundations",{"children":[["$","strong",null,{"children":"Next.js从入门到本站应用"}],["$","ol",null,{"children":[["$","li","nextjs-position-toolchain",{"value":14,"children":["$","$L11",null,{"href":"/projects/personal-site/nextjs-position-toolchain/","data-reading-start":"true","children":"Next.js入门（一）：框架定位、技术关系与工程工具链"}]}],["$","li","nextjs-routing-layouts",{"value":15,"children":["$","$L11",null,{"href":"/projects/personal-site/nextjs-routing-layouts/","data-reading-start":"true","children":"Next.js入门（二）：路由目录、公共布局与文章参数"}]}],["$","li","nextjs-rendering-hydration",{"value":16,"children":["$","$L11",null,{"href":"/projects/personal-site/nextjs-rendering-hydration/","data-reading-start":"true","children":"Next.js入门（三）：SSG、SSR、组件边界与交互接管"}]}],["$","li","nextjs-content-cache",{"value":17,"children":["$","$L11",null,{"href":"/projects/personal-site/nextjs-content-cache/","data-reading-start":"true","children":"Next.js入门（四）：Markdown内容管线与多层缓存"}]}]]}]]}]
+1d:["$","section","python-web-foundations",{"children":[["$","strong",null,{"children":"Python Web接口与安全"}],["$","ol",null,{"children":[["$","li","python-api-environment",{"value":18,"children":["$","$L11",null,{"href":"/projects/personal-site/python-api-environment/","data-reading-start":"true","children":"Python Web入门（一）：环境、FastAPI接口与ASGI服务"}]}],["$","li","fastapi-dependencies-concurrency",{"value":19,"children":["$","$L11",null,{"href":"/projects/personal-site/fastapi-dependencies-concurrency/","data-reading-start":"true","children":"Python Web入门（二）：FastAPI依赖、错误与并发等待"}]}],["$","li","pydantic-validation",{"value":20,"children":["$","$L11",null,{"href":"/projects/personal-site/pydantic-validation/","data-reading-start":"true","children":"Pydantic输入校验：字段、validator与模型边界"}]}],["$","li","browser-cookie-cors-csrf",{"value":21,"children":["$","$L11",null,{"href":"/projects/personal-site/browser-cookie-cors-csrf/","data-reading-start":"true","children":"浏览器与API安全：Cookie、会话、CORS和CSRF"}]}]]}]]}]
+1e:["$","section","postgresql-foundations",{"children":[["$","strong",null,{"children":"PostgreSQL与Python数据访问"}],["$","ol",null,{"children":[["$","li","postgresql-tables-queries",{"value":22,"children":["$","$L11",null,{"href":"/projects/personal-site/postgresql-tables-queries/","data-reading-start":"true","children":"PostgreSQL入门（一）：表、SQL、约束与索引"}]}],["$","li","postgresql-transactions-locks",{"value":23,"children":["$","$L11",null,{"href":"/projects/personal-site/postgresql-transactions-locks/","data-reading-start":"true","children":"PostgreSQL入门（二）：事务、行锁与Schema迁移"}]}],["$","li","sqlalchemy-session-pool",{"value":24,"children":["$","$L11",null,{"href":"/projects/personal-site/sqlalchemy-session-pool/","data-reading-start":"true","children":"SQLAlchemy入门：ORM、Session、提交与连接池"}]}],["$","li","psycopg-driver-parameters",{"value":25,"children":["$","$L11",null,{"href":"/projects/personal-site/psycopg-driver-parameters/","data-reading-start":"true","children":"psycopg入门：数据库驱动、参数绑定与类型适配"}]}]]}]]}]
+1f:["$","section","web-operations",{"children":[["$","strong",null,{"children":"HTTP、部署与测试观测"}],["$","ol",null,{"children":[["$","li","web-http-browser",{"value":26,"children":["$","$L11",null,{"href":"/projects/personal-site/web-http-browser/","data-reading-start":"true","children":"HTTP与浏览器基础：从打开文章到提交一条反馈"}]}],["$","li","cloud-docker-nginx",{"value":27,"children":["$","$L11",null,{"href":"/projects/personal-site/cloud-docker-nginx/","data-reading-start":"true","children":"部署基础：云服务器、Docker、Nginx与HTTP缓存"}]}],["$","li","web-testing-observability",{"value":28,"children":["$","$L11",null,{"href":"/projects/personal-site/web-testing-observability/","data-reading-start":"true","children":"Web测试与观测：验证数据流、性能指标与故障边界"}]}]]}]]}]
+31:T4229,<p>在组件中定义一个普通变量，点击后修改它，React并不会因此自动重新渲染界面。需要让React记录、并参与后续渲染的数据，可以用state保存。输入框的内容、当前标签、请求是否进行中，都属于这样的数据。</p>
+<span id="section-usestate保存的是哪一轮状态" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-一usestate保存的是哪一轮状态">一、useState保存的是哪一轮状态</h2>
+<div class="code-block"><div class="code-toolbar"><span>tsx</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-tsx"><span class="hljs-string">"use client"</span>;
+<span class="hljs-keyword">import</span> { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Counter</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> [count, setCount] = <span class="hljs-title function_">useState</span>(<span class="hljs-number">0</span>);
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =></span> setCount(count + 1)}>{count}<span class="hljs-tag">&#x3C;/<span class="hljs-name">button</span>></span></span>;
+}
+</code></pre></div>
+<p><code>count</code>是本轮渲染读取到的值，<code>setCount</code>安排新的状态。调用它之后，当前函数里的<code>count</code>不会立刻变成新值；React后续渲染时才会把更新后的状态交给组件。<a href="https://react.dev/learn/state-as-a-snapshot" rel="noopener noreferrer">状态快照</a>说明了事件处理函数为何会保留某一轮的值。</p>
+<p>例如同一个点击处理里连续执行三次<code>setCount(count + 1)</code>，三次计算用的可能都是同一份<code>count</code>。如果目标是基于前一次待处理值累加三次，可以写三次<code>setCount(value => value + 1)</code>。更新函数接收队列中的前一个值，不能简单把两种写法看成完全等价。<a href="https://react.dev/learn/queueing-a-series-of-state-updates" rel="noopener noreferrer">状态更新队列</a>有对应过程。</p>
+<span id="section-输入框怎样保持值与界面一致" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-二输入框怎样保持值与界面一致">二、输入框怎样保持值与界面一致</h2>
+<div class="code-block"><div class="code-toolbar"><span>tsx</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-tsx"><span class="hljs-keyword">const</span> [message, setMessage] = <span class="hljs-title function_">useState</span>(<span class="hljs-string">""</span>);
+
+<span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">textarea</span>
+  <span class="hljs-attr">value</span>=<span class="hljs-string">{message}</span>
+  <span class="hljs-attr">onChange</span>=<span class="hljs-string">{event</span> =></span> setMessage(event.target.value)}
+/></span>
+</code></pre></div>
+<p>输入触发<code>onChange</code>，把新的字符串存入state；下一轮渲染再把这个字符串传给<code>value</code>。这种输入由组件状态管理，通常称为受控输入。</p>
+<p>本站反馈表单在等待期间禁用输入与按钮，成功后清空字符串，失败则保留。因此处理成功与失败时需要分别更新对应状态，不能在提交函数末尾无条件清空。</p>
+<p>数组和对象也应产生新值，例如<code>setTags(tags => [...tags, "React"])</code>，而不是直接对原数组<code>push</code>后继续复用原引用。这样更容易保持每轮状态清楚，也能避免修改其他地方仍在使用的对象。</p>
+<span id="section-effect何时需要何时不需要" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-三effect何时需要何时不需要">三、Effect何时需要，何时不需要</h2>
+<p><strong><code>useEffect</code>用于将组件状态与React外部系统同步</strong>，例如事件监听、计时器、浏览器存储和观察器。若只是根据已有props筛选列表，通常可以直接在渲染时计算，不必额外存一份state再用Effect同步。</p>
+<div class="code-block"><div class="code-toolbar"><span>tsx</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-tsx"><span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =></span> {
+  <span class="hljs-keyword">const</span> <span class="hljs-title function_">onVisibility</span> = (<span class="hljs-params"></span>) => <span class="hljs-title function_">setVisible</span>(!<span class="hljs-variable language_">document</span>.<span class="hljs-property">hidden</span>);
+  <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">"visibilitychange"</span>, onVisibility);
+  <span class="hljs-title function_">onVisibility</span>();
+  <span class="hljs-keyword">return</span> <span class="hljs-function">() =></span> <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">removeEventListener</span>(<span class="hljs-string">"visibilitychange"</span>, onVisibility);
+}, []);
+</code></pre></div>
+<p>这个教学示例订阅浏览器事件，并在清理函数里取消订阅。依赖数组为空，表示没有随组件渲染变化、需要重新同步的响应式依赖；并不适合概括成“任何环境都保证只执行一次”。开发阶段的Strict Mode会额外进行建立与清理检查，组件重新挂载也会重新执行。<a href="https://react.dev/learn/synchronizing-with-effects" rel="noopener noreferrer">Effect说明</a>解释了同步、依赖与清理的关系。</p>
+<p>如果Effect使用了变化中的值，就应正确声明依赖。为了消掉重复执行而随意删依赖，可能让计时器一直读取旧值。遇到这类问题，先确认Effect究竟要同步什么，再考虑重组代码。</p>
+<span id="section-横幅切换为什么要保留上一张图" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-四横幅切换为什么要保留上一张图">四、横幅切换为什么要保留上一张图</h2>
+<p>本站横幅维护<code>current</code>、<code>previous</code>和<code>ready</code>。切换时先保存上一张图，再请求下一张；新图成功加载后才进入过渡，过渡结束再释放旧图。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>事件</th><th>当前目标</th><th>旧图</th><th>下一步</th></tr></thead><tbody><tr><td>已显示A</td><td>A</td><td>无</td><td>等待切换</td></tr><tr><td>请求B</td><td>B</td><td>A</td><td>A继续可见，等待B加载</td></tr><tr><td>B加载成功</td><td>B</td><td>A</td><td>过渡后移除A</td></tr><tr><td>B加载失败</td><td>恢复A</td><td>失败处理清理过渡状态</td><td>继续显示成功加载过的A</td></tr></tbody></table>
+<p>工程曾记录<code>onError</code>与<code>onLoad</code>共用成功处理，导致失败也被当作“可以结束旧图保留”。修正后将失败回调分开。这个问题要看的是状态转移条件：触发了图片事件，并不一定意味着图片成功显示。</p>
+<p>轮播还需要考虑页面是否可见、横幅是否在视口内、用户是否选择减少动态效果。本站通过这些条件决定是否继续计时，并在依赖变化时清理计时器，避免离开页面后仍积累后台任务。</p>
+<h2 id="section-五阅读目录怎样从标题列表变成可操作的树">五、阅读目录怎样从标题列表变成可操作的树</h2>
+<p>目录同时涉及内容结构和交互状态。输入是正文解析得到的标题列表，每项包含<code>id</code>、<code>text</code>、<code>level</code>；输出是可展开的目录分支，以及当前阅读位置的标记。标题文字和层级来自文章，当前节、手动折叠来自用户阅读过程，不能把它们全部混成一份随意修改的数组。</p>
+<h3 id="section-51-用栈建立标题的父子关系">5.1 用栈建立标题的父子关系</h3>
+<p><strong>栈</strong>可以先理解为只从末尾放入、取出数据的列表。这里保存当前标题的祖先链。读到新标题时，末尾如果不比它层级更浅，就移走，直到找到可作为父级的标题。</p>
+<p>用教学输入<code>h2:A、h3:B、h4:C、h3:D、h2:E</code>逐步推演：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>当前标题</th><th>处理后找到的父级</th><th>加入后的祖先栈</th></tr></thead><tbody><tr><td>A，二级</td><td>无，作为根节点</td><td>A</td></tr><tr><td>B，三级</td><td>A</td><td>A、B</td></tr><tr><td>C，四级</td><td>B</td><td>A、B、C</td></tr><tr><td>D，三级</td><td>弹出C与B，剩下A</td><td>A、D</td></tr><tr><td>E，二级</td><td>弹出D与A，作为新根</td><td>E</td></tr></tbody></table>
+<p>最终A下面有B和D，B下面有C；E与A并列。本站<code>headingTree</code>使用的就是这个关系：弹出所有<code>level >= 新标题level</code>的末尾节点，再挂到最近较浅标题下。跳级的h2→h4仍能挂到h2下面，不会凭空造一个h3。</p>
+<p>每个标题入栈一次，出栈至多一次，因此<strong>建树时间是O(n)</strong>，n为标题数。这里分析的是建树步骤，不是整套目录交互都恒定耗时；寻找路径、读取DOM位置和渲染还有各自工作。</p>
+<h3 id="section-52-当前节与手动折叠各自保存什么">5.2 当前节与手动折叠各自保存什么</h3>
+<p><code>activeId</code>记录当前阅读标题，<code>headingPath</code>取得从根到该标题的路径。默认只展示根级目录，进入某节后展开它的祖先链，让读者能看到当前位置。</p>
+<p>假设读者停在C，手动折叠A。若每次滚动都强制展开A，刚才的操作会立刻失效。本站把手动展开集合与当时的activeId一起保存：仍在C时使用手动选择；进入D后旧选择失效，重新按D的祖先路径展开。这样既能跟随阅读，又能让同一节里的手动折叠保持有效。</p>
+<p>当前节由IntersectionObserver、滚动监听和hashchange共同更新。观察器感知可见关系，滚动与锚点事件补充快速跳转等情况；<code>requestAnimationFrame</code>把同一轮滚动工作合并到适当的绘制时机。当前项超出目录视口时，只调整目录容器的scrollTop，避免为了显示一条目录而拖动正文。</p>
+<h3 id="section-53-窄屏为什么使用portal和dialog">5.3 窄屏为什么使用Portal和dialog</h3>
+<p>当视口不大于1350px，本站使用窄屏目录布局。文首目录滚出后才出现悬浮按钮；这包括较窄的桌面窗口，不是根据设备名称判断“手机”。打开按钮后，读者需要在弹层里看到当前章节，选中目标后回到正文。</p>
+<p><strong>Portal改变DOM放置位置，同时保留React树中的关系。</strong> 本站把悬浮控件和dialog放到document.body，避开祖先动画容器对fixed定位的影响。上下文和React事件传播仍遵循原组件树，这一点与单纯把DOM搬到另一个父元素的直觉不同。<a href="https://react.dev/reference/react-dom/createPortal" rel="noopener noreferrer">React的Portal说明</a>解释了两种关系。</p>
+<p>原生<code>dialog.showModal()</code>提供模态交互基础；代码在打开后把焦点移到当前目录项。点击目录时先关闭弹层，再按链接锚点跳转；Esc或关闭按钮只是收起，不应额外跳动正文。弹层打开期间锁住背景滚动，位置更新也暂停，避免弹层布局变化误判当前章节。原生行为可对照<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog" rel="noopener noreferrer">dialog参考</a>。</p>
+<p>离开适用断点或组件卸载时，需要移除监听、断开观察器并取消待执行的rAF。Portal和dialog减少了部分定位与模态处理工作，但焦点恢复、关闭清理、减少动态效果及真实设备仍要检查；已有Chrome视口结果不能代替实机Safari和完整无障碍验收。</p>
+<h2 id="section-六栏目配色怎样区分作用范围复制和恢复">六、栏目配色怎样区分作用范围、复制和恢复</h2>
+<h3 id="section-61-先确定保存哪一份状态">6.1 先确定保存哪一份状态</h3>
+<p>亮色、暗色、跟随系统决定明暗主题；栏目色与全站统一色决定配色作用范围，两者是不同维度。<strong>state驱动当前画面，localStorage用于刷新后恢复，DOM呈现最终结果</strong>，修改其中一个并不保证另两个自动同步。</p>
+<p>本站<code>section</code>模式分别保存各栏目颜色，<code>custom</code>模式统一全站。状态还要区分自定义种子色与原始整套色板：一个hex可以生成配色变量，却不一定还原原栏目里文字、背景、边框等变量的原始组合。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>保存项</th><th>用途</th><th>示例含义</th></tr></thead><tbody><tr><td>sectionColors</td><td>栏目自定义hex</td><td>项目栏目使用自己选定的种子色</td></tr><tr><td>sectionThemes</td><td>栏目取用的原色板</td><td>项目栏目采用研究栏目的原始色板</td></tr><tr><td>customColor / customTheme</td><td>统一模式下的种子色或原色板</td><td>全站使用同一个选择</td></tr></tbody></table>
+<h3 id="section-62-从复制研究配色到恢复项目原色">6.2 从复制研究配色到恢复项目原色</h3>
+<p>假设各栏目先用原色，读者在项目页点击“研究”色卡。目标仍是projects，来源是research；如果来源没有自定义hex，就保存采用研究原色板的选择。导航仍属于项目，颜色来源变化不会把URL或内容分类也改成研究。</p>
+<p>若之后研究栏目改成自定义hex，项目保留的是复制当时解析出的选择，不会自动订阅研究的新设置。复制更接近保存一次结果，不能把它理解成两个栏目的颜色永远同步。</p>
+<p>接着在项目页点击自身“项目”。旧实现再次读取项目已经保存的研究配色，所以看起来没有恢复。当前<code>copySectionPalette</code>先判断<code>source === target</code>，在这一分支读取项目的<strong>原始色板</strong>，清除项目覆盖。修正落在动作含义和状态转换上，单改CSS颜色不能解决“再次复制错误来源”的问题。</p>
+<p>统一模式下点击自身，会把当前栏目的原色板应用全站；之前各栏目的设置仍保留，以便切回栏目模式。颜色恢复也只重置颜色相关状态，不应顺带清除布局、动态效果等其他偏好。</p>
+<h3 id="section-63-刷新首屏为什么也需要相同解析规则">6.3 刷新首屏为什么也需要相同解析规则</h3>
+<p>localStorage可能留有旧格式或损坏数据。当前解析只接受白名单栏目、合法枚举、六位hex和有界数值，不把读出来的对象原样应用。首屏入口脚本和运行期使用同一个<code>resolveColorPreferences</code>，让刷新与客户端切页对“当前应使用哪套色板”得到相同判断。</p>
+<p>此前还出现过输入框失焦就把未修改的值提交为统一颜色的问题，后来改为显式应用或回车。检验这种交互，应该实际走“聚焦→不修改→Tab离开”的路径；只直接修改变量无法覆盖这个事件顺序。状态恢复能按规则执行，也不等于所有自定义颜色组合都有合格对比度，文字链接仍需要清楚的视觉提示。</p>
+<span id="section-useref与state怎样选择" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-七useref与state怎样选择">七、useRef与state怎样选择</h2>
+<p><code>useRef</code>可以保存DOM引用或跨渲染保留的可变值，修改<code>ref.current</code>本身不会触发渲染。需要立刻反映到界面的数据用state；计时器ID、观察器目标等不直接显示的引用，可以考虑ref。选择依据是数据变化后是否需要让界面重新计算，不能把ref当成绕过状态更新规则的捷径。</p>
+<p>还可以继续追问：如果连续从A切B再切C，B的加载事件很晚才到，是否会误处理C的状态？应结合组件key、请求身份和回调归属检查。本文状态表先解释单次切换；更复杂的竞态需要单独构造输入验证，不能因为A→B通过就推断所有切图顺序都正确。</p>20:["$","$L30",null,{"html":"$31"}]
+21:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L11",null,{"href":"/projects/personal-site/react-components-props/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"React入门（一）：组件、JSX、props与列表身份"}]]}],["$","$L11",null,{"href":"/projects/personal-site/css-responsive-images/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"响应式页面基础：CSS布局、图片候选与动画呈现"}]]}]]}]
+22:["$","$L32",null,{"contentId":"react-state-effects"}]
+23:["$","div",null,{"className":"related-note","children":[[["$","$L11",null,{"href":"/projects/personal-site/series/","data-reading-start":"true","children":"返回系列目录"}],["$","$L11",null,{"href":"/projects/personal-site/","data-reading-start":"true","children":"项目总览"}],["$","$L11",null,{"href":"/projects/","children":"返回全部项目"}]],false]}]
+24:["$","$L13",null,{"headings":["$c:0:1:d:r:props:children:0:props:children:1:props:headings:0","$c:0:1:d:r:props:children:0:props:children:1:props:headings:1","$c:0:1:d:r:props:children:0:props:children:1:props:headings:2","$c:0:1:d:r:props:children:0:props:children:1:props:headings:3","$c:0:1:d:r:props:children:0:props:children:1:props:headings:4","$c:0:1:d:r:props:children:0:props:children:1:props:headings:5","$c:0:1:d:r:props:children:0:props:children:1:props:headings:6","$c:0:1:d:r:props:children:0:props:children:1:props:headings:7","$c:0:1:d:r:props:children:0:props:children:1:props:headings:8","$c:0:1:d:r:props:children:0:props:children:1:props:headings:9","$c:0:1:d:r:props:children:0:props:children:1:props:headings:10","$c:0:1:d:r:props:children:0:props:children:1:props:headings:11","$c:0:1:d:r:props:children:0:props:children:1:props:headings:12"]}]
+25:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+26:["$","$L33",null,{"children":["$","$2c",null,{"name":"Next.MetadataOutlet","children":"$@34"}]}]
+2f:true
+7:300
+34:null
+7:C
+2e:0
+b:"$undefined"
+9:"$undefined"
+5:"$undefined"
+2d:"$undefined"
+27:"$undefined"

@@ -1,0 +1,92 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+d:"static/chunks/5587-bf231f55b3fd3ee7.js"
+e:"static/chunks/8612-b99ba8072dd9edd6.js"
+f:"static/chunks/182-3013bbb685a41e87.js"
+10:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-aa53fa2ba92f4505.js"
+11:I[3498,["5587","$d","8612","$e","182","$f","4067","$10"],"default"]
+12:I[6279,["5587","$d","8612","$e","182","$f","4067","$10"],"FilterLink"]
+13:I[5128,["5587","$d","8612","$e","182","$f","4067","$10"],"ArticleToc"]
+26:"ViewportBoundary"
+27:I[887,[],"$26"]
+28:"MetadataBoundary"
+29:I[887,[],"$28"]
+2a:"$Sreact.suspense"
+6:X
+6:C
+7:X
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L11",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L11",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L11",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L12",null,{"className":"trail-current","href":"/projects/","children":["网站建设",["$","span",null,{"children":4}]]}],["$","$L11",null,{"className":"trail-parent","href":"/projects/personal-site/series/","children":"个人主页与博客建设"}]]}],["$","h1",null,{"tabIndex":-1,"children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}],["$","p",null,{"className":"article-deck","children":"认识工程目录、开发和静态预览入口，再处理稳定ID、旧URL、代码与图片等迁移细节"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-21","children":"2026-10-21"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,580"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","内容迁移",{"children":"内容迁移"}],["$","span","开发环境",{"children":"开发环境"}],["$","span","Markdown",{"children":"Markdown"}],["$","span","Next.js",{"children":"Next.js"}]]}],false]}],["$","$L13",null,{"headings":[{"id":"section-一工程目录怎样按运行职责拆分","text":"一、工程目录怎样按运行职责拆分","level":2},{"id":"section-二环境恢复先看锁文件","text":"二、环境恢复先看锁文件","level":2},{"id":"section-三从保存原稿到看到本地页面","text":"三、从保存原稿到看到本地页面","level":2},{"id":"section-四旧文迁移要保留哪些身份","text":"四、旧文迁移要保留哪些身份","level":2},{"id":"section-五迁移中实际遇到的几类问题","text":"五、迁移中实际遇到的几类问题","level":2},{"id":"section-六为什么不直接扫描所有markdown","text":"六、为什么不直接扫描所有Markdown","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L11",null,{"href":"/projects/personal-site/series/","data-reading-start":"true","children":"系列文章与阅读路线"}],["$","$L11",null,{"href":"/projects/personal-site/","data-reading-start":"true","children":"项目总览"}],["$","span",null,{"children":[2," / ",28," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","personal-site-build",{"children":[["$","strong",null,{"children":"个人主页与博客建设"}],["$","ol",null,{"children":[["$","li","site-upgrade-architecture",{"value":1,"children":["$","$L11",null,{"href":"/projects/personal-site/site-upgrade-architecture/","data-reading-start":"true","children":"个人主页建设（一）：升级动机、框架选择与系统分工"}]}],["$","li","site-setup-migration",{"value":2,"children":["$","$L11",null,{"href":"/projects/personal-site/site-setup-migration/","data-reading-start":"true","aria-current":"page","children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}]}],["$","li","site-content-search-flow",{"value":3,"children":["$","$L11",null,{"href":"/projects/personal-site/site-content-search-flow/","data-reading-start":"true","children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}]}],["$","li","site-feedback-data-flow",{"value":4,"children":"$L14"}],"$L15","$L16","$L17","$L18"]}]]}],"$L19","$L1a","$L1b","$L1c","$L1d"]]}]]}],null,"$L1e",false,"$L1f","$L20","$L21"]}],"$L22"]}]]}],["$L23"],"$L24"]}],"p":"$@25","v":null,"s":"$7"}}]]
+a:[["children",{"s":{"n":"page","t":"d","k":"site-setup-migration","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
+8:[["children",{"s":{"n":"project","t":"d","k":"personal-site","s":["mental-health-evaluation"]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"projects","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L27",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L29",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$2a",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"认识工程目录、开发和静态预览入口，再处理稳定ID、旧URL、代码与图片等迁移细节。"}],["$","link","2",{"rel":"canonical","href":"/projects/personal-site/site-setup-migration/"}]]}]}],null]}],null]}],"p":"$@2b","v":null,"s":"$7"}},"a":"$@2c","u":"$@2d","b":"6cQJHWqsmY59WndvF4Y-g"}
+2e:I[4711,["5587","$d","8612","$e","182","$f","4067","$10"],"ArticleBody"]
+30:I[2708,["5587","$d","8612","$e","182","$f","4067","$10"],"FeedbackForm"]
+31:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+14:["$","$L11",null,{"href":"/projects/personal-site/site-feedback-data-flow/","data-reading-start":"true","children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}]
+15:["$","li","site-auth-review-concurrency",{"value":5,"children":["$","$L11",null,{"href":"/projects/personal-site/site-auth-review-concurrency/","data-reading-start":"true","children":"个人主页建设（五）：作者登录、反馈审核与并发控制"}]}]
+16:["$","li","site-images-performance",{"value":6,"children":["$","$L11",null,{"href":"/projects/personal-site/site-images-performance/","data-reading-start":"true","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}]}]
+17:["$","li","site-deployment-recovery",{"value":7,"children":["$","$L11",null,{"href":"/projects/personal-site/site-deployment-recovery/","data-reading-start":"true","children":"个人主页建设（七）：Nginx部署、版本切换与数据恢复"}]}]
+18:["$","li","site-interview-design",{"value":8,"children":["$","$L11",null,{"href":"/projects/personal-site/site-interview-design/","data-reading-start":"true","children":"个人主页建设（八）：从真实实现继续追问设计与故障处理"}]}]
+19:["$","section","frontend-foundations",{"children":[["$","strong",null,{"children":"JavaScript、TypeScript与React基础"}],["$","ol",null,{"children":[["$","li","javascript-async-fetch",{"value":9,"children":["$","$L11",null,{"href":"/projects/personal-site/javascript-async-fetch/","data-reading-start":"true","children":"JavaScript异步请求：从Promise、await到表单失败处理"}]}],["$","li","typescript-types-boundaries",{"value":10,"children":["$","$L11",null,{"href":"/projects/personal-site/typescript-types-boundaries/","data-reading-start":"true","children":"TypeScript入门：对象类型、联合类型与网络数据边界"}]}],["$","li","react-components-props",{"value":11,"children":["$","$L11",null,{"href":"/projects/personal-site/react-components-props/","data-reading-start":"true","children":"React入门（一）：组件、JSX、props与列表身份"}]}],["$","li","react-state-effects",{"value":12,"children":["$","$L11",null,{"href":"/projects/personal-site/react-state-effects/","data-reading-start":"true","children":"React入门（二）：状态、Effect与目录和配色交互"}]}],["$","li","css-responsive-images",{"value":13,"children":["$","$L11",null,{"href":"/projects/personal-site/css-responsive-images/","data-reading-start":"true","children":"响应式页面基础：CSS布局、图片候选与动画呈现"}]}]]}]]}]
+1a:["$","section","nextjs-foundations",{"children":[["$","strong",null,{"children":"Next.js从入门到本站应用"}],["$","ol",null,{"children":[["$","li","nextjs-position-toolchain",{"value":14,"children":["$","$L11",null,{"href":"/projects/personal-site/nextjs-position-toolchain/","data-reading-start":"true","children":"Next.js入门（一）：框架定位、技术关系与工程工具链"}]}],["$","li","nextjs-routing-layouts",{"value":15,"children":["$","$L11",null,{"href":"/projects/personal-site/nextjs-routing-layouts/","data-reading-start":"true","children":"Next.js入门（二）：路由目录、公共布局与文章参数"}]}],["$","li","nextjs-rendering-hydration",{"value":16,"children":["$","$L11",null,{"href":"/projects/personal-site/nextjs-rendering-hydration/","data-reading-start":"true","children":"Next.js入门（三）：SSG、SSR、组件边界与交互接管"}]}],["$","li","nextjs-content-cache",{"value":17,"children":["$","$L11",null,{"href":"/projects/personal-site/nextjs-content-cache/","data-reading-start":"true","children":"Next.js入门（四）：Markdown内容管线与多层缓存"}]}]]}]]}]
+1b:["$","section","python-web-foundations",{"children":[["$","strong",null,{"children":"Python Web接口与安全"}],["$","ol",null,{"children":[["$","li","python-api-environment",{"value":18,"children":["$","$L11",null,{"href":"/projects/personal-site/python-api-environment/","data-reading-start":"true","children":"Python Web入门（一）：环境、FastAPI接口与ASGI服务"}]}],["$","li","fastapi-dependencies-concurrency",{"value":19,"children":["$","$L11",null,{"href":"/projects/personal-site/fastapi-dependencies-concurrency/","data-reading-start":"true","children":"Python Web入门（二）：FastAPI依赖、错误与并发等待"}]}],["$","li","pydantic-validation",{"value":20,"children":["$","$L11",null,{"href":"/projects/personal-site/pydantic-validation/","data-reading-start":"true","children":"Pydantic输入校验：字段、validator与模型边界"}]}],["$","li","browser-cookie-cors-csrf",{"value":21,"children":["$","$L11",null,{"href":"/projects/personal-site/browser-cookie-cors-csrf/","data-reading-start":"true","children":"浏览器与API安全：Cookie、会话、CORS和CSRF"}]}]]}]]}]
+1c:["$","section","postgresql-foundations",{"children":[["$","strong",null,{"children":"PostgreSQL与Python数据访问"}],["$","ol",null,{"children":[["$","li","postgresql-tables-queries",{"value":22,"children":["$","$L11",null,{"href":"/projects/personal-site/postgresql-tables-queries/","data-reading-start":"true","children":"PostgreSQL入门（一）：表、SQL、约束与索引"}]}],["$","li","postgresql-transactions-locks",{"value":23,"children":["$","$L11",null,{"href":"/projects/personal-site/postgresql-transactions-locks/","data-reading-start":"true","children":"PostgreSQL入门（二）：事务、行锁与Schema迁移"}]}],["$","li","sqlalchemy-session-pool",{"value":24,"children":["$","$L11",null,{"href":"/projects/personal-site/sqlalchemy-session-pool/","data-reading-start":"true","children":"SQLAlchemy入门：ORM、Session、提交与连接池"}]}],["$","li","psycopg-driver-parameters",{"value":25,"children":["$","$L11",null,{"href":"/projects/personal-site/psycopg-driver-parameters/","data-reading-start":"true","children":"psycopg入门：数据库驱动、参数绑定与类型适配"}]}]]}]]}]
+1d:["$","section","web-operations",{"children":[["$","strong",null,{"children":"HTTP、部署与测试观测"}],["$","ol",null,{"children":[["$","li","web-http-browser",{"value":26,"children":["$","$L11",null,{"href":"/projects/personal-site/web-http-browser/","data-reading-start":"true","children":"HTTP与浏览器基础：从打开文章到提交一条反馈"}]}],["$","li","cloud-docker-nginx",{"value":27,"children":["$","$L11",null,{"href":"/projects/personal-site/cloud-docker-nginx/","data-reading-start":"true","children":"部署基础：云服务器、Docker、Nginx与HTTP缓存"}]}],["$","li","web-testing-observability",{"value":28,"children":["$","$L11",null,{"href":"/projects/personal-site/web-testing-observability/","data-reading-start":"true","children":"Web测试与观测：验证数据流、性能指标与故障边界"}]}]]}]]}]
+2f:T1c0a,<p>确定技术栈之后，需要先把旧博客和新工程隔开。否则改新页面时，很容易顺手碰到旧主题、旧依赖或发布脚本，也不容易确认迁移过程中哪些文件发生了变化。</p>
+<p>本站新工程位于<code>site-next</code>，旧Hexo相关文件后来集中到<code>oldblog_backup</code>。这个目录调整是在原文件保留与哈希核对的基础上进行的，不能把备份目录当作新站发布源。</p>
+<span id="section-工程目录怎样按运行职责拆分" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-一工程目录怎样按运行职责拆分">一、工程目录怎样按运行职责拆分</h2>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-text">site-next/
+  apps/web/       Next.js前端与受控内容快照
+  apps/api/       FastAPI应用、模型与迁移
+  scripts/        导入、预览和验证工具
+  infra/          Nginx、容器与部署配置
+  requirements.lock.txt
+docs/content/    原稿、内容交付与核验记录
+oldblog_backup/  旧博客与历史备份
+</code></pre></div>
+<p>这是与本系列相关的结构摘要，没有列出运行凭据和所有生成文件。前端产物、后端源码、数据库数据和原稿分开放置，可以减少把整个工作区上传到公开目录的风险，也便于分别更新。</p>
+<span id="section-环境恢复先看锁文件" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-二环境恢复先看锁文件">二、环境恢复先看锁文件</h2>
+<p>工程环境记录使用Node24.18.0、npm12.0.2、Python3.11.2；10月25日读取的前端声明与锁文件包括Next16.4.2、React19.3.1、TypeScript5.9.3。后端锁文件记录FastAPI0.143.3、Pydantic2.14.1、SQLAlchemy2.0.55和psycopg3.3.6。这里区分环境记录和依赖声明，没有重新进入生产容器逐项读取运行版本；这些数字也不要求读者重装全局环境。</p>
+<p>已有工程用<code>npm ci</code>按锁文件恢复JS依赖，Python用项目解释器安装锁定依赖。不要在同一目录重复生成脚手架，也不要用一个不知道指向哪个环境的pip修改全局包。</p>
+<p>本机有三类入口：3001是编辑开发预览，3000是构建后的静态预览，8000是本地API。数据库使用独立本地端口。端口不是功能身份，实际要看进程与启动方式，尤其不能因为某端口被占用就直接结束未知进程。</p>
+<span id="section-从保存原稿到看到本地页面" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-三从保存原稿到看到本地页面">三、从保存原稿到看到本地页面</h2>
+<p>新稿先进入内容目录，完成字段与来源检查后，由导入器复制到前端允许的快照范围。随后开发服务读取快照，或进行静态构建再用3000查看。</p>
+<p>以本系列为例，<strong>manuscript是正文修改入口</strong>，构包脚本根据它生成带元数据的articles和清单；工程导入器再读取清单，核对字节后写入冻结快照。直接修改articles，下次构包会覆盖；直接修改快照，会破坏输入摘要；只修改原稿但没重新生成与导入，网站仍读取旧版本。先确定卡在哪一层，再决定执行哪一步。</p>
+<div class="code-block"><div class="code-toolbar"><span>powershell</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-powershell"># 在site-next目录，检查与生成本地静态产物
+npm run typecheck
+npm run build
+npm run check:export
+npm run preview
+</code></pre></div>
+<p>这些是现有项目命令。<code>preview</code>在服务未运行时启动静态预览；已启动就刷新即可。新系列使用独立导入命令，按明确manifest接入，公开构建仍排除未授权的本地稿件。</p>
+<p>如果3001能看到修改、3000看不到，先确认有没有重新构建。若连内容快照都没有更新，则需要先重新导入。反复刷新浏览器不能弥补前面没有发生的数据更新。</p>
+<span id="section-旧文迁移要保留哪些身份" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-四旧文迁移要保留哪些身份">四、旧文迁移要保留哪些身份</h2>
+<p>旧文章的标题、文件名、日期路径与新ID不必一一相同。迁移清单记录原路径、源哈希、新ID与规范路由，标题可以修得更准确，ID和旧址映射则尽量稳定。</p>
+<p>正文里的链接还包含片段锚点。只让旧URL跳到新页面，但没保留相应段落入口，读者仍可能失去原来的定位。本站对核验过的旧路径建立301映射，并处理部分旧标题和手写锚点；未逐一验证的历史外部书签不能笼统称为全部兼容。</p>
+<p>工程记录中的51篇迁移文章与373个source文件校验，统计对象不同：前者是文章条目，后者还包括资源与其他文件。不能把两者相减判断漏迁了多少篇文章。</p>
+<span id="section-迁移中实际遇到的几类问题" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-五迁移中实际遇到的几类问题">五、迁移中实际遇到的几类问题</h2>
+<p>旧文里的中文强调标记需要与新Markdown解析规则适配；本机图片路径不能当公网资源；上下标语法应只处理文本节点，不能误改代码。代码块有语言标记后，呈现层才能更准确高亮，但高亮成功不等于代码运行通过。</p>
+<p>目录也要检查最终生成的DOM。旧tocbot踩坑记录中，标题ID与内部span的变化会影响目录扫描，新版把目录与正文标题ID从同一条渲染管线收集，仍要检查链接实际能定位。</p>
+<p>历史技术内容需要单独审校。迁移哈希证明原文件是否保留，不能证明原文中的算法结论正确；页面构建证明结构能生成，也不能证明所有示例在当前版本可运行。</p>
+<span id="section-为什么不直接扫描所有markdown" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-六为什么不直接扫描所有markdown">六、为什么不直接扫描所有Markdown</h2>
+<p>工作区还包含私密研究材料、草稿、反馈记录和归档教程。文件扩展名相同，不代表公开条件相同。本站通过显式清单和状态校验接入稿件，并对搜索、页面、资产等一起限制。</p>
+<p>本系列的源包仍使用review/private及<code>publishAllowed:false</code>，这是导入协议的含义。它在10月21日已获公开批准；公开构建通过另一份记录核对集合、snapshot与manifestHash，才决定是否发布对应版本。因此<strong>文件中的预览标记与当前已批准版本的公开状态需要分别看</strong>。修改后必须导入新快照并取得与新摘要对应的公开记录，不能让旧批准默认覆盖所有未来变动。具体机制见<a href="/projects/personal-site/site-content-search-flow/">内容和搜索的数据流</a>。</p>1e:["$","$L2e",null,{"html":"$2f"}]
+1f:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L11",null,{"href":"/projects/personal-site/site-upgrade-architecture/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"个人主页建设（一）：升级动机、框架选择与系统分工"}]]}],["$","$L11",null,{"href":"/projects/personal-site/site-content-search-flow/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}]]}]]}]
+20:["$","$L30",null,{"contentId":"site-setup-migration"}]
+21:["$","div",null,{"className":"related-note","children":[[["$","$L11",null,{"href":"/projects/personal-site/series/","data-reading-start":"true","children":"返回系列目录"}],["$","$L11",null,{"href":"/projects/personal-site/","data-reading-start":"true","children":"项目总览"}],["$","$L11",null,{"href":"/projects/","children":"返回全部项目"}]],false]}]
+22:["$","$L13",null,{"headings":["$c:0:1:d:r:props:children:0:props:children:1:props:headings:0","$c:0:1:d:r:props:children:0:props:children:1:props:headings:1","$c:0:1:d:r:props:children:0:props:children:1:props:headings:2","$c:0:1:d:r:props:children:0:props:children:1:props:headings:3","$c:0:1:d:r:props:children:0:props:children:1:props:headings:4","$c:0:1:d:r:props:children:0:props:children:1:props:headings:5"]}]
+23:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+24:["$","$L31",null,{"children":["$","$2a",null,{"name":"Next.MetadataOutlet","children":"$@32"}]}]
+2d:true
+7:300
+32:null
+7:C
+2c:0
+b:"$undefined"
+9:"$undefined"
+5:"$undefined"
+2b:"$undefined"
+25:"$undefined"

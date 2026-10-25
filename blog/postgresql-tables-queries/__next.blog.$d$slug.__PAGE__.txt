@@ -2,76 +2,31 @@
 3:I[9630,[],""]
 4:I[1380,[],""]
 b:"static/chunks/5587-bf231f55b3fd3ee7.js"
-c:"static/chunks/8612-cbc92f3b94933c0e.js"
-d:"static/chunks/1133-0d344bd2ae49df3d.js"
-e:"static/chunks/app/blog/%5Bslug%5D/page-7e3554d7157e46bb.js"
-f:I[3498,["5587","$b","8612","$c","1133","$d","5953","$e"],"default"]
-10:I[6279,["5587","$b","8612","$c","1133","$d","5953","$e"],"FilterLink"]
-11:I[5128,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleToc"]
-12:I[4711,["5587","$b","8612","$c","1133","$d","5953","$e"],"ArticleBody"]
-1b:"ViewportBoundary"
-1c:I[887,[],"$1b"]
-1d:"MetadataBoundary"
-1e:I[887,[],"$1d"]
-1f:"$Sreact.suspense"
+c:"static/chunks/8612-b99ba8072dd9edd6.js"
+d:"static/chunks/182-3013bbb685a41e87.js"
+e:"static/chunks/app/blog/%5Bslug%5D/page-2e2f431317da6727.js"
+f:"LegacyArticleRedirect"
+10:I[9129,["5587","$b","8612","$c","182","$d","5953","$e"],"$f"]
+11:I[887,[],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:"ViewportBoundary"
+16:I[887,[],"$15"]
+17:"MetadataBoundary"
+18:I[887,[],"$17"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
 6:X
 6:C
 7:X
-13:T215d,<p>程序中的变量随着进程退出就可能消失，反馈记录却需要在重启后保留。PostgreSQL负责持久保存这些数据，并提供查询、约束和事务能力。先从表、行和SQL看起，再讨论ORM会比较容易。</p>
-<span id="section-一条反馈怎样放进表里" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-一一条反馈怎样放进表里">一、一条反馈怎样放进表里</h2>
-<p>表规定一类数据的字段，每行是一条记录，每列有自己的类型。例如消息用文本，状态用限定字符串，创建时间用带时区的时间类型。下面是只用于理解关系的简化表：</p>
-<div class="code-block"><div class="code-toolbar"><span>sql</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-sql"><span class="hljs-keyword">CREATE TABLE</span> lesson_feedback (
-  id <span class="hljs-type">integer</span> <span class="hljs-keyword">PRIMARY KEY</span>,
-  content_id text <span class="hljs-keyword">NOT NULL</span>,
-  message text <span class="hljs-keyword">NOT NULL</span>,
-  status text <span class="hljs-keyword">NOT NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">'pending'</span>,
-  <span class="hljs-keyword">CHECK</span> (status <span class="hljs-keyword">IN</span> (<span class="hljs-string">'pending'</span>, <span class="hljs-string">'resolved'</span>, <span class="hljs-string">'rejected'</span>))
-);
-</code></pre></div>
-<p>本站真实反馈ID使用UUID，并且有外键、时间、审核人和消息长度限制；不能拿这个教学表直接替换实际Schema。表定义与数据类型的基本写法见<a href="https://www.postgresql.org/docs/current/tutorial-table.html" rel="noopener noreferrer">PostgreSQL建表教程</a>。</p>
-<p><code>PRIMARY KEY</code>标识每行并保证唯一且非空；<code>NOT NULL</code>拒绝缺值；<code>DEFAULT</code>在没有提供对应值时填入默认值；<code>CHECK</code>限制允许的数据。默认值不是对任意输入的强制覆盖，客户端显式传来其他合法值时，还要看接口和权限是否允许。</p>
-<span id="section-查询怎样从条件走到结果" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-二查询怎样从条件走到结果">二、查询怎样从条件走到结果</h2>
-<div class="code-block"><div class="code-toolbar"><span>sql</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> id, content_id, message
-<span class="hljs-keyword">FROM</span> lesson_feedback
-<span class="hljs-keyword">WHERE</span> status <span class="hljs-operator">=</span> <span class="hljs-string">'pending'</span>
-<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> id <span class="hljs-keyword">DESC</span>
-LIMIT <span class="hljs-number">20</span>;
-</code></pre></div>
-<p><code>FROM</code>指定表，<code>WHERE</code>筛选行，<code>SELECT</code>决定返回哪些列，<code>ORDER BY</code>排序，<code>LIMIT</code>限制数量。SQL的书写顺序与数据库内部实际执行计划不必一致；这段解释是帮助理解结果，不是宣称数据库按这些行逐行执行。<a href="https://www.postgresql.org/docs/current/tutorial-select.html" rel="noopener noreferrer">查询教程</a>包含筛选和排序规则。</p>
-<p>本站管理列表按<code>created_at DESC, id DESC</code>排序，每页20条。相同时间可能有多条反馈，第二个排序字段使顺序更稳定。当前实现用offset分页，页码很大时可能付出较多跳过记录的成本；未来可以评估按最后一条时间与ID做游标分页，但不是当前已实现能力。</p>
-<span id="section-本站表之间怎样关联" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-三本站表之间怎样关联">三、本站表之间怎样关联</h2>
-<p><code>content_entries</code>登记内容ID、slug和标题，不保存完整文章正文；它预留了content_hash字段，但当前登记与种子同步不写入正文摘要。按现有模型，新条目该列留空，已有条目更新时保留该列原值；这不等于每次清空，也不能据此断言真实库所有行均为空。<code>feedback.content_id</code>通过外键关联内容；<code>admin_users</code>保存作者账号；<code>admin_sessions</code>保存会话摘要和过期时间；<code>audit_events</code>保存登录、退出和审核等操作记录。迁移工具还维护自己的版本表，因此统计表数量时需说明是否把迁移元数据算进去。</p>
-<p>例如教学条目note-a原本有摘要H，登记同步只更新题名与公开状态后，H仍保留；若新建note-b，输入不包含摘要且该列没有默认值，就按可空字段保存。文件清单中的SHA256、公开批准的manifestHash和数据库这一列处在不同位置，没有自动互相同步。这里依据代码与模型推演，没有查询生产库的实际列值。</p>
-<p>外键保证引用关系。本站内容被反馈引用时，删除策略是RESTRICT，避免删除内容登记后留下无对应对象的反馈；审核人字段则允许在账号删除后置空，保留反馈历史。外键的删除动作应该按业务语义选择，不能所有关系都套CASCADE。<a href="https://www.postgresql.org/docs/current/ddl-constraints.html" rel="noopener noreferrer">约束文档</a>解释了主键、唯一性、检查与外键的区别。</p>
-<p><a href="/images/website-series/data-model.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：内容、反馈、作者会话与审计记录之间的关系"><img src="/images/website-series/data-model.svg" alt="内容、反馈、作者会话与审计记录之间的关系" width="1100" height="590" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
-<p><a href="/images/website-series/data-model.svg">查看图中细节</a></p>
-<p><strong>数据库约束可以拦住不符合规则的写入，但不替代权限检查。</strong> 例如“某个用户是否能审核”仍应由应用判断；表允许<code>resolved</code>，不表示任何匿名请求都能写这个状态。</p>
-<span id="section-索引为什么要根据查询建" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-四索引为什么要根据查询建">四、索引为什么要根据查询建</h2>
-<p>索引提供额外的数据访问结构，让数据库在适合的条件下减少扫描。本站给反馈的<code>status, created_at</code>建立组合索引，与按状态筛选、按时间取最近记录的查询有关。</p>
-<p>索引也占空间，每次相关写入都要维护。它并不保证所有查询更快，小表可能顺序扫描更合适；组合索引能否覆盖筛选和排序，还与列顺序、条件和执行计划有关。当前索引没有包含排序的全部<code>id</code>条件，不应宣称已经覆盖整个查询。<a href="https://www.postgresql.org/docs/current/indexes-multicolumn.html" rel="noopener noreferrer">多列索引</a>给出相应规则。</p>
-<p>真正想验证性能，应在接近实际的数据规模下看<code>EXPLAIN</code>，需要实际执行统计时使用<code>EXPLAIN ANALYZE</code>并注意它会执行语句。不能把生产写语句随便加上ANALYZE运行。本站尚未给出大规模反馈表的容量结论。</p>
-<span id="section-null时间与文本需要注意什么" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-五null时间与文本需要注意什么">五、NULL、时间与文本需要注意什么</h2>
-<p><code>NULL</code>表达未知或没有值，比较时通常使用<code>IS NULL</code>，不能把它当普通字符串<code>"null"</code>。本站未审核记录的审核时间为NULL。</p>
-<p>PostgreSQL的<code>timestamptz</code>表示时间点，展示时受会话时区影响，并不保留用户最初输入的时区名称。API与数据库应统一处理时间，再由显示层决定格式，避免拿本地无时区字符串互相比较。</p>
-<p>参数化查询用于安全传递消息值，后面<a href="/blog/psycopg-driver-parameters/">psycopg驱动</a>会解释。数据能安全传入并不意味着所有业务关系都成立；一次审核涉及多个写入时，还需要<a href="/blog/postgresql-transactions-locks/">事务与并发控制</a>。</p>a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$Lf",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$Lf",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$Lf",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":182}]]}],["$","$L10",null,{"className":"trail-current","href":"/blog/#backend","children":["后端与数据库",["$","span",null,{"children":33}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"PostgreSQL入门（一）：表、SQL、约束与索引"}],["$","p",null,{"className":"article-deck","children":"以反馈记录解释关系模型、筛选排序、外键、分页、组合索引及时间与NULL"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-21","children":"2026-10-21"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,465"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","$L10","PostgreSQL",{"href":"/blog/#tag=PostgreSQL","children":"PostgreSQL"}],["$","$L10","SQL",{"href":"/blog/#tag=SQL","children":"SQL"}],["$","$L10","索引",{"href":"/blog/#tag=%E7%B4%A2%E5%BC%95","children":"索引"}],["$","$L10","数据库",{"href":"/blog/#tag=%E6%95%B0%E6%8D%AE%E5%BA%93","children":"数据库"}]]}]]}],["$","$L11",null,{"headings":[{"id":"section-一一条反馈怎样放进表里","text":"一、一条反馈怎样放进表里","level":2},{"id":"section-二查询怎样从条件走到结果","text":"二、查询怎样从条件走到结果","level":2},{"id":"section-三本站表之间怎样关联","text":"三、本站表之间怎样关联","level":2},{"id":"section-四索引为什么要根据查询建","text":"四、索引为什么要根据查询建","level":2},{"id":"section-五null时间与文本需要注意什么","text":"五、NULL、时间与文本需要注意什么","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading","aria-label":"系列阅读顺序","children":[["$","div",null,{"children":[["$","$Lf",null,{"href":"/projects/personal-site/","children":"个人主页与博客建设"}],["$","span",null,{"children":[1," / ",4," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":["PostgreSQL与Python数据访问",["$","span",null,{"children":"查看阅读顺序"}]]}],["$","ol",null,{"children":[["$","li","postgresql-tables-queries",{"children":["$","$Lf",null,{"href":"/blog/postgresql-tables-queries/","aria-current":"page","children":"PostgreSQL入门（一）：表、SQL、约束与索引"}]}],["$","li","postgresql-transactions-locks",{"children":["$","$Lf",null,{"href":"/blog/postgresql-transactions-locks/","children":"PostgreSQL入门（二）：事务、行锁与Schema迁移"}]}],["$","li","sqlalchemy-session-pool",{"children":["$","$Lf",null,{"href":"/blog/sqlalchemy-session-pool/","children":"SQLAlchemy入门：ORM、Session、提交与连接池"}]}],["$","li","psycopg-driver-parameters",{"children":["$","$Lf",null,{"href":"/blog/psycopg-driver-parameters/","children":"psycopg入门：数据库驱动、参数绑定与类型适配"}]}]]}]]}]]}],["$","$L12",null,{"html":"$13"}],false,"$L14","$L15","$L16"]}],"$L17"]}]]}],["$L18"],"$L19"]}],"p":"$@1a","v":null,"s":"$7"}}]]
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","$L10",null,{"target":"/projects/personal-site/postgresql-tables-queries/","anchors":[{"id":"section-一一条反馈怎样放进表里","text":"一、一条反馈怎样放进表里"},{"id":"section-一条反馈怎样放进表里","text":"一、一条反馈怎样放进表里"},{"id":"section-二查询怎样从条件走到结果","text":"二、查询怎样从条件走到结果"},{"id":"section-查询怎样从条件走到结果","text":"二、查询怎样从条件走到结果"},{"id":"section-三本站表之间怎样关联","text":"三、本站表之间怎样关联"},{"id":"section-本站表之间怎样关联","text":"三、本站表之间怎样关联"},{"id":"section-四索引为什么要根据查询建","text":"四、索引为什么要根据查询建"},{"id":"section-索引为什么要根据查询建","text":"四、索引为什么要根据查询建"},{"id":"section-五null时间与文本需要注意什么","text":"五、NULL、时间与文本需要注意什么"},{"id":"section-null时间与文本需要注意什么","text":"五、NULL、时间与文本需要注意什么"}]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}],"p":"$@14","v":null,"s":"$7"}}]]
 8:[["children",{"s":{"n":"slug","t":"d","k":"postgresql-tables-queries","s":["cpp-casts","merge-sort","series"]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
 1:[["children",{"s":"blog","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
-0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1c",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1e",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"PostgreSQL入门（一）：表、SQL、约束与索引 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"以反馈记录解释关系模型、筛选排序、外键、分页、组合索引及时间与NULL。"}],["$","link","2",{"rel":"canonical","href":"/blog/postgresql-tables-queries/"}]]}]}],null]}],null]}],"p":"$@20","v":null,"s":"$7"}},"a":"$@21","u":"$@22","b":"hO5EEl3pjCLQuF7XMZtvI"}
-23:I[2708,["5587","$b","8612","$c","1133","$d","5953","$e"],"FeedbackForm"]
-24:I[887,[],"OutletBoundary"]
-:HL["/_next/static/css/0d4edec444d587ad.css","style"]
-14:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"系列前后篇（按阅读顺序）","children":[["$","span",null,{}],["$","$Lf",null,{"href":"/blog/postgresql-transactions-locks/","children":[["$","span",null,{"children":"下一篇"}],"PostgreSQL入门（二）：事务、行锁与Schema迁移"]}]]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],false,["$","ul",null,{"className":"content-collection","children":[["$","li","psycopg-driver-parameters",{"children":[["$","$Lf",null,{"href":"/blog/psycopg-driver-parameters/","children":"psycopg入门：数据库驱动、参数绑定与类型适配"}],["$","span",null,{"children":"后端与数据库"}]]}],["$","li","postgresql-transactions-locks",{"children":[["$","$Lf",null,{"href":"/blog/postgresql-transactions-locks/","children":"PostgreSQL入门（二）：事务、行锁与Schema迁移"}],["$","span",null,{"children":"后端与数据库"}]]}]]}]]}]]}]
-15:["$","$L23",null,{"contentId":"postgresql-tables-queries"}]
-16:["$","div",null,{"className":"related-note","children":[["$","$Lf",null,{"href":"/blog/","children":"返回技术笔记"}],false]}]
-17:["$","$L11",null,{"headings":["$a:0:1:d:r:props:children:0:props:children:1:props:headings:0","$a:0:1:d:r:props:children:0:props:children:1:props:headings:1","$a:0:1:d:r:props:children:0:props:children:1:props:headings:2","$a:0:1:d:r:props:children:0:props:children:1:props:headings:3","$a:0:1:d:r:props:children:0:props:children:1:props:headings:4"]}]
-18:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
-19:["$","$L24",null,{"children":["$","$1f",null,{"name":"Next.MetadataOutlet","children":"$@25"}]}]
-22:true
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L16",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L18",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$12",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"PostgreSQL入门（一）：表、SQL、约束与索引 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"以反馈记录解释关系模型、筛选排序、外键、分页、组合索引及时间与NULL。"}],["$","meta","2",{"name":"robots","content":"noindex, follow"}],["$","link","3",{"rel":"canonical","href":"/projects/personal-site/postgresql-tables-queries/"}]]}]}],null]}],null]}],"p":"$@19","v":null,"s":"$7"}},"a":"$@1a","u":"$@1b","b":"6cQJHWqsmY59WndvF4Y-g"}
+13:null
+1b:true
 7:300
-25:null
 7:C
-21:0
+1a:0
 9:"$undefined"
 5:"$undefined"
-20:"$undefined"
-1a:"$undefined"
+19:"$undefined"
+14:"$undefined"

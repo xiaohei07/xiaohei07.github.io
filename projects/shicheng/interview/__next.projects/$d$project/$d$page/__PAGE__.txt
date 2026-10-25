@@ -2,23 +2,24 @@
 3:I[9630,[],""]
 4:I[1380,[],""]
 d:"static/chunks/5587-bf231f55b3fd3ee7.js"
-e:"static/chunks/8612-cbc92f3b94933c0e.js"
-f:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-ebed4086c1c4f871.js"
-10:I[3498,["5587","$d","8612","$e","4067","$f"],"default"]
-11:I[6279,["5587","$d","8612","$e","4067","$f"],"FilterLink"]
-12:I[5128,["5587","$d","8612","$e","4067","$f"],"ArticleToc"]
-13:"ProjectLegacyAnchors"
-14:I[1103,["5587","$d","8612","$e","4067","$f"],"$13"]
-15:I[4711,["5587","$d","8612","$e","4067","$f"],"ArticleBody"]
-1b:"ViewportBoundary"
-1c:I[887,[],"$1b"]
-1d:"MetadataBoundary"
+e:"static/chunks/8612-b99ba8072dd9edd6.js"
+f:"static/chunks/182-3013bbb685a41e87.js"
+10:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-aa53fa2ba92f4505.js"
+11:I[3498,["5587","$d","8612","$e","182","$f","4067","$10"],"default"]
+12:I[6279,["5587","$d","8612","$e","182","$f","4067","$10"],"FilterLink"]
+13:I[5128,["5587","$d","8612","$e","182","$f","4067","$10"],"ArticleToc"]
+14:"ProjectLegacyAnchors"
+15:I[1103,["5587","$d","8612","$e","182","$f","4067","$10"],"$14"]
+16:I[4711,["5587","$d","8612","$e","182","$f","4067","$10"],"ArticleBody"]
+1d:"ViewportBoundary"
 1e:I[887,[],"$1d"]
-1f:"$Sreact.suspense"
+1f:"MetadataBoundary"
+20:I[887,[],"$1f"]
+21:"$Sreact.suspense"
 6:X
 6:C
 7:X
-16:T3d38,<p>这份笔记用于在读完整个项目后复习：先交代问题和方案，再围绕数据流、取舍与故障处理展开。具体实现可回到<a href="/projects/shicheng/">拾程项目首页</a>查阅系列文章。</p>
+17:T3d38,<p>这份笔记用于在读完整个项目后复习：先交代问题和方案，再围绕数据流、取舍与故障处理展开。具体实现可回到<a href="/projects/shicheng/">拾程项目首页</a>查阅系列文章。</p>
 <span id="section-一先说项目与实际贡献" class="legacy-anchor" aria-hidden="true"></span><span id="section-11-开场介绍" class="legacy-anchor" aria-hidden="true"></span><span id="section-21-为什么不用常驻通用agent而直接调用模型" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-一一分钟说明项目">一、一分钟说明项目</h2>
 <p>拾程要解决的是招聘信息分散、截止日期容易遗漏的问题。群聊文字、图片、网页链接往往把岗位条件、投递入口和时间混在一起，直接保存截图还需要反复翻找。</p>
 <p>它把这些材料整理成可审核的信息：先保留原始材料，再通过模型提取结构化候选，由用户核对后生成机会或日程，最后接入邮件提醒和日历导出。候选不会因为模型已经输出JSON就自动成为事实。</p>
@@ -82,22 +83,24 @@ f:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-ebed
 <span id="section-210-20857mib能证明可以降到2gb吗" class="legacy-anchor" aria-hidden="true"></span><span id="section-三效果用这些证据陈述" class="legacy-anchor" aria-hidden="true"></span><span id="section-四个人掌握与未解决项" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-五结果限制与继续改进的依据">五、结果、限制与继续改进的依据</h2>
 <p>项目已经把材料导入、模型提取、人工审核、日程与机会管理、邮件提醒和导出连接起来。一次内存数据库副本回放中，50条已忽略候选原有43条被正确抑制，7条重新进入待确认；补齐缺企业综合活动的严格匹配分支后，同一组50条全部被抑制。这说明该组样例不再重复打扰用户，不代表模型抽取准确率或未来去重准确率达到100%。</p>
 <p>已有测试与有限资源观测支持特定环境下的功能判断，不能换算成长期稳定性、无限并发或任意2GB机器上的保证。介绍时应把真实记录、代码机制和未来方案分开：当前没有持续自动采集服务，没有完整日历双向同步，也没有将所有模型结果自动认定为事实。</p>
-<p>若继续迭代，可以优先考虑更细的材料时间基准、不同来源的失败提示和更有代表性的资源测量。是否引入新数据库或分布式队列，应由实际负载与维护需求决定。复习到这里再回到<a href="/projects/shicheng/">项目首页</a>，按需要进入各模块核对具体过程。</p>c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"shicheng-interview-summary","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L10",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L10",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":212}]]}],["$","$L10",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L11",null,{"className":"trail-current","href":"/projects/","children":["个人工具",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"拾程：项目汇报与面试复习"}],["$","p",null,{"className":"article-deck","children":"集中复习项目需求、数据流、技术取舍、问题处理和常见追问；配合系列文章使用。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["3,687"," 字"]}],["$","span",null,{"children":["阅读约 ",11," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","项目复习",{"children":"项目复习"}],["$","span","面试",{"children":"面试"}]]}],false]}],["$","$L12",null,{"headings":[{"id":"section-一一分钟说明项目","text":"一、一分钟说明项目","level":2},{"id":"section-二沿一条材料走完系统","text":"二、沿一条材料走完系统","level":2},{"id":"section-三常见追问与回答要点","text":"三、常见追问与回答要点","level":2},{"id":"section-31-为什么没有直接让模型创建日程","text":"3.1 为什么没有直接让模型创建日程","level":3},{"id":"section-32-为什么使用sqlite锁又怎样处理","text":"3.2 为什么使用SQLite，锁又怎样处理","level":3},{"id":"section-33-fastapi异步接口是否就不会阻塞","text":"3.3 FastAPI异步接口是否就不会阻塞","level":3},{"id":"section-34-模型输出如何校验pydantic负责什么","text":"3.4 模型输出如何校验，Pydantic负责什么","level":3},{"id":"section-35-重试为什么需要分层预算","text":"3.5 重试为什么需要分层预算","level":3},{"id":"section-36-增量导入为何不只有一个去重键","text":"3.6 增量导入为何不只有一个去重键","level":3},{"id":"section-37-游标什么时候推进远端成功本地失败怎么办","text":"3.7 游标什么时候推进，远端成功、本地失败怎么办","level":3},{"id":"section-38-日期问题是怎么修正的","text":"3.8 日期问题是怎么修正的","level":3},{"id":"section-39-两个页面同时保存怎样避免覆盖","text":"3.9 两个页面同时保存，怎样避免覆盖","level":3},{"id":"section-310-邮件为什么有结果不确定状态","text":"3.10 邮件为什么有“结果不确定”状态","level":3},{"id":"section-311-恢复日程与恢复数据库有什么区别","text":"3.11 恢复日程与恢复数据库有什么区别","level":3},{"id":"section-312-ics文件和日历同步有什么区别","text":"3.12 ICS文件和日历同步有什么区别","level":3},{"id":"section-313-链接抓取有什么安全边界","text":"3.13 链接抓取有什么安全边界","level":3},{"id":"section-四怎样讲一个具体问题","text":"四、怎样讲一个具体问题","level":2},{"id":"section-五结果限制与继续改进的依据","text":"五、结果、限制与继续改进的依据","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,false,["$","$L14",null,{"mappings":[]}],["$","$L15",null,{"html":"$16","zoomImages":true}],false,"$L17"]}],"$L18"]}]]}],null,"$L19"]}],"p":"$@1a","v":null,"s":"$7"}}]]
+<p>若继续迭代，可以优先考虑更细的材料时间基准、不同来源的失败提示和更有代表性的资源测量。是否引入新数据库或分布式队列，应由实际负载与维护需求决定。复习到这里再回到<a href="/projects/shicheng/">项目首页</a>，按需要进入各模块核对具体过程。</p>c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"shicheng-interview-summary","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L11",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L11",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L11",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L12",null,{"className":"trail-current","href":"/projects/","children":["个人工具",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"拾程：项目汇报与面试复习"}],["$","p",null,{"className":"article-deck","children":"集中复习项目需求、数据流、技术取舍、问题处理和常见追问；配合系列文章使用。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["3,687"," 字"]}],["$","span",null,{"children":["阅读约 ",11," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","项目复习",{"children":"项目复习"}],["$","span","面试",{"children":"面试"}]]}],false]}],["$","$L13",null,{"headings":[{"id":"section-一一分钟说明项目","text":"一、一分钟说明项目","level":2},{"id":"section-二沿一条材料走完系统","text":"二、沿一条材料走完系统","level":2},{"id":"section-三常见追问与回答要点","text":"三、常见追问与回答要点","level":2},{"id":"section-31-为什么没有直接让模型创建日程","text":"3.1 为什么没有直接让模型创建日程","level":3},{"id":"section-32-为什么使用sqlite锁又怎样处理","text":"3.2 为什么使用SQLite，锁又怎样处理","level":3},{"id":"section-33-fastapi异步接口是否就不会阻塞","text":"3.3 FastAPI异步接口是否就不会阻塞","level":3},{"id":"section-34-模型输出如何校验pydantic负责什么","text":"3.4 模型输出如何校验，Pydantic负责什么","level":3},{"id":"section-35-重试为什么需要分层预算","text":"3.5 重试为什么需要分层预算","level":3},{"id":"section-36-增量导入为何不只有一个去重键","text":"3.6 增量导入为何不只有一个去重键","level":3},{"id":"section-37-游标什么时候推进远端成功本地失败怎么办","text":"3.7 游标什么时候推进，远端成功、本地失败怎么办","level":3},{"id":"section-38-日期问题是怎么修正的","text":"3.8 日期问题是怎么修正的","level":3},{"id":"section-39-两个页面同时保存怎样避免覆盖","text":"3.9 两个页面同时保存，怎样避免覆盖","level":3},{"id":"section-310-邮件为什么有结果不确定状态","text":"3.10 邮件为什么有“结果不确定”状态","level":3},{"id":"section-311-恢复日程与恢复数据库有什么区别","text":"3.11 恢复日程与恢复数据库有什么区别","level":3},{"id":"section-312-ics文件和日历同步有什么区别","text":"3.12 ICS文件和日历同步有什么区别","level":3},{"id":"section-313-链接抓取有什么安全边界","text":"3.13 链接抓取有什么安全边界","level":3},{"id":"section-四怎样讲一个具体问题","text":"四、怎样讲一个具体问题","level":2},{"id":"section-五结果限制与继续改进的依据","text":"五、结果、限制与继续改进的依据","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,false,["$","$L15",null,{"mappings":[]}],["$","$L16",null,{"html":"$17","zoomImages":true}],false,"$L18"]}],"$L19"]}]]}],["$L1a"],"$L1b"]}],"p":"$@1c","v":null,"s":"$7"}}]]
 a:[["children",{"s":{"n":"page","t":"d","k":"interview","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
 8:[["children",{"s":{"n":"project","t":"d","k":"shicheng","s":["mental-health-evaluation"]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
 1:[["children",{"s":"projects","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
-0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1c",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1e",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"拾程：项目汇报与面试复习 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"集中复习项目需求、数据流、技术取舍、问题处理和常见追问；配合系列文章使用。"}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}],["$","link","3",{"rel":"canonical","href":"/projects/shicheng/interview/"}]]}]}],null]}],null]}],"p":"$@20","v":null,"s":"$7"}},"a":"$@21","u":"$@22","b":"hO5EEl3pjCLQuF7XMZtvI"}
-23:I[887,[],"OutletBoundary"]
-17:["$","div",null,{"className":"related-note","children":[["$","$L10",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L10",null,{"href":"/projects/shicheng/series/","data-reading-start":"true","children":"返回系列目录"}],["$","$L10",null,{"href":"/projects/shicheng/","data-reading-start":"true","children":"项目总览"}]]}]
-18:["$","$L12",null,{"headings":"$c:0:1:d:r:props:children:0:props:children:1:props:headings"}]
-19:["$","$L23",null,{"children":["$","$1f",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
-22:true
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"拾程：项目汇报与面试复习 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"集中复习项目需求、数据流、技术取舍、问题处理和常见追问；配合系列文章使用。"}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}],["$","link","3",{"rel":"canonical","href":"/projects/shicheng/interview/"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$7"}},"a":"$@23","u":"$@24","b":"6cQJHWqsmY59WndvF4Y-g"}
+25:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+18:["$","div",null,{"className":"related-note","children":[["$","$L11",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L11",null,{"href":"/projects/shicheng/series/","data-reading-start":"true","children":"返回系列目录"}],["$","$L11",null,{"href":"/projects/shicheng/","data-reading-start":"true","children":"项目总览"}]]}]
+19:["$","$L13",null,{"headings":"$c:0:1:d:r:props:children:0:props:children:1:props:headings"}]
+1a:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1b:["$","$L25",null,{"children":["$","$21",null,{"name":"Next.MetadataOutlet","children":"$@26"}]}]
+24:true
 7:300
-24:null
+26:null
 7:C
-21:0
+23:0
 b:"$undefined"
 9:"$undefined"
 5:"$undefined"
-20:"$undefined"
-1a:"$undefined"
+22:"$undefined"
+1c:"$undefined"

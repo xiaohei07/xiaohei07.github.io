@@ -1,0 +1,141 @@
+1:"$Sreact.fragment"
+4:I[9630,[],""]
+5:I[1380,[],""]
+b:I[887,[],"OutletBoundary"]
+c:"$Sreact.suspense"
+e:"ViewportBoundary"
+f:I[887,[],"$e"]
+11:"MetadataBoundary"
+12:I[887,[],"$11"]
+14:I[5718,[],"default",1]
+:HL["/_next/static/css/ed72070de5f1647a.css","style"]
+:HL["/_next/static/css/1d6e18c6254f9adc.css","style"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+6:X
+9:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$La",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]]}],"p":false,"v":null}}]]
+8:[["children",{"s":{"n":"page","t":"d","k":"site-feedback-data-flow","s":[]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q9"}]]
+7:[["children",{"s":{"n":"project","t":"d","k":"personal-site","s":["mental-health-evaluation"]},"h":197120,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
+3:[["children",{"s":"projects","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","projects","personal-site","site-feedback-data-flow",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1d6e18c6254f9adc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":"$L13"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$14",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"6cQJHWqsmY59WndvF4Y-g"}
+6:C
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+d:null
+13:[["$","title","0",{"children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"用一条人工反馈从输入框跟到数据库提交，分析校验失败、响应丢失和幂等键的设计边界。"}],["$","link","2",{"rel":"canonical","href":"/projects/personal-site/site-feedback-data-flow/"}]]
+16:"static/chunks/5587-bf231f55b3fd3ee7.js"
+17:"static/chunks/8612-b99ba8072dd9edd6.js"
+18:"static/chunks/182-3013bbb685a41e87.js"
+19:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-aa53fa2ba92f4505.js"
+1a:I[5128,["5587","$16","8612","$17","182","$18","4067","$19"],"ArticleToc"]
+1b:I[3498,["5587","$16","8612","$17","182","$18","4067","$19"],"default"]
+a:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L15",["$","h1",null,{"tabIndex":-1,"children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}],["$","p",null,{"className":"article-deck","children":"用一条人工反馈从输入框跟到数据库提交，分析校验失败、响应丢失和幂等键的设计边界"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-21","children":"2026-10-21"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,652"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","数据流",{"children":"数据流"}],["$","span","FastAPI",{"children":"FastAPI"}],["$","span","事务",{"children":"事务"}],["$","span","幂等性",{"children":"幂等性"}]]}],false]}],["$","$L1a",null,{"headings":[{"id":"section-一从输入框到请求体","text":"一、从输入框到请求体","level":2},{"id":"section-二网关与api检查哪些条件","text":"二、网关与API检查哪些条件","level":2},{"id":"section-三数据在每一层变成什么","text":"三、数据在每一层变成什么","level":2},{"id":"section-四失败发生在不同阶段结果并不相同","text":"四、失败发生在不同阶段，结果并不相同","level":2},{"id":"section-五为什么当前还不能保证重复提交只产生一条","text":"五、为什么当前还不能保证重复提交只产生一条","level":2},{"id":"section-六如果要把反馈扩展成公开评论","text":"六、如果要把反馈扩展成公开评论","level":2},{"id":"request-flow","text":"跟着一次请求走","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L1b",null,{"href":"/projects/personal-site/series/","data-reading-start":"true","children":"系列文章与阅读路线"}],["$","$L1b",null,{"href":"/projects/personal-site/","data-reading-start":"true","children":"项目总览"}],["$","span",null,{"children":[4," / ",28," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","personal-site-build",{"children":[["$","strong",null,{"children":"个人主页与博客建设"}],["$","ol",null,{"children":[["$","li","site-upgrade-architecture",{"value":1,"children":["$","$L1b",null,{"href":"/projects/personal-site/site-upgrade-architecture/","data-reading-start":"true","aria-current":"$undefined","children":"个人主页建设（一）：升级动机、框架选择与系统分工"}]}],["$","li","site-setup-migration",{"value":2,"children":["$","$L1b",null,{"href":"/projects/personal-site/site-setup-migration/","data-reading-start":"true","aria-current":"$undefined","children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}]}],["$","li","site-content-search-flow",{"value":3,"children":["$","$L1b",null,{"href":"/projects/personal-site/site-content-search-flow/","data-reading-start":"true","aria-current":"$undefined","children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}]}],["$","li","site-feedback-data-flow",{"value":4,"children":["$","$L1b",null,{"href":"/projects/personal-site/site-feedback-data-flow/","data-reading-start":"true","aria-current":"page","children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}]}],["$","li","site-auth-review-concurrency",{"value":5,"children":["$","$L1b",null,{"href":"/projects/personal-site/site-auth-review-concurrency/","data-reading-start":"true","aria-current":"$undefined","children":"个人主页建设（五）：作者登录、反馈审核与并发控制"}]}],["$","li","site-images-performance",{"value":6,"children":["$","$L1b",null,{"href":"/projects/personal-site/site-images-performance/","data-reading-start":"true","aria-current":"$undefined","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}]}],["$","li","site-deployment-recovery",{"value":7,"children":["$","$L1b",null,{"href":"/projects/personal-site/site-deployment-recovery/","data-reading-start":"true","aria-current":"$undefined","children":"个人主页建设（七）：Nginx部署、版本切换与数据恢复"}]}],["$","li","site-interview-design",{"value":8,"children":["$","$L1b",null,{"href":"/projects/personal-site/site-interview-design/","data-reading-start":"true","aria-current":"$undefined","children":"个人主页建设（八）：从真实实现继续追问设计与故障处理"}]}]]}]]}],"$L1c","$L1d","$L1e","$L1f","$L20"]]}]]}],null,"$L21","$L22","$L23","$L24","$L25"]}],"$L26"]}]]}]
+27:I[4711,["5587","$16","8612","$17","182","$18","4067","$19"],"ArticleBody"]
+29:"RequestFlowLoader"
+2a:I[3236,["5587","$16","8612","$17","182","$18","4067","$19"],"$29"]
+2b:I[2708,["5587","$16","8612","$17","182","$18","4067","$19"],"FeedbackForm"]
+1c:["$","section","frontend-foundations",{"children":[["$","strong",null,{"children":"JavaScript、TypeScript与React基础"}],["$","ol",null,{"children":[["$","li","javascript-async-fetch",{"value":9,"children":["$","$L1b",null,{"href":"/projects/personal-site/javascript-async-fetch/","data-reading-start":"true","aria-current":"$undefined","children":"JavaScript异步请求：从Promise、await到表单失败处理"}]}],["$","li","typescript-types-boundaries",{"value":10,"children":["$","$L1b",null,{"href":"/projects/personal-site/typescript-types-boundaries/","data-reading-start":"true","aria-current":"$undefined","children":"TypeScript入门：对象类型、联合类型与网络数据边界"}]}],["$","li","react-components-props",{"value":11,"children":["$","$L1b",null,{"href":"/projects/personal-site/react-components-props/","data-reading-start":"true","aria-current":"$undefined","children":"React入门（一）：组件、JSX、props与列表身份"}]}],["$","li","react-state-effects",{"value":12,"children":["$","$L1b",null,{"href":"/projects/personal-site/react-state-effects/","data-reading-start":"true","aria-current":"$undefined","children":"React入门（二）：状态、Effect与目录和配色交互"}]}],["$","li","css-responsive-images",{"value":13,"children":["$","$L1b",null,{"href":"/projects/personal-site/css-responsive-images/","data-reading-start":"true","aria-current":"$undefined","children":"响应式页面基础：CSS布局、图片候选与动画呈现"}]}]]}]]}]
+1d:["$","section","nextjs-foundations",{"children":[["$","strong",null,{"children":"Next.js从入门到本站应用"}],["$","ol",null,{"children":[["$","li","nextjs-position-toolchain",{"value":14,"children":["$","$L1b",null,{"href":"/projects/personal-site/nextjs-position-toolchain/","data-reading-start":"true","aria-current":"$undefined","children":"Next.js入门（一）：框架定位、技术关系与工程工具链"}]}],["$","li","nextjs-routing-layouts",{"value":15,"children":["$","$L1b",null,{"href":"/projects/personal-site/nextjs-routing-layouts/","data-reading-start":"true","aria-current":"$undefined","children":"Next.js入门（二）：路由目录、公共布局与文章参数"}]}],["$","li","nextjs-rendering-hydration",{"value":16,"children":["$","$L1b",null,{"href":"/projects/personal-site/nextjs-rendering-hydration/","data-reading-start":"true","aria-current":"$undefined","children":"Next.js入门（三）：SSG、SSR、组件边界与交互接管"}]}],["$","li","nextjs-content-cache",{"value":17,"children":["$","$L1b",null,{"href":"/projects/personal-site/nextjs-content-cache/","data-reading-start":"true","aria-current":"$undefined","children":"Next.js入门（四）：Markdown内容管线与多层缓存"}]}]]}]]}]
+1e:["$","section","python-web-foundations",{"children":[["$","strong",null,{"children":"Python Web接口与安全"}],["$","ol",null,{"children":[["$","li","python-api-environment",{"value":18,"children":["$","$L1b",null,{"href":"/projects/personal-site/python-api-environment/","data-reading-start":"true","aria-current":"$undefined","children":"Python Web入门（一）：环境、FastAPI接口与ASGI服务"}]}],["$","li","fastapi-dependencies-concurrency",{"value":19,"children":["$","$L1b",null,{"href":"/projects/personal-site/fastapi-dependencies-concurrency/","data-reading-start":"true","aria-current":"$undefined","children":"Python Web入门（二）：FastAPI依赖、错误与并发等待"}]}],["$","li","pydantic-validation",{"value":20,"children":["$","$L1b",null,{"href":"/projects/personal-site/pydantic-validation/","data-reading-start":"true","aria-current":"$undefined","children":"Pydantic输入校验：字段、validator与模型边界"}]}],["$","li","browser-cookie-cors-csrf",{"value":21,"children":["$","$L1b",null,{"href":"/projects/personal-site/browser-cookie-cors-csrf/","data-reading-start":"true","aria-current":"$undefined","children":"浏览器与API安全：Cookie、会话、CORS和CSRF"}]}]]}]]}]
+1f:["$","section","postgresql-foundations",{"children":[["$","strong",null,{"children":"PostgreSQL与Python数据访问"}],["$","ol",null,{"children":[["$","li","postgresql-tables-queries",{"value":22,"children":["$","$L1b",null,{"href":"/projects/personal-site/postgresql-tables-queries/","data-reading-start":"true","aria-current":"$undefined","children":"PostgreSQL入门（一）：表、SQL、约束与索引"}]}],["$","li","postgresql-transactions-locks",{"value":23,"children":["$","$L1b",null,{"href":"/projects/personal-site/postgresql-transactions-locks/","data-reading-start":"true","aria-current":"$undefined","children":"PostgreSQL入门（二）：事务、行锁与Schema迁移"}]}],["$","li","sqlalchemy-session-pool",{"value":24,"children":["$","$L1b",null,{"href":"/projects/personal-site/sqlalchemy-session-pool/","data-reading-start":"true","aria-current":"$undefined","children":"SQLAlchemy入门：ORM、Session、提交与连接池"}]}],["$","li","psycopg-driver-parameters",{"value":25,"children":["$","$L1b",null,{"href":"/projects/personal-site/psycopg-driver-parameters/","data-reading-start":"true","aria-current":"$undefined","children":"psycopg入门：数据库驱动、参数绑定与类型适配"}]}]]}]]}]
+20:["$","section","web-operations",{"children":[["$","strong",null,{"children":"HTTP、部署与测试观测"}],["$","ol",null,{"children":[["$","li","web-http-browser",{"value":26,"children":["$","$L1b",null,{"href":"/projects/personal-site/web-http-browser/","data-reading-start":"true","aria-current":"$undefined","children":"HTTP与浏览器基础：从打开文章到提交一条反馈"}]}],["$","li","cloud-docker-nginx",{"value":27,"children":["$","$L1b",null,{"href":"/projects/personal-site/cloud-docker-nginx/","data-reading-start":"true","aria-current":"$undefined","children":"部署基础：云服务器、Docker、Nginx与HTTP缓存"}]}],["$","li","web-testing-observability",{"value":28,"children":["$","$L1b",null,{"href":"/projects/personal-site/web-testing-observability/","data-reading-start":"true","aria-current":"$undefined","children":"Web测试与观测：验证数据流、性能指标与故障边界"}]}]]}]]}]
+28:T2124,<p>在文章下填写纠错后，页面会显示一个回执编号。这个编号背后有完整的处理过程：输入框保存字符串，浏览器发JSON，后端检查内容，再写入数据库。只有把这些变化按顺序看清楚，才能解释失败时应该保留什么、能否重试。</p>
+<p>本站反馈只供作者查看，类型包括纠错、问题和其他建议。下面使用人工构造的消息，不展示真实读者内容；文章中的请求演示也不会提交生产数据。</p>
+<span id="section-从输入框到请求体" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-一从输入框到请求体">一、从输入框到请求体</h2>
+<p>假设当前文章ID为<code>python-slices</code>，读者选择question，填写“这个例子如何处理空列表”。React的message状态保存输入，contentId由文章详情传给FeedbackForm。</p>
+<p>点击提交后，代码先阻止表单默认跳转，清理上一次提示，检查去除首尾空白后的长度，再设置busy。请求体形成如下数据：</p>
+<div class="code-block"><div class="code-toolbar"><span>json</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"content_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"python-slices"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"kind"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"question"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"message"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"这个例子如何处理空列表"</span>
+<span class="hljs-punctuation">}</span>
+</code></pre></div>
+<p><code>apiRequest</code>把路径组织为<code>/api/v1/feedback</code>，设置JSON内容类型和15秒客户端等待上限。等待期间禁用相关控件，成功才清空输入，失败保留。按钮禁用改善当前页面的连续点击体验，不能阻止脚本客户端或另一个页面发请求。</p>
+<span id="section-网关与api检查哪些条件" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-二网关与api检查哪些条件">二、网关与API检查哪些条件</h2>
+<p>Nginx按<code>/api/</code>路径转发请求，并限制请求体大小；API还有自己的请求体限制。接口检查来源，Pydantic解析模型，限流器检查对应动作与客户端地址，业务逻辑再查内容登记。</p>
+<p><code>FeedbackCreate</code>限定content_id格式、kind允许值和消息长度，拒绝多余字段与NUL。<code>db.get(ContentEntry, payload.content_id)</code>继续确认内容存在且发布状态允许。两步都成功，才能创建反馈。</p>
+<p>这里按职责解释检查，并不承诺任意多种错误同时出现时固定先返回某个错误。中间件、依赖和参数解析共同决定具体执行行为，需以实际版本和测试为准。</p>
+<p><a href="/images/website-series/feedback-flow.svg" target="_blank" rel="noopener noreferrer" class="article-image-link" aria-label="查看图片原图：反馈从浏览器到数据库提交，再返回回执的时序"><img src="/images/website-series/feedback-flow.svg" alt="反馈从浏览器到数据库提交，再返回回执的时序" width="1100" height="500" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></p>
+<p><a href="/images/website-series/feedback-flow.svg">查看图中细节</a></p>
+<span id="section-数据在每一层变成什么" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-三数据在每一层变成什么">三、数据在每一层变成什么</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>位置</th><th>数据表示</th><th>关键变化</th></tr></thead><tbody><tr><td>React状态</td><td>JS字符串和选项值</td><td>用户编辑</td></tr><tr><td>HTTP请求体</td><td>JSON文本</td><td>对象序列化</td></tr><tr><td>Pydantic模型</td><td>受约束的Python字段</td><td>清理、解析与校验</td></tr><tr><td>SQLAlchemy对象</td><td>Feedback实例</td><td>加入会话，准备写入</td></tr><tr><td>psycopg调用</td><td>SQL与参数</td><td>类型适配与协议交互</td></tr><tr><td>PostgreSQL</td><td>已提交记录</td><td>约束检查、事务持久化</td></tr><tr><td>HTTP回执</td><td>ID与pending状态的JSON</td><td>只返回允许公开的结果</td></tr><tr><td>页面提示</td><td>React状态</td><td>展示回执并清空已提交输入</td></tr></tbody></table>
+<p>SQLAlchemy的<code>add</code>还没有完成持久提交，<code>commit</code>成功后才返回201。回执的pending表示等待作者处理，不表示问题已经解决。数据库里的ID是反馈身份，与文章的content_id是两个不同字段。</p>
+<span id="section-失败发生在不同阶段结果并不相同" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-四失败发生在不同阶段结果并不相同">四、失败发生在不同阶段，结果并不相同</h2>
+<p>输入不符合规则时返回422，当前请求不会进入正常写库路径。请求过密可能返回429。数据库不可用或SQLAlchemy异常由应用返回503；网关故障还可能形成其他状态或网络错误。</p>
+<p>如果在提交前事务失败且回滚，没有本次成功写入。如果提交已经成功，却在返回响应时断开，数据库可能存在反馈，浏览器仍只知道“没有确认成功”。因此客户端的超时提示保留输入，并提醒稍后确认再重试，不把超时直接写成“数据库没有保存”。</p>
+<p>当前公开接口没有按请求键查询已有回执的能力，用户无法靠自动查询完成无歧义确认。这是现有设计限制，前端提示只能诚实表达不确定性，不能凭空提供没有的恢复功能。</p>
+<p>还要区分三个计时：前端15秒控制浏览器愿意等多久；连接池3秒控制等待空闲连接多久；驱动建立连接的3秒控制新连接阶段。它们作用于不同位置，不是三个数字相加便得到一次请求的固定耗时。数据库取得连接后还可能执行SQL或等待锁，配置没有给出整条链的容量保证。</p>
+<span id="section-为什么当前还不能保证重复提交只产生一条" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-五为什么当前还不能保证重复提交只产生一条">五、为什么当前还不能保证重复提交只产生一条</h2>
+<p>同一页面的busy只覆盖一次等待窗口，IP限流只限制频率。第一次提交成功后响应丢失，第二次合法POST仍可能创建另一条记录。本站没有请求幂等键，因此不会把当前实现写成exactly-once。</p>
+<p>拟议方案可以为一次逻辑提交生成requestId，服务端使用唯一约束保存该键、请求摘要和回执，在同一事务中完成。相同键且相同内容重放回执；相同键却不同内容拒绝。还要定义匿名客户端范围、过期时间、处理中状态和失败后的重试策略。</p>
+<p>“先查询有没有，再插入”不能单独保证并发正确，两次查询可能都没找到。需要数据库唯一性和事务共同约束。若把记录放Redis、业务数据放PostgreSQL，又增加了跨存储一致性问题，这也解释了为什么不能只加一个缓存键就结束设计。</p>
+<span id="section-如果要把反馈扩展成公开评论" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-六如果要把反馈扩展成公开评论">六、如果要把反馈扩展成公开评论</h2>
+<p>需要新增公开展示条件、审核与删除规则、内容安全处理、滥用控制，以及可能的用户身份。作者把一条反馈标成resolved，并不会自动生成回复文本；当前模型也没有读者点赞关系。</p>
+<p>公开评论的读取流与私密收件箱不同，缓存和分页也要重新设计。可以复用输入校验与事务经验，但不应直接把当前管理列表公开给所有人。</p>
+<p>读完后可以用<a href="#request-flow">请求链演示</a>分别选择正常提交、字段失败和数据库失败。演示只显示已定义的分支，不覆盖“数据库已提交但回执丢失”的全部网络竞态，这种不确定状态仍以上面的文字分析为准。</p>21:["$","$L27",null,{"html":"$28"}]
+22:["$","$L2a",null,{}]
+23:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L1b",null,{"href":"/projects/personal-site/site-content-search-flow/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}]]}],["$","$L1b",null,{"href":"/projects/personal-site/site-auth-review-concurrency/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"个人主页建设（五）：作者登录、反馈审核与并发控制"}]]}]]}]
+24:["$","$L2b",null,{"contentId":"site-feedback-data-flow"}]
+25:["$","div",null,{"className":"related-note","children":[[["$","$L1b",null,{"href":"/projects/personal-site/series/","data-reading-start":"true","children":"返回系列目录"}],["$","$L1b",null,{"href":"/projects/personal-site/","data-reading-start":"true","children":"项目总览"}],["$","$L1b",null,{"href":"/projects/","children":"返回全部项目"}]],false]}]
+26:["$","$L1a",null,{"headings":["$a:props:children:1:props:headings:0","$a:props:children:1:props:headings:1","$a:props:children:1:props:headings:2","$a:props:children:1:props:headings:3","$a:props:children:1:props:headings:4","$a:props:children:1:props:headings:5",{"id":"request-flow","text":"跟着一次请求走","level":2}]}]
+2c:Tb2c,(()=>{const d={"wallpaper":"banner","layout":"list","cardStyle":"soft","textSize":"normal","hero":true,"carousel":false,"waves":false,"fade":true,"motion":true,"typewriter":true,"progress":true,"petals":false,"dim":28,"blur":0,"cardOpacity":78,"colorMode":"section","customColor":"#32846b","sectionColors":{},"customTheme":"","sectionThemes":{}},enums={"wallpaper":["banner","fullscreen","overlay","none"],"layout":["list","grid"],"cardStyle":["soft","flat"],"textSize":["normal","large"],"colorMode":["section","custom"]},bools=["hero","carousel","waves","fade","motion","typewriter","progress","petals"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]));const color=(function(a,b){let c=b.startsWith("/credits")?"about":b.split("/")[1],d=["home","blog","research","projects","about"].includes(c)?c:"home",e=(a.sectionColors&&"object"==typeof a.sectionColors&&!Array.isArray(a.sectionColors)?a.sectionColors:{})[d],f="string"==typeof e&&/^#[\da-f]{6}$/i.test(e)?e.toLowerCase():void 0,g="string"==typeof a.customColor&&/^#[\da-f]{6}$/i.test(a.customColor)?a.customColor.toLowerCase():"#32846b",h=a.sectionThemes&&"object"==typeof a.sectionThemes&&!Array.isArray(a.sectionThemes)?a.sectionThemes:{},i="custom"===a.colorMode?a.customTheme:h[d],j="string"==typeof i&&["home","blog","research","projects","about"].includes(i)?i:void 0;return{section:d,color:"custom"===a.colorMode?g:f??g,customized:"custom"===a.colorMode?!j:!!f,theme:j??d}})(p,location.pathname);document.documentElement.setAttribute('data-custom-palette',String(color.customized));document.documentElement.setAttribute('data-palette-section',color.theme);const palette=(function(a){let b=/^#[\da-f]{6}$/i.test(a)?a:"#32846b",c=[1,3,5].map(a=>Number.parseInt(b.slice(a,a+2),16)),d={};for(let[a,[b,e]]of Object.entries({"light-page":[248,.09],"light-surface":[255,.025],"light-surface-soft":[252,.05],"light-surface-raised":[246,.08],"light-ink":[0,.15],"light-muted":[0,.32],"light-line":[213,.12],"light-accent":[0,.4],"light-accent-strong":[0,.3],"light-accent-soft":[248,.1],"light-on-accent":[255,0],"dark-page":[16,.025],"dark-surface":[26,.045],"dark-surface-soft":[22,.04],"dark-surface-raised":[33,.06],"dark-ink":[255,.12],"dark-muted":[255,.34],"dark-line":[72,.1],"dark-accent":[255,.35],"dark-accent-strong":[255,.22],"dark-accent-soft":[24,.1],"dark-on-accent":[0,.1]}))d[`--palette-${a}`]=`#${c.map(a=>Math.round(b*(1-e)+a*e).toString(16).padStart(2,"0")).join("")}`;return d})(color.color);for(const k in palette)document.documentElement.style.setProperty(k,palette[k])})()2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2c"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],"$L2d"]}],"$L2e"]}]
+2f:"static/chunks/7107-a5162dd25c1ffcb2.js"
+30:"static/chunks/app/layout-60d9bfd13e51c573.js"
+31:I[5376,["5587","$16","7107","$2f","7177","$30"],"DisplayProvider"]
+32:"NavigationFeedback"
+33:I[2842,["5587","$16","7107","$2f","7177","$30"],"$32"]
+34:I[4085,["5587","$16","7107","$2f","7177","$30"],"SiteHeader"]
+35:I[5803,["5587","$16","7107","$2f","7177","$30"],"SiteFrame"]
+36:I[164,["5587","$16","7107","$2f","7177","$30"],"ProfileSidebar"]
+2d:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]
+2e:["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L31",null,{"children":[["$","$L33",null,{}],["$","$L34",null,{"tags":["编程语言知识点","Python","C++"],"categoryIds":["foundations","frontend","backend","agent","computing","ai","deployment","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L35",null,{"sidebar":["$","$L36",null,{"categoryIds":"$2e:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1b",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1b",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1b",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1b",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]
+37:I[6279,["5587","$16","8612","$17","182","$18","4067","$19"],"FilterLink"]
+15:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1b",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1b",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L1b",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L37",null,{"className":"trail-current","href":"/projects/","children":["网站建设",["$","span",null,{"children":4}]]}],["$","$L1b",null,{"className":"trail-parent","href":"/projects/personal-site/series/","children":"个人主页与博客建设"}]]}]

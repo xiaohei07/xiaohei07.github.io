@@ -1,0 +1,103 @@
+2:"$Sreact.fragment"
+3:I[9630,[],""]
+4:I[1380,[],""]
+d:"static/chunks/5587-bf231f55b3fd3ee7.js"
+e:"static/chunks/8612-b99ba8072dd9edd6.js"
+f:"static/chunks/182-3013bbb685a41e87.js"
+10:"static/chunks/app/projects/%5Bproject%5D/%5Bpage%5D/page.project-writing-aa53fa2ba92f4505.js"
+11:I[3498,["5587","$d","8612","$e","182","$f","4067","$10"],"default"]
+12:I[6279,["5587","$d","8612","$e","182","$f","4067","$10"],"FilterLink"]
+13:I[5128,["5587","$d","8612","$e","182","$f","4067","$10"],"ArticleToc"]
+25:"ViewportBoundary"
+26:I[887,[],"$25"]
+27:"MetadataBoundary"
+28:I[887,[],"$27"]
+29:"$Sreact.suspense"
+6:X
+6:C
+7:X
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L11",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L11",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L11",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L12",null,{"className":"trail-current","href":"/projects/","children":["网站建设",["$","span",null,{"children":4}]]}],["$","$L11",null,{"className":"trail-parent","href":"/projects/personal-site/series/","children":"个人主页与博客建设"}]]}],["$","h1",null,{"tabIndex":-1,"children":"浏览器与API安全：Cookie、会话、CORS和CSRF"}],["$","p",null,{"className":"article-deck","children":"从作者登录继续追踪后续请求，区分身份认证、跨源读取、防伪和XSS风险"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","rect",null,{"x":"3","y":"5","width":"18","height":"16","rx":"3"}],["$","path",null,{"d":"M7 3v4m10-4v4M3 11h18M7 15h2m4 0h2m-8 3h2"}]]}],"发布于 ",["$","time",null,{"dateTime":"2026-10-21","children":"2026-10-21"}]]}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":[["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":["$","path",null,{"d":"M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"}]}],"1,261"," 字"]}],["$","span",null,{"title":"按正文约每分钟350个汉字或200个英文词估算，含代码","children":["阅读约 ",4," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","Web安全",{"children":"Web安全"}],["$","span","鉴权",{"children":"鉴权"}]]}],false]}],["$","$L13",null,{"headings":[{"id":"section-一cookie怎样关联后续请求","text":"一、Cookie怎样关联后续请求","level":2},{"id":"section-二同源与同站有什么区别","text":"二、同源与同站有什么区别","level":2},{"id":"section-三cors在浏览器里控制什么","text":"三、CORS在浏览器里控制什么","level":2},{"id":"section-四csrf为何与自动携带cookie有关","text":"四、CSRF为何与自动携带Cookie有关","level":2},{"id":"section-五登录退出在服务端留下什么","text":"五、登录退出在服务端留下什么","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L11",null,{"href":"/projects/personal-site/series/","data-reading-start":"true","children":"系列文章与阅读路线"}],["$","$L11",null,{"href":"/projects/personal-site/","data-reading-start":"true","children":"项目总览"}],["$","span",null,{"children":[21," / ",28," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","personal-site-build",{"children":[["$","strong",null,{"children":"个人主页与博客建设"}],["$","ol",null,{"children":[["$","li","site-upgrade-architecture",{"value":1,"children":["$","$L11",null,{"href":"/projects/personal-site/site-upgrade-architecture/","data-reading-start":"true","children":"个人主页建设（一）：升级动机、框架选择与系统分工"}]}],["$","li","site-setup-migration",{"value":2,"children":["$","$L11",null,{"href":"/projects/personal-site/site-setup-migration/","data-reading-start":"true","children":"个人主页建设（二）：工程搭建、环境恢复与旧文迁移"}]}],["$","li","site-content-search-flow",{"value":3,"children":["$","$L11",null,{"href":"/projects/personal-site/site-content-search-flow/","data-reading-start":"true","children":"个人主页建设（三）：一篇文章怎样进入正文、目录与搜索"}]}],["$","li","site-feedback-data-flow",{"value":4,"children":["$","$L11",null,{"href":"/projects/personal-site/site-feedback-data-flow/","data-reading-start":"true","children":"个人主页建设（四）：反馈提交的数据流、事务与超时处理"}]}],"$L14","$L15","$L16","$L17"]}]]}],"$L18","$L19","$L1a","$L1b","$L1c"]]}]]}],null,"$L1d",false,"$L1e","$L1f","$L20"]}],"$L21"]}]]}],["$L22"],"$L23"]}],"p":"$@24","v":null,"s":"$7"}}]]
+a:[["children",{"s":{"n":"page","t":"d","k":"browser-cookie-cors-csrf","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
+8:[["children",{"s":{"n":"project","t":"d","k":"personal-site","s":["mental-health-evaluation"]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
+1:[["children",{"s":"projects","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L26",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L28",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$29",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"浏览器与API安全：Cookie、会话、CORS和CSRF | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从作者登录继续追踪后续请求，区分身份认证、跨源读取、防伪和XSS风险。"}],["$","link","2",{"rel":"canonical","href":"/projects/personal-site/browser-cookie-cors-csrf/"}]]}]}],null]}],null]}],"p":"$@2a","v":null,"s":"$7"}},"a":"$@2b","u":"$@2c","b":"6cQJHWqsmY59WndvF4Y-g"}
+2d:I[4711,["5587","$d","8612","$e","182","$f","4067","$10"],"ArticleBody"]
+2f:I[2708,["5587","$d","8612","$e","182","$f","4067","$10"],"FeedbackForm"]
+30:I[887,[],"OutletBoundary"]
+:HL["/_next/static/css/0d4edec444d587ad.css","style"]
+14:["$","li","site-auth-review-concurrency",{"value":5,"children":["$","$L11",null,{"href":"/projects/personal-site/site-auth-review-concurrency/","data-reading-start":"true","children":"个人主页建设（五）：作者登录、反馈审核与并发控制"}]}]
+15:["$","li","site-images-performance",{"value":6,"children":["$","$L11",null,{"href":"/projects/personal-site/site-images-performance/","data-reading-start":"true","children":"个人主页建设（六）：横幅加载、动画状态与性能问题排查"}]}]
+16:["$","li","site-deployment-recovery",{"value":7,"children":["$","$L11",null,{"href":"/projects/personal-site/site-deployment-recovery/","data-reading-start":"true","children":"个人主页建设（七）：Nginx部署、版本切换与数据恢复"}]}]
+17:["$","li","site-interview-design",{"value":8,"children":["$","$L11",null,{"href":"/projects/personal-site/site-interview-design/","data-reading-start":"true","children":"个人主页建设（八）：从真实实现继续追问设计与故障处理"}]}]
+18:["$","section","frontend-foundations",{"children":[["$","strong",null,{"children":"JavaScript、TypeScript与React基础"}],["$","ol",null,{"children":[["$","li","javascript-async-fetch",{"value":9,"children":["$","$L11",null,{"href":"/projects/personal-site/javascript-async-fetch/","data-reading-start":"true","children":"JavaScript异步请求：从Promise、await到表单失败处理"}]}],["$","li","typescript-types-boundaries",{"value":10,"children":["$","$L11",null,{"href":"/projects/personal-site/typescript-types-boundaries/","data-reading-start":"true","children":"TypeScript入门：对象类型、联合类型与网络数据边界"}]}],["$","li","react-components-props",{"value":11,"children":["$","$L11",null,{"href":"/projects/personal-site/react-components-props/","data-reading-start":"true","children":"React入门（一）：组件、JSX、props与列表身份"}]}],["$","li","react-state-effects",{"value":12,"children":["$","$L11",null,{"href":"/projects/personal-site/react-state-effects/","data-reading-start":"true","children":"React入门（二）：状态、Effect与目录和配色交互"}]}],["$","li","css-responsive-images",{"value":13,"children":["$","$L11",null,{"href":"/projects/personal-site/css-responsive-images/","data-reading-start":"true","children":"响应式页面基础：CSS布局、图片候选与动画呈现"}]}]]}]]}]
+19:["$","section","nextjs-foundations",{"children":[["$","strong",null,{"children":"Next.js从入门到本站应用"}],["$","ol",null,{"children":[["$","li","nextjs-position-toolchain",{"value":14,"children":["$","$L11",null,{"href":"/projects/personal-site/nextjs-position-toolchain/","data-reading-start":"true","children":"Next.js入门（一）：框架定位、技术关系与工程工具链"}]}],["$","li","nextjs-routing-layouts",{"value":15,"children":["$","$L11",null,{"href":"/projects/personal-site/nextjs-routing-layouts/","data-reading-start":"true","children":"Next.js入门（二）：路由目录、公共布局与文章参数"}]}],["$","li","nextjs-rendering-hydration",{"value":16,"children":["$","$L11",null,{"href":"/projects/personal-site/nextjs-rendering-hydration/","data-reading-start":"true","children":"Next.js入门（三）：SSG、SSR、组件边界与交互接管"}]}],["$","li","nextjs-content-cache",{"value":17,"children":["$","$L11",null,{"href":"/projects/personal-site/nextjs-content-cache/","data-reading-start":"true","children":"Next.js入门（四）：Markdown内容管线与多层缓存"}]}]]}]]}]
+1a:["$","section","python-web-foundations",{"children":[["$","strong",null,{"children":"Python Web接口与安全"}],["$","ol",null,{"children":[["$","li","python-api-environment",{"value":18,"children":["$","$L11",null,{"href":"/projects/personal-site/python-api-environment/","data-reading-start":"true","children":"Python Web入门（一）：环境、FastAPI接口与ASGI服务"}]}],["$","li","fastapi-dependencies-concurrency",{"value":19,"children":["$","$L11",null,{"href":"/projects/personal-site/fastapi-dependencies-concurrency/","data-reading-start":"true","children":"Python Web入门（二）：FastAPI依赖、错误与并发等待"}]}],["$","li","pydantic-validation",{"value":20,"children":["$","$L11",null,{"href":"/projects/personal-site/pydantic-validation/","data-reading-start":"true","children":"Pydantic输入校验：字段、validator与模型边界"}]}],["$","li","browser-cookie-cors-csrf",{"value":21,"children":["$","$L11",null,{"href":"/projects/personal-site/browser-cookie-cors-csrf/","data-reading-start":"true","aria-current":"page","children":"浏览器与API安全：Cookie、会话、CORS和CSRF"}]}]]}]]}]
+1b:["$","section","postgresql-foundations",{"children":[["$","strong",null,{"children":"PostgreSQL与Python数据访问"}],["$","ol",null,{"children":[["$","li","postgresql-tables-queries",{"value":22,"children":["$","$L11",null,{"href":"/projects/personal-site/postgresql-tables-queries/","data-reading-start":"true","children":"PostgreSQL入门（一）：表、SQL、约束与索引"}]}],["$","li","postgresql-transactions-locks",{"value":23,"children":["$","$L11",null,{"href":"/projects/personal-site/postgresql-transactions-locks/","data-reading-start":"true","children":"PostgreSQL入门（二）：事务、行锁与Schema迁移"}]}],["$","li","sqlalchemy-session-pool",{"value":24,"children":["$","$L11",null,{"href":"/projects/personal-site/sqlalchemy-session-pool/","data-reading-start":"true","children":"SQLAlchemy入门：ORM、Session、提交与连接池"}]}],["$","li","psycopg-driver-parameters",{"value":25,"children":["$","$L11",null,{"href":"/projects/personal-site/psycopg-driver-parameters/","data-reading-start":"true","children":"psycopg入门：数据库驱动、参数绑定与类型适配"}]}]]}]]}]
+1c:["$","section","web-operations",{"children":[["$","strong",null,{"children":"HTTP、部署与测试观测"}],["$","ol",null,{"children":[["$","li","web-http-browser",{"value":26,"children":["$","$L11",null,{"href":"/projects/personal-site/web-http-browser/","data-reading-start":"true","children":"HTTP与浏览器基础：从打开文章到提交一条反馈"}]}],["$","li","cloud-docker-nginx",{"value":27,"children":["$","$L11",null,{"href":"/projects/personal-site/cloud-docker-nginx/","data-reading-start":"true","children":"部署基础：云服务器、Docker、Nginx与HTTP缓存"}]}],["$","li","web-testing-observability",{"value":28,"children":["$","$L11",null,{"href":"/projects/personal-site/web-testing-observability/","data-reading-start":"true","children":"Web测试与观测：验证数据流、性能指标与故障边界"}]}]]}]]}]
+2e:T173d,<p>作者登录后，浏览器继续访问管理接口，后端需要识别这是哪个会话；另一个网站即使知道接口地址，也不应该借作者已登录的浏览器完成审核。Cookie、会话、CORS和CSRF围绕这些问题工作，但各自负责的边界不同。</p>
+<span id="section-cookie怎样关联后续请求" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-一cookie怎样关联后续请求">一、Cookie怎样关联后续请求</h2>
+<p>登录成功后，服务器通过<code>Set-Cookie</code>让浏览器保存会话令牌。后续符合Cookie作用范围和携带条件的请求会带上它，服务器据此查询有效会话。本站数据库保存令牌的摘要，Cookie里携带随机原始令牌。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>属性</th><th>主要作用</th><th>不能代替什么</th></tr></thead><tbody><tr><td>HttpOnly</td><td>限制页面脚本直接读取Cookie</td><td>不能阻止所有XSS借用户身份发请求</td></tr><tr><td>Secure</td><td>限制通过安全连接发送</td><td>不替代接口权限判断</td></tr><tr><td>SameSite</td><td>限制部分跨站场景的Cookie携带</td><td>不能单独覆盖所有CSRF场景</td></tr><tr><td>Path</td><td>控制符合条件的请求路径</td><td>不是严格的权限隔离机制</td></tr></tbody></table>
+<p>Cookie何时发送受域、路径、SameSite及请求选项等条件共同影响，详见<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies" rel="noopener noreferrer">MDN Cookie说明</a>。本站生产会话使用Secure、HttpOnly和SameSite=Lax；本地HTTP环境则需要对应配置。</p>
+<span id="section-同源与同站有什么区别" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-二同源与同站有什么区别">二、同源与同站有什么区别</h2>
+<p>源通常由协议、主机和端口共同确定。<code>http://127.0.0.1:3000</code>与<code>http://127.0.0.1:8000</code>端口不同，因此跨源；<code>localhost</code>与<code>127.0.0.1</code>也不是同一主机名。Cookie的同站判断使用另一套站点规则，不能把同源与同站混用。</p>
+<p>本站本地前端与API分端口运行，线上通过Nginx把<code>/api/</code>放在同一公开域名下。开发配置的问题不能直接推成生产跨域问题，反过来也一样。排查时先写出页面URL与请求URL，再看实际响应头和Cookie是否发送。</p>
+<span id="section-cors在浏览器里控制什么" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-三cors在浏览器里控制什么">三、CORS在浏览器里控制什么</h2>
+<p>CORS通过响应头告知浏览器哪些来源可以读取响应，以及是否允许带凭据的跨源交互。某些请求会先进行OPTIONS预检；携带凭据时不能随便用通配允许来源代替明确配置。<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS" rel="noopener noreferrer">CORS说明</a>列出了这些规则。</p>
+<p><strong>CORS不承担服务器身份验证。</strong> 脚本工具可以直接发HTTP，也可以构造Origin；浏览器阻止读取响应，也不总等于请求未被发送。因此敏感写入仍要在服务端检查会话和防伪条件。</p>
+<p>本站还主动检查写请求的Origin是否在允许列表中。这个检查减少浏览器跨站写入风险，但公开反馈仍是匿名入口，恶意脚本能够模仿允许来源，反垃圾与频率控制还需单独处理。</p>
+<span id="section-csrf为何与自动携带cookie有关" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-四csrf为何与自动携带cookie有关">四、CSRF为何与自动携带Cookie有关</h2>
+<p>CSRF指攻击者诱使浏览器带着用户身份，发出用户并不打算执行的请求。本站作者敏感写操作除了检查会话，还要求<code>X-CSRF-Token</code>与该会话记录的摘要匹配，并检查Origin。</p>
+<p>登录响应将CSRF令牌提供给客户端，审核时由客户端明确带在请求头中。外站通常无法直接读取同源登录结果，因此只让浏览器自动带Cookie还不够完成这一步。SameSite和Origin校验继续提供补充条件。<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/CSRF" rel="noopener noreferrer">CSRF参考</a>说明了风险与常见防护方式。</p>
+<p>如果本站已经存在XSS，攻击脚本运行在本站上下文中，可能读取页面数据并执行操作，CSRF令牌无法独自解决。Markdown清理、文本安全呈现、受控资源和避免任意脚本注入仍然必要。</p>
+<span id="section-登录退出在服务端留下什么" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-五登录退出在服务端留下什么">五、登录退出在服务端留下什么</h2>
+<p>本站密码使用Argon2校验；随机会话令牌使用摘要保存。这两类秘密的性质不同，不能因为两者都“哈希”就认为处理方式完全一样。人选密码通常需要抗猜测的密码哈希，随机高熵令牌的存储与查询有不同设计。</p>
+<p>每次管理请求都要检查令牌是否存在、是否过期、账号是否启用。退出时删除会话并写审计，再清除Cookie。只隐藏管理按钮或清空前端变量，不能使已泄露的有效令牌自动失效。</p>
+<p>当前只有作者管理范围，没有普通用户、商家和超级管理员等多角色体系。未来若增加角色，需要定义资源权限、操作权限与审计，再映射到接口检查；不能在页面上多放几种菜单就称为完整RBAC。</p>
+<p>一个有效的检查问题是：直接绕过前端调用审核接口，还能否跳过这些条件？答案必须来自后端路由与测试，而不是页面上按钮的显示状态。完整审核顺序见<a href="/projects/personal-site/site-auth-review-concurrency/">项目登录与审核</a>。</p>1d:["$","$L2d",null,{"html":"$2e"}]
+1e:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L11",null,{"href":"/projects/personal-site/pydantic-validation/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"Pydantic输入校验：字段、validator与模型边界"}]]}],["$","$L11",null,{"href":"/projects/personal-site/postgresql-tables-queries/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"PostgreSQL入门（一）：表、SQL、约束与索引"}]]}]]}]
+1f:["$","$L2f",null,{"contentId":"browser-cookie-cors-csrf"}]
+20:["$","div",null,{"className":"related-note","children":[[["$","$L11",null,{"href":"/projects/personal-site/series/","data-reading-start":"true","children":"返回系列目录"}],["$","$L11",null,{"href":"/projects/personal-site/","data-reading-start":"true","children":"项目总览"}],["$","$L11",null,{"href":"/projects/","children":"返回全部项目"}]],false]}]
+21:["$","$L13",null,{"headings":["$c:0:1:d:r:props:children:0:props:children:1:props:headings:0","$c:0:1:d:r:props:children:0:props:children:1:props:headings:1","$c:0:1:d:r:props:children:0:props:children:1:props:headings:2","$c:0:1:d:r:props:children:0:props:children:1:props:headings:3","$c:0:1:d:r:props:children:0:props:children:1:props:headings:4"]}]
+22:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+23:["$","$L30",null,{"children":["$","$29",null,{"name":"Next.MetadataOutlet","children":"$@31"}]}]
+2c:true
+7:300
+31:null
+7:C
+2b:0
+b:"$undefined"
+9:"$undefined"
+5:"$undefined"
+2a:"$undefined"
+24:"$undefined"
