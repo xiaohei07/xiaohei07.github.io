@@ -8,94 +8,224 @@ f:"static/chunks/182-3013bbb685a41e87.js"
 11:I[3498,["5587","$d","8612","$e","182","$f","4067","$10"],"default"]
 12:I[6279,["5587","$d","8612","$e","182","$f","4067","$10"],"FilterLink"]
 13:I[5128,["5587","$d","8612","$e","182","$f","4067","$10"],"ArticleToc"]
-1f:"ViewportBoundary"
-20:I[887,[],"$1f"]
-21:"MetadataBoundary"
+21:"ViewportBoundary"
 22:I[887,[],"$21"]
-23:"$Sreact.suspense"
+23:"MetadataBoundary"
+24:I[887,[],"$23"]
+25:"$Sreact.suspense"
 6:X
 6:C
 7:X
-c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"deepseek-export-plus-extension-runtime","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L11",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L11",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L11",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L12",null,{"className":"trail-current","href":"/projects/","children":["浏览器扩展",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"内容脚本、网页环境与后台怎样协作"}],["$","p",null,{"className":"article-deck","children":"认识Manifest V3、隔离环境、MAIN、service worker与短期会话，再看消息检查和临时渲染表面。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["1,639"," 字"]}],["$","span",null,{"children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","Manifest V3",{"children":"Manifest V3"}],["$","span","浏览器扩展",{"children":"浏览器扩展"}]]}],false]}],["$","$L13",null,{"headings":[{"id":"section-一dom共享不等于javascript变量共享","text":"一、DOM共享，不等于JavaScript变量共享","level":2},{"id":"section-二怎样让两个环境找到同一条消息","text":"二、怎样让两个环境找到同一条消息","level":2},{"id":"section-三后台service-worker为什么不能当永久运行的程序","text":"三、后台service worker为什么不能当永久运行的程序","level":2},{"id":"section-四独立页面与离屏iframe各做什么","text":"四、独立页面与离屏iframe各做什么","level":2},{"id":"section-五撤回和更新要处理已经运行的实例","text":"五、撤回和更新要处理已经运行的实例","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L11",null,{"href":"/projects/deepseek-export-plus/series/","data-reading-start":"true","children":"系列文章与阅读路线"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/","data-reading-start":"true","children":"项目总览"}],["$","span",null,{"children":[6," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-architecture",{"value":1,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/architecture/","data-reading-start":"true","children":"从网页到文件，导出链路怎样分工"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extract-conversation",{"value":2,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/extract-conversation/","data-reading-start":"true","children":"长对话、折叠思考与有序消息怎样提取"}]}],["$","li","deepseek-export-plus-format-output",{"value":3,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/format-output/","data-reading-start":"true","children":"同一份对话怎样生成不同格式"}]}],["$","li","deepseek-export-plus-attachments",{"value":4,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/attachments/","data-reading-start":"true","children":"附件怎样下载、打包并保持可打开"}]}],["$","li","deepseek-export-plus-task-lifecycle",{"value":5,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/task-lifecycle/","data-reading-start":"true","children":"取消、撤回和页面切换后，任务怎样收尾"}]}]]}]]}],["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extension-runtime",{"value":6,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/extension-runtime/","data-reading-start":"true","aria-current":"page","children":"内容脚本、网页环境与后台怎样协作"}]}],"$L14","$L15"]}]]}],"$L16"]]}]]}],"$L17","$L18","$L19","$L1a"]}],"$L1b"]}]]}],["$L1c"],"$L1d"]}],"p":"$@1e","v":null,"s":"$7"}}]]
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"deepseek-export-plus-extension-runtime","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L11",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L11",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L11",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L12",null,{"className":"trail-current","href":"/projects/","children":["浏览器扩展",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"内容脚本、网页环境与后台的协作机制"}],["$","p",null,{"className":"article-deck","children":"认识内容脚本、MAIN环境和扩展后台，通过消息传递与网页数据读取例子理解权限、临时页面、构建入口和状态清理。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["5,943"," 字"]}],["$","span",null,{"children":["阅读约 ",18," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","Manifest V3",{"children":"Manifest V3"}],["$","span","浏览器扩展",{"children":"浏览器扩展"}]]}],false]}],["$","$L13",null,{"headings":[{"id":"section-一扩展脚本的执行位置","text":"一、扩展脚本的执行位置","level":2},{"id":"section-11-内容脚本与页面元素","text":"1.1 内容脚本与页面元素","level":3},{"id":"section-12-隔离环境与main环境","text":"1.2 隔离环境与MAIN环境","level":3},{"id":"section-13-扩展后台的职责","text":"1.3 扩展后台的职责","level":3},{"id":"section-二消息传递与网页数据读取","text":"二、消息传递与网页数据读取","level":2},{"id":"section-21-发送请求和返回结果","text":"2.1 发送请求和返回结果","level":3},{"id":"section-22-页面中的结构化消息数据","text":"2.2 页面中的结构化消息数据","level":3},{"id":"section-23-读取一条回答的完整流程","text":"2.3 读取一条回答的完整流程","level":3},{"id":"section-三数据读取范围与历史观察","text":"三、数据读取范围与历史观察","level":2},{"id":"section-31-有界遍历的作用","text":"3.1 有界遍历的作用","level":3},{"id":"section-32-历史响应的观察方式","text":"3.2 历史响应的观察方式","level":3},{"id":"section-四独立页面与打印会话","text":"四、独立页面与打印会话","level":2},{"id":"section-41-后台生命周期与临时存储","text":"4.1 后台生命周期与临时存储","level":3},{"id":"section-42-隐私设置页与打印预览页","text":"4.2 隐私设置页与打印预览页","level":3},{"id":"section-43-word与png使用的临时iframe","text":"4.3 Word与PNG使用的临时iframe","level":3},{"id":"section-五构建入口与依赖加载","text":"五、构建入口与依赖加载","level":2},{"id":"section-51-多个入口的组成原因","text":"5.1 多个入口的组成原因","level":3},{"id":"section-52-按需加载与静态依赖","text":"5.2 按需加载与静态依赖","level":3},{"id":"section-六授权撤回与扩展更新处理","text":"六、授权撤回与扩展更新处理","level":2},{"id":"section-61-授权代次与过期结果","text":"6.1 授权代次与过期结果","level":3},{"id":"section-62-超时与撤回的处理范围","text":"6.2 超时与撤回的处理范围","level":3},{"id":"section-63-扩展更新后的页面恢复","text":"6.3 扩展更新后的页面恢复","level":3}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L11",null,{"href":"/projects/deepseek-export-plus/series/","data-reading-start":"true","children":"系列文章与阅读路线"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/","data-reading-start":"true","children":"项目总览"}],["$","span",null,{"children":[6," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-architecture",{"value":1,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/architecture/","data-reading-start":"true","children":"DeepSeek Export Plus的整体架构与导出流程"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extract-conversation",{"value":2,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/extract-conversation/","data-reading-start":"true","children":"长对话提取与有序消息组织"}]}],"$L14","$L15","$L16"]}]]}],"$L17","$L18"]]}]]}],"$L19","$L1a","$L1b","$L1c"]}],"$L1d"]}]]}],["$L1e"],"$L1f"]}],"p":"$@20","v":null,"s":"$7"}}]]
 a:[["children",{"s":{"n":"page","t":"d","k":"extension-runtime","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
 8:[["children",{"s":{"n":"project","t":"d","k":"deepseek-export-plus","s":["mental-health-evaluation"]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
 1:[["children",{"s":"projects","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
-0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L20",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L22",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$23",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"内容脚本、网页环境与后台怎样协作 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"认识Manifest V3、隔离环境、MAIN、service worker与短期会话，再看消息检查和临时渲染表面。"}],["$","link","2",{"rel":"canonical","href":"/projects/deepseek-export-plus/extension-runtime/"}]]}]}],null]}],null]}],"p":"$@24","v":null,"s":"$7"}},"a":"$@25","u":"$@26","b":"6cQJHWqsmY59WndvF4Y-g"}
-27:"ProjectLegacyAnchors"
-28:I[1103,["5587","$d","8612","$e","182","$f","4067","$10"],"$27"]
-29:I[4711,["5587","$d","8612","$e","182","$f","4067","$10"],"ArticleBody"]
-2b:I[887,[],"OutletBoundary"]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L22",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L24",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$25",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"内容脚本、网页环境与后台的协作机制 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"认识内容脚本、MAIN环境和扩展后台，通过消息传递与网页数据读取例子理解权限、临时页面、构建入口和状态清理。"}],["$","link","2",{"rel":"canonical","href":"/projects/deepseek-export-plus/extension-runtime/"}]]}]}],null]}],null]}],"p":"$@26","v":null,"s":"$7"}},"a":"$@27","u":"$@28","b":"LzViTTBtizNOe9mwSPy8_"}
+29:"ProjectLegacyAnchors"
+2a:I[1103,["5587","$d","8612","$e","182","$f","4067","$10"],"$29"]
+2b:I[4711,["5587","$d","8612","$e","182","$f","4067","$10"],"ArticleBody"]
+2d:I[887,[],"OutletBoundary"]
 :HL["/_next/static/css/0d4edec444d587ad.css","style"]
-14:["$","li","deepseek-export-plus-document-formats",{"value":7,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/document-formats/","data-reading-start":"true","children":"字符、XML和DOCX：文件格式怎样层层组成"}]}]
-15:["$","li","deepseek-export-plus-rendering-pagination",{"value":8,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/rendering-pagination/","data-reading-start":"true","children":"从网页排版到长图：字体、画布和分页"}]}]
-16:["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-word-png",{"value":9,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/word-png/","data-reading-start":"true","children":"Word与PNG的两次失败，为什么要分层修复"}]}],["$","li","deepseek-export-plus-page-integration",{"value":10,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/page-integration/","data-reading-start":"true","children":"导出按钮怎样与原网页和平共处"}]}]]}]]}]
-17:["$","$L28",null,{"mappings":[]}]
-2a:T1aa8,<p>在网页里增加一个按钮，与读取网页程序保存的消息数据，是两种不同能力。DeepSeek Export Plus既要操作页面，又要调用浏览器扩展API，还要打开独立打印页，因此不能把所有代码想象成同一段网页脚本。</p>
-<p>已有的<a href="/projects/personal-site/react-components-props/">React组件与props</a>解释了网页怎样组织界面数据；本篇只补浏览器扩展新增的执行环境与通信规则。扩展自己的界面使用原生JavaScript和CSS，读取DeepSeek的React数据不代表扩展本身使用React构建。</p>
-<h2 id="section-一dom共享不等于javascript变量共享">一、DOM共享，不等于JavaScript变量共享</h2>
-<p>DOM是浏览器组织页面元素的树。内容脚本可以读写这棵树，例如找到消息节点、放入按钮；但它默认运行在ISOLATED环境，自己的JavaScript变量与网页变量隔离。同一页面中的网页脚本和扩展可以看见同一个元素，不意味着它们能直接访问彼此定义的变量。</p>
-<p>假设网页脚本里有<code>const messageData = ...</code>，内容脚本不能仅因看见对应段落，就直接使用这个变量。MAIN环境与网页共享JavaScript执行环境，适合执行少量必须依赖网页对象的读取，但它也受网页环境影响，不适合存放秘密或无约束运行。具体边界见<a href="https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts" rel="noopener noreferrer">Chrome内容脚本说明</a>。</p>
-<p>项目把当前节点的元数据读取放到MAIN里，把页面交互留给内容脚本。返回结果只包含允许的角色、文本、片段和文件字段，不把整个框架对象交给其他模块；框架对象可能有循环引用、庞大状态和与导出无关的信息。</p>
-<h2 id="section-二怎样让两个环境找到同一条消息">二、怎样让两个环境找到同一条消息</h2>
-<p>一次读取可以拆成以下步骤：</p>
+14:["$","li","deepseek-export-plus-format-output",{"value":3,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/format-output/","data-reading-start":"true","children":"对话内容的多格式转换"}]}]
+15:["$","li","deepseek-export-plus-attachments",{"value":4,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/attachments/","data-reading-start":"true","children":"附件下载、资源复用与文件链接"}]}]
+16:["$","li","deepseek-export-plus-task-lifecycle",{"value":5,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/task-lifecycle/","data-reading-start":"true","children":"导出任务的取消、授权与状态清理"}]}]
+17:["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extension-runtime",{"value":6,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/extension-runtime/","data-reading-start":"true","aria-current":"page","children":"内容脚本、网页环境与后台的协作机制"}]}],["$","li","deepseek-export-plus-document-formats",{"value":7,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/document-formats/","data-reading-start":"true","children":"字符编码、XML与DOCX文档结构"}]}],["$","li","deepseek-export-plus-rendering-pagination",{"value":8,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/rendering-pagination/","data-reading-start":"true","children":"从网页排版到长图：字体、画布和分页"}]}]]}]]}]
+18:["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-word-png",{"value":9,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/word-png/","data-reading-start":"true","children":"Word与PNG导出故障的分层修复"}]}],["$","li","deepseek-export-plus-page-integration",{"value":10,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/page-integration/","data-reading-start":"true","children":"扩展入口的布局适配与交互修复"}]}]]}]]}]
+19:["$","$L2a",null,{"mappings":[]}]
+2c:T6fa0,<p>DeepSeek Export Plus需要在对话页面中增加导出按钮，读取用户选择的消息，再把整理好的内容交给各个格式的导出模块。为了完成这些操作，本项目使用了<strong>内容脚本</strong>、网页的<strong>MAIN环境</strong>和<strong>扩展后台</strong>，分别承担<strong>页面交互</strong>、<strong>网页数据读取</strong>和<strong>扩展操作</strong>的协调工作。</p>
+<p>理解这几个执行位置，可以从一次导出操作开始：用户在网页上选择了一条回答，内容脚本先找到对应的页面元素，再请求后台读取这条回答所关联的数据。后台检查请求后，把读取函数放到网页环境中执行，最后把取得的数据返回给内容脚本。</p>
+<p>下面先介绍这些执行位置，再沿着这条数据传递过程说明它们的协作方式。</p>
+<h2 id="section-一扩展脚本的执行位置">一、扩展脚本的执行位置</h2>
+<h3 id="section-11-内容脚本与页面元素">1.1 内容脚本与页面元素</h3>
+<p><strong>内容脚本（content script）是扩展放到网页中运行的脚本。</strong>它可以读取页面中的文字、查找按钮和图片，也可以增加元素、修改样式。本项目通过内容脚本显示导出入口、处理用户的选择，并收集页面上的消息内容。</p>
+<p>浏览器会把HTML组织成一棵由元素构成的树，这棵树就是<strong>DOM</strong>。例如，一条回答中的<strong>段落、代码块和图片</strong>，都分别对应着DOM中的节点。内容脚本找到这些节点后，就可以读取其中的文字，或者在旁边增加一个导出按钮。</p>
+<p>除了页面元素，网页程序还会保存一些用于运行的数据，例如消息属于哪个角色、一次工具调用返回了哪些网址，以及附件对应的下载地址。这些数据可能只保存在JavaScript对象中，页面上显示的文字通常只是其中的一部分。因此，收集页面文字和读取程序数据需要分别处理。</p>
+<span id="section-一dom共享不等于javascript变量共享" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-12-隔离环境与main环境">1.2 隔离环境与MAIN环境</h3>
+<p>Chrome扩展的内容脚本默认运行在<strong>ISOLATED环境</strong>中。ISOLATED表示隔离：内容脚本与网页脚本分别使用各自的JavaScript变量和对象，同时可以操作同一份DOM。</p>
+<p>可以用一个简单的例子说明。假设网页中有以下内容：</p>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-html"><span class="hljs-tag">&#x3C;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"message"</span>></span>你好<span class="hljs-tag">&#x3C;/<span class="hljs-name">p</span>></span>
+<span class="hljs-tag">&#x3C;<span class="hljs-name">script</span>></span><span class="javascript">
+  <span class="hljs-variable language_">window</span>.<span class="hljs-property">messageText</span> = <span class="hljs-string">"网页保存的消息"</span>;
+</span><span class="hljs-tag">&#x3C;/<span class="hljs-name">script</span>></span>
+</code></pre></div>
+<p>然后在扩展默认的内容脚本中执行下面的代码：</p>
+<div class="code-block"><div class="code-toolbar"><span>javascript</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> node = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">"#message"</span>);
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(node.<span class="hljs-property">textContent</span>);
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-variable language_">window</span>.<span class="hljs-property">messageText</span>);
+
+node.<span class="hljs-property">textContent</span> = <span class="hljs-string">"已选中这条消息"</span>;
+
+<span class="hljs-comment">// 输出：</span>
+<span class="hljs-comment">// 你好</span>
+<span class="hljs-comment">// undefined</span>
+</code></pre></div>
+<p>第一条输出来自页面元素，内容脚本可以通过DOM读取它，所以得到“你好”。第二条访问的是<code>window.messageText</code>，这个属性由网页脚本设置，内容脚本所在的隔离环境中没有这个属性，因此得到<code>undefined</code>。最后，内容脚本修改了节点的<code>textContent</code>，页面上的文字也会随之变成“已选中这条消息”。</p>
+<p>这个例子的关键在于代码的执行位置：HTML中的脚本在网页环境中执行，第二段代码在扩展的隔离环境中执行。如果把两段JavaScript都放到网页控制台中运行，它们就使用了同一个环境，输出也会发生变化。</p>
+<p><strong>MAIN是网页脚本使用的JavaScript执行环境。</strong>在这个环境中读取<code>window.messageText</code>，就可以取得网页设置的“网页保存的消息”。本项目需要读取消息节点所关联的React数据时，会让一个读取函数进入MAIN执行。</p>
+<p>React是DeepSeek网页使用的界面库，组件用于组织界面及其数据。组件和props的基础可以参考<a href="/projects/personal-site/react-components-props/">React组件与props</a>。本项目自己的扩展界面使用原生JavaScript和CSS，通过MAIN读取DeepSeek页面上的相关数据。</p>
+<p>MAIN与网页脚本共享环境，网页本身也可以修改其中的对象。因此，本项目在这里执行有限的数据读取，把请求来源和用户同意状态的检查交给扩展后台。读取范围还取决于网页提供了哪些可访问对象，函数内部未对外暴露的局部变量仍受JavaScript自身的作用域规则限制。</p>
+<h3 id="section-13-扩展后台的职责">1.3 扩展后台的职责</h3>
+<p><strong>扩展后台负责响应扩展事件、检查请求并协调操作。</strong>它运行在用户的浏览器中。本项目由后台检查消息发送者、向指定页面注入读取函数、处理允许读取的附件，以及管理打印所需的临时数据。</p>
+<p>Chrome扩展通过<code>manifest.json</code>声明入口和权限。Manifest V3是这份清单及相关运行机制的第三版，它使用service worker作为后台脚本。后台会在收到扩展消息等事件时被唤醒，完成相应处理；浏览器也可能在它空闲时结束当前实例。</p>
+<p>后台没有网页DOM，因此查找消息节点、显示按钮和调整页面样式，都需要由页面中的脚本完成。内容脚本找到节点后，再通过消息把需要后台处理的操作交过去。</p>
+<p>扩展通过Chrome提供的API调用消息、存储和脚本注入等功能。API可以理解为程序调用现成功能的接口，后面会用<code>chrome.runtime.sendMessage()</code>说明消息接口的具体用法。这几个执行位置在本项目中的分工如下：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>执行位置</th><th>可以使用的主要对象或能力</th><th>本项目承担的工作</th></tr></thead><tbody><tr><td>内容脚本的ISOLATED环境</td><td>页面DOM、扩展提供给内容脚本的消息等API</td><td>显示导出入口、接收选择、收集页面内容</td></tr><tr><td>网页的MAIN环境</td><td>网页的JavaScript对象及页面DOM</td><td>读取消息节点关联的数据，观察符合范围的历史响应</td></tr><tr><td>扩展后台</td><td>消息发送者信息、扩展注入和存储等API</td><td>检查请求、协调读取、管理临时数据</td></tr></tbody></table>
+<span id="section-二怎样让两个环境找到同一条消息" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-二消息传递与网页数据读取">二、消息传递与网页数据读取</h2>
+<h3 id="section-21-发送请求和返回结果">2.1 发送请求和返回结果</h3>
+<p><strong>消息传递是不同执行环境交换数据的方式。</strong>发送方把要执行的操作和参数整理成消息，接收方处理后，再把结果返回给它。</p>
+<p>下面通过一次简单的发送和回复说明这个过程。</p>
+<p>内容脚本：</p>
+<div class="code-block"><div class="code-toolbar"><span>javascript</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-javascript"><span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">askBackground</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> reply = <span class="hljs-keyword">await</span> chrome.<span class="hljs-property">runtime</span>.<span class="hljs-title function_">sendMessage</span>({
+    <span class="hljs-attr">type</span>: <span class="hljs-string">"example:ping"</span>
+  });
+
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(reply.<span class="hljs-property">text</span>);
+}
+
+<span class="hljs-title function_">askBackground</span>();
+<span class="hljs-comment">// 输出：已收到</span>
+</code></pre></div>
+<p>后台：</p>
+<div class="code-block"><div class="code-toolbar"><span>javascript</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-javascript">chrome.<span class="hljs-property">runtime</span>.<span class="hljs-property">onMessage</span>.<span class="hljs-title function_">addListener</span>(
+  <span class="hljs-function">(<span class="hljs-params">message, sender, sendResponse</span>) =></span> {
+    <span class="hljs-keyword">if</span> (message.<span class="hljs-property">type</span> !== <span class="hljs-string">"example:ping"</span>) <span class="hljs-keyword">return</span>;
+
+    <span class="hljs-title function_">sendResponse</span>({ <span class="hljs-attr">text</span>: <span class="hljs-string">"已收到"</span> });
+  }
+);
+</code></pre></div>
+<p>内容脚本使用<code>sendMessage()</code>发送一个对象，其中的<code>type</code>表示这次消息的用途。后台的监听函数收到消息后，先检查<code>type</code>，再调用<code>sendResponse()</code>返回结果。内容脚本中的<code>await</code>等待回复完成，然后从回复对象中取出<code>text</code>并输出。</p>
+<p>这次回复在监听函数中立即完成。如果后台需要先执行异步读取，再通过<code>sendResponse()</code>回复，可以让监听函数返回字面量<code>true</code>，使这个回调的响应通道继续保持打开。具体用法见<a href="https://developer.chrome.com/docs/extensions/develop/concepts/messaging" rel="noopener noreferrer">Chrome消息传递文档</a>，<code>await</code>的基础可以参考<a href="/projects/personal-site/javascript-async-fetch/">JavaScript异步与fetch</a>。</p>
+<p>消息中的数据通常使用<strong>字符串、数字、数组和普通对象</strong>。DOM节点属于页面中的对象，传递节点时需要换一种表示方法；本项目使用<strong>临时标记</strong>，让另一个执行环境能够重新找到同一节点。</p>
+<h3 id="section-22-页面中的结构化消息数据">2.2 页面中的结构化消息数据</h3>
+<p><strong>结构化消息数据，就是网页程序按字段保存的消息信息。</strong>例如，可以把一条回答简化为下面的数据：</p>
+<div class="code-block"><div class="code-toolbar"><span>json</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"role"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"assistant"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"text"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"可以参考以下资料。"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"toolResults"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"title"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"资料标题"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"url"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"https://example.com/reference"</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span>
+</code></pre></div>
+<p>这里的<code>role</code>表示回答者的角色，<code>text</code>保存正文，<code>toolResults</code>保存工具返回的资料标题和网址。字段名称为了讲解进行了简化，实际数据还会包含其他信息。</p>
+<p>网页可能只显示正文和“已搜索”等提示，而把具体网址保留在程序数据中。如果只读取显示出来的文字，就缺少了这些网址。因此，本项目还会从消息节点关联的React内部对象中查找需要的数据。</p>
+<p>本项目读取到的这类数据，来源是网页程序保存的消息对象；另一类可用数据来自后面介绍的历史响应。<strong>没有取得结构化消息对象，或对象解析失败时</strong>，提取模块才改从页面中已经显示的元素读取内容，再按元素的位置整理，这个处理就是DOM回退。对象解析成功后，程序直接使用解析结果；其中缺少思考或工具字段时，目前尚未实现从DOM逐项补齐。</p>
+<p>有了这些具体对象后，后文中的“数据来源”就可以明确到某一种位置：是页面组件关联的数据、历史响应中的消息，还是DOM中已经显示的内容。</p>
+<h3 id="section-23-读取一条回答的完整流程">2.3 读取一条回答的完整流程</h3>
+<p>假设用户已经同意处理对话，并在当前页面中选择了一条回答。本项目取得这条回答所关联数据的过程如下：</p>
 <ol>
-<li>内容脚本给目标节点加一个临时标记，并向后台发送读取请求。</li>
-<li>后台检查发送者所在页面、操作类型及当前同意状态。</li>
-<li>后台在同一标签页、同一frame的MAIN环境运行读取函数。frame指页面文档环境，嵌入的子页面也有自己的frame。</li>
-<li>读取函数按临时标记找到节点，有限度地检查关联对象，选出允许字段。</li>
-<li>返回结果后再检查授权是否仍有效，内容脚本移除临时标记，交给会话提取模块。</li>
+<li><strong>内容脚本找到回答节点，添加临时标记。</strong>这个随机标记写在DOM节点的属性上，内容脚本和MAIN中的函数都能通过DOM看到它。</li>
+<li><strong>内容脚本把操作类型和标记发送给后台。</strong>后台收到消息时，还会取得Chrome提供的<code>sender</code>，其中包含消息来自哪个标签页、哪个frame以及对应的页面地址。</li>
+<li><strong>后台检查来源和用户同意状态。</strong>确认发送者来自允许的DeepSeek页面、操作符合要求，并记录这次读取开始时的授权代次。</li>
+<li><strong>后台向同一标签页、同一frame注入读取函数。</strong>通过<code>chrome.scripting.executeScript()</code>指定<code>world: "MAIN"</code>，使函数能够在网页环境中读取数据。</li>
+<li><strong>读取函数根据标记找到节点，提取需要的字段。</strong>它检查节点所关联的React数据，返回角色、正文片段、工具和附件等允许使用的信息。</li>
+<li><strong>后台再次检查授权，再返回结果。</strong>内容脚本收到有效数据后，把它交给会话提取模块继续整理，并清除节点上的临时标记；读取失败时也会执行相应清理。</li>
 </ol>
-<p><strong>临时标记解决的是节点定位，不能当成认证凭据。</strong>有界遍历则限制检查深度和数量，避免循环或过量对象拖住页面；达到限制时也可能拿不到完整内容。网页内部字段没有稳定接口承诺，这个适配点仍需要随网页变化维护。</p>
-<p>长期历史观察与这次读取又是两件事。历史脚本在同意后观察符合范围的fetch/XHR响应，缓存随后到来的数据；单次函数则检查眼前挂载节点。观察器没有安装前已经结束的响应，不会因为后来启用扩展就自动重现。</p>
-<h2 id="section-三后台service-worker为什么不能当永久运行的程序">三、后台service worker为什么不能当永久运行的程序</h2>
-<p>Manifest V3是Chrome扩展清单及相关运行机制的第三版。清单声明入口、权限和允许访问的目标；后台使用service worker处理扩展事件。它没有网页DOM，也不保证一直驻留，浏览器可能在空闲时将其回收。</p>
-<p>因此，把打印内容只放在后台全局Map里并不稳妥：打印页打开时，原worker实例可能已经不存在。项目将短期打印会话放在<code>storage.session</code>，使用会话ID、有效期、大小限制和附件白名单关联。存储可跨一次worker回收保留数据，但不跨所有扩展或浏览器生命周期，不能当永久备份。平台规则见<a href="https://developer.chrome.com/docs/extensions/develop/concepts/service-workers/lifecycle" rel="noopener noreferrer">worker生命周期</a>与<a href="https://developer.chrome.com/docs/extensions/reference/api/storage" rel="noopener noreferrer">session存储</a>。</p>
-<p>权限与同意也分开。浏览器授予scripting能力，表示扩展可以按规则注入；用户同意处理对话，才表示应用当前可以执行相应读取。后台需要同时考虑平台权限与应用状态。</p>
-<h2 id="section-四独立页面与离屏iframe各做什么">四、独立页面与离屏iframe各做什么</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>执行位置</th><th>本项目用途</th><th>与后台的区别</th></tr></thead><tbody><tr><td>隐私设置页</td><td>说明并管理数据处理同意</td><td>是可显示的扩展页面</td></tr><tr><td>打印预览页</td><td>读取短期会话、显示内容、调用浏览器打印</td><td>有DOM和排版，不是直接PDF编码器</td></tr><tr><td>Word/PNG离屏iframe</td><td>临时装入导出内容，稳定字体、图片并测量绘制</td><td>是页面里的独立文档，不是Web Worker或云转换服务</td></tr></tbody></table>
-<p>iframe可以先理解为页面中嵌入的另一个文档。这里采用受限制的临时排版表面，完成或取消后移除；它让导出内容有自己的样式与尺寸，却不会自动把同步绘制移到后台线程。</p>
-<p>构建时，esbuild把内容脚本、历史观察、后台和独立页面组织为各自入口。Word/PNG共用一个按需包，其中包含docx与html2canvas；它不是每种格式独立一个懒加载包。marked、DOMPurify和KaTeX已有静态依赖链，界面晚一点出现，不意味着这些代码也一定晚一点下载。</p>
-<h2 id="section-五撤回和更新要处理已经运行的实例">五、撤回和更新要处理已经运行的实例</h2>
-<p>撤回同意时，仅取消未来脚本注册还不够，已经注入的脚本仍可能留在页面里。需要停止已有观察逻辑、清理缓存与打印会话，并处理尚未完成的读取。任务返回以后也要重新检查授权状态，具体时序见<a href="/projects/deepseek-export-plus/task-lifecycle/">任务取消与过期结果</a>。</p>
-<p>扩展重载后，旧页面中的内容脚本还可能连接着失效上下文。项目识别这种失效，清理旧界面后提示刷新；刷新提示依靠页面DOM与<code>location.reload()</code>，不再调用已经失效的扩展API。</p>
-<p>如果要做类似扩展，可以先画出“哪个环境拥有哪种数据、哪个环境允许哪种操作”，再设计消息字段、来源检查与清理动作。分环境的目的，是让能力和状态有明确位置，而不是把一个小扩展拆成许多看不见关系的文件。</p>18:["$","$L29",null,{"html":"$2a","zoomImages":true}]
-19:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L11",null,{"href":"/projects/deepseek-export-plus/task-lifecycle/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"取消、撤回和页面切换后，任务怎样收尾"}]]}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/document-formats/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"字符、XML和DOCX：文件格式怎样层层组成"}]]}]]}]
-1a:["$","div",null,{"className":"related-note","children":[["$","$L11",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/series/","data-reading-start":"true","children":"返回系列目录"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/","data-reading-start":"true","children":"项目总览"}]]}]
-1b:["$","$L13",null,{"headings":"$c:0:1:d:r:props:children:0:props:children:1:props:headings"}]
-1c:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
-1d:["$","$L2b",null,{"children":["$","$23",null,{"name":"Next.MetadataOutlet","children":"$@2c"}]}]
-26:true
+<p>其中，frame表示一个页面文档环境。一个标签页里还可能嵌入其他页面，每个页面都有自己的DOM。因此，后台需要使用发送者对应的标签页和frame，才能让读取函数在正确的位置找到目标节点。</p>
+<p>临时标记负责定位节点，<code>sender</code>负责提供发送者信息，用户同意状态负责决定当前是否允许读取。它们分别解决了“读取哪个节点”“请求来自哪里”和“这次是否允许处理”这三个具体问题。</p>
+<p>浏览器权限还提供了另一层前提。例如，扩展需要按Chrome的权限规则使用<code>scripting</code>能力，才能向页面注入函数；本项目则在拥有相应能力后，继续检查用户是否同意处理对话。用户可以在扩展的隐私设置页中管理这项同意。</p>
+<h2 id="section-三数据读取范围与历史观察">三、数据读取范围与历史观察</h2>
+<h3 id="section-31-有界遍历的作用">3.1 有界遍历的作用</h3>
+<p>React内部对象可能包含多层状态，还可能出现循环引用。例如，对象A引用了对象B，对象B又引用了对象A。如果读取函数沿着所有引用一直查找，就可能重复访问相同对象，或者花费大量时间检查与导出无关的数据。</p>
+<p>因此，本项目会<strong>记录已经访问过的对象</strong>，并设置<strong>遍历深度和检查数量上限</strong>。查找过程中只提取允许返回的消息字段，从而控制一次读取的工作量和数据范围。</p>
+<p>例如，遇到某个对象时，函数先检查它的类型、当前深度以及是否已经访问过；已访问的对象会被跳过。数组和React内部状态链也各有检查上限。达到上限后，本次查找就会停止继续深入。</p>
+<p>这些限制使读取过程具有明确的范围。对应的不足是：过深或超出检查数量的数据可能无法完整取得。并且，React内部对象的形状会受到网页实现影响，DeepSeek更新页面结构后，本项目仍可能需要调整读取方式。</p>
+<h3 id="section-32-历史响应的观察方式">3.2 历史响应的观察方式</h3>
+<p>除了读取当前页面中已经建立的消息节点，本项目还使用了历史观察脚本。用户同意后，后台会注册这个脚本，并给已经打开的DeepSeek页面补装。它运行在MAIN环境中，观察页面随后通过<code>fetch</code>和<code>XMLHttpRequest</code>取得的、符合范围的历史消息响应。</p>
+<p><code>fetch</code>和<code>XMLHttpRequest</code>是网页发起网络请求的两种方式。历史观察脚本会包装这些请求函数，并保留原有调用行为：<strong>fetch分支克隆响应后解析，XHR分支监听请求完成事件后读取响应</strong>，再把允许保存的消息字段写入当前会话缓存，供后续导出使用。</p>
+<p>缓存可以理解为临时保存的数据。比如，网页加载历史对话时取得了一批消息，观察脚本把符合要求的内容暂时保存起来，后续提取时就可以利用这批已有数据。</p>
+<p><strong>请求经过已经安装的包装器后，历史观察脚本才能处理对应响应。</strong>例如，页面先发出请求A，随后安装了观察脚本；A后来返回时，仍沿原来的调用过程结束。页面再发出请求B，B经过新的包装器，符合范围的响应就可以被观察。安装前已经发出的请求，需要页面重新请求后才有新的观察机会。本项目通过页面自身的请求获取历史数据，没有额外发起带用户认证的完整历史拉取。</p>
+<p>当前节点读取适合取得眼前消息的数据，历史观察适合保留页面后续加载的数据。两种方式的调用时间和数据来源各有侧重。缓存本身还受到数量和长度限制，切换会话、重新生成等操作也需要使相关旧缓存失效。</p>
+<span id="section-四独立页面与离屏iframe各做什么" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-四独立页面与打印会话">四、独立页面与打印会话</h2>
+<span id="section-三后台service-worker为什么不能当永久运行的程序" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-41-后台生命周期与临时存储">4.1 后台生命周期与临时存储</h3>
+<p>前面介绍过，后台service worker可能在空闲时被浏览器结束。之后有新的事件到达时，浏览器会启动新的实例，普通全局变量也会重新初始化。</p>
+<p>打印预览需要跨越两个操作：先准备好正文，再打开打印页读取它。如果把正文只保存在后台的一个全局Map中，那么后台实例结束后，这份Map中的数据也会丢失。打印页稍后再读取时，就可能找不到刚才准备的内容。</p>
+<p>Map是一种按照键查找值的容器。在这个例子中，会话ID作为键，打印正文作为值。问题出在这份容器只属于当前后台实例，所以本项目把打印会话保存到了<strong><code>storage.session</code></strong>中。</p>
+<p><code>storage.session</code>是Chrome扩展提供的会话存储。它保存的数据可以跨后台实例的回收继续使用，适合正文准备完成后、打印页稍后再读取的过程。</p>
+<p>本项目通过<strong>随机会话ID</strong>关联打印内容，并设置<strong>过期清理和大小预算</strong>；所选附件会保存到该次会话的<strong>白名单</strong>中，后台处理附件请求时再检查它是否属于这份名单。这样，打印页能够找到本次导出的内容，临时数据也有明确的使用范围和清理条件。</p>
+<p>扩展重载、更新、禁用或浏览器重启时，<code>storage.session</code>中的数据会被清除。因此，准备长期保留的对话需要下载为文件，打印会话只承担这次预览过程中的临时保存。平台提供的存储类型及生命周期可以参考<a href="https://developer.chrome.com/docs/extensions/reference/api/storage" rel="noopener noreferrer">Chrome storage文档</a>。</p>
+<h3 id="section-42-隐私设置页与打印预览页">4.2 隐私设置页与打印预览页</h3>
+<p>扩展的独立页面有自己的HTML、样式和脚本，可以显示界面并处理用户操作。本项目主要使用了两类页面：</p>
+<ul>
+<li><strong>隐私设置页</strong>：说明数据处理方式，让用户管理是否同意处理对话，并把选择保存为扩展中的授权状态。</li>
+<li><strong>打印预览页</strong>：从<code>storage.session</code>读取本次会话，渲染正文和附件信息，再调用浏览器的打印功能。用户可以在打印对话框中选择“另存为PDF”，保存得到的文件。</li>
+</ul>
+<p>这两类操作都需要DOM来显示和组织内容，所以由独立页面承担。后台负责打开页面、准备所需数据及相关检查。</p>
+<h3 id="section-43-word与png使用的临时iframe">4.3 Word与PNG使用的临时iframe</h3>
+<p>iframe是页面中嵌入的另一个文档。它可以使用自己的样式和宽度，适合为导出内容建立临时的排版区域。</p>
+<p>本项目导出Word或PNG时，会创建一个受限制的iframe，把经过HTML净化的正文放进去，再准备本地字体和图片。净化会过滤不允许的HTML内容。iframe的<code>sandbox</code>属性用于限制其中允许执行的操作，本项目只保留<code>allow-same-origin</code>，使外层导出代码能够访问这个同源文档并测量内容，脚本执行等能力继续受到限制。</p>
+<p>图片解码、字体准备完成后，导出模块再测量尺寸并执行对应的转换或绘制；完成或取消后，临时iframe会被移除。</p>
+<p>这样的处理让导出内容拥有相对独立的排版环境，便于按照导出尺寸处理文档。与此同时，布局测量和部分同步绘制仍然会占用页面线程，较长内容的处理可能影响页面响应。实际采用的线程与渲染方式，决定了这部分工作的性能边界。</p>
+<h2 id="section-五构建入口与依赖加载">五、构建入口与依赖加载</h2>
+<h3 id="section-51-多个入口的组成原因">5.1 多个入口的组成原因</h3>
+<p>内容脚本由网页加载，后台由扩展事件唤醒，隐私页和打印页则各自打开一个文档。它们的启动位置和需要处理的对象不同，因此构建时也需要生成各自能够加载的入口文件。</p>
+<p>本项目使用esbuild完成打包。esbuild会整理源文件及依赖，为内容脚本、历史观察脚本、后台、独立页面和按需导出模块生成相应文件。</p>
+<h3 id="section-52-按需加载与静态依赖">5.2 按需加载与静态依赖</h3>
+<p>Word和PNG共用一个<strong>按需加载的导出包</strong>。用户选择相关格式后，扩展才动态加载这个包，再根据选择执行对应的导出分支。</p>
+<p>这个共享包中包含<code>docx</code>和<code>html2canvas</code>：前者用于生成Word文档，后者用于把页面内容绘制到画布。由于它们放在同一个包中，选择其中一种格式时，也会加载这份共享包所包含的代码。</p>
+<p>其他依赖按照实际导入关系加载。例如，<code>marked</code>负责解析Markdown，<code>DOMPurify</code>负责净化HTML，<code>KaTeX</code>负责显示公式；它们已经通过静态依赖链进入相关构建入口。因此，判断某个库的加载时间，需要查看它被哪个入口导入、采用什么导入方式，再与界面实际显示的时间分别对应起来。</p>
+<span id="section-五撤回和更新要处理已经运行的实例" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-六授权撤回与扩展更新处理">六、授权撤回与扩展更新处理</h2>
+<h3 id="section-61-授权代次与过期结果">6.1 授权代次与过期结果</h3>
+<p>读取操作需要一定时间。在请求发出后、结果返回前，用户可能撤回同意，也可能再次同意。后台需要判断返回的数据是否仍属于当前有效的那次授权。</p>
+<p>为此，本项目使用了<strong>授权代次</strong>。可以把它理解为授权状态的一次版本编号：开始读取时保存当前编号，读取结束后再与最新编号比较。</p>
+<p>例如，某次读取开始时记录的是第3代授权。等待期间，用户撤回了同意，然后重新同意，授权编号已经发生变化。此时即使用户再次处于同意状态，第3代请求返回的数据仍属于旧授权，后台会拒绝继续使用这份结果。</p>
+<p>所以后台在异步操作前后都会检查<strong>同意状态和授权代次</strong>：前者确定现在是否允许读取，后者确定这份结果是否属于当前授权。</p>
+<h3 id="section-62-超时与撤回的处理范围">6.2 超时与撤回的处理范围</h3>
+<p>本项目给单次元数据读取设置了5秒等待上限。超过等待时间后，调用方进入后续回退处理，继续尝试取得可用内容。</p>
+<p>这里需要区分等待和执行：计时结束可以让调用方停止等待，但已经注入到MAIN中的函数可能还在执行。因此，迟到的结果仍需检查授权状态和代次；对于支持中止的读取，则通过相应取消机制减少后续工作。更完整的时序可以参考<a href="/projects/deepseek-export-plus/task-lifecycle/">任务取消与过期结果</a>。</p>
+<p>用户撤回同意时，本项目还会清理已经开始的工作：</p>
+<ol>
+<li>注销历史观察脚本的动态注册，停止后续按该规则注入。</li>
+<li>通知已打开页面中的观察脚本停止，恢复它包装的请求函数，并清理缓存。</li>
+<li>中止后台登记的待处理读取，清理打印会话，并拒绝随后返回的旧授权结果。</li>
+</ol>
+<p>动态注册决定了脚本以后何时注入，已经在页面中运行的实例则需要单独停止。因此，注册清理和运行实例清理都包含在撤回流程中。</p>
+<h3 id="section-63-扩展更新后的页面恢复">6.3 扩展更新后的页面恢复</h3>
+<p>扩展更新或重新加载后，原来打开的网页中可能还留着旧内容脚本。它连接的扩展上下文已经失效，继续调用旧扩展API时，就可能出现异常。</p>
+<p>本项目识别这种失效后，会停止旧界面的工作、清理相关状态，再显示刷新提示。提示通过页面DOM显示，刷新操作使用页面自身的<code>location.reload()</code>。这样，即使旧扩展连接已经失效，用户仍然可以按提示刷新网页。</p>
+<p>网页重新加载后，当前版本的内容脚本会再次进入页面，恢复与扩展的连接。其他下载或读取错误则继续按各自的错误类型处理，让提示与实际发生的问题对应。</p>1a:["$","$L2b",null,{"html":"$2c","zoomImages":true}]
+1b:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L11",null,{"href":"/projects/deepseek-export-plus/task-lifecycle/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"导出任务的取消、授权与状态清理"}]]}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/document-formats/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"字符编码、XML与DOCX文档结构"}]]}]]}]
+1c:["$","div",null,{"className":"related-note","children":[["$","$L11",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/series/","data-reading-start":"true","children":"返回系列目录"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/","data-reading-start":"true","children":"项目总览"}]]}]
+1d:["$","$L13",null,{"headings":"$c:0:1:d:r:props:children:0:props:children:1:props:headings"}]
+1e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1f:["$","$L2d",null,{"children":["$","$25",null,{"name":"Next.MetadataOutlet","children":"$@2e"}]}]
+28:true
 7:300
-2c:null
+2e:null
 7:C
-25:0
+27:0
 b:"$undefined"
 9:"$undefined"
 5:"$undefined"
-24:"$undefined"
-1e:"$undefined"
+26:"$undefined"
+20:"$undefined"

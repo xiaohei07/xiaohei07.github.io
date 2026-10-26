@@ -16,7 +16,7 @@ f:I[887,[],"$e"]
 8:[["children",{"s":{"n":"page","t":"d","k":"interview","s":[]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q9"}]]
 7:[["children",{"s":{"n":"project","t":"d","k":"deepseek-export-plus","s":["mental-health-evaluation"]},"h":197120,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
 3:[["children",{"s":"projects","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
-0:{"P":null,"c":["","projects","deepseek-export-plus","interview",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1d6e18c6254f9adc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":"$L13"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$14",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"6cQJHWqsmY59WndvF4Y-g"}
+0:{"P":null,"c":["","projects","deepseek-export-plus","interview",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1d6e18c6254f9adc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":"$L13"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$14",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"LzViTTBtizNOe9mwSPy8_"}
 6:C
 10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 15:Tb2c,(()=>{const d={"wallpaper":"banner","layout":"list","cardStyle":"soft","textSize":"normal","hero":true,"carousel":false,"waves":false,"fade":true,"motion":true,"typewriter":true,"progress":true,"petals":false,"dim":28,"blur":0,"cardOpacity":78,"colorMode":"section","customColor":"#32846b","sectionColors":{},"customTheme":"","sectionThemes":{}},enums={"wallpaper":["banner","fullscreen","overlay","none"],"layout":["list","grid"],"cardStyle":["soft","flat"],"textSize":["normal","large"],"colorMode":["section","custom"]},bools=["hero","carousel","waves","fade","motion","typewriter","progress","petals"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]));const color=(function(a,b){let c=b.startsWith("/credits")?"about":b.split("/")[1],d=["home","blog","research","projects","about"].includes(c)?c:"home",e=(a.sectionColors&&"object"==typeof a.sectionColors&&!Array.isArray(a.sectionColors)?a.sectionColors:{})[d],f="string"==typeof e&&/^#[\da-f]{6}$/i.test(e)?e.toLowerCase():void 0,g="string"==typeof a.customColor&&/^#[\da-f]{6}$/i.test(a.customColor)?a.customColor.toLowerCase():"#32846b",h=a.sectionThemes&&"object"==typeof a.sectionThemes&&!Array.isArray(a.sectionThemes)?a.sectionThemes:{},i="custom"===a.colorMode?a.customTheme:h[d],j="string"==typeof i&&["home","blog","research","projects","about"].includes(i)?i:void 0;return{section:d,color:"custom"===a.colorMode?g:f??g,customized:"custom"===a.colorMode?!j:!!f,theme:j??d}})(p,location.pathname);document.documentElement.setAttribute('data-custom-palette',String(color.customized));document.documentElement.setAttribute('data-palette-section',color.theme);const palette=(function(a){let b=/^#[\da-f]{6}$/i.test(a)?a:"#32846b",c=[1,3,5].map(a=>Number.parseInt(b.slice(a,a+2),16)),d={};for(let[a,[b,e]]of Object.entries({"light-page":[248,.09],"light-surface":[255,.025],"light-surface-soft":[252,.05],"light-surface-raised":[246,.08],"light-ink":[0,.15],"light-muted":[0,.32],"light-line":[213,.12],"light-accent":[0,.4],"light-accent-strong":[0,.3],"light-accent-soft":[248,.1],"light-on-accent":[255,0],"dark-page":[16,.025],"dark-surface":[26,.045],"dark-surface-soft":[22,.04],"dark-surface-raised":[33,.06],"dark-ink":[255,.12],"dark-muted":[255,.34],"dark-line":[72,.1],"dark-accent":[255,.35],"dark-accent-strong":[255,.22],"dark-accent-soft":[24,.1],"dark-on-accent":[0,.1]}))d[`--palette-${a}`]=`#${c.map(a=>Math.round(b*(1-e)+a*e).toString(16).padStart(2,"0")).join("")}`;return d})(color.color);for(const k in palette)document.documentElement.style.setProperty(k,palette[k])})()2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$15"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],"$L16"]}],"$L17"]}]
@@ -36,17 +36,16 @@ f:I[887,[],"$e"]
 16:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]
 17:["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L1b",null,{"children":[["$","$L1d",null,{}],["$","$L1e",null,{"tags":["编程语言知识点","Python","C++"],"categoryIds":["foundations","frontend","backend","agent","computing","ai","deployment","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L1f",null,{"sidebar":["$","$L20",null,{"categoryIds":"$17:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L24",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L24",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L24",null,{"href":"/about/","children":"关于这个站点"}],["$","$L24",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]
 d:null
-13:[["$","title","0",{"children":"DeepSeek Export Plus：项目汇报与面试复习 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"集中复习项目需求、数据流、技术取舍、问题处理和常见追问；配合系列文章使用。"}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}],["$","link","3",{"rel":"canonical","href":"/projects/deepseek-export-plus/interview/"}]]
+13:[["$","title","0",{"children":"DeepSeek Export Plus：项目汇报与面试复习 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"集中复习项目介绍、提取模型、执行环境、任务控制、文件故障和方案取舍，结合正文准备后续追问。"}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}],["$","link","3",{"rel":"canonical","href":"/projects/deepseek-export-plus/interview/"}]]
 26:I[5128,["5587","$18","8612","$21","182","$22","4067","$23"],"ArticleToc"]
 27:"ProjectLegacyAnchors"
 28:I[1103,["5587","$18","8612","$21","182","$22","4067","$23"],"$27"]
 29:I[4711,["5587","$18","8612","$21","182","$22","4067","$23"],"ArticleBody"]
-2a:T3933,<p>这份复习页配合<a href="/projects/deepseek-export-plus/">项目系列</a>使用。先读懂对应模块，再用这里的短答练习组织信息；遇到追问时回到输入、状态变化、实现条件和结果，不只记工具名称。</p>
-<span id="section-一先说明项目和自己的实际贡献" class="legacy-anchor" aria-hidden="true"></span><span id="section-11-开场介绍" class="legacy-anchor" aria-hidden="true"></span><span id="section-12-汇报时的展开顺序" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-一一分钟介绍与展开路线">一、一分钟介绍与展开路线</h2>
-<p>DeepSeek Export Plus是一个基于开源扩展继续完善的对话导出工具，目标是把聊天中的正文、代码、思考、工具记录和附件整理成可阅读、可继续编辑的文件。它支持选择轮次，生成Markdown、HTML、TXT、JSON、Word和PNG，PDF保留本地预览后调用浏览器打印的流程。</p>
-<p>整体先适配聊天页和分享页，形成统一会话模型，再处理选轮、资源与格式输出。这样不同格式可以使用相同内容，附件也可以共用。主要难点包括虚拟列表下的历史消息收集、思考与工具顺序、XML与Word兼容、中文附件路径，以及不破坏原网页的入口布局。</p>
-<p>可以展示的是具体行为改进与已验证样例：某种输入框布局不再被撑高，指定DOCX能够实际打开，多格式共用资源且保留失败信息。还没有统一耗时、峰值内存或真实用户规模基线，网页内部结构变化也仍会影响适配。</p>
-<p>时间更短时保留三点：<strong>为什么保存对话、统一模型怎样连接模块、选一个真实故障说明处理过程。</strong></p>
+2a:T3772,<p>这份复习页配合<a href="/projects/deepseek-export-plus/">项目首页与系列文章</a>使用。先理解各模块的输入、处理和输出，再通过短答练习表达；遇到追问时，可以按链接回到具体机制和例子。</p>
+<span id="section-一一分钟介绍与展开路线" class="legacy-anchor" aria-hidden="true"></span><span id="section-一先说明项目和自己的实际贡献" class="legacy-anchor" aria-hidden="true"></span><span id="section-11-开场介绍" class="legacy-anchor" aria-hidden="true"></span><span id="section-12-汇报时的展开顺序" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-一项目介绍与展开路线">一、项目介绍与展开路线</h2>
+<p>DeepSeek Export Plus是一个基于开源扩展继续完善的对话导出工具。它把正文、代码、思考、工具记录和附件整理为可以阅读或继续编辑的文件，支持选择轮次，生成Markdown、HTML、TXT、JSON、Word和PNG；PDF通过本地预览调用浏览器打印完成。</p>
+<p>整体流程是<strong>页面提取→统一会话数据→轮次和选项→资源准备→格式生成→下载</strong>。统一数据让各格式使用相同内容，资源映射使多个文档能够共用附件。主要难点包括虚拟列表中的消息收集、思考与工具顺序、XML及Word兼容、中文附件路径和页面入口布局。</p>
+<p>介绍效果时，可以使用对应样例中的具体结果：输入框在原Grid复现中保持高度，修复后的指定DOCX能够在本机Word打开，多个格式共用成功取得的资源并保留失败清单。目前没有统一耗时、峰值内存或真实用户规模基线。</p>
 
 
 
@@ -77,60 +76,63 @@ d:null
 
 
 
+<table><thead><tr><th>展开方向</th><th>核心内容</th><th>相关正文</th></tr></thead><tbody><tr><td>信息完整性</td><td>边滚边收集、按消息身份去重、来源优先级</td><td><a href="/projects/deepseek-export-plus/extract-conversation/">会话提取</a></td></tr><tr><td>文档结构</td><td>词元、围栏、合法字符及路径表示</td><td><a href="/projects/deepseek-export-plus/format-output/">格式生成</a></td></tr><tr><td>故障排查</td><td>共用公式SVG与Word正文XML的两次修复</td><td><a href="/projects/deepseek-export-plus/word-png/">Word与PNG</a></td></tr><tr><td>任务控制</td><td>授权代次、迟到结果、取消与超时</td><td><a href="/projects/deepseek-export-plus/task-lifecycle/">任务生命周期</a></td></tr></tbody></table>
+<p>时间较短时，可以保留<strong>使用需求、整体数据流和一个真实故障</strong>，再根据追问展开细节。</p>
+<span id="section-二核心机制的短答与追问" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-二提取与会话模型">二、提取与会话模型</h2>
+<span id="section-21-为什么不直接复制页面文字" class="legacy-anchor" aria-hidden="true"></span><span id="section-21-为什么不直接把页面文本复制下来" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-21-页面内容的取得">2.1 页面内容的取得</h3>
+<p><strong>问：直接复制网页文字会遗漏什么？</strong></p>
+<p>虚拟列表只挂载屏幕附近的消息，折叠思考可能没有完整显示在文本中，代码卡片还带有复制按钮等控件。本项目先按聊天页、分享页的实际来源提取，再整理为统一会话数据，交给后续格式模块。</p>
+<p><strong>追问：多个来源的选择顺序是什么？</strong></p>
+<p>分享页优先使用公开结构化响应。聊天页先找当前挂载节点关联的消息对象，没有时再采用已观察的历史缓存；结构化对象解析成功就返回，失败后才进入DOM回退。当前规则按来源和解析结果选择，其他来源中的缺失字段尚不会自动逐项补入。</p>
+<span id="section-22-虚拟列表为什么必须边滚边保存" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-22-虚拟列表与消息身份">2.2 虚拟列表与消息身份</h3>
+<p><strong>问：边滚边收集怎样保留历史内容？</strong></p>
+<p>假设顶部挂载A、B、C，底部挂载C、D、E。每到一个窗口就读取并保存，再按身份去重，最终可以保留A到E。两处“继续”可能是不同消息，因此使用虚拟项标识、消息ID等身份判断，最后才回退节点身份。</p>
+<p><strong>追问：怎样检查提取完整性？</strong></p>
+<p>准备首尾标记、重复发言和穿插工具记录的对话，检查首尾是否保留、重复消息是否分别存在、工具顺序是否正确。缺少稳定标识且页面复用节点时，身份判断仍有局限。</p>
+<span id="section-23-思考与工具为什么放在同一序列" class="legacy-anchor" aria-hidden="true"></span><span id="section-23-思考与工具为什么放在同一个序列里" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-23-有序片段与输出选项">2.3 有序片段与输出选项</h3>
+<p><strong>问：思考与工具记录为何按同一序列保存？</strong></p>
+<p>“思考A→搜索B→思考C”表达了思考和操作的先后关系。按类型集中整理会改变阅读顺序，因此本项目按结构化片段顺序或DOM位置组合，工具链接采用实际取得的来源字段。</p>
+<p><strong>追问：关闭思考选项会影响哪些内容？</strong></p>
+<p>选项控制各格式输出中的思考及相关字段。提取和缓存阶段仍可能接触结构化响应中的思考内容。若要求未选择内容完全不进入内存，就需要进一步调整读取与缓存策略。</p>
+<span id="section-24-统一模型解决什么没有解决什么" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-24-统一数据与内容变化">2.4 统一数据与内容变化</h3>
+<p><strong>问：统一会话模型带来了什么？</strong></p>
+<p>它让各格式共用角色、正文、顺序和资源信息，减少独立读取带来的差异。网页适配和输出格式可以分别维护，共享字段改变后再检查对应下游。</p>
+<p><strong>追问：导出期间内容变化如何处理？</strong></p>
+<p>首次补取思考后主要比较新旧轮数，相同轮数内的消息变化仍可能通过检查。授权代次识别授权变化，内容修订需要另外判断。因此，当前会话数据的完整性仍依赖实际取得的来源和导出时机。</p>
+<h2 id="section-三执行环境与任务控制">三、执行环境与任务控制</h2>
+<span id="section-25-为什么需要内容脚本main和后台" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-31-内容脚本main与后台">3.1 内容脚本、MAIN与后台</h3>
+<p><strong>问：三个执行位置分别负责什么？</strong></p>
+<p>内容脚本操作网页DOM并组织界面，MAIN读取网页可访问的程序数据，后台检查发送者与授权，再执行相应扩展操作。内容脚本给节点加标记，后台在同一标签页和frame中注入读取函数，结果经过检查后返回。</p>
+<p><strong>追问：打印内容为何使用session存储？</strong></p>
+<p>MV3后台可能被回收，普通全局变量随实例消失。<code>storage.session</code>让打印页能够跨这次回收读取临时内容；扩展重载、更新、禁用或浏览器重启时会清除数据，因此它服务于短期预览。</p>
+<span id="section-210-超时取消和授权代次有什么区别" class="legacy-anchor" aria-hidden="true"></span><span id="section-27-设置超时点取消撤回同意有什么区别" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-32-授权代次超时与取消">3.2 授权代次、超时与取消</h3>
+<p><strong>问：代次怎样识别旧授权结果？</strong></p>
+<p>任务在代次7开始，用户撤回后变为8，再同意变为9。旧任务返回时，虽然当前又是同意状态，但代次仍为7，因此结果被拒绝。</p>
+<p><strong>追问：超时后底层工作是否结束？</strong></p>
+<p><code>Promise.race</code>让调用方采用先完成的结果，计时先到时结束等待并进入回退。底层操作是否停止，取决于它是否接收并处理取消信号。同步ZIP和部分跨环境工作需要到可检查的位置才会退出。</p>
+<h2 id="section-四文件与界面问题">四、文件与界面问题</h2>
+<span id="section-26-word已经生成为什么仍会打不开" class="legacy-anchor" aria-hidden="true"></span><span id="section-27-svg图像解码失败与word字符问题怎样区分" class="legacy-anchor" aria-hidden="true"></span><span id="section-24-word生成成功为什么实际还会打不开" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-41-两次文档故障的区别">4.1 两次文档故障的区别</h3>
+<p><strong>问：Word与PNG两次失败分别发生在哪里？</strong></p>
+<p>第一次发生在共用的公式图像步骤：HTML实体进入SVG/XML后触发解码问题，修复采用正确命名空间和XML序列化。第二次发生在Word正文：U+000C、U+0008等控制字符不符合XML 1.0字符要求，需要在所有DOCX文本入口转成可见转义。</p>
+<p><strong>追问：为何换编码仍不能解决第二次问题？</strong></p>
+<p>编码规定字符如何表示，XML字符集合规定允许写入哪些字符。一个不被允许的码点，改成数值引用后仍需满足相同集合要求。实际修复保留正常文字及合法emoji，把异常位置表示为可见文本。</p>
+<span id="section-28-word公式和附件保存在哪里" class="legacy-anchor" aria-hidden="true"></span><span id="section-29-中文附件链接为什么需要专门适配" class="legacy-anchor" aria-hidden="true"></span><span id="section-25-word公式和附件分别以什么方式保存" class="legacy-anchor" aria-hidden="true"></span><span id="section-26-为什么中文附件链接需要专门适配" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-42-word中的公式和附件">4.2 Word中的公式和附件</h3>
+<p><strong>问：哪些内容可以继续编辑？</strong></p>
+<p>正文、代码和表格映射为Word结构，公式以图片保存并附LaTeX替代文本。原生数学对象需要额外的LaTeX到OMML转换，当前尚未实现。</p>
+<p><strong>追问：附件保存在哪里？</strong></p>
+<p>选择附带并下载成功的附件进入同级<code>assets</code>目录，Word通过相对链接打开。使用时需要完整解压并保留相对位置。中文链接采用Word专用转换，还原非ASCII字符，同时保留空格、<code>#</code>和<code>%</code>等字符的编码。</p>
+<span id="section-211-工具栏为什么不能只提高z-index" class="legacy-anchor" aria-hidden="true"></span><span id="section-28-工具栏为什么不能只靠加大z-index" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-43-页面入口布局">4.3 页面入口布局</h3>
+<p><strong>问：输入框被撑高如何修复？</strong></p>
+<p>新增元素参与宿主Grid或Flex布局后可能改变空间分配。本项目把工具栏移到body下独立定位，根据原控件矩形计算可用位置。历史Grid复现中，输入框从加入旧入口后的206px恢复为原来的162px。</p>
+<p><strong>追问：怎样验证入口可用？</strong></p>
+<p>比较原生控件的位置与尺寸，检查扩展按钮的可见范围，再通过中心点命中与实际点击确认。弹窗输入框排除、底部操作栏裁切和观察器清理分别检查。</p>
+<span id="section-三用一条故障链练习完整表达" class="legacy-anchor" aria-hidden="true"></span><span id="section-四选择理由与进一步追问" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-五故障表达与方案取舍">五、故障表达与方案取舍</h2>
+<p>介绍Word问题时，可以按<strong>现象→定位→原因→修改→验证</strong>组织：先讲两种格式共同失败，继而说明共用公式图像修复后PNG成功，再定位Word独有的正文字符，最后交代XML检查、实际Word打开和末尾内容核对。</p>
 
 
 
 
 
-<table><thead><tr><th>展开路线</th><th>先讲什么</th><th>追问时补什么</th><th>对应文章</th></tr></thead><tbody><tr><td>信息完整性</td><td>虚拟列表会卸载旧节点</td><td>身份去重、数据来源优先级、稳定性限制</td><td><a href="/projects/deepseek-export-plus/extract-conversation/">提取模块</a></td></tr><tr><td>格式转换</td><td>同一内容有不同消费者</td><td>结构解析、合法字符、路径表示</td><td><a href="/projects/deepseek-export-plus/format-output/">格式输出</a></td></tr><tr><td>真实故障</td><td>Word与PNG先后失败</td><td>共用SVG步骤与Word独有XML步骤</td><td><a href="/projects/deepseek-export-plus/word-png/">文件故障</a></td></tr><tr><td>生命周期</td><td>异步等待中用户改变决定</td><td>授权代次、取消、超时和迟到结果</td><td><a href="/projects/deepseek-export-plus/task-lifecycle/">任务控制</a></td></tr></tbody></table>
-<h2 id="section-二核心机制的短答与追问">二、核心机制的短答与追问</h2>
-<span id="section-21-为什么不直接把页面文本复制下来" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-21-为什么不直接复制页面文字">2.1 为什么不直接复制页面文字</h3>
-<p><strong>短答：</strong>页面文字不能完整代表会话。虚拟列表只保留附近节点，折叠思考可能不在可见文本里，代码卡片又混有复制按钮等控件。提取模块先按页面类型取得内容，再转成统一模型，下游格式复用结果。</p>
-<p><strong>追问：来源怎样选择？</strong>分享页优先公开结构化响应；聊天页先寻找当前挂载对象，没有对象时才用已观察的历史缓存，结构化解析成功就返回，否则回退DOM。它不是逐字段比较所有来源后自动取最完整值，内部对象存在也不保证每个字段齐全。</p>
-<h3 id="section-22-虚拟列表为什么必须边滚边保存">2.2 虚拟列表为什么必须边滚边保存</h3>
-<p><strong>短答：</strong>假设顶部只有A/B/C，底部只有C/D/E，最后扫描只能拿到C/D/E。每到一个窗口就收集，按稳定身份去重，才能留下A到E。</p>
-<p><strong>追问：为什么不按文字去重？</strong>两条“继续”可以是不同消息。项目优先利用虚拟项标识、消息ID等身份，最后才回退节点身份；没有稳定标识且节点被复用时仍有边界。验证要检查首尾、顺序和重复发言，不只检查进度完成。</p>
-<span id="section-23-思考与工具为什么放在同一个序列里" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-23-思考与工具为什么放在同一序列">2.3 思考与工具为什么放在同一序列</h3>
-<p><strong>短答：</strong>“思考A→搜索B→思考C”如果先合并思考就会变成A→C→B，破坏推理与操作的相对关系。有序片段可以保留原位置，链接只采用取得的真实来源字段。</p>
-<p><strong>追问：关闭思考是否意味着完全没读它？</strong>不是。它约束输出字段；同意处理后的结构化数据与缓存仍可能接触思考。选轮也不等于网页只读取选中的轮次。若要求未选内容连内存都不能接触，需要修改提取策略。</p>
-<h3 id="section-24-统一模型解决什么没有解决什么">2.4 统一模型解决什么，没有解决什么</h3>
-<p><strong>短答：</strong>它把页面适配与输出格式分开，让格式器接收相同的消息、角色、顺序和资源信息，减少各路径独立解析造成的差异。</p>
-<p><strong>追问：它是否是完整快照？</strong>不是服务端原子快照。导出期间内容仍可能变化；首次补取思考后主要比较轮数，相同轮数内的内容更新不一定被拒绝。授权代次也不负责识别所有消息修订。</p>
-<h3 id="section-25-为什么需要内容脚本main和后台">2.5 为什么需要内容脚本、MAIN和后台</h3>
-<p><strong>短答：</strong>内容脚本操作DOM，但变量环境与网页隔离；MAIN用于有限读取网页内部数据；后台处理受权限约束的浏览器操作和授权检查。这是执行环境分工，不等同于三个操作系统进程。</p>
-<p><strong>追问：为什么不把打印内容存在后台变量？</strong>MV3后台可能被回收。短期打印内容放在session存储，使新预览页在worker重新唤醒后仍能读取；它不是长期备份，扩展重载或浏览器重启等情况会清除。</p>
-<span id="section-24-word生成成功为什么实际还会打不开" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-26-word已经生成为什么仍会打不开">2.6 Word已经生成，为什么仍会打不开</h3>
-<p><strong>短答：</strong>DOCX是装有XML和资源的ZIP。ZIP能生成，不代表内部XML符合规范。真实问题中正文含U+000C、U+0008等XML 1.0不接受的控制字符，需要在所有DOCX文本入口统一转成可见转义。</p>
-<p><strong>追问：换成UTF-8或数值实体能解决吗？</strong>不能。编码解决字符怎样表示，字符集合规则决定是否允许出现；非法码点写成数值引用仍然非法。PNG保存像素，因此PNG成功也不能替Word文本证明合法。</p>
-<h3 id="section-27-svg图像解码失败与word字符问题怎样区分">2.7 SVG图像解码失败与Word字符问题怎样区分</h3>
-<p><strong>短答：</strong>前者发生在HTML内容转为SVG/XML时，HTML实体如<code>&#x26;nbsp;</code>不能直接套用普通XML规则。修正使用正确命名空间和XMLSerializer；后者发生在Word正文XML的字符集合，需要文本入口处理。</p>
-<p><strong>追问：怎么证明不是同一个问题？</strong>沿公共步骤与专属步骤检查。Word和PNG都需要公式图像，先一起失败；图像修复后PNG成功而Word仍失败，继续检查Word独有的文档结构。最终还需让真实Word打开，不能停在文件大小和ZIP条目检查。</p>
-<span id="section-25-word公式和附件分别以什么方式保存" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-28-word公式和附件保存在哪里">2.8 Word公式和附件保存在哪里</h3>
-<p><strong>短答：</strong>正文、代码和表格映射为可编辑结构，公式以图片保存，并保留LaTeX替代文本。附件没有嵌入DOCX；只有勾选附带资源且下载成功，才进入同级assets目录，通过相对链接访问。</p>
-<p><strong>追问：为什么没有直接做原生公式？</strong>LaTeX到Office原生数学结构需要额外语法映射与兼容验证，当前没有实现。公式图片化保留可阅读效果，但不能宣称公式原生可编辑。移动文档时也要保留已附带资源的相对位置。</p>
-<span id="section-26-为什么中文附件链接需要专门适配" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-29-中文附件链接为什么需要专门适配">2.9 中文附件链接为什么需要专门适配</h3>
-<p><strong>短答：</strong>文件系统名称与URI不是相同表示。链接里的空格、<code>#</code>和<code>%</code>有语法含义；Word历史检查又显示全百分号编码的中文相对链接不能正确跟随，所以为该消费者单独处理非ASCII字符，并保留ASCII特殊符号编码。</p>
-<p><strong>追问：为什么不全部解码？</strong><code>#</code>会变成片段起点，字面<code>%E8</code>可能被错误地再解释。正确性要通过实际打开目标并核对内容检查，不能仅看链接字符串。这个适配也不能推广成所有链接的通用规则。</p>
-<span id="section-27-设置超时点取消撤回同意有什么区别" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-210-超时取消和授权代次有什么区别">2.10 超时、取消和授权代次有什么区别</h3>
-<p><strong>短答：</strong>超时结束调用方等待；取消依赖底层协作停止；授权代次拒绝属于旧同意状态的结果。任务在代次7开始，撤回后变8，再同意变9，旧任务不能因为当前同意为true就继续交付。</p>
-<p><strong>追问：Promise.race会取消另一个任务吗？</strong>不会。AbortSignal也只有接收并响应的下游操作才会停。同步ZIP和部分跨环境工作并非立即可抢占，因此要区分界面结束、结果丢弃和底层真正停止。</p>
-<span id="section-28-工具栏为什么不能只靠加大z-index" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-211-工具栏为什么不能只提高z-index">2.11 工具栏为什么不能只提高z-index</h3>
-<p><strong>短答：</strong>z-index处理层叠，不能解决新增元素参与Grid/Flex后撑高输入框、误选弹窗输入框或内部内容被父容器裁切。入口改为body独立定位，再按原控件矩形找空位。</p>
-<p><strong>追问：怎样确认按钮可用？</strong>既看尺寸与截图，也做中心点命中和真实点击，还要比较原生上传、发送控件是否受影响。元素存在、看得见和点得到是不同条件。</p>
-<h3 id="section-212-已做了哪些优化下一步怎样测">2.12 已做了哪些优化，下一步怎样测</h3>
-<p><strong>短答：</strong>完整挂载时可以快速读取，虚拟列表边滚边收集，成功URL在同任务内复用，Word/PNG按需加载，PNG逐页绘制。这些机制分别减少不必要步骤或控制单次工作规模。</p>
-<p><strong>追问：快了多少，内存降了多少？</strong>还没有统一基线。可以固定对话、附件、选项和环境，分别测资源读取、公式渲染、图像生成和归档，再重复记录分布。不能把逐页画布等同于流式ZIP，也不能把资源预算等同于峰值内存上限。</p>
-<h2 id="section-三用一条故障链练习完整表达">三、用一条故障链练习完整表达</h2>
-<p>可以选Word问题，按五步组织：</p>
-<ol>
-<li><strong>现象</strong>：Word与PNG先出现图像解码失败；修正后PNG成功，含思考DOCX仍打不开。</li>
-<li><strong>定位</strong>：先查共享公式图像链，再查Word专属正文XML。</li>
-<li><strong>原因</strong>：HTML实体进入XML的序列化边界，以及正文控制字符不满足XML字符集合，是两个原因。</li>
-<li><strong>修改</strong>：前者使用命名空间与XML序列化；后者在所有文本入口处理非法字符，保留可见位置。</li>
-<li><strong>验证</strong>：检查容器、全部XML、实际Word打开和末尾内容；附件链接另做实际目标检查，结论限定于对应环境。</li>
-</ol>
-<p>也可以选择输入框被撑高的故事：从旧Grid复现中162px变为206px，到独立定位后保持162px，解释新增元素为什么会参与宿主布局。数字属于该复现条件，不能写成所有网页都已覆盖。</p>
-<h2 id="section-四选择理由与进一步追问">四、选择理由与进一步追问</h2>
 
 
 
@@ -161,16 +163,10 @@ d:null
 
 
 
-
-
-
-
-
-<table><thead><tr><th>当前选择</th><th>得到什么</th><th>代价与未来条件</th></tr></thead><tbody><tr><td>统一会话模型</td><td>多格式共用语义与资源</td><td>仍依赖网页来源，并占用内存</td></tr><tr><td>公式图片化</td><td>普通正文继续可编辑，公式较易显示</td><td>公式不能原生编辑；OMML需另做转换</td></tr><tr><td>同步内存ZIP</td><td>实现和错误处理较直接</td><td>长内容需拆分；流式处理尚未实现</td></tr><tr><td>PDF使用浏览器打印</td><td>复用浏览器打印排版与保存能力</td><td>纸张、边距和阅读器仍影响结果</td></tr><tr><td>部分资源失败仍输出</td><td>可保留成功内容与缺失说明</td><td>不能承诺导出包包含所有原件</td></tr></tbody></table>
-<span id="section-三效果用哪几项证据说明" class="legacy-anchor" aria-hidden="true"></span><span id="section-四本人能力与下一步练习" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-五复习检查与效果边界">五、复习检查与效果边界</h2>
-<p>能脱离稿件画出“提取→选轮→资源→格式→下载”的数据流，能解释为何A/B/C与C/D/E要边滚边合并，能把两次XML问题区分开，再尝试推演撤回后迟到结果，这比只记住库名更有用。</p>
-<p>现有结果支持特定布局、文件和路径得到修正，不支持统一速度倍数、峰值内存降低率或所有Office兼容。分享页附件404的案例只能说明已测文件在分享侧不可取得，不能推导平台禁止全部Excel共享。介绍实际操作经历时，也应与自己真正做过的步骤一致。</p>
-<p>回到<a href="/projects/deepseek-export-plus/">项目首页与阅读目录</a>选择需要重新展开的部分。</p>a:["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"deepseek-export-plus-interview-summary","children":[["$","header",null,{"className":"article-heading","children":["$L25",["$","h1",null,{"tabIndex":-1,"children":"DeepSeek Export Plus：项目汇报与面试复习"}],["$","p",null,{"className":"article-deck","children":"集中复习项目需求、数据流、技术取舍、问题处理和常见追问；配合系列文章使用。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["3,138"," 字"]}],["$","span",null,{"children":["阅读约 ",10," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","项目复习",{"children":"项目复习"}],["$","span","面试",{"children":"面试"}]]}],false]}],["$","$L26",null,{"headings":[{"id":"section-一一分钟介绍与展开路线","text":"一、一分钟介绍与展开路线","level":2},{"id":"section-二核心机制的短答与追问","text":"二、核心机制的短答与追问","level":2},{"id":"section-21-为什么不直接复制页面文字","text":"2.1 为什么不直接复制页面文字","level":3},{"id":"section-22-虚拟列表为什么必须边滚边保存","text":"2.2 虚拟列表为什么必须边滚边保存","level":3},{"id":"section-23-思考与工具为什么放在同一序列","text":"2.3 思考与工具为什么放在同一序列","level":3},{"id":"section-24-统一模型解决什么没有解决什么","text":"2.4 统一模型解决什么，没有解决什么","level":3},{"id":"section-25-为什么需要内容脚本main和后台","text":"2.5 为什么需要内容脚本、MAIN和后台","level":3},{"id":"section-26-word已经生成为什么仍会打不开","text":"2.6 Word已经生成，为什么仍会打不开","level":3},{"id":"section-27-svg图像解码失败与word字符问题怎样区分","text":"2.7 SVG图像解码失败与Word字符问题怎样区分","level":3},{"id":"section-28-word公式和附件保存在哪里","text":"2.8 Word公式和附件保存在哪里","level":3},{"id":"section-29-中文附件链接为什么需要专门适配","text":"2.9 中文附件链接为什么需要专门适配","level":3},{"id":"section-210-超时取消和授权代次有什么区别","text":"2.10 超时、取消和授权代次有什么区别","level":3},{"id":"section-211-工具栏为什么不能只提高z-index","text":"2.11 工具栏为什么不能只提高z-index","level":3},{"id":"section-212-已做了哪些优化下一步怎样测","text":"2.12 已做了哪些优化，下一步怎样测","level":3},{"id":"section-三用一条故障链练习完整表达","text":"三、用一条故障链练习完整表达","level":2},{"id":"section-四选择理由与进一步追问","text":"四、选择理由与进一步追问","level":2},{"id":"section-五复习检查与效果边界","text":"五、复习检查与效果边界","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,false,["$","$L28",null,{"mappings":[]}],["$","$L29",null,{"html":"$2a","zoomImages":true}],false,"$L2b"]}],"$L2c"]}]]}]
+<table><thead><tr><th>选择</th><th>主要作用</th><th>需要考虑的代价</th></tr></thead><tbody><tr><td>统一会话模型</td><td>多格式共享语义与资源</td><td>依赖网页来源，并占用内存</td></tr><tr><td>公式图片化</td><td>保留阅读效果，普通正文继续编辑</td><td>公式数学结构需另行转换才能编辑</td></tr><tr><td>同步内存ZIP</td><td>归档及失败处理直接</td><td>长内容可能需要拆分，尚未实现流式归档</td></tr><tr><td>浏览器打印PDF</td><td>复用打印排版与保存能力</td><td>纸张、边距和环境会影响输出</td></tr><tr><td>部分资源失败仍交付</td><td>保留成功内容与缺失说明</td><td>用户可能需要回原页面补齐附件</td></tr></tbody></table>
+<span id="section-212-已做了哪些优化下一步怎样测" class="legacy-anchor" aria-hidden="true"></span><span id="section-五复习检查与效果边界" class="legacy-anchor" aria-hidden="true"></span><span id="section-三效果用哪几项证据说明" class="legacy-anchor" aria-hidden="true"></span><span id="section-四本人能力与下一步练习" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-六效果表述与进一步测量">六、效果表述与进一步测量</h2>
+<p>目前可以说明的优化包括：完整挂载时快速读取、虚拟列表边滚边收集、相同URL资源复用、Word/PNG按需加载及PNG逐页绘制。这些机制分别减少重复工作或限制单步规模，具体速度和峰值内存还需要固定输入、选项和环境后测量。</p>
+<p>历史文件与布局回归支持对应样例中的修正结果。Office版本兼容、长对话容量和真实用户效果仍需扩大验证；分享页XLSX的404案例对应已测文件的访问结果。复习时把<strong>实际行为、验证条件和仍待测量的部分</strong>连在一起表达，再回到<a href="/projects/deepseek-export-plus/">项目首页</a>查阅需要展开的章节。</p>a:["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"deepseek-export-plus-interview-summary","children":[["$","header",null,{"className":"article-heading","children":["$L25",["$","h1",null,{"tabIndex":-1,"children":"DeepSeek Export Plus：项目汇报与面试复习"}],["$","p",null,{"className":"article-deck","children":"集中复习项目介绍、提取模型、执行环境、任务控制、文件故障和方案取舍，结合正文准备后续追问。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["2,602"," 字"]}],["$","span",null,{"children":["阅读约 ",8," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","项目复习",{"children":"项目复习"}],["$","span","面试",{"children":"面试"}]]}],false]}],["$","$L26",null,{"headings":[{"id":"section-一项目介绍与展开路线","text":"一、项目介绍与展开路线","level":2},{"id":"section-二提取与会话模型","text":"二、提取与会话模型","level":2},{"id":"section-21-页面内容的取得","text":"2.1 页面内容的取得","level":3},{"id":"section-22-虚拟列表与消息身份","text":"2.2 虚拟列表与消息身份","level":3},{"id":"section-23-有序片段与输出选项","text":"2.3 有序片段与输出选项","level":3},{"id":"section-24-统一数据与内容变化","text":"2.4 统一数据与内容变化","level":3},{"id":"section-三执行环境与任务控制","text":"三、执行环境与任务控制","level":2},{"id":"section-31-内容脚本main与后台","text":"3.1 内容脚本、MAIN与后台","level":3},{"id":"section-32-授权代次超时与取消","text":"3.2 授权代次、超时与取消","level":3},{"id":"section-四文件与界面问题","text":"四、文件与界面问题","level":2},{"id":"section-41-两次文档故障的区别","text":"4.1 两次文档故障的区别","level":3},{"id":"section-42-word中的公式和附件","text":"4.2 Word中的公式和附件","level":3},{"id":"section-43-页面入口布局","text":"4.3 页面入口布局","level":3},{"id":"section-五故障表达与方案取舍","text":"五、故障表达与方案取舍","level":2},{"id":"section-六效果表述与进一步测量","text":"六、效果表述与进一步测量","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,false,["$","$L28",null,{"mappings":[]}],["$","$L29",null,{"html":"$2a","zoomImages":true}],false,"$L2b"]}],"$L2c"]}]]}]
 2b:["$","div",null,{"className":"related-note","children":[["$","$L24",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L24",null,{"href":"/projects/deepseek-export-plus/series/","data-reading-start":"true","children":"返回系列目录"}],["$","$L24",null,{"href":"/projects/deepseek-export-plus/","data-reading-start":"true","children":"项目总览"}]]}]
 2c:["$","$L26",null,{"headings":"$a:props:children:1:props:headings"}]
 2d:I[6279,["5587","$18","8612","$21","182","$22","4067","$23"],"FilterLink"]

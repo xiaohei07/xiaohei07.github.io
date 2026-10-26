@@ -16,25 +16,25 @@ f:"static/chunks/182-3013bbb685a41e87.js"
 6:X
 6:C
 7:X
-c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"deepseek-export-plus-extract-conversation","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L11",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L11",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L11",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L12",null,{"className":"trail-current","href":"/projects/","children":["浏览器扩展",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"长对话、折叠思考与有序消息怎样提取"}],["$","p",null,{"className":"article-deck","children":"从虚拟列表边滚边收集，读到挂载对象、历史缓存与DOM回退，以及思考和选轮的一致性边界。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["1,919"," 字"]}],["$","span",null,{"children":["阅读约 ",6," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","DOM",{"children":"DOM"}],["$","span","数据提取",{"children":"数据提取"}]]}],false]}],["$","$L13",null,{"headings":[{"id":"section-一虚拟列表需要在节点消失前保存消息","text":"一、虚拟列表需要在节点消失前保存消息","level":2},{"id":"section-二chat与share的来源不同思考和工具仍要保持原顺序","text":"二、chat与share的来源不同，思考和工具仍要保持原顺序","level":2},{"id":"section-三默认不导出思考约束的是输出内容","text":"三、默认不导出思考，约束的是输出内容","level":2},{"id":"section-四怎样检查这一步是否完成","text":"四、怎样检查这一步是否完成","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L11",null,{"href":"/projects/deepseek-export-plus/series/","data-reading-start":"true","children":"系列文章与阅读路线"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/","data-reading-start":"true","children":"项目总览"}],["$","span",null,{"children":[2," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-architecture",{"value":1,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/architecture/","data-reading-start":"true","children":"从网页到文件，导出链路怎样分工"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extract-conversation",{"value":2,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/extract-conversation/","data-reading-start":"true","aria-current":"page","children":"长对话、折叠思考与有序消息怎样提取"}]}],["$","li","deepseek-export-plus-format-output",{"value":3,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/format-output/","data-reading-start":"true","children":"同一份对话怎样生成不同格式"}]}],["$","li","deepseek-export-plus-attachments",{"value":4,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/attachments/","data-reading-start":"true","children":"附件怎样下载、打包并保持可打开"}]}],["$","li","deepseek-export-plus-task-lifecycle",{"value":5,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/task-lifecycle/","data-reading-start":"true","children":"取消、撤回和页面切换后，任务怎样收尾"}]}]]}]]}],["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extension-runtime",{"value":6,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/extension-runtime/","data-reading-start":"true","children":"内容脚本、网页环境与后台怎样协作"}]}],["$","li","deepseek-export-plus-document-formats",{"value":7,"children":"$L14"}],"$L15"]}]]}],"$L16"]]}]]}],"$L17","$L18","$L19","$L1a"]}],"$L1b"]}]]}],["$L1c"],"$L1d"]}],"p":"$@1e","v":null,"s":"$7"}}]]
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"deepseek-export-plus-extract-conversation","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L11",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L11",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L11",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L12",null,{"className":"trail-current","href":"/projects/","children":["浏览器扩展",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"长对话提取与有序消息组织"}],["$","p",null,{"className":"article-deck","children":"通过滚动窗口例子解释虚拟列表提取，说明页面挂载数据、历史响应缓存和DOM读取的顺序，以及思考与工具片段的组织。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["2,035"," 字"]}],["$","span",null,{"children":["阅读约 ",6," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","DOM",{"children":"DOM"}],["$","span","数据提取",{"children":"数据提取"}]]}],false]}],["$","$L13",null,{"headings":[{"id":"section-一长对话的边滚动边收集","text":"一、长对话的边滚动边收集","level":2},{"id":"section-11-滚动范围与等待条件","text":"1.1 滚动范围与等待条件","level":3},{"id":"section-二消息数据来源与选择顺序","text":"二、消息数据来源与选择顺序","level":2},{"id":"section-三思考与工具记录的有序组织","text":"三、思考与工具记录的有序组织","level":2},{"id":"section-四思考选项与轮次选择","text":"四、思考选项与轮次选择","level":2},{"id":"section-41-首次补取思考的检查","text":"4.1 首次补取思考的检查","level":3},{"id":"section-五提取结果的检查方法","text":"五、提取结果的检查方法","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L11",null,{"href":"/projects/deepseek-export-plus/series/","data-reading-start":"true","children":"系列文章与阅读路线"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/","data-reading-start":"true","children":"项目总览"}],["$","span",null,{"children":[2," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-architecture",{"value":1,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/architecture/","data-reading-start":"true","children":"DeepSeek Export Plus的整体架构与导出流程"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extract-conversation",{"value":2,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/extract-conversation/","data-reading-start":"true","aria-current":"page","children":"长对话提取与有序消息组织"}]}],["$","li","deepseek-export-plus-format-output",{"value":3,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/format-output/","data-reading-start":"true","children":"对话内容的多格式转换"}]}],["$","li","deepseek-export-plus-attachments",{"value":4,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/attachments/","data-reading-start":"true","children":"附件下载、资源复用与文件链接"}]}],["$","li","deepseek-export-plus-task-lifecycle",{"value":5,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/task-lifecycle/","data-reading-start":"true","children":"导出任务的取消、授权与状态清理"}]}]]}]]}],["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extension-runtime",{"value":6,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/extension-runtime/","data-reading-start":"true","children":"内容脚本、网页环境与后台的协作机制"}]}],"$L14","$L15"]}]]}],"$L16"]]}]]}],"$L17","$L18","$L19","$L1a"]}],"$L1b"]}]]}],["$L1c"],"$L1d"]}],"p":"$@1e","v":null,"s":"$7"}}]]
 a:[["children",{"s":{"n":"page","t":"d","k":"extract-conversation","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
 8:[["children",{"s":{"n":"project","t":"d","k":"deepseek-export-plus","s":["mental-health-evaluation"]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
 1:[["children",{"s":"projects","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
-0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L20",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L22",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$23",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"长对话、折叠思考与有序消息怎样提取 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从虚拟列表边滚边收集，读到挂载对象、历史缓存与DOM回退，以及思考和选轮的一致性边界。"}],["$","link","2",{"rel":"canonical","href":"/projects/deepseek-export-plus/extract-conversation/"}]]}]}],null]}],null]}],"p":"$@24","v":null,"s":"$7"}},"a":"$@25","u":"$@26","b":"6cQJHWqsmY59WndvF4Y-g"}
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L20",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L22",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$23",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"长对话提取与有序消息组织 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"通过滚动窗口例子解释虚拟列表提取，说明页面挂载数据、历史响应缓存和DOM读取的顺序，以及思考与工具片段的组织。"}],["$","link","2",{"rel":"canonical","href":"/projects/deepseek-export-plus/extract-conversation/"}]]}]}],null]}],null]}],"p":"$@24","v":null,"s":"$7"}},"a":"$@25","u":"$@26","b":"LzViTTBtizNOe9mwSPy8_"}
 27:"ProjectLegacyAnchors"
 28:I[1103,["5587","$d","8612","$e","182","$f","4067","$10"],"$27"]
 29:I[4711,["5587","$d","8612","$e","182","$f","4067","$10"],"ArticleBody"]
 2b:I[887,[],"OutletBoundary"]
 :HL["/_next/static/css/0d4edec444d587ad.css","style"]
-14:["$","$L11",null,{"href":"/projects/deepseek-export-plus/document-formats/","data-reading-start":"true","children":"字符、XML和DOCX：文件格式怎样层层组成"}]
+14:["$","li","deepseek-export-plus-document-formats",{"value":7,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/document-formats/","data-reading-start":"true","children":"字符编码、XML与DOCX文档结构"}]}]
 15:["$","li","deepseek-export-plus-rendering-pagination",{"value":8,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/rendering-pagination/","data-reading-start":"true","children":"从网页排版到长图：字体、画布和分页"}]}]
-16:["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-word-png",{"value":9,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/word-png/","data-reading-start":"true","children":"Word与PNG的两次失败，为什么要分层修复"}]}],["$","li","deepseek-export-plus-page-integration",{"value":10,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/page-integration/","data-reading-start":"true","children":"导出按钮怎样与原网页和平共处"}]}]]}]]}]
+16:["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-word-png",{"value":9,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/word-png/","data-reading-start":"true","children":"Word与PNG导出故障的分层修复"}]}],["$","li","deepseek-export-plus-page-integration",{"value":10,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/page-integration/","data-reading-start":"true","children":"扩展入口的布局适配与交互修复"}]}]]}]]}]
 17:["$","$L28",null,{"mappings":[]}]
-2a:T1e3c,<p>导出扩展首先要回答一个问题：当前页面究竟有哪些内容可以保存？DeepSeek的聊天页与分享页提供的数据不同，长聊天也未必把全部消息同时留在页面里。若提取阶段已经漏掉消息，后面换一种文件格式无法把它补回来。</p>
-<p>这一篇沿提取模块展开：先读懂虚拟列表，再看数据来源的优先级，最后讨论思考开关和选轮。网页节点称为DOM；“挂载”表示对应内容此刻已经进入页面节点。相关前置可看<a href="/projects/personal-site/react-components-props/">组件与props</a>，整个模块的位置见<a href="/projects/deepseek-export-plus/architecture/">项目架构</a>。</p>
-<h2 id="section-一虚拟列表需要在节点消失前保存消息">一、虚拟列表需要在节点消失前保存消息</h2>
-<p>普通长页面可能把全部消息都留在DOM里；<strong>虚拟列表只挂载视口附近的一部分节点</strong>，以减少页面同时维护的内容。旧消息滚出屏幕后可能卸载，所以“先滚到底，再统一读取”会漏掉已经消失的节点。</p>
-<p>假设一段对话有A、B、C、D、E五条消息，页面一次只挂载三条。下面是教学推演，不是新增实测。</p>
+2a:T2246,<p>会话提取负责把DeepSeek页面中的消息整理成后续格式模块可以使用的数据。它需要保留<strong>消息内容、角色、原有顺序和附件信息</strong>，同时处理长对话、折叠思考及不同页面的数据来源。</p>
+<p>这一模块的输入是聊天页或分享页中能够取得的内容，输出是统一的会话模型。页面节点称为DOM；“挂载”表示对应内容此刻已经建立为页面节点。组件数据的前置知识可以参考<a href="/projects/personal-site/react-components-props/">React组件与props</a>，模块在整体流程中的位置见<a href="/projects/deepseek-export-plus/architecture/">项目架构</a>。</p>
+<span id="section-一虚拟列表需要在节点消失前保存消息" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-一长对话的边滚动边收集">一、长对话的边滚动边收集</h2>
+<p>长对话页面可能使用<strong>虚拟列表</strong>，只把屏幕附近的一部分消息挂载到DOM中。这样能够减少同时维护的页面节点；消息滚出可见区域后，对应节点可能被卸载。</p>
+<p>假设一段对话有A、B、C、D、E五条消息，页面一次只挂载三条。为了在节点消失前保存内容，需要在每次滚动后立即读取当前消息：</p>
 
 
 
@@ -60,53 +60,62 @@ a:[["children",{"s":{"n":"page","t":"d","k":"extract-conversation","s":[]},"h":6
 
 
 
-<table><thead><tr><th>当前窗口</th><th>本次能够访问的消息</th><th>按消息身份保存后的集合</th></tr></thead><tbody><tr><td>顶部</td><td>A、B、C</td><td>A、B、C</td></tr><tr><td>向下滚一段</td><td>B、C、D</td><td>A、B、C、D</td></tr><tr><td>再向下滚</td><td>C、D、E</td><td>A、B、C、D、E</td></tr></tbody></table>
-<p>项目的<code>scrollToLoadAllMessages</code>在访问各段时立即收集，而不是等到最后再读。这里还必须<strong>按身份去重，不能按正文去重</strong>：A和E可能都是“继续”，但它们发生在不同位置，是两条合法消息。实现优先使用虚拟项key与同项位置，其次使用消息ID，最后才回退到节点身份；如果页面复用同一节点又不给稳定标识，仍然可能影响判断。</p>
-<p>滚动也要找对容器。页面左侧会话列表和中间消息区都能滚动，加载器需要沿消息节点寻找相应滚动祖先。等待时观察高度、消息key和内容长度等变化，并设置上限；内容暂时稳定，只能说明这段等待里没有检测到变化，不能证明服务器已经停止生成。</p>
-<p>对于全部消息已挂载的页面，探测后可以走快速读取路径。<strong>进度快不是缺陷证据，首尾消息、原顺序和重复发言是否保留才是检查对象。</strong>完成或取消后还要恢复本次临时改变的滚动和折叠状态；用户原来已展开的思考不能被统一折叠，URL已变化时也不能把旧页滚动位置套到新对话。</p>
-<h2 id="section-二chat与share的来源不同思考和工具仍要保持原顺序">二、chat与share的来源不同，思考和工具仍要保持原顺序</h2>
-<p>share页面优先读取公开分享响应中的结构化内容；chat则结合当前挂载的消息元数据、已经观察到的历史响应和DOM回退。这些内部字段与响应结构都可能随网页变化，不应称为官方稳定导出API。历史观察也只能看到安装观察逻辑以后经过的响应，不能自动恢复此前已经消失的数据。</p>
-<p>一条助手消息可能按以下顺序出现：</p>
+<table><thead><tr><th>滚动位置</th><th>当前可以读取的消息</th><th>已收集的消息</th></tr></thead><tbody><tr><td>顶部</td><td>A、B、C</td><td>A、B、C</td></tr><tr><td>向下滚动一段</td><td>B、C、D</td><td>A、B、C、D</td></tr><tr><td>继续向下滚动</td><td>C、D、E</td><td>A、B、C、D、E</td></tr></tbody></table>
+<p>本项目的滚动收集函数会在经过各段时保存消息。多次读取中出现的B、C、D，需要按<strong>消息身份</strong>去重。正文相同的两条消息仍可能来自不同位置，例如用户在开头和结尾都说了“继续”，这两次发言都应保留。</p>
+<p>实现优先使用虚拟项的key与同项位置，其次使用消息ID，最后回退到节点身份。如果页面复用节点，又没有提供稳定标识，消息身份的判断仍会受到影响。</p>
+<h3 id="section-11-滚动范围与等待条件">1.1 滚动范围与等待条件</h3>
+<p>会话列表和消息区域都可能滚动。收集函数会沿消息节点寻找对应的滚动祖先，操作实际承载消息的容器，再通过高度、消息key和内容长度的变化判断本段是否还在加载，并设置等待上限。</p>
+<p>内容在一段时间内保持稳定后，可以继续下一步；对话仍在生成时，后续仍可能出现新内容。因此，导出较长对话时，适合先等待当前回答相对稳定。</p>
+<p>如果全部消息已经挂载，探测后可以直接读取。验证完整性时，重点检查<strong>首尾消息、原顺序和重复发言</strong>是否保留。完成或取消后，还要恢复本次临时改变的滚动位置和折叠状态；恢复前会考虑页面地址是否变化，以及思考是否原本就由用户展开。</p>
+<span id="section-二chat与share的来源不同思考和工具仍要保持原顺序" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-二消息数据来源与选择顺序">二、消息数据来源与选择顺序</h2>
+<p><strong>结构化消息数据</strong>指程序按字段保存的消息对象，例如角色、正文、思考片段、工具结果和附件。与直接读取页面文字相比，这些对象可能保留页面上没有完全展开的信息。</p>
+<p>分享页优先读取公开分享响应中的结构化内容。聊天页则结合<strong>当前节点关联的数据、已观察到的历史响应缓存和DOM回退</strong>。DOM回退表示改从页面中已经显示的元素读取内容，再按元素位置整理。</p>
+<p>本项目先查找当前挂载节点关联的结构化消息对象；没有找到时，再采用历史缓存。取得对象后，解析函数尝试把它整理成消息，解析成功就返回，失败时才进入DOM路径。</p>
+<p>用消息ID为42的例子，可以观察这个选择顺序的影响：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>当前取得的数据</th><th>处理结果</th></tr></thead><tbody><tr><td>节点对象包含新正文、思考和工具记录，历史缓存较旧</td><td>使用节点对象；即使页面思考折叠，也可以读取对象中的片段</td></tr><tr><td>节点对象有合法正文，但思考只出现在其他来源中</td><td>正文解析成功后返回，其他来源中的思考不会自动逐字段补入</td></tr><tr><td>没有节点对象，历史缓存较旧，DOM显示了新正文</td><td>先尝试解析缓存；缓存解析成功时，输出可能仍使用缓存内容</td></tr></tbody></table>
+<p>因此，<strong>当前实现按来源和解析结果选择消息</strong>。逐字段比较所有来源、自动合并最完整版本，还需要额外的完整性及修订判断。页面内部对象和响应结构也可能变化，读取逻辑需要随实际网页维护。</p>
+<p>历史缓存来自经过已安装观察脚本的网络请求。安装前已经发出的请求需要页面重新请求，新的响应才有机会进入缓存。观察方式见<a href="/projects/deepseek-export-plus/extension-runtime/">扩展脚本的协作机制</a>。</p>
+<h2 id="section-三思考与工具记录的有序组织">三、思考与工具记录的有序组织</h2>
+<p>一条助手消息可能依次包含以下内容：</p>
 <div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-text">思考A → 搜索B → 思考C → 打开网页D → 最终回答E
 </code></pre></div>
-<p>若先把思考合并，再把工具放在末尾，就变成A→C→B→D，读者无法知道哪段判断发生在搜索之前。项目把思考和工具组织为<strong>同一有序序列</strong>，结构化来源按片段顺序，DOM回退按实际位置组合。来源链接来自能够取得的工具字段，缺失时不能从回答内容反推并补造。</p>
-<p>数据来源的选择分两层：<code>readMountedMetadata</code>先寻找当前挂载节点关联的结构化消息对象，没有对象时才采用历史缓存；<code>extractMessage</code>拿到对象后尝试解析，成功便直接返回，没有成功才进入DOM路径。<strong>判断对象存在，不等于逐字段证明内容完整。</strong></p>
-<p>用消息ID为42的合成例子看这个差别。以下用假设输入说明当前选择规则，不代表三种情形都曾发生线上故障：</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>当前能取得的内容</th><th>实现会怎样选择</th><th>对输出的影响</th></tr></thead><tbody><tr><td>挂载对象含新思考、搜索和新正文；缓存是旧内容；DOM折叠</td><td>采用挂载对象，解析成功直接返回</td><td>可以不展开DOM就取得对象里的有序片段</td></tr><tr><td>挂载对象只有合法的新正文；缓存或DOM另有思考</td><td>挂载对象仍然优先，正文能解析便返回</td><td>不会自动从其他来源逐字段补齐缺失思考</td></tr><tr><td>没有挂载对象；缓存是旧内容；DOM已有新正文</td><td>采用缓存对象，解析成功直接返回</td><td>最新DOM文字并不保证覆盖旧缓存</td></tr></tbody></table>
-<p>只有进入DOM回退后，才按对应分支组合正文、附件、思考和有位置的工具信息。因此，“当前DOM总是最可靠”和“多来源会自动选出每个字段的最完整版本”都超过了现有实现。</p>
-<h2 id="section-三默认不导出思考约束的是输出内容">三、默认不导出思考，约束的是输出内容</h2>
-<p>默认关闭思考是我明确选择的产品行为。勾选后，思考和工具一起进入引用块，不额外把整段改成斜体。各格式也要遵守这个选项，例如JSON不能在界面关闭思考时仍输出相关字段。</p>
-<p>这项约束需要准确表达：<strong>不导出思考，不等于同意处理后内存绝不接触思考字段。</strong>结构化响应与缓存可能包含这些字段。同样，界面要先读取会话来列出轮次，再让用户选择，所以“只导出第2轮”也不等于“只从网页读取第2轮”。如果以后要求未选内容连内存都不能接触，需要进一步调整提取策略，不能只换一句界面说明。</p>
-<p>首次勾选思考并执行动作时，窗口会重新提取整个会话，再比较新旧轮数。假设最初有两轮、选中第2轮：补取后变成三轮会报错；仍是两轮，但第2轮回答已经改变，轮数检查就会通过，原数字选择会应用到新模型的第2轮。<strong>当前没有逐条比较旧新消息ID或内容修订。</strong>首次补取成功后，同一窗口的后续动作通常复用已取数据，也不是每点一次都重新读取。这解释了为什么需要在对话相对稳定时导出，而不能把选轮当成锁定某个历史版本。</p>
-<h2 id="section-四怎样检查这一步是否完成">四、怎样检查这一步是否完成</h2>
-<p>可以用一段首尾带标记、两处重复“继续”、中间穿插思考与搜索的演示对话检查：首尾是否出现，重复消息是否各自保留，工具是否位于原来的位置，关闭思考后输出是否确实省略对应内容。不要只看进度条是否变满。</p>
-<p>提取结果接下来交给<a href="/projects/deepseek-export-plus/format-output/">格式模块</a>。这里取得的是供本次导出使用的会话模型；对话仍在生成、页面正在切换或数据来源不完整时，完整性与一致性仍有相应限制。</p>18:["$","$L29",null,{"html":"$2a","zoomImages":true}]
-19:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L11",null,{"href":"/projects/deepseek-export-plus/architecture/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"从网页到文件，导出链路怎样分工"}]]}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/format-output/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"同一份对话怎样生成不同格式"}]]}]]}]
+<p>这个顺序反映了回答形成的过程：先有一段思考，再搜索资料，接着根据搜索结果继续思考。如果把全部思考合并到前面，再把工具记录集中放到后面，读者就很难判断每段思考使用了哪些已有信息。</p>
+<p>因此，本项目把<strong>思考和工具组织为同一个有序序列</strong>。使用结构化消息对象时，按照对象中的片段顺序组织；进入DOM回退时，则按照页面元素的实际位置组合。工具记录中的来源链接取自能够读取到的工具字段，缺失链接会按缺失处理，避免给记录补入没有依据的地址。</p>
+<span id="section-三默认不导出思考约束的是输出内容" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-四思考选项与轮次选择">四、思考选项与轮次选择</h2>
+<p><strong>思考内容默认不导出。</strong>用户启用对应选项后，思考与工具记录进入输出中的引用块，并保持原顺序；各格式都要执行相同的选项规则，JSON中的相关字段也按此处理。</p>
+<p>这里的选项控制的是输出内容。为了列出轮次，窗口会先读取会话；结构化响应和缓存中也可能已经包含思考字段。如果使用需求进一步要求“未选择的内容连内存都不接触”，就需要同时调整提取和缓存策略。</p>
+<h3 id="section-41-首次补取思考的检查">4.1 首次补取思考的检查</h3>
+<p>首次开启思考并执行导出动作时，窗口会重新提取整个会话，再比较新旧轮数。假设开始时有两轮，用户选择了第2轮：</p>
+<ul>
+<li>补取后变成三轮，轮数检查会报错，避免直接沿用旧选择。</li>
+<li>补取后仍为两轮，但第2轮回答发生了变化，轮数检查仍会通过，原数字选择应用到新会话的第2轮。</li>
+</ul>
+<p>当前检查使用<strong>轮数</strong>，尚未逐条比较旧新消息ID和内容修订。首次补取成功后，同一窗口的后续动作通常复用已经取得的数据。因此，选择轮次时应结合当时显示的会话内容，导出过程中继续生成或修改回答，可能影响最终使用的数据。</p>
+<span id="section-四怎样检查这一步是否完成" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-五提取结果的检查方法">五、提取结果的检查方法</h2>
+<p>可以准备一段首尾带标记、中间有两次“继续”、并穿插思考和搜索的对话，逐项检查：<strong>首尾内容是否出现？重复发言是否分别保留？工具记录的位置是否正确？关闭思考后，各格式是否省略了对应内容？</strong></p>
+<p>这些检查直接对应提取模块要保留的信息。提取完成后，会话模型交给<a href="/projects/deepseek-export-plus/format-output/">格式生成模块</a>，由它继续处理代码、表格、公式和文档层级。</p>18:["$","$L29",null,{"html":"$2a","zoomImages":true}]
+19:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L11",null,{"href":"/projects/deepseek-export-plus/architecture/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"DeepSeek Export Plus的整体架构与导出流程"}]]}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/format-output/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"对话内容的多格式转换"}]]}]]}]
 1a:["$","div",null,{"className":"related-note","children":[["$","$L11",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/series/","data-reading-start":"true","children":"返回系列目录"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/","data-reading-start":"true","children":"项目总览"}]]}]
 1b:["$","$L13",null,{"headings":"$c:0:1:d:r:props:children:0:props:children:1:props:headings"}]
 1c:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]

@@ -19,75 +19,93 @@ f:"static/chunks/182-3013bbb685a41e87.js"
 6:X
 6:C
 7:X
-17:T3d38,<p>这份笔记用于在读完整个项目后复习：先交代问题和方案，再围绕数据流、取舍与故障处理展开。具体实现可回到<a href="/projects/shicheng/">拾程项目首页</a>查阅系列文章。</p>
-<span id="section-一先说项目与实际贡献" class="legacy-anchor" aria-hidden="true"></span><span id="section-11-开场介绍" class="legacy-anchor" aria-hidden="true"></span><span id="section-21-为什么不用常驻通用agent而直接调用模型" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-一一分钟说明项目">一、一分钟说明项目</h2>
-<p>拾程要解决的是招聘信息分散、截止日期容易遗漏的问题。群聊文字、图片、网页链接往往把岗位条件、投递入口和时间混在一起，直接保存截图还需要反复翻找。</p>
-<p>它把这些材料整理成可审核的信息：先保留原始材料，再通过模型提取结构化候选，由用户核对后生成机会或日程，最后接入邮件提醒和日历导出。候选不会因为模型已经输出JSON就自动成为事实。</p>
-<p>实现采用原生HTML、CSS和JavaScript页面，FastAPI提供接口，Python标准库sqlite3保存业务数据，HTTPX调用模型接口。模型任务与邮件投递分开：前者受调用次数和并发预算约束，后者通过独立定时任务推进，并记录每次投递处于哪个阶段。</p>
-<p>介绍时可以把重点放在三个问题上：<strong>怎么让不同来源形成同一条处理路径，怎么允许人纠正和撤销，怎么避免任务重试造成重复副作用。</strong></p>
-<span id="section-12-汇报顺序" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-二沿一条材料走完系统">二、沿一条材料走完系统</h2>
-<p>以一条“某公司校招，10月30日截止，详情见链接”的群消息为例。这是解释流程的假设材料，不是实际招聘信息。</p>
+17:T409f,<p>这份笔记用于读完整个项目后快速复习。先说明使用需求和整体流程，再围绕数据、状态、技术选择及实际问题展开。对应实现可以从<a href="/projects/shicheng/">拾程项目首页</a>进入系列文章。</p>
+<span id="section-一一分钟说明项目" class="legacy-anchor" aria-hidden="true"></span><span id="section-一先说项目与实际贡献" class="legacy-anchor" aria-hidden="true"></span><span id="section-11-开场介绍" class="legacy-anchor" aria-hidden="true"></span><span id="section-21-为什么不用常驻通用agent而直接调用模型" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-一项目介绍与数据流">一、项目介绍与数据流</h2>
+<p>拾程用于整理分散在微信群文字、网页链接和海报中的招聘信息。系统先保存原始材料，通过模型提取企业、时间、地点等候选字段，再由用户核对后保存为招聘资料或日程，并按需要启用邮件提醒和导出日历文件。</p>
+<p>实现采用<strong>原生HTML、CSS和JavaScript页面，FastAPI接口，Python标准库sqlite3，以及HTTPX模型调用</strong>。复杂微信材料在本机整理和提取，手机提交的原始材料由服务器的持久任务处理。两条入口最后都进入候选校验和人工确认流程。</p>
+<p>可以用三个重点组织简短介绍：<strong>分散材料的整理、人工决定的保留、失败与重复执行的处理</strong>。</p>
+<span id="section-二沿一条材料走完系统" class="legacy-anchor" aria-hidden="true"></span><span id="section-12-汇报顺序" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-11-一条材料的处理过程">1.1 一条材料的处理过程</h3>
+<p>以“某公司校招，10月30日截止，详情见链接”为例：</p>
 <ol>
-<li>采集侧为消息保留来源身份和游标。重复运行时先识别是否已经提交过，只有整批成功后才推进采集位置。</li>
-<li>本机流程整理选定消息的上下文、网页和图片，在本机调用模型、校验并缓存结果。网页读取受地址与资源限制，图片先检查格式和尺寸。</li>
-<li>将结果及必要材料、来源提交服务端，服务端再次校验和落库，不重复调用模型。如果从网页直接上传原始材料，则改走服务端持久任务路径。</li>
-<li>候选进入审核区。缺年可以按已确定的运行时当前年规则处理，仍保留采用依据；时间精度不足或语义不确定的地方也要可见，不能靠整齐的时间字符串掩盖。</li>
-<li>用户确认后形成机会或日程。保存时带版本条件，避免另一端已修改的数据被旧页面覆盖。</li>
-<li>启用提醒后建立邮件任务。投递结果区分服务器明确拒绝、已经接受和接受结果不确定。</li>
-<li>导出ICS时保留稳定日程身份；在页面恢复已删除日程时，代码关闭该日程的邮件开关。数据库快照恢复则需要另行暂停发送并核对账本，不能套用同一保障。</li>
+<li>本机选定群和时间范围，导出记录并保留来源身份。</li>
+<li>整理上下文、网页和图片，调用模型提取，校验并缓存结果。</li>
+<li>向服务器提交结果及必要材料、来源，服务器再次校验和保存。网页直接上传的原始材料则进入服务端任务队列。</li>
+<li>候选显示企业、时间和依据，缺失或不确定信息带着待核对原因进入界面。</li>
+<li>用户确认后保存为招聘资料或日程，提交时检查版本或内容指纹。</li>
+<li>满足条件且单独启用邮件的日程进入提醒账本，由独立任务处理发送。</li>
+<li>用户可以导出CSV或ICS，也可以在页面中恢复之前忽略或删除的内容。</li>
 </ol>
-<p>追问通常就在这些边界上：批次只完成一半怎么办，模型返回合法但错误的日期怎么办，用户保存后响应丢失怎么办，邮件发出去但确认丢失怎么办。</p>
-<span id="section-二机制短答与继续追问" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-三常见追问与回答要点">三、常见追问与回答要点</h2>
-<h3 id="section-31-为什么没有直接让模型创建日程">3.1 为什么没有直接让模型创建日程</h3>
-<p>格式合法和事实正确是两回事。模型可以输出符合字段要求的JSON，却把毕业届别当成年份，或把报名开始日当成截止日。程序校验能拦住缺字段、类型错误和明显非法值，无法独立确认原文含义。</p>
-<p>因此，原材料、提取候选和人工确认后的业务对象分开保存。用户可以检查原文、编辑时间并决定是否启用提醒。后续更换模型或调整提取规则时，也不必覆盖已经人工确认的日程。</p>
-<h3 id="section-32-为什么使用sqlite锁又怎样处理">3.2 为什么使用SQLite，锁又怎样处理</h3>
-<p>当前是规模较小的个人服务，SQLite减少了单独部署数据库服务的成本，Python也有标准库驱动。但这不意味着可以忽略并发。</p>
-<p>项目使用DELETE日志模式和短事务，写入路径可用<code>BEGIN IMMEDIATE</code>提前申请写事务；它不是PostgreSQL的行级锁，也不是WAL模式。模型请求、网页读取、邮件网络操作不应该长期占用写事务。并发变多时，应依据等待时间和业务负载再评估数据库方案。</p>
-<h3 id="section-33-fastapi异步接口是否就不会阻塞">3.3 FastAPI异步接口是否就不会阻塞</h3>
-<p>不会。<code>async def</code>让函数能够在合适的位置等待；同步文件、数据库或CPU工作仍可能阻塞事件循环。项目的后台处理循环串行领取任务，再通过<code>asyncio.to_thread</code>运行同步工作。线程让事件循环能继续响应，不保证所有任务同时执行，也没有把SQLite变成异步数据库。</p>
-<p>模型调用通过HTTPX读取受大小限制的响应，请求中的<code>stream</code>是false。不能把分段读取HTTP响应写成模型正在通过SSE逐字输出。</p>
-<h3 id="section-34-模型输出如何校验pydantic负责什么">3.4 模型输出如何校验，Pydantic负责什么</h3>
-<p>FastAPI所在生态可以使用Pydantic处理接口数据，但本项目的模型提取结果由<code>json.loads</code>和自定义<code>validate_result</code>流程解析检查。描述实现时要区分这两个位置。</p>
-<p>检查至少要回答：返回的是不是对象，候选数组是否存在，字段类型对不对，日期与精度是否相容，文本是否为空或超限。通过检查后仍要进入审核；校验不是对招聘内容真实性的保证。</p>
-<h3 id="section-35-重试为什么需要分层预算">3.5 重试为什么需要分层预算</h3>
-<p>一个入口可能同时存在材料重试、图片分组和模型调用重试。若每层都默认重试三次，最坏调用量会乘起来，而不是简单加三。</p>
-<p>服务端单个处理任务的总预留预算最多3次、每次领取最多2次；本机则按材料缓存及图片分组分别计数，每次提取限制为1次请求。图片分组数量改变，也会影响需要多少次提取。回答时应说清限制属于哪条入口、哪一层，不能把它当成同一原通知终身的调用上限；具体例子见<a href="/projects/shicheng/model-extraction/">模型提取模块</a>。</p>
-<span id="section-22-上下文合组与活动去重有什么区别" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-36-增量导入为何不只有一个去重键">3.6 增量导入为何不只有一个去重键</h3>
-<p>消息身份、接口幂等、同场活动规则和来源关联解决的是不同问题。消息身份判断源消息有没有处理过；接口幂等应对请求重放；同场活动规则判断不同材料是否指向同一事项；来源关联保留“哪些材料支持这条记录”。</p>
-<p>另有候选内容指纹，用于确认或恢复时核对用户看过的候选有没有变化，它不承担跨群活动去重。不能因为群来源不同就直接拆成多项业务记录，也不能在合并以后丢掉来源；业务归并、提交前提检查和来源追踪需要分别处理。</p>
-<span id="section-23-增量失败后怎么继续能保证不漏不重吗" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-37-游标什么时候推进远端成功本地失败怎么办">3.7 游标什么时候推进，远端成功、本地失败怎么办</h3>
-<p>本地流程先收集这一批的处理回执，再写入批次结果并推进游标。中途失败就保留重放机会，不能仅因读到某条消息就把位置推进到末尾。</p>
-<p>这仍不是本地文件与远端数据库之间的全局事务。远端已接受、本地回执尚未落盘时，重跑可能再次提交，后端幂等与业务去重要接住它。系统实现的是可恢复的重复处理策略，不能宣称跨系统恰好一次。</p>
-<span id="section-24-1022日19-00与明天如何处理" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-38-日期问题是怎么修正的">3.8 日期问题是怎么修正的</h3>
-<p>先区分活动日期、毕业届别和处理时间。旧路径对缺年通知按“不猜年份”保留待补充，原文日期与表单开始时刻也缺少充分对齐。后来补上本项月日、钟点和依据校验，并按实际使用需求将缺年默认值调整为运行时上海当前年；显式活动年份优先，招聘届别不充当活动年。</p>
-<p>仅有日期也不等于知道具体时刻。没有明确时间的材料保留日期精度，不能自动补成午夜后再当作精确提醒依据。目前相对日期的基准仍有材料级假设，长聊天混有不同发送时间时存在适用边界，不能说所有历史聊天时间都已逐条准确还原。</p>
-<span id="section-25-为什么有数据库事务还要租约令牌和版本" class="legacy-anchor" aria-hidden="true"></span><span id="section-26-批量处理一项过时为什么不用全批失败" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-39-两个页面同时保存怎样避免覆盖">3.9 两个页面同时保存，怎样避免覆盖</h3>
-<p>读取对象时带上修订号；保存时要求当前修订号仍等于读到的值。若另一个页面已经更新，条件更新影响零行，接口就应提示冲突，而不是继续覆盖。</p>
-<p>批量处理还需要决定部分失败的行为。项目利用SAVEPOINT把可独立回退的单项包起来：某一项失败可以撤销到保存点，再继续处理允许继续的项目。它不是事务里又提交了一个永久子事务，最外层回滚仍能撤销尚未提交的整体结果。</p>
-<span id="section-27-smtp超时为什么不能直接重试" class="legacy-anchor" aria-hidden="true"></span><span id="section-28-为什么地点修改和时间修改要分两种版本" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-310-邮件为什么有结果不确定状态">3.10 邮件为什么有“结果不确定”状态</h3>
-<p>SMTP投递经过多个阶段。在发送正文前失败，通常还能较清楚地判断是否值得重试；正文已经发送、服务器最终确认却在网络中丢失时，客户端无法知道邮件究竟被接受没有。</p>
-<p>这时无条件重试可能造成重复邮件。项目把这种情况标记为不确定并停止自动重试，等待处理。固定Message-ID有助于识别同一封邮件，但不能强迫所有邮件服务器去重；服务器接受也不等于收件人已经收到或阅读。</p>
-<h3 id="section-311-恢复日程与恢复数据库有什么区别">3.11 恢复日程与恢复数据库有什么区别</h3>
-<p>页面中的恢复操作针对一条已删除或取消的日程：保留身份、时间和来源，校验版本后恢复可用状态，并关闭这条日程的邮件开关。已有受理或不确定账本继续限制再次发送。</p>
-<p>数据库快照恢复则检查并复制历史数据库到新目录，没有自动清空邮件授权，也没有自动合并快照之后的投递记录。某封邮件可能在备份之后已发出，恢复旧库后直接启动邮件任务就有重复发送风险。生产切换前应暂停API与邮件timer，等待在途发送结束，核对最近受理或不确定的记录，再决定是否启用。代码回退脚本会保持timer停止，但这不能代替数据库恢复核对。</p>
-<h3 id="section-312-ics文件和日历同步有什么区别">3.12 ICS文件和日历同步有什么区别</h3>
-<p>ICS是iCalendar文本文件，单个事件可以有稳定UID、更新时间和SEQUENCE修订序号。它适合把日程交给其他日历应用，但对方怎样合并重复事件仍受客户端影响。</p>
-<p>文件导出没有建立持续订阅或双向同步。拾程中改动日程，不代表已导入另一款日历的副本会自动更新；生成合法ICS也不意味着所有客户端呈现完全一致。</p>
-<span id="section-29-url日历导出和备份各有什么容易误判的边界" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-313-链接抓取有什么安全边界">3.13 链接抓取有什么安全边界</h3>
-<p>服务端访问用户提供的URL时，目标可能指向内网或本机。项目约束协议、解析地址、重定向、大小和超时，并把经过检查的地址用于实际连接，减少检查目标与连接目标不一致的机会。</p>
-<p>这里没有通过浏览器渲染任意网页，也没有保证所有登录页和动态页面可提取。遇到不适合自动抓取的内容，需要回到文字或图片入口。通用SSRF原理复习<a href="/blog/backend-agent-s03-06-ssrf-boundaries/">已有文章</a>。</p>
-<h2 id="section-四怎样讲一个具体问题">四、怎样讲一个具体问题</h2>
-<p>以日期纠正为例，可以按“原输入—旧规则—影响—调整—边界”组织：原文已有月日和钟点，但缺少年份，旧规则因此留空；编辑时又缺少原文与开始时间的差异提示。先补上本项时间对齐与填写辅助，再根据使用需求改为缺年默认运行时当前年，同时区分活动年份、招聘届别和时间精度。这包含问题修正，也包含业务规则变化，不能全部归结为原算法出错。相对日期仍受材料时间基准限制，这一点也应保留。</p>
-<p>以邮件为例，则沿网络协议讲：先区分正文发送前后，再看有没有收到服务器的接受确认，最后决定重试、失败或不确定。这样的回答能解释为什么增加一个状态，而不是只报“使用了Outbox、幂等、重试”。</p>
-<span id="section-210-20857mib能证明可以降到2gb吗" class="legacy-anchor" aria-hidden="true"></span><span id="section-三效果用这些证据陈述" class="legacy-anchor" aria-hidden="true"></span><span id="section-四个人掌握与未解决项" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-五结果限制与继续改进的依据">五、结果、限制与继续改进的依据</h2>
-<p>项目已经把材料导入、模型提取、人工审核、日程与机会管理、邮件提醒和导出连接起来。一次内存数据库副本回放中，50条已忽略候选原有43条被正确抑制，7条重新进入待确认；补齐缺企业综合活动的严格匹配分支后，同一组50条全部被抑制。这说明该组样例不再重复打扰用户，不代表模型抽取准确率或未来去重准确率达到100%。</p>
-<p>已有测试与有限资源观测支持特定环境下的功能判断，不能换算成长期稳定性、无限并发或任意2GB机器上的保证。介绍时应把真实记录、代码机制和未来方案分开：当前没有持续自动采集服务，没有完整日历双向同步，也没有将所有模型结果自动认定为事实。</p>
-<p>若继续迭代，可以优先考虑更细的材料时间基准、不同来源的失败提示和更有代表性的资源测量。是否引入新数据库或分布式队列，应由实际负载与维护需求决定。复习到这里再回到<a href="/projects/shicheng/">项目首页</a>，按需要进入各模块核对具体过程。</p>c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"shicheng-interview-summary","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L11",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L11",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L11",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L12",null,{"className":"trail-current","href":"/projects/","children":["个人工具",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"拾程：项目汇报与面试复习"}],["$","p",null,{"className":"article-deck","children":"集中复习项目需求、数据流、技术取舍、问题处理和常见追问；配合系列文章使用。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["3,687"," 字"]}],["$","span",null,{"children":["阅读约 ",11," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","项目复习",{"children":"项目复习"}],["$","span","面试",{"children":"面试"}]]}],false]}],["$","$L13",null,{"headings":[{"id":"section-一一分钟说明项目","text":"一、一分钟说明项目","level":2},{"id":"section-二沿一条材料走完系统","text":"二、沿一条材料走完系统","level":2},{"id":"section-三常见追问与回答要点","text":"三、常见追问与回答要点","level":2},{"id":"section-31-为什么没有直接让模型创建日程","text":"3.1 为什么没有直接让模型创建日程","level":3},{"id":"section-32-为什么使用sqlite锁又怎样处理","text":"3.2 为什么使用SQLite，锁又怎样处理","level":3},{"id":"section-33-fastapi异步接口是否就不会阻塞","text":"3.3 FastAPI异步接口是否就不会阻塞","level":3},{"id":"section-34-模型输出如何校验pydantic负责什么","text":"3.4 模型输出如何校验，Pydantic负责什么","level":3},{"id":"section-35-重试为什么需要分层预算","text":"3.5 重试为什么需要分层预算","level":3},{"id":"section-36-增量导入为何不只有一个去重键","text":"3.6 增量导入为何不只有一个去重键","level":3},{"id":"section-37-游标什么时候推进远端成功本地失败怎么办","text":"3.7 游标什么时候推进，远端成功、本地失败怎么办","level":3},{"id":"section-38-日期问题是怎么修正的","text":"3.8 日期问题是怎么修正的","level":3},{"id":"section-39-两个页面同时保存怎样避免覆盖","text":"3.9 两个页面同时保存，怎样避免覆盖","level":3},{"id":"section-310-邮件为什么有结果不确定状态","text":"3.10 邮件为什么有“结果不确定”状态","level":3},{"id":"section-311-恢复日程与恢复数据库有什么区别","text":"3.11 恢复日程与恢复数据库有什么区别","level":3},{"id":"section-312-ics文件和日历同步有什么区别","text":"3.12 ICS文件和日历同步有什么区别","level":3},{"id":"section-313-链接抓取有什么安全边界","text":"3.13 链接抓取有什么安全边界","level":3},{"id":"section-四怎样讲一个具体问题","text":"四、怎样讲一个具体问题","level":2},{"id":"section-五结果限制与继续改进的依据","text":"五、结果、限制与继续改进的依据","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,false,["$","$L15",null,{"mappings":[]}],["$","$L16",null,{"html":"$17","zoomImages":true}],false,"$L18"]}],"$L19"]}]]}],["$L1a"],"$L1b"]}],"p":"$@1c","v":null,"s":"$7"}}]]
+<p>这条流程可以继续追问：批次只成功一半如何恢复？日期格式正确但含义错误如何发现？提交成功而回执丢失如何处理？邮件结果不确定时是否重发？</p>
+<span id="section-三常见追问与回答要点" class="legacy-anchor" aria-hidden="true"></span><span id="section-二机制短答与继续追问" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-二模型提取与调用预算">二、模型提取与调用预算</h2>
+<span id="section-31-为什么没有直接让模型创建日程" class="legacy-anchor" aria-hidden="true"></span><span id="section-34-模型输出如何校验pydantic负责什么" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-21-候选校验与人工确认">2.1 候选校验与人工确认</h3>
+<p><strong>问：模型提取后，程序和用户分别检查什么？</strong></p>
+<p>程序先通过<code>json.loads</code>读取完整JSON，再用自定义<code>validate_result</code>检查字段类型、允许值、长度、时间精度等约束。时间和准入规则继续核对依据，用户则回看原文、企业和活动含义，并决定保存及邮件授权。</p>
+<p>例如，模型可能把招聘届别误当活动年份。格式解析能够说明数据可读，业务核对还需要比较原句中的实际含义。因此，材料、候选和确认后的业务对象分别保存。</p>
+<p><strong>追问：这里使用了Pydantic吗？</strong></p>
+<p>提取结果由<code>json.loads</code>和项目自定义校验函数承接。介绍时应说明这个实际位置，接口框架的生态与模型结果的验证代码分别理解。</p>
+<span id="section-35-重试为什么需要分层预算" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-22-分层调用预算">2.2 分层调用预算</h3>
+<p><strong>问：一次处理最多调用模型几次？</strong></p>
+<p>需要先说明入口和计数层次。服务端单任务总预留预算最多3次，每次领取最多2次；本机按材料缓存和图片分组缓存分别计数，每次提取只给1次请求预算。</p>
+<p>例如，单请求最多4张图时，13张图片需要4组，全部首次成功也会产生4次请求。一组成功、另一组失败时，后续按规则复用成功组，只重试需要处理的部分。详细例子见<a href="/projects/shicheng/model-extraction/">模型提取</a>。</p>
+<p><strong>追问：结果分片会增加模型调用吗？</strong></p>
+<p>结果分片是在模型返回后，把events和opportunities两个数组分别按每页最多20项切分，再校验和同步。同一页可以同时包含两类结果，例如21个事件与21个岗位会分成两页，分别是各20项和各1项。它可能增加同步次数，图片输入分组才会增加相应提取请求。</p>
+<h2 id="section-三数据库与后台任务">三、数据库与后台任务</h2>
+<span id="section-32-为什么使用sqlite锁又怎样处理" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-31-sqlite选择与短事务">3.1 SQLite选择与短事务</h3>
+<p><strong>问：为什么选择SQLite？</strong></p>
+<p>当前是单主机、较小规模的个人服务，SQLite嵌入应用并把数据保存到文件中，减少了独立数据库服务的维护成本，Python也提供标准库驱动。</p>
+<p>本项目使用<strong>DELETE日志、显式短事务、参数化SQL和有限忙等待</strong>。通过<code>BEGIN IMMEDIATE</code>提前申请写入资格，网络请求放在事务外，返回后再检查状态并写入结果。数据库选择仍需随真实写入负载和锁等待重新评估。</p>
+<span id="section-33-fastapi异步接口是否就不会阻塞" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-32-异步接口与串行提取">3.2 异步接口与串行提取</h3>
+<p><strong>问：后台处理怎样避免长期占住事件循环？</strong></p>
+<p>API的任务循环一次领取一个任务，通过<code>asyncio.to_thread</code>执行同步提取工作，事件循环可以继续响应其他请求。服务端处理是串行领取，线程承担阻塞工作，吞吐仍受模型时间和资源条件影响。</p>
+<p>模型请求使用HTTPX读取受大小限制的完整响应，请求中的<code>stream</code>为false。传输层分段读取用于控制接收过程，模型并未通过SSE逐字输出。</p>
+<h3 id="section-33-租约令牌与材料版本">3.3 租约、令牌与材料版本</h3>
+<p><strong>问：旧任务迟到后如何处理？</strong></p>
+<p>领取时在短事务中保存状态、领取令牌、五分钟租约和预算；提交事务后执行网络工作；返回时再次检查任务状态、令牌、期限及材料版本。用户修改了材料或领取已过期，旧结果就不能写入当前候选。</p>
+<p>令牌保护的是数据库中的条件写入，已经发往远端的请求可能仍在执行。下一步优化需要同时考虑本地结果约束和外部请求的实际停止能力。</p>
+<h2 id="section-四人工决定与增量处理">四、人工决定与增量处理</h2>
+<span id="section-36-增量导入为何不只有一个去重键" class="legacy-anchor" aria-hidden="true"></span><span id="section-39-两个页面同时保存怎样避免覆盖" class="legacy-anchor" aria-hidden="true"></span><span id="section-22-上下文合组与活动去重有什么区别" class="legacy-anchor" aria-hidden="true"></span><span id="section-25-为什么有数据库事务还要租约令牌和版本" class="legacy-anchor" aria-hidden="true"></span><span id="section-26-批量处理一项过时为什么不用全批失败" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-41-版本指纹和活动归并">4.1 版本、指纹和活动归并</h3>
+<p><strong>问：两个页面同时修改一项日程如何避免覆盖？</strong></p>
+<p>读取时取得修订号，提交时携带预期版本。手机读到版本3后，电脑已经改成版本4，手机的条件更新就会影响零行，服务端提示冲突并要求刷新。</p>
+<p>候选批量处理还使用内容指纹，比较用户看过的候选、操作、目标和预期版本。跨群材料是否属于同一活动，则由另外的同场规则判断，来源通过关联记录保存。</p>
+<h3 id="section-42-批量保存与局部回退">4.2 批量保存与局部回退</h3>
+<p><strong>问：三项中一项发生冲突，其他项怎样处理？</strong></p>
+<p>项目为单项建立SAVEPOINT。已知业务冲突可以回到该项保存点，再继续允许处理的其他项；最终是否持久提交，由外层事务决定。未知异常仍可能使外层整体回滚。</p>
+<p>批量操作继续检查分类、状态和指纹，邮件由服务端强制关闭。改期、取消及可能重复的安排回到逐项核对。</p>
+<span id="section-37-游标什么时候推进远端成功本地失败怎么办" class="legacy-anchor" aria-hidden="true"></span><span id="section-23-增量失败后怎么继续能保证不漏不重吗" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-43-增量游标与重放">4.3 增量游标与重放</h3>
+<p><strong>问：服务器保存成功、本机未收到回执时怎么办？</strong></p>
+<p>本机保留未完成批次，后续可能重新提交。服务端依靠身份、幂等和业务归并接住重复请求；本机在全部成功返回、保存回执后才合并已见记录并推进游标。</p>
+<p>消息身份识别原消息，材料缓存复用提取结果，活动规则合并同场来源，人工决定匹配保留忽略等状态。各层共同支持恢复，详见<a href="/projects/shicheng/incremental-dedup/">增量与去重</a>。</p>
+<h2 id="section-五日期与邮件处理">五、日期与邮件处理</h2>
+<span id="section-38-日期问题是怎么修正的" class="legacy-anchor" aria-hidden="true"></span><span id="section-四怎样讲一个具体问题" class="legacy-anchor" aria-hidden="true"></span><span id="section-24-1022日19-00与明天如何处理" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-51-日期规则的调整">5.1 日期规则的调整</h3>
+<p><strong>问：早期日期问题如何修正？</strong></p>
+<p>旧路径对缺年通知保留待补充，表单中的原文时间和开始时间又缺少充分对齐。后来补齐本项月日、钟点和依据检查，再按使用需求采用运行时上海当前年作为缺年默认值，显式活动年份仍优先。</p>
+<p>只有日期的内容保留日期精度，招聘届别单独处理。相对日期目前仍使用材料级时间基准进行准入比较，跨午夜合组等情况需要更细的候选与原消息关联，详见<a href="/projects/shicheng/date-correction/">日期纠正</a>。</p>
+<span id="section-310-邮件为什么有结果不确定状态" class="legacy-anchor" aria-hidden="true"></span><span id="section-27-smtp超时为什么不能直接重试" class="legacy-anchor" aria-hidden="true"></span><span id="section-28-为什么地点修改和时间修改要分两种版本" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-52-提醒账本与不确定结果">5.2 提醒账本与不确定结果</h3>
+<p><strong>问：邮件为什么需要多个状态？</strong></p>
+<p>提醒先记录发送意图，独立任务领取后再次检查授权、时间版本和到期条件，再进入SMTP提交。程序要区分提交前失败、明确拒绝、成功受理和结果不确定，才能决定后续处理。</p>
+<p>SMTP的DATA阶段开始后，连接断开可能发生在远端已收到正文、成功回执却丢失的时候。此时记为<code>uncertain</code>并停止自动重试，保留人工核查空间。成功响应记为<code>accepted</code>，表示服务器受理了后续处理责任。</p>
+<p><strong>追问：修改地点会重新发一次提醒吗？</strong></p>
+<p>内容版本记录标题和地点等变化，提醒时间版本记录开始时间、精度或状态等变化。已有受理或不确定记录继续约束发送，补地点和重新打开邮件开关都要遵守账本规则。详见<a href="/projects/shicheng/mail-reminders/">邮件提醒流程</a>。</p>
+<h2 id="section-六恢复导出与来源安全">六、恢复、导出与来源安全</h2>
+<span id="section-311-恢复日程与恢复数据库有什么区别" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-61-日程恢复与数据库恢复">6.1 日程恢复与数据库恢复</h3>
+<p><strong>问：页面恢复和快照恢复分别处理什么？</strong></p>
+<p>页面恢复针对一条日程，校验版本后保留原身份、时间和来源，并关闭该日程的邮件开关。数据库快照恢复则读取历史状态，快照之后的投递记录需要另外核对。年度档案包含完整数据库快照，并另外生成业务导出、收集能够取得的材料；选定工作流只限制额外收集的本机材料范围。</p>
+<p>因此，数据库生产切换前需要暂停API与邮件timer，等待在途发送结束，核对最近受理和不确定记录，再决定何时启用。代码回退脚本保持timer停止，也仍需执行相应业务核对。</p>
+<span id="section-312-ics文件和日历同步有什么区别" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-62-ics与csv的用途">6.2 ICS与CSV的用途</h3>
+<p><strong>问：导出后如何保留事件身份？</strong></p>
+<p>ICS使用稳定UID和SEQUENCE修订序号，供其他日历识别事件及变化。本项目省略METHOD，DTSTAMP和LAST-MODIFIED按事件的更新时间生成，缺失时依次回退到创建时间和当前UTC。当前提供文件导出，重复导入的合并和显示行为需要在目标客户端验证。CSV则方便表格查看与筛选，完整状态恢复使用数据库及原件备份。</p>
+<span id="section-313-链接抓取有什么安全边界" class="legacy-anchor" aria-hidden="true"></span><span id="section-29-url日历导出和备份各有什么容易误判的边界" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-63-网页抓取的限制">6.3 网页抓取的限制</h3>
+<p><strong>问：用户提供的链接如何安全读取？</strong></p>
+<p>程序限制协议、端口、解析地址、重定向、大小和时间，并把已校验地址用于实际连接。读取结果保留缺失说明，受限网页和需要脚本运行的内容可能需要改走文字或图片入口。通用原理见<a href="/blog/backend-agent-s03-06-ssrf-boundaries/">SSRF边界</a>。</p>
+<span id="section-五结果限制与继续改进的依据" class="legacy-anchor" aria-hidden="true"></span><span id="section-210-20857mib能证明可以降到2gb吗" class="legacy-anchor" aria-hidden="true"></span><span id="section-三效果用这些证据陈述" class="legacy-anchor" aria-hidden="true"></span><span id="section-四个人掌握与未解决项" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-七结果限制与复习重点">七、结果、限制与复习重点</h2>
+<p>项目已经连接了材料输入、提取、确认、日程与招聘资料、邮件及导出流程。已有具体改进包括日期对齐、批量处理、恢复，以及缺企业综合活动的忽略匹配：在同一组50条已忽略候选的内存副本回放中，抑制数量由43条变为50条。</p>
+<p>这组结果说明对应分支的修正，模型总体准确率、未来通知的归并效果和长期资源表现仍需继续验证。当前也尚未形成持续自动采集服务或完整日历双向同步。</p>
+<p>复习时可以尝试画出<strong>两条输入路径、一次确认事务、一轮任务领取和一封邮件的状态变化</strong>。再选择日期或邮件问题，按原输入、处理规则、影响、修改和验证范围展开，比单独记住组件名称更容易应对追问。</p>
+<p>回到<a href="/projects/shicheng/">拾程项目首页</a>继续阅读对应模块。</p>c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"shicheng-interview-summary","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L11",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L11",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L11",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L12",null,{"className":"trail-current","href":"/projects/","children":["个人工具",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"拾程：项目汇报与面试复习"}],["$","p",null,{"className":"article-deck","children":"集中复习完整数据流、模型预算、数据库与任务、人工确认、增量、日期、邮件、恢复和导出，准备常见追问。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["3,164"," 字"]}],["$","span",null,{"children":["阅读约 ",10," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","项目复习",{"children":"项目复习"}],["$","span","面试",{"children":"面试"}]]}],false]}],["$","$L13",null,{"headings":[{"id":"section-一项目介绍与数据流","text":"一、项目介绍与数据流","level":2},{"id":"section-11-一条材料的处理过程","text":"1.1 一条材料的处理过程","level":3},{"id":"section-二模型提取与调用预算","text":"二、模型提取与调用预算","level":2},{"id":"section-21-候选校验与人工确认","text":"2.1 候选校验与人工确认","level":3},{"id":"section-22-分层调用预算","text":"2.2 分层调用预算","level":3},{"id":"section-三数据库与后台任务","text":"三、数据库与后台任务","level":2},{"id":"section-31-sqlite选择与短事务","text":"3.1 SQLite选择与短事务","level":3},{"id":"section-32-异步接口与串行提取","text":"3.2 异步接口与串行提取","level":3},{"id":"section-33-租约令牌与材料版本","text":"3.3 租约、令牌与材料版本","level":3},{"id":"section-四人工决定与增量处理","text":"四、人工决定与增量处理","level":2},{"id":"section-41-版本指纹和活动归并","text":"4.1 版本、指纹和活动归并","level":3},{"id":"section-42-批量保存与局部回退","text":"4.2 批量保存与局部回退","level":3},{"id":"section-43-增量游标与重放","text":"4.3 增量游标与重放","level":3},{"id":"section-五日期与邮件处理","text":"五、日期与邮件处理","level":2},{"id":"section-51-日期规则的调整","text":"5.1 日期规则的调整","level":3},{"id":"section-52-提醒账本与不确定结果","text":"5.2 提醒账本与不确定结果","level":3},{"id":"section-六恢复导出与来源安全","text":"六、恢复、导出与来源安全","level":2},{"id":"section-61-日程恢复与数据库恢复","text":"6.1 日程恢复与数据库恢复","level":3},{"id":"section-62-ics与csv的用途","text":"6.2 ICS与CSV的用途","level":3},{"id":"section-63-网页抓取的限制","text":"6.3 网页抓取的限制","level":3},{"id":"section-七结果限制与复习重点","text":"七、结果、限制与复习重点","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,false,["$","$L15",null,{"mappings":[]}],["$","$L16",null,{"html":"$17","zoomImages":true}],false,"$L18"]}],"$L19"]}]]}],["$L1a"],"$L1b"]}],"p":"$@1c","v":null,"s":"$7"}}]]
 a:[["children",{"s":{"n":"page","t":"d","k":"interview","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
 8:[["children",{"s":{"n":"project","t":"d","k":"shicheng","s":["mental-health-evaluation"]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
 1:[["children",{"s":"projects","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
-0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"拾程：项目汇报与面试复习 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"集中复习项目需求、数据流、技术取舍、问题处理和常见追问；配合系列文章使用。"}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}],["$","link","3",{"rel":"canonical","href":"/projects/shicheng/interview/"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$7"}},"a":"$@23","u":"$@24","b":"6cQJHWqsmY59WndvF4Y-g"}
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$21",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"拾程：项目汇报与面试复习 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"集中复习完整数据流、模型预算、数据库与任务、人工确认、增量、日期、邮件、恢复和导出，准备常见追问。"}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}],["$","link","3",{"rel":"canonical","href":"/projects/shicheng/interview/"}]]}]}],null]}],null]}],"p":"$@22","v":null,"s":"$7"}},"a":"$@23","u":"$@24","b":"LzViTTBtizNOe9mwSPy8_"}
 25:I[887,[],"OutletBoundary"]
 :HL["/_next/static/css/0d4edec444d587ad.css","style"]
 18:["$","div",null,{"className":"related-note","children":[["$","$L11",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L11",null,{"href":"/projects/shicheng/series/","data-reading-start":"true","children":"返回系列目录"}],["$","$L11",null,{"href":"/projects/shicheng/","data-reading-start":"true","children":"项目总览"}]]}]

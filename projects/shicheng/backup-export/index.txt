@@ -16,7 +16,7 @@ f:I[887,[],"$e"]
 8:[["children",{"s":{"n":"page","t":"d","k":"backup-export","s":[]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q9"}]]
 7:[["children",{"s":{"n":"project","t":"d","k":"shicheng","s":["mental-health-evaluation"]},"h":197120,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
 3:[["children",{"s":"projects","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
-0:{"P":null,"c":["","projects","shicheng","backup-export",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1d6e18c6254f9adc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":"$L13"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$14",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"6cQJHWqsmY59WndvF4Y-g"}
+0:{"P":null,"c":["","projects","shicheng","backup-export",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1d6e18c6254f9adc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":"$L13"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$14",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"LzViTTBtizNOe9mwSPy8_"}
 6:C
 10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 15:Tb2c,(()=>{const d={"wallpaper":"banner","layout":"list","cardStyle":"soft","textSize":"normal","hero":true,"carousel":false,"waves":false,"fade":true,"motion":true,"typewriter":true,"progress":true,"petals":false,"dim":28,"blur":0,"cardOpacity":78,"colorMode":"section","customColor":"#32846b","sectionColors":{},"customTheme":"","sectionThemes":{}},enums={"wallpaper":["banner","fullscreen","overlay","none"],"layout":["list","grid"],"cardStyle":["soft","flat"],"textSize":["normal","large"],"colorMode":["section","custom"]},bools=["hero","carousel","waves","fade","motion","typewriter","progress","petals"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]));const color=(function(a,b){let c=b.startsWith("/credits")?"about":b.split("/")[1],d=["home","blog","research","projects","about"].includes(c)?c:"home",e=(a.sectionColors&&"object"==typeof a.sectionColors&&!Array.isArray(a.sectionColors)?a.sectionColors:{})[d],f="string"==typeof e&&/^#[\da-f]{6}$/i.test(e)?e.toLowerCase():void 0,g="string"==typeof a.customColor&&/^#[\da-f]{6}$/i.test(a.customColor)?a.customColor.toLowerCase():"#32846b",h=a.sectionThemes&&"object"==typeof a.sectionThemes&&!Array.isArray(a.sectionThemes)?a.sectionThemes:{},i="custom"===a.colorMode?a.customTheme:h[d],j="string"==typeof i&&["home","blog","research","projects","about"].includes(i)?i:void 0;return{section:d,color:"custom"===a.colorMode?g:f??g,customized:"custom"===a.colorMode?!j:!!f,theme:j??d}})(p,location.pathname);document.documentElement.setAttribute('data-custom-palette',String(color.customized));document.documentElement.setAttribute('data-palette-section',color.theme);const palette=(function(a){let b=/^#[\da-f]{6}$/i.test(a)?a:"#32846b",c=[1,3,5].map(a=>Number.parseInt(b.slice(a,a+2),16)),d={};for(let[a,[b,e]]of Object.entries({"light-page":[248,.09],"light-surface":[255,.025],"light-surface-soft":[252,.05],"light-surface-raised":[246,.08],"light-ink":[0,.15],"light-muted":[0,.32],"light-line":[213,.12],"light-accent":[0,.4],"light-accent-strong":[0,.3],"light-accent-soft":[248,.1],"light-on-accent":[255,0],"dark-page":[16,.025],"dark-surface":[26,.045],"dark-surface-soft":[22,.04],"dark-surface-raised":[33,.06],"dark-ink":[255,.12],"dark-muted":[255,.34],"dark-line":[72,.1],"dark-accent":[255,.35],"dark-accent-strong":[255,.22],"dark-accent-soft":[24,.1],"dark-on-accent":[0,.1]}))d[`--palette-${a}`]=`#${c.map(a=>Math.round(b*(1-e)+a*e).toString(16).padStart(2,"0")).join("")}`;return d})(color.color);for(const k in palette)document.documentElement.style.setProperty(k,palette[k])})()2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$15"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],"$L16"]}],"$L17"]}]
@@ -36,28 +36,123 @@ f:I[887,[],"$e"]
 16:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]
 17:["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L1b",null,{"children":[["$","$L1d",null,{}],["$","$L1e",null,{"tags":["编程语言知识点","Python","C++"],"categoryIds":["foundations","frontend","backend","agent","computing","ai","deployment","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L1f",null,{"sidebar":["$","$L20",null,{"categoryIds":"$17:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L24",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L24",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L24",null,{"href":"/about/","children":"关于这个站点"}],["$","$L24",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]
 d:null
-13:[["$","title","0",{"children":"备份、恢复与日历导出分别保存什么 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"区分数据库快照、图片档案、程序回退与CSV、ICS交换文件，保留用户决定和发送历史。"}],["$","link","2",{"rel":"canonical","href":"/projects/shicheng/backup-export/"}]]
+13:[["$","title","0",{"children":"数据备份、状态恢复与日历导出 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"说明数据库、原始材料和程序版本各自的保存方式，介绍页面恢复、CSV与ICS导出、手机入口和资源测量。"}],["$","link","2",{"rel":"canonical","href":"/projects/shicheng/backup-export/"}]]
 26:I[5128,["5587","$18","8612","$21","182","$22","4067","$23"],"ArticleToc"]
 27:"ProjectLegacyAnchors"
 28:I[1103,["5587","$18","8612","$21","182","$22","4067","$23"],"$27"]
 29:I[4711,["5587","$18","8612","$21","182","$22","4067","$23"],"ArticleBody"]
-2a:T10b6,<p>把日程导出给其他软件、给数据库做备份、回退程序版本，看起来都在“保存文件”，实际保留的对象不同。拾程需要同时保存用户的决定、发送账本和已有材料；只留一份CSV，无法恢复整个服务状态。</p>
-<h2 id="section-一数据库快照与图片档案要分别检查">一、数据库快照与图片档案要分别检查</h2>
-<p>数据库正在写入时，随意复制文件可能取得不一致状态。项目用SQLite backup接口生成快照，但各入口的检查范围不同：日常备份检查数据库完整性，年度档案检查完整性与外键，快照恢复在复制前还检查数据库结构版本。<a href="https://docs.python.org/3.10/library/sqlite3.html#sqlite3.Connection.backup" rel="noopener noreferrer">Python backup接口</a>支持在连接使用期间进行备份。</p>
-<p>数据库完整性检查通过，也不意味着图片都在。附件是另一类文件，单独恢复数据库后可能只有记录、没有图片字节，因此系统会标明附件缺失。年度档案再收集选定工作流中已有的图片，去重并计算SHA256，连同HTML、CSV、JSON和清单一起保存。</p>
-<p><strong>哈希相同证明复制前后的字节一致，不证明资料原本完整。</strong>年度档案包含选定流程中的企业、机会、来源和已有图片；提取机会中还可能有未确认项，缺失原图也不会凭备份被找回。离线HTML仍需打开检查，不能从文件生成推导阅读效果已经通过。</p>
-<h2 id="section-二回退程序版本不应覆盖后来的人工决定">二、回退程序版本，不应覆盖后来的人工决定</h2>
-<p>代码release保存程序版本，业务数据库保存用户后来确认、忽略、修改和发信的状态。若为了回退代码而覆盖旧数据库，会把之后的决定一并撤回，甚至丢失邮件是否已被受理的记录。</p>
-<p>当前代码回退方案保留业务库，切换兼容的程序版本；数据库灾难恢复则是另一项需要核对版本与数据丢失窗口的操作。原件清理也另有保留期、固定保留、待处理引用等条件，不会因为日程过期就立即删除所有材料。</p>
-<p>数据库快照恢复函数会检查并复制数据库，但没有自动清空邮件授权，也不会合并快照之后的发送记录。恢复操作前应暂停发送任务，核对账本与数据丢失窗口，再决定如何恢复运行。它和页面中“恢复已删除日程并关闭该日程邮件开关”是不同功能，不能互相套用保障。</p>
-<p>旧程序包可以按保留策略清理，但要留下当前版本、可用回退版本和所需依赖。释放磁盘与降低运行时内存是两件事，也不能把目录清理直接写成程序运行更快。</p>
-<h2 id="section-三csvics与手机入口各自承担什么">三、CSV、ICS与手机入口各自承担什么</h2>
-<p>CSV用于表格整理；ICS用于把可确定的日历事项交给其他日历软件。它们是交换结果，不包含全部任务、处理历史和邮件账本，不能替代数据库备份。ICS的事件身份、时区与转义见<a href="/projects/shicheng/calendar-format/">日历文件格式</a>。</p>
-<p>安卓入口使用WebView，也就是在应用里显示已有网页的组件，复用同一页面与API，并接入系统选文件等功能。它没有另一套手机数据库或原生后台提醒引擎，APK构建成功也不等于实机键盘、附件和日历导入全部验收。</p>
-<h2 id="section-四低资源运行还要区分限制与测量">四、低资源运行还要区分限制与测量</h2>
-<p>服务端把API与邮件任务放在共同的systemd资源组中管理，避免只限制其中一个进程。内存上限是约束，触及硬限制可能导致进程被终止；它不是服务永远可用的保证。复杂微信材料放在本机处理，也只是改变工作发生的位置。</p>
-<p>已有有限模拟回放可说明对应负载下的占用，尚不足以证明忙时共存、长期真实模型与邮件重叠或更小主机配置都能通过。通用资源排查直接参考<a href="/blog/backend-agent-s05-10-linux-diagnostics/">Linux资源与连接诊断</a>，不另写一套运维基础。</p>a:["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"shicheng-backup-export","children":[["$","header",null,{"className":"article-heading","children":["$L25",["$","h1",null,{"tabIndex":-1,"children":"备份、恢复与日历导出分别保存什么"}],["$","p",null,{"className":"article-deck","children":"区分数据库快照、图片档案、程序回退与CSV、ICS交换文件，保留用户决定和发送历史。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["1,106"," 字"]}],["$","span",null,{"children":["阅读约 ",4," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","备份恢复",{"children":"备份恢复"}],["$","span","数据导出",{"children":"数据导出"}]]}],false]}],["$","$L26",null,{"headings":[{"id":"section-一数据库快照与图片档案要分别检查","text":"一、数据库快照与图片档案要分别检查","level":2},{"id":"section-二回退程序版本不应覆盖后来的人工决定","text":"二、回退程序版本，不应覆盖后来的人工决定","level":2},{"id":"section-三csvics与手机入口各自承担什么","text":"三、CSV、ICS与手机入口各自承担什么","level":2},{"id":"section-四低资源运行还要区分限制与测量","text":"四、低资源运行还要区分限制与测量","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L24",null,{"href":"/projects/shicheng/series/","data-reading-start":"true","children":"系列文章与阅读路线"}],["$","$L24",null,{"href":"/projects/shicheng/","data-reading-start":"true","children":"项目总览"}],["$","span",null,{"children":[7," / ",11," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","shicheng-architecture",{"value":1,"children":["$","$L24",null,{"href":"/projects/shicheng/architecture/","data-reading-start":"true","aria-current":"$undefined","children":"本机、服务端和提醒任务怎样组成拾程"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","shicheng-material-intake",{"value":2,"children":["$","$L24",null,{"href":"/projects/shicheng/material-intake/","data-reading-start":"true","aria-current":"$undefined","children":"微信记录、网页和图片怎样成为可处理材料"}]}],["$","li","shicheng-model-extraction",{"value":3,"children":["$","$L24",null,{"href":"/projects/shicheng/model-extraction/","data-reading-start":"true","aria-current":"$undefined","children":"模型输出怎样变成可检查的候选"}]}],["$","li","shicheng-review-workflow",{"value":4,"children":["$","$L24",null,{"href":"/projects/shicheng/review-workflow/","data-reading-start":"true","aria-current":"$undefined","children":"确认、批量操作与恢复怎样保护用户决定"}]}],["$","li","shicheng-job-queue",{"value":5,"children":["$","$L24",null,{"href":"/projects/shicheng/job-queue/","data-reading-start":"true","aria-current":"$undefined","children":"串行队列怎样把处理进度留下来"}]}],["$","li","shicheng-mail-reminders",{"value":6,"children":["$","$L24",null,{"href":"/projects/shicheng/mail-reminders/","data-reading-start":"true","aria-current":"$undefined","children":"一封提醒邮件怎样从日程走到发送结果"}]}],["$","li","shicheng-backup-export",{"value":7,"children":["$","$L24",null,{"href":"/projects/shicheng/backup-export/","data-reading-start":"true","aria-current":"page","children":"备份、恢复与日历导出分别保存什么"}]}]]}]]}],["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","shicheng-sqlite-transactions",{"value":8,"children":["$","$L24",null,{"href":"/projects/shicheng/sqlite-transactions/","data-reading-start":"true","aria-current":"$undefined","children":"SQLite怎样处理短事务与并发写入"}]}],["$","li","shicheng-calendar-format",{"value":9,"children":["$","$L24",null,{"href":"/projects/shicheng/calendar-format/","data-reading-start":"true","aria-current":"$undefined","children":"ICS怎样把一条日程交给其他日历"}]}]]}]]}],["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","shicheng-date-correction",{"value":10,"children":["$","$L24",null,{"href":"/projects/shicheng/date-correction/","data-reading-start":"true","aria-current":"$undefined","children":"通知里的“明天”和“10.22”怎样落成时间"}]}],["$","li","shicheng-incremental-dedup",{"value":11,"children":["$","$L24",null,{"href":"/projects/shicheng/incremental-dedup/","data-reading-start":"true","aria-current":"$undefined","children":"重复通知怎样合并，又不抹掉新的变化"}]}]]}]]}]]]}]]}],["$","$L28",null,{"mappings":[]}],["$","$L29",null,{"html":"$2a","zoomImages":true}],"$L2b","$L2c"]}],"$L2d"]}]]}]
-2b:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L24",null,{"href":"/projects/shicheng/mail-reminders/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"一封提醒邮件怎样从日程走到发送结果"}]]}],["$","$L24",null,{"href":"/projects/shicheng/sqlite-transactions/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"SQLite怎样处理短事务与并发写入"}]]}]]}]
+2a:T282f,<p>日程整理完成以后，我还需要把日程交给常用的日历软件，并在升级程序、迁移机器或误删内容后恢复需要的数据。因此，拾程分别提供了<strong>日程导出、数据库备份、年度档案和状态恢复</strong>，用来保存日程、人工决定、邮件账本以及已有材料。</p>
+<h2 id="section-一几类保存动作保留的对象">一、几类保存动作保留的对象</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>动作</th><th>保存或恢复的对象</th><th>主要用途</th></tr></thead><tbody><tr><td>CSV、ICS导出</td><td>当前选定的日程字段</td><td>交给表格软件或日历软件</td></tr><tr><td>日常数据库备份</td><td>某个时刻的数据库快照</td><td>恢复材料、候选、日程、版本和账本</td></tr><tr><td>年度档案</td><td>完整数据库快照、业务导出、可取得的附件、选定本机工作流的原材料和清单</td><td>离线查看与年度留存</td></tr><tr><td>代码回退</td><td>程序版本，保留业务数据库</td><td>回到兼容的旧程序</td></tr></tbody></table>
+<p>这些保存动作分别维护交换数据、历史状态和程序版本，检查时按对应对象处理。日程过期只是展示上的分类，不会立即删除所有材料；原件清理另看保留期、固定保留标记和待处理引用。</p>
+<span id="section-一数据库快照与图片档案要分别检查" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-二数据库快照与年度档案的检查范围">二、数据库快照与年度档案的检查范围</h2>
+<p>数据库正在写入时，随意复制文件可能取得不一致状态。项目用SQLite的backup接口生成快照；<a href="https://docs.python.org/3.10/library/sqlite3.html#sqlite3.Connection.backup" rel="noopener noreferrer">Python backup接口</a>支持在连接使用期间进行备份。</p>
+<p>不同入口执行的检查并不相同：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>入口</th><th>生成什么</th><th>执行哪些检查</th></tr></thead><tbody><tr><td>日常备份</td><td>当前数据库快照</td><td>数据库完整性</td></tr><tr><td>年度档案</td><td>完整数据库快照、HTML/CSV/JSON业务导出、材料和清单</td><td>完整性与外键，收集的图片另算SHA256</td></tr><tr><td>快照恢复</td><td>新目录中的数据库副本</td><td>复制前检查完整性、数据库结构版本与外键</td></tr></tbody></table>
+<p><code>integrity_check</code>检查数据库页和结构能否通过SQLite自身的完整性校验；<code>foreign_key_check</code>检查外键指向是否仍有对应记录。恢复入口还要确认数据库结构版本，判断这份快照能否被当前程序按预期读取。<strong>日常备份检查数据库完整性，年度档案还检查外键，快照恢复在复制前增加结构版本检查。</strong></p>
+<p>年度档案把需要长期保留的内容组织成三层：<strong>完整数据库快照、便于阅读的业务导出、能够取得的原始材料</strong>。</p>
+<p>其中，SQLite快照保存了本项目当时的完整数据库状态，任务和邮件账本也在其中。JSON按预先列出的业务表导出，HTML和CSV则选择适合阅读的字段与对象。选择本机工作流时，程序额外收集这些工作流中的原文和图片，去掉重复图片后计算SHA256，再保存来源与缺失清单。</p>
+<p>材料收集范围还取决于备份入口：通过SSH从服务器取得快照时，程序会尝试带回附件表引用、仍可用且未过期的附件；通过本地数据库文件备份时，程序复制数据库，原库旁的附件需要另外准备。<strong>选定工作流限定的是额外收集的本机材料，数据库快照仍保留整库状态。</strong></p>
+<h2 id="section-三数据库完整性与附件文件的分别检查">三、数据库完整性与附件文件的分别检查</h2>
+<p>数据库保存了附件的关联记录与路径，<strong>实际图片还需要从文件存储中取得</strong>。单独恢复数据库后，如果对应路径下的文件已经缺失，系统会标明附件缺失，便于继续查找原件。</p>
+<p>例如，一项招聘资料关联了3张海报。数据库保存关联记录和附件路径，实际图片由文件存储提供。备份或恢复时，需要分别核对这些路径和对应文件，缺少原件的条目继续保留缺失说明。</p>
+<p><strong>哈希用于核对复制前后的字节一致性，原件是否齐全则需要另外检查清单和文件。</strong>年度档案中的招聘机会还可能处于待确认状态。整理档案时，需要保留这些状态和原件缺失说明，并实际打开离线HTML检查阅读效果。</p>
+<span id="section-二回退程序版本不应覆盖后来的人工决定" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-四三种恢复的检查与人工步骤">四、三种恢复的检查与人工步骤</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>恢复动作</th><th>恢复的对象</th><th>检查与限制</th></tr></thead><tbody><tr><td>页面恢复已删除或取消的日程</td><td>同一编号、原时间和来源的日程</td><td>校验<code>expected_revision</code>；邮件一律关闭；过期活动仍在过期分区</td></tr><tr><td>数据库快照恢复</td><td>新目录中的整库副本</td><td>复制前检查完整性、结构版本和外键；不启动服务，不清空邮件授权，不合并快照后的<code>accepted</code>记录</td></tr><tr><td>代码回退</td><td>兼容的程序版本，保留业务库</td><td>停止timer，保留用户后来确认、忽略、修改和发信的状态</td></tr></tbody></table>
+<p>页面恢复与物理擦除不同：软删除主要改变状态，记录仍在数据库中，所以可以恢复。恢复日程后邮件开关是关闭的，用户要重新启用提醒；已有的受理或不确定账本记录仍会约束是否可以发送。具体规则见<a href="/projects/shicheng/review-workflow/">确认、批量处理与恢复</a>。<strong>页面恢复处理单项状态，数据库恢复复制整库，代码回退切换程序版本；三者需要的人工核对不同。</strong></p>
+<p>数据库恢复函数只向新目录复制数据库并标注附件缺失。它不会自动清空日程邮件授权，也不会合并快照之后的发送记录。生产切换前应按部署规程暂停API与邮件timer，等待在途发送结束，核对最近<code>accepted</code>、<code>uncertain</code>记录后再决定是否启用。</p>
+<p>代码回退会保留现有业务库和后来的人工决定，切换到兼容的程序版本，并保持邮件timer停止。实际切换时，按本次恢复的对象执行对应核对，尤其关注快照之后已经发生的邮件提交。</p>
+<span id="section-三csvics与手机入口各自承担什么" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-五csvics与手机入口的交换范围">五、CSV、ICS与手机入口的交换范围</h2>
+<p>CSV用于表格整理；ICS用于把可确定的日历事项交给其他日历软件。它们是交换结果，不包含全部任务、处理历史和邮件账本，不能替代数据库备份。</p>
+<p>CSV生成时会检查以公式符号开头的内容。假设企业名意外以<code>=1+1</code>开头，CSV语法可能完全合法，但表格软件打开后会把内容当公式；程序必要时加一个单引号，让它按文本显示。<code>csv.writer</code>负责逗号与引号语法，UTF-8 BOM改善部分客户端的中文识别。这两种处理解决不同问题。</p>
+<p>ICS为每个事件生成稳定UID，UID由活动编号与场次编号组成，不随标题变化；<code>SEQUENCE</code>使用内容版本。时间用UTC表示，长标题按UTF-8字节数折行，反斜杠、分号、逗号和换行要做转义。全日事件只在<code>date_text</code>能解析为ISO日期时生成；未规范化的中文日期可能仍被跳过，保留在CSV和界面里。</p>
+<p>当前提供ICS文件导出，外部软件对取消和重复导入的处理需要分别验证；持续订阅、双向同步与冲突合并仍属于后续能力。事件身份、时区与转义的完整说明见<a href="/projects/shicheng/calendar-format/">日历文件格式</a>。</p>
+<p>安卓入口使用<strong>WebView</strong>，也就是在应用里显示已有网页的组件，复用同一页面与API，并接入系统选文件等功能。数据保存和提醒仍由原来的服务端处理。当前已有APK构建结果，实机键盘、附件和日历导入体验还需要继续检查。</p>
+<span id="section-四低资源运行还要区分限制与测量" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-六低资源运行的约束与测量">六、低资源运行的约束与测量</h2>
+<p>服务端把API与邮件任务放在共同的<strong>systemd资源组（slice）</strong>中管理，统一约束这两个进程的资源使用。当前配置了<code>MemoryHigh=256M</code>、<code>MemoryMax=384M</code>和<code>CPUQuota=50%</code>，分别用于内存压力控制、内存硬上限和CPU配额。触及内存硬上限时，组内进程可能被终止，所以还需要结合实际负载观察运行情况。</p>
+<p>已有一次有限的模拟回放使用了<strong>四张5MiB合成图片</strong>，图片经过真实编码和HTTP请求序列化。MiB是内存大小单位，1MiB等于1,048,576字节。远端请求由<code>MockTransport</code>接管，即通过模拟传输返回结果；邮件使用<code>dry_run</code>模式，只记录模拟发送结果。这次回放以20ms间隔采样，共享范围包含正常API、验证API和模拟邮件，观察到的峰值为<strong>208.57MiB</strong>，对应负载落在配置预算内。真实模型与SMTP同时运行、以及与其他程序共用2GB主机的情况，还需要进一步测量。</p>
+<p>另外一轮观察得到过40.9MiB的即时占用；复查时需要同时记录采样时刻和负载，峰值比较则使用同一次测量的记录。目录清理还释放了约1.06GB磁盘空间。通用资源排查可以参考<a href="/blog/backend-agent-s05-10-linux-diagnostics/">Linux资源与连接诊断</a>。</p>a:["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"shicheng-backup-export","children":[["$","header",null,{"className":"article-heading","children":["$L25",["$","h1",null,{"tabIndex":-1,"children":"数据备份、状态恢复与日历导出"}],["$","p",null,{"className":"article-deck","children":"说明数据库、原始材料和程序版本各自的保存方式，介绍页面恢复、CSV与ICS导出、手机入口和资源测量。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["2,384"," 字"]}],["$","span",null,{"children":["阅读约 ",7," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","备份恢复",{"children":"备份恢复"}],["$","span","数据导出",{"children":"数据导出"}]]}],false]}],["$","$L26",null,{"headings":[{"id":"section-一几类保存动作保留的对象","text":"一、几类保存动作保留的对象","level":2},{"id":"section-二数据库快照与年度档案的检查范围","text":"二、数据库快照与年度档案的检查范围","level":2},{"id":"section-三数据库完整性与附件文件的分别检查","text":"三、数据库完整性与附件文件的分别检查","level":2},{"id":"section-四三种恢复的检查与人工步骤","text":"四、三种恢复的检查与人工步骤","level":2},{"id":"section-五csvics与手机入口的交换范围","text":"五、CSV、ICS与手机入口的交换范围","level":2},{"id":"section-六低资源运行的约束与测量","text":"六、低资源运行的约束与测量","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L24",null,{"href":"/projects/shicheng/series/","data-reading-start":"true","children":"系列文章与阅读路线"}],["$","$L24",null,{"href":"/projects/shicheng/","data-reading-start":"true","children":"项目总览"}],["$","span",null,{"children":[7," / ",11," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","shicheng-architecture",{"value":1,"children":["$","$L24",null,{"href":"/projects/shicheng/architecture/","data-reading-start":"true","aria-current":"$undefined","children":"拾程的整体架构与两条材料处理路径"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","shicheng-material-intake",{"value":2,"children":["$","$L24",null,{"href":"/projects/shicheng/material-intake/","data-reading-start":"true","aria-current":"$undefined","children":"微信记录、网页与图片的材料整理"}]}],["$","li","shicheng-model-extraction",{"value":3,"children":["$","$L24",null,{"href":"/projects/shicheng/model-extraction/","data-reading-start":"true","aria-current":"$undefined","children":"模型提取、结果校验与调用预算"}]}],["$","li","shicheng-review-workflow",{"value":4,"children":["$","$L24",null,{"href":"/projects/shicheng/review-workflow/","data-reading-start":"true","aria-current":"$undefined","children":"候选确认、批量处理与状态恢复"}]}],["$","li","shicheng-job-queue",{"value":5,"children":["$","$L24",null,{"href":"/projects/shicheng/job-queue/","data-reading-start":"true","aria-current":"$undefined","children":"串行任务队列与失败恢复"}]}],["$","li","shicheng-mail-reminders",{"value":6,"children":["$","$L24",null,{"href":"/projects/shicheng/mail-reminders/","data-reading-start":"true","aria-current":"$undefined","children":"邮件提醒的账本、提交与结果处理"}]}],["$","li","shicheng-backup-export",{"value":7,"children":["$","$L24",null,{"href":"/projects/shicheng/backup-export/","data-reading-start":"true","aria-current":"page","children":"数据备份、状态恢复与日历导出"}]}]]}]]}],["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","shicheng-sqlite-transactions",{"value":8,"children":["$","$L24",null,{"href":"/projects/shicheng/sqlite-transactions/","data-reading-start":"true","aria-current":"$undefined","children":"SQLite短事务与并发写入"}]}],["$","li","shicheng-calendar-format",{"value":9,"children":["$","$L24",null,{"href":"/projects/shicheng/calendar-format/","data-reading-start":"true","aria-current":"$undefined","children":"ICS日历文件的身份、时间与文本规则"}]}]]}]]}],["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","shicheng-date-correction",{"value":10,"children":["$","$L24",null,{"href":"/projects/shicheng/date-correction/","data-reading-start":"true","aria-current":"$undefined","children":"招聘通知的日期校正与时间依据"}]}],["$","li","shicheng-incremental-dedup",{"value":11,"children":["$","$L24",null,{"href":"/projects/shicheng/incremental-dedup/","data-reading-start":"true","aria-current":"$undefined","children":"增量处理、活动归并与人工决定保留"}]}]]}]]}]]]}]]}],["$","$L28",null,{"mappings":[]}],["$","$L29",null,{"html":"$2a","zoomImages":true}],"$L2b","$L2c"]}],"$L2d"]}]]}]
+2b:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L24",null,{"href":"/projects/shicheng/mail-reminders/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"邮件提醒的账本、提交与结果处理"}]]}],["$","$L24",null,{"href":"/projects/shicheng/sqlite-transactions/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"SQLite短事务与并发写入"}]]}]]}]
 2c:["$","div",null,{"className":"related-note","children":[["$","$L24",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L24",null,{"href":"/projects/shicheng/series/","data-reading-start":"true","children":"返回系列目录"}],["$","$L24",null,{"href":"/projects/shicheng/","data-reading-start":"true","children":"项目总览"}]]}]
 2d:["$","$L26",null,{"headings":"$a:props:children:1:props:headings"}]
 2e:I[6279,["5587","$18","8612","$21","182","$22","4067","$23"],"FilterLink"]

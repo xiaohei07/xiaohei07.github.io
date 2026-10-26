@@ -8,57 +8,101 @@ f:"static/chunks/182-3013bbb685a41e87.js"
 11:I[3498,["5587","$d","8612","$e","182","$f","4067","$10"],"default"]
 12:I[6279,["5587","$d","8612","$e","182","$f","4067","$10"],"FilterLink"]
 13:I[5128,["5587","$d","8612","$e","182","$f","4067","$10"],"ArticleToc"]
-1e:"ViewportBoundary"
-1f:I[887,[],"$1e"]
-20:"MetadataBoundary"
-21:I[887,[],"$20"]
-22:"$Sreact.suspense"
+1f:"ViewportBoundary"
+20:I[887,[],"$1f"]
+21:"MetadataBoundary"
+22:I[887,[],"$21"]
+23:"$Sreact.suspense"
 6:X
 6:C
 7:X
-c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"deepseek-export-plus-task-lifecycle","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L11",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L11",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L11",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L12",null,{"className":"trail-current","href":"/projects/","children":["浏览器扩展",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"取消、撤回和页面切换后，任务怎样收尾"}],["$","p",null,{"className":"article-deck","children":"区分授权代次、超时、实际中止与过期结果，处理扩展重载后的失效上下文。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["1,197"," 字"]}],["$","span",null,{"children":["阅读约 ",4," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","异步",{"children":"异步"}],["$","span","状态管理",{"children":"状态管理"}],["$","span","浏览器扩展",{"children":"浏览器扩展"}]]}],false]}],["$","$L13",null,{"headings":[{"id":"section-一取消操作与拒绝过期结果要分别处理","text":"一、取消操作与拒绝过期结果要分别处理","level":2},{"id":"section-二超时结束等待不会自动终止底层工作","text":"二、超时结束等待，不会自动终止底层工作","level":2},{"id":"section-三扩展重载后需要让旧页面退出旧状态","text":"三、扩展重载后，需要让旧页面退出旧状态","level":2},{"id":"section-四从操作顺序检查生命周期","text":"四、从操作顺序检查生命周期","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L11",null,{"href":"/projects/deepseek-export-plus/series/","data-reading-start":"true","children":"系列文章与阅读路线"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/","data-reading-start":"true","children":"项目总览"}],["$","span",null,{"children":[5," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-architecture",{"value":1,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/architecture/","data-reading-start":"true","children":"从网页到文件，导出链路怎样分工"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extract-conversation",{"value":2,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/extract-conversation/","data-reading-start":"true","children":"长对话、折叠思考与有序消息怎样提取"}]}],["$","li","deepseek-export-plus-format-output",{"value":3,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/format-output/","data-reading-start":"true","children":"同一份对话怎样生成不同格式"}]}],["$","li","deepseek-export-plus-attachments",{"value":4,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/attachments/","data-reading-start":"true","children":"附件怎样下载、打包并保持可打开"}]}],["$","li","deepseek-export-plus-task-lifecycle",{"value":5,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/task-lifecycle/","data-reading-start":"true","aria-current":"page","children":"取消、撤回和页面切换后，任务怎样收尾"}]}]]}]]}],["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extension-runtime",{"value":6,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/extension-runtime/","data-reading-start":"true","children":"内容脚本、网页环境与后台怎样协作"}]}],["$","li","deepseek-export-plus-document-formats",{"value":7,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/document-formats/","data-reading-start":"true","children":"字符、XML和DOCX：文件格式怎样层层组成"}]}],"$L14"]}]]}],"$L15"]]}]]}],"$L16","$L17","$L18","$L19"]}],"$L1a"]}]]}],["$L1b"],"$L1c"]}],"p":"$@1d","v":null,"s":"$7"}}]]
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page showcase-detail","data-project-page":"deepseek-export-plus-task-lifecycle","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L11",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L11",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L11",null,{"href":"/projects/","children":["项目",["$","span",null,{"children":4}]]}],["$","$L12",null,{"className":"trail-current","href":"/projects/","children":["浏览器扩展",["$","span",null,{"children":1}]]}],"$undefined"]}],["$","h1",null,{"tabIndex":-1,"children":"导出任务的取消、授权与状态清理"}],["$","p",null,{"className":"article-deck","children":"用授权代次和操作顺序说明旧结果处理、等待超时、用户撤回、历史缓存，以及扩展更新后的页面恢复。"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"children":["发布于 ",["$","time",null,{"dateTime":"2026-10-25","children":"2026-10-25"}]]}],["$","span",null,{"children":["1,633"," 字"]}],["$","span",null,{"children":["阅读约 ",5," 分钟"]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","异步",{"children":"异步"}],["$","span","状态管理",{"children":"状态管理"}],["$","span","浏览器扩展",{"children":"浏览器扩展"}]]}],false]}],["$","$L13",null,{"headings":[{"id":"section-一授权代次与旧结果处理","text":"一、授权代次与旧结果处理","level":2},{"id":"section-二关闭超时与撤回的处理","text":"二、关闭、超时与撤回的处理","level":2},{"id":"section-21-关闭窗口后的阶段检查","text":"2.1 关闭窗口后的阶段检查","level":3},{"id":"section-22-元数据读取的等待上限","text":"2.2 元数据读取的等待上限","level":3},{"id":"section-23-撤回同意后的清理","text":"2.3 撤回同意后的清理","level":3},{"id":"section-三历史响应缓存的资源成本","text":"三、历史响应缓存的资源成本","level":2},{"id":"section-四扩展更新后的页面恢复","text":"四、扩展更新后的页面恢复","level":2},{"id":"section-五按操作顺序检查任务收尾","text":"五、按操作顺序检查任务收尾","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content showcase-body","children":[false,["$","nav",null,{"className":"series-reading project-article-navigation","aria-label":"项目内阅读","children":[["$","div",null,{"children":[["$","$L11",null,{"href":"/projects/deepseek-export-plus/series/","data-reading-start":"true","children":"系列文章与阅读路线"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/","data-reading-start":"true","children":"项目总览"}],["$","span",null,{"children":[5," / ",10," 篇"]}]]}],["$","details",null,{"children":[["$","summary",null,{"children":"本项目全部文章"}],[["$","section","architecture",{"children":[["$","strong",null,{"children":"整体架构"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-architecture",{"value":1,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/architecture/","data-reading-start":"true","children":"DeepSeek Export Plus的整体架构与导出流程"}]}]]}]]}],["$","section","modules",{"children":[["$","strong",null,{"children":"模块构建"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extract-conversation",{"value":2,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/extract-conversation/","data-reading-start":"true","children":"长对话提取与有序消息组织"}]}],["$","li","deepseek-export-plus-format-output",{"value":3,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/format-output/","data-reading-start":"true","children":"对话内容的多格式转换"}]}],["$","li","deepseek-export-plus-attachments",{"value":4,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/attachments/","data-reading-start":"true","children":"附件下载、资源复用与文件链接"}]}],["$","li","deepseek-export-plus-task-lifecycle",{"value":5,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/task-lifecycle/","data-reading-start":"true","aria-current":"page","children":"导出任务的取消、授权与状态清理"}]}]]}]]}],["$","section","knowledge",{"children":[["$","strong",null,{"children":"关键知识"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-extension-runtime",{"value":6,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/extension-runtime/","data-reading-start":"true","children":"内容脚本、网页环境与后台的协作机制"}]}],"$L14","$L15"]}]]}],"$L16"]]}]]}],"$L17","$L18","$L19","$L1a"]}],"$L1b"]}]]}],["$L1c"],"$L1d"]}],"p":"$@1e","v":null,"s":"$7"}}]]
 a:[["children",{"s":{"n":"page","t":"d","k":"task-lifecycle","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
 8:[["children",{"s":{"n":"project","t":"d","k":"deepseek-export-plus","s":["mental-health-evaluation"]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
 1:[["children",{"s":"projects","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
-0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L1f",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L21",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$22",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"取消、撤回和页面切换后，任务怎样收尾 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"区分授权代次、超时、实际中止与过期结果，处理扩展重载后的失效上下文。"}],["$","link","2",{"rel":"canonical","href":"/projects/deepseek-export-plus/task-lifecycle/"}]]}]}],null]}],null]}],"p":"$@23","v":null,"s":"$7"}},"a":"$@24","u":"$@25","b":"6cQJHWqsmY59WndvF4Y-g"}
-26:"ProjectLegacyAnchors"
-27:I[1103,["5587","$d","8612","$e","182","$f","4067","$10"],"$26"]
-28:I[4711,["5587","$d","8612","$e","182","$f","4067","$10"],"ArticleBody"]
-2a:I[887,[],"OutletBoundary"]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L20",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L22",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$23",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"导出任务的取消、授权与状态清理 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"用授权代次和操作顺序说明旧结果处理、等待超时、用户撤回、历史缓存，以及扩展更新后的页面恢复。"}],["$","link","2",{"rel":"canonical","href":"/projects/deepseek-export-plus/task-lifecycle/"}]]}]}],null]}],null]}],"p":"$@24","v":null,"s":"$7"}},"a":"$@25","u":"$@26","b":"LzViTTBtizNOe9mwSPy8_"}
+27:"ProjectLegacyAnchors"
+28:I[1103,["5587","$d","8612","$e","182","$f","4067","$10"],"$27"]
+29:I[4711,["5587","$d","8612","$e","182","$f","4067","$10"],"ArticleBody"]
+2b:I[887,[],"OutletBoundary"]
 :HL["/_next/static/css/0d4edec444d587ad.css","style"]
-14:["$","li","deepseek-export-plus-rendering-pagination",{"value":8,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/rendering-pagination/","data-reading-start":"true","children":"从网页排版到长图：字体、画布和分页"}]}]
-15:["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-word-png",{"value":9,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/word-png/","data-reading-start":"true","children":"Word与PNG的两次失败，为什么要分层修复"}]}],["$","li","deepseek-export-plus-page-integration",{"value":10,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/page-integration/","data-reading-start":"true","children":"导出按钮怎样与原网页和平共处"}]}]]}]]}]
-16:["$","$L27",null,{"mappings":[]}]
-29:T12cb,<p>导出并不是一次瞬间完成的函数调用。读取长对话、补取思考、下载附件和生成图片都可能需要等待，而等待期间用户仍然可以关闭窗口、撤回同意或切换会话。任务控制模块要保证旧操作返回时，不会把已经过期的决定当成当前决定。</p>
-<p><a href="/projects/personal-site/javascript-async-fetch/">Promise与await</a>解释了异步等待的基础。本篇使用同样的概念，继续看浏览器扩展里怎样区分授权状态、内容状态和实际停止动作。</p>
-<h2 id="section-一取消操作与拒绝过期结果要分别处理">一、取消操作与拒绝过期结果要分别处理</h2>
-<p>Promise表示一个未来成功或失败的结果。一个函数执行到<code>await</code>时会等待，但浏览器还可以处理用户的其他操作，因此附件下载期间可能发生撤回同意、切换对话或关闭窗口。</p>
-<p>假设任务A在授权代次7开始读取。用户随后撤回同意，代次变为8；又重新同意，代次变为9。A这时返回，如果只检查当前是否同意，会看到<code>true</code>，但它仍然属于旧的第7次授权状态。</p>
-<p>所以，后台在异步操作前后核对<strong>仍然同意，并且代次没有变化</strong>。授权修改还通过队列串行处理，避免旧的慢写入覆盖新的决定。撤回时终止后台登记的读取、清理缓存与打印会话，并停止已经注入的观察逻辑。只注销以后要注入的脚本，不会自动移除已在页面中执行的脚本。</p>
-<p>这里的代次只说明授权是否仍有效，不能顺带证明网页回答内容完全没变。内容身份和历史响应变化需要另外检查，不能把授权代次写成覆盖整个系统的统一版本锁。</p>
-<h2 id="section-二超时结束等待不会自动终止底层工作">二、超时结束等待，不会自动终止底层工作</h2>
-<p>元数据读取有超时处理。调用方同时等待读取结果和计时结果，<code>Promise.race</code>返回先完成的一方；如果计时先完成，调用方可以回退，但原先读取不会因此自动停止。</p>
-<p>AbortSignal则是协作停止的信号，只有接收并处理它的操作才会中止。<a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal" rel="noopener noreferrer">AbortSignal文档</a>给出了这种使用方式。普通关闭窗口主要依赖阶段检查，撤回同意另有后台中止处理；当前没有把每种取消都实现成全链路、立即抢占的协议。正在执行的同步ZIP也不能因为按钮关闭就瞬间停止。</p>
-<p>历史缓存还有另一类边界：观察fetch响应时会克隆响应，避免直接消耗网页需要的原响应体。但副本处理较慢时仍可能缓冲数据，<code>clone()</code>不代表零成本复制。<a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/clone" rel="noopener noreferrer">Response.clone文档</a>明确说明了慢速分支的缓冲风险。当前源码的字符串长度限制也不是严格字节上限，不能把它宣传为固定峰值内存。</p>
-<h2 id="section-三扩展重载后需要让旧页面退出旧状态">三、扩展重载后，需要让旧页面退出旧状态</h2>
-<p>扩展更新或重载后，旧页面中的内容脚本可能还存在，但连接的是已经失效的扩展上下文。继续重试同一个旧连接不会恢复它。</p>
-<p>项目通过<code>runExtensionAction</code>同时处理同步异常与Promise拒绝，识别特定上下文失效，清理旧窗口、监听和任务，再显示刷新提示。提示通过页面中的独立DOM和<code>location.reload()</code>工作，不再依赖已经失效的扩展API。普通附件失败仍保留自己的错误原因，不把全部异常都当成扩展失效。</p>
-<p>本地处理的范围也应说清：转换和打包不上传到维护者后端，但分享内容与附件仍要向DeepSeek获取。<strong>本地转换不等于整个流程离线。</strong></p>
-<h2 id="section-四从操作顺序检查生命周期">四、从操作顺序检查生命周期</h2>
-<p>检查“取消”时需要写出动作顺序。例如先开始下载，再撤回同意，然后等待旧请求返回；或者打开导出窗口后切换会话，再尝试提交原选项。这些顺序检查的是旧任务会不会继续交付，不只是按钮是否变灰。</p>
-<p>授权代次可以拒绝旧授权下的返回结果，无法替代更细的消息修订识别；超时可以让界面结束等待，也无法抢占任意同步工作。把这些条件分别讲清，才知道后续若要加强一致性，应修改哪一层。扩展各执行环境的分工见<a href="/projects/deepseek-export-plus/extension-runtime/">内容脚本与后台</a>。</p>17:["$","$L28",null,{"html":"$29","zoomImages":true}]
-18:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L11",null,{"href":"/projects/deepseek-export-plus/attachments/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"附件怎样下载、打包并保持可打开"}]]}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/extension-runtime/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"内容脚本、网页环境与后台怎样协作"}]]}]]}]
-19:["$","div",null,{"className":"related-note","children":[["$","$L11",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/series/","data-reading-start":"true","children":"返回系列目录"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/","data-reading-start":"true","children":"项目总览"}]]}]
-1a:["$","$L13",null,{"headings":"$c:0:1:d:r:props:children:0:props:children:1:props:headings"}]
-1b:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
-1c:["$","$L2a",null,{"children":["$","$22",null,{"name":"Next.MetadataOutlet","children":"$@2b"}]}]
-25:true
+14:["$","li","deepseek-export-plus-document-formats",{"value":7,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/document-formats/","data-reading-start":"true","children":"字符编码、XML与DOCX文档结构"}]}]
+15:["$","li","deepseek-export-plus-rendering-pagination",{"value":8,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/rendering-pagination/","data-reading-start":"true","children":"从网页排版到长图：字体、画布和分页"}]}]
+16:["$","section","improvements",{"children":[["$","strong",null,{"children":"问题与优化"}],["$","ol",null,{"children":[["$","li","deepseek-export-plus-word-png",{"value":9,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/word-png/","data-reading-start":"true","children":"Word与PNG导出故障的分层修复"}]}],["$","li","deepseek-export-plus-page-integration",{"value":10,"children":["$","$L11",null,{"href":"/projects/deepseek-export-plus/page-integration/","data-reading-start":"true","children":"扩展入口的布局适配与交互修复"}]}]]}]]}]
+17:["$","$L28",null,{"mappings":[]}]
+2a:T1c69,<p>导出长对话时，读取消息、补取思考、下载附件和生成图片都可能需要等待。在这些步骤执行期间，用户仍然可以关闭窗口、撤回同意或切换会话。任务控制模块需要据此判断：<strong>哪些操作应停止，哪些结果还可以使用，哪些临时状态需要清理？</strong></p>
+<p>异步等待的基础可以参考<a href="/projects/personal-site/javascript-async-fetch/">JavaScript异步与fetch</a>。本篇继续展开扩展中的授权状态、过期结果和清理流程。</p>
+<span id="section-一取消操作与拒绝过期结果要分别处理" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-一授权代次与旧结果处理">一、授权代次与旧结果处理</h2>
+<p>Promise表示一个未来成功或失败的结果。函数执行到<code>await</code>时会等待结果，浏览器同时还能处理用户的其他操作。例如，附件下载尚未完成时，用户可以进入隐私设置页撤回同意。</p>
+<p>本项目用<strong>授权代次</strong>标记当前授权状态。可以把代次理解为一个随授权变化而更新的编号。任务开始时记下这个编号，结果返回后再与当前编号比较。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>操作顺序</th><th>当前授权状态</th><th>任务A记录的代次</th></tr></thead><tbody><tr><td>A开始读取</td><td>已同意，代次7</td><td>7</td></tr><tr><td>用户撤回</td><td>未同意，代次8</td><td>7</td></tr><tr><td>用户重新同意</td><td>已同意，代次9</td><td>7</td></tr><tr><td>A返回结果</td><td>当前为代次9</td><td>仍为7，结果属于旧授权</td></tr></tbody></table>
+<p>如果只检查最后的同意状态，会看到用户已经重新同意。加入代次比较后，后台就能发现A的结果来自旧请求，并拒绝继续使用。因此，异步操作前后都会检查<strong>当前仍然同意，并且代次保持一致</strong>。</p>
+<p>授权修改还通过队列串行写入，防止较早的慢写入覆盖后来的决定。代次描述的是授权变化，网页正文是否更新则需要另外检查消息身份和内容修订。</p>
+<h2 id="section-二关闭超时与撤回的处理">二、关闭、超时与撤回的处理</h2>
+<h3 id="section-21-关闭窗口后的阶段检查">2.1 关闭窗口后的阶段检查</h3>
+<p>用户关闭导出窗口后，处理流程会在相应阶段检查取消状态，并执行收尾。支持取消信号的操作可以接收<code>AbortSignal</code>，在信号到达后停止；仍在执行的同步处理，则要等到能够检查状态的位置再退出。</p>
+<p>例如，同步ZIP归档在当前调用返回前可能持续占用线程。关闭按钮改变了任务状态，但中途能否停止，还取决于具体操作是否支持中止。相关API机制见<a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal" rel="noopener noreferrer">AbortSignal说明</a>。</p>
+<span id="section-二超时结束等待不会自动终止底层工作" class="legacy-anchor" aria-hidden="true"></span><h3 id="section-22-元数据读取的等待上限">2.2 元数据读取的等待上限</h3>
+<p>本项目为元数据读取设置了<strong>5秒等待上限</strong>。调用方通过<code>Promise.race</code>同等待读取结果和计时结果，先完成的一方决定后续处理。计时先结束时，调用方进入回退路径，继续尝试取得可用内容。</p>
+<p>等待结束后，已经注入MAIN的读取函数仍可能继续执行。因此，后续返回的结果还需要检查授权和任务状态。等待上限控制界面等待多久，底层停止则由操作自身支持的取消机制处理。</p>
+<h3 id="section-23-撤回同意后的清理">2.3 撤回同意后的清理</h3>
+<p>撤回会触发更完整的清理流程：<strong>中止后台登记的读取、清理缓存与打印会话、注销历史脚本注册，并停止页面中已运行的观察逻辑</strong>。</p>
+<p>动态注册控制以后何时注入脚本，已注入的实例则需要执行自己的停止操作。停止历史观察时，还要恢复被包装的请求函数，清除暂存内容，并拒绝旧授权下随后返回的结果。</p>
+<h2 id="section-三历史响应缓存的资源成本">三、历史响应缓存的资源成本</h2>
+<p>在<strong>fetch分支</strong>中，历史观察脚本通过<code>Response.clone()</code>处理响应副本，同时让网页继续使用原响应。<strong>XHR分支</strong>则在请求完成事件中读取响应内容，使用另一条读取路径。</p>
+<p><strong>副本读取速度会影响缓冲量。</strong>当其中一个分支处理较慢时，尚未消费的数据可能被缓冲下来，具体机制见<a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/clone" rel="noopener noreferrer">Response.clone说明</a>。因此，缓存规模既要考虑最终保存了多少内容，也要考虑读取和转换过程中的临时数据。</p>
+<p>当前源码对部分字符串设置了长度限制。字符串长度描述的是相应语言中的字符单元数量，转换为字节后的大小还受编码影响；评估内存时，需要连同响应副本、资源和输出文件一起考虑。</p>
+<span id="section-三扩展重载后需要让旧页面退出旧状态" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-四扩展更新后的页面恢复">四、扩展更新后的页面恢复</h2>
+<p>扩展更新或重新加载后，原网页里可能仍保留旧内容脚本，但它连接的扩展上下文已经失效。此时继续调用旧API会出现同步异常或Promise拒绝。</p>
+<p>本项目用统一的操作包装函数识别这类失效，随后<strong>清理旧窗口、监听和任务，并提示刷新网页</strong>。提示通过页面中的独立DOM显示，刷新调用<code>location.reload()</code>，因此仍能在旧扩展连接失效时工作。</p>
+<p>刷新后，当前版本的内容脚本重新进入页面，恢复与扩展的连接。普通附件下载失败等情况则保留各自的原因，使用对应提示处理。</p>
+<p>对运行位置也需要有清楚认识：文档转换和打包在本机进行，公开分享内容与附件仍需要向DeepSeek取得。整个任务中既有本地计算，也有网络读取。</p>
+<span id="section-四从操作顺序检查生命周期" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-五按操作顺序检查任务收尾">五、按操作顺序检查任务收尾</h2>
+<p>生命周期检查适合使用明确的动作顺序：先开始下载，再撤回同意，然后等待旧请求返回；或者打开导出窗口后切换会话，再尝试提交原选项。</p>
+<p>检查时观察<strong>旧结果是否被拒绝、临时数据是否清理、页面是否恢复、提示是否对应真实原因</strong>。授权代次负责识别旧授权结果，消息修订负责描述内容变化，取消机制负责尽可能停止后续工作。各部分的职责明确后，才能判断还需要在哪一步加强一致性。</p>
+<p>各执行位置与消息传递的关系见<a href="/projects/deepseek-export-plus/extension-runtime/">内容脚本、网页环境与后台的协作机制</a>。</p>18:["$","$L29",null,{"html":"$2a","zoomImages":true}]
+19:["$","nav",null,{"className":"project-article-neighbors","aria-label":"系列前后篇","children":[["$","$L11",null,{"href":"/projects/deepseek-export-plus/attachments/","data-reading-start":"true","children":[["$","small",null,{"children":"上一篇"}],["$","strong",null,{"children":"附件下载、资源复用与文件链接"}]]}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/extension-runtime/","data-reading-start":"true","children":[["$","small",null,{"children":"下一篇"}],["$","strong",null,{"children":"内容脚本、网页环境与后台的协作机制"}]]}]]}]
+1a:["$","div",null,{"className":"related-note","children":[["$","$L11",null,{"href":"/projects/","children":"返回全部项目"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/series/","data-reading-start":"true","children":"返回系列目录"}],["$","$L11",null,{"href":"/projects/deepseek-export-plus/","data-reading-start":"true","children":"项目总览"}]]}]
+1b:["$","$L13",null,{"headings":"$c:0:1:d:r:props:children:0:props:children:1:props:headings"}]
+1c:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0d4edec444d587ad.css","precedence":"next"}]
+1d:["$","$L2b",null,{"children":["$","$23",null,{"name":"Next.MetadataOutlet","children":"$@2c"}]}]
+26:true
 7:300
-2b:null
+2c:null
 7:C
-24:0
+25:0
 b:"$undefined"
 9:"$undefined"
 5:"$undefined"
-23:"$undefined"
-1d:"$undefined"
+24:"$undefined"
+1e:"$undefined"
