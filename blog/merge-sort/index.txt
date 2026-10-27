@@ -14,31 +14,125 @@ e:I[887,[],"$d"]
 8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
 7:[["children",{"s":"merge-sort","h":512,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q8"}]]
 3:[["children",{"s":"blog","h":512,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$6"},"c":"$Q7"}]]
-0:{"P":null,"c":["","blog","merge-sort",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1d6e18c6254f9adc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"LzViTTBtizNOe9mwSPy8_"}
+0:{"P":null,"c":["","blog","merge-sort",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ed72070de5f1647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1d6e18c6254f9adc.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],"p":false,"v":null},"c":"$Q3"},"h":{"r":["$","$1","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"ZvF2OUb_qmlU-1zsmc04h"}
 6:C
 f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 c:null
-12:[["$","title","0",{"children":"看见归并排序的每一步 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"用可交互的小数组观察归并排序的拆分、比较与写入，理解稳定性、不变量与边界情况。"}]]
+12:[["$","title","0",{"children":"归并排序：递归拆分、有序合并与逐步演示 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"从两个有序区间的合并推导归并排序，逐步观察比较与写入，说明稳定性、时间空间复杂度和输入边界。"}],["$","link","2",{"rel":"canonical","href":"/blog/merge-sort/"}]]
 15:"static/chunks/5587-bf231f55b3fd3ee7.js"
 16:"static/chunks/8612-b99ba8072dd9edd6.js"
 17:"static/chunks/app/blog/merge-sort/page-6c823c132b50a401.js"
 18:I[6279,["5587","$15","8612","$16","5431","$17"],"FilterLink"]
 19:I[5128,["5587","$15","8612","$16","5431","$17"],"ArticleToc"]
 1a:I[4711,["5587","$15","8612","$16","5431","$17"],"ArticleBody"]
-1b:I[8286,["5587","$15","8612","$16","5431","$17"],"MergeDemoLoader"]
-1c:I[2708,["5587","$15","8612","$16","5431","$17"],"FeedbackForm"]
-9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"看见归并排序的每一步"}],["$","p",null,{"className":"article-deck","children":"先拆分，再把有序的部分合起来。用一个小数组，观察分治如何变成可执行的过程。"}],["$","div",null,{"className":"article-meta","children":[["$","$L18",null,{"href":"/blog/#tag=%E7%AE%97%E6%B3%95","children":"算法"}],["$","span",null,{"className":"interactive-label","children":"本站新制作的交互示例"}]]}]]}],["$","$L19",null,{"headings":[{"id":"idea","text":"从两个有序区间开始","level":2},{"id":"experiment","text":"逐步观察归并","level":2},{"id":"correctness","text":"为什么这样合并是正确的","level":2},{"id":"boundaries","text":"复杂度与边界","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L1a",null,{"html":"<span id=\"idea\" class=\"legacy-anchor\" aria-hidden=\"true\"></span><h2 id=\"user-content-idea\">从两个有序区间开始</h2>\n<p>假设左边已经排好序：<code>[3, 8]</code>，右边也是：<code>[1, 5]</code>。每次只看两侧尚未使用的第一个元素，取较小的一个，依次写入结果。</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>比较</th><th>选择</th><th>已经输出</th></tr></thead><tbody><tr><td>3 与 1</td><td>1（右侧）</td><td>[1]</td></tr><tr><td>3 与 5</td><td>3（左侧）</td><td>[1, 3]</td></tr><tr><td>8 与 5</td><td>5（右侧）</td><td>[1, 3, 5]</td></tr><tr><td>右侧耗尽</td><td>8（剩余左侧）</td><td>[1, 3, 5, 8]</td></tr></tbody></table>\n<p>归并排序把这个过程反复应用：先递归拆成长度为 1 的有序区间，再自底向上合并。区间使用左闭右开记法 <code>[start, end)</code>。</p>\n<span id=\"experiment\" class=\"legacy-anchor\" aria-hidden=\"true\"></span><h2 id=\"user-content-experiment\">逐步观察归并</h2>\n<p>演示默认暂停。试试重复值、负数或已经有序的数组，再用“上一步”回看同一次比较。</p>"}],["$","$L1b",null,{}],["$","$L1a",null,{"html":"<span id=\"correctness\" class=\"legacy-anchor\" aria-hidden=\"true\"></span><h2 id=\"user-content-correctness\">为什么这样合并是正确的</h2>\n<p>合并时保持一个不变量：<strong>已经写入的部分有序，且包含两侧缓冲区中已经取出的所有元素。</strong>两侧未取出的最小值都在各自的读指针处，因此取两者较小值，就不会漏掉更小的元素。</p>\n<p>一侧耗尽后，另一侧的剩余元素本身有序，直接接在后面即可。相等时优先取左侧，可以保留相等元素原有的相对顺序，因此这个实现是稳定的。</p>\n<span id=\"boundaries\" class=\"legacy-anchor\" aria-hidden=\"true\"></span><h2 id=\"user-content-boundaries\">复杂度与边界</h2>\n<ul>\n<li>每层合并共处理 n 个元素，共有约 log₂ n 层，时间复杂度为 O(n log n)。</li>\n<li>普通归并排序需要 O(n) 额外缓冲空间，递归深度为 O(log n)。</li>\n<li>空数组或只有一个元素时，无需继续拆分；交互输入要求至少一个元素，便于观察。</li>\n<li>重复值与负数仍按相同规则处理。演示限制 12 个整数，避免轨迹过长。</li>\n</ul>\n<p>演示额外保存了每一步的数组快照，便于前后回放，因此轨迹存储会占用更多空间；这部分不包含在普通归并排序的 O(n) 辅助空间中。</p>"}],["$","$L1c",null,{"contentId":"merge-sort"}],"$L1d"]}],["$","$L19",null,{"headings":"$9:props:children:1:props:headings"}]]}]]}]
-1e:I[3498,["5587","$15","8612","$16","5431","$17"],"default"]
-1d:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$L1e",null,{"href":"/blog/cpp-this/","data-reading-start":"true","children":[["$","span",null,{"children":"上一篇"}],"c++类——this指针"]}],"$undefined"]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","dummy-node-linked-lists",{"children":[["$","$L1e",null,{"href":"/blog/dummy-node-linked-lists/","data-reading-start":"true","children":"哑节点（一）：合并两个有序链表、移除链表元素与删除倒数节点"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","in-place-hash",{"children":[["$","$L1e",null,{"href":"/blog/in-place-hash/","data-reading-start":"true","children":"原地哈希（一）：缺失的第一个正数与数组缺失、重复问题"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","linked-list-basics",{"children":[["$","$L1e",null,{"href":"/blog/linked-list-basics/","data-reading-start":"true","children":"链表（一）：节点、引用与next连接"}],["$","span",null,{"children":"算法与数据结构"}]]}]]}]]}]]}]
-1f:Tb2c,(()=>{const d={"wallpaper":"banner","layout":"list","cardStyle":"soft","textSize":"normal","hero":true,"carousel":false,"waves":false,"fade":true,"motion":true,"typewriter":true,"progress":true,"petals":false,"dim":28,"blur":0,"cardOpacity":78,"colorMode":"section","customColor":"#32846b","sectionColors":{},"customTheme":"","sectionThemes":{}},enums={"wallpaper":["banner","fullscreen","overlay","none"],"layout":["list","grid"],"cardStyle":["soft","flat"],"textSize":["normal","large"],"colorMode":["section","custom"]},bools=["hero","carousel","waves","fade","motion","typewriter","progress","petals"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]));const color=(function(a,b){let c=b.startsWith("/credits")?"about":b.split("/")[1],d=["home","blog","research","projects","about"].includes(c)?c:"home",e=(a.sectionColors&&"object"==typeof a.sectionColors&&!Array.isArray(a.sectionColors)?a.sectionColors:{})[d],f="string"==typeof e&&/^#[\da-f]{6}$/i.test(e)?e.toLowerCase():void 0,g="string"==typeof a.customColor&&/^#[\da-f]{6}$/i.test(a.customColor)?a.customColor.toLowerCase():"#32846b",h=a.sectionThemes&&"object"==typeof a.sectionThemes&&!Array.isArray(a.sectionThemes)?a.sectionThemes:{},i="custom"===a.colorMode?a.customTheme:h[d],j="string"==typeof i&&["home","blog","research","projects","about"].includes(i)?i:void 0;return{section:d,color:"custom"===a.colorMode?g:f??g,customized:"custom"===a.colorMode?!j:!!f,theme:j??d}})(p,location.pathname);document.documentElement.setAttribute('data-custom-palette',String(color.customized));document.documentElement.setAttribute('data-palette-section',color.theme);const palette=(function(a){let b=/^#[\da-f]{6}$/i.test(a)?a:"#32846b",c=[1,3,5].map(a=>Number.parseInt(b.slice(a,a+2),16)),d={};for(let[a,[b,e]]of Object.entries({"light-page":[248,.09],"light-surface":[255,.025],"light-surface-soft":[252,.05],"light-surface-raised":[246,.08],"light-ink":[0,.15],"light-muted":[0,.32],"light-line":[213,.12],"light-accent":[0,.4],"light-accent-strong":[0,.3],"light-accent-soft":[248,.1],"light-on-accent":[255,0],"dark-page":[16,.025],"dark-surface":[26,.045],"dark-surface-soft":[22,.04],"dark-surface-raised":[33,.06],"dark-ink":[255,.12],"dark-muted":[255,.34],"dark-line":[72,.1],"dark-accent":[255,.35],"dark-accent-strong":[255,.22],"dark-accent-soft":[24,.1],"dark-on-accent":[0,.1]}))d[`--palette-${a}`]=`#${c.map(a=>Math.round(b*(1-e)+a*e).toString(16).padStart(2,"0")).join("")}`;return d})(color.color);for(const k in palette)document.documentElement.style.setProperty(k,palette[k])})()2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$1f"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],"$L20"]}],"$L21"]}]
-22:"static/chunks/7107-a5162dd25c1ffcb2.js"
-23:"static/chunks/app/layout-60d9bfd13e51c573.js"
-24:I[5376,["5587","$15","7107","$22","7177","$23"],"DisplayProvider"]
-25:"NavigationFeedback"
-26:I[2842,["5587","$15","7107","$22","7177","$23"],"$25"]
-27:I[4085,["5587","$15","7107","$22","7177","$23"],"SiteHeader"]
-28:I[5803,["5587","$15","7107","$22","7177","$23"],"SiteFrame"]
-29:I[164,["5587","$15","7107","$22","7177","$23"],"ProfileSidebar"]
-20:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]
-21:["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L24",null,{"children":[["$","$L26",null,{}],["$","$L27",null,{"tags":["编程语言知识点","Python","C++"],"categoryIds":["foundations","frontend","backend","agent","computing","ai","deployment","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L28",null,{"sidebar":["$","$L29",null,{"categoryIds":"$21:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L1e",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L1e",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L1e",null,{"href":"/about/","children":"关于这个站点"}],["$","$L1e",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]
-14:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L1e",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L1e",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L1e",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":178}]]}],["$","$L18",null,{"className":"trail-current","href":"/blog/#algorithms","children":["算法与数据结构",["$","span",null,{"children":13}]]}],"$undefined"]}]
+1c:I[8286,["5587","$15","8612","$16","5431","$17"],"MergeDemoLoader"]
+1b:Tf07,<span id="idea" class="legacy-anchor" aria-hidden="true"></span><h2 id="user-content-idea">一、归并排序的拆分与合并过程</h2>
+<p>归并排序先把数组分成较小的部分，分别排好序，再将这些有序部分合并起来。要理解它的整个过程，可以先看<strong>两个已经有序的区间如何合并</strong>，然后再回头看这些有序区间是怎样得到的。</p>
+<p>假设左侧为<code>[3,8]</code>，右侧为<code>[1,5]</code>。两侧都按从小到大的顺序排列，因此各自尚未取出的第一个数，就是这一侧剩余元素中的最小值。每轮比较这两个数，将较小的一个写入结果，再推进它所在一侧的读取位置。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>本次读取的数</th><th>比较与处理</th><th>已经写入的结果</th><th>尚未取出的元素</th></tr></thead><tbody><tr><td>左3、右1</td><td>1更小，取右侧的1</td><td><code>[1]</code></td><td>左<code>[3,8]</code>，右<code>[5]</code></td></tr><tr><td>左3、右5</td><td>3更小，取左侧的3</td><td><code>[1,3]</code></td><td>左<code>[8]</code>，右<code>[5]</code></td></tr><tr><td>左8、右5</td><td>5更小，取右侧的5</td><td><code>[1,3,5]</code></td><td>左<code>[8]</code>，右为空</td></tr><tr><td>左8、右侧已取完</td><td>将左侧剩余的8接到结果末尾</td><td><code>[1,3,5,8]</code></td><td>两侧都为空</td></tr></tbody></table>
+<p>这个过程能够持续进行，是因为<strong>每次取数以后，两侧剩余部分仍然有序</strong>。所以，下一轮仍然只需要比较两侧的第一个数。假设两侧共n个元素，每个元素恰好写入结果一次，合并就需要O(n)时间。</p>
+<p>接下来再考虑最初没有排好序的<code>[3,8,1,5]</code>。两个半区间也可以用相同的办法继续拆分：</p>
+<div class="code-block"><div class="code-toolbar"><span>text</span><button type="button" data-copy-code="true" aria-label="复制代码">复制代码</button></div><pre><code class="hljs language-text">原数组：          [3,8,1,5]
+第一次拆分：      [3,8]       [1,5]
+继续拆分：        [3] [8]     [1] [5]
+合并相邻单元素：  [3,8]       [1,5]
+合并两个有序段：  [1,3,5,8]
+</code></pre></div>
+<p><strong>只有一个元素的区间本来就有序</strong>，可以作为递归的基本情况。返回上一层时，将两个已经排好的半区间合并；再上一层继续使用刚得到的结果。这样就形成了<strong>拆分、求解较小区间、合并有序结果</strong>的分治过程，可以结合<a href="/blog/divide-and-conquer-theory/">分治算法的理论笔记</a>理解。</p>
+<p>演示用<strong>左闭右开区间<code>[start,end)</code></strong>表示当前处理范围：包括start，不包括end，长度就是<code>end-start</code>。例如<code>[0,4)</code>包含下标0、1、2、3，拆分点mid=2，将它分成<code>[0,2)</code>和<code>[2,4)</code>。两个半区间恰好覆盖原范围，边界也可以直接衔接。</p>
+<span id="experiment" class="legacy-anchor" aria-hidden="true"></span><h2 id="user-content-experiment">二、交互演示：比较、写入与有序区间变化</h2>
+<p>可以先使用默认数组观察一次完整排序，再尝试重复值、负数或已经有序的数组。演示初始暂停，使用“下一步”查看当前的比较和写入，使用“上一步”回看上一状态；重置后从同一输入重新开始。</p>
+<p>观察时可以对应三个对象：<strong>当前合并的区间、两侧下一次读取的位置、结果中已经写好的部分</strong>。比较决定本次取哪一侧，每次写入后的状态还会显示下一次读取和写入的位置。正文中的表格保留了同一个合并过程，不操作演示也可以逐行对照。</p>1d:T10ac,<span id="correctness" class="legacy-anchor" aria-hidden="true"></span><h2 id="user-content-correctness">三、有序合并的正确性与稳定性</h2>
+<p>合并时可以一直检查下面这个条件：<strong>已经写入的部分按从小到大的顺序排列，并且恰好包含两侧已经取出的全部元素。</strong>这种在循环指定位置持续成立的条件，叫作<strong>循环不变量</strong>。</p>
+<p>开始时还没有写入元素，条件自然成立。之后，两侧未取出的最小值分别位于各自的读取位置；取两者中的较小值，就得到所有剩余元素中的最小值。将它写到结果末尾，已有结果继续有序，同时这一次取出的元素也被完整保留。</p>
+<p>一侧取完以后，另一侧本来就有序，而且剩余元素都不小于最后写入的元素，因此可以依次接到结果后面。直到两侧全部取完，结果既有序，也包含原来的全部元素。递归过程从单元素区间开始，逐层使用这一合并规则，就能够得到整个数组的有序结果。</p>
+<p><strong>稳定性</strong>指的是：两个元素的排序键相等时，排序后仍然保留它们在原输入中的相对顺序。可以把两个值都为2的元素分别记为<code>2ₐ</code>、<code>2ᵦ</code>，用下标标记它们的身份。如果原输入中的<code>2ₐ</code>在左半段，<code>2ᵦ</code>在右半段，那么合并时遇到相等值，<strong>优先取左侧的<code>2ₐ</code></strong>，两者的先后次序就得到了保留。</p>
+<p>这个要求需要落实到比较规则中。普通数值排序只显示两个2，看不出身份变化；记录带有其他字段时，例如按成绩排序学生记录，稳定性就会影响同分记录的排列顺序。</p>
+<span id="boundaries" class="legacy-anchor" aria-hidden="true"></span><h2 id="user-content-boundaries">四、时间复杂度、辅助空间与输入边界</h2>
+<p>设数组长度为n。先看一次合并：两个区间总长为k，每次取出并写入一个元素，所以这一轮合并需要<strong>O(k)时间</strong>。再看递归树的一整层：这一层的区间互不重叠，总共覆盖n个元素，因此所有合并加起来需要O(n)时间。</p>
+<p>每次把区间长度减半，直到长度为1，约需要log₂n层。把每层的线性工作加起来，就得到<strong>O(n log n)时间复杂度</strong>。对应的递推式是<code>T(n)=2T(n/2)+O(n)</code>，其中两项分别表示两个半区间的排序和本层合并。n无法均分时，两个子区间的长度相差至多1，仍然保持同样的渐近复杂度。</p>
+<p>普通的数组归并实现需要保存合并中的临时结果，<strong>辅助缓冲空间为O(n)</strong>；递归调用同时保留的层数为O(log n)，调用栈还需要O(log n)空间。两项相加后，总辅助空间仍为O(n)。输入数组自身的存储另计。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>输入或条件</th><th>处理方式及原因</th></tr></thead><tbody><tr><td>空数组或只有一个元素</td><td>基本情况，可以直接返回</td></tr><tr><td>数组中包含负数</td><td>继续按数值大小比较，拆分和合并规则相同</td></tr><tr><td>存在相等值</td><td>全部保留，相等时先取左侧以保持稳定性</td></tr><tr><td>长度为奇数</td><td>左右区间相差一个元素，仍按各自边界合并</td></tr><tr><td>输入已经有序</td><td>当前演示仍按固定流程拆分、合并，时间量级保持O(n log n)</td></tr></tbody></table>
+<p>演示允许输入<strong>1到12个整数，每个数在−999到999之间</strong>，便于逐步观察；普通归并算法也能处理空数组。为了支持前后回看，演示额外保存了多份中间状态，这些<strong>回放数据的存储成本单独计算</strong>，上面的O(n)描述的是排序算法本身使用的辅助空间。</p>
+<p>归并排序的核心是<strong>用较小区间的有序结果，建立较大区间的有序结果</strong>。如果还想对照其他分治过程，可以继续看<a href="/blog/divide-and-conquer-examples/">汉诺塔、二分查找与选择算法的旧文</a>，比较它们怎样划分子问题、怎样利用子问题的结果。</p>9:["$","div",null,{"className":"shell reading-page","children":[["$","header",null,{"className":"article-heading","children":["$L14",["$","h1",null,{"tabIndex":-1,"children":"归并排序：递归拆分、有序合并与逐步演示"}],["$","p",null,{"className":"article-deck","children":"从两个有序区间的合并推导归并排序，逐步观察比较与写入，说明稳定性、时间空间复杂度和输入边界。"}],["$","div",null,{"className":"article-meta","children":[["$","$L18",null,{"href":"/blog/#tag=%E7%AE%97%E6%B3%95","children":"算法"}],["$","time",null,{"dateTime":"2026-10-26","children":["更新于 ","2026-10-26"]}],["$","span",null,{"children":["1,874"," 字"]}],["$","span",null,{"children":["约 ",6," 分钟"]}],["$","span",null,{"className":"interactive-label","children":"本站新制作的交互示例"}]]}]]}],["$","$L19",null,{"headings":[{"id":"user-content-idea","text":"一、归并排序的拆分与合并过程","level":2},{"id":"user-content-experiment","text":"二、交互演示：比较、写入与有序区间变化","level":2},{"id":"user-content-correctness","text":"三、有序合并的正确性与稳定性","level":2},{"id":"user-content-boundaries","text":"四、时间复杂度、辅助空间与输入边界","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[["$","$L1a",null,{"html":"$1b"}],["$","$L1c",null,{}],["$","$L1a",null,{"html":"$1d"}],"$L1e","$L1f"]}],"$L20"]}]]}]
+21:I[2708,["5587","$15","8612","$16","5431","$17"],"FeedbackForm"]
+1e:["$","$L21",null,{"contentId":"merge-sort"}]
+20:["$","$L19",null,{"headings":"$9:props:children:1:props:headings"}]
+22:I[3498,["5587","$15","8612","$16","5431","$17"],"default"]
+1f:["$","section",null,{"className":"article-continuation","aria-label":"继续阅读","children":[["$","nav",null,{"className":"article-neighbors","aria-label":"前后篇（按原发布日期从新到旧）","children":[["$","$L22",null,{"href":"/blog/cpp-this/","data-reading-start":"true","children":[["$","span",null,{"children":"上一篇"}],"c++类——this指针"]}],"$undefined"]}],["$","div",null,{"className":"related-articles","children":[["$","h2",null,{"children":"继续读这些"}],["$","p",null,{"children":"按共同标签与分类选择"}],["$","ul",null,{"className":"content-collection","children":[["$","li","dummy-node-linked-lists",{"children":[["$","$L22",null,{"href":"/blog/dummy-node-linked-lists/","data-reading-start":"true","children":"哑节点（一）：合并两个有序链表、移除链表元素与删除链表的倒数第N个结点"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","in-place-hash",{"children":[["$","$L22",null,{"href":"/blog/in-place-hash/","data-reading-start":"true","children":"原地哈希（一）：缺失的第一个正数、消失的数字与错误的集合"}],["$","span",null,{"children":"算法与数据结构"}]]}],["$","li","linked-list-basics",{"children":[["$","$L22",null,{"href":"/blog/linked-list-basics/","data-reading-start":"true","children":"链表（一）：节点引用、next连接与插入删除"}],["$","span",null,{"children":"算法与数据结构"}]]}]]}]]}]]}]
+23:Tb2c,(()=>{const d={"wallpaper":"banner","layout":"list","cardStyle":"soft","textSize":"normal","hero":true,"carousel":false,"waves":false,"fade":true,"motion":true,"typewriter":true,"progress":true,"petals":false,"dim":28,"blur":0,"cardOpacity":78,"colorMode":"section","customColor":"#32846b","sectionColors":{},"customTheme":"","sectionThemes":{}},enums={"wallpaper":["banner","fullscreen","overlay","none"],"layout":["list","grid"],"cardStyle":["soft","flat"],"textSize":["normal","large"],"colorMode":["section","custom"]},bools=["hero","carousel","waves","fade","motion","typewriter","progress","petals"];let p={};try{p=JSON.parse(localStorage.getItem('07xiaohei-display-v1')||'{}')||{}}catch{}for(const k in enums){const v=enums[k].includes(p[k])?p[k]:d[k];document.documentElement.setAttribute('data-'+k.replace(/[A-Z]/g,c=>'-'+c.toLowerCase()),v)}for(const k of bools)document.documentElement.setAttribute('data-'+k,String(typeof p[k]==='boolean'?p[k]:d[k]));const color=(function(a,b){let c=b.startsWith("/credits")?"about":b.split("/")[1],d=["home","blog","research","projects","about"].includes(c)?c:"home",e=(a.sectionColors&&"object"==typeof a.sectionColors&&!Array.isArray(a.sectionColors)?a.sectionColors:{})[d],f="string"==typeof e&&/^#[\da-f]{6}$/i.test(e)?e.toLowerCase():void 0,g="string"==typeof a.customColor&&/^#[\da-f]{6}$/i.test(a.customColor)?a.customColor.toLowerCase():"#32846b",h=a.sectionThemes&&"object"==typeof a.sectionThemes&&!Array.isArray(a.sectionThemes)?a.sectionThemes:{},i="custom"===a.colorMode?a.customTheme:h[d],j="string"==typeof i&&["home","blog","research","projects","about"].includes(i)?i:void 0;return{section:d,color:"custom"===a.colorMode?g:f??g,customized:"custom"===a.colorMode?!j:!!f,theme:j??d}})(p,location.pathname);document.documentElement.setAttribute('data-custom-palette',String(color.customized));document.documentElement.setAttribute('data-palette-section',color.theme);const palette=(function(a){let b=/^#[\da-f]{6}$/i.test(a)?a:"#32846b",c=[1,3,5].map(a=>Number.parseInt(b.slice(a,a+2),16)),d={};for(let[a,[b,e]]of Object.entries({"light-page":[248,.09],"light-surface":[255,.025],"light-surface-soft":[252,.05],"light-surface-raised":[246,.08],"light-ink":[0,.15],"light-muted":[0,.32],"light-line":[213,.12],"light-accent":[0,.4],"light-accent-strong":[0,.3],"light-accent-soft":[248,.1],"light-on-accent":[255,0],"dark-page":[16,.025],"dark-surface":[26,.045],"dark-surface-soft":[22,.04],"dark-surface-raised":[33,.06],"dark-ink":[255,.12],"dark-muted":[255,.34],"dark-line":[72,.1],"dark-accent":[255,.35],"dark-accent-strong":[255,.22],"dark-accent-soft":[24,.1],"dark-on-accent":[0,.1]}))d[`--palette-${a}`]=`#${c.map(a=>Math.round(b*(1-e)+a*e).toString(16).padStart(2,"0")).join("")}`;return d})(color.color);for(const k in palette)document.documentElement.style.setProperty(k,palette[k])})()2:["$","html",null,{"lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$23"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(()=>{let m=\"system\";try{const s=localStorage.getItem(\"07xiaohei-theme\");if(s===\"light\"||s===\"dark\"||s===\"system\")m=s}catch{}const d=m===\"dark\"||(m===\"system\"&&matchMedia(\"(prefers-color-scheme: dark)\").matches);document.documentElement.dataset.theme=d?\"dark\":\"light\";document.documentElement.dataset.themeMode=m;document.documentElement.style.colorScheme=d?\"dark\":\"light\"})()"}}],"$L24"]}],"$L25"]}]
+26:"static/chunks/7107-a5162dd25c1ffcb2.js"
+27:"static/chunks/app/layout-60d9bfd13e51c573.js"
+28:I[5376,["5587","$15","7107","$26","7177","$27"],"DisplayProvider"]
+29:"NavigationFeedback"
+2a:I[2842,["5587","$15","7107","$26","7177","$27"],"$29"]
+2b:I[4085,["5587","$15","7107","$26","7177","$27"],"SiteHeader"]
+2c:I[5803,["5587","$15","7107","$26","7177","$27"],"SiteFrame"]
+2d:I[164,["5587","$15","7107","$26","7177","$27"],"ProfileSidebar"]
+24:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"document.documentElement.dataset.section=location.pathname.startsWith('/credits')?'about':location.pathname.split('/')[1]||'home'"}}]
+25:["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":"跳到正文"}],["$","$L28",null,{"children":[["$","$L2a",null,{}],["$","$L2b",null,{"tags":["编程语言知识点","Python","C++"],"categoryIds":["foundations","frontend","backend","agent","computing","ai","deployment","algorithms","bugs"],"seriesProject":{"title":"个人主页与博客建设","href":"/projects/personal-site/"}}],["$","$L2c",null,{"sidebar":["$","$L2d",null,{"categoryIds":"$25:props:children:1:props:children:1:props:categoryIds"}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"shell standard-page","children":[["$","header",null,{"className":"page-heading","children":[["$","p",null,{"className":"page-kicker","children":"404"}],["$","h1",null,{"children":"这页暂时找不到。"}],["$","p",null,{"children":"链接可能已更新，部分旧笔记仍在整理。"}]]}],["$","$L22",null,{"className":"button button-primary","href":"/blog/","children":"浏览现有笔记"}],["$","$L22",null,{"className":"text-link not-found-home","href":"/","children":"返回首页"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer shell","children":[["$","p",null,{"children":["07xiaohei ",["$","span",null,{"children":"学习笔记与技术实践"}]]}],["$","div",null,{"className":"footer-links","children":[["$","$L22",null,{"href":"/about/","children":"关于这个站点"}],["$","$L22",null,{"href":"/credits/","children":"插画来源与设计参考"}]]}]]}]]}]]}]
+14:["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L22",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L22",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L22",null,{"href":"/blog/","children":["文章",["$","span",null,{"children":178}]]}],["$","$L18",null,{"className":"trail-current","href":"/blog/#algorithms","children":["算法与数据结构",["$","span",null,{"children":13}]]}],"$undefined"]}]
