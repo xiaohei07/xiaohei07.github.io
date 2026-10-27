@@ -16,15 +16,17 @@ f:"static/chunks/app/research/%5Btopic%5D/%5Bslug%5D/page-71677a9050be178c.js"
 6:X
 6:C
 7:X
-14:T128b,<p>CT 报告生成需要把影像中的观察写成文字。例如，报告涉及某种异常时，除了写出它的名称，还要保留所在部位、相关属性和判断的确定程度。这些信息共同决定一句话表达了什么，也是本研究核对生成文本的对象。</p>
-<p>本文解释任务与评价概念。下面的短句均为人工构造的语言示例，不来自病例或模型输出。</p>
-<h2 id="section-先确定要生成报告的哪一部分">先确定要生成报告的哪一部分</h2>
-<p>本研究的目标是完整的影像所见（Findings）。它描述影像中观察到的结构与变化；诊断印象（Impression）则提炼报告中的重点判断。两者关注的内容相连，但文字范围不同。</p>
-<p>因此，评价生成的 Findings 时，参考文本也应明确到 Findings。如果某条判断只出现在 Impression，把它直接算作模型必须复述的所见内容，就改变了任务的参考范围。完整报告、所见章节和从报告抽取的类别标签可以分别使用，但需要写清每一种参考来自哪里。</p>
-<h2 id="section-一句话里有哪些事实">一句话里有哪些事实</h2>
-<p>先看一句人工构造的陈述：“左肺上叶可见一个小结节。”</p>
-<p>“结节”给出现象，“左肺上叶”给出位置，“一个”和“小”补充数量与大小属性，“可见”表达明确存在。改写成“可见左肺上叶小结节一枚”，这些内容仍然保留；改成“右肺上叶”，病名虽然相同，位置已经变了。</p>
-<p>判断强度也需要保留。下表只比较对同一观察项目的文字表达：</p>
+14:T1b0c,<p>CT报告生成需要把影像中的观察写成文字。想要理解模型具体在生成什么，可以先把<strong>CT影像、mask和报告</strong>这几个对象对应起来，再看报告里的一句话包含哪些信息。</p>
+<p>下面从这些基础概念开始说明。涉及临床事实的短句均为人工构造的语言示例，用来解释评价规则，不来自真实病例或模型输出。</p>
+<span id="section-先确定要生成报告的哪一部分" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-ct影像mask与报告的对应关系">CT影像、mask与报告的对应关系</h2>
+<p>一份3D胸部CT由在空间上具有连续关系的影像切片组成。把这些切片按空间位置组织起来，就得到一个CT体积（volume）。模型从这个体积中提取视觉特征，后续再根据这些特征生成报告。</p>
+<p>mask是与影像网格对应的标记。例如，器官mask可以标出肺或其他解剖区域所在的位置，使模型能够按区域读取视觉信息。<strong>mask的具体含义由它的标注对象决定</strong>：器官mask表示器官范围，病灶mask表示某类病灶的范围，使用时需要先明确这一点。器官范围之内是否存在异常，仍需要结合影像判断。</p>
+<p>CT报告则把医生的观察组织成文字。其中，<strong>影像所见（Findings）</strong>记录医生从影像中观察得到的现象，以及这些现象可能指向的疾病或异常；<strong>诊断印象（Impression）</strong>进一步概括报告中的重点判断。先把这两部分区分清楚，才能明确生成任务和参考文本各自包含哪些内容。</p>
+<p>本研究的目标是生成完整的Findings，因此，评价时也需要使用相应的Findings作为参考。如果某条判断只出现在Impression中，却被直接算作模型必须复述的内容，评价所覆盖的范围就发生了变化。完整报告、Findings和从报告中抽取的类别标签都可以用于研究，但应当分别说明它们的用途与来源。</p>
+<span id="section-一句话里有哪些事实" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-临床事实的组成现象位置属性与断言">临床事实的组成：现象、位置、属性与断言</h2>
+<p>下面通过一句人工构造的陈述说明：“左肺上叶可见一个小结节。”</p>
+<p>“结节”给出了观察到的现象，“左肺上叶”说明位置，“一个”和“小”补充数量与大小属性，“可见”则表示这项观察被明确肯定。这些内容合在一起，才是这句话表达的临床事实。改写成“可见左肺上叶小结节一枚”，原有信息仍然保留；如果把“左肺上叶”改成“右肺上叶”，异常名称虽然相同，位置已经发生了改变。</p>
+<p>其中，对异常的描述是肯定的、否定的，还是不确定的，可以用<strong>断言状态</strong>表示。下表比较同一观察项目的几种表达：</p>
 
 
 
@@ -56,21 +58,26 @@ f:"static/chunks/app/research/%5Btopic%5D/%5Bslug%5D/page-71677a9050be178c.js"
 
 
 <table><thead><tr><th>表达</th><th>断言状态</th><th>核对时保留什么</th></tr></thead><tbody><tr><td>“可见肺结节。”</td><td>明确存在</td><td>原句支持存在这一判断。</td></tr><tr><td>“未见肺结节。”</td><td>明确否定</td><td>“未见”限定了结节，不能只抽取病名。</td></tr><tr><td>“不能排除肺结节。”</td><td>不确定</td><td>原句保留可能性，没有给出确定的有或无。</td></tr><tr><td>全文没有讨论肺结节</td><td>未提及</td><td>参考缺少该项目的文字判断，不能自动填成阴性。</td></tr></tbody></table>
-<p>“未提及”需要查看约定范围内的全文才能判断，不能仅凭一段摘录。观察对象也要对应：一句话否定胸腔积液，并不同时否定所有部位的积液。</p>
-<h2 id="section-怎样区分几类生成错误">怎样区分几类生成错误</h2>
-<p>假设参考只包含两句：“左肺上叶可见一个小结节。未见胸腔积液。”如果生成文本仅留下第二句，结节被漏掉了；如果把第二句写成“可见胸腔积液”，则与参考的明确否定矛盾。把第一句中的左侧改成右侧，会产生位置错误。</p>
-<p>另一种变化发生在不确定表达上。参考写“不能排除”，生成文本却写成“可见”，即使异常名称没变，断言也被加强了。词语重合程度很难独自说明这些差别，因此需要分别核对现象、位置、属性和断言。</p>
-<p>还有一种情况是生成了参考没有提到的内容。此时可以先记录为“参考未支持的新增陈述”，再按评价协议核读原文与影像依据。仅凭参考未提及，无法直接判断该陈述在影像上是否成立。这个区别会影响误报统计，也影响错误样例的解释。</p>
-<h2 id="section-标签能概括什么正文还要保留什么">标签能概括什么，正文还要保留什么</h2>
-<p>固定类别标签便于汇总某类异常是否被检出，但通常不能完整表达同一异常的多个位置、数量、程度和不同断言。一份报告可能识别对了“结节”这一类别，却把部位写错；也可能类别覆盖较全，但把不确定描述写成了确定结论。</p>
-<p>事实评价因此要与文本评价配合。可以从参考和生成的 Findings 中抽取同一套字段，再检查抽取工具是否正确理解否定、作用范围和不确定性。人工构造短句适合检查这些基本行为；真实长句中的省略、指代和多个观察对象仍需要另外核验。</p>
-<p>这些检查定义了“报告要保留什么”。下一篇转向影像一侧，解释这些信息在进入语言模型前经历了哪些处理。</p>
-<p>本文按本课题 2026 年 10 月组会材料中的任务定义与事实建模范围整理。</p>
-<p><a href="/research/ct-report-generation/volume-and-visual-connector/">下一篇：三维 CT 怎样变成语言模型可读的视觉表示？</a> · <a href="/research/ct-report-generation/">返回 CT 研究主题</a></p>c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page research-detail","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L10",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L10",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L10",null,{"href":"/research/","children":["研究",["$","span",null,{"children":26}]]}],["$","$L11",null,{"className":"trail-current","href":"/research/#direction-medical-imaging","children":["医学影像处理",["$","span",null,{"children":26}]]}],["$","$L10",null,{"className":"trail-parent","href":"/research/ct-report-generation/","children":"基于细粒度临床事实建模的三维胸部 CT 报告生成"}]]}],["$","h1",null,{"tabIndex":-1,"children":"CT 报告生成要保留哪些临床事实？"}],["$","p",null,{"className":"article-deck","children":"从影像所见与诊断印象的范围出发，用人工构造句子说明位置、属性和断言怎样组成一项事实，以及漏报、错侧与否定翻转如何区分"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"className":"status-tag","children":"研究说明"}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-18","children":"2026-10-18"}]]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","3D CT",{"children":"3D CT"}],["$","span","影像所见",{"children":"影像所见"}],["$","span","临床事实",{"children":"临床事实"}],["$","span","事实评价",{"children":"事实评价"}]]}]]}],false,"$undefined",["$","$L12",null,{"headings":[{"id":"section-先确定要生成报告的哪一部分","text":"先确定要生成报告的哪一部分","level":2},{"id":"section-一句话里有哪些事实","text":"一句话里有哪些事实","level":2},{"id":"section-怎样区分几类生成错误","text":"怎样区分几类生成错误","level":2},{"id":"section-标签能概括什么正文还要保留什么","text":"标签能概括什么，正文还要保留什么","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[[["$","$L13","0",{"html":"$14","focusTables":false}]],false,false,false]}],"$L15"]}]]}],null,"$L16"]}],"p":"$@17","v":null,"s":"$7"}}]]
+<p>判断“未提及”时，需要查看评价范围内的全文；只有一段摘录的话，其他段落仍可能讨论同一项目。另外，否定也有自己的作用范围，例如“未见胸腔积液”明确描述的是胸腔积液，核对时应当保留这个观察对象。</p>
+<span id="section-怎样区分几类生成错误" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-报告生成中的遗漏位置错误与断言变化">报告生成中的遗漏、位置错误与断言变化</h2>
+<p>假设参考Findings只包含两句：“左肺上叶可见一个小结节。未见胸腔积液。”可以在这个例子上逐项检查生成结果。</p>
+<ul>
+<li>如果生成文本只保留第二句，第一句中的结节就被<strong>遗漏</strong>了。</li>
+<li>如果把第一句中的左侧改成右侧，就出现了<strong>位置错误</strong>。</li>
+<li>如果把第二句写成“可见胸腔积液”，就把明确否定改成了明确存在，形成<strong>断言翻转</strong>。</li>
+</ul>
+<p>不确定性也需要单独核对。例如，参考写“不能排除”，生成文本却写成“可见”，异常名称没有改变，但是判断被加强了。通过这些例子可以看到，词语重合只能说明部分文字相近，事实评价还需要进一步对应现象、位置、属性和断言。</p>
+<p>如果模型生成了参考没有提到的内容，可以先记为<strong>参考未支持的新增陈述</strong>，再按评价协议核读原文与影像依据。参考报告的覆盖程度也会影响这个判断：仅凭“参考未提及”，还无法确定新增陈述在影像上是否成立。因此，统计这类错误时，需要说明采用的是文本参考还是进一步核验后的影像依据。</p>
+<span id="section-标签能概括什么正文还要保留什么" class="legacy-anchor" aria-hidden="true"></span><h2 id="section-类别标签与报告事实的评价范围">类别标签与报告事实的评价范围</h2>
+<p>固定类别标签适合汇总某类异常是否被检出。具体到一份报告，同一异常可能出现在多个位置，也可能具有不同的数量、程度和断言，这些信息还需要从正文中核对。例如，模型可以识别对“结节”这个类别，同时把结节所在部位写错。</p>
+<p>因此，<strong>类别评价、事实评价和文本评价需要配合使用</strong>。一种做法是从参考与生成的Findings中抽取同一套字段，再比较这些字段的内容。使用抽取工具之前，应当先检查它对否定、作用范围和不确定性的理解，避免把抽取错误当成报告生成错误。</p>
+<p>人工构造短句适合检查这些基本行为。真实报告还会出现长句、省略、指代和多个观察对象，评价工具在这些情况下的表现也需要另外核验。</p>
+<p>明确了报告需要保留的内容之后，下一篇继续介绍影像进入LLM前的处理过程。本文按本课题2026年10月组会材料中的任务定义与事实建模范围整理。</p>
+<p><a href="/research/ct-report-generation/volume-and-visual-connector/">下一篇：3D胸部CT的输入处理与视觉连接器</a> · <a href="/research/ct-report-generation/">返回CT研究主题</a></p>c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","article",null,{"className":"shell reading-page research-detail","children":[["$","header",null,{"className":"article-heading","children":[["$","nav",null,{"className":"content-trail","aria-label":"内容路径","children":[["$","$L10",null,{"href":"/","aria-label":"主页","children":["$","svg",null,{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.7","strokeLinecap":"round","strokeLinejoin":"round","aria-hidden":"true","children":[["$","path",null,{"d":"m3 10 9-7 9 7"}],["$","path",null,{"d":"M5 9v11h14V9M9 20v-7h6v7"}]]}]}],["$","$L10",null,{"href":"/archives/","children":["归档",["$","span",null,{"children":208}]]}],["$","$L10",null,{"href":"/research/","children":["研究",["$","span",null,{"children":26}]]}],["$","$L11",null,{"className":"trail-current","href":"/research/#direction-medical-imaging","children":["医学影像处理",["$","span",null,{"children":26}]]}],["$","$L10",null,{"className":"trail-parent","href":"/research/ct-report-generation/","children":"3D胸部CT报告生成：研究任务、视觉表示与实验进展"}]]}],["$","h1",null,{"tabIndex":-1,"children":"3D胸部CT报告生成基础：影像、mask、报告与临床事实"}],["$","p",null,{"className":"article-deck","children":"先说明CT、mask、Findings与Impression的关系，再通过人工构造短句拆解临床事实，介绍异常位置、属性和断言的核对方法"}],["$","div",null,{"className":"article-meta","children":[["$","span",null,{"className":"status-tag","children":"研究说明"}],["$","span",null,{"children":["更新于 ",["$","time",null,{"dateTime":"2026-10-26","children":"2026-10-26"}]]}]]}],["$","div",null,{"className":"tag-list","children":[["$","span","3D CT",{"children":"3D CT"}],["$","span","影像所见",{"children":"影像所见"}],["$","span","临床事实",{"children":"临床事实"}],["$","span","事实评价",{"children":"事实评价"}]]}]]}],false,"$undefined",["$","$L12",null,{"headings":[{"id":"section-ct影像mask与报告的对应关系","text":"CT影像、mask与报告的对应关系","level":2},{"id":"section-临床事实的组成现象位置属性与断言","text":"临床事实的组成：现象、位置、属性与断言","level":2},{"id":"section-报告生成中的遗漏位置错误与断言变化","text":"报告生成中的遗漏、位置错误与断言变化","level":2},{"id":"section-类别标签与报告事实的评价范围","text":"类别标签与报告事实的评价范围","level":2}],"mobile":true}],["$","div",null,{"className":"reading-grid","children":[["$","div",null,{"className":"reading-content","children":[[["$","$L13","0",{"html":"$14","focusTables":false}]],false,false,false]}],"$L15"]}]]}],null,"$L16"]}],"p":"$@17","v":null,"s":"$7"}}]]
 a:[["children",{"s":{"n":"slug","t":"d","k":"task-and-clinical-facts","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@b","v":"$6","s":"$7"},"c":"$Qc"}]]
 8:[["children",{"s":{"n":"topic","t":"d","k":"ct-report-generation","s":[]},"h":196704,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
 1:[["children",{"s":"research","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
-0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L19",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1b",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1c",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"CT 报告生成要保留哪些临床事实？ | 07xiaohei"}],["$","meta","1",{"name":"description","content":"07xiaohei 的学习笔记、医学影像研究记录与交互式技术实践。"}]]}]}],null]}],null]}],"p":"$@1d","v":null,"s":"$7"}},"a":"$@1e","u":"$@1f","b":"ZvF2OUb_qmlU-1zsmc04h"}
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L19",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1b",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1c",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"3D胸部CT报告生成基础：影像、mask、报告与临床事实 | 07xiaohei"}],["$","meta","1",{"name":"description","content":"先说明CT、mask、Findings与Impression的关系，再通过人工构造短句拆解临床事实，介绍异常位置、属性和断言的核对方法。"}],["$","link","2",{"rel":"canonical","href":"/research/ct-report-generation/task-and-clinical-facts/"}]]}]}],null]}],null]}],"p":"$@1d","v":null,"s":"$7"}},"a":"$@1e","u":"$@1f","b":"CWqySD3m-hOnQxOhO49jA"}
 20:I[887,[],"OutletBoundary"]
 15:["$","$L12",null,{"headings":"$c:0:1:d:r:props:children:0:props:children:3:props:headings"}]
 16:["$","$L20",null,{"children":["$","$1c",null,{"name":"Next.MetadataOutlet","children":"$@21"}]}]
